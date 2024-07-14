@@ -1,3 +1,11 @@
+import urllib
+import requests
+from bs4 import BeautifulSoup
+import markdownify
+import re
+import os
+
+...
 import requests
 from bs4 import BeautifulSoup
 import markdownify
@@ -51,12 +59,18 @@ def save_markdown(markdown, filename):
     with open(filename, 'w', encoding='utf-8') as file:
         file.write(markdown)
 
+def escape_dollar_signs(filename: str) -> str:
+    return filename.replace('$', r'\$')        
+
 def process_keyword(keyword, output_dir):
     if not os.path.exists(output_dir):
         os.makedirs(output_dir)
 
+    # Correctly encode the keyword for URL use
+    encoded_keyword = urllib.parse.quote_plus(keyword)
+
     # from wiki
-    url = f'https://qb64phoenix.com/qb64wiki/index.php/{keyword}'
+    url = f'https://qb64phoenix.com/qb64wiki/index.php/{encoded_keyword}'
     html_content = fetch_html(url)
     if html_content:
         markdown_content = convert_to_markdown(html_content)
