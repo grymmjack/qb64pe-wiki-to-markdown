@@ -1,0 +1,78 @@
+import requests
+from bs4 import BeautifulSoup
+import markdownify
+import re
+import os
+
+def fetch_html(url):
+    headers = {
+        "Host": "qb64phoenix.com",
+        "User-Agent": "Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/115.0",
+        "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8",
+        "Accept-Language": "en-US,en;q=0.5",
+        "Accept-Encoding": "gzip, deflate, br",
+        "Referer": "https://qb64phoenix.com/qb64wiki/index.php?search=%24CHECKING&title=Special%3ASearch&profile=default&fulltext=1",
+        "Connection": "keep-alive",
+        "Upgrade-Insecure-Requests": "1",
+        "Sec-Fetch-Dest": "document",
+        "Sec-Fetch-Mode": "navigate",
+        "Sec-Fetch-Site": "same-origin",
+        "Sec-Fetch-User": "?1",
+        "Pragma": "no-cache",
+        "Cache-Control": "no-cache"
+    }
+    try:
+        response = requests.get(url, headers=headers)
+        response.raise_for_status()
+        return response.text
+    except requests.RequestException as e:
+        print(f"Error fetching {url}: {e}")
+        return None    
+
+def convert_to_markdown(html):
+    soup = BeautifulSoup(html, 'html.parser')
+
+    # Remove MediaWiki-specific tags and content
+    for tag in soup(['script', 'style', 'meta', 'link', 'nav', 'header', 'footer']):
+        tag.decompose()
+
+    # Convert to markdown
+    markdown_content = markdownify.markdownify(str(soup), heading_style="ATX")
+
+    # Additional cleaning to remove any remaining MediaWiki-specific markup
+    markdown_content = re.sub(r'\[\[Category:[^\]]+\]\]', '', markdown_content)
+    markdown_content = re.sub(r'\[\[File:[^\]]+\]\]', '', markdown_content)
+    markdown_content = re.sub(r'\[\[.*?\|', '', markdown_content)  # Remove links but keep text
+    markdown_content = re.sub(r'\]\]', '', markdown_content)
+
+    return markdown_content
+
+def save_markdown(markdown, filename):
+    with open(filename, 'w', encoding='utf-8') as file:
+        file.write(markdown)
+
+def process_keyword(keyword, output_dir):
+    if not os.path.exists(output_dir):
+        os.makedirs(output_dir)
+
+    # from wiki
+    url = f'https://qb64phoenix.com/qb64wiki/index.php/{keyword}'
+    html_content = fetch_html(url)
+    if html_content:
+        markdown_content = convert_to_markdown(html_content)
+        file_path = os.path.join(output_dir, f"{keyword}.md")
+        save_markdown(markdown_content, file_path)
+        print(f"Processed and saved: {file_path}")
+
+output_directory = 'markdown_files'
+
+# Read keywords from file
+current_directory = os.path.dirname(os.path.abspath(__file__))
+keywords_file_path = os.path.join(current_directory, 'keywords.txt')
+with open('keywords.txt', 'r') as file:
+    keywords = [line.strip() for line in file.readlines()]
+
+# Process each keyword
+for keyword in keywords:
+    process_keyword(keyword, output_directory)
+
