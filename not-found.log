@@ -4,99 +4,39 @@
 386 results - 1 file
 
 output.log.md:
-    9  Processed and saved: markdown_files/$ELSEIF.md
    10: Error fetching https://qb64phoenix.com/qb64wiki/index.php/$END: 404 Client Error: Not Found for url: https://qb64phoenix.com/qb64wiki/index.php/$END
    11: Error fetching https://qb64phoenix.com/qb64wiki/index.php/$ENDIF: 404 Client Error: Not Found for url: https://qb64phoenix.com/qb64wiki/index.php/$ENDIF
-   12  Processed and saved: markdown_files/$EXEICON.md
-
-   37  Processed and saved: markdown_files/CALL.md
    38: Error fetching https://qb64phoenix.com/qb64wiki/index.php/CALLS: 404 Client Error: Not Found for url: https://qb64phoenix.com/qb64wiki/index.php/CALLS
-   39  Processed and saved: markdown_files/CASE.md
-
-   41  Processed and saved: markdown_files/CDBL.md
    42: Error fetching https://qb64phoenix.com/qb64wiki/index.php/CDECL: 404 Client Error: Not Found for url: https://qb64phoenix.com/qb64wiki/index.php/CDECL
-   43  Processed and saved: markdown_files/CHAIN.md
-
-   52  Processed and saved: markdown_files/COLOR.md
    53: Error fetching https://qb64phoenix.com/qb64wiki/index.php/COM: 404 Client Error: Not Found for url: https://qb64phoenix.com/qb64wiki/index.php/COM
-   54  Processed and saved: markdown_files/COMMAND$.md
-
-   83  Processed and saved: markdown_files/END.md
    84: Error fetching https://qb64phoenix.com/qb64wiki/index.php/ENDIF: 404 Client Error: Not Found for url: https://qb64phoenix.com/qb64wiki/index.php/ENDIF
-   85  Processed and saved: markdown_files/ENVIRON.md
-
-   89  Processed and saved: markdown_files/ERASE.md
    90: Error fetching https://qb64phoenix.com/qb64wiki/index.php/ERDEV: 404 Client Error: Not Found for url: https://qb64phoenix.com/qb64wiki/index.php/ERDEV
    91: Error fetching https://qb64phoenix.com/qb64wiki/index.php/ERDEV$: 404 Client Error: Not Found for url: https://qb64phoenix.com/qb64wiki/index.php/ERDEV$
-   92  Processed and saved: markdown_files/ERL.md
-
-   98  Processed and saved: markdown_files/FIELD.md
    99: Error fetching https://qb64phoenix.com/qb64wiki/index.php/FILEATTR: 404 Client Error: Not Found for url: https://qb64phoenix.com/qb64wiki/index.php/FILEATTR
-  100  Processed and saved: markdown_files/FILES.md
-  101  Processed and saved: markdown_files/FIX.md
   102: Error fetching https://qb64phoenix.com/qb64wiki/index.php/FN: 404 Client Error: Not Found for url: https://qb64phoenix.com/qb64wiki/index.php/FN
-  103  Processed and saved: markdown_files/FOR.md
   104: Error fetching https://qb64phoenix.com/qb64wiki/index.php/FRE: 404 Client Error: Not Found for url: https://qb64phoenix.com/qb64wiki/index.php/FRE
   105: Error fetching https://qb64phoenix.com/qb64wiki/index.php/FREE: 404 Client Error: Not Found for url: https://qb64phoenix.com/qb64wiki/index.php/FREE
-  106  Processed and saved: markdown_files/FREEFILE.md
-
-  122  Processed and saved: markdown_files/INTERRUPTX.md
   123: Error fetching https://qb64phoenix.com/qb64wiki/index.php/IOCTL: 404 Client Error: Not Found for url: https://qb64phoenix.com/qb64wiki/index.php/IOCTL
   124: Error fetching https://qb64phoenix.com/qb64wiki/index.php/IOCTL$: 404 Client Error: Not Found for url: https://qb64phoenix.com/qb64wiki/index.php/IOCTL$
-  125  Processed and saved: markdown_files/KEY.md
-
-  169  Processed and saved: markdown_files/PEEK.md
   170: Error fetching https://qb64phoenix.com/qb64wiki/index.php/PEN: 404 Client Error: Not Found for url: https://qb64phoenix.com/qb64wiki/index.php/PEN
-  171  Processed and saved: markdown_files/PLAY.md
-
-  199  Processed and saved: markdown_files/SELECT.md
   200: Error fetching https://qb64phoenix.com/qb64wiki/index.php/SETMEM: 404 Client Error: Not Found for url: https://qb64phoenix.com/qb64wiki/index.php/SETMEM
-  201  Processed and saved: markdown_files/SGN.md
-
-  203  Processed and saved: markdown_files/SHELL.md
   204: Error fetching https://qb64phoenix.com/qb64wiki/index.php/SIGNAL: 404 Client Error: Not Found for url: https://qb64phoenix.com/qb64wiki/index.php/SIGNAL
-  205  Processed and saved: markdown_files/SIN.md
-
-  228  Processed and saved: markdown_files/TO.md
   229: Error fetching https://qb64phoenix.com/qb64wiki/index.php/TROFF: 404 Client Error: Not Found for url: https://qb64phoenix.com/qb64wiki/index.php/TROFF
   230: Error fetching https://qb64phoenix.com/qb64wiki/index.php/TRON: 404 Client Error: Not Found for url: https://qb64phoenix.com/qb64wiki/index.php/TRON
-  231  Processed and saved: markdown_files/TYPE.md
-
-  233  Processed and saved: markdown_files/UCASE$.md
   234: Error fetching https://qb64phoenix.com/qb64wiki/index.php/UEVENT: 404 Client Error: Not Found for url: https://qb64phoenix.com/qb64wiki/index.php/UEVENT
-  235  Processed and saved: markdown_files/UNLOCK.md
-
-  253  Processed and saved: markdown_files/_ALPHA32.md
   254: Error fetching https://qb64phoenix.com/qb64wiki/index.php/_ARCCOT: 404 Client Error: Not Found for url: https://qb64phoenix.com/qb64wiki/index.php/ARCCOT
   255: Error fetching https://qb64phoenix.com/qb64wiki/index.php/_ARCCSC: 404 Client Error: Not Found for url: https://qb64phoenix.com/qb64wiki/index.php/ARCCSC
   256: Error fetching https://qb64phoenix.com/qb64wiki/index.php/_ARCSEC: 404 Client Error: Not Found for url: https://qb64phoenix.com/qb64wiki/index.php/ARCSEC
-  257  Processed and saved: markdown_files/_ASIN.md
-
-  287  Processed and saved: markdown_files/_COPYPALETTE.md
   288: Error fetching https://qb64phoenix.com/qb64wiki/index.php/_COSH: 404 Client Error: Not Found for url: https://qb64phoenix.com/qb64wiki/index.php/COSH
   289: Error fetching https://qb64phoenix.com/qb64wiki/index.php/_COT: 404 Client Error: Not Found for url: https://qb64phoenix.com/qb64wiki/index.php/COT
   290: Error fetching https://qb64phoenix.com/qb64wiki/index.php/_COTH: 404 Client Error: Not Found for url: https://qb64phoenix.com/qb64wiki/index.php/COTH
   291: Error fetching https://qb64phoenix.com/qb64wiki/index.php/_CSC: 404 Client Error: Not Found for url: https://qb64phoenix.com/qb64wiki/index.php/CSC
   292: Error fetching https://qb64phoenix.com/qb64wiki/index.php/_CSCH: 404 Client Error: Not Found for url: https://qb64phoenix.com/qb64wiki/index.php/CSCH
-  293  Processed and saved: markdown_files/_CV.md
-
-  368  Processed and saved: markdown_files/_MOUSEMOVEMENTY.md
   369: Error fetching https://qb64phoenix.com/qb64wiki/index.php/_MOUSEPIPEOPEN: 404 Client Error: Not Found for url: https://qb64phoenix.com/qb64wiki/index.php/MOUSEPIPEOPEN
-  370  Processed and saved: markdown_files/_MOUSESHOW.md
-
-  410  Processed and saved: markdown_files/_SCREENY.md
   411: Error fetching https://qb64phoenix.com/qb64wiki/index.php/_SEC: 404 Client Error: Not Found for url: https://qb64phoenix.com/qb64wiki/index.php/SEC
   412: Error fetching https://qb64phoenix.com/qb64wiki/index.php/_SECH: 404 Client Error: Not Found for url: https://qb64phoenix.com/qb64wiki/index.php/SECH
-  413  Processed and saved: markdown_files/_SETALPHA.md
-  414  Processed and saved: markdown_files/_SHELLHIDE.md
   415: Error fetching https://qb64phoenix.com/qb64wiki/index.php/_SINH: 404 Client Error: Not Found for url: https://qb64phoenix.com/qb64wiki/index.php/SINH
-  416  Processed and saved: markdown_files/_SNDBAL.md
-
-  441  Processed and saved: markdown_files/_STRICMP.md
   442: Error fetching https://qb64phoenix.com/qb64wiki/index.php/_TANH: 404 Client Error: Not Found for url: https://qb64phoenix.com/qb64wiki/index.php/TANH
-  443  Processed and saved: markdown_files/_TITLE.md
-
-  449  Processed and saved: markdown_files/_WINDOWHASFOCUS.md
   450: Error fetching https://qb64phoenix.com/qb64wiki/index.php/_GLACCUM: 404 Client Error: Not Found for url: https://qb64phoenix.com/qb64wiki/index.php/GLACCUM
   451: Error fetching https://qb64phoenix.com/qb64wiki/index.php/_GLALPHAFUNC: 404 Client Error: Not Found for url: https://qb64phoenix.com/qb64wiki/index.php/GLALPHAFUNC
   452: Error fetching https://qb64phoenix.com/qb64wiki/index.php/_GLARETEXTURESRESIDENT: 404 Client Error: Not Found for url: https://qb64phoenix.com/qb64wiki/index.php/GLARETEXTURESRESIDENT
@@ -433,39 +373,20 @@ output.log.md:
   783: Error fetching https://qb64phoenix.com/qb64wiki/index.php/_GLVERTEX4SV: 404 Client Error: Not Found for url: https://qb64phoenix.com/qb64wiki/index.php/GLVERTEX4SV
   784: Error fetching https://qb64phoenix.com/qb64wiki/index.php/_GLVERTEXPOINTER: 404 Client Error: Not Found for url: https://qb64phoenix.com/qb64wiki/index.php/GLVERTEXPOINTER
   785: Error fetching https://qb64phoenix.com/qb64wiki/index.php/_GLVIEWPORT: 404 Client Error: Not Found for url: https://qb64phoenix.com/qb64wiki/index.php/GLVIEWPORT
-  786  Processed and saved: markdown_files/SMOOTH.md
-  787  Processed and saved: markdown_files/STRETCH.md
   788: Error fetching https://qb64phoenix.com/qb64wiki/index.php/_ANTICLOCKWISE: 404 Client Error: Not Found for url: https://qb64phoenix.com/qb64wiki/index.php/ANTICLOCKWISE
   789: Error fetching https://qb64phoenix.com/qb64wiki/index.php/_BEHIND: 404 Client Error: Not Found for url: https://qb64phoenix.com/qb64wiki/index.php/BEHIND
-  790  Processed and saved: markdown_files/_CLEAR.md
-  791  Processed and saved: markdown_files/_FILLBACKGROUND.md
   792: Error fetching https://qb64phoenix.com/qb64wiki/index.php/_GLUPERSPECTIVE: 404 Client Error: Not Found for url: https://qb64phoenix.com/qb64wiki/index.php/GLUPERSPECTIVE
   793: Error fetching https://qb64phoenix.com/qb64wiki/index.php/_HARDWARE: 404 Client Error: Not Found for url: https://qb64phoenix.com/qb64wiki/index.php/HARDWARE
   794: Error fetching https://qb64phoenix.com/qb64wiki/index.php/_HARDWARE1: 404 Client Error: Not Found for url: https://qb64phoenix.com/qb64wiki/index.php/HARDWARE1
-  795  Processed and saved: markdown_files/_KEEPBACKGROUND.md
   796: Error fetching https://qb64phoenix.com/qb64wiki/index.php/_NONE: 404 Client Error: Not Found for url: https://qb64phoenix.com/qb64wiki/index.php/NONE
-  797  Processed and saved: markdown_files/_OFF.md
-
-  799  Processed and saved: markdown_files/_ONLYBACKGROUND.md
   800: Error fetching https://qb64phoenix.com/qb64wiki/index.php/_ONTOP: 404 Client Error: Not Found for url: https://qb64phoenix.com/qb64wiki/index.php/ONTOP
   801: Error fetching https://qb64phoenix.com/qb64wiki/index.php/_SEAMLESS: 404 Client Error: Not Found for url: https://qb64phoenix.com/qb64wiki/index.php/SEAMLESS
-  802  Processed and saved: markdown_files/_SMOOTH.md
   803: Error fetching https://qb64phoenix.com/qb64wiki/index.php/_SMOOTHSHRUNK: 404 Client Error: Not Found for url: https://qb64phoenix.com/qb64wiki/index.php/SMOOTHSHRUNK
   804: Error fetching https://qb64phoenix.com/qb64wiki/index.php/_SMOOTHSTRETCHED: 404 Client Error: Not Found for url: https://qb64phoenix.com/qb64wiki/index.php/SMOOTHSTRETCHED
   805: Error fetching https://qb64phoenix.com/qb64wiki/index.php/_SOFTWARE: 404 Client Error: Not Found for url: https://qb64phoenix.com/qb64wiki/index.php/SOFTWARE
-  806  Processed and saved: markdown_files/_SQUAREPIXELS.md
-
-  839  Processed and saved: markdown_files/_SCROLLLOCK.md
   840: Error fetching https://qb64phoenix.com/qb64wiki/index.php/_TOGGLE: 404 Client Error: Not Found for url: https://qb64phoenix.com/qb64wiki/index.php/TOGGLE
   841: Error fetching https://qb64phoenix.com/qb64wiki/index.php/_CONSOLEFONT: 404 Client Error: Not Found for url: https://qb64phoenix.com/qb64wiki/index.php/CONSOLEFONT
   842: Error fetching https://qb64phoenix.com/qb64wiki/index.php/_CONSOLECURSOR: 404 Client Error: Not Found for url: https://qb64phoenix.com/qb64wiki/index.php/CONSOLECURSOR
-  843  Processed and saved: markdown_files/_CONSOLEINPUT.md
-
-  867  Processed and saved: markdown_files/_SNDNEW.md
   868: Error fetching https://qb64phoenix.com/qb64wiki/index.php/_SCALEDWIDTH: 404 Client Error: Not Found for url: https://qb64phoenix.com/qb64wiki/index.php/SCALEDWIDTH
   869: Error fetching https://qb64phoenix.com/qb64wiki/index.php/_SCALEDHEIGHT: 404 Client Error: Not Found for url: https://qb64phoenix.com/qb64wiki/index.php/SCALEDHEIGHT
-  870  Processed and saved: markdown_files/_UFONTHEIGHT.md
-
-  874  Processed and saved: markdown_files/_UCHARPOS.md
   875: Error fetching https://qb64phoenix.com/qb64wiki/index.php/_MIDISOUNDBANK: 404 Client Error: Not Found for url: https://qb64phoenix.com/qb64wiki/index.php/MIDISOUNDBANK
-  876  
