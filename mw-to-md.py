@@ -1,14 +1,10 @@
 import urllib
 import requests
-from bs4 import BeautifulSoup
 import markdownify
 import re
 import os
 import requests
 from bs4 import BeautifulSoup
-import markdownify
-import re
-import os
 
 def sort_dict_keys_by_length(dictionary):
     # Sort the dictionary keys based on their length in descending order
