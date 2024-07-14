@@ -1,0 +1,471 @@
+# Query: Not Found for url
+# ContextLines: 1
+
+386 results - 1 file
+
+output.log.md:
+    9  Processed and saved: markdown_files/$ELSEIF.md
+   10: Error fetching https://qb64phoenix.com/qb64wiki/index.php/$END: 404 Client Error: Not Found for url: https://qb64phoenix.com/qb64wiki/index.php/$END
+   11: Error fetching https://qb64phoenix.com/qb64wiki/index.php/$ENDIF: 404 Client Error: Not Found for url: https://qb64phoenix.com/qb64wiki/index.php/$ENDIF
+   12  Processed and saved: markdown_files/$EXEICON.md
+
+   37  Processed and saved: markdown_files/CALL.md
+   38: Error fetching https://qb64phoenix.com/qb64wiki/index.php/CALLS: 404 Client Error: Not Found for url: https://qb64phoenix.com/qb64wiki/index.php/CALLS
+   39  Processed and saved: markdown_files/CASE.md
+
+   41  Processed and saved: markdown_files/CDBL.md
+   42: Error fetching https://qb64phoenix.com/qb64wiki/index.php/CDECL: 404 Client Error: Not Found for url: https://qb64phoenix.com/qb64wiki/index.php/CDECL
+   43  Processed and saved: markdown_files/CHAIN.md
+
+   52  Processed and saved: markdown_files/COLOR.md
+   53: Error fetching https://qb64phoenix.com/qb64wiki/index.php/COM: 404 Client Error: Not Found for url: https://qb64phoenix.com/qb64wiki/index.php/COM
+   54  Processed and saved: markdown_files/COMMAND$.md
+
+   83  Processed and saved: markdown_files/END.md
+   84: Error fetching https://qb64phoenix.com/qb64wiki/index.php/ENDIF: 404 Client Error: Not Found for url: https://qb64phoenix.com/qb64wiki/index.php/ENDIF
+   85  Processed and saved: markdown_files/ENVIRON.md
+
+   89  Processed and saved: markdown_files/ERASE.md
+   90: Error fetching https://qb64phoenix.com/qb64wiki/index.php/ERDEV: 404 Client Error: Not Found for url: https://qb64phoenix.com/qb64wiki/index.php/ERDEV
+   91: Error fetching https://qb64phoenix.com/qb64wiki/index.php/ERDEV$: 404 Client Error: Not Found for url: https://qb64phoenix.com/qb64wiki/index.php/ERDEV$
+   92  Processed and saved: markdown_files/ERL.md
+
+   98  Processed and saved: markdown_files/FIELD.md
+   99: Error fetching https://qb64phoenix.com/qb64wiki/index.php/FILEATTR: 404 Client Error: Not Found for url: https://qb64phoenix.com/qb64wiki/index.php/FILEATTR
+  100  Processed and saved: markdown_files/FILES.md
+  101  Processed and saved: markdown_files/FIX.md
+  102: Error fetching https://qb64phoenix.com/qb64wiki/index.php/FN: 404 Client Error: Not Found for url: https://qb64phoenix.com/qb64wiki/index.php/FN
+  103  Processed and saved: markdown_files/FOR.md
+  104: Error fetching https://qb64phoenix.com/qb64wiki/index.php/FRE: 404 Client Error: Not Found for url: https://qb64phoenix.com/qb64wiki/index.php/FRE
+  105: Error fetching https://qb64phoenix.com/qb64wiki/index.php/FREE: 404 Client Error: Not Found for url: https://qb64phoenix.com/qb64wiki/index.php/FREE
+  106  Processed and saved: markdown_files/FREEFILE.md
+
+  122  Processed and saved: markdown_files/INTERRUPTX.md
+  123: Error fetching https://qb64phoenix.com/qb64wiki/index.php/IOCTL: 404 Client Error: Not Found for url: https://qb64phoenix.com/qb64wiki/index.php/IOCTL
+  124: Error fetching https://qb64phoenix.com/qb64wiki/index.php/IOCTL$: 404 Client Error: Not Found for url: https://qb64phoenix.com/qb64wiki/index.php/IOCTL$
+  125  Processed and saved: markdown_files/KEY.md
+
+  169  Processed and saved: markdown_files/PEEK.md
+  170: Error fetching https://qb64phoenix.com/qb64wiki/index.php/PEN: 404 Client Error: Not Found for url: https://qb64phoenix.com/qb64wiki/index.php/PEN
+  171  Processed and saved: markdown_files/PLAY.md
+
+  199  Processed and saved: markdown_files/SELECT.md
+  200: Error fetching https://qb64phoenix.com/qb64wiki/index.php/SETMEM: 404 Client Error: Not Found for url: https://qb64phoenix.com/qb64wiki/index.php/SETMEM
+  201  Processed and saved: markdown_files/SGN.md
+
+  203  Processed and saved: markdown_files/SHELL.md
+  204: Error fetching https://qb64phoenix.com/qb64wiki/index.php/SIGNAL: 404 Client Error: Not Found for url: https://qb64phoenix.com/qb64wiki/index.php/SIGNAL
+  205  Processed and saved: markdown_files/SIN.md
+
+  228  Processed and saved: markdown_files/TO.md
+  229: Error fetching https://qb64phoenix.com/qb64wiki/index.php/TROFF: 404 Client Error: Not Found for url: https://qb64phoenix.com/qb64wiki/index.php/TROFF
+  230: Error fetching https://qb64phoenix.com/qb64wiki/index.php/TRON: 404 Client Error: Not Found for url: https://qb64phoenix.com/qb64wiki/index.php/TRON
+  231  Processed and saved: markdown_files/TYPE.md
+
+  233  Processed and saved: markdown_files/UCASE$.md
+  234: Error fetching https://qb64phoenix.com/qb64wiki/index.php/UEVENT: 404 Client Error: Not Found for url: https://qb64phoenix.com/qb64wiki/index.php/UEVENT
+  235  Processed and saved: markdown_files/UNLOCK.md
+
+  253  Processed and saved: markdown_files/_ALPHA32.md
+  254: Error fetching https://qb64phoenix.com/qb64wiki/index.php/_ARCCOT: 404 Client Error: Not Found for url: https://qb64phoenix.com/qb64wiki/index.php/ARCCOT
+  255: Error fetching https://qb64phoenix.com/qb64wiki/index.php/_ARCCSC: 404 Client Error: Not Found for url: https://qb64phoenix.com/qb64wiki/index.php/ARCCSC
+  256: Error fetching https://qb64phoenix.com/qb64wiki/index.php/_ARCSEC: 404 Client Error: Not Found for url: https://qb64phoenix.com/qb64wiki/index.php/ARCSEC
+  257  Processed and saved: markdown_files/_ASIN.md
+
+  287  Processed and saved: markdown_files/_COPYPALETTE.md
+  288: Error fetching https://qb64phoenix.com/qb64wiki/index.php/_COSH: 404 Client Error: Not Found for url: https://qb64phoenix.com/qb64wiki/index.php/COSH
+  289: Error fetching https://qb64phoenix.com/qb64wiki/index.php/_COT: 404 Client Error: Not Found for url: https://qb64phoenix.com/qb64wiki/index.php/COT
+  290: Error fetching https://qb64phoenix.com/qb64wiki/index.php/_COTH: 404 Client Error: Not Found for url: https://qb64phoenix.com/qb64wiki/index.php/COTH
+  291: Error fetching https://qb64phoenix.com/qb64wiki/index.php/_CSC: 404 Client Error: Not Found for url: https://qb64phoenix.com/qb64wiki/index.php/CSC
+  292: Error fetching https://qb64phoenix.com/qb64wiki/index.php/_CSCH: 404 Client Error: Not Found for url: https://qb64phoenix.com/qb64wiki/index.php/CSCH
+  293  Processed and saved: markdown_files/_CV.md
+
+  368  Processed and saved: markdown_files/_MOUSEMOVEMENTY.md
+  369: Error fetching https://qb64phoenix.com/qb64wiki/index.php/_MOUSEPIPEOPEN: 404 Client Error: Not Found for url: https://qb64phoenix.com/qb64wiki/index.php/MOUSEPIPEOPEN
+  370  Processed and saved: markdown_files/_MOUSESHOW.md
+
+  410  Processed and saved: markdown_files/_SCREENY.md
+  411: Error fetching https://qb64phoenix.com/qb64wiki/index.php/_SEC: 404 Client Error: Not Found for url: https://qb64phoenix.com/qb64wiki/index.php/SEC
+  412: Error fetching https://qb64phoenix.com/qb64wiki/index.php/_SECH: 404 Client Error: Not Found for url: https://qb64phoenix.com/qb64wiki/index.php/SECH
+  413  Processed and saved: markdown_files/_SETALPHA.md
+  414  Processed and saved: markdown_files/_SHELLHIDE.md
+  415: Error fetching https://qb64phoenix.com/qb64wiki/index.php/_SINH: 404 Client Error: Not Found for url: https://qb64phoenix.com/qb64wiki/index.php/SINH
+  416  Processed and saved: markdown_files/_SNDBAL.md
+
+  441  Processed and saved: markdown_files/_STRICMP.md
+  442: Error fetching https://qb64phoenix.com/qb64wiki/index.php/_TANH: 404 Client Error: Not Found for url: https://qb64phoenix.com/qb64wiki/index.php/TANH
+  443  Processed and saved: markdown_files/_TITLE.md
+
+  449  Processed and saved: markdown_files/_WINDOWHASFOCUS.md
+  450: Error fetching https://qb64phoenix.com/qb64wiki/index.php/_GLACCUM: 404 Client Error: Not Found for url: https://qb64phoenix.com/qb64wiki/index.php/GLACCUM
+  451: Error fetching https://qb64phoenix.com/qb64wiki/index.php/_GLALPHAFUNC: 404 Client Error: Not Found for url: https://qb64phoenix.com/qb64wiki/index.php/GLALPHAFUNC
+  452: Error fetching https://qb64phoenix.com/qb64wiki/index.php/_GLARETEXTURESRESIDENT: 404 Client Error: Not Found for url: https://qb64phoenix.com/qb64wiki/index.php/GLARETEXTURESRESIDENT
+  453: Error fetching https://qb64phoenix.com/qb64wiki/index.php/_GLARRAYELEMENT: 404 Client Error: Not Found for url: https://qb64phoenix.com/qb64wiki/index.php/GLARRAYELEMENT
+  454: Error fetching https://qb64phoenix.com/qb64wiki/index.php/_GLBEGIN: 404 Client Error: Not Found for url: https://qb64phoenix.com/qb64wiki/index.php/GLBEGIN
+  455: Error fetching https://qb64phoenix.com/qb64wiki/index.php/_GLBINDTEXTURE: 404 Client Error: Not Found for url: https://qb64phoenix.com/qb64wiki/index.php/GLBINDTEXTURE
+  456: Error fetching https://qb64phoenix.com/qb64wiki/index.php/_GLBITMAP: 404 Client Error: Not Found for url: https://qb64phoenix.com/qb64wiki/index.php/GLBITMAP
+  457: Error fetching https://qb64phoenix.com/qb64wiki/index.php/_GLBLENDFUNC: 404 Client Error: Not Found for url: https://qb64phoenix.com/qb64wiki/index.php/GLBLENDFUNC
+  458: Error fetching https://qb64phoenix.com/qb64wiki/index.php/_GLCALLLIST: 404 Client Error: Not Found for url: https://qb64phoenix.com/qb64wiki/index.php/GLCALLLIST
+  459: Error fetching https://qb64phoenix.com/qb64wiki/index.php/_GLCALLLISTS: 404 Client Error: Not Found for url: https://qb64phoenix.com/qb64wiki/index.php/GLCALLLISTS
+  460: Error fetching https://qb64phoenix.com/qb64wiki/index.php/_GLCLEAR: 404 Client Error: Not Found for url: https://qb64phoenix.com/qb64wiki/index.php/GLCLEAR
+  461: Error fetching https://qb64phoenix.com/qb64wiki/index.php/_GLCLEARACCUM: 404 Client Error: Not Found for url: https://qb64phoenix.com/qb64wiki/index.php/GLCLEARACCUM
+  462: Error fetching https://qb64phoenix.com/qb64wiki/index.php/_GLCLEARCOLOR: 404 Client Error: Not Found for url: https://qb64phoenix.com/qb64wiki/index.php/GLCLEARCOLOR
+  463: Error fetching https://qb64phoenix.com/qb64wiki/index.php/_GLCLEARDEPTH: 404 Client Error: Not Found for url: https://qb64phoenix.com/qb64wiki/index.php/GLCLEARDEPTH
+  464: Error fetching https://qb64phoenix.com/qb64wiki/index.php/_GLCLEARINDEX: 404 Client Error: Not Found for url: https://qb64phoenix.com/qb64wiki/index.php/GLCLEARINDEX
+  465: Error fetching https://qb64phoenix.com/qb64wiki/index.php/_GLCLEARSTENCIL: 404 Client Error: Not Found for url: https://qb64phoenix.com/qb64wiki/index.php/GLCLEARSTENCIL
+  466: Error fetching https://qb64phoenix.com/qb64wiki/index.php/_GLCLIPPLANE: 404 Client Error: Not Found for url: https://qb64phoenix.com/qb64wiki/index.php/GLCLIPPLANE
+  467: Error fetching https://qb64phoenix.com/qb64wiki/index.php/_GLCOLOR3B: 404 Client Error: Not Found for url: https://qb64phoenix.com/qb64wiki/index.php/GLCOLOR3B
+  468: Error fetching https://qb64phoenix.com/qb64wiki/index.php/_GLCOLOR3BV: 404 Client Error: Not Found for url: https://qb64phoenix.com/qb64wiki/index.php/GLCOLOR3BV
+  469: Error fetching https://qb64phoenix.com/qb64wiki/index.php/_GLCOLOR3D: 404 Client Error: Not Found for url: https://qb64phoenix.com/qb64wiki/index.php/GLCOLOR3D
+  470: Error fetching https://qb64phoenix.com/qb64wiki/index.php/_GLCOLOR3DV: 404 Client Error: Not Found for url: https://qb64phoenix.com/qb64wiki/index.php/GLCOLOR3DV
+  471: Error fetching https://qb64phoenix.com/qb64wiki/index.php/_GLCOLOR3F: 404 Client Error: Not Found for url: https://qb64phoenix.com/qb64wiki/index.php/GLCOLOR3F
+  472: Error fetching https://qb64phoenix.com/qb64wiki/index.php/_GLCOLOR3FV: 404 Client Error: Not Found for url: https://qb64phoenix.com/qb64wiki/index.php/GLCOLOR3FV
+  473: Error fetching https://qb64phoenix.com/qb64wiki/index.php/_GLCOLOR3I: 404 Client Error: Not Found for url: https://qb64phoenix.com/qb64wiki/index.php/GLCOLOR3I
+  474: Error fetching https://qb64phoenix.com/qb64wiki/index.php/_GLCOLOR3IV: 404 Client Error: Not Found for url: https://qb64phoenix.com/qb64wiki/index.php/GLCOLOR3IV
+  475: Error fetching https://qb64phoenix.com/qb64wiki/index.php/_GLCOLOR3S: 404 Client Error: Not Found for url: https://qb64phoenix.com/qb64wiki/index.php/GLCOLOR3S
+  476: Error fetching https://qb64phoenix.com/qb64wiki/index.php/_GLCOLOR3SV: 404 Client Error: Not Found for url: https://qb64phoenix.com/qb64wiki/index.php/GLCOLOR3SV
+  477: Error fetching https://qb64phoenix.com/qb64wiki/index.php/_GLCOLOR3UB: 404 Client Error: Not Found for url: https://qb64phoenix.com/qb64wiki/index.php/GLCOLOR3UB
+  478: Error fetching https://qb64phoenix.com/qb64wiki/index.php/_GLCOLOR3UBV: 404 Client Error: Not Found for url: https://qb64phoenix.com/qb64wiki/index.php/GLCOLOR3UBV
+  479: Error fetching https://qb64phoenix.com/qb64wiki/index.php/_GLCOLOR3UI: 404 Client Error: Not Found for url: https://qb64phoenix.com/qb64wiki/index.php/GLCOLOR3UI
+  480: Error fetching https://qb64phoenix.com/qb64wiki/index.php/_GLCOLOR3UIV: 404 Client Error: Not Found for url: https://qb64phoenix.com/qb64wiki/index.php/GLCOLOR3UIV
+  481: Error fetching https://qb64phoenix.com/qb64wiki/index.php/_GLCOLOR3US: 404 Client Error: Not Found for url: https://qb64phoenix.com/qb64wiki/index.php/GLCOLOR3US
+  482: Error fetching https://qb64phoenix.com/qb64wiki/index.php/_GLCOLOR3USV: 404 Client Error: Not Found for url: https://qb64phoenix.com/qb64wiki/index.php/GLCOLOR3USV
+  483: Error fetching https://qb64phoenix.com/qb64wiki/index.php/_GLCOLOR4B: 404 Client Error: Not Found for url: https://qb64phoenix.com/qb64wiki/index.php/GLCOLOR4B
+  484: Error fetching https://qb64phoenix.com/qb64wiki/index.php/_GLCOLOR4BV: 404 Client Error: Not Found for url: https://qb64phoenix.com/qb64wiki/index.php/GLCOLOR4BV
+  485: Error fetching https://qb64phoenix.com/qb64wiki/index.php/_GLCOLOR4D: 404 Client Error: Not Found for url: https://qb64phoenix.com/qb64wiki/index.php/GLCOLOR4D
+  486: Error fetching https://qb64phoenix.com/qb64wiki/index.php/_GLCOLOR4DV: 404 Client Error: Not Found for url: https://qb64phoenix.com/qb64wiki/index.php/GLCOLOR4DV
+  487: Error fetching https://qb64phoenix.com/qb64wiki/index.php/_GLCOLOR4F: 404 Client Error: Not Found for url: https://qb64phoenix.com/qb64wiki/index.php/GLCOLOR4F
+  488: Error fetching https://qb64phoenix.com/qb64wiki/index.php/_GLCOLOR4FV: 404 Client Error: Not Found for url: https://qb64phoenix.com/qb64wiki/index.php/GLCOLOR4FV
+  489: Error fetching https://qb64phoenix.com/qb64wiki/index.php/_GLCOLOR4I: 404 Client Error: Not Found for url: https://qb64phoenix.com/qb64wiki/index.php/GLCOLOR4I
+  490: Error fetching https://qb64phoenix.com/qb64wiki/index.php/_GLCOLOR4IV: 404 Client Error: Not Found for url: https://qb64phoenix.com/qb64wiki/index.php/GLCOLOR4IV
+  491: Error fetching https://qb64phoenix.com/qb64wiki/index.php/_GLCOLOR4S: 404 Client Error: Not Found for url: https://qb64phoenix.com/qb64wiki/index.php/GLCOLOR4S
+  492: Error fetching https://qb64phoenix.com/qb64wiki/index.php/_GLCOLOR4SV: 404 Client Error: Not Found for url: https://qb64phoenix.com/qb64wiki/index.php/GLCOLOR4SV
+  493: Error fetching https://qb64phoenix.com/qb64wiki/index.php/_GLCOLOR4UB: 404 Client Error: Not Found for url: https://qb64phoenix.com/qb64wiki/index.php/GLCOLOR4UB
+  494: Error fetching https://qb64phoenix.com/qb64wiki/index.php/_GLCOLOR4UBV: 404 Client Error: Not Found for url: https://qb64phoenix.com/qb64wiki/index.php/GLCOLOR4UBV
+  495: Error fetching https://qb64phoenix.com/qb64wiki/index.php/_GLCOLOR4UI: 404 Client Error: Not Found for url: https://qb64phoenix.com/qb64wiki/index.php/GLCOLOR4UI
+  496: Error fetching https://qb64phoenix.com/qb64wiki/index.php/_GLCOLOR4UIV: 404 Client Error: Not Found for url: https://qb64phoenix.com/qb64wiki/index.php/GLCOLOR4UIV
+  497: Error fetching https://qb64phoenix.com/qb64wiki/index.php/_GLCOLOR4US: 404 Client Error: Not Found for url: https://qb64phoenix.com/qb64wiki/index.php/GLCOLOR4US
+  498: Error fetching https://qb64phoenix.com/qb64wiki/index.php/_GLCOLOR4USV: 404 Client Error: Not Found for url: https://qb64phoenix.com/qb64wiki/index.php/GLCOLOR4USV
+  499: Error fetching https://qb64phoenix.com/qb64wiki/index.php/_GLCOLORMASK: 404 Client Error: Not Found for url: https://qb64phoenix.com/qb64wiki/index.php/GLCOLORMASK
+  500: Error fetching https://qb64phoenix.com/qb64wiki/index.php/_GLCOLORMATERIAL: 404 Client Error: Not Found for url: https://qb64phoenix.com/qb64wiki/index.php/GLCOLORMATERIAL
+  501: Error fetching https://qb64phoenix.com/qb64wiki/index.php/_GLCOLORPOINTER: 404 Client Error: Not Found for url: https://qb64phoenix.com/qb64wiki/index.php/GLCOLORPOINTER
+  502: Error fetching https://qb64phoenix.com/qb64wiki/index.php/_GLCOPYPIXELS: 404 Client Error: Not Found for url: https://qb64phoenix.com/qb64wiki/index.php/GLCOPYPIXELS
+  503: Error fetching https://qb64phoenix.com/qb64wiki/index.php/_GLCOPYTEXIMAGE1D: 404 Client Error: Not Found for url: https://qb64phoenix.com/qb64wiki/index.php/GLCOPYTEXIMAGE1D
+  504: Error fetching https://qb64phoenix.com/qb64wiki/index.php/_GLCOPYTEXIMAGE2D: 404 Client Error: Not Found for url: https://qb64phoenix.com/qb64wiki/index.php/GLCOPYTEXIMAGE2D
+  505: Error fetching https://qb64phoenix.com/qb64wiki/index.php/_GLCOPYTEXSUBIMAGE1D: 404 Client Error: Not Found for url: https://qb64phoenix.com/qb64wiki/index.php/GLCOPYTEXSUBIMAGE1D
+  506: Error fetching https://qb64phoenix.com/qb64wiki/index.php/_GLCOPYTEXSUBIMAGE2D: 404 Client Error: Not Found for url: https://qb64phoenix.com/qb64wiki/index.php/GLCOPYTEXSUBIMAGE2D
+  507: Error fetching https://qb64phoenix.com/qb64wiki/index.php/_GLCULLFACE: 404 Client Error: Not Found for url: https://qb64phoenix.com/qb64wiki/index.php/GLCULLFACE
+  508: Error fetching https://qb64phoenix.com/qb64wiki/index.php/_GLDELETELISTS: 404 Client Error: Not Found for url: https://qb64phoenix.com/qb64wiki/index.php/GLDELETELISTS
+  509: Error fetching https://qb64phoenix.com/qb64wiki/index.php/_GLDELETETEXTURES: 404 Client Error: Not Found for url: https://qb64phoenix.com/qb64wiki/index.php/GLDELETETEXTURES
+  510: Error fetching https://qb64phoenix.com/qb64wiki/index.php/_GLDEPTHFUNC: 404 Client Error: Not Found for url: https://qb64phoenix.com/qb64wiki/index.php/GLDEPTHFUNC
+  511: Error fetching https://qb64phoenix.com/qb64wiki/index.php/_GLDEPTHMASK: 404 Client Error: Not Found for url: https://qb64phoenix.com/qb64wiki/index.php/GLDEPTHMASK
+  512: Error fetching https://qb64phoenix.com/qb64wiki/index.php/_GLDEPTHRANGE: 404 Client Error: Not Found for url: https://qb64phoenix.com/qb64wiki/index.php/GLDEPTHRANGE
+  513: Error fetching https://qb64phoenix.com/qb64wiki/index.php/_GLDISABLE: 404 Client Error: Not Found for url: https://qb64phoenix.com/qb64wiki/index.php/GLDISABLE
+  514: Error fetching https://qb64phoenix.com/qb64wiki/index.php/_GLDISABLECLIENTSTATE: 404 Client Error: Not Found for url: https://qb64phoenix.com/qb64wiki/index.php/GLDISABLECLIENTSTATE
+  515: Error fetching https://qb64phoenix.com/qb64wiki/index.php/_GLDRAWARRAYS: 404 Client Error: Not Found for url: https://qb64phoenix.com/qb64wiki/index.php/GLDRAWARRAYS
+  516: Error fetching https://qb64phoenix.com/qb64wiki/index.php/_GLDRAWBUFFER: 404 Client Error: Not Found for url: https://qb64phoenix.com/qb64wiki/index.php/GLDRAWBUFFER
+  517: Error fetching https://qb64phoenix.com/qb64wiki/index.php/_GLDRAWELEMENTS: 404 Client Error: Not Found for url: https://qb64phoenix.com/qb64wiki/index.php/GLDRAWELEMENTS
+  518: Error fetching https://qb64phoenix.com/qb64wiki/index.php/_GLDRAWPIXELS: 404 Client Error: Not Found for url: https://qb64phoenix.com/qb64wiki/index.php/GLDRAWPIXELS
+  519: Error fetching https://qb64phoenix.com/qb64wiki/index.php/_GLEDGEFLAG: 404 Client Error: Not Found for url: https://qb64phoenix.com/qb64wiki/index.php/GLEDGEFLAG
+  520: Error fetching https://qb64phoenix.com/qb64wiki/index.php/_GLEDGEFLAGPOINTER: 404 Client Error: Not Found for url: https://qb64phoenix.com/qb64wiki/index.php/GLEDGEFLAGPOINTER
+  521: Error fetching https://qb64phoenix.com/qb64wiki/index.php/_GLEDGEFLAGV: 404 Client Error: Not Found for url: https://qb64phoenix.com/qb64wiki/index.php/GLEDGEFLAGV
+  522: Error fetching https://qb64phoenix.com/qb64wiki/index.php/_GLENABLE: 404 Client Error: Not Found for url: https://qb64phoenix.com/qb64wiki/index.php/GLENABLE
+  523: Error fetching https://qb64phoenix.com/qb64wiki/index.php/_GLENABLECLIENTSTATE: 404 Client Error: Not Found for url: https://qb64phoenix.com/qb64wiki/index.php/GLENABLECLIENTSTATE
+  524: Error fetching https://qb64phoenix.com/qb64wiki/index.php/_GLEND: 404 Client Error: Not Found for url: https://qb64phoenix.com/qb64wiki/index.php/GLEND
+  525: Error fetching https://qb64phoenix.com/qb64wiki/index.php/_GLENDLIST: 404 Client Error: Not Found for url: https://qb64phoenix.com/qb64wiki/index.php/GLENDLIST
+  526: Error fetching https://qb64phoenix.com/qb64wiki/index.php/_GLEVALCOORD1D: 404 Client Error: Not Found for url: https://qb64phoenix.com/qb64wiki/index.php/GLEVALCOORD1D
+  527: Error fetching https://qb64phoenix.com/qb64wiki/index.php/_GLEVALCOORD1DV: 404 Client Error: Not Found for url: https://qb64phoenix.com/qb64wiki/index.php/GLEVALCOORD1DV
+  528: Error fetching https://qb64phoenix.com/qb64wiki/index.php/_GLEVALCOORD1F: 404 Client Error: Not Found for url: https://qb64phoenix.com/qb64wiki/index.php/GLEVALCOORD1F
+  529: Error fetching https://qb64phoenix.com/qb64wiki/index.php/_GLEVALCOORD1FV: 404 Client Error: Not Found for url: https://qb64phoenix.com/qb64wiki/index.php/GLEVALCOORD1FV
+  530: Error fetching https://qb64phoenix.com/qb64wiki/index.php/_GLEVALCOORD2D: 404 Client Error: Not Found for url: https://qb64phoenix.com/qb64wiki/index.php/GLEVALCOORD2D
+  531: Error fetching https://qb64phoenix.com/qb64wiki/index.php/_GLEVALCOORD2DV: 404 Client Error: Not Found for url: https://qb64phoenix.com/qb64wiki/index.php/GLEVALCOORD2DV
+  532: Error fetching https://qb64phoenix.com/qb64wiki/index.php/_GLEVALCOORD2F: 404 Client Error: Not Found for url: https://qb64phoenix.com/qb64wiki/index.php/GLEVALCOORD2F
+  533: Error fetching https://qb64phoenix.com/qb64wiki/index.php/_GLEVALCOORD2FV: 404 Client Error: Not Found for url: https://qb64phoenix.com/qb64wiki/index.php/GLEVALCOORD2FV
+  534: Error fetching https://qb64phoenix.com/qb64wiki/index.php/_GLEVALMESH1: 404 Client Error: Not Found for url: https://qb64phoenix.com/qb64wiki/index.php/GLEVALMESH1
+  535: Error fetching https://qb64phoenix.com/qb64wiki/index.php/_GLEVALMESH2: 404 Client Error: Not Found for url: https://qb64phoenix.com/qb64wiki/index.php/GLEVALMESH2
+  536: Error fetching https://qb64phoenix.com/qb64wiki/index.php/_GLEVALPOINT1: 404 Client Error: Not Found for url: https://qb64phoenix.com/qb64wiki/index.php/GLEVALPOINT1
+  537: Error fetching https://qb64phoenix.com/qb64wiki/index.php/_GLEVALPOINT2: 404 Client Error: Not Found for url: https://qb64phoenix.com/qb64wiki/index.php/GLEVALPOINT2
+  538: Error fetching https://qb64phoenix.com/qb64wiki/index.php/_GLFEEDBACKBUFFER: 404 Client Error: Not Found for url: https://qb64phoenix.com/qb64wiki/index.php/GLFEEDBACKBUFFER
+  539: Error fetching https://qb64phoenix.com/qb64wiki/index.php/_GLFINISH: 404 Client Error: Not Found for url: https://qb64phoenix.com/qb64wiki/index.php/GLFINISH
+  540: Error fetching https://qb64phoenix.com/qb64wiki/index.php/_GLFLUSH: 404 Client Error: Not Found for url: https://qb64phoenix.com/qb64wiki/index.php/GLFLUSH
+  541: Error fetching https://qb64phoenix.com/qb64wiki/index.php/_GLFOGF: 404 Client Error: Not Found for url: https://qb64phoenix.com/qb64wiki/index.php/GLFOGF
+  542: Error fetching https://qb64phoenix.com/qb64wiki/index.php/_GLFOGFV: 404 Client Error: Not Found for url: https://qb64phoenix.com/qb64wiki/index.php/GLFOGFV
+  543: Error fetching https://qb64phoenix.com/qb64wiki/index.php/_GLFOGI: 404 Client Error: Not Found for url: https://qb64phoenix.com/qb64wiki/index.php/GLFOGI
+  544: Error fetching https://qb64phoenix.com/qb64wiki/index.php/_GLFOGIV: 404 Client Error: Not Found for url: https://qb64phoenix.com/qb64wiki/index.php/GLFOGIV
+  545: Error fetching https://qb64phoenix.com/qb64wiki/index.php/_GLFRONTFACE: 404 Client Error: Not Found for url: https://qb64phoenix.com/qb64wiki/index.php/GLFRONTFACE
+  546: Error fetching https://qb64phoenix.com/qb64wiki/index.php/_GLFRUSTUM: 404 Client Error: Not Found for url: https://qb64phoenix.com/qb64wiki/index.php/GLFRUSTUM
+  547: Error fetching https://qb64phoenix.com/qb64wiki/index.php/_GLGENLISTS: 404 Client Error: Not Found for url: https://qb64phoenix.com/qb64wiki/index.php/GLGENLISTS
+  548: Error fetching https://qb64phoenix.com/qb64wiki/index.php/_GLGENTEXTURES: 404 Client Error: Not Found for url: https://qb64phoenix.com/qb64wiki/index.php/GLGENTEXTURES
+  549: Error fetching https://qb64phoenix.com/qb64wiki/index.php/_GLGETBOOLEANV: 404 Client Error: Not Found for url: https://qb64phoenix.com/qb64wiki/index.php/GLGETBOOLEANV
+  550: Error fetching https://qb64phoenix.com/qb64wiki/index.php/_GLGETCLIPPLANE: 404 Client Error: Not Found for url: https://qb64phoenix.com/qb64wiki/index.php/GLGETCLIPPLANE
+  551: Error fetching https://qb64phoenix.com/qb64wiki/index.php/_GLGETDOUBLEV: 404 Client Error: Not Found for url: https://qb64phoenix.com/qb64wiki/index.php/GLGETDOUBLEV
+  552: Error fetching https://qb64phoenix.com/qb64wiki/index.php/_GLGETERROR: 404 Client Error: Not Found for url: https://qb64phoenix.com/qb64wiki/index.php/GLGETERROR
+  553: Error fetching https://qb64phoenix.com/qb64wiki/index.php/_GLGETFLOATV: 404 Client Error: Not Found for url: https://qb64phoenix.com/qb64wiki/index.php/GLGETFLOATV
+  554: Error fetching https://qb64phoenix.com/qb64wiki/index.php/_GLGETINTEGERV: 404 Client Error: Not Found for url: https://qb64phoenix.com/qb64wiki/index.php/GLGETINTEGERV
+  555: Error fetching https://qb64phoenix.com/qb64wiki/index.php/_GLGETLIGHTFV: 404 Client Error: Not Found for url: https://qb64phoenix.com/qb64wiki/index.php/GLGETLIGHTFV
+  556: Error fetching https://qb64phoenix.com/qb64wiki/index.php/_GLGETLIGHTIV: 404 Client Error: Not Found for url: https://qb64phoenix.com/qb64wiki/index.php/GLGETLIGHTIV
+  557: Error fetching https://qb64phoenix.com/qb64wiki/index.php/_GLGETMAPDV: 404 Client Error: Not Found for url: https://qb64phoenix.com/qb64wiki/index.php/GLGETMAPDV
+  558: Error fetching https://qb64phoenix.com/qb64wiki/index.php/_GLGETMAPFV: 404 Client Error: Not Found for url: https://qb64phoenix.com/qb64wiki/index.php/GLGETMAPFV
+  559: Error fetching https://qb64phoenix.com/qb64wiki/index.php/_GLGETMAPIV: 404 Client Error: Not Found for url: https://qb64phoenix.com/qb64wiki/index.php/GLGETMAPIV
+  560: Error fetching https://qb64phoenix.com/qb64wiki/index.php/_GLGETMATERIALFV: 404 Client Error: Not Found for url: https://qb64phoenix.com/qb64wiki/index.php/GLGETMATERIALFV
+  561: Error fetching https://qb64phoenix.com/qb64wiki/index.php/_GLGETMATERIALIV: 404 Client Error: Not Found for url: https://qb64phoenix.com/qb64wiki/index.php/GLGETMATERIALIV
+  562: Error fetching https://qb64phoenix.com/qb64wiki/index.php/_GLGETPIXELMAPFV: 404 Client Error: Not Found for url: https://qb64phoenix.com/qb64wiki/index.php/GLGETPIXELMAPFV
+  563: Error fetching https://qb64phoenix.com/qb64wiki/index.php/_GLGETPIXELMAPUIV: 404 Client Error: Not Found for url: https://qb64phoenix.com/qb64wiki/index.php/GLGETPIXELMAPUIV
+  564: Error fetching https://qb64phoenix.com/qb64wiki/index.php/_GLGETPIXELMAPUSV: 404 Client Error: Not Found for url: https://qb64phoenix.com/qb64wiki/index.php/GLGETPIXELMAPUSV
+  565: Error fetching https://qb64phoenix.com/qb64wiki/index.php/_GLGETPOINTERV: 404 Client Error: Not Found for url: https://qb64phoenix.com/qb64wiki/index.php/GLGETPOINTERV
+  566: Error fetching https://qb64phoenix.com/qb64wiki/index.php/_GLGETPOLYGONSTIPPLE: 404 Client Error: Not Found for url: https://qb64phoenix.com/qb64wiki/index.php/GLGETPOLYGONSTIPPLE
+  567: Error fetching https://qb64phoenix.com/qb64wiki/index.php/_GLGETSTRING: 404 Client Error: Not Found for url: https://qb64phoenix.com/qb64wiki/index.php/GLGETSTRING
+  568: Error fetching https://qb64phoenix.com/qb64wiki/index.php/_GLGETTEXENVFV: 404 Client Error: Not Found for url: https://qb64phoenix.com/qb64wiki/index.php/GLGETTEXENVFV
+  569: Error fetching https://qb64phoenix.com/qb64wiki/index.php/_GLGETTEXENVIV: 404 Client Error: Not Found for url: https://qb64phoenix.com/qb64wiki/index.php/GLGETTEXENVIV
+  570: Error fetching https://qb64phoenix.com/qb64wiki/index.php/_GLGETTEXGENDV: 404 Client Error: Not Found for url: https://qb64phoenix.com/qb64wiki/index.php/GLGETTEXGENDV
+  571: Error fetching https://qb64phoenix.com/qb64wiki/index.php/_GLGETTEXGENFV: 404 Client Error: Not Found for url: https://qb64phoenix.com/qb64wiki/index.php/GLGETTEXGENFV
+  572: Error fetching https://qb64phoenix.com/qb64wiki/index.php/_GLGETTEXGENIV: 404 Client Error: Not Found for url: https://qb64phoenix.com/qb64wiki/index.php/GLGETTEXGENIV
+  573: Error fetching https://qb64phoenix.com/qb64wiki/index.php/_GLGETTEXIMAGE: 404 Client Error: Not Found for url: https://qb64phoenix.com/qb64wiki/index.php/GLGETTEXIMAGE
+  574: Error fetching https://qb64phoenix.com/qb64wiki/index.php/_GLGETTEXLEVELPARAMETERFV: 404 Client Error: Not Found for url: https://qb64phoenix.com/qb64wiki/index.php/GLGETTEXLEVELPARAMETERFV
+  575: Error fetching https://qb64phoenix.com/qb64wiki/index.php/_GLGETTEXLEVELPARAMETERIV: 404 Client Error: Not Found for url: https://qb64phoenix.com/qb64wiki/index.php/GLGETTEXLEVELPARAMETERIV
+  576: Error fetching https://qb64phoenix.com/qb64wiki/index.php/_GLGETTEXPARAMETERFV: 404 Client Error: Not Found for url: https://qb64phoenix.com/qb64wiki/index.php/GLGETTEXPARAMETERFV
+  577: Error fetching https://qb64phoenix.com/qb64wiki/index.php/_GLGETTEXPARAMETERIV: 404 Client Error: Not Found for url: https://qb64phoenix.com/qb64wiki/index.php/GLGETTEXPARAMETERIV
+  578: Error fetching https://qb64phoenix.com/qb64wiki/index.php/_GLHINT: 404 Client Error: Not Found for url: https://qb64phoenix.com/qb64wiki/index.php/GLHINT
+  579: Error fetching https://qb64phoenix.com/qb64wiki/index.php/_GLINDEXMASK: 404 Client Error: Not Found for url: https://qb64phoenix.com/qb64wiki/index.php/GLINDEXMASK
+  580: Error fetching https://qb64phoenix.com/qb64wiki/index.php/_GLINDEXPOINTER: 404 Client Error: Not Found for url: https://qb64phoenix.com/qb64wiki/index.php/GLINDEXPOINTER
+  581: Error fetching https://qb64phoenix.com/qb64wiki/index.php/_GLINDEXD: 404 Client Error: Not Found for url: https://qb64phoenix.com/qb64wiki/index.php/GLINDEXD
+  582: Error fetching https://qb64phoenix.com/qb64wiki/index.php/_GLINDEXDV: 404 Client Error: Not Found for url: https://qb64phoenix.com/qb64wiki/index.php/GLINDEXDV
+  583: Error fetching https://qb64phoenix.com/qb64wiki/index.php/_GLINDEXF: 404 Client Error: Not Found for url: https://qb64phoenix.com/qb64wiki/index.php/GLINDEXF
+  584: Error fetching https://qb64phoenix.com/qb64wiki/index.php/_GLINDEXFV: 404 Client Error: Not Found for url: https://qb64phoenix.com/qb64wiki/index.php/GLINDEXFV
+  585: Error fetching https://qb64phoenix.com/qb64wiki/index.php/_GLINDEXI: 404 Client Error: Not Found for url: https://qb64phoenix.com/qb64wiki/index.php/GLINDEXI
+  586: Error fetching https://qb64phoenix.com/qb64wiki/index.php/_GLINDEXIV: 404 Client Error: Not Found for url: https://qb64phoenix.com/qb64wiki/index.php/GLINDEXIV
+  587: Error fetching https://qb64phoenix.com/qb64wiki/index.php/_GLINDEXS: 404 Client Error: Not Found for url: https://qb64phoenix.com/qb64wiki/index.php/GLINDEXS
+  588: Error fetching https://qb64phoenix.com/qb64wiki/index.php/_GLINDEXSV: 404 Client Error: Not Found for url: https://qb64phoenix.com/qb64wiki/index.php/GLINDEXSV
+  589: Error fetching https://qb64phoenix.com/qb64wiki/index.php/_GLINDEXUB: 404 Client Error: Not Found for url: https://qb64phoenix.com/qb64wiki/index.php/GLINDEXUB
+  590: Error fetching https://qb64phoenix.com/qb64wiki/index.php/_GLINDEXUBV: 404 Client Error: Not Found for url: https://qb64phoenix.com/qb64wiki/index.php/GLINDEXUBV
+  591: Error fetching https://qb64phoenix.com/qb64wiki/index.php/_GLINITNAMES: 404 Client Error: Not Found for url: https://qb64phoenix.com/qb64wiki/index.php/GLINITNAMES
+  592: Error fetching https://qb64phoenix.com/qb64wiki/index.php/_GLINTERLEAVEDARRAYS: 404 Client Error: Not Found for url: https://qb64phoenix.com/qb64wiki/index.php/GLINTERLEAVEDARRAYS
+  593: Error fetching https://qb64phoenix.com/qb64wiki/index.php/_GLISENABLED: 404 Client Error: Not Found for url: https://qb64phoenix.com/qb64wiki/index.php/GLISENABLED
+  594: Error fetching https://qb64phoenix.com/qb64wiki/index.php/_GLISLIST: 404 Client Error: Not Found for url: https://qb64phoenix.com/qb64wiki/index.php/GLISLIST
+  595: Error fetching https://qb64phoenix.com/qb64wiki/index.php/_GLISTEXTURE: 404 Client Error: Not Found for url: https://qb64phoenix.com/qb64wiki/index.php/GLISTEXTURE
+  596: Error fetching https://qb64phoenix.com/qb64wiki/index.php/_GLLIGHTMODELF: 404 Client Error: Not Found for url: https://qb64phoenix.com/qb64wiki/index.php/GLLIGHTMODELF
+  597: Error fetching https://qb64phoenix.com/qb64wiki/index.php/_GLLIGHTMODELFV: 404 Client Error: Not Found for url: https://qb64phoenix.com/qb64wiki/index.php/GLLIGHTMODELFV
+  598: Error fetching https://qb64phoenix.com/qb64wiki/index.php/_GLLIGHTMODELI: 404 Client Error: Not Found for url: https://qb64phoenix.com/qb64wiki/index.php/GLLIGHTMODELI
+  599: Error fetching https://qb64phoenix.com/qb64wiki/index.php/_GLLIGHTMODELIV: 404 Client Error: Not Found for url: https://qb64phoenix.com/qb64wiki/index.php/GLLIGHTMODELIV
+  600: Error fetching https://qb64phoenix.com/qb64wiki/index.php/_GLLIGHTF: 404 Client Error: Not Found for url: https://qb64phoenix.com/qb64wiki/index.php/GLLIGHTF
+  601: Error fetching https://qb64phoenix.com/qb64wiki/index.php/_GLLIGHTFV: 404 Client Error: Not Found for url: https://qb64phoenix.com/qb64wiki/index.php/GLLIGHTFV
+  602: Error fetching https://qb64phoenix.com/qb64wiki/index.php/_GLLIGHTI: 404 Client Error: Not Found for url: https://qb64phoenix.com/qb64wiki/index.php/GLLIGHTI
+  603: Error fetching https://qb64phoenix.com/qb64wiki/index.php/_GLLIGHTIV: 404 Client Error: Not Found for url: https://qb64phoenix.com/qb64wiki/index.php/GLLIGHTIV
+  604: Error fetching https://qb64phoenix.com/qb64wiki/index.php/_GLLINESTIPPLE: 404 Client Error: Not Found for url: https://qb64phoenix.com/qb64wiki/index.php/GLLINESTIPPLE
+  605: Error fetching https://qb64phoenix.com/qb64wiki/index.php/_GLLINEWIDTH: 404 Client Error: Not Found for url: https://qb64phoenix.com/qb64wiki/index.php/GLLINEWIDTH
+  606: Error fetching https://qb64phoenix.com/qb64wiki/index.php/_GLLISTBASE: 404 Client Error: Not Found for url: https://qb64phoenix.com/qb64wiki/index.php/GLLISTBASE
+  607: Error fetching https://qb64phoenix.com/qb64wiki/index.php/_GLLOADIDENTITY: 404 Client Error: Not Found for url: https://qb64phoenix.com/qb64wiki/index.php/GLLOADIDENTITY
+  608: Error fetching https://qb64phoenix.com/qb64wiki/index.php/_GLLOADMATRIXD: 404 Client Error: Not Found for url: https://qb64phoenix.com/qb64wiki/index.php/GLLOADMATRIXD
+  609: Error fetching https://qb64phoenix.com/qb64wiki/index.php/_GLLOADMATRIXF: 404 Client Error: Not Found for url: https://qb64phoenix.com/qb64wiki/index.php/GLLOADMATRIXF
+  610: Error fetching https://qb64phoenix.com/qb64wiki/index.php/_GLLOADNAME: 404 Client Error: Not Found for url: https://qb64phoenix.com/qb64wiki/index.php/GLLOADNAME
+  611: Error fetching https://qb64phoenix.com/qb64wiki/index.php/_GLLOGICOP: 404 Client Error: Not Found for url: https://qb64phoenix.com/qb64wiki/index.php/GLLOGICOP
+  612: Error fetching https://qb64phoenix.com/qb64wiki/index.php/_GLMAP1D: 404 Client Error: Not Found for url: https://qb64phoenix.com/qb64wiki/index.php/GLMAP1D
+  613: Error fetching https://qb64phoenix.com/qb64wiki/index.php/_GLMAP1F: 404 Client Error: Not Found for url: https://qb64phoenix.com/qb64wiki/index.php/GLMAP1F
+  614: Error fetching https://qb64phoenix.com/qb64wiki/index.php/_GLMAP2D: 404 Client Error: Not Found for url: https://qb64phoenix.com/qb64wiki/index.php/GLMAP2D
+  615: Error fetching https://qb64phoenix.com/qb64wiki/index.php/_GLMAP2F: 404 Client Error: Not Found for url: https://qb64phoenix.com/qb64wiki/index.php/GLMAP2F
+  616: Error fetching https://qb64phoenix.com/qb64wiki/index.php/_GLMAPGRID1D: 404 Client Error: Not Found for url: https://qb64phoenix.com/qb64wiki/index.php/GLMAPGRID1D
+  617: Error fetching https://qb64phoenix.com/qb64wiki/index.php/_GLMAPGRID1F: 404 Client Error: Not Found for url: https://qb64phoenix.com/qb64wiki/index.php/GLMAPGRID1F
+  618: Error fetching https://qb64phoenix.com/qb64wiki/index.php/_GLMAPGRID2D: 404 Client Error: Not Found for url: https://qb64phoenix.com/qb64wiki/index.php/GLMAPGRID2D
+  619: Error fetching https://qb64phoenix.com/qb64wiki/index.php/_GLMAPGRID2F: 404 Client Error: Not Found for url: https://qb64phoenix.com/qb64wiki/index.php/GLMAPGRID2F
+  620: Error fetching https://qb64phoenix.com/qb64wiki/index.php/_GLMATERIALF: 404 Client Error: Not Found for url: https://qb64phoenix.com/qb64wiki/index.php/GLMATERIALF
+  621: Error fetching https://qb64phoenix.com/qb64wiki/index.php/_GLMATERIALFV: 404 Client Error: Not Found for url: https://qb64phoenix.com/qb64wiki/index.php/GLMATERIALFV
+  622: Error fetching https://qb64phoenix.com/qb64wiki/index.php/_GLMATERIALI: 404 Client Error: Not Found for url: https://qb64phoenix.com/qb64wiki/index.php/GLMATERIALI
+  623: Error fetching https://qb64phoenix.com/qb64wiki/index.php/_GLMATERIALIV: 404 Client Error: Not Found for url: https://qb64phoenix.com/qb64wiki/index.php/GLMATERIALIV
+  624: Error fetching https://qb64phoenix.com/qb64wiki/index.php/_GLMATRIXMODE: 404 Client Error: Not Found for url: https://qb64phoenix.com/qb64wiki/index.php/GLMATRIXMODE
+  625: Error fetching https://qb64phoenix.com/qb64wiki/index.php/_GLMULTMATRIXD: 404 Client Error: Not Found for url: https://qb64phoenix.com/qb64wiki/index.php/GLMULTMATRIXD
+  626: Error fetching https://qb64phoenix.com/qb64wiki/index.php/_GLMULTMATRIXF: 404 Client Error: Not Found for url: https://qb64phoenix.com/qb64wiki/index.php/GLMULTMATRIXF
+  627: Error fetching https://qb64phoenix.com/qb64wiki/index.php/_GLNEWLIST: 404 Client Error: Not Found for url: https://qb64phoenix.com/qb64wiki/index.php/GLNEWLIST
+  628: Error fetching https://qb64phoenix.com/qb64wiki/index.php/_GLNORMAL3B: 404 Client Error: Not Found for url: https://qb64phoenix.com/qb64wiki/index.php/GLNORMAL3B
+  629: Error fetching https://qb64phoenix.com/qb64wiki/index.php/_GLNORMAL3BV: 404 Client Error: Not Found for url: https://qb64phoenix.com/qb64wiki/index.php/GLNORMAL3BV
+  630: Error fetching https://qb64phoenix.com/qb64wiki/index.php/_GLNORMAL3D: 404 Client Error: Not Found for url: https://qb64phoenix.com/qb64wiki/index.php/GLNORMAL3D
+  631: Error fetching https://qb64phoenix.com/qb64wiki/index.php/_GLNORMAL3DV: 404 Client Error: Not Found for url: https://qb64phoenix.com/qb64wiki/index.php/GLNORMAL3DV
+  632: Error fetching https://qb64phoenix.com/qb64wiki/index.php/_GLNORMAL3F: 404 Client Error: Not Found for url: https://qb64phoenix.com/qb64wiki/index.php/GLNORMAL3F
+  633: Error fetching https://qb64phoenix.com/qb64wiki/index.php/_GLNORMAL3FV: 404 Client Error: Not Found for url: https://qb64phoenix.com/qb64wiki/index.php/GLNORMAL3FV
+  634: Error fetching https://qb64phoenix.com/qb64wiki/index.php/_GLNORMAL3I: 404 Client Error: Not Found for url: https://qb64phoenix.com/qb64wiki/index.php/GLNORMAL3I
+  635: Error fetching https://qb64phoenix.com/qb64wiki/index.php/_GLNORMAL3IV: 404 Client Error: Not Found for url: https://qb64phoenix.com/qb64wiki/index.php/GLNORMAL3IV
+  636: Error fetching https://qb64phoenix.com/qb64wiki/index.php/_GLNORMAL3S: 404 Client Error: Not Found for url: https://qb64phoenix.com/qb64wiki/index.php/GLNORMAL3S
+  637: Error fetching https://qb64phoenix.com/qb64wiki/index.php/_GLNORMAL3SV: 404 Client Error: Not Found for url: https://qb64phoenix.com/qb64wiki/index.php/GLNORMAL3SV
+  638: Error fetching https://qb64phoenix.com/qb64wiki/index.php/_GLNORMALPOINTER: 404 Client Error: Not Found for url: https://qb64phoenix.com/qb64wiki/index.php/GLNORMALPOINTER
+  639: Error fetching https://qb64phoenix.com/qb64wiki/index.php/_GLORTHO: 404 Client Error: Not Found for url: https://qb64phoenix.com/qb64wiki/index.php/GLORTHO
+  640: Error fetching https://qb64phoenix.com/qb64wiki/index.php/_GLPASSTHROUGH: 404 Client Error: Not Found for url: https://qb64phoenix.com/qb64wiki/index.php/GLPASSTHROUGH
+  641: Error fetching https://qb64phoenix.com/qb64wiki/index.php/_GLPIXELMAPFV: 404 Client Error: Not Found for url: https://qb64phoenix.com/qb64wiki/index.php/GLPIXELMAPFV
+  642: Error fetching https://qb64phoenix.com/qb64wiki/index.php/_GLPIXELMAPUIV: 404 Client Error: Not Found for url: https://qb64phoenix.com/qb64wiki/index.php/GLPIXELMAPUIV
+  643: Error fetching https://qb64phoenix.com/qb64wiki/index.php/_GLPIXELMAPUSV: 404 Client Error: Not Found for url: https://qb64phoenix.com/qb64wiki/index.php/GLPIXELMAPUSV
+  644: Error fetching https://qb64phoenix.com/qb64wiki/index.php/_GLPIXELSTOREF: 404 Client Error: Not Found for url: https://qb64phoenix.com/qb64wiki/index.php/GLPIXELSTOREF
+  645: Error fetching https://qb64phoenix.com/qb64wiki/index.php/_GLPIXELSTOREI: 404 Client Error: Not Found for url: https://qb64phoenix.com/qb64wiki/index.php/GLPIXELSTOREI
+  646: Error fetching https://qb64phoenix.com/qb64wiki/index.php/_GLPIXELTRANSFERF: 404 Client Error: Not Found for url: https://qb64phoenix.com/qb64wiki/index.php/GLPIXELTRANSFERF
+  647: Error fetching https://qb64phoenix.com/qb64wiki/index.php/_GLPIXELTRANSFERI: 404 Client Error: Not Found for url: https://qb64phoenix.com/qb64wiki/index.php/GLPIXELTRANSFERI
+  648: Error fetching https://qb64phoenix.com/qb64wiki/index.php/_GLPIXELZOOM: 404 Client Error: Not Found for url: https://qb64phoenix.com/qb64wiki/index.php/GLPIXELZOOM
+  649: Error fetching https://qb64phoenix.com/qb64wiki/index.php/_GLPOINTSIZE: 404 Client Error: Not Found for url: https://qb64phoenix.com/qb64wiki/index.php/GLPOINTSIZE
+  650: Error fetching https://qb64phoenix.com/qb64wiki/index.php/_GLPOLYGONMODE: 404 Client Error: Not Found for url: https://qb64phoenix.com/qb64wiki/index.php/GLPOLYGONMODE
+  651: Error fetching https://qb64phoenix.com/qb64wiki/index.php/_GLPOLYGONOFFSET: 404 Client Error: Not Found for url: https://qb64phoenix.com/qb64wiki/index.php/GLPOLYGONOFFSET
+  652: Error fetching https://qb64phoenix.com/qb64wiki/index.php/_GLPOLYGONSTIPPLE: 404 Client Error: Not Found for url: https://qb64phoenix.com/qb64wiki/index.php/GLPOLYGONSTIPPLE
+  653: Error fetching https://qb64phoenix.com/qb64wiki/index.php/_GLPOPATTRIB: 404 Client Error: Not Found for url: https://qb64phoenix.com/qb64wiki/index.php/GLPOPATTRIB
+  654: Error fetching https://qb64phoenix.com/qb64wiki/index.php/_GLPOPCLIENTATTRIB: 404 Client Error: Not Found for url: https://qb64phoenix.com/qb64wiki/index.php/GLPOPCLIENTATTRIB
+  655: Error fetching https://qb64phoenix.com/qb64wiki/index.php/_GLPOPMATRIX: 404 Client Error: Not Found for url: https://qb64phoenix.com/qb64wiki/index.php/GLPOPMATRIX
+  656: Error fetching https://qb64phoenix.com/qb64wiki/index.php/_GLPOPNAME: 404 Client Error: Not Found for url: https://qb64phoenix.com/qb64wiki/index.php/GLPOPNAME
+  657: Error fetching https://qb64phoenix.com/qb64wiki/index.php/_GLPRIORITIZETEXTURES: 404 Client Error: Not Found for url: https://qb64phoenix.com/qb64wiki/index.php/GLPRIORITIZETEXTURES
+  658: Error fetching https://qb64phoenix.com/qb64wiki/index.php/_GLPUSHATTRIB: 404 Client Error: Not Found for url: https://qb64phoenix.com/qb64wiki/index.php/GLPUSHATTRIB
+  659: Error fetching https://qb64phoenix.com/qb64wiki/index.php/_GLPUSHCLIENTATTRIB: 404 Client Error: Not Found for url: https://qb64phoenix.com/qb64wiki/index.php/GLPUSHCLIENTATTRIB
+  660: Error fetching https://qb64phoenix.com/qb64wiki/index.php/_GLPUSHMATRIX: 404 Client Error: Not Found for url: https://qb64phoenix.com/qb64wiki/index.php/GLPUSHMATRIX
+  661: Error fetching https://qb64phoenix.com/qb64wiki/index.php/_GLPUSHNAME: 404 Client Error: Not Found for url: https://qb64phoenix.com/qb64wiki/index.php/GLPUSHNAME
+  662: Error fetching https://qb64phoenix.com/qb64wiki/index.php/_GLRASTERPOS2D: 404 Client Error: Not Found for url: https://qb64phoenix.com/qb64wiki/index.php/GLRASTERPOS2D
+  663: Error fetching https://qb64phoenix.com/qb64wiki/index.php/_GLRASTERPOS2DV: 404 Client Error: Not Found for url: https://qb64phoenix.com/qb64wiki/index.php/GLRASTERPOS2DV
+  664: Error fetching https://qb64phoenix.com/qb64wiki/index.php/_GLRASTERPOS2F: 404 Client Error: Not Found for url: https://qb64phoenix.com/qb64wiki/index.php/GLRASTERPOS2F
+  665: Error fetching https://qb64phoenix.com/qb64wiki/index.php/_GLRASTERPOS2FV: 404 Client Error: Not Found for url: https://qb64phoenix.com/qb64wiki/index.php/GLRASTERPOS2FV
+  666: Error fetching https://qb64phoenix.com/qb64wiki/index.php/_GLRASTERPOS2I: 404 Client Error: Not Found for url: https://qb64phoenix.com/qb64wiki/index.php/GLRASTERPOS2I
+  667: Error fetching https://qb64phoenix.com/qb64wiki/index.php/_GLRASTERPOS2IV: 404 Client Error: Not Found for url: https://qb64phoenix.com/qb64wiki/index.php/GLRASTERPOS2IV
+  668: Error fetching https://qb64phoenix.com/qb64wiki/index.php/_GLRASTERPOS2S: 404 Client Error: Not Found for url: https://qb64phoenix.com/qb64wiki/index.php/GLRASTERPOS2S
+  669: Error fetching https://qb64phoenix.com/qb64wiki/index.php/_GLRASTERPOS2SV: 404 Client Error: Not Found for url: https://qb64phoenix.com/qb64wiki/index.php/GLRASTERPOS2SV
+  670: Error fetching https://qb64phoenix.com/qb64wiki/index.php/_GLRASTERPOS3D: 404 Client Error: Not Found for url: https://qb64phoenix.com/qb64wiki/index.php/GLRASTERPOS3D
+  671: Error fetching https://qb64phoenix.com/qb64wiki/index.php/_GLRASTERPOS3DV: 404 Client Error: Not Found for url: https://qb64phoenix.com/qb64wiki/index.php/GLRASTERPOS3DV
+  672: Error fetching https://qb64phoenix.com/qb64wiki/index.php/_GLRASTERPOS3F: 404 Client Error: Not Found for url: https://qb64phoenix.com/qb64wiki/index.php/GLRASTERPOS3F
+  673: Error fetching https://qb64phoenix.com/qb64wiki/index.php/_GLRASTERPOS3FV: 404 Client Error: Not Found for url: https://qb64phoenix.com/qb64wiki/index.php/GLRASTERPOS3FV
+  674: Error fetching https://qb64phoenix.com/qb64wiki/index.php/_GLRASTERPOS3I: 404 Client Error: Not Found for url: https://qb64phoenix.com/qb64wiki/index.php/GLRASTERPOS3I
+  675: Error fetching https://qb64phoenix.com/qb64wiki/index.php/_GLRASTERPOS3IV: 404 Client Error: Not Found for url: https://qb64phoenix.com/qb64wiki/index.php/GLRASTERPOS3IV
+  676: Error fetching https://qb64phoenix.com/qb64wiki/index.php/_GLRASTERPOS3S: 404 Client Error: Not Found for url: https://qb64phoenix.com/qb64wiki/index.php/GLRASTERPOS3S
+  677: Error fetching https://qb64phoenix.com/qb64wiki/index.php/_GLRASTERPOS3SV: 404 Client Error: Not Found for url: https://qb64phoenix.com/qb64wiki/index.php/GLRASTERPOS3SV
+  678: Error fetching https://qb64phoenix.com/qb64wiki/index.php/_GLRASTERPOS4D: 404 Client Error: Not Found for url: https://qb64phoenix.com/qb64wiki/index.php/GLRASTERPOS4D
+  679: Error fetching https://qb64phoenix.com/qb64wiki/index.php/_GLRASTERPOS4DV: 404 Client Error: Not Found for url: https://qb64phoenix.com/qb64wiki/index.php/GLRASTERPOS4DV
+  680: Error fetching https://qb64phoenix.com/qb64wiki/index.php/_GLRASTERPOS4F: 404 Client Error: Not Found for url: https://qb64phoenix.com/qb64wiki/index.php/GLRASTERPOS4F
+  681: Error fetching https://qb64phoenix.com/qb64wiki/index.php/_GLRASTERPOS4FV: 404 Client Error: Not Found for url: https://qb64phoenix.com/qb64wiki/index.php/GLRASTERPOS4FV
+  682: Error fetching https://qb64phoenix.com/qb64wiki/index.php/_GLRASTERPOS4I: 404 Client Error: Not Found for url: https://qb64phoenix.com/qb64wiki/index.php/GLRASTERPOS4I
+  683: Error fetching https://qb64phoenix.com/qb64wiki/index.php/_GLRASTERPOS4IV: 404 Client Error: Not Found for url: https://qb64phoenix.com/qb64wiki/index.php/GLRASTERPOS4IV
+  684: Error fetching https://qb64phoenix.com/qb64wiki/index.php/_GLRASTERPOS4S: 404 Client Error: Not Found for url: https://qb64phoenix.com/qb64wiki/index.php/GLRASTERPOS4S
+  685: Error fetching https://qb64phoenix.com/qb64wiki/index.php/_GLRASTERPOS4SV: 404 Client Error: Not Found for url: https://qb64phoenix.com/qb64wiki/index.php/GLRASTERPOS4SV
+  686: Error fetching https://qb64phoenix.com/qb64wiki/index.php/_GLREADBUFFER: 404 Client Error: Not Found for url: https://qb64phoenix.com/qb64wiki/index.php/GLREADBUFFER
+  687: Error fetching https://qb64phoenix.com/qb64wiki/index.php/_GLREADPIXELS: 404 Client Error: Not Found for url: https://qb64phoenix.com/qb64wiki/index.php/GLREADPIXELS
+  688: Error fetching https://qb64phoenix.com/qb64wiki/index.php/_GLRECTD: 404 Client Error: Not Found for url: https://qb64phoenix.com/qb64wiki/index.php/GLRECTD
+  689: Error fetching https://qb64phoenix.com/qb64wiki/index.php/_GLRECTDV: 404 Client Error: Not Found for url: https://qb64phoenix.com/qb64wiki/index.php/GLRECTDV
+  690: Error fetching https://qb64phoenix.com/qb64wiki/index.php/_GLRECTF: 404 Client Error: Not Found for url: https://qb64phoenix.com/qb64wiki/index.php/GLRECTF
+  691: Error fetching https://qb64phoenix.com/qb64wiki/index.php/_GLRECTFV: 404 Client Error: Not Found for url: https://qb64phoenix.com/qb64wiki/index.php/GLRECTFV
+  692: Error fetching https://qb64phoenix.com/qb64wiki/index.php/_GLRECTI: 404 Client Error: Not Found for url: https://qb64phoenix.com/qb64wiki/index.php/GLRECTI
+  693: Error fetching https://qb64phoenix.com/qb64wiki/index.php/_GLRECTIV: 404 Client Error: Not Found for url: https://qb64phoenix.com/qb64wiki/index.php/GLRECTIV
+  694: Error fetching https://qb64phoenix.com/qb64wiki/index.php/_GLRECTS: 404 Client Error: Not Found for url: https://qb64phoenix.com/qb64wiki/index.php/GLRECTS
+  695: Error fetching https://qb64phoenix.com/qb64wiki/index.php/_GLRECTSV: 404 Client Error: Not Found for url: https://qb64phoenix.com/qb64wiki/index.php/GLRECTSV
+  696: Error fetching https://qb64phoenix.com/qb64wiki/index.php/_GLRENDERMODE: 404 Client Error: Not Found for url: https://qb64phoenix.com/qb64wiki/index.php/GLRENDERMODE
+  697: Error fetching https://qb64phoenix.com/qb64wiki/index.php/_GLROTATED: 404 Client Error: Not Found for url: https://qb64phoenix.com/qb64wiki/index.php/GLROTATED
+  698: Error fetching https://qb64phoenix.com/qb64wiki/index.php/_GLROTATEF: 404 Client Error: Not Found for url: https://qb64phoenix.com/qb64wiki/index.php/GLROTATEF
+  699: Error fetching https://qb64phoenix.com/qb64wiki/index.php/_GLSCALED: 404 Client Error: Not Found for url: https://qb64phoenix.com/qb64wiki/index.php/GLSCALED
+  700: Error fetching https://qb64phoenix.com/qb64wiki/index.php/_GLSCALEF: 404 Client Error: Not Found for url: https://qb64phoenix.com/qb64wiki/index.php/GLSCALEF
+  701: Error fetching https://qb64phoenix.com/qb64wiki/index.php/_GLSCISSOR: 404 Client Error: Not Found for url: https://qb64phoenix.com/qb64wiki/index.php/GLSCISSOR
+  702: Error fetching https://qb64phoenix.com/qb64wiki/index.php/_GLSELECTBUFFER: 404 Client Error: Not Found for url: https://qb64phoenix.com/qb64wiki/index.php/GLSELECTBUFFER
+  703: Error fetching https://qb64phoenix.com/qb64wiki/index.php/_GLSHADEMODEL: 404 Client Error: Not Found for url: https://qb64phoenix.com/qb64wiki/index.php/GLSHADEMODEL
+  704: Error fetching https://qb64phoenix.com/qb64wiki/index.php/_GLSTENCILFUNC: 404 Client Error: Not Found for url: https://qb64phoenix.com/qb64wiki/index.php/GLSTENCILFUNC
+  705: Error fetching https://qb64phoenix.com/qb64wiki/index.php/_GLSTENCILMASK: 404 Client Error: Not Found for url: https://qb64phoenix.com/qb64wiki/index.php/GLSTENCILMASK
+  706: Error fetching https://qb64phoenix.com/qb64wiki/index.php/_GLSTENCILOP: 404 Client Error: Not Found for url: https://qb64phoenix.com/qb64wiki/index.php/GLSTENCILOP
+  707: Error fetching https://qb64phoenix.com/qb64wiki/index.php/_GLTEXCOORD1D: 404 Client Error: Not Found for url: https://qb64phoenix.com/qb64wiki/index.php/GLTEXCOORD1D
+  708: Error fetching https://qb64phoenix.com/qb64wiki/index.php/_GLTEXCOORD1DV: 404 Client Error: Not Found for url: https://qb64phoenix.com/qb64wiki/index.php/GLTEXCOORD1DV
+  709: Error fetching https://qb64phoenix.com/qb64wiki/index.php/_GLTEXCOORD1F: 404 Client Error: Not Found for url: https://qb64phoenix.com/qb64wiki/index.php/GLTEXCOORD1F
+  710: Error fetching https://qb64phoenix.com/qb64wiki/index.php/_GLTEXCOORD1FV: 404 Client Error: Not Found for url: https://qb64phoenix.com/qb64wiki/index.php/GLTEXCOORD1FV
+  711: Error fetching https://qb64phoenix.com/qb64wiki/index.php/_GLTEXCOORD1I: 404 Client Error: Not Found for url: https://qb64phoenix.com/qb64wiki/index.php/GLTEXCOORD1I
+  712: Error fetching https://qb64phoenix.com/qb64wiki/index.php/_GLTEXCOORD1IV: 404 Client Error: Not Found for url: https://qb64phoenix.com/qb64wiki/index.php/GLTEXCOORD1IV
+  713: Error fetching https://qb64phoenix.com/qb64wiki/index.php/_GLTEXCOORD1S: 404 Client Error: Not Found for url: https://qb64phoenix.com/qb64wiki/index.php/GLTEXCOORD1S
+  714: Error fetching https://qb64phoenix.com/qb64wiki/index.php/_GLTEXCOORD1SV: 404 Client Error: Not Found for url: https://qb64phoenix.com/qb64wiki/index.php/GLTEXCOORD1SV
+  715: Error fetching https://qb64phoenix.com/qb64wiki/index.php/_GLTEXCOORD2D: 404 Client Error: Not Found for url: https://qb64phoenix.com/qb64wiki/index.php/GLTEXCOORD2D
+  716: Error fetching https://qb64phoenix.com/qb64wiki/index.php/_GLTEXCOORD2DV: 404 Client Error: Not Found for url: https://qb64phoenix.com/qb64wiki/index.php/GLTEXCOORD2DV
+  717: Error fetching https://qb64phoenix.com/qb64wiki/index.php/_GLTEXCOORD2F: 404 Client Error: Not Found for url: https://qb64phoenix.com/qb64wiki/index.php/GLTEXCOORD2F
+  718: Error fetching https://qb64phoenix.com/qb64wiki/index.php/_GLTEXCOORD2FV: 404 Client Error: Not Found for url: https://qb64phoenix.com/qb64wiki/index.php/GLTEXCOORD2FV
+  719: Error fetching https://qb64phoenix.com/qb64wiki/index.php/_GLTEXCOORD2I: 404 Client Error: Not Found for url: https://qb64phoenix.com/qb64wiki/index.php/GLTEXCOORD2I
+  720: Error fetching https://qb64phoenix.com/qb64wiki/index.php/_GLTEXCOORD2IV: 404 Client Error: Not Found for url: https://qb64phoenix.com/qb64wiki/index.php/GLTEXCOORD2IV
+  721: Error fetching https://qb64phoenix.com/qb64wiki/index.php/_GLTEXCOORD2S: 404 Client Error: Not Found for url: https://qb64phoenix.com/qb64wiki/index.php/GLTEXCOORD2S
+  722: Error fetching https://qb64phoenix.com/qb64wiki/index.php/_GLTEXCOORD2SV: 404 Client Error: Not Found for url: https://qb64phoenix.com/qb64wiki/index.php/GLTEXCOORD2SV
+  723: Error fetching https://qb64phoenix.com/qb64wiki/index.php/_GLTEXCOORD3D: 404 Client Error: Not Found for url: https://qb64phoenix.com/qb64wiki/index.php/GLTEXCOORD3D
+  724: Error fetching https://qb64phoenix.com/qb64wiki/index.php/_GLTEXCOORD3DV: 404 Client Error: Not Found for url: https://qb64phoenix.com/qb64wiki/index.php/GLTEXCOORD3DV
+  725: Error fetching https://qb64phoenix.com/qb64wiki/index.php/_GLTEXCOORD3F: 404 Client Error: Not Found for url: https://qb64phoenix.com/qb64wiki/index.php/GLTEXCOORD3F
+  726: Error fetching https://qb64phoenix.com/qb64wiki/index.php/_GLTEXCOORD3FV: 404 Client Error: Not Found for url: https://qb64phoenix.com/qb64wiki/index.php/GLTEXCOORD3FV
+  727: Error fetching https://qb64phoenix.com/qb64wiki/index.php/_GLTEXCOORD3I: 404 Client Error: Not Found for url: https://qb64phoenix.com/qb64wiki/index.php/GLTEXCOORD3I
+  728: Error fetching https://qb64phoenix.com/qb64wiki/index.php/_GLTEXCOORD3IV: 404 Client Error: Not Found for url: https://qb64phoenix.com/qb64wiki/index.php/GLTEXCOORD3IV
+  729: Error fetching https://qb64phoenix.com/qb64wiki/index.php/_GLTEXCOORD3S: 404 Client Error: Not Found for url: https://qb64phoenix.com/qb64wiki/index.php/GLTEXCOORD3S
+  730: Error fetching https://qb64phoenix.com/qb64wiki/index.php/_GLTEXCOORD3SV: 404 Client Error: Not Found for url: https://qb64phoenix.com/qb64wiki/index.php/GLTEXCOORD3SV
+  731: Error fetching https://qb64phoenix.com/qb64wiki/index.php/_GLTEXCOORD4D: 404 Client Error: Not Found for url: https://qb64phoenix.com/qb64wiki/index.php/GLTEXCOORD4D
+  732: Error fetching https://qb64phoenix.com/qb64wiki/index.php/_GLTEXCOORD4DV: 404 Client Error: Not Found for url: https://qb64phoenix.com/qb64wiki/index.php/GLTEXCOORD4DV
+  733: Error fetching https://qb64phoenix.com/qb64wiki/index.php/_GLTEXCOORD4F: 404 Client Error: Not Found for url: https://qb64phoenix.com/qb64wiki/index.php/GLTEXCOORD4F
+  734: Error fetching https://qb64phoenix.com/qb64wiki/index.php/_GLTEXCOORD4FV: 404 Client Error: Not Found for url: https://qb64phoenix.com/qb64wiki/index.php/GLTEXCOORD4FV
+  735: Error fetching https://qb64phoenix.com/qb64wiki/index.php/_GLTEXCOORD4I: 404 Client Error: Not Found for url: https://qb64phoenix.com/qb64wiki/index.php/GLTEXCOORD4I
+  736: Error fetching https://qb64phoenix.com/qb64wiki/index.php/_GLTEXCOORD4IV: 404 Client Error: Not Found for url: https://qb64phoenix.com/qb64wiki/index.php/GLTEXCOORD4IV
+  737: Error fetching https://qb64phoenix.com/qb64wiki/index.php/_GLTEXCOORD4S: 404 Client Error: Not Found for url: https://qb64phoenix.com/qb64wiki/index.php/GLTEXCOORD4S
+  738: Error fetching https://qb64phoenix.com/qb64wiki/index.php/_GLTEXCOORD4SV: 404 Client Error: Not Found for url: https://qb64phoenix.com/qb64wiki/index.php/GLTEXCOORD4SV
+  739: Error fetching https://qb64phoenix.com/qb64wiki/index.php/_GLTEXCOORDPOINTER: 404 Client Error: Not Found for url: https://qb64phoenix.com/qb64wiki/index.php/GLTEXCOORDPOINTER
+  740: Error fetching https://qb64phoenix.com/qb64wiki/index.php/_GLTEXENVF: 404 Client Error: Not Found for url: https://qb64phoenix.com/qb64wiki/index.php/GLTEXENVF
+  741: Error fetching https://qb64phoenix.com/qb64wiki/index.php/_GLTEXENVFV: 404 Client Error: Not Found for url: https://qb64phoenix.com/qb64wiki/index.php/GLTEXENVFV
+  742: Error fetching https://qb64phoenix.com/qb64wiki/index.php/_GLTEXENVI: 404 Client Error: Not Found for url: https://qb64phoenix.com/qb64wiki/index.php/GLTEXENVI
+  743: Error fetching https://qb64phoenix.com/qb64wiki/index.php/_GLTEXENVIV: 404 Client Error: Not Found for url: https://qb64phoenix.com/qb64wiki/index.php/GLTEXENVIV
+  744: Error fetching https://qb64phoenix.com/qb64wiki/index.php/_GLTEXGEND: 404 Client Error: Not Found for url: https://qb64phoenix.com/qb64wiki/index.php/GLTEXGEND
+  745: Error fetching https://qb64phoenix.com/qb64wiki/index.php/_GLTEXGENDV: 404 Client Error: Not Found for url: https://qb64phoenix.com/qb64wiki/index.php/GLTEXGENDV
+  746: Error fetching https://qb64phoenix.com/qb64wiki/index.php/_GLTEXGENF: 404 Client Error: Not Found for url: https://qb64phoenix.com/qb64wiki/index.php/GLTEXGENF
+  747: Error fetching https://qb64phoenix.com/qb64wiki/index.php/_GLTEXGENFV: 404 Client Error: Not Found for url: https://qb64phoenix.com/qb64wiki/index.php/GLTEXGENFV
+  748: Error fetching https://qb64phoenix.com/qb64wiki/index.php/_GLTEXGENI: 404 Client Error: Not Found for url: https://qb64phoenix.com/qb64wiki/index.php/GLTEXGENI
+  749: Error fetching https://qb64phoenix.com/qb64wiki/index.php/_GLTEXGENIV: 404 Client Error: Not Found for url: https://qb64phoenix.com/qb64wiki/index.php/GLTEXGENIV
+  750: Error fetching https://qb64phoenix.com/qb64wiki/index.php/_GLTEXIMAGE1D: 404 Client Error: Not Found for url: https://qb64phoenix.com/qb64wiki/index.php/GLTEXIMAGE1D
+  751: Error fetching https://qb64phoenix.com/qb64wiki/index.php/_GLTEXIMAGE2D: 404 Client Error: Not Found for url: https://qb64phoenix.com/qb64wiki/index.php/GLTEXIMAGE2D
+  752: Error fetching https://qb64phoenix.com/qb64wiki/index.php/_GLTEXPARAMETERF: 404 Client Error: Not Found for url: https://qb64phoenix.com/qb64wiki/index.php/GLTEXPARAMETERF
+  753: Error fetching https://qb64phoenix.com/qb64wiki/index.php/_GLTEXPARAMETERFV: 404 Client Error: Not Found for url: https://qb64phoenix.com/qb64wiki/index.php/GLTEXPARAMETERFV
+  754: Error fetching https://qb64phoenix.com/qb64wiki/index.php/_GLTEXPARAMETERI: 404 Client Error: Not Found for url: https://qb64phoenix.com/qb64wiki/index.php/GLTEXPARAMETERI
+  755: Error fetching https://qb64phoenix.com/qb64wiki/index.php/_GLTEXPARAMETERIV: 404 Client Error: Not Found for url: https://qb64phoenix.com/qb64wiki/index.php/GLTEXPARAMETERIV
+  756: Error fetching https://qb64phoenix.com/qb64wiki/index.php/_GLTEXSUBIMAGE1D: 404 Client Error: Not Found for url: https://qb64phoenix.com/qb64wiki/index.php/GLTEXSUBIMAGE1D
+  757: Error fetching https://qb64phoenix.com/qb64wiki/index.php/_GLTEXSUBIMAGE2D: 404 Client Error: Not Found for url: https://qb64phoenix.com/qb64wiki/index.php/GLTEXSUBIMAGE2D
+  758: Error fetching https://qb64phoenix.com/qb64wiki/index.php/_GLTRANSLATED: 404 Client Error: Not Found for url: https://qb64phoenix.com/qb64wiki/index.php/GLTRANSLATED
+  759: Error fetching https://qb64phoenix.com/qb64wiki/index.php/_GLTRANSLATEF: 404 Client Error: Not Found for url: https://qb64phoenix.com/qb64wiki/index.php/GLTRANSLATEF
+  760: Error fetching https://qb64phoenix.com/qb64wiki/index.php/_GLVERTEX2D: 404 Client Error: Not Found for url: https://qb64phoenix.com/qb64wiki/index.php/GLVERTEX2D
+  761: Error fetching https://qb64phoenix.com/qb64wiki/index.php/_GLVERTEX2DV: 404 Client Error: Not Found for url: https://qb64phoenix.com/qb64wiki/index.php/GLVERTEX2DV
+  762: Error fetching https://qb64phoenix.com/qb64wiki/index.php/_GLVERTEX2F: 404 Client Error: Not Found for url: https://qb64phoenix.com/qb64wiki/index.php/GLVERTEX2F
+  763: Error fetching https://qb64phoenix.com/qb64wiki/index.php/_GLVERTEX2FV: 404 Client Error: Not Found for url: https://qb64phoenix.com/qb64wiki/index.php/GLVERTEX2FV
+  764: Error fetching https://qb64phoenix.com/qb64wiki/index.php/_GLVERTEX2I: 404 Client Error: Not Found for url: https://qb64phoenix.com/qb64wiki/index.php/GLVERTEX2I
+  765: Error fetching https://qb64phoenix.com/qb64wiki/index.php/_GLVERTEX2IV: 404 Client Error: Not Found for url: https://qb64phoenix.com/qb64wiki/index.php/GLVERTEX2IV
+  766: Error fetching https://qb64phoenix.com/qb64wiki/index.php/_GLVERTEX2S: 404 Client Error: Not Found for url: https://qb64phoenix.com/qb64wiki/index.php/GLVERTEX2S
+  767: Error fetching https://qb64phoenix.com/qb64wiki/index.php/_GLVERTEX2SV: 404 Client Error: Not Found for url: https://qb64phoenix.com/qb64wiki/index.php/GLVERTEX2SV
+  768: Error fetching https://qb64phoenix.com/qb64wiki/index.php/_GLVERTEX3D: 404 Client Error: Not Found for url: https://qb64phoenix.com/qb64wiki/index.php/GLVERTEX3D
+  769: Error fetching https://qb64phoenix.com/qb64wiki/index.php/_GLVERTEX3DV: 404 Client Error: Not Found for url: https://qb64phoenix.com/qb64wiki/index.php/GLVERTEX3DV
+  770: Error fetching https://qb64phoenix.com/qb64wiki/index.php/_GLVERTEX3F: 404 Client Error: Not Found for url: https://qb64phoenix.com/qb64wiki/index.php/GLVERTEX3F
+  771: Error fetching https://qb64phoenix.com/qb64wiki/index.php/_GLVERTEX3FV: 404 Client Error: Not Found for url: https://qb64phoenix.com/qb64wiki/index.php/GLVERTEX3FV
+  772: Error fetching https://qb64phoenix.com/qb64wiki/index.php/_GLVERTEX3I: 404 Client Error: Not Found for url: https://qb64phoenix.com/qb64wiki/index.php/GLVERTEX3I
+  773: Error fetching https://qb64phoenix.com/qb64wiki/index.php/_GLVERTEX3IV: 404 Client Error: Not Found for url: https://qb64phoenix.com/qb64wiki/index.php/GLVERTEX3IV
+  774: Error fetching https://qb64phoenix.com/qb64wiki/index.php/_GLVERTEX3S: 404 Client Error: Not Found for url: https://qb64phoenix.com/qb64wiki/index.php/GLVERTEX3S
+  775: Error fetching https://qb64phoenix.com/qb64wiki/index.php/_GLVERTEX3SV: 404 Client Error: Not Found for url: https://qb64phoenix.com/qb64wiki/index.php/GLVERTEX3SV
+  776: Error fetching https://qb64phoenix.com/qb64wiki/index.php/_GLVERTEX4D: 404 Client Error: Not Found for url: https://qb64phoenix.com/qb64wiki/index.php/GLVERTEX4D
+  777: Error fetching https://qb64phoenix.com/qb64wiki/index.php/_GLVERTEX4DV: 404 Client Error: Not Found for url: https://qb64phoenix.com/qb64wiki/index.php/GLVERTEX4DV
+  778: Error fetching https://qb64phoenix.com/qb64wiki/index.php/_GLVERTEX4F: 404 Client Error: Not Found for url: https://qb64phoenix.com/qb64wiki/index.php/GLVERTEX4F
+  779: Error fetching https://qb64phoenix.com/qb64wiki/index.php/_GLVERTEX4FV: 404 Client Error: Not Found for url: https://qb64phoenix.com/qb64wiki/index.php/GLVERTEX4FV
+  780: Error fetching https://qb64phoenix.com/qb64wiki/index.php/_GLVERTEX4I: 404 Client Error: Not Found for url: https://qb64phoenix.com/qb64wiki/index.php/GLVERTEX4I
+  781: Error fetching https://qb64phoenix.com/qb64wiki/index.php/_GLVERTEX4IV: 404 Client Error: Not Found for url: https://qb64phoenix.com/qb64wiki/index.php/GLVERTEX4IV
+  782: Error fetching https://qb64phoenix.com/qb64wiki/index.php/_GLVERTEX4S: 404 Client Error: Not Found for url: https://qb64phoenix.com/qb64wiki/index.php/GLVERTEX4S
+  783: Error fetching https://qb64phoenix.com/qb64wiki/index.php/_GLVERTEX4SV: 404 Client Error: Not Found for url: https://qb64phoenix.com/qb64wiki/index.php/GLVERTEX4SV
+  784: Error fetching https://qb64phoenix.com/qb64wiki/index.php/_GLVERTEXPOINTER: 404 Client Error: Not Found for url: https://qb64phoenix.com/qb64wiki/index.php/GLVERTEXPOINTER
+  785: Error fetching https://qb64phoenix.com/qb64wiki/index.php/_GLVIEWPORT: 404 Client Error: Not Found for url: https://qb64phoenix.com/qb64wiki/index.php/GLVIEWPORT
+  786  Processed and saved: markdown_files/SMOOTH.md
+  787  Processed and saved: markdown_files/STRETCH.md
+  788: Error fetching https://qb64phoenix.com/qb64wiki/index.php/_ANTICLOCKWISE: 404 Client Error: Not Found for url: https://qb64phoenix.com/qb64wiki/index.php/ANTICLOCKWISE
+  789: Error fetching https://qb64phoenix.com/qb64wiki/index.php/_BEHIND: 404 Client Error: Not Found for url: https://qb64phoenix.com/qb64wiki/index.php/BEHIND
+  790  Processed and saved: markdown_files/_CLEAR.md
+  791  Processed and saved: markdown_files/_FILLBACKGROUND.md
+  792: Error fetching https://qb64phoenix.com/qb64wiki/index.php/_GLUPERSPECTIVE: 404 Client Error: Not Found for url: https://qb64phoenix.com/qb64wiki/index.php/GLUPERSPECTIVE
+  793: Error fetching https://qb64phoenix.com/qb64wiki/index.php/_HARDWARE: 404 Client Error: Not Found for url: https://qb64phoenix.com/qb64wiki/index.php/HARDWARE
+  794: Error fetching https://qb64phoenix.com/qb64wiki/index.php/_HARDWARE1: 404 Client Error: Not Found for url: https://qb64phoenix.com/qb64wiki/index.php/HARDWARE1
+  795  Processed and saved: markdown_files/_KEEPBACKGROUND.md
+  796: Error fetching https://qb64phoenix.com/qb64wiki/index.php/_NONE: 404 Client Error: Not Found for url: https://qb64phoenix.com/qb64wiki/index.php/NONE
+  797  Processed and saved: markdown_files/_OFF.md
+
+  799  Processed and saved: markdown_files/_ONLYBACKGROUND.md
+  800: Error fetching https://qb64phoenix.com/qb64wiki/index.php/_ONTOP: 404 Client Error: Not Found for url: https://qb64phoenix.com/qb64wiki/index.php/ONTOP
+  801: Error fetching https://qb64phoenix.com/qb64wiki/index.php/_SEAMLESS: 404 Client Error: Not Found for url: https://qb64phoenix.com/qb64wiki/index.php/SEAMLESS
+  802  Processed and saved: markdown_files/_SMOOTH.md
+  803: Error fetching https://qb64phoenix.com/qb64wiki/index.php/_SMOOTHSHRUNK: 404 Client Error: Not Found for url: https://qb64phoenix.com/qb64wiki/index.php/SMOOTHSHRUNK
+  804: Error fetching https://qb64phoenix.com/qb64wiki/index.php/_SMOOTHSTRETCHED: 404 Client Error: Not Found for url: https://qb64phoenix.com/qb64wiki/index.php/SMOOTHSTRETCHED
+  805: Error fetching https://qb64phoenix.com/qb64wiki/index.php/_SOFTWARE: 404 Client Error: Not Found for url: https://qb64phoenix.com/qb64wiki/index.php/SOFTWARE
+  806  Processed and saved: markdown_files/_SQUAREPIXELS.md
+
+  839  Processed and saved: markdown_files/_SCROLLLOCK.md
+  840: Error fetching https://qb64phoenix.com/qb64wiki/index.php/_TOGGLE: 404 Client Error: Not Found for url: https://qb64phoenix.com/qb64wiki/index.php/TOGGLE
+  841: Error fetching https://qb64phoenix.com/qb64wiki/index.php/_CONSOLEFONT: 404 Client Error: Not Found for url: https://qb64phoenix.com/qb64wiki/index.php/CONSOLEFONT
+  842: Error fetching https://qb64phoenix.com/qb64wiki/index.php/_CONSOLECURSOR: 404 Client Error: Not Found for url: https://qb64phoenix.com/qb64wiki/index.php/CONSOLECURSOR
+  843  Processed and saved: markdown_files/_CONSOLEINPUT.md
+
+  867  Processed and saved: markdown_files/_SNDNEW.md
+  868: Error fetching https://qb64phoenix.com/qb64wiki/index.php/_SCALEDWIDTH: 404 Client Error: Not Found for url: https://qb64phoenix.com/qb64wiki/index.php/SCALEDWIDTH
+  869: Error fetching https://qb64phoenix.com/qb64wiki/index.php/_SCALEDHEIGHT: 404 Client Error: Not Found for url: https://qb64phoenix.com/qb64wiki/index.php/SCALEDHEIGHT
+  870  Processed and saved: markdown_files/_UFONTHEIGHT.md
+
+  874  Processed and saved: markdown_files/_UCHARPOS.md
+  875: Error fetching https://qb64phoenix.com/qb64wiki/index.php/_MIDISOUNDBANK: 404 Client Error: Not Found for url: https://qb64phoenix.com/qb64wiki/index.php/MIDISOUNDBANK
+  876  
