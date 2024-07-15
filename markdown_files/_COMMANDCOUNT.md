@@ -4,8 +4,6 @@ The _COMMANDCOUNT function returns the number or arguments passed from the comma
 
   
 
-|  |
-
 ## Syntax
 
 *result&* = _COMMANDCOUNT

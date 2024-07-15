@@ -4,8 +4,6 @@ The **_glColor3d** statement sets the current color.
 
   
 
-|  |
-
 ## Syntax
 
 _glColor3d GLdouble *red*, GLdouble *green*, GLdouble *blue*

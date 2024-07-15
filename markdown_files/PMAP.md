@@ -4,8 +4,6 @@ The **PMAP** statement returns the physical or [WINDOW](WINDOW.md) view port coo
 
   
 
-|  |
-
 ## Syntax
 
 PMAP (*coordinate*, *function_number%*)

@@ -4,8 +4,6 @@ The OR numerical operator returns a comparative bit value of 1 if either value's
 
   
 
-|  |
-
 ## Syntax
 
 *result* = firstValue OR secondValue

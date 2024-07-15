@@ -4,8 +4,6 @@ The ENVIRON$ function returns a [STRING](STRING.md) environmental value from **W
 
   
 
-|  |
-
 ## Syntax
 
 *setting$* = ENVIRON$({*listIndex%*|*systemID$*})

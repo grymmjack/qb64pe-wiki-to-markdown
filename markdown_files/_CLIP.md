@@ -4,8 +4,6 @@ The _CLIP option is used in a QB64 graphics [PUT](PUT.md) "PUT (graphics stateme
 
   
 
-|  |
-
 ## Syntax
 
 [PUT](PUT.md) "PUT (graphics statement)") PSET|AND|OR|PRESET}][, *omitcolor*]

@@ -4,8 +4,6 @@ The **_MEMSOUND** function returns a [_MEM](_MEM.md) value referring to a sound'
 
   
 
-|  |
-
 ## Syntax
 
 *soundBlock* = _MEMSOUND(*soundHandle&*[, *channel&*])

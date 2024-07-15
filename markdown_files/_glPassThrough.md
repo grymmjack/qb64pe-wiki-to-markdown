@@ -4,8 +4,6 @@ The **_glPassThrough** statement places a marker in the feedback buffer.
 
   
 
-|  |
-
 ## Syntax
 
 _glPassThrough GLfloat *token*

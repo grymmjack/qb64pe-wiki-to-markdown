@@ -119,6 +119,8 @@ def convert_to_markdown(html):
     markdown_content = re.sub('\[Jump to navigation\]\(Jump to navigation\.md\)', '', markdown_content)
     markdown_content = re.sub('\[Jump to search\]\(Jump to search\.md\)', '', markdown_content)
     markdown_content = re.sub('From QB64 Phoenix Edition Wiki', '', markdown_content)
+    markdown_content = re.sub('\|  \|', '', markdown_content)
+
 
     # Replace more than two newlines with two newlines
     reduced_content = markdown_content.replace('\n\n\n', '\n\n')

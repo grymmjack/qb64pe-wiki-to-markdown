@@ -4,8 +4,6 @@ The _SCREENMOVE statement positions the program window on the desktop using desi
 
   
 
-|  |
-
 ## Syntax
 
 _SCREENMOVE {*column&*, *row&*|_MIDDLE}

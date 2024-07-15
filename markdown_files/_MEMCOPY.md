@@ -4,8 +4,6 @@ The _MEMCOPY statement copies a block of bytes from one memory offset to another
 
   
 
-|  |
-
 ## Syntax
 
 _MEMCOPY *sourceBlock*, *sourceBlock.OFFSET*, *sourceBlock.SIZE* [TO](TO.md) *destBlock*, *destBlock.OFFSET*

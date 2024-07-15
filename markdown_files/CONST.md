@@ -4,8 +4,6 @@ The CONST statement globally defines one or more named numeric or string values 
 
   
 
-|  |
-
 ## Syntax
 
 CONST *constantName* = *value*[, ...]

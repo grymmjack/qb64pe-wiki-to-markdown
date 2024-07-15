@@ -4,8 +4,6 @@ The **_glLoadIdentity** statement replaces the current matrix with the identity 
 
   
 
-|  |
-
 ## Syntax
 
 _glLoadIdentity

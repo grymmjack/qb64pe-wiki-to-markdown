@@ -4,8 +4,6 @@ The _CONTROLCHR statement can be used to turn OFF control character attributes a
 
   
 
-|  |
-
 ## Syntax
 
 _CONTROLCHR {OFF|ON}

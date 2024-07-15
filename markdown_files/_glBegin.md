@@ -4,8 +4,6 @@ The **_glBegin** and **_glEnd** statements delimit the vertices of a primitive o
 
   
 
-|  |
-
 ## Syntax
 
 _glBegin GLenum *mode*

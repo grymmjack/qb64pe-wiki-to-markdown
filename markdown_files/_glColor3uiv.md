@@ -4,8 +4,6 @@ The **_glColor3uiv** statement sets the current color from an already existing a
 
   
 
-|  |
-
 ## Syntax
 
 _glColor3uiv const GLuint **v*

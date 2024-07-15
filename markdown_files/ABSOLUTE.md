@@ -4,8 +4,6 @@ CALL ABSOLUTE is used to access interrupts on the computer or execute assembly t
 
   
 
-|  |
-
 ## Syntax
 
 CALL ABSOLUTE([*argumentList*,] *integerOffset*)

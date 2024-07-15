@@ -4,8 +4,6 @@ The _MOUSEINPUT function is used to monitor any new mouse positions, button pres
 
   
 
-|  |
-
 ## Syntax
 
 *infoExists%%* = _MOUSEINPUT

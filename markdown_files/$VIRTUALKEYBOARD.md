@@ -4,8 +4,6 @@ The (now deprecated) **$VIRTUALKEYBOARD** [metacommand](metacommand.md) did turn
 
   
 
-|  |
-
 ## Syntax
 
 **$VIRTUALKEYBOARD:ON**

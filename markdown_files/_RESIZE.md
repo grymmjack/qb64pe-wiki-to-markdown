@@ -4,8 +4,6 @@ The _RESIZE statement sets resizing of the window ON or OFF and sets the method 
 
   
 
-|  |
-
 ## Syntax
 
 _RESIZE [{ON|OFF}][, {_STRETCH|_SMOOTH}]

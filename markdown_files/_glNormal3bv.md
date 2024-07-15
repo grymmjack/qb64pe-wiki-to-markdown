@@ -4,8 +4,6 @@ The **_glNormal3bv** statement sets the current normal vector.
 
   
 
-|  |
-
 ## Syntax
 
 _glNormal3bv const GLbyte **v*

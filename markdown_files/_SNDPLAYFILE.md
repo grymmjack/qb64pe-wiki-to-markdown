@@ -4,8 +4,6 @@ The _SNDPLAYFILE statement is used to play a sound file without generating a han
 
   
 
-|  |
-
 ## Syntax
 
 _SNDPLAYFILE *filename$*[, *ignored%*][, *volume!*]

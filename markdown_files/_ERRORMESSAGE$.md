@@ -4,8 +4,6 @@ The _ERRORMESSAGE$ function returns a human-readable description of the most rec
 
   
 
-|  |
-
 ## Syntax
 
 *e$* = _ERRORMESSAGE$

@@ -4,8 +4,6 @@ The **_glColor4d** statement sets the current color.
 
   
 
-|  |
-
 ## Syntax
 
 _glColor4d GLdouble *red*, GLdouble *green*, GLdouble *blue*, GLdouble *alpha*

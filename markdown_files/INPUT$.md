@@ -4,8 +4,6 @@ The INPUT$ function is used to receive data from the user's keyboard, an open fi
 
   
 
-|  |
-
 ## Syntax
 
 *result$* = INPUT$(*numberOfBytes%*[, fileOrPortNumber])

@@ -4,8 +4,6 @@ This function creates an identical designated image in memory with a different n
 
   
 
-|  |
-
 ## Syntax
 
 newhandle& = _COPYIMAGE(*imageHandle&*[, *mode%*])

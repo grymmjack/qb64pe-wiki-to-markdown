@@ -4,8 +4,6 @@ The _LIMIT statement sets the loop repeat rate of a program to so many per secon
 
   
 
-|  |
-
 ## Syntax
 
 _LIMIT *framesPerSecond!*

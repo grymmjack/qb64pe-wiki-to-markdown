@@ -4,8 +4,6 @@ The _SNDRATE function returns the sample rate frequency per second of the curren
 
   
 
-|  |
-
 ## Syntax
 
 *sampleRate&* = _SNDRATE

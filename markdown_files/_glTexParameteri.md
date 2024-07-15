@@ -4,8 +4,6 @@ The **_glTexParameteri** statement sets texture parameters.
 
   
 
-|  |
-
 ## Syntax
 
 _glTexParameteri GLenum *target*, GLenum *pname*, GLint *param*

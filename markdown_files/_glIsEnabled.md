@@ -4,8 +4,6 @@ The **_glIsEnabled** function tests whether a capability is enabled.
 
   
 
-|  |
-
 ## Syntax
 
 GLboolean *result* = _glIsEnabled (GLenum *cap*)

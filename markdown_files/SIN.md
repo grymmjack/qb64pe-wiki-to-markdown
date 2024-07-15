@@ -4,8 +4,6 @@ The SIN function returns the vertical component or sine of an angle measured in 
 
   
 
-|  |
-
 ## Syntax
 
 value! = **SIN(***radian_angle!***)**

@@ -4,8 +4,6 @@ The _SCREENEXISTS function returns true (-1) once a screen has been created.
 
   
 
-|  |
-
 ## Syntax
 
 *screenReady%%* = _SCREENEXISTS

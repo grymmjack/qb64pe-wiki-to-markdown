@@ -4,8 +4,6 @@ The **_glIsTexture** function determines if a name corresponds to a texture.
 
   
 
-|  |
-
 ## Syntax
 
 GLboolean *result* = _glIsTexture (GLuint *texture*)

@@ -4,8 +4,6 @@ The **_glAreTexturesResident** function determines whether specified texture obj
 
   
 
-|  |
-
 ## Syntax
 
 GLboolean *result* = _glAreTexturesResident (GLsizei *n*, const GLuint **textures*, GLboolean **residences*)

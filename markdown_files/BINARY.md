@@ -4,8 +4,6 @@ The OPEN statement is used to open a file or [COM](COM.md) serial communications
 
   
 
-|  |
-
 ## Syntax
 
 OPEN *fileName$* [**FOR** *mode*] [{[ACCESS]({[ACCESS.md)|{[LOCK](LOCK.md)|SHARED}} [{READ|WRITE}] [AS](AS.md) [#]*fileNumber&* [LEN = *recordLength*]

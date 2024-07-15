@@ -4,8 +4,6 @@ The **_glPrioritizeTextures** statement sets the residence priority of textures.
 
   
 
-|  |
-
 ## Syntax
 
 _glPrioritizeTextures GLsizei *n*, const GLuint **textures*, const GLclampf **priorities*

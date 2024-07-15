@@ -4,8 +4,6 @@ The _LASTAXIS function returns the number of axis a specified number INPUT devic
 
   
 
-|  |
-
 ## Syntax
 
 *axisCount%* = _LASTAXIS(*deviceNumber*)

@@ -4,8 +4,6 @@ The **_glLogicOp** statement specifies a logical pixel operation for color index
 
   
 
-|  |
-
 ## Syntax
 
 _glLogicOp GLenum *opcode*

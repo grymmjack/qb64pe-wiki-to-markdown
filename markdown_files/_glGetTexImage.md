@@ -4,8 +4,6 @@ The **_glGetTexImage** statement returns a texture image.
 
   
 
-|  |
-
 ## Syntax
 
 _glGetTexImage GLenum *target*, GLint *level*, GLenum *format*, GLenum *type*, GLvoid **pixels*

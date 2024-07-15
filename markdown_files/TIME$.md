@@ -4,8 +4,6 @@ The **TIME$** Function returns a [STRING](STRING.md) representation of the curre
 
   
 
-|  |
-
 ## Syntax
 
 PRINT "Present time = "; **TIME$**

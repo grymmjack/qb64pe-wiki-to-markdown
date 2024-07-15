@@ -4,8 +4,6 @@ The **_INPUTBOX$** function displays a prompt in a dialog box, waits for the use
 
   
 
-|  |
-
 ## Syntax
 
 *result$* = _INPUTBOX$([*title$*][, *message$*][, *defaultInput$*])

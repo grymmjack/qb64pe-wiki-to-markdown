@@ -4,8 +4,6 @@ The _SNDCOPY function copies a sound to a new handle so that two or more of the 
 
   
 
-|  |
-
 ## Syntax
 
 *copyHandle&* = _SNDCOPY(*handle&*)

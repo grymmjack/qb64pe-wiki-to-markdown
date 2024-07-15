@@ -4,8 +4,6 @@ The **_BACKGROUNDCOLOR** function returns the current background color for an im
 
   
 
-|  |
-
 ## Syntax
 
 *col~&* = _BACKGROUNDCOLOR [(*imageHandle&*)]

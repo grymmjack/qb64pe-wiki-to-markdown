@@ -4,8 +4,6 @@ The UBOUND function returns the largest valid index (upper bound) of an array di
 
   
 
-|  |
-
 ## Syntax
 
 *result%* = UBOUND(arrayName[, dimension%])

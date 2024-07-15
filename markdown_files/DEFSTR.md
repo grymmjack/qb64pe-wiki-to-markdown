@@ -4,8 +4,6 @@ The DEFSTR statement defines all variables with names starting with the specifie
 
   
 
-|  |
-
 ## Syntax
 
 DEFSTR *letter*[-*range*], *letter2*[-*range2*], [...]

@@ -4,8 +4,6 @@ The _R2D function converts a **radian** value into a **degree** value.
 
   
 
-|  |
-
 ## Syntax
 
 *result!* = _R2D(*num*)

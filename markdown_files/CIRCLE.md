@@ -4,8 +4,6 @@ The CIRCLE statement is used in graphic [SCREEN](SCREEN.md) modes to create circ
 
   
 
-|  |
-
 ## Syntax
 
 CIRCLE [[[STEP]**(***column***,** *row***),** *radius%***,** [*drawColor%*][, *startRadian!*, *stopRadian!*] [, *aspect!*]

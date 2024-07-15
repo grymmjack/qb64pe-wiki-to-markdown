@@ -4,8 +4,6 @@
 
   
 
-|  |
-
 ## Syntax
 
 $DEBUG

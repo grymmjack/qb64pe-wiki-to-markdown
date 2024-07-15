@@ -4,8 +4,6 @@ The **_glColor3usv** statement sets the current color from an already existing a
 
   
 
-|  |
-
 ## Syntax
 
 _glColor3usv const GLushort **v*

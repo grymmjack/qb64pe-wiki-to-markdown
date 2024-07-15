@@ -4,8 +4,6 @@ The MKDMBF$ function encodes a double-precision IEEE number to a string value in
 
   
 
-|  |
-
 ## Syntax
 
 *result$* = MKDMBF$(*doublePrecisionVariableOrLiteral#*)

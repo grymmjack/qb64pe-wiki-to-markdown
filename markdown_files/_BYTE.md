@@ -4,8 +4,6 @@ A _BYTE variable can hold signed variable values from -128 to 127 (one byte or 8
 
   
 
-|  |
-
 ## Syntax
 
 [DIM](DIM.md) *byte* [AS](AS.md) [[[_UNSIGNED] _BYTE

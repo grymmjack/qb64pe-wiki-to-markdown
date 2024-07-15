@@ -4,8 +4,6 @@ The _MOUSEMOVEMENTX function returns the relative horizontal position of the mou
 
   
 
-|  |
-
 ## Syntax
 
 *horizontalMove* = _MOUSEMOVEMENTX

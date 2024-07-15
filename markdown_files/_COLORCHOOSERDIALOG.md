@@ -4,8 +4,6 @@ The **_COLORCHOOSERDIALOG** function displays a standard color picker dialog box
 
   
 
-|  |
-
 ## Syntax
 
 *color32bpp~&* = _COLORCHOOSERDIALOG([*title$*][, *defaultRGB~&*])

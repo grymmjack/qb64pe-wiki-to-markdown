@@ -4,8 +4,6 @@ The **_glLoadMatrixd** statement replaces the current matrix with an arbitrary m
 
   
 
-|  |
-
 ## Syntax
 
 _glLoadMatrixd const GLdouble **m*

@@ -4,8 +4,6 @@ The **_glListBase** statement sets the display list base for **_glCallLists**.
 
   
 
-|  |
-
 ## Syntax
 
 _glListBase GLuint *base*

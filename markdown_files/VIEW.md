@@ -4,8 +4,6 @@ The **VIEW** statement creates a graphics view port area by defining the coordin
 
   
 
-|  |
-
 ## Syntax
 
 **VIEW** [[SCREEN] (column1, row1)-(column2, row2)[, [color][, border]

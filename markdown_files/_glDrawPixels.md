@@ -4,8 +4,6 @@ The **_glDrawPixels** statement writes a block of pixels to the framebuffer.
 
   
 
-|  |
-
 ## Syntax
 
 _glDrawPixels GLsizei *width*, GLsizei *height*, GLenum *format*, GLenum *type*, const GLvoid **pixels*

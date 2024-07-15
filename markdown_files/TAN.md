@@ -4,8 +4,6 @@ The TAN function returns the ratio of [SINe](SINe.md) to [COSine](COSine.md) or 
 
   
 
-|  |
-
 ## Syntax
 
 tangent! = **TAN(***radian_angle!***)**

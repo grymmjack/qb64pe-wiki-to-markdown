@@ -4,8 +4,6 @@ The FIELD statement creates a [STRING](STRING.md) type definition for a [random]
 
   
 
-|  |
-
 ## Syntax
 
 FIELD [#]*fileNumber&*, *fieldWidth1%* AS *variable1$*[, *fieldWidthN%* AS *variableN$*]

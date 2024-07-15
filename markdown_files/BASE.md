@@ -4,8 +4,6 @@ The OPTION BASE statement is used to set the default lower bound of arrays.
 
   
 
-|  |
-
 ## Syntax
 
 OPTION BASE {0|1}

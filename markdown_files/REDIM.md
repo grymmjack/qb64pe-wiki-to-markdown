@@ -4,8 +4,6 @@ A REDIM statement can re-dimension one [dynamic](dynamic.md)(flexible) [array](a
 
   
 
-|  |
-
 ## Syntax
 
 REDIM low_element[[[TO *upper_element*, ...]}) [[[AS [Type]([[AS [Type.md)]

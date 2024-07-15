@@ -4,8 +4,6 @@ The **_glColor3i** statement sets the current color.
 
   
 
-|  |
-
 ## Syntax
 
 _glColor3i GLint *red*, GLint *green*, GLint *blue*

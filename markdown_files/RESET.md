@@ -4,8 +4,6 @@ The **RESET** statement closes all files and writes the directory information to
 
   
 
-|  |
-
 ## Syntax
 
 RESET

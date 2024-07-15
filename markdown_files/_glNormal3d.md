@@ -4,8 +4,6 @@ The **_glNormal3d** statement sets the current normal vector.
 
   
 
-|  |
-
 ## Syntax
 
 _glNormal3d GLdouble *nx*, GLdouble *ny*, GLdouble *nz*

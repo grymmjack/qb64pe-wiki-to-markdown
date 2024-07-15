@@ -4,8 +4,6 @@ This function returns the octal (base 8) representation of any numeric value.
 
   
 
-|  |
-
 ## Syntax
 
 *octvalue$* = OCT$(*number*)

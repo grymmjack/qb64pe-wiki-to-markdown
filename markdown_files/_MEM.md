@@ -4,8 +4,6 @@ The _MEM variable type can be used when working with memory blocks. It has no va
 
   
 
-|  |
-
 ## Syntax
 
 [DIM](DIM.md) m [AS](AS.md) _MEM

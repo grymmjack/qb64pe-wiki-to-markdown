@@ -4,8 +4,6 @@ The ENVIRON statement is used to temporarily set or change an environmental stri
 
   
 
-|  |
-
 ## Syntax
 
 ENVIRON *stringExpression$*

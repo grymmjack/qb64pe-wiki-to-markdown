@@ -4,8 +4,6 @@ The **_glGetMaterialfv** and **_glGetMaterialiv** statements return material par
 
   
 
-|  |
-
 ## Syntax
 
 _glGetMaterialiv GLenum *face*, GLenum *pname*, GLint **params*

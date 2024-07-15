@@ -4,8 +4,6 @@ The ATN or arctangent function returns the angle in radians of a numerical [tang
 
   
 
-|  |
-
 ## Syntax
 
 *radianAngle* = ATN(*tangent!*)

@@ -4,8 +4,6 @@ The **_glTexGeni** statement controls the generation of texture coordinates.
 
   
 
-|  |
-
 ## Syntax
 
 _glTexGeni GLenum *coord*, GLenum *pname*, GLint *param*

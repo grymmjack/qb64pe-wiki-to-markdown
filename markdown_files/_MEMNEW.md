@@ -4,8 +4,6 @@ The _MEMNEW function allocates new memory and returns a [_MEM](_MEM.md) memory b
 
   
 
-|  |
-
 ## Syntax
 
 *memoryBlock* = _MEMNEW(*byteSize*)

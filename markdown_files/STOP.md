@@ -4,8 +4,6 @@ The **STOP** statement is used to stop program execution when troubleshooting a 
 
   
 
-|  |
-
 ## Syntax
 
 STOP

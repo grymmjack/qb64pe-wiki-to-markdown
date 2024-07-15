@@ -4,8 +4,6 @@ The **_glTexCoord3s** statement sets the current texture coordinates.
 
   
 
-|  |
-
 ## Syntax
 
 _glTexCoord3s GLshort *s*, GLshort *t*, GLshort *r*

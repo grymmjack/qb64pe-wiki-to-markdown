@@ -4,8 +4,6 @@ The **_glColor4sv** statement sets the current color from an already existing ar
 
   
 
-|  |
-
 ## Syntax
 
 _glColor4sv const GLshort **v*

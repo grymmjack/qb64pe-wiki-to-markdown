@@ -4,8 +4,6 @@ The _MEMPUT statement writes data to a portion of a designated memory block at a
 
   
 
-|  |
-
 ## Syntax
 
 _MEMPUT *memoryBlock*, *bytePosition*, *sourceVariable* [AS *type*]

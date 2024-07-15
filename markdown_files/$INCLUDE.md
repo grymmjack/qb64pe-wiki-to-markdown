@@ -4,8 +4,6 @@ $INCLUDE is a metacommand that is used to insert a source code file into your pr
 
   
 
-|  |
-
 ## Syntax
 
 {[REM](REM.md) | [']('.md) } $INCLUDE**:** '*sourceFile*'

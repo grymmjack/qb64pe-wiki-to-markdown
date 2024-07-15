@@ -4,8 +4,6 @@ The **_glGetDoublev** statement returns the value or values of a selected parame
 
   
 
-|  |
-
 ## Syntax
 
 _glGetDoublev GLenum *pname*, GLdouble **params*

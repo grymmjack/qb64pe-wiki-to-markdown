@@ -4,8 +4,6 @@ The _DROPPEDFILE function returns the list of items (files or folders) dropped i
 
   
 
-|  |
-
 ## Syntax
 
 *Syntax 1*

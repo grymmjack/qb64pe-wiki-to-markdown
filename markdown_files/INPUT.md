@@ -4,8 +4,6 @@ The INPUT statement requests a [STRING](STRING.md) or numerical keyboard entry f
 
   
 
-|  |
-
 ## Syntax
 
 INPUT [;] "[Question or statement text]"{,|;} *variable*[, ...]

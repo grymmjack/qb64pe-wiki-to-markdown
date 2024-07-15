@@ -4,8 +4,6 @@ The FILES statement is used to print a list of files in the current directory us
 
   
 
-|  |
-
 ## Syntax
 
 FILES [*fileSpec$*]

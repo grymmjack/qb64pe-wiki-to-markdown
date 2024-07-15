@@ -4,8 +4,6 @@ The UCASE$ function outputs an all-uppercase version of a [STRING](STRING.md).
 
   
 
-|  |
-
 ## Syntax
 
 *result$* = UCASE$(*text$*)

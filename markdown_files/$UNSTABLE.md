@@ -4,8 +4,6 @@ The $UNSTABLE metacommand is used to enable the use of features that have not ye
 
   
 
-|  |
-
 ## Syntax
 
 $UNSTABLE: {MIDI, HTTP}

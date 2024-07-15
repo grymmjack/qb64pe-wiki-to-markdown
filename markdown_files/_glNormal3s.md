@@ -4,8 +4,6 @@ The **_glNormal3s** statement sets the current normal vector.
 
   
 
-|  |
-
 ## Syntax
 
 _glNormal3s GLshort *nx*, GLshort *ny*, GLshort *nz*

@@ -4,8 +4,6 @@ The _GREEN32 function returns the green component intensity of a 32-bit image or
 
   
 
-|  |
-
 ## Syntax
 
 green32color& = _GREEN32(*rgbaColor&*)

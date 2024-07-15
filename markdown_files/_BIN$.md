@@ -4,8 +4,6 @@ This function returns the binary (base 2) representation of any numeric value.
 
   
 
-|  |
-
 ## Syntax
 
 *binvalue$* = _BIN$(*number*)

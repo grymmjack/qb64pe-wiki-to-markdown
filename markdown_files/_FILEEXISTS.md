@@ -4,8 +4,6 @@ The **_FILEEXISTS** function determines if a designated file name exists and ret
 
   
 
-|  |
-
 ## Syntax
 
 *theFileExists%* = _FILEEXISTS(*filename$*)

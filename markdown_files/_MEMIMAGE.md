@@ -4,8 +4,6 @@ The _MEMIMAGE function returns a [_MEM](_MEM.md) value referring to an image's m
 
   
 
-|  |
-
 ## Syntax
 
 *imageBlock* = _MEMIMAGE[(*imageHandle&*)]

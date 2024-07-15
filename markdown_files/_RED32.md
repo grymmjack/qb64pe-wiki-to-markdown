@@ -4,8 +4,6 @@ The _RED32 function returns the red component intensity of a 32-bit image or sur
 
   
 
-|  |
-
 ## Syntax
 
 *red32color&* = _RED32(*rgbaColor&*)

@@ -4,8 +4,6 @@ The $STATIC [metacommand](metacommand.md) allows the creation of static (unresiz
 
   
 
-|  |
-
 ## Syntax
 
 {[REM](REM.md) | [']('.md) } $STATIC

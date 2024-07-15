@@ -4,8 +4,6 @@ The _TRIM$ function removes both leading and trailing space characters from a [S
 
   
 
-|  |
-
 ## Syntax
 
 *return$* = _TRIM$(*text$*)

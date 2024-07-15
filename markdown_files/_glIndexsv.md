@@ -4,8 +4,6 @@ The **_glIndexsv** statement sets the current color index.
 
   
 
-|  |
-
 ## Syntax
 
 _glIndexsv const GLshort **c*

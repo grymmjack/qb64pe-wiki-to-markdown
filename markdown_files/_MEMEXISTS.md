@@ -4,8 +4,6 @@ The _MEMEXISTS function returns true (-1) if the memory block variable name spec
 
   
 
-|  |
-
 ## Syntax
 
 *result* = _MEMEXISTS(*memBlock*)

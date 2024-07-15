@@ -4,8 +4,6 @@ The **VAL** Function returns the decimal numerical equivalent value of a [STRING
 
   
 
-|  |
-
 ## Syntax
 
 *value* = **VAL**(*string_value$*)

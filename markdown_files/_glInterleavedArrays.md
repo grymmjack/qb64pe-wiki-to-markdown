@@ -4,8 +4,6 @@ The **_glInterleavedArrays** statement simultaneously specifies and enables seve
 
   
 
-|  |
-
 ## Syntax
 
 _glInterleavedArrays GLenum *format*, GLsizei *stride*, const GLvoid **pointer*

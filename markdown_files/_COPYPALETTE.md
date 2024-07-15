@@ -4,8 +4,6 @@ The _COPYPALETTE statement copies the color palette intensities from one 4 or 8 
 
   
 
-|  |
-
 ## Syntax
 
 _COPYPALETTE [*sourceImageHandle&*[, *destinationImageHandle&*

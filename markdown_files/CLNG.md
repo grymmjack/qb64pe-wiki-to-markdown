@@ -4,8 +4,6 @@ The CLNG function rounds decimal point numbers up or down to the nearest [LONG](
 
   
 
-|  |
-
 ## Syntax
 
 *value&* = CLNG(*expression*)

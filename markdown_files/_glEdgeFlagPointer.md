@@ -4,8 +4,6 @@ The **_glEdgeFlagPointer** statement defines an array of edge flags.
 
   
 
-|  |
-
 ## Syntax
 
 _glEdgeFlagPointer GLsizei *stride*, const GLvoid **pointer*

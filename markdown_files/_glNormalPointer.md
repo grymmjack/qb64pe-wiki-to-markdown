@@ -4,8 +4,6 @@ The **_glNormalPointer** statement defines an array of normals.
 
   
 
-|  |
-
 ## Syntax
 
 _glNormalPointer GLenum *type*, GLsizei *stride*, const GLvoid **pointer*

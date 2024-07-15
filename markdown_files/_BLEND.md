@@ -4,8 +4,6 @@ The _BLEND statement turns on 32 bit alpha blending for an image or screen mode 
 
   
 
-|  |
-
 ## Syntax
 
 _BLEND [*imageHandle&*]

@@ -4,8 +4,6 @@ NOT is a [boolean](boolean.md) logical operator that will change a false stateme
 
   
 
-|  |
-
 ## Syntax
 
 *True* = -1: *False* = NOT True

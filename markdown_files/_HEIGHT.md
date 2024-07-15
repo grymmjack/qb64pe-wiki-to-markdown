@@ -4,8 +4,6 @@ The _HEIGHT function returns the height of an image handle or of the current wri
 
   
 
-|  |
-
 ## Syntax
 
 *columns&* = _HEIGHT[(*imageHandle&*)]

@@ -4,8 +4,6 @@ The **EOF** function indicates that the end of a file or HTTP response has been 
 
   
 
-|  |
-
 ## Syntax
 
 *endReached%%* = EOF([#]*fileNumber&*)

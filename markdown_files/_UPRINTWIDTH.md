@@ -4,8 +4,6 @@ The **_UPRINTWIDTH** function returns the width in pixels of the text [string](s
 
   
 
-|  |
-
 ## Syntax
 
 *pixelWidth&* = _UPRINTWIDTH(*text$*[, *utfEncoding&*][, *fontHandle&*])

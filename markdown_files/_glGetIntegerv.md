@@ -4,8 +4,6 @@ The **_glGetIntegerv** statement returns the value or values of a selected param
 
   
 
-|  |
-
 ## Syntax
 
 _glGetIntegerv GLenum *pname*, GLint **params*

@@ -4,8 +4,6 @@ The **OPTION** keyword is used to specify certain options or requirements for a 
 
   
 
-|  |
-
 ## Syntax
 
 [OPTION BASE](OPTION BASE.md)

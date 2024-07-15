@@ -4,8 +4,6 @@ The **_glInitNames** statement initializes the name stack.
 
   
 
-|  |
-
 ## Syntax
 
 _glInitNames

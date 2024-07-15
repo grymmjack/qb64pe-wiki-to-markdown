@@ -4,8 +4,6 @@ A FUNCTION block statement is used to create a function procedure to return a ca
 
   
 
-|  |
-
 ## Syntax
 
 **FUNCTION procedureName**[type-suffix] [(*parameters*)]

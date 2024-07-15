@@ -4,8 +4,6 @@ The **_glNormal3i** statement sets the current normal vector.
 
   
 
-|  |
-
 ## Syntax
 
 _glNormal3i GLint *nx*, GLint *ny*, GLint *nz*

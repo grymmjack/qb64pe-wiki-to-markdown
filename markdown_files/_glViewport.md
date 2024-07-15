@@ -4,8 +4,6 @@ The **_glViewport** statement sets the viewport.
 
   
 
-|  |
-
 ## Syntax
 
 _glViewport GLint *x*, GLint *y*, GLsizei *width*, GLsizei *height*

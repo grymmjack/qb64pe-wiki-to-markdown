@@ -4,8 +4,6 @@ The **_glGetClipPlane** statement returns the coefficients of the specified clip
 
   
 
-|  |
-
 ## Syntax
 
 _glGetClipPlane GLenum *plane*, GLdouble **equation*

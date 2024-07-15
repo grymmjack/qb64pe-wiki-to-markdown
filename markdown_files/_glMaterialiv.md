@@ -4,8 +4,6 @@ The **_glMaterialiv** statement specifies material parameters for the lighting m
 
   
 
-|  |
-
 ## Syntax
 
 _glMaterialiv GLenum *face*, GLenum *pname*, const GLint **params*

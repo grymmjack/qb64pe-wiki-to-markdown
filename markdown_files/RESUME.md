@@ -4,8 +4,6 @@ The **RESUME** statement is used with **NEXT** or a line number or label in an e
 
   
 
-|  |
-
 ## Syntax
 
 RESUME {**NEXT**|*lineLabel*|*lineNumber*}

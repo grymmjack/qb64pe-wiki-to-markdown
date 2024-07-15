@@ -4,8 +4,6 @@ The _RESETBIT function is used to set a specified bit of a numerical value to 0 
 
   
 
-|  |
-
 ## Syntax
 
 *result* = _RESETBIT(*numericalVariable*, *numericalValue*)

@@ -4,8 +4,6 @@ The WHILE...WEND statement is used to repeat a block of statements while the con
 
   
 
-|  |
-
 ## Syntax
 
 [WHILE](WHILE.md) *condition*

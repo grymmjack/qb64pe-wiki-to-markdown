@@ -4,8 +4,6 @@ The _SNDRAW statement plays sound wave sample frequencies created by a program.
 
   
 
-|  |
-
 ## Syntax
 
 _SNDRAW *leftSample*[, *rightSample*][, *pipeHandle&*]

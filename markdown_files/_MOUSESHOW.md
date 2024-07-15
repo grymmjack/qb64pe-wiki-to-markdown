@@ -4,8 +4,6 @@ The _MOUSESHOW statement displays the mouse cursor and can change its shape.
 
   
 
-|  |
-
 ## Syntax
 
 _MOUSESHOW [*cursorShape$*]

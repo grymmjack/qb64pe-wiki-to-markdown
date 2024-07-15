@@ -4,8 +4,6 @@
 
   
 
-|  |
-
 ## Syntax
 
 REM program comment or ignore code

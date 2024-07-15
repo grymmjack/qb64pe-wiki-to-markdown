@@ -4,8 +4,6 @@ The **_glGetError** function returns error information.
 
   
 
-|  |
-
 ## Syntax
 
 GLenum *result* = _glGetError

@@ -4,8 +4,6 @@ The **_glPixelTransferi** statement sets pixel transfer modes.
 
   
 
-|  |
-
 ## Syntax
 
 _glPixelTransferi GLenum *pname*, GLint *param*

@@ -4,8 +4,6 @@ The **_glFlush** statement forces execution of OpenGL functions in finite time.
 
   
 
-|  |
-
 ## Syntax
 
 _glFlush

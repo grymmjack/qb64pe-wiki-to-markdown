@@ -4,8 +4,6 @@ The EQV operator returns a value based on the *equivalence* of two conditions or
 
   
 
-|  |
-
 ## Syntax
 
 *result* = *firstValue* EQV *secondValue*

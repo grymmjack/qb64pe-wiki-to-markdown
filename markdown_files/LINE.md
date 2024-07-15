@@ -4,8 +4,6 @@ The LINE statement is used in graphic [SCREEN](SCREEN.md) modes to create lines 
 
   
 
-|  |
-
 ## Syntax
 
 LINE [STEP] [**(***column1***,** *row1***)**]**-**[STEP] **(***column2*, *row2***),** *color*[, [{B|BF}], *style%*]

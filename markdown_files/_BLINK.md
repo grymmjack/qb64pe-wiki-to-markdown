@@ -4,8 +4,6 @@ The _BLINK statement toggles blinking colors in text mode (SCREEN 0). Default st
 
   
 
-|  |
-
 ## Syntax
 
 _BLINK {ON|OFF}

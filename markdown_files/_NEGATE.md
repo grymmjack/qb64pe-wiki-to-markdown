@@ -4,8 +4,6 @@ _NEGATE is a [boolean](boolean.md) logical operator that will change a false sta
 
   
 
-|  |
-
 ## Syntax
 
 *result* = _NEGATE *value*

@@ -4,8 +4,6 @@ The **_glColorMaterial** statement causes a material color to track the current 
 
   
 
-|  |
-
 ## Syntax
 
 _glColorMaterial GLenum *face*, GLenum *mode*

@@ -4,8 +4,6 @@ The **_glLightModelfv** statement sets lighting model parameters.
 
   
 
-|  |
-
 ## Syntax
 
 _glLightModelfv GLenum *pname*, const GLfloat **params*

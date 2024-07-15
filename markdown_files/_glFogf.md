@@ -4,8 +4,6 @@ The **_glFogf** statement specifies fog parameters.
 
   
 
-|  |
-
 ## Syntax
 
 _glFogf GLenum *pname*, GLfloat *param*

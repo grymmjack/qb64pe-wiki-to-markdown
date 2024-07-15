@@ -4,8 +4,6 @@ The **_glCullFace** statement specifies whether front-facing or back-facing face
 
   
 
-|  |
-
 ## Syntax
 
 _glCullFace GLenum *mode*

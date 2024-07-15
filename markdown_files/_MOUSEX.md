@@ -4,8 +4,6 @@ The _MOUSEX function returns the current horizontal (column) mouse cursor positi
 
   
 
-|  |
-
 ## Syntax
 
 *pixelColumn%* = _MOUSEX

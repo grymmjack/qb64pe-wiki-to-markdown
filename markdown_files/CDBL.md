@@ -4,8 +4,6 @@ CDBL converts a value to the closest [DOUBLE](DOUBLE.md)-precision value.
 
   
 
-|  |
-
 ## Syntax
 
 *doubleValue#* = CDBL(*expression*)

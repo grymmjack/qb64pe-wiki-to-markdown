@@ -4,8 +4,6 @@ The **STRIG** function returns button press True or False status of game port (&
 
   
 
-|  |
-
 ## Syntax
 
 QuickBASIC

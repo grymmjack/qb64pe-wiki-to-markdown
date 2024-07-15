@@ -4,8 +4,6 @@ The **_glRenderMode** function sets the rasterization mode and returns the previ
 
   
 
-|  |
-
 ## Syntax
 
 GLint *result* = _glRenderMode (GLenum *mode*)

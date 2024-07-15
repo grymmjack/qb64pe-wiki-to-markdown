@@ -4,8 +4,6 @@ The _MAPTRIANGLE statement maps a triangular portion of an image onto a destinat
 
   
 
-|  |
-
 ## Syntax
 
 ### 2D drawing

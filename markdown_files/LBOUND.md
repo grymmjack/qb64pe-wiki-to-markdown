@@ -4,8 +4,6 @@ The LBOUND function returns the smallest valid index (lower bound) of an array d
 
   
 
-|  |
-
 ## Syntax
 
 *result%* = LBOUND(*arrayName*[, *dimension%*])

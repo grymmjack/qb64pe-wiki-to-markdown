@@ -4,8 +4,6 @@ The DRAW statement uses a [STRING](STRING.md) expression to draw lines on the sc
 
   
 
-|  |
-
 ## Syntax
 
 DRAW *drawString$*

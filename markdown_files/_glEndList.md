@@ -4,8 +4,6 @@ The **_glNewList** and **_glEndList** statements create or replace a display lis
 
   
 
-|  |
-
 ## Syntax
 
 _glEndList

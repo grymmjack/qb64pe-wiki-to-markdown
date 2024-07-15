@@ -4,8 +4,6 @@ XOR evaluates two conditions and if either of them is True then it returns True,
 
   
 
-|  |
-
 ## Syntax
 
 *condition* XOR *condition2*

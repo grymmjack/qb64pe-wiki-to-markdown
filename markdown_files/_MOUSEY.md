@@ -4,8 +4,6 @@ The _MOUSEY function returns the current vertical (row) mouse cursor position wh
 
   
 
-|  |
-
 ## Syntax
 
 *pixelRow%* = _MOUSEY

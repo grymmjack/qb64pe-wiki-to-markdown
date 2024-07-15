@@ -4,8 +4,6 @@ This function returns the hexadecimal (base 16) representation of any numeric va
 
   
 
-|  |
-
 ## Syntax
 
 *hexvalue$* = HEX$(*number*)

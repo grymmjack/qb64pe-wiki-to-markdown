@@ -4,8 +4,6 @@ The _DISPLAY statement turns off the automatic display while only displaying the
 
   
 
-|  |
-
 ## Syntax
 
 _DISPLAY

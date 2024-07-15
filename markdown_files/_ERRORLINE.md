@@ -4,8 +4,6 @@ The _ERRORLINE function returns the source code line number that caused the most
 
   
 
-|  |
-
 ## Syntax
 
 *e%* = _ERRORLINE

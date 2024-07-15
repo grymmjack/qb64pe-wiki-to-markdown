@@ -6,8 +6,6 @@ The multi-modular technique goes back to when QBasic and QuickBASIC had module s
 
   
 
-|  |
-
 ## Syntax
 
 **RUN** [{*line_number* | *filespec$*}] [*command_parameter(s)*]

@@ -4,8 +4,6 @@ The **_glDrawElements** statement renders primitives from array data.
 
   
 
-|  |
-
 ## Syntax
 
 _glDrawElements GLenum *mode*, GLsizei *count*, GLenum *type*, const GLvoid **indices*

@@ -4,8 +4,6 @@ The **SGN** function returns the sign of a number value.
 
   
 
-|  |
-
 ## Syntax
 
 sign% = SGN(value)

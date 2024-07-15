@@ -4,8 +4,6 @@ The **_glTexEnvi** statement sets a texture environment parameter.
 
   
 
-|  |
-
 ## Syntax
 
 _glTexEnvi GLenum *target*, GLenum *pname*, GLint *param*

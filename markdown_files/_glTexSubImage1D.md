@@ -4,8 +4,6 @@ The **_glTexSubImage1D** statement specifies a portion of an existing one-dimens
 
   
 
-|  |
-
 ## Syntax
 
 _glTexSubImage1D GLenum *target*, GLint *level*, GLint *xoffset*, GLsizei *width*, GLenum *format*, GLenum *type*, const GLvoid **pixels*

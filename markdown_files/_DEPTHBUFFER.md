@@ -4,8 +4,6 @@ The _DEPTHBUFFER statement turns depth buffering ON or OFF, LOCKs or _CLEARS the
 
   
 
-|  |
-
 ## Syntax
 
 _DEPTHBUFFER {ON|OFF|LOCK|_CLEAR}[,handle&]

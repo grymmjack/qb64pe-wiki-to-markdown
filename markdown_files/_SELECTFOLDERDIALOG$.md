@@ -4,8 +4,6 @@ The **_SELECTFOLDERDIALOG$** function displays a dialog box that enables the use
 
   
 
-|  |
-
 ## Syntax
 
 *folder$* = _SELECTFOLDERDIALOG$([*title$*][, *defaultPath$*])

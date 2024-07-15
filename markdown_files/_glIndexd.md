@@ -4,8 +4,6 @@ The **_glIndexd** statement sets the current color index.
 
   
 
-|  |
-
 ## Syntax
 
 _glIndexd GLdouble *c*

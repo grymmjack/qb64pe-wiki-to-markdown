@@ -4,8 +4,6 @@ The **_glScaled** statement multiplies the current matrix by a general scaling m
 
   
 
-|  |
-
 ## Syntax
 
 _glScaled GLdouble *x*, GLdouble *y*, GLdouble *z*

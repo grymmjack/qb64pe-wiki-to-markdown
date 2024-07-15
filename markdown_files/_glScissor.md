@@ -4,8 +4,6 @@ The **_glScissor** statement defines the scissor box.
 
   
 
-|  |
-
 ## Syntax
 
 _glScissor GLint *x*, GLint *y*, GLsizei *width*, GLsizei *height*

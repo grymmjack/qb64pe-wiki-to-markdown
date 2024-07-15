@@ -4,8 +4,6 @@ The **_glClearColor** statement specifies clear values for the color buffers.
 
   
 
-|  |
-
 ## Syntax
 
 _glClearColor GLclampf *red*, GLclampf *green*, GLclampf *blue*, GLclampf *alpha*

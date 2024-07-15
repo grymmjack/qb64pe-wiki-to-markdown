@@ -4,8 +4,6 @@ The **UNTIL** condition is used in [DO...LOOP](DO...LOOP.md) exit verifications.
 
   
 
-|  |
-
 ## Syntax
 
 DO [UNTIL] evaluation

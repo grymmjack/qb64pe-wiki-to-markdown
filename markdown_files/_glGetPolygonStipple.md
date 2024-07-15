@@ -4,8 +4,6 @@ The **_glGetPolygonStipple** statement returns the polygon stipple pattern.
 
   
 
-|  |
-
 ## Syntax
 
 _glGetPolygonStipple GLubyte **mask*

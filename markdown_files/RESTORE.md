@@ -4,8 +4,6 @@ The **RESTORE** statement is used to reset the DATA pointer to the beginning of 
 
   
 
-|  |
-
 ## Syntax
 
 RESTORE [datafield]

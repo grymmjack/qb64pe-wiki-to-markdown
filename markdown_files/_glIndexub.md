@@ -4,8 +4,6 @@ The **_glIndexub** statement sets the current color index.
 
   
 
-|  |
-
 ## Syntax
 
 _glIndexub GLubyte *c*

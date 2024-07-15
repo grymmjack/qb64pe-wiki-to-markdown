@@ -4,8 +4,6 @@ The **STR$** function returns the [STRING](STRING.md) representation of a numeri
 
   
 
-|  |
-
 ## Syntax
 
 result$ = **STR$(***number***)**

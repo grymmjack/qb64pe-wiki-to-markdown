@@ -4,8 +4,6 @@ The **_glMaterialfv** statement specifies material parameters for the lighting m
 
   
 
-|  |
-
 ## Syntax
 
 _glMaterialfv GLenum *face*, GLenum *pname*, const GLfloat **params*

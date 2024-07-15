@@ -4,8 +4,6 @@ The **$ASSERTS** [metacommand](metacommand.md) enables debug tests with the [_AS
 
   
 
-|  |
-
 ## Syntax
 
 **$ASSERTS**

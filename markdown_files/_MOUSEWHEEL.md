@@ -4,8 +4,6 @@ The _MOUSEWHEEL function returns a positive or negative [INTEGER](INTEGER.md) va
 
   
 
-|  |
-
 ## Syntax
 
 *scrollAmount%* = _MOUSEWHEEL

@@ -4,8 +4,6 @@ The _AXIS function returns the relative position of a specified axis number on a
 
   
 
-|  |
-
 ## Syntax
 
 *move!* = _AXIS(*axis_number%*)

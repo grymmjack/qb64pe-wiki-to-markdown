@@ -4,8 +4,6 @@ The **_glColorMask** statement enables and disables writing of frame-buffer colo
 
   
 
-|  |
-
 ## Syntax
 
 _glColorMask GLboolean *red*, GLboolean *green*, GLboolean *blue*, GLboolean *alpha*

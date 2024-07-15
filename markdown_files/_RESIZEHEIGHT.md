@@ -4,8 +4,6 @@ The _RESIZEHEIGHT function returns the user resized screen pixel height if [$RES
 
   
 
-|  |
-
 ## Syntax
 
 *newHeight&* = _RESIZEHEIGHT

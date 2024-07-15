@@ -4,8 +4,6 @@ This statement opens access to parts or all of a file to other programs and netw
 
   
 
-|  |
-
 ## Syntax
 
 UNLOCK [#]*fileNumber%*

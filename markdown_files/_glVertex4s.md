@@ -4,8 +4,6 @@ The **_glVertex4s** statement specifies a vertex.
 
   
 
-|  |
-
 ## Syntax
 
 _glVertex4s GLshort *x*, GLshort *y*, GLshort *z*, GLshort *w*

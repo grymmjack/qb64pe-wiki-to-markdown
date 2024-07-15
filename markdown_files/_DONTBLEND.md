@@ -4,8 +4,6 @@ The _DONTBLEND statement turns off 32 bit alpha blending for the current image o
 
   
 
-|  |
-
 ## Syntax
 
 _DONTBLEND [*imageHandle&*]

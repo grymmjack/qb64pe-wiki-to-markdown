@@ -4,8 +4,6 @@ The _FONTHEIGHT function returns the font height of a font handle created by [_L
 
   
 
-|  |
-
 ## Syntax
 
 *pixelHeight%* = _FONTHEIGHT[(*fontHandle&*)]

@@ -4,8 +4,6 @@ The _SNDSTOP statement stops a playing or paused sound using a handle from the [
 
   
 
-|  |
-
 ## Syntax
 
 _SNDSTOP *handle&*

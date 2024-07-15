@@ -4,8 +4,6 @@ The **_glRectfv** statement draws a rectangle.
 
   
 
-|  |
-
 ## Syntax
 
 _glRectfv const GLfloat **v1*, const GLfloat **v2*

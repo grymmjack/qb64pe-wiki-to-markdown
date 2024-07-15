@@ -4,8 +4,6 @@ The **_glRasterPos4sv** statement specifies the raster position for pixel operat
 
   
 
-|  |
-
 ## Syntax
 
 _glRasterPos4sv const GLshort **v*

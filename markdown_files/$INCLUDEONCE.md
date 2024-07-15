@@ -4,8 +4,6 @@ The **$INCLUDEONCE** metacommand, when placed in include files, prevents that th
 
   
 
-|  |
-
 ## Syntax
 
 $INCLUDEONCE

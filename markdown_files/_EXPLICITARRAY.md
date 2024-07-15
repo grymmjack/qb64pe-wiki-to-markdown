@@ -4,8 +4,6 @@ OPTION _EXPLICITARRAY instructs the compiler to require arrays to be properly di
 
   
 
-|  |
-
 ## Syntax
 
 OPTION _EXPLICITARRAY

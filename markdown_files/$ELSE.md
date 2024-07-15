@@ -4,8 +4,6 @@
 
   
 
-|  |
-
 ## Syntax
 
 $IF variable = expression THEN

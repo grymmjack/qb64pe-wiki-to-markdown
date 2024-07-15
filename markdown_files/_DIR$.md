@@ -4,8 +4,6 @@ The **_DIR$** function returns common paths such as Documents, Pictures, Music, 
 
   
 
-|  |
-
 ## Syntax
 
 *d$* = _DIR$("*folderspecification*")

@@ -4,8 +4,6 @@ The _SCREENCLICK statement simulates clicking on a pixel coordinate on the deskt
 
   
 
-|  |
-
 ## Syntax
 
 _SCREENCLICK *column%*, *row%*[, *button%*]

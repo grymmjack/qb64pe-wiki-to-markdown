@@ -4,8 +4,6 @@ The **_glRasterPos3s** statement specifies the raster position for pixel operati
 
   
 
-|  |
-
 ## Syntax
 
 _glRasterPos3s GLshort *x*, GLshort *y*, GLshort *z*

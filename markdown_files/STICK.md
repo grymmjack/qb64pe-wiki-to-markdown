@@ -4,8 +4,6 @@ The **STICK** function returns the directional axis coordinate move of game port
 
   
 
-|  |
-
 ## Syntax
 
 QuickBASIC

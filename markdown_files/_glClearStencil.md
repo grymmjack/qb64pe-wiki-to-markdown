@@ -4,8 +4,6 @@ The **_glClearStencil** statement specifies the clear value for the stencil buff
 
   
 
-|  |
-
 ## Syntax
 
 _glClearStencil GLint *s*

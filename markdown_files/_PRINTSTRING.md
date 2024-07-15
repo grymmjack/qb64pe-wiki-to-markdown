@@ -4,8 +4,6 @@ The _PRINTSTRING statement prints text [strings](strings.md) using graphic colum
 
   
 
-|  |
-
 ## Syntax
 
 _PRINTSTRING(*column*, *row*), *textExpression$*[, *imageHandle&*]

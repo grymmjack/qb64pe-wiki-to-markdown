@@ -4,8 +4,6 @@ The _BIT datatype can return only values of 0 (bit off) and -1 (bit on).
 
   
 
-|  |
-
 ## Syntax
 
 [DIM](DIM.md) *variable* [AS](AS.md) [[[_UNSIGNED] _BIT [* *numberofbits*]

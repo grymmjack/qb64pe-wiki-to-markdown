@@ -4,8 +4,6 @@ The _TOTALDROPPEDFILES function returns the number of items (files or folders) d
 
   
 
-|  |
-
 ## Syntax
 
 *totalFilesReceived&* = _TOTALDROPPEDFILES

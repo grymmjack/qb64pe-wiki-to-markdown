@@ -4,8 +4,6 @@ The **_glFrustum** statement multiplies the current matrix by a perspective matr
 
   
 
-|  |
-
 ## Syntax
 
 _glFrustum GLdouble *left*, GLdouble *right*, GLdouble *bottom*, GLdouble *top*, GLdouble *zNear*, GLdouble *zFar*

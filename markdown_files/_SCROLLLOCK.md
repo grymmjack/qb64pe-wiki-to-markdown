@@ -4,8 +4,6 @@ The _SCROLLLOCK statement sets the state of the Scroll Lock key.
 
   
 
-|  |
-
 ## Syntax
 
 _SCROLLLOCK {ON|OFF|_TOGGLE}

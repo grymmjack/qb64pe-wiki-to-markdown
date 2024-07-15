@@ -4,8 +4,6 @@ BLOAD loads a binary graphics file created by [BSAVE](BSAVE.md) to an array.
 
   
 
-|  |
-
 ## Syntax
 
 BLOAD *fileName$*, [VARPTR](VARPTR.md)(*imageArray%(*index*)*)

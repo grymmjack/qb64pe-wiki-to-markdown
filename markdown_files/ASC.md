@@ -4,8 +4,6 @@ The **ASC** statement allows a program to change a character at any position of 
 
   
 
-|  |
-
 ## Syntax
 
 ASC(*stringExpression$*[, *position%*]) = *code%*

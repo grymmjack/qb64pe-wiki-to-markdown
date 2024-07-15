@@ -4,8 +4,6 @@ The **RSET** statement right-justifies a string according to length of the strin
 
   
 
-|  |
-
 ## Syntax
 
 RSET string_variable = string_expression

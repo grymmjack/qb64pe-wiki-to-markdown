@@ -4,8 +4,6 @@ The **POKE** statement sets the value of a specified memory address offset. **QB
 
   
 
-|  |
-
 ## Syntax
 
 POKE *segment_offset*, *offset_value*

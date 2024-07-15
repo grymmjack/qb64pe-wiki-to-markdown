@@ -4,8 +4,6 @@ The $VERSIONINFO [metacommand](metacommand.md) adds text metadata to the resulti
 
   
 
-|  |
-
 ## Syntax
 
 $VERSIONINFO:*key*=*value*

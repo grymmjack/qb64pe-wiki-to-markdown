@@ -4,8 +4,6 @@ The **_glGenLists** function generates a contiguous set of empty display lists.
 
   
 
-|  |
-
 ## Syntax
 
 GLuint *result* = _glGenLists (GLsizei *range*)

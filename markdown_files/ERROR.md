@@ -4,8 +4,6 @@ The ERROR statement is used to simulate a program error or to troubleshoot error
 
   
 
-|  |
-
 ## Syntax
 
 ERROR *codeNumber%*

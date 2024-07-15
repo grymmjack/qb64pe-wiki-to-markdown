@@ -4,8 +4,6 @@ The _LASTWHEEL function returns the number of wheels a specified number INPUT de
 
   
 
-|  |
-
 ## Syntax
 
 *wheelCount%* = _LASTWHEEL(*deviceNumber*)

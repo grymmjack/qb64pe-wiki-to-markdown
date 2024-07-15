@@ -4,8 +4,6 @@ The **_glColor4iv** statement sets the current color from an already existing ar
 
   
 
-|  |
-
 ## Syntax
 
 _glColor4iv const GLint **v*

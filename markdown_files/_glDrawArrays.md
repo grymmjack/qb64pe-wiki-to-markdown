@@ -4,8 +4,6 @@ The **_glDrawArrays** statement specifies multiple primitives to render.
 
   
 
-|  |
-
 ## Syntax
 
 _glDrawArrays GLenum *mode*, GLint *first*, GLsizei *count*

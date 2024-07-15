@@ -4,8 +4,6 @@ The _GREEN function returns the palette index or the green component intensity o
 
   
 
-|  |
-
 ## Syntax
 
 *greenIntensity&* = _GREEN(*rgbaColorIndex&*[, *imageHandle&*])

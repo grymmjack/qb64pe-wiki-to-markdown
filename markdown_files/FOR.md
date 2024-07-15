@@ -4,8 +4,6 @@ The FOR statement creates a counter loop using specified start and stop numerica
 
   
 
-|  |
-
 ## Syntax
 
 FOR *counterVariable* = *startValue* [TO](TO.md) *stopValue* [[[STEP *increment*]

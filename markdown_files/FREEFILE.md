@@ -4,8 +4,6 @@ The FREEFILE function returns a [LONG](LONG.md) value that is an unused file acc
 
   
 
-|  |
-
 ## Syntax
 
 fileHandle& = FREEFILE

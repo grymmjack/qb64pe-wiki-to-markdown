@@ -4,8 +4,6 @@ The _MK$ function can convert any numerical type into an [ASCII](ASCII.md) [STRI
 
   
 
-|  |
-
 ## Syntax
 
 *string_value$* = _MK$(*numericalType*, *numericalValue*)

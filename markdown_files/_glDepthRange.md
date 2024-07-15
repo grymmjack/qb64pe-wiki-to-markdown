@@ -4,8 +4,6 @@ The **_glDepthRange** statement specifies the mapping of z values from normalize
 
   
 
-|  |
-
 ## Syntax
 
 _glDepthRange GLclampd *zNear*, GLclampd *zFar*

@@ -4,8 +4,6 @@ The **_glIndexMask** statement controls the writing of individual bits in the co
 
   
 
-|  |
-
 ## Syntax
 
 _glIndexMask GLuint *mask*

@@ -4,8 +4,6 @@ The _MOUSEMOVEMENTY function returns the relative vertical position of the mouse
 
   
 
-|  |
-
 ## Syntax
 
 *verticalMove* = _MOUSEMOVEMENTY

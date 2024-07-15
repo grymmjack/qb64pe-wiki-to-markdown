@@ -4,8 +4,6 @@
 
   
 
-|  |
-
 ## Syntax
 
 _SAVEIMAGE *fileName$*[, *imageHandle&*][, *requirements$*]

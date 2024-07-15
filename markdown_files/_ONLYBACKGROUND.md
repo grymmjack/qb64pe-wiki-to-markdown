@@ -4,8 +4,6 @@ The _PRINTMODE statement sets the text or [_FONT](_FONT.md) printing mode on an 
 
   
 
-|  |
-
 ## Syntax
 
 _PRINTMODE {*_KEEPBACKGROUND*|*_ONLYBACKGROUND*|*_FILLBACKGROUND*}[, *imageHandle&*]

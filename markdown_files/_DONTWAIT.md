@@ -4,8 +4,6 @@ _DONTWAIT is used with the [SHELL](SHELL.md) statement in **QB64** to specify th
 
   
 
-|  |
-
 ## Syntax
 
 [SHELL](SHELL.md) [[[_DONTWAIT] [*commandLine$*]

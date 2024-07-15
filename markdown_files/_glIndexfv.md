@@ -4,8 +4,6 @@ The **_glIndexfv** statement sets the current color index.
 
   
 
-|  |
-
 ## Syntax
 
 _glIndexfv const GLfloat **c*

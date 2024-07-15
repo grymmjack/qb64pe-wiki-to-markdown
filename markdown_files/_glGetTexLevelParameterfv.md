@@ -4,8 +4,6 @@ The **_glGetTexLevelParameterfv** and **_glGetTexLevelParameteriv** statements r
 
   
 
-|  |
-
 ## Syntax
 
 _glGetTexLevelParameterfv GLenum *target*, GLint *level*, GLenum *pname*, GLfloat **params*

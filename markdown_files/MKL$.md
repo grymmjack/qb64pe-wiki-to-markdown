@@ -4,8 +4,6 @@ The MKL$ function encodes a [LONG](LONG.md) numerical value into a 4-byte [ASCII
 
   
 
-|  |
-
 ## Syntax
 
 *result$* = MKL$(*longVariableOrLiteral&*)

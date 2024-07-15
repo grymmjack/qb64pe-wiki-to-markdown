@@ -4,8 +4,6 @@ The **_glNormal3sv** statement sets the current normal vector.
 
   
 
-|  |
-
 ## Syntax
 
 _glNormal3sv const GLshort **v*

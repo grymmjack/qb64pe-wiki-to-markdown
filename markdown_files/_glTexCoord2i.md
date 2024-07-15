@@ -4,8 +4,6 @@ The **_glTexCoord2i** statement sets the current texture coordinates.
 
   
 
-|  |
-
 ## Syntax
 
 _glTexCoord2i GLint *s*, GLint *t*

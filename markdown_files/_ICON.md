@@ -4,8 +4,6 @@ The _ICON statement uses an image handle from [_LOADIMAGE](_LOADIMAGE.md) for th
 
   
 
-|  |
-
 ## Syntax
 
 _ICON [*mainImageHandle&*[, *smallImageHandle&*

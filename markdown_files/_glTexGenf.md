@@ -4,8 +4,6 @@ The **_glTexGenf** statement controls the generation of texture coordinates.
 
   
 
-|  |
-
 ## Syntax
 
 _glTexGenf GLenum *coord*, GLenum *pname*, GLfloat *param*

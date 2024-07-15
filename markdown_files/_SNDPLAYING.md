@@ -4,8 +4,6 @@ The _SNDPLAYING function returns whether a sound is being played. Uses a handle 
 
   
 
-|  |
-
 ## Syntax
 
 *isPlaying%* = _SNDPLAYING(*handle&*)

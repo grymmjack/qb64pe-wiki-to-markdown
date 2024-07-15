@@ -4,8 +4,6 @@ The _PALETTECOLOR statement sets the color value of a palette entry of an image 
 
   
 
-|  |
-
 ## Syntax
 
 _PALETTECOLOR *attribute%*, *newColor&*[, *destHandle&*]

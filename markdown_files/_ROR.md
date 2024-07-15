@@ -4,8 +4,6 @@ The _ROR function is used to rotate the bits of a numerical value to the right. 
 
   
 
-|  |
-
 ## Syntax
 
 *result* = _ROR(*numericalVariable*, *numericalValue*)

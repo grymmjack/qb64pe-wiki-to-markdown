@@ -4,8 +4,6 @@ The _DIREXISTS function determines if a designated file path or folder exists an
 
   
 
-|  |
-
 ## Syntax
 
 *dirExists%* = _DIREXISTS(*filepath$*)

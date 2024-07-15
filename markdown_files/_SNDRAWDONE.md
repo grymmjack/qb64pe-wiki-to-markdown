@@ -4,8 +4,6 @@ _SNDRAWDONE ensures that the final buffer portion is played in short sound effec
 
   
 
-|  |
-
 ## Syntax
 
 _SNDRAWDONE [*pipeHandle&*]

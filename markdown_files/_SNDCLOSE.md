@@ -4,8 +4,6 @@ The _SNDCLOSE statement frees and unloads an open sound using a [_SNDOPEN](_SNDO
 
   
 
-|  |
-
 ## Syntax
 
 _SNDCLOSE *handle&*

@@ -4,8 +4,6 @@ The **_DEFAULTCOLOR** function returns the current default (text/drawing) color 
 
   
 
-|  |
-
 ## Syntax
 
 *col~&* = _DEFAULTCOLOR [(*imageHandle&*)]

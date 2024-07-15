@@ -4,8 +4,6 @@ The _ROUND function rounds to the closest even [INTEGER](INTEGER.md), [LONG](LON
 
   
 
-|  |
-
 ## Syntax
 
 *value* = _ROUND(*number*)

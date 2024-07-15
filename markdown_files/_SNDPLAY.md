@@ -4,8 +4,6 @@ The _SNDPLAY statement plays a sound designated by a file handle created by [_SN
 
   
 
-|  |
-
 ## Syntax
 
 _SNDPLAY *handle&*

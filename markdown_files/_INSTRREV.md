@@ -4,8 +4,6 @@ The _INSTRREV function searches for a substring inside another string, but unlik
 
   
 
-|  |
-
 ## Syntax
 
 *position%* = _INSTRREV([*start%*,] *baseString$*, *subString$*)

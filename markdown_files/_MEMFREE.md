@@ -4,8 +4,6 @@ The _MEMFREE statement frees the designated memory block [_MEM](_MEM.md) value a
 
   
 
-|  |
-
 ## Syntax
 
 _MEMFREE *memoryVariable*

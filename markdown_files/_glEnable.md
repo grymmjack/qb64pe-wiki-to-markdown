@@ -4,8 +4,6 @@ The **_glEnable** and **_glDisable** statements enable or disable OpenGL capabil
 
   
 
-|  |
-
 ## Syntax
 
 _glEnable GLenum *cap*

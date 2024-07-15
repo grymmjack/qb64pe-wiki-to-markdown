@@ -4,8 +4,6 @@ The SHELL statement allows a program to run external programs or command line st
 
   
 
-|  |
-
 ## Syntax
 
 SHELL [*DOSCommand$*]

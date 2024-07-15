@@ -4,8 +4,6 @@ The **_glCopyTexImage2D** statement copies pixels from the framebuffer into a tw
 
   
 
-|  |
-
 ## Syntax
 
 _glCopyTexImage2D GLenum *target*, GLint *level*, GLenum *internalFormat*, GLint *x*, GLint *y*, GLsizei *width*, GLsizei *height*, GLint *border*

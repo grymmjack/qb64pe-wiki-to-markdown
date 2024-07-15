@@ -4,8 +4,6 @@ The **LOF** function is used to find the length of an [OPEN](OPEN.md) file in by
 
   
 
-|  |
-
 ## Syntax
 
 *totalBytes&* = LOF([#]*fileNumber*)

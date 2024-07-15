@@ -4,8 +4,6 @@ The **_UCHARPOS** function calculates the starting pixel positions of every char
 
   
 
-|  |
-
 ## Syntax
 
 *codepoints&* = _UCHARPOS(*text$*[, *posArray&()*][, *utfEncoding&*][, *fontHandle&*])

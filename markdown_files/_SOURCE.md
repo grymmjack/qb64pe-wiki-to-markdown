@@ -4,8 +4,6 @@ The _SOURCE statement establishes the image SOURCE using a handle created by [_L
 
   
 
-|  |
-
 ## Syntax
 
 _SOURCE *handle&*

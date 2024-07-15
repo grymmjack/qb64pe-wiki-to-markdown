@@ -4,8 +4,6 @@ The _MOUSEMOVE statement moves the mouse pointer to a new position on the screen
 
   
 
-|  |
-
 ## Syntax
 
 _MOUSEMOVE *column%*, *row%*

@@ -4,8 +4,6 @@ The **_glEvalPoint1** and **_glEvalPoint2** statements generate and evaluate a s
 
   
 
-|  |
-
 ## Syntax
 
 _glEvalPoint1 GLint *i*

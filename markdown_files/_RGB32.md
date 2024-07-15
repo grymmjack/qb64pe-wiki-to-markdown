@@ -4,8 +4,6 @@ The _RGB32 function returns the 32-bit *RGBA* color value with specified red, gr
 
   
 
-|  |
-
 ## Syntax
 
 *Original syntax*:

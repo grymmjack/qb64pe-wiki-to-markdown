@@ -4,8 +4,6 @@ The **_CRC32** function returns the [Crc-32](Crc-32.md) checksum of any arbitrar
 
   
 
-|  |
-
 ## Syntax
 
 *chksum~&* = _CRC32(*dataString$*)

@@ -4,8 +4,6 @@ The INSTR function searches for the first occurence of a search [STRING](STRING.
 
   
 
-|  |
-
 ## Syntax
 
 *position%* = INSTR([*start%*,] *baseString$*, *searchString$*)

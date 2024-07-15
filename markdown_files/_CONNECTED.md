@@ -4,8 +4,6 @@ The _CONNECTED function returns the status of a TCP/IP or HTTP connection handle
 
   
 
-|  |
-
 ## Syntax
 
 *result&* = _CONNECTED(*connectionHandle&*)

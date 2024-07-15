@@ -6,8 +6,6 @@
 
   
 
-|  |
-
 ## Syntax
 
 _STATUSCODE(*Handle*)

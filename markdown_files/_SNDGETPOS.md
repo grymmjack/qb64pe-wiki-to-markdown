@@ -4,8 +4,6 @@ The _SNDGETPOS function returns the current playing position in seconds using a 
 
   
 
-|  |
-
 ## Syntax
 
 *position* = _SNDGETPOS(*handle&*)

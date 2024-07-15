@@ -4,8 +4,6 @@ The _SHELLHIDE function hides the console window and returns any [INTEGER](INTEG
 
   
 
-|  |
-
 ## Syntax
 
 *returnCode%* = _SHELLHIDE(*externalCommand$*)

@@ -4,8 +4,6 @@ The CHDIR statement changes the program's location from one working directory to
 
   
 
-|  |
-
 ## Syntax
 
 CHDIR *path$*

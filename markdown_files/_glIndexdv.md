@@ -4,8 +4,6 @@ The **_glIndexdv** statement sets the current color index.
 
   
 
-|  |
-
 ## Syntax
 
 _glIndexdv const GLdouble **c*

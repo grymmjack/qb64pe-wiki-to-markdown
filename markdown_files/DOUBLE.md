@@ -4,8 +4,6 @@ DOUBLE type floating point numerical values use 8 bytes per value.
 
   
 
-|  |
-
 ## Syntax
 
 [DIM](DIM.md) *variable* [AS](AS.md) DOUBLE

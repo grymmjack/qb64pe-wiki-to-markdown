@@ -4,8 +4,6 @@ The _FREEFONT statement frees a font handle that was created by [_LOADFONT](_LOA
 
   
 
-|  |
-
 ## Syntax
 
 _FREEFONT (*fontHandle&*)

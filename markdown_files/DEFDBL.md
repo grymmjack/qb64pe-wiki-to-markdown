@@ -4,8 +4,6 @@ The DEFDBL statement defines all variables with names starting with the specifie
 
   
 
-|  |
-
 ## Syntax
 
 DEFDBL *letter*[-*range*], *letter2*[-*range2*], [...]

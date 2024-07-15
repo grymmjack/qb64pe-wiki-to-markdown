@@ -4,8 +4,6 @@ The **_UPRINTSTRING** statement prints ASCII / UNICODE text [strings](strings.md
 
   
 
-|  |
-
 ## Syntax
 
 _UPRINTSTRING (*column*, *row*), *textExpression$*[, *maxWidth&*][, *utfEncoding&*][, *fontHandle&*][, *imageHandle&*]

@@ -4,8 +4,6 @@ The **_FULLPATH$** function returns an absolute or full path name for the specif
 
   
 
-|  |
-
 ## Syntax
 
 *p$* = _FULLPATH$(*pathName$*)

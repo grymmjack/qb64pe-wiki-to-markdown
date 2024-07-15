@@ -4,8 +4,6 @@ The **_glRasterPos4i** statement specifies the raster position for pixel operati
 
   
 
-|  |
-
 ## Syntax
 
 _glRasterPos4i GLint *x*, GLint *y*, GLint *z*, GLint *w*

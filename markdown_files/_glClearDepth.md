@@ -4,8 +4,6 @@ The **_glClearDepth** statement specifies the clear value for the depth buffer.
 
   
 
-|  |
-
 ## Syntax
 
 _glClearDepth GLclampd *depth*

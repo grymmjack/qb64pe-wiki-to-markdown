@@ -4,8 +4,6 @@ The _ENVIRONCOUNT function returns the number of items (key/value pairs) current
 
   
 
-|  |
-
 ## Syntax
 
 *totalKeys&* = _ENVIRONCOUNT

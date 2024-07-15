@@ -4,8 +4,6 @@ The **_glBitmap** statement draws a bitmap.
 
   
 
-|  |
-
 ## Syntax
 
 _glBitmap GLSizei *width*, GLSizei *height*, GLfloat *xorig*, GLfloat *yorig*, GLfloat *xmove*, GLfloat *ymove*, const GLubyte **bitmap*

@@ -4,8 +4,6 @@ The **_glStencilOp** statement sets the stencil test actions.
 
   
 
-|  |
-
 ## Syntax
 
 _glStencilOp GLenum *fail*, GLenum *zfail*, GLenum *zpass*

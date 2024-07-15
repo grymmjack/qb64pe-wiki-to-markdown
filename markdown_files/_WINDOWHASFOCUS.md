@@ -4,8 +4,6 @@ The _WINDOWHASFOCUS function returns true (-1) if the current program's window h
 
   
 
-|  |
-
 ## Syntax
 
 *hasFocus%%* = _WINDOWHASFOCUS

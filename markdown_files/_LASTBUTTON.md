@@ -4,8 +4,6 @@ The _LASTBUTTON function returns the number of buttons a specified INPUT device 
 
   
 
-|  |
-
 ## Syntax
 
 *buttonCount%* = __LASTBUTTON(*deviceNumber*)

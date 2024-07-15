@@ -4,8 +4,6 @@ The _MOUSEBUTTON function returns the button status of a specified mouse button 
 
   
 
-|  |
-
 ## Syntax
 
 *buttonStatus%%* = _MOUSEBUTTON(*buttoNumber*)

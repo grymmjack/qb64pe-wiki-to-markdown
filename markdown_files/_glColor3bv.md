@@ -4,8 +4,6 @@ The **_glColor3bv** statement sets the current color from an already existing ar
 
   
 
-|  |
-
 ## Syntax
 
 _glColor3bv const GLbyte **v*

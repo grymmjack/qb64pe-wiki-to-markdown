@@ -4,8 +4,6 @@ The _HYPOT function returns the hypotenuse of a right-angled triangle whose legs
 
   
 
-|  |
-
 ## Syntax
 
 *result!* = _HYPOT(*x*, *y*)

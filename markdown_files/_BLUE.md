@@ -4,8 +4,6 @@ The _BLUE function returns the palette intensity or the blue component intensity
 
   
 
-|  |
-
 ## Syntax
 
 *blueintensity&* = _BLUE(*rgbaColorIndex&*[, *imageHandle&*])

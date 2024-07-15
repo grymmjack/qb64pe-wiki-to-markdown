@@ -4,8 +4,6 @@ The **LEN** function returns the number of bytes used by a variable value or the
 
   
 
-|  |
-
 ## Syntax
 
 *length%* = LEN(*literalTextOrVariable*)

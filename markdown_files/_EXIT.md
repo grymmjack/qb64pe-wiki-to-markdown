@@ -4,8 +4,6 @@ The EXIT statement is used to exit certain QBasic procedures.
 
   
 
-|  |
-
 ## Syntax
 
 EXIT {DO|WHILE|FOR|SUB|FUNCTION|SELECT|CASE}

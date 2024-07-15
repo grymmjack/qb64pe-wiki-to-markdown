@@ -4,8 +4,6 @@ The $CONSOLE [Metacommand](Metacommand.md) creates a console window that can be 
 
   
 
-|  |
-
 ## Syntax
 
 $CONSOLE[:ONLY]

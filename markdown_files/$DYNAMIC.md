@@ -4,8 +4,6 @@ The $DYNAMIC [metacommand](metacommand.md) allows the creation of dynamic (resiz
 
   
 
-|  |
-
 ## Syntax
 
 {[REM](REM.md) | [']('.md) } $DYNAMIC

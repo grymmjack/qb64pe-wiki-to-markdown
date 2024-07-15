@@ -4,8 +4,6 @@ The **_LOADIMAGE** function loads an image into memory and returns valid [LONG](
 
   
 
-|  |
-
 ## Syntax
 
 *handle&* = _LOADIMAGE(*fileName$*[, [*mode&*][, *requirements$*)

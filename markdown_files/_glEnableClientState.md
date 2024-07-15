@@ -4,8 +4,6 @@ The **_glEnableClientState** and **_glDisableClientState** statements enable and
 
   
 
-|  |
-
 ## Syntax
 
 _glEnableClientState GLenum *array*

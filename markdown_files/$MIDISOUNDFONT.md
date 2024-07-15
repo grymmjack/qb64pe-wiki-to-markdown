@@ -6,8 +6,6 @@ The $MIDISOUNDFONT metacommand enables MIDI support for [_SNDOPEN](_SNDOPEN.md).
 
   
 
-|  |
-
 ## Syntax
 
 $MIDISOUNDFONT: {DEFAULT|"*Filename*"}

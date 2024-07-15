@@ -4,8 +4,6 @@ The INTERRUPTX statement is an assembly routine for accessing computer informati
 
   
 
-|  |
-
 ## Syntax
 
 [CALL](CALL.md) INTERRUPTX(*intNum*, *inRegs*, *outRegs*)

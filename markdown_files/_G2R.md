@@ -4,8 +4,6 @@ The _G2R function converts a **gradient** value into a **radian** value.
 
   
 
-|  |
-
 ## Syntax
 
 *result* = _G2R(*num*)

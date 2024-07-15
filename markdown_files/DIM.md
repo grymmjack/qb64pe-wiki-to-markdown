@@ -4,8 +4,6 @@ The DIM statement is used to declare a variable or a list of variables as a spec
 
   
 
-|  |
-
 ## Syntax
 
 *To declare variables:*

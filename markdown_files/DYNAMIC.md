@@ -4,8 +4,6 @@ The **DYNAMIC** keyword is used in two different ways in QB64, either as a [Meta
 
   
 
-|  |
-
 ## Syntax
 
 Metacommand

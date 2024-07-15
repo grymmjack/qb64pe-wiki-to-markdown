@@ -4,8 +4,6 @@ The CHR$ function returns the character associated with a certain [character cod
 
   
 
-|  |
-
 ## Syntax
 
 *result$* = CHR$(*code%*)

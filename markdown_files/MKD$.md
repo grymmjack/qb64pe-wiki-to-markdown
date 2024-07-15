@@ -4,8 +4,6 @@ The MKD$ function encodes a [DOUBLE](DOUBLE.md) numerical value into an 8-byte [
 
   
 
-|  |
-
 ## Syntax
 
 *result$* = MKD$(*doublePrecisionVariableOrLiteral#*)

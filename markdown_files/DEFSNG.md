@@ -4,8 +4,6 @@ The DEFSNG statement defines all variables with names starting with the specifie
 
   
 
-|  |
-
 ## Syntax
 
 DEFSNG *letter*[-*range*], *letter2*[-*range2*], [...]

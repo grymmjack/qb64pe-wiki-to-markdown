@@ -4,8 +4,6 @@ The BEEP statement produces a beep sound through the sound card.
 
   
 
-|  |
-
 ## Syntax
 
 BEEP

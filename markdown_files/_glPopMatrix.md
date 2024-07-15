@@ -4,8 +4,6 @@ The **_glPushMatrix** and **_glPopMatrix** statements push and pop the current m
 
   
 
-|  |
-
 ## Syntax
 
 _glPopMatrix

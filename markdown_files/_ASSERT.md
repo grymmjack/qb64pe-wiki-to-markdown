@@ -4,8 +4,6 @@ The _ASSERT statement can be used to perform tests in code that's in development
 
   
 
-|  |
-
 ## Syntax
 
 _ASSERT *condition*[, *errorMessage$*]

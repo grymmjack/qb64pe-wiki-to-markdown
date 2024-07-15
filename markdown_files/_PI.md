@@ -4,8 +4,6 @@ The _PI function returns **π** as a [_FLOAT](_FLOAT.md) value with an optional 
 
   
 
-|  |
-
 ## Syntax
 
 *circumference* = _PI[(*multiplier*)]

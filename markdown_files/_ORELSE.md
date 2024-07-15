@@ -4,8 +4,6 @@ _ORELSE is a [boolean](boolean.md) logical operator that performs short-circuiti
 
   
 
-|  |
-
 ## Syntax
 
 *result* = *firstvalue* _ORELSE *secondvalue*

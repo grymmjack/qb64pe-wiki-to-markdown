@@ -4,8 +4,6 @@ The _SNDPAUSED function checks if a sound is paused. Uses a handle parameter pas
 
   
 
-|  |
-
 ## Syntax
 
 *isPaused%%* = _SNDPAUSED(*handle&*)

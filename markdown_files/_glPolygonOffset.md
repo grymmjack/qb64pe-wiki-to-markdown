@@ -4,8 +4,6 @@ The **_glPolygonOffset** statement sets the scale and units OpenGL uses to calcu
 
   
 
-|  |
-
 ## Syntax
 
 _glPolygonOffset GLfloat *factor*, GLfloat *units*

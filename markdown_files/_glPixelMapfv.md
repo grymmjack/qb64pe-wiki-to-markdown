@@ -4,8 +4,6 @@ The **_glPixelMapfv** statement sets up pixel transfer maps.
 
   
 
-|  |
-
 ## Syntax
 
 _glPixelMapfv GLenum *map*, GLsizei *mapsize*, const GLfloat **values*

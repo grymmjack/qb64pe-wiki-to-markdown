@@ -4,8 +4,6 @@ The _SCREENPRINT statement simulates typing text into a Windows focused program.
 
   
 
-|  |
-
 ## Syntax
 
 _SCREENPRINT *text$*

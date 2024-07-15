@@ -4,8 +4,6 @@ The **POS** function returns the current print cursor text column position.
 
   
 
-|  |
-
 ## Syntax
 
 column% = POS(0)

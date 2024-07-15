@@ -4,8 +4,6 @@ The **_ULINESPACING** function returns the vertical line spacing (distance betwe
 
   
 
-|  |
-
 ## Syntax
 
 *pixels&* = _ULINESPACING[(*fontHandle&*)]

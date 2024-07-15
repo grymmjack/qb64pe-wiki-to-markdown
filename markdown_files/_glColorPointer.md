@@ -4,8 +4,6 @@ The **_glColorPointer** statement defines an array of colors.
 
   
 
-|  |
-
 ## Syntax
 
 _glColorPointer GLint *size*, GLenum *type*, GLsizei *stride*, const GLvoid **pointer*

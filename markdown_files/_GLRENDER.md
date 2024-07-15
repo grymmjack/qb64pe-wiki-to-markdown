@@ -2,8 +2,6 @@
 
   
 
-|  |
-
 ## Syntax
 
 _GLRENDER *mode*

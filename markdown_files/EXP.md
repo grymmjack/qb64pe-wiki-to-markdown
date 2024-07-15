@@ -4,8 +4,6 @@ The EXP math function calculates the exponential function (**e** raised to the p
 
   
 
-|  |
-
 ## Syntax
 
 *result* = EXP(*numericExpression*)

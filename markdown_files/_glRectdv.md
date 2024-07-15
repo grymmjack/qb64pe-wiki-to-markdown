@@ -4,8 +4,6 @@ The **_glRectdv** statement draws a rectangle.
 
   
 
-|  |
-
 ## Syntax
 
 _glRectdv const GLdouble **v1*, const GLdouble **v2*

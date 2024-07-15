@@ -4,8 +4,6 @@ The $SCREENSHOW [metacommand](metacommand.md) can be used to display the main pr
 
   
 
-|  |
-
 ## Syntax
 
 $SCREENSHOW

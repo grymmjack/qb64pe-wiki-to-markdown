@@ -4,8 +4,6 @@ The **_glReadPixels** statement reads a block of pixels from the framebuffer.
 
   
 
-|  |
-
 ## Syntax
 
 _glReadPixels GLint *x*, GLint *y*, GLsizei *width*, GLsizei *height*, GLenum *format*, GLenum *type*, GLvoid **pixels*

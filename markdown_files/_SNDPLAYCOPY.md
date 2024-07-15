@@ -4,8 +4,6 @@ The _SNDPLAYCOPY statement copies a sound, plays it, and automatically closes th
 
   
 
-|  |
-
 ## Syntax
 
 _SNDPLAYCOPY *handle&*[, [*volume!*][, *x!*][, *y!*][, *z!*

@@ -4,8 +4,6 @@ The _SNDOPENRAW function opens a new channel to fill with _SNDRAW content to man
 
   
 
-|  |
-
 ## Syntax
 
 *pipeHandle&* = _SNDOPENRAW

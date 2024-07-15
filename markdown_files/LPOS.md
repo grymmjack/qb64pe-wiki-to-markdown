@@ -4,8 +4,6 @@ The LPOS function returns the current LPT printer head position.
 
   
 
-|  |
-
 ## Syntax
 
 *result%* = LPOS(*index%*)

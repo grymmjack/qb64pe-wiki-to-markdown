@@ -4,8 +4,6 @@ The _OFFSET variable type stores the location of a value in memory. The byte siz
 
   
 
-|  |
-
 ## Syntax
 
 [DIM](DIM.md) variable [AS](AS.md) **_OFFSET**

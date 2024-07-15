@@ -4,8 +4,6 @@ The _BUTTON function returns -1 when specified button number on a controller dev
 
   
 
-|  |
-
 ## Syntax
 
 *press%%* = _BUTTON(*button_number%*)

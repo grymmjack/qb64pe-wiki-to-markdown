@@ -4,8 +4,6 @@ The RMDIR statement deletes an empty directory using a designated path relative 
 
   
 
-|  |
-
 ## Syntax
 
 RMDIR *directory$*

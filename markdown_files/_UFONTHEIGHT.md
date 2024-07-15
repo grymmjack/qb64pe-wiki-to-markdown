@@ -4,8 +4,6 @@ The **_UFONTHEIGHT** function returns the global glyph height (incl. ascender/de
 
   
 
-|  |
-
 ## Syntax
 
 *pixelHeight&* = _UFONTHEIGHT[(*fontHandle&*)]

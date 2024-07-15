@@ -4,8 +4,6 @@ The _CONSOLETITLE statement creates the title of the console window using a lite
 
   
 
-|  |
-
 ## Syntax
 
 _CONSOLETITLE *text$*

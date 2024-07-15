@@ -4,8 +4,6 @@ The ERR function returns the last QBasic error code number.
 
   
 
-|  |
-
 ## Syntax
 
 *errorNum%* = ERR

@@ -4,8 +4,6 @@ The DEFINT statement defines all variables with names starting with the specifie
 
   
 
-|  |
-
 ## Syntax
 
 DEFINT *letter*[-*range*], *letter2*[-*range2*], [...]

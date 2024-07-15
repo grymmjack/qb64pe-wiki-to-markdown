@@ -4,8 +4,6 @@ The **ALIAS** clause in a [DECLARE LIBRARY](DECLARE LIBRARY.md) statement block 
 
   
 
-|  |
-
 ## Syntax
 
 [DECLARE LIBRARY](DECLARE LIBRARY.md)

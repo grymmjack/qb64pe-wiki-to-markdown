@@ -4,8 +4,6 @@ The **_glDeleteLists** statement deletes a contiguous group of display lists.
 
   
 
-|  |
-
 ## Syntax
 
 _glDeleteLists GLuint *list*, GLsizei *range*

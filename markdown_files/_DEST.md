@@ -4,8 +4,6 @@ The _DEST statement sets the current write image or page. All graphic and print 
 
   
 
-|  |
-
 ## Syntax
 
 _DEST *imageHandle&*

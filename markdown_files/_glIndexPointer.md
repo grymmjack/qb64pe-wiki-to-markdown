@@ -4,8 +4,6 @@ The **_glIndexPointer** statement defines an array of color indexes.
 
   
 
-|  |
-
 ## Syntax
 
 _glIndexPointer GLenum *type*, GLsizei *stride*, const GLvoid **pointer*

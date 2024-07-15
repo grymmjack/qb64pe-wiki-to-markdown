@@ -4,8 +4,6 @@ The **_DEVICEINPUT** function returns the device number when a controller device
 
   
 
-|  |
-
 ## Syntax
 
 *device%* = _DEVICEINPUT

@@ -4,8 +4,6 @@ The _SNDLEN function returns the length in seconds of a loaded sound using a han
 
   
 
-|  |
-
 ## Syntax
 
 *soundLength* = _SNDLEN(*handle&*)

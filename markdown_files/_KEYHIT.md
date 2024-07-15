@@ -4,8 +4,6 @@ The _KEYHIT function returns [ASCII](ASCII.md) one and two byte, OpenGL Virtual 
 
   
 
-|  |
-
 ## Syntax
 
 *keycode&* = _KEYHIT

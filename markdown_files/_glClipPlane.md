@@ -4,8 +4,6 @@ The **_glClipPlane** statement specifies a plane against which all geometry is c
 
   
 
-|  |
-
 ## Syntax
 
 _glClipPlane GLenum *plane*, const GLdouble **equation*

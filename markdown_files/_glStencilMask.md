@@ -4,8 +4,6 @@ The **_glStencilMask** statement controls the writing of individual bits in the 
 
   
 
-|  |
-
 ## Syntax
 
 _glStencilMask GLuint *mask*

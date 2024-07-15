@@ -4,8 +4,6 @@ The _CLEARCOLOR statement sets a specific color to be treated as transparent whe
 
   
 
-|  |
-
 ## Syntax
 
 _CLEARCOLOR {*color&*|_NONE}[, *Dest_Handle&*]

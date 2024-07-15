@@ -4,8 +4,6 @@ The MKSMBF$ function encodes a single-precision IEEE number to a string value in
 
   
 
-|  |
-
 ## Syntax
 
 *result$* = MKSMBF$(*singlePrecisionVariableOrLiteral!*)

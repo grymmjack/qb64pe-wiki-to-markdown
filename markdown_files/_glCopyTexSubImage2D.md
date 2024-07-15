@@ -4,8 +4,6 @@ The **_glCopyTexSubImage2D** statement copies a sub-image of a two-dimensional t
 
   
 
-|  |
-
 ## Syntax
 
 _glCopyTexSubImage2D GLenum *target*, GLint *level*, GLint *xoffset*, GLint *yoffset*, GLint *x*, GLint *y*, GLsizei *width*, GLsizei *height*

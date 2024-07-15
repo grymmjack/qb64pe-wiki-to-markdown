@@ -4,8 +4,6 @@ The **_glMultMatrixf** statement multiplies the current matrix by an arbitrary m
 
   
 
-|  |
-
 ## Syntax
 
 _glMultMatrixf const GLfloat **m*

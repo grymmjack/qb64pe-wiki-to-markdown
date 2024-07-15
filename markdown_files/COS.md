@@ -4,8 +4,6 @@ The COS function returns the horizontal component or the cosine of an angle meas
 
   
 
-|  |
-
 ## Syntax
 
 *value!* = COS(*radianAngle!*)

@@ -4,8 +4,6 @@ The **_glEvalCoord1fv** statement evaluates enabled one-dimensional maps.
 
   
 
-|  |
-
 ## Syntax
 
 _glEvalCoord1fv const GLfloat **u*

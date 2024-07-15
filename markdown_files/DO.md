@@ -4,8 +4,6 @@
 
   
 
-|  |
-
 ## Syntax
 
 *Syntax 1:*

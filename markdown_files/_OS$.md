@@ -4,8 +4,6 @@ The _OS$ function returns the operating system and QB64 compiler bit version **u
 
   
 
-|  |
-
 ## Syntax
 
 *compilerVersion$* = _OS$

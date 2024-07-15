@@ -4,8 +4,6 @@ The **WIDTH** statement changes the text dimensions of certain **SCREEN** modes 
 
   
 
-|  |
-
 ## Syntax
 
 For SCREEN

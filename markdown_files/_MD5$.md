@@ -4,8 +4,6 @@ The **_MD5$** function returns the [MD5](MD5.md) hash value of any arbitrary str
 
   
 
-|  |
-
 ## Syntax
 
 *md5hash$* = _MD5$(*dataString$*)

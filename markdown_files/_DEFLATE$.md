@@ -4,8 +4,6 @@ The _DEFLATE$ function compresses a [string](string.md).
 
   
 
-|  |
-
 ## Syntax
 
 *result$* = _DEFLATE$(*stringToCompress$*)

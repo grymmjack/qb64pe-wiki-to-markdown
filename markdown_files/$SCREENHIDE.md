@@ -4,8 +4,6 @@ The $SCREENHIDE [metacommand](metacommand.md) can be used to hide the main progr
 
   
 
-|  |
-
 ## Syntax
 
 $SCREENHIDE

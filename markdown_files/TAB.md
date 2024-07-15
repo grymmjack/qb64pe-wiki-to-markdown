@@ -4,8 +4,6 @@ The TAB function is used in [PRINT](PRINT.md) and [LPRINT](LPRINT.md) statements
 
   
 
-|  |
-
 ## Syntax
 
 TAB(*column%*)

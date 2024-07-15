@@ -4,8 +4,6 @@ The _SNDSETPOS statement changes the current/starting playing position in second
 
   
 
-|  |
-
 ## Syntax
 
 _SNDSETPOS *handle&*, *position!*

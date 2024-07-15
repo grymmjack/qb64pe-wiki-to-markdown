@@ -4,8 +4,6 @@
 
   
 
-|  |
-
 ## Syntax
 
 SOUND *frequency#*, *duration#*[, *volume#*][, *panning#*][, *waveform&*]

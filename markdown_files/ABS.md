@@ -4,8 +4,6 @@ The ABS function returns the unsigned numerical value of a variable or literal v
 
   
 
-|  |
-
 ## Syntax
 
 *positive* = ABS(*numericalValue*)

@@ -4,8 +4,6 @@ The **_glEvalMesh1** statement computes a one-dimensional grid of points or line
 
   
 
-|  |
-
 ## Syntax
 
 _glEvalMesh1 GLenum *mode*, GLint *i1*, GLint *i2*

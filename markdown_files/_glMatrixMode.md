@@ -4,8 +4,6 @@ The **_glMatrixMode** statement specifies which matrix is the current matrix.
 
   
 
-|  |
-
 ## Syntax
 
 _glMatrixMode GLenum *mode*

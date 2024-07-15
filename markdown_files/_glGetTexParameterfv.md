@@ -4,8 +4,6 @@ The **_glGetTexParameterfv** and **_glGetTexParameteriv** statements return text
 
   
 
-|  |
-
 ## Syntax
 
 _glGetTexParameterfv GLenum *target*, GLenum *pname*, GLfloat **params*

@@ -4,8 +4,6 @@ The **_OPENFILEDIALOG$** function displays a standard dialog box that prompts th
 
   
 
-|  |
-
 ## Syntax
 
 *result$* = _OPENFILEDIALOG$([*title$*][, *defaultPathAndFile$*][, *filterPatterns$*][, *singleFilterDescription$*][, *allowMultipleSelects&*])

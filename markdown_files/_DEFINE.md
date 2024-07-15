@@ -4,8 +4,6 @@ _DEFINE defines a set of variable names according to their first character as a 
 
   
 
-|  |
-
 ## Syntax
 
 _DEFINE *letter*[*-range*, ...] [AS](AS.md) [[[_UNSIGNED] data[type](type.md)

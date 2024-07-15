@@ -4,8 +4,6 @@ The _WHEEL function returns the relative position of a specified wheel number on
 
   
 
-|  |
-
 ## Syntax
 
 *move* = _WHEEL(*wheelNumber%*)

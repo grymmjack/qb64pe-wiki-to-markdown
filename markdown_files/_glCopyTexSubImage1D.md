@@ -4,8 +4,6 @@ The **_glCopyTexSubImage1D** statement copies a sub-image of a one-dimensional t
 
   
 
-|  |
-
 ## Syntax
 
 _glCopyTexSubImage1D GLenum *target*, GLint *level*, GLint *xoffset*, GLint *x*, GLint *y*, GLsizei *width*

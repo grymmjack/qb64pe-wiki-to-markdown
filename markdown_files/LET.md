@@ -4,8 +4,6 @@ LET is a needless statement today. It was designed for the very early BASIC dial
 
   
 
-|  |
-
 ## Syntax
 
 LET *variable* = *expression*

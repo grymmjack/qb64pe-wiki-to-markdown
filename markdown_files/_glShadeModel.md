@@ -4,8 +4,6 @@ The **_glShadeModel** statement selects flat or smooth shading.
 
   
 
-|  |
-
 ## Syntax
 
 _glShadeModel GLenum *mode*

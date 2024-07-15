@@ -4,8 +4,6 @@ The _LOADFONT function loads a FreeType supported font file in a specific size a
 
   
 
-|  |
-
 ## Syntax
 
 *handle&* = _LOADFONT(*fontFileName$*, *size&*[, "{MONOSPACE|, BOLD|, ITALIC|, UNDERLINE|, UNICODE|, DONTBLEND|, MEMORY|, AUTOMONO}"][, *fontIndex&*])

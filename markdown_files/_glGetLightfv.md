@@ -4,8 +4,6 @@ The **_glGetLightfv** and **_glGetLightiv** statements return light source param
 
   
 
-|  |
-
 ## Syntax
 
 _glGetLightfv GLenum *light*, GLenum *pname*, GLfloat **params*

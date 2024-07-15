@@ -6,8 +6,6 @@ The **_OPENCLIENT** function connects to a Host on the Internet as a Client and 
 
   
 
-|  |
-
 ## Syntax
 
 *clientHandle&* = _OPENCLIENT(**"TCP/IP:8080:12:30:1:10"**)

@@ -4,8 +4,6 @@ DEF SEG is used to define the area in memory to access QB64's emulated conventio
 
   
 
-|  |
-
 ## Syntax
 
 DEF SEG [=][{segment|VARSEG(variable}]

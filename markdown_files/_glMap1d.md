@@ -4,8 +4,6 @@ The **_glMap1d** statement defines a one-dimensional evaluator.
 
   
 
-|  |
-
 ## Syntax
 
 _glMap1d GLenum *target*, GLdouble *u1*, GLdouble *u2*, GLint *stride*, GLint *order*, const GLdouble **points*

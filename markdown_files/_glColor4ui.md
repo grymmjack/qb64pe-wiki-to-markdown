@@ -4,8 +4,6 @@ The **_glColor4ui** statement sets the current color.
 
   
 
-|  |
-
 ## Syntax
 
 _glColor4ui GLuint *red*, GLuint *green*, GLuint *blue*, GLuint *alpha*

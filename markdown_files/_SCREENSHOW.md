@@ -4,8 +4,6 @@ The _SCREENSHOW statement can be used to display the main program window in a se
 
   
 
-|  |
-
 ## Syntax
 
 _SCREENSHOW

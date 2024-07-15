@@ -4,8 +4,6 @@ The **_glGenTextures** statement generates texture names.
 
   
 
-|  |
-
 ## Syntax
 
 _glGenTextures GLsizei *n*, GLuint **textures*

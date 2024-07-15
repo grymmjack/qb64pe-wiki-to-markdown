@@ -4,8 +4,6 @@ The **_glColor3b** statement sets the current color.
 
   
 
-|  |
-
 ## Syntax
 
 _glColor3b GLbyte *red*, GLbyte *green*, GLbyte *blue*

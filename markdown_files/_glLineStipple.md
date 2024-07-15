@@ -4,8 +4,6 @@ The **_glLineStipple** statement specifies the line stipple pattern.
 
   
 
-|  |
-
 ## Syntax
 
 _glLineStipple GLint *factor*, GLushort *pattern*

@@ -4,8 +4,6 @@ The **_glRectf** statement draws a rectangle.
 
   
 
-|  |
-
 ## Syntax
 
 _glRectf GLfloat *x1*, GLfloat *y1*, GLfloat *x2*, GLfloat *y2*

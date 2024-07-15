@@ -4,8 +4,6 @@ The **_glTexCoord3d** statement sets the current texture coordinates.
 
   
 
-|  |
-
 ## Syntax
 
 _glTexCoord3d GLdouble *s*, GLdouble *t*, GLdouble *r*

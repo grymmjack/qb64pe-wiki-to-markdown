@@ -4,8 +4,6 @@ The **_glLightiv** statement returns light source parameter values.
 
   
 
-|  |
-
 ## Syntax
 
 _glLightiv GLenum *light*, GLenum *pname*, const GLint **params*

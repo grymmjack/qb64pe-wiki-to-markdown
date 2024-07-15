@@ -4,8 +4,6 @@ The _FILES$ function returns a file or directory name that matches the specified
 
   
 
-|  |
-
 ## Syntax
 
 *e$* = _FILES$[(*filespec$*)]

@@ -4,8 +4,6 @@ The PCOPY statement copies one source screen page to a destination page in memor
 
   
 
-|  |
-
 ## Syntax
 
 PCOPY *sourcePage%*, *destinationPage%*

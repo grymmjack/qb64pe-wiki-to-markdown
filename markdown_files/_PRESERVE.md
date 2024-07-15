@@ -4,8 +4,6 @@ The _PRESERVE [REDIM](REDIM.md) action preserves the current contents of [dynami
 
   
 
-|  |
-
 ## Syntax
 
 [REDIM](REDIM.md) _PRESERVE array(*newLowerIndex&* [TO *newUpperIndex&*]) [AS variabletype]

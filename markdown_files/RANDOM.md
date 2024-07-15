@@ -4,8 +4,6 @@
 
   
 
-|  |
-
 ## Syntax
 
 OPEN Filename$ FOR RANDOM AS #1 [LEN = *recordlength%*]

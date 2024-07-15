@@ -4,8 +4,6 @@ The INTERRUPT statement is an assembly routine for accessing computer informatio
 
   
 
-|  |
-
 ## Syntax
 
 [CALL](CALL.md) INTERRUPT(*intNum*, *inRegs*, *outRegs*)

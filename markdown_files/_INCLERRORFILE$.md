@@ -4,8 +4,6 @@ The _INCLERRORFILE$ function returns the name of the original source code [$INCL
 
   
 
-|  |
-
 ## Syntax
 
 *errfile$* = _INCLERRORFILE$

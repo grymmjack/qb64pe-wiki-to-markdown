@@ -4,8 +4,6 @@ The **_glGetFloatv** statement returns the value or values of a selected paramet
 
   
 
-|  |
-
 ## Syntax
 
 _glGetFloatv GLenum *pname*, GLfloat **params*

@@ -4,8 +4,6 @@ The **_glTranslated** statement multiplies the current matrix by a translation m
 
   
 
-|  |
-
 ## Syntax
 
 _glTranslated GLdouble *x*, GLdouble *y*, GLdouble *z*

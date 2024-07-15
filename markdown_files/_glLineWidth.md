@@ -4,8 +4,6 @@ The **_glLineWidth** statement specifies the width of rasterized lines.
 
   
 
-|  |
-
 ## Syntax
 
 _glLineWidth GLfloat *width*

@@ -4,8 +4,6 @@ The **_glColor4dv** statement sets the current color from an already existing ar
 
   
 
-|  |
-
 ## Syntax
 
 _glColor4dv const GLdouble **v*

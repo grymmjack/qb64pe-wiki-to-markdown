@@ -4,8 +4,6 @@ The **_glEvalCoord2fv** statement evaluates enabled two-dimensional maps.
 
   
 
-|  |
-
 ## Syntax
 
 _glEvalCoord2fv const GLfloat **u*

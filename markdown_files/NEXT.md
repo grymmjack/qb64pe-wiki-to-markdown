@@ -4,8 +4,6 @@ NEXT is used in a [FOR](FOR.md) counter loop to progress through the loop count.
 
   
 
-|  |
-
 ## Syntax
 
 [FOR](FOR.md) *counterVariable* = *startValue* [TO](TO.md) *stopValue* [[[STEP *increment*]

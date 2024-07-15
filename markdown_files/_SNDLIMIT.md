@@ -4,8 +4,6 @@ The _SNDLIMIT statement stops playing a sound after it has been playing for a se
 
   
 
-|  |
-
 ## Syntax
 
 _SNDLIMIT *handle&*, *numberOfSeconds!*

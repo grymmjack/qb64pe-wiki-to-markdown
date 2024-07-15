@@ -4,8 +4,6 @@ The $NOPREFIX metacommand allows all QB64 functions and statements to be used wi
 
   
 
-|  |
-
 ## Syntax
 
 $NOPREFIX

@@ -4,8 +4,6 @@ The **_glPushName** and **_glPopName** statements push and pop the name stack.
 
   
 
-|  |
-
 ## Syntax
 
 _glPopName

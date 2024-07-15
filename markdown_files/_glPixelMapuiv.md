@@ -4,8 +4,6 @@ The **_glPixelMapuiv** statement sets up pixel transfer maps.
 
   
 
-|  |
-
 ## Syntax
 
 _glPixelMapuiv GLenum *map*, GLsizei *mapsize*, const GLuint **values*

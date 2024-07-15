@@ -4,8 +4,6 @@ The **_glReadBuffer** statement selects a color buffer source for pixels.
 
   
 
-|  |
-
 ## Syntax
 
 _glReadBuffer GLenum *mode*

@@ -4,8 +4,6 @@ The **_SAVEFILEDIALOG$** function displays a standard dialog box that prompts th
 
   
 
-|  |
-
 ## Syntax
 
 *result$* = _SAVEFILEDIALOG$([*title$*][, *defaultPathAndFile$*][, *filterPatterns$*][, *singleFilterDescription$*])

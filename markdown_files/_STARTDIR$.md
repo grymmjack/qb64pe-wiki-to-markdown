@@ -4,8 +4,6 @@ The _STARTDIR$ function returns the path a user called a QB64 program from as a 
 
   
 
-|  |
-
 ## Syntax
 
 *callPath$* = _STARTDIR$

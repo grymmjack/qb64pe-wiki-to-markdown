@@ -4,8 +4,6 @@ The _PRINTIMAGE statement prints a colored image on the printer, stretching it t
 
   
 
-|  |
-
 ## Syntax
 
 _PRINTIMAGE *imageHandle&*

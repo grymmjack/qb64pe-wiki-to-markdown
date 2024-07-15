@@ -4,8 +4,6 @@ The _SETALPHA statement sets the alpha channel transparency level of some or all
 
   
 
-|  |
-
 ## Syntax
 
 _SETALPHA *alpha&*[, *color1&*][ [TO]( [TO.md) *colour2&*] [, *imageHandle&*]

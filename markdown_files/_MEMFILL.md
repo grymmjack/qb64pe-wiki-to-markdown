@@ -4,8 +4,6 @@ The _MEMFILL statement converts a value to a specified type, then fills memory w
 
   
 
-|  |
-
 ## Syntax
 
 _MEMFILL *memoryBlock*, *memoryBlock.OFFSET*, *fillBytes*, *value* [AS *variableType*]

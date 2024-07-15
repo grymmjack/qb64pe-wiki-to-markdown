@@ -4,8 +4,6 @@ The **STEP** keyword is used in [FOR...NEXT](FOR...NEXT.md) loops to skip throug
 
   
 
-|  |
-
 ## Syntax
 
 FOR counter_variable = start_point TO stop_point [**STEP *interval***]

@@ -4,8 +4,6 @@ The **_glRectiv** statement draws a rectangle.
 
   
 
-|  |
-
 ## Syntax
 
 _glRectiv const GLint **v1*, const GLint **v2*

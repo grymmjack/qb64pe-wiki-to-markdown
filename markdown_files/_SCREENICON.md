@@ -4,8 +4,6 @@ The _SCREENICON statement can be used to minimize the main program window to the
 
   
 
-|  |
-
 ## Syntax
 
 _SCREENICON

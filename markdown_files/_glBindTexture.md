@@ -4,8 +4,6 @@ The **_glBindTexture** statement enables the creation of a named texture that is
 
   
 
-|  |
-
 ## Syntax
 
 _glBindTexture GLenum *target*, GLuint *texture*

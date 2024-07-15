@@ -4,8 +4,6 @@ _ANDALSO is a [boolean](boolean.md) logical operator that performs short-circuit
 
   
 
-|  |
-
 ## Syntax
 
 *result* = *firstvalue* _ANDALSO *secondvalue*

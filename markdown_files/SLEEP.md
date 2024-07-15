@@ -4,8 +4,6 @@ SLEEP pauses the program indefinitely or for a specified number of seconds, prog
 
   
 
-|  |
-
 ## Syntax
 
 SLEEP [seconds]

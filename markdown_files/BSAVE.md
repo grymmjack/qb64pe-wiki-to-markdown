@@ -4,8 +4,6 @@ BSAVE saves the contents of an image array to a [BINARY](BINARY.md) file.
 
   
 
-|  |
-
 ## Syntax
 
 BSAVE *saveFile$*, [VARPTR](VARPTR.md)(*array(index)*), *fileSize&*

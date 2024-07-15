@@ -4,8 +4,6 @@ The **_glGetPointerv** statement returns the address of a vertex data array.
 
   
 
-|  |
-
 ## Syntax
 
 _glGetPointerv GLenum *pname*, GLvoid ***params*

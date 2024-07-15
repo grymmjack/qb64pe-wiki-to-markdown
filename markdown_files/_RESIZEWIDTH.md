@@ -4,8 +4,6 @@ The _RESIZEWIDTH function returns the user resized screen pixel width if [$RESIZ
 
   
 
-|  |
-
 ## Syntax
 
 *newWidth&* = _RESIZEWIDTH

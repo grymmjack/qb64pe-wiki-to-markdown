@@ -4,8 +4,6 @@ The GOTO statement sends the procedure to a line label or a line number in the p
 
   
 
-|  |
-
 ## Syntax
 
 GOTO {*lineNumber*|*lineLabel*}

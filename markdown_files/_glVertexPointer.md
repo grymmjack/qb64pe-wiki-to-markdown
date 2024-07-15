@@ -4,8 +4,6 @@ The **_glVertexPointer** statement defines an array of vertex data.
 
   
 
-|  |
-
 ## Syntax
 
 _glVertexPointer GLint *size*, GLenum *type*, GLsizei *stride*, const GLvoid **pointer*

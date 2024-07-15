@@ -4,8 +4,6 @@ The _ATAN2 function returns the radian angle between the positive x-axis of a pl
 
   
 
-|  |
-
 ## Syntax
 
 *angle!* = _ATAN2(*y*, *x*)

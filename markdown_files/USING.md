@@ -4,8 +4,6 @@ The **USING** keyword is used in conjunction with other keywords to specify the 
 
   
 
-|  |
-
 ## Syntax
 
 [LPRINT USING](LPRINT USING.md)

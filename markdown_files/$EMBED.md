@@ -4,8 +4,6 @@ The **$EMBED** metacommand can embed any designated file (e.g. images, sounds, f
 
   
 
-|  |
-
 ## Syntax
 
 $EMBED**:**'*filename*'**,**'*handle*'

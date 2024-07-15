@@ -4,8 +4,6 @@ The **VARSEG** function returns an [INTEGER](INTEGER.md) value that is the segme
 
   
 
-|  |
-
 ## Syntax
 
 [DEF SEG](DEF SEG.md) = VARSEG(variable_name[(start_index)])

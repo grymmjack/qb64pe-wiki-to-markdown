@@ -4,8 +4,6 @@ The **_glCallList** statement executes a display list.
 
   
 
-|  |
-
 ## Syntax
 
 _glCallList GLuint *list*

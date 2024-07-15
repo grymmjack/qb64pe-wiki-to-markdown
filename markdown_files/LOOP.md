@@ -4,8 +4,6 @@ The **LOOP** statement denotes the end of a [DO...LOOP](DO...LOOP.md) where the 
 
   
 
-|  |
-
 ## Syntax
 
 DO

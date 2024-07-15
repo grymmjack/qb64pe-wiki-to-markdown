@@ -4,8 +4,6 @@ The **_glLoadName** statement loads a name onto the name stack.
 
   
 
-|  |
-
 ## Syntax
 
 _glLoadName GLuint *name*

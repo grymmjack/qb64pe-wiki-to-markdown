@@ -4,8 +4,6 @@ The PALETTE statement can swap color settings, set colors to default or set the 
 
   
 
-|  |
-
 ## Syntax
 
 Screens 11, 12, 13, 256

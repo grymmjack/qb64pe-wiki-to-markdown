@@ -4,8 +4,6 @@ The **_glPixelZoom** statement specifies the pixel zoom factors.
 
   
 
-|  |
-
 ## Syntax
 
 _glPixelZoom GLfloat *xfactor*, GLfloat *yfactor*

@@ -4,8 +4,6 @@ The **_glGetString** function returns a string describing the current OpenGL con
 
   
 
-|  |
-
 ## Syntax
 
 const GLubyte **result* = _glGetString (GLenum *name*)

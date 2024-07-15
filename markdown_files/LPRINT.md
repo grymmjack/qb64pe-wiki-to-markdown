@@ -4,8 +4,6 @@ The LPRINT statement sends string text or numerical values to a parallel port (L
 
   
 
-|  |
-
 ## Syntax
 
 LPRINT [*expression*] [{;|,}]

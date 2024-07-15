@@ -4,8 +4,6 @@ The _DELAY statement suspends program execution for a [SINGLE](SINGLE.md) value 
 
   
 
-|  |
-
 ## Syntax
 
 _DELAY *seconds!*

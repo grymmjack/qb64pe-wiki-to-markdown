@@ -4,8 +4,6 @@ The CSRLIN function returns the current text row position of the [PRINT](PRINT.m
 
   
 
-|  |
-
 ## Syntax
 
 *row%* = CSRLIN

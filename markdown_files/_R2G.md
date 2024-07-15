@@ -4,8 +4,6 @@ The _R2G function converts a **radian** value into a **gradient** value.
 
   
 
-|  |
-
 ## Syntax
 
 *result!* = _R2G(*num*)

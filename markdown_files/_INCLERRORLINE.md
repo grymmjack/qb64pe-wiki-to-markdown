@@ -4,8 +4,6 @@ The [_INCLERRORFILE$](_INCLERRORFILE$.md) function returns the line number in an
 
   
 
-|  |
-
 ## Syntax
 
 *errline&* = _INCLERRORLINE

@@ -4,8 +4,6 @@ LSET left-justifies a fixed length string expression based on the size of the [S
 
   
 
-|  |
-
 ## Syntax
 
 LSET {stringVariable = stringExpression | stringExpression1 = stringExpression2}

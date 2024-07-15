@@ -4,8 +4,6 @@ The _PIXELSIZE function returns the color depth (Bits Per Pixel) of an image as 
 
   
 
-|  |
-
 ## Syntax
 
 *pixelSize%* = _PIXELSIZE[(*imageHandle&*)]

@@ -4,8 +4,6 @@ The **_glOrtho** statement multiplies the current matrix by an orthographic matr
 
   
 
-|  |
-
 ## Syntax
 
 _glOrtho GLdouble *left*, GLdouble *right*, GLdouble *bottom*, GLdouble *top*, GLdouble *zNear*, GLdouble *zFar*

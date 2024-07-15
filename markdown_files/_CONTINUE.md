@@ -6,8 +6,6 @@ The _CONTINUE statement is used in a [DO...LOOP](DO...LOOP.md), [WHILE...WEND](W
 
   
 
-|  |
-
 ## Syntax
 
 _CONTINUE

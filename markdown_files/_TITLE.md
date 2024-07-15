@@ -4,8 +4,6 @@ The _TITLE statement provides the program name in the title bar of the program w
 
   
 
-|  |
-
 ## Syntax
 
 _TITLE *text$*

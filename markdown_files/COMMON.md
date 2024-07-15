@@ -4,8 +4,6 @@ COMMON shares common variable values with other linked or [CHAINed](CHAINed.md) 
 
   
 
-|  |
-
 ## Syntax
 
 COMMON [SHARED] variableList

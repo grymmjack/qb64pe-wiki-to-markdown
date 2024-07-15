@@ -4,8 +4,6 @@ The _FONTWIDTH function returns the font width of a MONOSPACE font handle create
 
   
 
-|  |
-
 ## Syntax
 
 *pixelWidth%* = _FONTWIDTH[(*fontHandle&*)]

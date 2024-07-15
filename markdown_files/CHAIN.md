@@ -4,8 +4,6 @@ CHAIN is used to change seamlessly from one module to another one in a program.
 
   
 
-|  |
-
 ## Syntax
 
 CHAIN *moduleName$*

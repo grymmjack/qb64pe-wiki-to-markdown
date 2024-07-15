@@ -4,8 +4,6 @@ The _ROL function is used to rotate the bits of a numerical value to the left. A
 
   
 
-|  |
-
 ## Syntax
 
 *result* = _ROL(*numericalVariable*, *numericalValue*)

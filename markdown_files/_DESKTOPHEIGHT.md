@@ -4,8 +4,6 @@ The _DESKTOPHEIGHT function returns the height of the users current desktop.
 
   
 
-|  |
-
 ## Syntax
 
 *y&* = _DESKTOPHEIGHT

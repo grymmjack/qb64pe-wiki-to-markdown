@@ -4,8 +4,6 @@ The LOCATE statement locates the screen text row and column positions for a [PRI
 
   
 
-|  |
-
 ## Syntax
 
 LOCATE [*row%*][, *column%*] [, *cursor%*][, *cursorStart%*, *cursorStop%*]

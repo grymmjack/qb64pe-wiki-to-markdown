@@ -4,8 +4,6 @@ The _SNDRAWLEN function returns the length, in seconds, of a [_SNDRAW](_SNDRAW.m
 
   
 
-|  |
-
 ## Syntax
 
 *length#* = _SNDRAWLEN [*pipeHandle&*]

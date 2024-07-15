@@ -4,8 +4,6 @@ The _FINISHDROP statement resets [_TOTALDROPPEDFILES](_TOTALDROPPEDFILES.md) and
 
   
 
-|  |
-
 ## Syntax
 
 _FINISHDROP

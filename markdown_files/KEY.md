@@ -4,8 +4,6 @@ The [KEY n](KEY n.md) statement is used to assign a "soft key" string or a flag 
 
   
 
-|  |
-
 ## Syntax
 
 **KEY *n%*, *textString$***

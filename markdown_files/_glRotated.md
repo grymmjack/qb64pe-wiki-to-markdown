@@ -4,8 +4,6 @@ The **_glRotated** statement multiplies the current matrix by a rotation matrix.
 
   
 
-|  |
-
 ## Syntax
 
 _glRotated GLdouble *angle*, GLdouble *x*, GLdouble *y*, GLdouble *z*

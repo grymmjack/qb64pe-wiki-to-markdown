@@ -4,8 +4,6 @@ The **_glPixelStoref** statement sets pixel storage modes.
 
   
 
-|  |
-
 ## Syntax
 
 _glPixelStoref GLenum *pname*, GLfloat *param*

@@ -4,8 +4,6 @@ The **_glClear** statement clears buffers to preset values.
 
   
 
-|  |
-
 ## Syntax
 
 _glClear GLbitfield *mask*

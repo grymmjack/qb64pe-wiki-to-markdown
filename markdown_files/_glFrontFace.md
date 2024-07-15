@@ -4,8 +4,6 @@ The **_glFrontFace** statement defines front-facing and back-facing polygons.
 
   
 
-|  |
-
 ## Syntax
 
 _glFrontFace GLenum *mode*

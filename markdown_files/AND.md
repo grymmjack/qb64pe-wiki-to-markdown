@@ -4,8 +4,6 @@ The logical AND numerical operator compares two values in respect of their bits.
 
   
 
-|  |
-
 ## Syntax
 
 *result* = *firstvalue* AND *secondvalue*

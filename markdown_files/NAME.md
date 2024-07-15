@@ -4,8 +4,6 @@ The NAME statement changes the name of a file or directory to a new name.
 
   
 
-|  |
-
 ## Syntax
 
 NAME *oldFileOrFolderName$* **AS** *newFileOrFolderName$*

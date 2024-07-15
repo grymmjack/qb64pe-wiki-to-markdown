@@ -4,8 +4,6 @@ The _ALLOWFULLSCREEN statement allows setting the behavior of the ALT+ENTER comb
 
   
 
-|  |
-
 ## Syntax
 
 _ALLOWFULLSCREEN [{_STRETCH|_SQUAREPIXELS|OFF|_ALL}][, {_SMOOTH|OFF|_ALL}]

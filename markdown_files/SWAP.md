@@ -4,8 +4,6 @@ The SWAP statement is used to exchange two variable or array element values.
 
   
 
-|  |
-
 ## Syntax
 
 SWAP *variable1*, *variable2*

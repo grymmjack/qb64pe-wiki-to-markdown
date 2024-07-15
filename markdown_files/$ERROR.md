@@ -4,8 +4,6 @@ The **$ERROR** [metacommand](metacommand.md) triggers a compilation error.
 
   
 
-|  |
-
 ## Syntax
 
 **$ERROR** *message*

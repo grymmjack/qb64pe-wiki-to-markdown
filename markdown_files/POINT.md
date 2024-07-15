@@ -4,8 +4,6 @@ The **POINT** function returns the pixel [COLOR](COLOR.md) attribute at a specif
 
   
 
-|  |
-
 ## Syntax
 
 Graphic Color

@@ -4,8 +4,6 @@ The _CONSOLEINPUT function is used to monitor any new mouse or keyboard input co
 
   
 
-|  |
-
 ## Syntax
 
 *infoExists%%* = _CONSOLEINPUT

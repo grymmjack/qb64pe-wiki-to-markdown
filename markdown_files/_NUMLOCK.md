@@ -4,8 +4,6 @@ The _NUMLOCK statement sets the state of the Num Lock key.
 
   
 
-|  |
-
 ## Syntax
 
 _NUMLOCK {ON|OFF|_TOGGLE}

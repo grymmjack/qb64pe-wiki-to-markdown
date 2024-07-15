@@ -4,8 +4,6 @@ The **_glSelectBuffer** statement establishes a buffer for selection mode values
 
   
 
-|  |
-
 ## Syntax
 
 _glSelectBuffer GLsizei *size*, GLuint **buffer*

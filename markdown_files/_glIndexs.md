@@ -4,8 +4,6 @@ The **_glIndexs** statement sets the current color index.
 
   
 
-|  |
-
 ## Syntax
 
 _glIndexs GLshort *c*

@@ -4,8 +4,6 @@ The WAIT statement waits until the value read from an I/O port has certain bits 
 
   
 
-|  |
-
 ## Syntax
 
 WAIT *port%*, *andMask%*[, *xorMask%*]

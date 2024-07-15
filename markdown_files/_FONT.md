@@ -4,8 +4,6 @@ The _FONT statement sets the current [_LOADFONT](_LOADFONT.md) function font han
 
   
 
-|  |
-
 ## Syntax
 
 _FONT *fontHandle&*[, *imageHandle&*]

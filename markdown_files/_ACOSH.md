@@ -4,8 +4,6 @@ The _ACOSH returns the nonnegative arc hyperbolic cosine of *x!*, expressed in r
 
   
 
-|  |
-
 ## Syntax
 
 *return_value!* = _ACOSH(*x!*)

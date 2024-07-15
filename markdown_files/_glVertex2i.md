@@ -4,8 +4,6 @@ The **_glVertex2i** statement specifies a vertex.
 
   
 
-|  |
-
 ## Syntax
 
 _glVertex2i GLint *x*, GLint *y*

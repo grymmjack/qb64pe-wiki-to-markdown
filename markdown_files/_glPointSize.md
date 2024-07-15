@@ -4,8 +4,6 @@ The **_glPointSize** statement specifies the diameter of rasterized points.
 
   
 
-|  |
-
 ## Syntax
 
 _glPointSize GLfloat *size*

@@ -4,8 +4,6 @@ The **_glFinish** statement blocks until all OpenGL execution is complete.
 
   
 
-|  |
-
 ## Syntax
 
 _glFinish

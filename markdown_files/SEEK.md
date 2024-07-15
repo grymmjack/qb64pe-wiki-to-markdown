@@ -4,8 +4,6 @@ The **SEEK** statement sets the byte or record position in a file for the next r
 
   
 
-|  |
-
 ## Syntax
 
 SEEK *filenumber&*, *position*

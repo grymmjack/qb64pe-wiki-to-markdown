@@ -4,8 +4,6 @@ The _FREETIMER function returns a free [TIMER](TIMER.md) number for multiple [ON
 
   
 
-|  |
-
 ## Syntax
 
 *timerhandle%* = _FREETIMER

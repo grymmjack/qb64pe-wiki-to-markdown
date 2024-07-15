@@ -4,8 +4,6 @@
 
   
 
-|  |
-
 ## Syntax
 
 string_value$ = VARPTR$(*variable*)

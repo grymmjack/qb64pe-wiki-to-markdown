@@ -4,8 +4,6 @@ INP returns a value from a computer register or port values at a specified physi
 
   
 
-|  |
-
 ## Syntax
 
 *i* = INP(*address*)

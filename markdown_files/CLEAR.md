@@ -4,8 +4,6 @@ The CLEAR statement clears all variable and array element values in a program.
 
   
 
-|  |
-
 ## Syntax
 
 CLEAR [, *ignored&* , *ignored&*]

@@ -4,8 +4,6 @@ The **_FREEIMAGE** statement releases the designated file image created by the [
 
   
 
-|  |
-
 ## Syntax
 
 _FREEIMAGE [*handle&*]

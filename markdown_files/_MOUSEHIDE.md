@@ -4,8 +4,6 @@ The _MOUSEHIDE statement hides the mouse cursor.
 
   
 
-|  |
-
 ## Syntax
 
 _MOUSEHIDE

@@ -4,8 +4,6 @@ The **_glColor3s** statement sets the current color.
 
   
 
-|  |
-
 ## Syntax
 
 _glColor3s GLshort *red*, GLshort *green*, GLshort *blue*

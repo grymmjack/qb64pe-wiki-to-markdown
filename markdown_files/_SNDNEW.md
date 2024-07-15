@@ -4,8 +4,6 @@ The **_SNDNEW** function creates a raw empty sound in memory and returns a [LONG
 
   
 
-|  |
-
 ## Syntax
 
 *soundHandle&* = _SNDNEW(*frames&*, *channels&*, *bits&*)

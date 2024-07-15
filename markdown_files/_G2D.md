@@ -4,8 +4,6 @@ The _G2D function converts a **gradient** value into a **degree** value.
 
   
 
-|  |
-
 ## Syntax
 
 *result* = _G2D(*num*)

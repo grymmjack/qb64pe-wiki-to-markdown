@@ -4,8 +4,6 @@ The _RGBA function returns the closest palette index (legacy SCREEN modes) OR th
 
   
 
-|  |
-
 ## Syntax
 
 *colorIndex~&* = _RGBA(*red&*, *green&*, *blue&*, *alpha&*[, *imageHandle&*]**)**

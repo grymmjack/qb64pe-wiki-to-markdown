@@ -4,8 +4,6 @@ The _CLIPBOARDIMAGE statement copies a valid QB64 image to the clipboard.
 
   
 
-|  |
-
 ## Syntax
 
 _CLIPBOARDIMAGE = *existingImageHandle&*

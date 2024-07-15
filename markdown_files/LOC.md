@@ -4,8 +4,6 @@ The **LOC** function returns the status of a serial (COM) port received buffer o
 
   
 
-|  |
-
 ## Syntax
 
 *bytes%* = LOC(*fileOrPortNumber%*)

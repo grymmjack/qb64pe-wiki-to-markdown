@@ -4,8 +4,6 @@ The _ACOS function returns the angle measured in radians based on an input [COSi
 
   
 
-|  |
-
 ## Syntax
 
 *radian_angle!* = _ACOS(*cosine_value!*)

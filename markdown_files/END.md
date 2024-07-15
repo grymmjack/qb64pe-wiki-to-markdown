@@ -4,8 +4,6 @@ The END statement terminates a program without an immediate exit or ends a proce
 
   
 
-|  |
-
 ## Syntax
 
 END [*returnCode%*]

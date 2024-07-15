@@ -4,8 +4,6 @@ The **_glMapGrid1f** statement defines a one-dimensional mesh.
 
   
 
-|  |
-
 ## Syntax
 
 _glMapGrid1f GLint *un*, GLfloat *u1*, GLfloat *u2*

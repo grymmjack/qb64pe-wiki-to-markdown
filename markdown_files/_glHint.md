@@ -4,8 +4,6 @@ The **_glHint** statement specifies implementation-specific hints.
 
   
 
-|  |
-
 ## Syntax
 
 _glHint GLenum *target*, GLenum *mode*

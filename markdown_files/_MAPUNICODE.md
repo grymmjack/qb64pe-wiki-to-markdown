@@ -4,8 +4,6 @@ The _MAPUNICODE statement maps a [Unicode](Unicode.md) value to an [ASCII](ASCII
 
   
 
-|  |
-
 ## Syntax
 
 _MAPUNICODE *unicode&* **TO** *asciiCode%*

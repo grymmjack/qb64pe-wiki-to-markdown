@@ -4,8 +4,6 @@ The PRINT statement prints numeric or string expressions to the program screen. 
 
   
 
-|  |
-
 ## Syntax
 
 **PRINT** [*expression*] [{;|,}] [*expression*...]

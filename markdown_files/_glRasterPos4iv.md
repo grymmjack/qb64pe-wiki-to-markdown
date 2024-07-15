@@ -4,8 +4,6 @@ The **_glRasterPos4iv** statement specifies the raster position for pixel operat
 
   
 
-|  |
-
 ## Syntax
 
 _glRasterPos4iv const GLint **v*

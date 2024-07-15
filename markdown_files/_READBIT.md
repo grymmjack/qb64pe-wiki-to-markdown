@@ -4,8 +4,6 @@ The _READBIT function is used to check the state of a specified bit of a integer
 
   
 
-|  |
-
 ## Syntax
 
 *result* = _READBIT(*numericalVariable*, *numericalValue*)

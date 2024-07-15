@@ -4,8 +4,6 @@ The **_glCallLists** statement executes a list of display lists.
 
   
 
-|  |
-
 ## Syntax
 
 _glCallLists GLsizei *n*, GLenum *type*, const GLvoid **lists*

@@ -4,8 +4,6 @@ CALL sends code execution to a subroutine procedure in a program. In **QB64** th
 
   
 
-|  |
-
 ## Syntax
 
 CALL *ProcedureName* (*parameter1*, *parameter2*,...)]

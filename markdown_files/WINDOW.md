@@ -4,8 +4,6 @@ The **WINDOW** command scales the graphics coordinate system of the current [_DE
 
   
 
-|  |
-
 ## Syntax
 
 **WINDOW** [ [ **SCREEN**] (*x1!*, *y1!*) - (*x2!*, *y2!*)]

@@ -4,8 +4,6 @@ The **_glColor4ubv** statement sets the current color from an already existing a
 
   
 
-|  |
-
 ## Syntax
 
 _glColor4ubv const GLubyte **v*

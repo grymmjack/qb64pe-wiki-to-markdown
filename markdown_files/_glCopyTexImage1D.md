@@ -4,8 +4,6 @@ The **_glCopyTexImage1D** statement copies pixels from the framebuffer into a on
 
   
 
-|  |
-
 ## Syntax
 
 _glCopyTexImage1D GLenum *target*, GLint *level*, GLenum *internalFormat*, GLint *x*, GLint *y*, GLsizei *width*, GLint *border*

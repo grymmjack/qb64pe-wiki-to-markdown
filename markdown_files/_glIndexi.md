@@ -4,8 +4,6 @@ The **_glIndexi** statement sets the current color index.
 
   
 
-|  |
-
 ## Syntax
 
 _glIndexi GLint *c*

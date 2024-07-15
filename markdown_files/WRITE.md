@@ -4,8 +4,6 @@ The WRITE statement writes a [comma](comma.md)-separated list of values to the s
 
   
 
-|  |
-
 ## Syntax
 
 WRITE [*expression, List*]

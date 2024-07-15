@@ -4,8 +4,6 @@ The _ALPHA function returns the alpha channel transparency level of a color valu
 
   
 
-|  |
-
 ## Syntax
 
 *result&* = _ALPHA(*color~&* [, *imageHandle&*])

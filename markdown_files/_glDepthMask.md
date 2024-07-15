@@ -4,8 +4,6 @@ The **_glDepthMask** statement enables or disables writing into the depth buffer
 
   
 
-|  |
-
 ## Syntax
 
 _glDepthMask GLboolean *flag*

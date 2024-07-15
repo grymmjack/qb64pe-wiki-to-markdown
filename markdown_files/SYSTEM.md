@@ -4,8 +4,6 @@ The SYSTEM statement immediately closes a program and returns control to the ope
 
   
 
-|  |
-
 ## Syntax
 
 **SYSTEM** [return_code%]

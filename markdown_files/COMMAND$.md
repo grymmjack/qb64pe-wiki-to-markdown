@@ -4,8 +4,6 @@ The **COMMAND$** function returns the command line argument(s) passed when a pro
 
   
 
-|  |
-
 ## Syntax
 
 *commandLine$* = COMMAND$[(count%)]

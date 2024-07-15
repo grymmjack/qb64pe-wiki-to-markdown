@@ -4,8 +4,6 @@ The **_EMBEDDED$** function is used to recall the data of a file which was earli
 
   
 
-|  |
-
 ## Syntax
 
 *filedata$* = _EMBEDDED$("*handle*")

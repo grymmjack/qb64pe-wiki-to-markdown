@@ -4,8 +4,6 @@ The _ALPHA32 function returns the alpha transparency level of a 32 bit color val
 
   
 
-|  |
-
 ## Syntax
 
 *alpha&* = _ALPHA32(*color32~&*)

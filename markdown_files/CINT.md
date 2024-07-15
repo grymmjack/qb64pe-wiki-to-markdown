@@ -4,8 +4,6 @@ The CINT function rounds decimal point numbers up or down to the nearest [INTEGE
 
   
 
-|  |
-
 ## Syntax
 
 *value%* = CINT(*expression*)

@@ -4,8 +4,6 @@ The _CINP function returns keyboard key press codes from a [$CONSOLE]($CONSOLE.m
 
   
 
-|  |
-
 ## Syntax
 
 *keycode&* = _CINP

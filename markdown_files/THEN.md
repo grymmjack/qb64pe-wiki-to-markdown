@@ -4,8 +4,6 @@
 
   
 
-|  |
-
 ## Syntax
 
 IF condition THEN execute_code

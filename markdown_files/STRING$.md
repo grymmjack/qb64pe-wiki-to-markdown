@@ -4,8 +4,6 @@ The STRING$ function returns a [STRING](STRING.md) consisting of a single charac
 
   
 
-|  |
-
 ## Syntax
 
 result$ = STRING$(*count&*, {*character$* | *ASCIIcode%*} )

@@ -4,8 +4,6 @@ The RTRIM$ function removes trailing space characters from a [STRING](STRING.md)
 
   
 
-|  |
-
 ## Syntax
 
 *return$* = RTRIM$(*value$*)

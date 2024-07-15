@@ -4,8 +4,6 @@ The _SCREENHIDE statement can be used to hide the main program window in a secti
 
   
 
-|  |
-
 ## Syntax
 
 _SCREENHIDE

@@ -4,8 +4,6 @@ The **RND** function returns a random number with a value between 0 (inclusive) 
 
   
 
-|  |
-
 ## Syntax
 
 result! = RND [(*n*)]

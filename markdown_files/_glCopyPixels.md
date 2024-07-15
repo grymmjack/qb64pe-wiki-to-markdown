@@ -4,8 +4,6 @@ The **_glCopyPixels** statement copies pixels in the framebuffer.
 
   
 
-|  |
-
 ## Syntax
 
 _glCopyPixels GLint *x*, GLint *y*, GLsizei *width*, GLsizei *height*, GLenum *type*

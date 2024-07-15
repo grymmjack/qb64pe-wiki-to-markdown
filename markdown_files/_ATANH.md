@@ -4,8 +4,6 @@ The _ATANH returns the arc hyperbolic tangent of *x!*, expressed in radians.
 
   
 
-|  |
-
 ## Syntax
 
 *return_value!* = _ATANH(*x!*)

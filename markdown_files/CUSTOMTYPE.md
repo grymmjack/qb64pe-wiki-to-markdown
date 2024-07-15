@@ -4,8 +4,6 @@ The **DECLARE LIBRARY** declaration allows for the utilization of external libra
 
   
 
-|  |
-
 ## Syntax
 
 **DECLARE [DYNAMIC|CUSTOMTYPE|STATIC] LIBRARY** [*"Library_name"*][, *"Library_name2"*][, ...]

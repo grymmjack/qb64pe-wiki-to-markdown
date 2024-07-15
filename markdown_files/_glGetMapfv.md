@@ -4,8 +4,6 @@ The **_glGetMapdv**, **_glGetMapfv**, and **_glGetMapiv** statements return eval
 
   
 
-|  |
-
 ## Syntax
 
 _glGetMapfv GLenum *target*, GLenum *query*, GLfloat **v*

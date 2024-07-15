@@ -4,8 +4,6 @@ The LTRIM$ function removes leading space characters from a [STRING](STRING.md) 
 
   
 
-|  |
-
 ## Syntax
 
 *return$* = LTRIM$(*text$*)

@@ -4,8 +4,6 @@ The **_DEVICE$** function returns a [STRING](STRING.md) value holding the contro
 
   
 
-|  |
-
 ## Syntax
 
 *device$* = _DEVICE$(*device_number*)

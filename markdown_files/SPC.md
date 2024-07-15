@@ -4,8 +4,6 @@ The SPC function is used in [PRINT](PRINT.md) and [LPRINT](LPRINT.md) statements
 
   
 
-|  |
-
 ## Syntax
 
 **SPC(*count%*)**

@@ -4,8 +4,6 @@ The **_glVertex4dv** statement specifies a vertex.
 
   
 
-|  |
-
 ## Syntax
 
 _glVertex4dv const GLdouble **v*

@@ -4,8 +4,6 @@ The **_glColor3f** statement sets the current color.
 
   
 
-|  |
-
 ## Syntax
 
 _glColor3f GLfloat *red*, GLfloat *green*, GLfloat *blue*

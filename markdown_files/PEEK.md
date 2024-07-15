@@ -4,8 +4,6 @@ The **PEEK** function returns the value that is contained at a certain memory ad
 
   
 
-|  |
-
 ## Syntax
 
 variable = PEEK(*segment_offset*)

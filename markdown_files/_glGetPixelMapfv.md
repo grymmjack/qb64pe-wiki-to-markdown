@@ -4,8 +4,6 @@ The **_glGetPixelMapfv**, **_glGetPixelMapuiv**, and **_glGetPixelMapusv** state
 
   
 
-|  |
-
 ## Syntax
 
 _glGetPixelMapfv GLenum *map*, GLfloat **values*

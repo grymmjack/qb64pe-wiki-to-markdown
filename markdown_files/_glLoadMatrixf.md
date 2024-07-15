@@ -4,8 +4,6 @@ The **_glLoadMatrixf** statement replaces the current matrix with an arbitrary m
 
   
 
-|  |
-
 ## Syntax
 
 _glLoadMatrixf const GLfloat **m*

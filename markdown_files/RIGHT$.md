@@ -4,8 +4,6 @@ The **RIGHT$** function returns a set number of characters in a [STRING](STRING.
 
   
 
-|  |
-
 ## Syntax
 
 **RIGHT$(***stringvalue$, numberofcharacters%***)**

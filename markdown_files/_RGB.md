@@ -4,8 +4,6 @@ The _RGB function returns the closest palette attribute index (legacy SCREEN mod
 
   
 
-|  |
-
 ## Syntax
 
 *colorIndex~&* = _RGB(*red&*, *green&*, *blue&*[, *imageHandle&*])

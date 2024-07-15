@@ -4,8 +4,6 @@ The GET # statement reads data from a file or port device by bytes or record pos
 
   
 
-|  |
-
 ## Syntax
 
 GET #*fileNumber&*, [*position*][, {*targetVariable*|*targetArray()*}]

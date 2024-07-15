@@ -4,8 +4,6 @@ GOSUB sends the program flow to a sub procedure identified by a line number or l
 
   
 
-|  |
-
 ## Syntax
 
 GOSUB {*lineNumber*|*label*}

@@ -4,8 +4,6 @@ The INKEY$ function returns user input as [ASCII](ASCII.md) [STRING](STRING.md) 
 
   
 
-|  |
-
 ## Syntax
 
 *keypress$* = INKEY$

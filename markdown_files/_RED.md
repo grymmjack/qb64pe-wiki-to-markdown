@@ -4,8 +4,6 @@ The _RED function returns the palette index or the red component intensity of a 
 
   
 
-|  |
-
 ## Syntax
 
 *redIntensity&* = _RED(*rgbaColorIndex&*[, *imageHandle&*])

@@ -4,8 +4,6 @@ ELSE is used in [IF...THEN](IF...THEN.md) or [SELECT CASE](SELECT CASE.md) state
 
   
 
-|  |
-
 ## Syntax
 
 *Single-line syntax:*

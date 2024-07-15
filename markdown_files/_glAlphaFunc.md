@@ -4,8 +4,6 @@ The **_glAlphaFunc** statement enables your application to set the alpha test fu
 
   
 
-|  |
-
 ## Syntax
 
 _glAlphaFunc GLenum *func*, GLclampf *ref*

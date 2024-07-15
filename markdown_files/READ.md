@@ -4,8 +4,6 @@ The **READ** statement reads values from a [DATA](DATA.md) field and assigns the
 
   
 
-|  |
-
 ## Syntax
 
 READ value1$[, value2!, value3%, ...]

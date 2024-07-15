@@ -4,8 +4,6 @@ The _NEWIMAGE function prepares a window image surface and returns the [LONG](LO
 
   
 
-|  |
-
 ## Syntax
 
 *handle&* = _NEWIMAGE(*width&*, *height&*[, {*0*|*1*|*2*|*7*|*8*|*9*|*10*|*11*|*12*|*13*|*256*|*32*}])

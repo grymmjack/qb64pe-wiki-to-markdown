@@ -4,8 +4,6 @@ The **_CONNECTIONADDRESS** function returns a connected user's [STRING](STRING.m
 
   
 
-|  |
-
 ## Syntax
 
 *result$* = _CONNECTIONADDRESS[$]($.md)

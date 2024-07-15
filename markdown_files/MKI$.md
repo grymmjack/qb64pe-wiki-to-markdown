@@ -4,8 +4,6 @@ The MKI$ function encodes an [INTEGER](INTEGER.md) numerical value into a 2-byte
 
   
 
-|  |
-
 ## Syntax
 
 *result$* = MKI$(*integerVariableOrLiteral%*)

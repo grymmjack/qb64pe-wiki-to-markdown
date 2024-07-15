@@ -4,8 +4,6 @@ The **PSET** grahics [SCREEN](SCREEN.md) statement sets a pixel to a coordinate 
 
   
 
-|  |
-
 ## Syntax
 
 **PSET** [STEP]**(***column%*, *row%***)**[, *colorAttribute*]

@@ -4,8 +4,6 @@ The **_glPushAttrib** and **_glPopAttrib** statements push and pop the attribute
 
   
 
-|  |
-
 ## Syntax
 
 _glPushAttrib GLbitfield *mask*

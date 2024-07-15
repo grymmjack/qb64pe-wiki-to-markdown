@@ -4,8 +4,6 @@
 
   
 
-|  |
-
 ## Syntax
 
 DIM variable AS STRING [* byte_length]

@@ -4,8 +4,6 @@ The _SNDVOL statement sets the volume of a sound loaded in memory using a handle
 
   
 
-|  |
-
 ## Syntax
 
 _SNDVOL *handle&*, *volume!*

@@ -4,8 +4,6 @@ The MOD operator gives the remainder after division of one number by another (so
 
   
 
-|  |
-
 ## Syntax
 
 *remainder* = *numerator* MOD *divisor*

@@ -4,8 +4,6 @@ The **_glRotatef** statement multiplies the current matrix by a rotation matrix.
 
   
 
-|  |
-
 ## Syntax
 
 _glRotatef GLfloat *angle*, GLfloat *x*, GLfloat *y*, GLfloat *z*

@@ -4,8 +4,6 @@ The **_glColor3fv** statement sets the current color from an already existing ar
 
   
 
-|  |
-
 ## Syntax
 
 _glColor3fv const GLfloat **v*

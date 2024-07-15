@@ -4,8 +4,6 @@ The _RGBA32 function returns the 32-bit *RGBA* color value with the specified re
 
   
 
-|  |
-
 ## Syntax
 
 *color32value~&* = _RGBA32(*red&*, *green&*, *blue&*, *alpha&*)

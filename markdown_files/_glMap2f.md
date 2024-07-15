@@ -4,8 +4,6 @@ The **_glMap2f** statement defines a two-dimensional evaluator.
 
   
 
-|  |
-
 ## Syntax
 
 _glMap2f GLenum *target*, GLfloat *u1*, GLfloat *u2*, GLint *ustride*, GLint *uorder*, GLfloat *v1*, GLfloat *v2*, GLint *vstride*, GLint *vorder*, const GLfloat **points*

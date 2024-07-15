@@ -4,8 +4,6 @@ The **CLS** statement clears the [current write page](current write page.md) or 
 
   
 
-|  |
-
 ## Syntax
 
 CLS [*method%*] [, *bgColor&*] [, *imageHandle&*]

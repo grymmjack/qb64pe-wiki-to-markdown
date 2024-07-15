@@ -4,8 +4,6 @@ The LOCK statement restricts access to parts of a file by other programs or proc
 
   
 
-|  |
-
 ## Syntax
 
 LOCK [#]*fileNumber%*

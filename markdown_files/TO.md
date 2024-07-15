@@ -4,8 +4,6 @@ TO indicates a range of numerical values or an assignment of one value to anothe
 
   
 
-|  |
-
 ## Syntax
 
 DIM array(1 TO 100)

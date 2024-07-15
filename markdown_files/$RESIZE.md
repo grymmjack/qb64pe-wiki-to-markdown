@@ -4,8 +4,6 @@ The $RESIZE [metacommand](metacommand.md) determines if a program window can be 
 
   
 
-|  |
-
 ## Syntax
 
 $RESIZE:{ON|OFF|STRETCH|SMOOTH}

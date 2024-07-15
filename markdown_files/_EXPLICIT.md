@@ -4,8 +4,6 @@ OPTION _EXPLICIT instructs the compiler to require variable declaration with [DI
 
   
 
-|  |
-
 ## Syntax
 
 OPTION _EXPLICIT

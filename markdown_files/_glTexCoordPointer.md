@@ -4,8 +4,6 @@ The **_glTexCoordPointer** statement defines an array of texture coordinates.
 
   
 
-|  |
-
 ## Syntax
 
 _glTexCoordPointer GLint *size*, GLenum *type*, GLsizei *stride*, const GLvoid **pointer*

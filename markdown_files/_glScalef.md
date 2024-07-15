@@ -4,8 +4,6 @@ The **_glScalef** statement multiplies the current matrix by a general scaling m
 
   
 
-|  |
-
 ## Syntax
 
 _glScalef GLfloat *x*, GLfloat *y*, GLfloat *z*

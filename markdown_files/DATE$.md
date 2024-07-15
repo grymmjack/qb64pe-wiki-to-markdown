@@ -4,8 +4,6 @@ The DATE$ function returns the current computer date as a string in the format "
 
   
 
-|  |
-
 ## Syntax
 
 *today$* = DATE$

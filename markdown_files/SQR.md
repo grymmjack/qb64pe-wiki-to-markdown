@@ -4,8 +4,6 @@ The **SQR** function returns the square root of a numerical value.
 
   
 
-|  |
-
 ## Syntax
 
 square_root = **SQR(**value**)**

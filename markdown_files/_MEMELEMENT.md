@@ -4,8 +4,6 @@ The _MEMELEMENT function returns a [_MEM](_MEM.md) block referring to a variable
 
   
 
-|  |
-
 ## Syntax
 
 *memoryBlock* = _MEMELEMENT(*referenceVariable*)

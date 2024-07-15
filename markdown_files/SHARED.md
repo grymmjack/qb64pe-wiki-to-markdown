@@ -4,8 +4,6 @@ The **SHARED** statement allows variables to be passed automatically to any [SUB
 
   
 
-|  |
-
 ## Syntax
 
 DIM SHARED Qt AS STRING * 1

@@ -4,8 +4,6 @@ The **_glRectsv** statement draws a rectangle.
 
   
 
-|  |
-
 ## Syntax
 
 _glRectsv const GLshort **v1*, const GLshort **v2*

@@ -4,8 +4,6 @@ The **_glTexImage1D** statement specifies a one-dimensional texture image.
 
   
 
-|  |
-
 ## Syntax
 
 _glTexImage1D GLenum *target*, GLint *level*, GLint *internalformat*, GLsizei *width*, GLint *border*, GLint *format*, GLenum *type*, const GLvoid **pixels*

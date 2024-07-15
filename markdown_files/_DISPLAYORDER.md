@@ -4,8 +4,6 @@ The _DISPLAYORDER statement defines the order to render software, hardware and c
 
   
 
-|  |
-
 ## Syntax
 
 _DISPLAYORDER [{_SOFTWARE|_HARDWARE|_HARDWARE1|_GLRENDER}][, ...][, ...][, ...][, ...]

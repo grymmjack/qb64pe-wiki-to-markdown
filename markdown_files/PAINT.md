@@ -4,8 +4,6 @@ The PAINT statement is used to fill a delimited area in a graphic screen mode wi
 
   
 
-|  |
-
 ## Syntax
 
 PAINT [**STEP**] (*column%*, *row%*), *fillColor*[, *borderColor%*]

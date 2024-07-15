@@ -4,8 +4,6 @@ The **_glTexCoord3fv** statement sets the current texture coordinates.
 
   
 
-|  |
-
 ## Syntax
 
 _glTexCoord3fv const GLfloat **v*

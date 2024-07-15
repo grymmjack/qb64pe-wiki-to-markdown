@@ -4,8 +4,6 @@ The COLOR statement is used to change the foreground and background colors for p
 
   
 
-|  |
-
 ## Syntax
 
 COLOR [*foreground&*][, *background&*]

@@ -4,8 +4,6 @@ _PUTIMAGE puts an area of a source image to an area of a destination image in on
 
   
 
-|  |
-
 ## Syntax
 
 _PUTIMAGE [STEP] [(*dx1*, *dy1*)-[STEP][(*dx2*, *dy2*)[, *sourceHandle&*][, *destHandle&*][, ][STEP][(*sx1*, *sy1*)[-STEP][(*sx2*, *sy2*)[, *_SMOOTH*]

@@ -4,8 +4,6 @@ _INTEGER64 is an 8 byte number type definition that can hold whole numerical val
 
   
 
-|  |
-
 ## Syntax
 
 [DIM](DIM.md) *variable* [AS](AS.md) _INTEGER64

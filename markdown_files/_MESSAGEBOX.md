@@ -4,8 +4,6 @@ The **_MESSAGEBOX** statement displays a message dialog box, which presents a me
 
   
 
-|  |
-
 ## Syntax
 
 **_MESSAGEBOX** [*title$*][, *message$*][, *iconType$*]

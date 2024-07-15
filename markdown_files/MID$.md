@@ -4,8 +4,6 @@ The **MID$** statement substitutes one or more new characters for existing chara
 
   
 
-|  |
-
 ## Syntax
 
 MID$(*baseString$*, *startPosition%*[, *bytes%*]) = *replacementString$*

@@ -4,8 +4,6 @@ $LET is a precompiler command, which helps to include and/or exclude sections of
 
   
 
-|  |
-
 ## Syntax
 
 $LET variable = expression

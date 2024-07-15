@@ -4,8 +4,6 @@ _UNSIGNED defines a numerical value as being only positive.
 
   
 
-|  |
-
 ## Syntax
 
 [DIM](DIM.md) *variable* [AS](AS.md) [[[_UNSIGNED] *datatype*

@@ -4,8 +4,6 @@ The **_ADLER32** function returns the [Adler-32](Adler-32.md) checksum of any ar
 
   
 
-|  |
-
 ## Syntax
 
 *chksum~&* = _ADLER32(*dataString$*)

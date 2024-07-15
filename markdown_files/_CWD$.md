@@ -6,8 +6,6 @@ The _CWD$ function returns the current working directory path as a string value 
 
   
 
-|  |
-
 ## Syntax
 
 *workingDirectory$* = _CWD$

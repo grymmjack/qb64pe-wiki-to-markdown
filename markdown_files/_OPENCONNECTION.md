@@ -4,8 +4,6 @@ The _OPENCONNECTION function opens a connection from a client that the host has 
 
   
 
-|  |
-
 ## Syntax
 
 *connectHandle* = _OPENCONNECTION(*hostHandle*)

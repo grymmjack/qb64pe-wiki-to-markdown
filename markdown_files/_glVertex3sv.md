@@ -4,8 +4,6 @@ The **_glVertex3sv** statement specifies a vertex.
 
   
 
-|  |
-
 ## Syntax
 
 _glVertex3sv const GLshort **v*

@@ -4,8 +4,6 @@ The **_glGetTexEnvfv** and **_glGetTexEnviv** statements return texture environm
 
   
 
-|  |
-
 ## Syntax
 
 _glGetTexEnviv GLenum *target*, GLenum *pname*, GLint **params*

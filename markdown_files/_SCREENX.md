@@ -4,8 +4,6 @@ The _SCREENX function returns the current column pixel coordinate of the program
 
   
 
-|  |
-
 ## Syntax
 
 *positionX&* = _SCREENX

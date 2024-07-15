@@ -4,8 +4,6 @@ The **_DEVICES** function returns the number of input devices on your computer i
 
   
 
-|  |
-
 ## Syntax
 
 *device_count%* = _DEVICES

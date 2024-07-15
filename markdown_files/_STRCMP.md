@@ -6,8 +6,6 @@ The _STRCMP function compares the relationship between two strings, comparing up
 
   
 
-|  |
-
 ## Syntax
 
 *comparison%* = _STRCMP(*string1$*, *string2$*)

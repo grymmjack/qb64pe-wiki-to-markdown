@@ -4,8 +4,6 @@ The ERASE statement is used to clear all data from an array. [$STATIC]($STATIC.m
 
   
 
-|  |
-
 ## Syntax
 
 ERASE *arrayName* [, *arrayName2*...]

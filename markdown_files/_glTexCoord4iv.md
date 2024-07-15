@@ -4,8 +4,6 @@ The **_glTexCoord4iv** statement sets the current texture coordinates.
 
   
 
-|  |
-
 ## Syntax
 
 _glTexCoord4iv const GLint **v*

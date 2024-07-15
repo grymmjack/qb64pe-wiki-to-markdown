@@ -4,8 +4,6 @@ The _HIDE action is used to hide the console window opened by a [SHELL](SHELL.md
 
   
 
-|  |
-
 ## Syntax
 
 [SHELL](SHELL.md) [**_HIDE**] *StringCommandLine$*

@@ -4,8 +4,6 @@ The **_glDeleteTextures** statement deletes named textures.
 
   
 
-|  |
-
 ## Syntax
 
 _glDeleteTextures GLsizei *n*, const GLuint **textures*

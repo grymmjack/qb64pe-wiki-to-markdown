@@ -4,8 +4,6 @@ The **PRESET** graphic [SCREEN](SCREEN.md) statement turns a pixel at a coordina
 
   
 
-|  |
-
 ## Syntax
 
 **PRESET** [STEP]**(***column%*, *row%***)**[, colorAttribute]

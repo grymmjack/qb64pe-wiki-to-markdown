@@ -4,8 +4,6 @@ The _MEMGET statement reads a portion of a memory block at an OFFSET position in
 
   
 
-|  |
-
 ## Syntax
 
 _MEMGET *memoryBlock*, *bytePosition*, *destinationVariable*

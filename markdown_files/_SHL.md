@@ -4,8 +4,6 @@ The _SHL function is used to shift the bits of a numerical value to the left.
 
   
 
-|  |
-
 ## Syntax
 
 *result* = _SHL(*numericalVariable*, *numericalValue*)

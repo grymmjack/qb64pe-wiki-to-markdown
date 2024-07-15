@@ -4,8 +4,6 @@ The **_glPolygonStipple** statement sets the polygon stippling pattern.
 
   
 
-|  |
-
 ## Syntax
 
 _glPolygonStipple const GLubyte **mask*

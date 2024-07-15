@@ -4,8 +4,6 @@ SELECT CASE is used to determine the program flow by comparing the value of a va
 
   
 
-|  |
-
 ## Syntax
 
 **SELECT** [EVERY]**CASE** *testExpression*

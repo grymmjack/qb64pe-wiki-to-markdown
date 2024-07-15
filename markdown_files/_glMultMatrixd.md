@@ -4,8 +4,6 @@ The **_glMultMatrixd** statement multiplies the current matrix by an arbitrary m
 
   
 
-|  |
-
 ## Syntax
 
 _glMultMatrixd const GLdouble **m*

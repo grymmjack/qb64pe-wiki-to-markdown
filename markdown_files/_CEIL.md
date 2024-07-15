@@ -4,8 +4,6 @@ The _CEIL function rounds a numeric value up to the next whole number or [INTEGE
 
   
 
-|  |
-
 ## Syntax
 
 *result* = _CEIL(*expression*)

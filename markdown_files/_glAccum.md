@@ -4,8 +4,6 @@ The **_glAccum** statement operates on the accumulation buffer.
 
   
 
-|  |
-
 ## Syntax
 
 _glAccum GLenum *op*, GLfloat *value*

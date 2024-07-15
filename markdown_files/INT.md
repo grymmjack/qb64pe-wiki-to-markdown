@@ -4,8 +4,6 @@ The INT function rounds a numeric value down to the next whole number.
 
   
 
-|  |
-
 ## Syntax
 
 *result* = INT(*expression*)

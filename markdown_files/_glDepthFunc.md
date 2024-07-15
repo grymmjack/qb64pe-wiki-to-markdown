@@ -4,8 +4,6 @@ The **_glDepthFunc** statement specifies the value used for depth-buffer compari
 
   
 
-|  |
-
 ## Syntax
 
 _glDepthFunc GLenum *func*

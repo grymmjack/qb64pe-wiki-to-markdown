@@ -4,8 +4,6 @@ The SCREEN statement sets the video display mode and size of the program window'
 
   
 
-|  |
-
 ## Syntax
 
 SCREEN {*mode%*|*imagehandle&*} [, , active_page, visual_page]

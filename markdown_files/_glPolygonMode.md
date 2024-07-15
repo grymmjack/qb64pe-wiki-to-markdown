@@ -4,8 +4,6 @@ The **_glPolygonMode** statement selects a polygon rasterization mode.
 
   
 
-|  |
-
 ## Syntax
 
 _glPolygonMode GLenum *face*, GLenum *mode*

@@ -4,8 +4,6 @@ The **_glPixelStorei** statement sets pixel storage modes.
 
   
 
-|  |
-
 ## Syntax
 
 _glPixelStorei GLenum *pname*, GLint *param*

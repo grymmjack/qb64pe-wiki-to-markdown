@@ -4,8 +4,6 @@ The _ACCEPTFILEDROP statement prepares a program window to receive files dropped
 
   
 
-|  |
-
 ## Syntax
 
 _ACCEPTFILEDROP [{ON|OFF}]

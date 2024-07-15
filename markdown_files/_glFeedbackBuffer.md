@@ -4,8 +4,6 @@ The **_glFeedbackBuffer** statement controls feedback mode.
 
   
 
-|  |
-
 ## Syntax
 
 _glFeedbackBuffer GLsizei *size*, GLenum *type*, GLfloat **buffer*

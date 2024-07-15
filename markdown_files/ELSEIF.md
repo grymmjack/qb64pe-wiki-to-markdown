@@ -4,8 +4,6 @@ ELSEIF is used in an [IF...THEN](IF...THEN.md) block statement to offer an alter
 
   
 
-|  |
-
 ## Syntax
 
 [IF](IF.md) *condition* [THEN](THEN.md)

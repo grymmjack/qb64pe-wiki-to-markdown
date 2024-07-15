@@ -4,8 +4,6 @@ The KILL statement deletes a file designated by a [STRING](STRING.md) value or v
 
   
 
-|  |
-
 ## Syntax
 
 KILL *fileSpec$*

@@ -4,8 +4,6 @@ The **_glVertex2fv** statement specifies a vertex.
 
   
 
-|  |
-
 ## Syntax
 
 _glVertex2fv const GLfloat **v*

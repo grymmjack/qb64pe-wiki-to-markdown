@@ -4,8 +4,6 @@ The ERL function returns the closest previous line number before the last error.
 
   
 
-|  |
-
 ## Syntax
 
 *lastErrorLine&* = ERL

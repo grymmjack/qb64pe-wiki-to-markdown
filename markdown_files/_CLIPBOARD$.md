@@ -4,8 +4,6 @@ The **_CLIPBOARD$** statement copies the [STRING](STRING.md) value into the syst
 
   
 
-|  |
-
 ## Syntax
 
 _CLIPBOARD$ = *string_expression$*

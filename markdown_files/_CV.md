@@ -4,8 +4,6 @@ The _CV function is used to convert [_MK$](_MK$.md), [ASCII](ASCII.md), [STRING]
 
   
 
-|  |
-
 ## Syntax
 
 *result* = _CV(*numericalType*, *MKstringValue$*)

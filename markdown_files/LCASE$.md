@@ -4,8 +4,6 @@ The LCASE$ function outputs an all-lowercase version of a [STRING](STRING.md).
 
   
 
-|  |
-
 ## Syntax
 
 *result$* = LCASE$(*text$*)

@@ -4,8 +4,6 @@ _KEYCLEAR clears all keyboard input buffers.
 
   
 
-|  |
-
 ## Syntax
 
 _KEYCLEAR [*buffer&*]

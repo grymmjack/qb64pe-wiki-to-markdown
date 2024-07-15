@@ -4,8 +4,6 @@ The _DESKTOPWIDTH function returns the width of the users current desktop.
 
   
 
-|  |
-
 ## Syntax
 
 *x&* = _DESKTOPWIDTH

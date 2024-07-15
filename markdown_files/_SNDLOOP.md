@@ -4,8 +4,6 @@ The _SNDLOOP statement is like [_SNDPLAY](_SNDPLAY.md) but the sound is looped. 
 
   
 
-|  |
-
 ## Syntax
 
 _SNDLOOP *handle&*

@@ -4,8 +4,6 @@ The **_glArrayElement** statement specifies the array elements used to render a 
 
   
 
-|  |
-
 ## Syntax
 
 _glArrayElement GLint *index*

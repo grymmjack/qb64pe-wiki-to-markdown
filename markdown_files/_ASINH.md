@@ -4,8 +4,6 @@ The _ASINH returns the arc hyperbolic sine of x, expressed in radians.
 
   
 
-|  |
-
 ## Syntax
 
 *return_value!* = _ASINH(*x!*)

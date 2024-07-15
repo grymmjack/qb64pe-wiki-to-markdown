@@ -4,8 +4,6 @@ The _ECHO statement allows outputting text to a [$CONSOLE]($CONSOLE.md) window w
 
   
 
-|  |
-
 ## Syntax
 
 _ECHO {*"text to output"* | *textVariable$*}

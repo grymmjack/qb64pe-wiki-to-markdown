@@ -4,8 +4,6 @@ The _SCREENY function returns the current row pixel coordinate of the program wi
 
   
 
-|  |
-
 ## Syntax
 
 *positionY&* = _SCREENY

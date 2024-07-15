@@ -4,8 +4,6 @@ The **_glPushClientAttrib** and **_glPopClientAttrib** statements save and resto
 
   
 
-|  |
-
 ## Syntax
 
 _glPushClientAttrib GLbitfield *mask*

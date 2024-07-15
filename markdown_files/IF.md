@@ -4,8 +4,6 @@ IF...THEN statements make boolean (true or false) evaluations to automate progra
 
   
 
-|  |
-
 ## Syntax
 
 ### Single-line

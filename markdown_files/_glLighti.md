@@ -4,8 +4,6 @@ The **_glLighti** statement returns light source parameter values.
 
   
 
-|  |
-
 ## Syntax
 
 _glLighti GLenum *light*, GLenum *pname*, GLint *param*

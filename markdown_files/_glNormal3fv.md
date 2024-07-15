@@ -4,8 +4,6 @@ The **_glNormal3fv** statement sets the current normal vector.
 
   
 
-|  |
-
 ## Syntax
 
 _glNormal3fv const GLfloat **v*

@@ -4,8 +4,6 @@ A **SUB** procedure is a procedure within a program that can calculate and retur
 
   
 
-|  |
-
 ## Syntax
 
 SUB ProcedureName [(*1stParam*[, *2ndParam* ... [, *lastParam*)]

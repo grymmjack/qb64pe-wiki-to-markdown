@@ -4,8 +4,6 @@ OUT writes values to register and port hardware addresses.
 
   
 
-|  |
-
 ## Syntax
 
 OUT *registerAddress%*, *value%*

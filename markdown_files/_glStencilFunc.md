@@ -4,8 +4,6 @@ The **_glStencilFunc** statement sets the statement and reference value for sten
 
   
 
-|  |
-
 ## Syntax
 
 _glStencilFunc GLenum *func*, GLint *ref*, GLuint *mask*

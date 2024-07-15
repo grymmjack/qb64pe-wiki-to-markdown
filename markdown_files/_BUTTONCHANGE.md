@@ -4,8 +4,6 @@ The _BUTTONCHANGE function returns -1 or 1 when a specified button number on a c
 
   
 
-|  |
-
 ## Syntax
 
 *press%* = _BUTTONCHANGE(*button_number%*)

@@ -4,8 +4,6 @@ The _CONSOLE statement can be used to turn a console window ON/OFF.
 
   
 
-|  |
-
 ## Syntax
 
 _CONSOLE {OFF|ON}

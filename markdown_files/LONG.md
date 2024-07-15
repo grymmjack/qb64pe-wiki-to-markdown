@@ -4,8 +4,6 @@ LONG defines a variable as a 4 byte number type definition for larger [INTEGER](
 
   
 
-|  |
-
 ## Syntax
 
 [DIM](DIM.md) *variable* AS LONG

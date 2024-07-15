@@ -4,8 +4,6 @@
 
   
 
-|  |
-
 ## Syntax
 
 [DIM](DIM.md) *variable* AS SINGLE

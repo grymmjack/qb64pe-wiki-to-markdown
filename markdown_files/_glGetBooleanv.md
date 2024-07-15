@@ -4,8 +4,6 @@ The **_glGetBooleanv** statement returns the value or values of a selected param
 
   
 
-|  |
-
 ## Syntax
 
 _glGetBooleanv GLenum *pname*, GLboolean **params*

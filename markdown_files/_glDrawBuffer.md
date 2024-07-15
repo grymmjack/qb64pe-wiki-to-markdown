@@ -4,8 +4,6 @@ The **_glDrawBuffer** statement specifies which color buffers are to be drawn in
 
   
 
-|  |
-
 ## Syntax
 
 _glDrawBuffer GLenum *mode*

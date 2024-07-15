@@ -4,8 +4,6 @@ The **_glBlendFunc** statement specifies pixel arithmetic.
 
   
 
-|  |
-
 ## Syntax
 
 _glBlendFunc GLenum *sfactor*, GLenum *dfactor*

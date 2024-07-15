@@ -4,8 +4,6 @@ The _SNDOPEN function loads a sound file into memory and returns a [LONG](LONG.m
 
   
 
-|  |
-
 ## Syntax
 
 *soundHandle&* = _SNDOPEN(*fileName$*[, *capabilities$*])

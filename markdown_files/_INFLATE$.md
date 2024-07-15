@@ -4,8 +4,6 @@ The _INFLATE$ function decompresses a [string](string.md) compressed by the [_DE
 
   
 
-|  |
-
 ## Syntax
 
 *result$* = _INFLATE$(*stringToDecompress$[, originalSize&]*)

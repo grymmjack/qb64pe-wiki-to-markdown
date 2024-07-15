@@ -4,8 +4,6 @@ The LEFT$ string function returns a number of characters from the left of a [STR
 
   
 
-|  |
-
 ## Syntax
 
 LEFT$(*stringValue$*, *numberOfCharacters%*)

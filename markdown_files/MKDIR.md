@@ -4,8 +4,6 @@ The MKDIR statement creates a new folder (**dir**ectory) at a specified path.
 
   
 
-|  |
-
 ## Syntax
 
 MKDIR pathSpec$

@@ -4,8 +4,6 @@ The **_glClearAccum** statement specifies the clear values for the accumulation 
 
   
 
-|  |
-
 ## Syntax
 
 _glClearAccum GLfloat *red*, GLfloat *green*, GLfloat *blue*, GLfloat *alpha*

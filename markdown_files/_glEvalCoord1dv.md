@@ -4,8 +4,6 @@ The **_glEvalCoord1dv** statement evaluates enabled one-dimensional maps.
 
   
 
-|  |
-
 ## Syntax
 
 _glEvalCoord1dv const GLdouble **u*

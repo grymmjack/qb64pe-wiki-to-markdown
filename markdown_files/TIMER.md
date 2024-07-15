@@ -4,8 +4,6 @@ A **TIMER** statement enables, turns off or stops timer event trapping. QBasic o
 
   
 
-|  |
-
 ## Syntax
 
 QuickBASIC

@@ -4,8 +4,6 @@ The $CHECKING metacommand turns C++ event checking ON or OFF.
 
   
 
-|  |
-
 ## Syntax
 
 $CHECKING:{ON|OFF}

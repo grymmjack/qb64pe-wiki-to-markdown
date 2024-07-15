@@ -4,8 +4,6 @@ The _FULLSCREEN statement attempts to make the program window fullscreen.
 
   
 
-|  |
-
 ## Syntax
 
 _FULLSCREEN [*_STRETCH | _SQUAREPIXELS| _OFF*][, *_SMOOTH*]

@@ -4,8 +4,6 @@ The LOG math function returns the natural logarithm of a specified numerical val
 
   
 
-|  |
-
 ## Syntax
 
 *logarithm!* = LOG(*value*)

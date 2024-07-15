@@ -4,8 +4,6 @@ The _SCREENIMAGE function stores the current desktop image or a portion of it an
 
   
 
-|  |
-
 ## Syntax
 
 *imageHandle&* = _SCREENIMAGE[(*column1*, *row1*, *column2*, *row2*)]

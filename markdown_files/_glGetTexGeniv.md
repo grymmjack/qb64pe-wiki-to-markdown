@@ -4,8 +4,6 @@ The **_glGetTexGendv**, **_glGetTexGenfv**, and **_glGetTexGeniv** statements re
 
   
 
-|  |
-
 ## Syntax
 
 _glGetTexGeniv GLenum *coord*, GLenum *pname*, GLint **params*

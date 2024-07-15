@@ -4,8 +4,6 @@ The _D2R function converts a **degree** value into a **radian** value.
 
   
 
-|  |
-
 ## Syntax
 
 *result* = _D2R(*num*)

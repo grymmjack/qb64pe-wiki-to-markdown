@@ -4,8 +4,6 @@ The **_NOTIFYPOPUP** statement shows a system notification.
 
   
 
-|  |
-
 ## Syntax
 
 **_NOTIFYPOPUP** [*title$*][, *message$*][, *iconType$*]

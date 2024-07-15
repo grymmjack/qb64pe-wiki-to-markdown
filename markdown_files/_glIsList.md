@@ -4,8 +4,6 @@ The **_glIsList** function tests for display list existence.
 
   
 
-|  |
-
 ## Syntax
 
 GLboolean *result* = _glIsList (GLuint *list*)

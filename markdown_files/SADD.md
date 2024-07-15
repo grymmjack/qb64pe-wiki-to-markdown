@@ -4,8 +4,6 @@ The **SADD** function returns the address of a [STRING](STRING.md) variable as a
 
   
 
-|  |
-
 ## Syntax
 
 SADD(stringvariable)

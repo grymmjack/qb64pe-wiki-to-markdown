@@ -4,8 +4,6 @@ The SPACE$ function returns a [STRING](STRING.md) consisting of a number of spac
 
   
 
-|  |
-
 ## Syntax
 
 *result$* = **SPACE$(*count&*)**

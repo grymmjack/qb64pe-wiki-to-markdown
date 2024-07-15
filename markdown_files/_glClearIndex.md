@@ -4,8 +4,6 @@ The **_glClearIndex** statement specifies the clear value for the color-index bu
 
   
 
-|  |
-
 ## Syntax
 
 _glClearIndex GLfloat *c*

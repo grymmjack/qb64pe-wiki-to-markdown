@@ -4,8 +4,6 @@ The _CAPSLOCK statement sets the state of the Caps Lock key.
 
   
 
-|  |
-
 ## Syntax
 
 _CAPSLOCK {ON|OFF|_TOGGLE}

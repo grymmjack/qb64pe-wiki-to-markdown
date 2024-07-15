@@ -4,8 +4,6 @@ The **_KEYDOWN** function returns whether modifying keys like CTRL, ALT, SHIFT, 
 
   
 
-|  |
-
 ## Syntax
 
 return% = **_KEYDOWN(***code&***)**

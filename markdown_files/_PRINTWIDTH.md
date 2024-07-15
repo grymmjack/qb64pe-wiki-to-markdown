@@ -4,8 +4,6 @@ The _PRINTWIDTH function returns the width in pixels of the text [string](string
 
   
 
-|  |
-
 ## Syntax
 
 *pixelWidth%* = _PRINTWIDTH(*textToPrint$*[, *destinationHandle&*])

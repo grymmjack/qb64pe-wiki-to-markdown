@@ -4,8 +4,6 @@ The **VARPTR** function returns an [INTEGER](INTEGER.md) value that is the offse
 
   
 
-|  |
-
 ## Syntax
 
 offset% = VARPTR(variable_name[(reference_index%)])

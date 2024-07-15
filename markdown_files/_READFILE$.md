@@ -4,8 +4,6 @@ The **_READFILE$** function returns the complete contents of a file in a single 
 
   
 
-|  |
-
 ## Syntax
 
 *contents$* = _READFILE$(*fileSpec$*)

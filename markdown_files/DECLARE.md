@@ -4,8 +4,6 @@ In legacy versions such as [QBasic](QBasic.md) / [QuickBASIC](QuickBASIC.md) the
 
   
 
-|  |
-
 ## Syntax
 
 [DECLARE LIBRARY](DECLARE LIBRARY.md)

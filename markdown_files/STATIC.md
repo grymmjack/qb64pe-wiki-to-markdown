@@ -4,8 +4,6 @@ The STATIC keyword is used in declaration statements to control where variables 
 
   
 
-|  |
-
 ## Syntax
 
 Variables

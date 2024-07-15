@@ -4,8 +4,6 @@ INTEGER is a 2-byte number type definition that can hold whole numerical values.
 
   
 
-|  |
-
 ## Syntax
 
 [DIM](DIM.md) *variable* AS INTEGER

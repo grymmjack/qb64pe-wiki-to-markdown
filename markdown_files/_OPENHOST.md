@@ -4,8 +4,6 @@ The _OPENHOST function opens a Host which listens for new connections and return
 
   
 
-|  |
-
 ## Syntax
 
 *hostHandle* = _OPENHOST(**"TCP/IP:8080"**)

@@ -4,8 +4,6 @@ The _TOGGLEBIT function is used to toggle a specified bit of a numerical value.
 
   
 
-|  |
-
 ## Syntax
 
 *result* = _TOGGLEBIT(*numericalVariable*, *numericalValue*)

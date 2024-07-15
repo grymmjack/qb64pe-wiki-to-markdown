@@ -4,8 +4,6 @@ The _AUTODISPLAY statement enables the automatic display of the screen image cha
 
   
 
-|  |
-
 ## Syntax
 
 _AUTODISPLAY

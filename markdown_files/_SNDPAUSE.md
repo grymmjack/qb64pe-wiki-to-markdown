@@ -4,8 +4,6 @@ The _SNDPAUSE statement pauses a sound using a handle from the [_SNDOPEN](_SNDOP
 
   
 
-|  |
-
 ## Syntax
 
 _SNDPAUSE *handle&*

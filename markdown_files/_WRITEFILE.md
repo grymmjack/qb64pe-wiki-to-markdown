@@ -4,8 +4,6 @@ The **_WRITEFILE** statement writes a string into a new file, overwriting an exi
 
   
 
-|  |
-
 ## Syntax
 
 _WRITEFILE *fileSpec$*, *contents$*

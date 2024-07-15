@@ -4,8 +4,6 @@ The **_glTexImage2D** statement specifies a two-dimensional texture image.
 
   
 
-|  |
-
 ## Syntax
 
 _glTexImage2D GLenum *target*, GLint *level*, GLint *internalformat*, GLsizei *width*, GLsizei *height*, GLint *border*, GLint *format*, GLenum *type*, const GLvoid **pixels*

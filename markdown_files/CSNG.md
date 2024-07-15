@@ -4,8 +4,6 @@ CSNG converts a numerical value to the closest [SINGLE](SINGLE.md)-precision num
 
   
 
-|  |
-
 ## Syntax
 
 *singleValue!* = CSNG(*expression*)

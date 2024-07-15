@@ -4,8 +4,6 @@ The _WINDOWHANDLE function returns the window handle assigned to the current pro
 
   
 
-|  |
-
 ## Syntax
 
 *hwnd&&* = _WINDOWHANDLE

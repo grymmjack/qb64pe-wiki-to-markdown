@@ -4,8 +4,6 @@
 
   
 
-|  |
-
 ## Syntax
 
 **RANDOMIZE** [USING] **{*seednumber*|TIMER}**

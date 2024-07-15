@@ -4,8 +4,6 @@ The MKS$ function encodes a [SINGLE](SINGLE.md) numerical value into a 4-byte [A
 
   
 
-|  |
-
 ## Syntax
 
 *result$* = MKS$(*singlePrecisionVariableOrLiteral#*)

@@ -4,8 +4,6 @@ The _D2G function converts a **degree** value into a **gradient** value.
 
   
 
-|  |
-
 ## Syntax
 
 *result* = _D2G(*num*)

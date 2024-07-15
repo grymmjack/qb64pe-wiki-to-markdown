@@ -4,8 +4,6 @@ The IMP logical operator converts the result of two comparative values and retur
 
   
 
-|  |
-
 ## Syntax
 
 *result* = *firstValue* IMP *secondValue*

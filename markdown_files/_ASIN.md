@@ -4,8 +4,6 @@ The _ASIN function returns the angle measured in radians based on an input [SINe
 
   
 
-|  |
-
 ## Syntax
 
 *radian_angle!* = _ASIN(*sine_value!*)

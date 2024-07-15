@@ -4,8 +4,6 @@ The DATA statement creates a line of fixed program information separated by comm
 
   
 
-|  |
-
 ## Syntax
 
 DATA [value1, value2, ...]

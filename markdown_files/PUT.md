@@ -4,8 +4,6 @@ The **PUT #** file or port statement writes data to a specific byte or record lo
 
   
 
-|  |
-
 ## Syntax
 
 **PUT #*filenumber&*,** [*position*][, {*holdingvariable*|*holdingarray()*}]

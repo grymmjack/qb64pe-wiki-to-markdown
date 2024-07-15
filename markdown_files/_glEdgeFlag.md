@@ -4,8 +4,6 @@ The **_glEdgeFlag** statement flags edges as either boundary or nonboundary.
 
   
 
-|  |
-
 ## Syntax
 
 _glEdgeFlag GLboolean *flag*

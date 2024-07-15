@@ -4,8 +4,6 @@ The _BLUE32 function returns the blue component intensity of a 32-bit image or s
 
   
 
-|  |
-
 ## Syntax
 
 *blue32color&* = _BLUE32(*rgbaColor&*)

@@ -4,8 +4,6 @@ The _SHR function is used to shift the bits of a numerical value to the right.
 
   
 
-|  |
-
 ## Syntax
 
 *result* = _SHR(*numericalVariable*, *numericalValue*)

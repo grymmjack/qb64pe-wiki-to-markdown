@@ -4,8 +4,6 @@ The FIX function rounds a numerical value to the next whole number closest to ze
 
   
 
-|  |
-
 ## Syntax
 
 *result* = FIX(*expression*)

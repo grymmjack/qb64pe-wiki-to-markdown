@@ -4,8 +4,6 @@ The **_glEvalCoord2f** statement evaluates enabled two-dimensional maps.
 
   
 
-|  |
-
 ## Syntax
 
 _glEvalCoord2f GLfloat *u*, GLfloat *v*
