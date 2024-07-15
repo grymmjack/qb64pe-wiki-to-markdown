@@ -3,7 +3,6 @@ import requests
 import markdownify
 import re
 import os
-import requests
 from bs4 import BeautifulSoup
 
 def fetch_html(url):
@@ -74,40 +73,56 @@ def convert_to_markdown(html):
     for tag in soup(remove_tags):
         tag.decompose()
 
+    # for code in soup.find_all('pre', attrs={"class": "codeide"}):
+    #     for link in code.find_all('a'):
+    #         link.unwrap()
+    #     for span in code.find_all('span'):
+    #         span.unwrap()
+    
+    for table in soup.find_all('table', attrs={"style": "max-width:25%;"}):
+        table.decompose()
+
+    for hr in soup.find_all('hr'):
+        hr.decompose()
+
     # Convert to markdown
     options = {
-        "strip": [
-            'script', 
-            'style', 
-            'meta', 
-            'link', 
-            'nav', 
-            'header', 
-            'footer', 
-            'center'
-        ],
-        "autolinks": True,
+        # "strip": [
+        #     'script', 
+        #     'style', 
+        #     'meta', 
+        #     'link', 
+        #     'nav', 
+        #     'header', 
+        #     'footer', 
+        #     'center'
+        # ],
+        "autolinks": False,
         "heading_style": "ATX",
         "bullets": [
             "*",
             "+",
             "-"
         ],
+        "wrap": False,
+        "wrap_width": 80,
+        "newline_style": "BACKSLASH",
         "strong_em_symbol": "*",
-        "newline_style": "SPACES",
         "code_language": "",
-        "escape_asterisks": False,
-        "escape_underscores": False,
-        "escape_misc": False,
+        "escape_asterisks": True,
+        "escape_underscores": True,
+        "escape_misc": True,
         "keep_inline_images_in": [
             "li"
         ]
     }
     # markdown_content = markdownify.MarkdownConverter(**options).convert_soup(soup)
-    markdown_content = markdownify.markdownify(str(soup), **options)
+    # markdown_content = markdownify.markdownify(str(soup), **options)
+    markdown_content = str(soup)
 
     # Additional cleaning to remove any remaining MediaWiki-specific markup
-    markdown_content = re.sub(r'\| ```', '```', markdown_content)
+    markdown_content = re.sub('\\\\n', '\\n', markdown_content)
+    markdown_content = re.sub(r'\| ```', '```vb\n', markdown_content)
     markdown_content = re.sub(r'``` \|', '\\n```', markdown_content)
     markdown_content = re.sub(r'\| --- \|', '', markdown_content)
     markdown_content = re.sub(r'\[\[Category:[^\]]+\]\]', '', markdown_content)
@@ -120,21 +135,23 @@ def convert_to_markdown(html):
     markdown_content = re.sub('\[Jump to search\]\(Jump to search\.md\)', '', markdown_content)
     markdown_content = re.sub('From QB64 Phoenix Edition Wiki', '', markdown_content)
     markdown_content = re.sub('\|  \|', '', markdown_content)
-
+    markdown_content = re.sub('</p><p>', '', markdown_content)
+    markdown_content = re.sub('<br/>', '', markdown_content)
 
     # Replace more than two newlines with two newlines
-    reduced_content = markdown_content.replace('\n\n\n', '\n\n')
+    reduced_content = markdown_content.replace('\n\n', '\n')
     
     # It's possible that after the first replacement there are still places with more than two newlines
     # Keep reducing until no more than two consecutive newlines exist
-    while '\n\n\n' in reduced_content:
-        reduced_content = reduced_content.replace('\n\n\n', '\n\n')
+    while '\n\n' in reduced_content:
+        reduced_content = reduced_content.replace('\n\n', '\n')
 
     # remove top 4 lines    
-    reduced_content = "\n".join(reduced_content.split("\n")[4:])
+    # reduced_content = "\n".join(reduced_content.split("\n")[4:])
     # remove last 3 lines
-    reduced_content = "\n".join(reduced_content.split("\n")[:-3])
+    # reduced_content = "\n".join(reduced_content.split("\n")[:-3])
 
+    reduced_content = "<style>pre.codeide, pre.outputfixed, .outputcrt0 { background-color: #000 !important; color: #FFF !important; }</style>" + reduced_content
     return reduced_content
 
 def save_markdown(markdown, filename):
@@ -171,5 +188,8 @@ with open('keywords.txt', 'r') as file:
 
 # Process each keyword
 for keyword in keywords:
-    process_keyword(keyword, output_directory)
+    if keyword == "**EOF**":
+        break
+    else:
+        process_keyword(keyword, output_directory)
 

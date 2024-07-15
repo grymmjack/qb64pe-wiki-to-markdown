@@ -1,48 +1,107 @@
-# _MOUSEMOVEMENTX
-
-The _MOUSEMOVEMENTX function returns the relative horizontal position of the mouse cursor as positive or negative values.
-
-  
-
-## Syntax
-
-*horizontalMove* = _MOUSEMOVEMENTX
-  
-
-* Returns the relative horizontal cursor pixel position compared to the previous cursor position. Negative values are moves to the left.
-* **Note:** A [_MOUSESHOW](_MOUSESHOW.md) statement will disable _MOUSEMOVEMENTX or [_MOUSEMOVEMENTY](_MOUSEMOVEMENTY.md) relative mouse movement reads.
-* Can also be used to check for any mouse movements to enable a program or close [Screen Saver Programs](Screen Saver Programs.md).
-* Sets the mouse to a relative movement mode which can be read by [_WHEEL](_WHEEL.md) instead of [_AXIS](_AXIS.md) as mouse [device](device.md) 2.
-
-  
-
-## Examples
-
-Example 1
-Since values returned are relative to the last position, the returns can be positive or negative.
-
-``` [SCREEN](SCREEN.md) 12 PX = 320: PY = 240 'center position [DO](DO.md): [_LIMIT](_LIMIT.md) 200     [DO WHILE](DO WHILE.md) [_MOUSEINPUT](_MOUSEINPUT.md)         PX = PX + _MOUSEMOVEMENTX         PY = PY + [_MOUSEMOVEMENTY](_MOUSEMOVEMENTY.md)     [LOOP](LOOP.md)     [CLS](CLS.md)     [CIRCLE](CIRCLE.md) (PX, PY), 10, 10     [LOCATE](LOCATE.md) 1, 1: [PRINT](PRINT.md) PX, PY [LOOP UNTIL](LOOP UNTIL.md) [INKEY$](INKEY$.md) = [CHR$](CHR$.md)(27) 'escape key exit  
-```
-
----
-
-Example 2
-MOD is used to keep horizontal movement of the circle and cursor inside of the SCREEN 13 window(320).
-Note when using the function this way, then give the user a keypress exit option. Make sure the user has some way to exit that is not dependent on clicking the X button.
-
-``` [SCREEN](SCREEN.md) 13, , 1, 0 [DO](DO.md): [_LIMIT](_LIMIT.md) 200     [DO WHILE](DO WHILE.md) [_MOUSEINPUT](_MOUSEINPUT.md)         x = x + _MOUSEMOVEMENTX         y = y + [_MOUSEMOVEMENTY](_MOUSEMOVEMENTY.md)     [LOOP](LOOP.md)     x = (x + 320) [MOD](MOD.md) 320 'keeps object on screen     y = (y + 200) [MOD](MOD.md) 200 'remove if off screen moves are desired     [CLS](CLS.md)     [CIRCLE](CIRCLE.md) (x, y), 20     [PCOPY](PCOPY.md) 1, 0 [LOOP UNTIL](LOOP UNTIL.md) [INKEY$](INKEY$.md) <> "" 'press any key to exit  
-```
-
-  
-
-## See also
-
-* [_MOUSEMOVEMENTY](_MOUSEMOVEMENTY.md)
-* [_MOUSEINPUT](_MOUSEINPUT.md), [_MOUSEX](_MOUSEX.md)
-* [_DEVICES](_DEVICES.md), [_DEVICEINPUT](_DEVICEINPUT.md)
-* [_WHEEL](_WHEEL.md), [_LASTWHEEL](_LASTWHEEL.md)
-* [_AXIS](_AXIS.md), [_LASTAXIS](_LASTAXIS.md)
-* [_MOUSESHOW](_MOUSESHOW.md), [_MOUSEHIDE](_MOUSEHIDE.md)
-* [Screen Saver Programs](Screen Saver Programs.md)
-
-  
+<style>pre.codeide, pre.outputfixed, .outputcrt0 { background-color: #000 !important; color: #FFF !important; }</style><!DOCTYPE html>
+<html class="client-nojs" dir="ltr" lang="en">
+<head>
+<title>_MOUSEMOVEMENTX - QB64 Phoenix Edition Wiki</title>
+</head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject page-MOUSEMOVEMENTX rootpage-MOUSEMOVEMENTX skin-vector action-view skin-vector-legacy vector-feature-language-in-header-enabled vector-feature-language-in-main-page-header-disabled vector-feature-language-alert-in-sidebar-disabled vector-feature-sticky-header-disabled vector-feature-sticky-header-edit-disabled vector-feature-table-of-contents-disabled vector-feature-visual-enhancement-next-disabled">
+<div class="mw-body" id="content" role="main">
+<a id="top"></a>
+<h1 class="firstHeading mw-first-heading" id="firstHeading">_MOUSEMOVEMENTX</h1>
+<div class="vector-body" id="bodyContent">
+<div class="mw-body-content mw-content-ltr" dir="ltr" id="mw-content-text" lang="en"><div class="mw-parser-output"><p>The <a class="mw-selflink selflink">_MOUSEMOVEMENTX</a> function returns the relative horizontal position of the mouse cursor as positive or negative values.
+</p>
+<h2><span class="mw-headline" id="Syntax">Syntax</span></h2>
+<dl><dd><i>horizontalMove</i> = <a class="mw-selflink selflink">_MOUSEMOVEMENTX</a></dd></dl>
+<p>
+</p>
+<ul><li>Returns the relative horizontal cursor pixel position compared to the previous cursor position. Negative values are moves to the left.</li>
+<li><b>Note:</b> A <a href="MOUSESHOW" title="MOUSESHOW">_MOUSESHOW</a> statement will disable <a class="mw-selflink selflink">_MOUSEMOVEMENTX</a> or <a href="MOUSEMOVEMENTY" title="MOUSEMOVEMENTY">_MOUSEMOVEMENTY</a> relative mouse movement reads.</li>
+<li>Can also be used to check for any mouse movements to enable a program or close <a href="Screen_Saver_Programs" title="Screen Saver Programs">Screen Saver Programs</a>.</li>
+<li>Sets the mouse to a relative movement mode which can be read by <a href="WHEEL" title="WHEEL">_WHEEL</a> instead of <a href="AXIS" title="AXIS">_AXIS</a> as mouse <a href="DEVICES" title="DEVICES">device</a> 2.</li></ul>
+<p>
+</p>
+<h2><span class="mw-headline" id="Examples">Examples</span></h2>
+<dl><dt>Example 1</dt>
+<dd>Since values returned are relative to the last position, the returns can be positive or negative.</dd></dl>
+<table cellpadding="15px" width="100%">
+<tbody><tr>
+<td><pre class="codeide"><a href="SCREEN" title="SCREEN"><span style="color:#4593D8;">SCREEN</span></a> <span style="color:#F580B1;">12</span>
+PX = <span style="color:#F580B1;">320</span>: PY = <span style="color:#F580B1;">240</span> <span style="color:#919191;">'center position</span>
+<a class="mw-redirect" href="DO" title="DO"><span style="color:#4593D8;">DO</span></a>: <a href="LIMIT" title="LIMIT"><span style="color:#4593D8;">_LIMIT</span></a> <span style="color:#F580B1;">200</span>
+    <a href="DO...LOOP" title="DO...LOOP"><span style="color:#4593D8;">DO WHILE</span></a> <a href="MOUSEINPUT" title="MOUSEINPUT"><span style="color:#4593D8;">_MOUSEINPUT</span></a>
+        PX = PX + <a class="mw-selflink selflink"><span style="color:#4593D8;">_MOUSEMOVEMENTX</span></a>
+        PY = PY + <a href="MOUSEMOVEMENTY" title="MOUSEMOVEMENTY"><span style="color:#4593D8;">_MOUSEMOVEMENTY</span></a>
+    <a href="LOOP" title="LOOP"><span style="color:#4593D8;">LOOP</span></a>
+    <a href="CLS" title="CLS"><span style="color:#4593D8;">CLS</span></a>
+    <a href="CIRCLE" title="CIRCLE"><span style="color:#4593D8;">CIRCLE</span></a> (PX, PY), <span style="color:#F580B1;">10</span>, <span style="color:#F580B1;">10</span>
+    <a href="LOCATE" title="LOCATE"><span style="color:#4593D8;">LOCATE</span></a> <span style="color:#F580B1;">1</span>, <span style="color:#F580B1;">1</span>: <a href="PRINT" title="PRINT"><span style="color:#4593D8;">PRINT</span></a> PX, PY
+<a href="DO...LOOP" title="DO...LOOP"><span style="color:#4593D8;">LOOP UNTIL</span></a> <a href="INKEY$" title="INKEY$"><span style="color:#4593D8;">INKEY$</span></a> = <a href="CHR$" title="CHR$"><span style="color:#4593D8;">CHR$</span></a>(<span style="color:#F580B1;">27</span>) <span style="color:#919191;">'escape key exit</span>
+</pre>
+</td></tr></tbody></table>
+<dl><dt>Example 2</dt>
+<dd>MOD is used to keep horizontal movement of the circle and cursor inside of the SCREEN 13 window(320).</dd>
+<dd>Note when using the function this way, then give the user a keypress exit option. Make sure the user has some way to exit that is not dependent on clicking the X button.</dd></dl>
+<table cellpadding="15px" width="100%">
+<tbody><tr>
+<td><pre class="codeide"><a href="SCREEN" title="SCREEN"><span style="color:#4593D8;">SCREEN</span></a> <span style="color:#F580B1;">13</span>, , <span style="color:#F580B1;">1</span>, <span style="color:#F580B1;">0</span>
+<a class="mw-redirect" href="DO" title="DO"><span style="color:#4593D8;">DO</span></a>: <a href="LIMIT" title="LIMIT"><span style="color:#4593D8;">_LIMIT</span></a> <span style="color:#F580B1;">200</span>
+    <a href="DO...LOOP" title="DO...LOOP"><span style="color:#4593D8;">DO WHILE</span></a> <a href="MOUSEINPUT" title="MOUSEINPUT"><span style="color:#4593D8;">_MOUSEINPUT</span></a>
+        x = x + <a class="mw-selflink selflink"><span style="color:#4593D8;">_MOUSEMOVEMENTX</span></a>
+        y = y + <a href="MOUSEMOVEMENTY" title="MOUSEMOVEMENTY"><span style="color:#4593D8;">_MOUSEMOVEMENTY</span></a>
+    <a href="LOOP" title="LOOP"><span style="color:#4593D8;">LOOP</span></a>
+    x = (x + <span style="color:#F580B1;">320</span>) <a href="MOD" title="MOD"><span style="color:#4593D8;">MOD</span></a> <span style="color:#F580B1;">320</span> <span style="color:#919191;">'keeps object on screen</span>
+    y = (y + <span style="color:#F580B1;">200</span>) <a href="MOD" title="MOD"><span style="color:#4593D8;">MOD</span></a> <span style="color:#F580B1;">200</span> <span style="color:#919191;">'remove if off screen moves are desired</span>
+    <a href="CLS" title="CLS"><span style="color:#4593D8;">CLS</span></a>
+    <a href="CIRCLE" title="CIRCLE"><span style="color:#4593D8;">CIRCLE</span></a> (x, y), <span style="color:#F580B1;">20</span>
+    <a href="PCOPY" title="PCOPY"><span style="color:#4593D8;">PCOPY</span></a> <span style="color:#F580B1;">1</span>, <span style="color:#F580B1;">0</span>
+<a href="DO...LOOP" title="DO...LOOP"><span style="color:#4593D8;">LOOP UNTIL</span></a> <a href="INKEY$" title="INKEY$"><span style="color:#4593D8;">INKEY$</span></a> &lt;&gt; <span style="color:#FFB100;">""</span> <span style="color:#919191;">'press any key to exit</span>
+</pre>
+</td></tr></tbody></table>
+<p>
+</p>
+<h2><span class="mw-headline" id="See_also">See also</span></h2>
+<ul><li><a href="MOUSEMOVEMENTY" title="MOUSEMOVEMENTY">_MOUSEMOVEMENTY</a></li>
+<li><a href="MOUSEINPUT" title="MOUSEINPUT">_MOUSEINPUT</a>, <a href="MOUSEX" title="MOUSEX">_MOUSEX</a></li>
+<li><a href="DEVICES" title="DEVICES">_DEVICES</a>, <a href="DEVICEINPUT" title="DEVICEINPUT">_DEVICEINPUT</a></li>
+<li><a href="WHEEL" title="WHEEL">_WHEEL</a>, <a href="LASTWHEEL" title="LASTWHEEL">_LASTWHEEL</a></li>
+<li><a href="AXIS" title="AXIS">_AXIS</a>, <a href="LASTAXIS" title="LASTAXIS">_LASTAXIS</a></li>
+<li><a href="MOUSESHOW" title="MOUSESHOW">_MOUSESHOW</a>, <a href="MOUSEHIDE" title="MOUSEHIDE">_MOUSEHIDE</a></li>
+<li><a href="Screen_Saver_Programs" title="Screen Saver Programs">Screen Saver Programs</a></li></ul>
+<p>
+</p>
+<!-- 
+NewPP limit report
+Cached time: 20240715062412
+Cache expiry: 86400
+Reduced expiry: false
+Complications: [show‐toc]
+CPU time usage: 0.034 seconds
+Real time usage: 0.042 seconds
+Preprocessor visited node count: 431/1000000
+Post‐expand include size: 3510/2097152 bytes
+Template argument size: 848/2097152 bytes
+Highest expansion depth: 4/100
+Expensive parser function count: 0/100
+Unstrip recursion depth: 0/20
+Unstrip post‐expand size: 118/5000000 bytes
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%   21.727      1 -total
+ 15.65%    3.401     26 Template:Text
+ 14.05%    3.053     30 Template:Cl
+ 10.41%    2.262      1 Template:PageSyntax
+  9.27%    2.015      2 Template:CodeEnd
+  8.96%    1.947      1 Template:PageSeeAlso
+  8.90%    1.933      2 Template:CodeStart
+  8.67%    1.884      1 Template:PageExamples
+  7.69%    1.671      1 Template:PageNavigation
+-->
+<!-- Saved in parser cache with key qb64pnix_mw19894-mwmb_:pcache:idhash:192-0!canonical and timestamp 20240715062412 and revision id 8838.
+ -->
+</div>
+</div>
+</div>
+</div>
+</body>
+</html>

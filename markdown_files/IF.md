@@ -1,128 +1,249 @@
-# IF...THEN
-
-IF...THEN statements make boolean (true or false) evaluations to automate program decision making.
-
-  
-
-## Syntax
-
-### Single-line
-
-[IF](IF.md) *conditionStatement* [THEN](THEN.md) *{code}* [ELSE](ELSE.md) *{alternativeCode}*
-[IF](IF.md) *conditionStatement* [GOTO](GOTO.md) *lineLabel*
-### Block
-
-[IF](IF.md) *conditionStatement* [THEN](THEN.md)
-*{code}*
-⋮
-[ELSEIF](ELSEIF.md) *conditionStatement2* [THEN](THEN.md)
-*{code}*
-⋮
-[ELSE](ELSE.md)
-*{code}*
-⋮
-[END IF](END IF.md)
-  
-
-## Description
-
-* The *conditionStatement* evaluation by [IF](IF.md) must be true (-1) or a **non-zero numerical value** for the [THEN](THEN.md) *{code}* to be executed.
-* Multiple conditional evaluations can be made using inclusive [AND](AND.md) "AND (boolean)") or alternative [OR](OR.md) "OR (boolean)") conditional expressions.
-* [THEN](THEN.md) is not required when [GOTO](GOTO.md) is used to send program flow to a line number or label.
-* [IF](IF.md) statements can also have alternative evaluations using [ELSEIF](ELSEIF.md) and [ELSE](ELSE.md) conditions.
-* When the [IF](IF.md) statement and/or code to be run is more than code line, an [END IF](END IF.md) statement must be used.
-* With multiple code lines to run, end the IF statement with THEN and place all of the code on lines below that line.
-* Multiple code line block statements require that the IF...THEN, [ELSEIF](ELSEIF.md), [ELSE](ELSE.md) and [END IF](END IF.md) be on separate lines.
-* **The IDE may return an error of *[NEXT](NEXT.md) without [FOR](FOR.md)* or *[LOOP](LOOP.md) without [DO](DO.md)* when [END IF](END IF.md) does not end a statement block.**
-* The **QB64** IDE will indicate an error in the IF statement line until END IF closes the statement block.
-* Use [colons](colons.md) to execute multiple statements in a single-line IF statement.
-* An **[underscore](underscore.md)** can be used anywhere after the code on a single-line to continue it to the next line in **QB64**.
-* **NOTE:** [STRING](STRING.md) values can only be evaluated in an IF statement if a value is compared to a literal or [CHR$](CHR$.md) string value. **QB64 may not compile literal IF string statements or indicate an IDE coding error.** Use [LEN](LEN.md) or [ASC](ASC.md) "ASC (function)") to compare strings numerically.
-
-  
-
-```          Table 3: The relational operations for condition checking.   In this table, **A** and **B** are the [Expressions](Expressions.md) to compare. Both must represent  the same general type, i.e. they must result into either numerical values  or [STRING](STRING.md) values. If a test succeeds, then **true** (-1) is returned, **false** (0)      if it fails, which both can be used in further [Boolean](Boolean.md) evaluations.  ┌─────────────────────────────────────────────────────────────────────────┐  │                          **[Relational Operations](Relational Operations.md)**                          │  ├────────────┬───────────────────────────────────────────┬────────────────┤  │ **Operation**  │                **Description**                │ **Example usage**  │  ├────────────┼───────────────────────────────────────────┼────────────────┤  │   A [=](=.md) B    │ Tests if A is **equal** to B.                 │ [IF](IF.md) A [=](=.md) B [THEN](THEN.md)  │  ├────────────┼───────────────────────────────────────────┼────────────────┤  │   A [<>](<>.md) B   │ Tests if A is **not equal** to B.             │ [IF](IF.md) A [<>](<>.md) B [THEN](THEN.md) │  ├────────────┼───────────────────────────────────────────┼────────────────┤  │   A [<](<.md) B    │ Tests if A is **less than** B.                │ [IF](IF.md) A [<](<.md) B [THEN](THEN.md)  │  ├────────────┼───────────────────────────────────────────┼────────────────┤  │   A [>](>.md) B    │ Tests if A is **greater than** B.             │ [IF](IF.md) A [>](>.md) B [THEN](THEN.md)  │  ├────────────┼───────────────────────────────────────────┼────────────────┤  │   A [<=](<=.md) B   │ Tests if A is **less than or equal** to B.    │ [IF](IF.md) A [<=](<=.md) B [THEN](THEN.md) │  ├────────────┼───────────────────────────────────────────┼────────────────┤  │   A [>=](>=.md) B   │ Tests if A is **greater than or equal** to B. │ [IF](IF.md) A [>=](>=.md) B [THEN](THEN.md) │  └────────────┴───────────────────────────────────────────┴────────────────┘    The operations should be very obvious for numerical values. For strings    be aware that all checks are done **case sensitive** (i.e. "Foo" <> "foo").    The **equal**/**not equal** check is pretty much straight forward, but for the    **less**/**greater** checks the [ASCII](ASCII.md) value of the first different character is                           used for decision making:     **E.g.** "abc" is **less** than "abd", because in the first difference (the 3rd         character) the "c" has a lower [ASCII](ASCII.md) value than the "d".     This behavior may give you some subtle results, if you are not aware of                    the [ASCII](ASCII.md) values and the written case:     **E.g.** "abc" is **greater** than "abD", because the small letters have higher         [ASCII](ASCII.md) values than the capital letters, hence "c" > "D". You may use         [LCASE$](LCASE$.md) or [UCASE$](UCASE$.md) to make sure both strings have the same case.  
-```
-
-  
-
-  
-
-* [AND (boolean)](AND (boolean).md) "AND (boolean)") can be used to add extra conditions to a boolean statement evaluation.
-* [OR (boolean)](OR (boolean).md) "OR (boolean)") can be used to add alternate conditions to a boolean statement evaluation.
-* Parenthesis are allowed inside of boolean statements to clarify an evaluation.
-
-  
-
-  
-
-```                Table 4: The logical operations and its results.         In this table, **A** and **B** are the [Expressions](Expressions.md) to invert or combine.               Both may be results of former [Boolean](Boolean.md) evaluations.   ┌────────────────────────────────────────────────────────────────────────┐   │                           **Logical Operations**                           │   ├───────┬───────┬───────┬─────────┬────────┬─────────┬─────────┬─────────┤   │   **A**   │   **B**   │ [NOT](NOT.md) **B** │ **A** [AND](AND.md) **B** │ **A** [OR](OR.md) **B** │ **A** [XOR](XOR.md) **B** │ **A** [EQV](EQV.md) **B** │ **A** [IMP](IMP.md) **B** │   ├───────┼───────┼───────┼─────────┼────────┼─────────┼─────────┼─────────┤   │ **true**  │ **true**  │ false │  true   │ true   │  false  │  true   │  true   │   ├───────┼───────┼───────┼─────────┼────────┼─────────┼─────────┼─────────┤   │ **true**  │ **false** │ true  │  false  │ true   │  true   │  false  │  false  │   ├───────┼───────┼───────┼─────────┼────────┼─────────┼─────────┼─────────┤   │ **false** │ **true**  │ false │  false  │ true   │  true   │  false  │  true   │   ├───────┼───────┼───────┼─────────┼────────┼─────────┼─────────┼─────────┤   │ **false** │ **false** │ true  │  false  │ false  │  false  │  true   │  true   │   └───────┴───────┴───────┴─────────┴────────┴─────────┴─────────┴─────────┘    **Note:** In most BASIC languages incl. QB64 these are **bitwise** operations,          hence the logic is performed for each corresponding bit in both          operators, where **true** or **false** indicates whether a bit is **set** or          **not set**. The outcome of each bit is then placed into the respective          position to build the bit pattern of the final result value.     As all [Relational Operations](Relational Operations.md) return negative one (-1, **all bits set**) for     **true** and zero (0, **no bits set**) for **false**, this allows us to use these     bitwise logical operations to invert or combine any relational checks,     as the outcome is the same for each bit and so always results into a             **true** (-1) or **false** (0) again for further evaluations.  
-```
-
-  
-
-## Examples
-
-*Example 1:* In a one line IF statement, only [REM](REM.md) can be used to comment out the action without an [END IF](END IF.md) error:
-
-``` [INPUT](INPUT.md) "Enter a number over or under 100: ", x IF x > 100 [THEN](THEN.md) [PRINT](PRINT.md) x IF x > 100 [THEN](THEN.md) [REM](REM.md) [PRINT](PRINT.md) x  *'*  
-```
-
-  
-
-*Example 2:* IF statement blocks require that the IF THEN and END IF statements be separate from the code executed.
-
-``` [INPUT](INPUT.md) "Enter a number over or under 100: ", x IF x > 100 [THEN](THEN.md)   y = 200   [PRINT](PRINT.md) y   [PRINT](PRINT.md) x [END IF](END IF.md)  
-```
-
-  
-
-*Example 3:* True or False evaluation of a numerical value executes only when the value is not 0. **Cannot evaluate [STRING](STRING.md) values.**
-
-``` [INPUT](INPUT.md) "Enter a number or just hit Enter: ", x IF x [THEN](THEN.md) [PRINT](PRINT.md) x  
-```
-
-Example will only print if a numerical value is True (positive or negative). (Equivalent to: IF x > 0 OR x < 0 THEN evaluation)
-  
-
-*Example 4:* Multiple evaluations using parenthesis to determine the order.
-
-``` [INPUT](INPUT.md) "Enter a number over or under 100 or 50: ", value IF (value% > 100 [AND](AND.md) "AND (boolean)") value% < 200) [OR](OR.md) "OR (boolean)") value% = 50 [THEN](THEN.md) [PRINT](PRINT.md) "OK"  
-```
-
-  
-
-*Example 5:* Using multiple IF options in a one line statement.
-
-``` [INPUT](INPUT.md) "Enter a number over or under 200: ", x IF x > 200 [THEN](THEN.md) [PRINT](PRINT.md) "High" [ELSEIF](ELSEIF.md) x < 0 [THEN](THEN.md) [PRINT](PRINT.md) "Low" [ELSE](ELSE.md) [PRINT](PRINT.md) "OK"   
-```
-
-  
-
-*Example 6:* [STRING](STRING.md) values can be compared using greater than, less than, not equal to or equal to operators only.
-
-``` PRINT "Press a letter key: "; Key$ = [INPUT$](INPUT$.md)(1) PRINT Key$ IF Key$ >= [CHR$](CHR$.md)(65) AND Key$ <= [CHR$](CHR$.md)(90) THEN PRINT "A to Z"  
-```
-
-*Explanation:* Long [STRING](STRING.md) expression values are compared by their cumulative [ASCII](ASCII.md) code values.
-  
-
-* Floating decimal point numerical values may not be compared as exactly the same value. QB64 will compare them the same.
-
-*Example:* QBasic would print *unequal* in the IF comparison code below even though it is exactly the same value printed.
-
-``` x# = 5 / 10 y# = 6 / 10 z# = x# + y# [PRINT](PRINT.md) x#, y#, z# IF x# + y# = z# [THEN](THEN.md) [PRINT](PRINT.md) "equal" [ELSE](ELSE.md) [PRINT](PRINT.md) "unequal"  
-```
-
-Note: QB64 will make the calculation correctly and print *equal*. Change older program code that relies on the error accordingly.
-  
-
-## See also
-
-* [ELSEIF](ELSEIF.md), [ELSE](ELSE.md)
-* [AND (boolean)](AND (boolean).md) "AND (boolean)"), [OR (boolean)](OR (boolean).md) "OR (boolean)")
-* [NOT](NOT.md), [GOTO](GOTO.md)
-* [SELECT CASE](SELECT CASE.md)
-* [Boolean](Boolean.md) (numerical comparisons return a true or false value)
-
-  
+<style>pre.codeide, pre.outputfixed, .outputcrt0 { background-color: #000 !important; color: #FFF !important; }</style><!DOCTYPE html>
+<html class="client-nojs" dir="ltr" lang="en">
+<head>
+<title>IF...THEN - QB64 Phoenix Edition Wiki</title>
+</head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject page-IF_THEN rootpage-IF_THEN skin-vector action-view skin-vector-legacy vector-feature-language-in-header-enabled vector-feature-language-in-main-page-header-disabled vector-feature-language-alert-in-sidebar-disabled vector-feature-sticky-header-disabled vector-feature-sticky-header-edit-disabled vector-feature-table-of-contents-disabled vector-feature-visual-enhancement-next-disabled">
+<div class="mw-body" id="content" role="main">
+<a id="top"></a>
+<h1 class="firstHeading mw-first-heading" id="firstHeading"><span class="mw-page-title-main">IF...THEN</span></h1>
+<div class="vector-body" id="bodyContent">
+<div class="mw-body-content mw-content-ltr" dir="ltr" id="mw-content-text" lang="en"><div class="mw-parser-output"><p><a class="mw-selflink selflink">IF...THEN</a> statements make boolean (true or false) evaluations to automate program decision making.
+</p>
+<h2><span class="mw-headline" id="Syntax">Syntax</span></h2>
+<h3><span class="mw-headline" id="Single-line">Single-line</span></h3>
+<dl><dd><a class="mw-redirect" href="IF" title="IF">IF</a> <i>conditionStatement</i> <a href="THEN" title="THEN">THEN</a> <i>{code}</i> <a href="ELSE" title="ELSE">ELSE</a> <i>{alternativeCode}</i></dd>
+<dd><a class="mw-redirect" href="IF" title="IF">IF</a> <i>conditionStatement</i> <a href="GOTO" title="GOTO">GOTO</a> <i>lineLabel</i></dd></dl>
+<h3><span class="mw-headline" id="Block">Block</span></h3>
+<dl><dd><a class="mw-redirect" href="IF" title="IF">IF</a> <i>conditionStatement</i> <a href="THEN" title="THEN">THEN</a>
+<dl><dd><i>{code}</i></dd>
+<dd>⋮</dd></dl></dd>
+<dd><a href="ELSEIF" title="ELSEIF">ELSEIF</a> <i>conditionStatement2</i> <a href="THEN" title="THEN">THEN</a>
+<dl><dd><i>{code}</i></dd>
+<dd>⋮</dd></dl></dd>
+<dd><a href="ELSE" title="ELSE">ELSE</a>
+<dl><dd><i>{code}</i></dd>
+<dd>⋮</dd></dl></dd>
+<dd><a class="mw-redirect" href="END_IF" title="END IF">END IF</a></dd></dl>
+<p>
+</p>
+<h2><span class="mw-headline" id="Description">Description</span></h2>
+<ul><li>The <i>conditionStatement</i> evaluation by <a class="mw-redirect" href="IF" title="IF">IF</a> must be true (-1) or a <b>non-zero numerical value</b> for the <a href="THEN" title="THEN">THEN</a> <i>{code}</i> to be executed.</li>
+<li>Multiple conditional evaluations can be made using inclusive <a href="AND_(boolean)" title="AND (boolean)">AND</a> or alternative <a href="OR_(boolean)" title="OR (boolean)">OR</a> conditional expressions.</li>
+<li><a href="THEN" title="THEN">THEN</a> is not required when <a href="GOTO" title="GOTO">GOTO</a> is used to send program flow to a line number or label.</li>
+<li><a class="mw-redirect" href="IF" title="IF">IF</a> statements can also have alternative evaluations using <a href="ELSEIF" title="ELSEIF">ELSEIF</a> and <a href="ELSE" title="ELSE">ELSE</a> conditions.</li>
+<li>When the <a class="mw-redirect" href="IF" title="IF">IF</a> statement and/or code to be run is more than code line, an <a class="mw-redirect" href="END_IF" title="END IF">END IF</a> statement must be used.</li>
+<li>With multiple code lines to run, end the IF statement with THEN and place all of the code on lines below that line.</li>
+<li>Multiple code line block statements require that the <a class="mw-selflink selflink">IF...THEN</a>, <a href="ELSEIF" title="ELSEIF">ELSEIF</a>, <a href="ELSE" title="ELSE">ELSE</a> and <a class="mw-redirect" href="END_IF" title="END IF">END IF</a> be on separate lines.</li>
+<li><b>The IDE may return an error of <i><a href="NEXT" title="NEXT">NEXT</a> without <a href="FOR" title="FOR">FOR</a></i> or <i><a href="LOOP" title="LOOP">LOOP</a> without <a href="DO...LOOP" title="DO...LOOP">DO</a></i> when <a class="mw-redirect" href="END_IF" title="END IF">END IF</a> does not end a statement block.</b></li>
+<li>The <b>QB64</b> IDE will indicate an error in the IF statement line until END IF closes the statement block.</li>
+<li>Use <a href="Colon" title="Colon">colons</a> to execute multiple statements in a single-line IF statement.</li>
+<li>An <b><a href="Underscore" title="Underscore">underscore</a></b> can be used anywhere after the code on a single-line to continue it to the next line in <b>QB64</b>.</li>
+<li><b>NOTE:</b> <a href="STRING" title="STRING">STRING</a> values can only be evaluated in an IF statement if a value is compared to a literal or <a href="CHR$" title="CHR$">CHR$</a> string value. <b>QB64 may not compile literal IF string statements or indicate an IDE coding error.</b> Use <a href="LEN" title="LEN">LEN</a> or <a href="ASC_(function)" title="ASC (function)">ASC</a> to compare strings numerically.</li></ul>
+<p>
+</p>
+<table cellpadding="5px" width="100%">
+<tbody><tr>
+<td><pre class="outputfixed">         Table 3: The relational operations for condition checking.
+ In this table, <b>A</b> and <b>B</b> are the <a href="Expression" title="Expression">Expressions</a> to compare. Both must represent
+ the same general type, i.e. they must result into either numerical values
+ or <a href="STRING" title="STRING">STRING</a> values. If a test succeeds, then <b>true</b> (-1) is returned, <b>false</b> (0)
+     if it fails, which both can be used in further <a href="Boolean" title="Boolean">Boolean</a> evaluations.
+ ┌─────────────────────────────────────────────────────────────────────────┐
+ │                          <b><a href="Relational_Operations" title="Relational Operations">Relational Operations</a></b>                          │
+ ├────────────┬───────────────────────────────────────────┬────────────────┤
+ │ <b>Operation</b>  │                <b>Description</b>                │ <b>Example usage</b>  │
+ ├────────────┼───────────────────────────────────────────┼────────────────┤
+ │   A <a href="Equal" title="Equal">=</a> B    │ Tests if A is <b>equal</b> to B.                 │ <a class="mw-redirect" href="IF" title="IF">IF</a> A <a href="Equal" title="Equal">=</a> B <a href="THEN" title="THEN">THEN</a>  │
+ ├────────────┼───────────────────────────────────────────┼────────────────┤
+ │   A <a href="Not_Equal" title="Not Equal">&lt;&gt;</a> B   │ Tests if A is <b>not equal</b> to B.             │ <a class="mw-redirect" href="IF" title="IF">IF</a> A <a href="Not_Equal" title="Not Equal">&lt;&gt;</a> B <a href="THEN" title="THEN">THEN</a> │
+ ├────────────┼───────────────────────────────────────────┼────────────────┤
+ │   A <a href="Less_Than" title="Less Than">&lt;</a> B    │ Tests if A is <b>less than</b> B.                │ <a class="mw-redirect" href="IF" title="IF">IF</a> A <a href="Less_Than" title="Less Than">&lt;</a> B <a href="THEN" title="THEN">THEN</a>  │
+ ├────────────┼───────────────────────────────────────────┼────────────────┤
+ │   A <a href="Greater_Than" title="Greater Than">&gt;</a> B    │ Tests if A is <b>greater than</b> B.             │ <a class="mw-redirect" href="IF" title="IF">IF</a> A <a href="Greater_Than" title="Greater Than">&gt;</a> B <a href="THEN" title="THEN">THEN</a>  │
+ ├────────────┼───────────────────────────────────────────┼────────────────┤
+ │   A <a href="Less_Than_Or_Equal" title="Less Than Or Equal">&lt;=</a> B   │ Tests if A is <b>less than or equal</b> to B.    │ <a class="mw-redirect" href="IF" title="IF">IF</a> A <a href="Less_Than_Or_Equal" title="Less Than Or Equal">&lt;=</a> B <a href="THEN" title="THEN">THEN</a> │
+ ├────────────┼───────────────────────────────────────────┼────────────────┤
+ │   A <a href="Greater_Than_Or_Equal" title="Greater Than Or Equal">&gt;=</a> B   │ Tests if A is <b>greater than or equal</b> to B. │ <a class="mw-redirect" href="IF" title="IF">IF</a> A <a href="Greater_Than_Or_Equal" title="Greater Than Or Equal">&gt;=</a> B <a href="THEN" title="THEN">THEN</a> │
+ └────────────┴───────────────────────────────────────────┴────────────────┘
+   The operations should be very obvious for numerical values. For strings
+   be aware that all checks are done <b>case sensitive</b> (i.e. "Foo" &lt;&gt; "foo").
+   The <b>equal</b>/<b>not equal</b> check is pretty much straight forward, but for the
+   <b>less</b>/<b>greater</b> checks the <a href="ASCII" title="ASCII">ASCII</a> value of the first different character is
+                          used for decision making:
+   <b>E.g.</b> "abc" is <b>less</b> than "abd", because in the first difference (the 3rd
+        character) the "c" has a lower <a href="ASCII" title="ASCII">ASCII</a> value than the "d".
+   This behavior may give you some subtle results, if you are not aware of
+                   the <a href="ASCII" title="ASCII">ASCII</a> values and the written case:
+   <b>E.g.</b> "abc" is <b>greater</b> than "abD", because the small letters have higher
+        <a href="ASCII" title="ASCII">ASCII</a> values than the capital letters, hence "c" &gt; "D". You may use
+        <a href="LCASE$" title="LCASE$">LCASE$</a> or <a href="UCASE$" title="UCASE$">UCASE$</a> to make sure both strings have the same case.
+</pre>
+</td></tr></tbody></table>
+<p>
+</p>
+<p>
+</p>
+<dl><dd><dl><dd><dl><dd><dl><dd><dl><dd><ul><li><a href="AND_(boolean)" title="AND (boolean)">AND (boolean)</a> can be used to add extra conditions to a boolean statement evaluation.</li>
+<li><a href="OR_(boolean)" title="OR (boolean)">OR (boolean)</a> can be used to add alternate conditions to a boolean statement evaluation.</li>
+<li>Parenthesis are allowed inside of boolean statements to clarify an evaluation.</li></ul></dd></dl></dd></dl></dd></dl></dd></dl></dd></dl>
+<p>
+</p>
+<p>
+</p>
+<table cellpadding="5px" width="100%">
+<tbody><tr>
+<td><pre class="outputfixed">               Table 4: The logical operations and its results.
+       In this table, <b>A</b> and <b>B</b> are the <a href="Expression" title="Expression">Expressions</a> to invert or combine.
+              Both may be results of former <a href="Boolean" title="Boolean">Boolean</a> evaluations.
+  ┌────────────────────────────────────────────────────────────────────────┐
+  │                           <b>Logical Operations</b>                           │
+  ├───────┬───────┬───────┬─────────┬────────┬─────────┬─────────┬─────────┤
+  │   <b>A</b>   │   <b>B</b>   │ <a href="NOT" title="NOT">NOT</a> <b>B</b> │ <b>A</b> <a href="AND" title="AND">AND</a> <b>B</b> │ <b>A</b> <a href="OR" title="OR">OR</a> <b>B</b> │ <b>A</b> <a class="mw-redirect" href="XOR" title="XOR">XOR</a> <b>B</b> │ <b>A</b> <a href="EQV" title="EQV">EQV</a> <b>B</b> │ <b>A</b> <a href="IMP" title="IMP">IMP</a> <b>B</b> │
+  ├───────┼───────┼───────┼─────────┼────────┼─────────┼─────────┼─────────┤
+  │ <b>true</b>  │ <b>true</b>  │ false │  true   │ true   │  false  │  true   │  true   │
+  ├───────┼───────┼───────┼─────────┼────────┼─────────┼─────────┼─────────┤
+  │ <b>true</b>  │ <b>false</b> │ true  │  false  │ true   │  true   │  false  │  false  │
+  ├───────┼───────┼───────┼─────────┼────────┼─────────┼─────────┼─────────┤
+  │ <b>false</b> │ <b>true</b>  │ false │  false  │ true   │  true   │  false  │  true   │
+  ├───────┼───────┼───────┼─────────┼────────┼─────────┼─────────┼─────────┤
+  │ <b>false</b> │ <b>false</b> │ true  │  false  │ false  │  false  │  true   │  true   │
+  └───────┴───────┴───────┴─────────┴────────┴─────────┴─────────┴─────────┘
+   <b>Note:</b> In most BASIC languages incl. QB64 these are <b>bitwise</b> operations,
+         hence the logic is performed for each corresponding bit in both
+         operators, where <b>true</b> or <b>false</b> indicates whether a bit is <b>set</b> or
+         <b>not set</b>. The outcome of each bit is then placed into the respective
+         position to build the bit pattern of the final result value.
+   As all <a href="Relational_Operations" title="Relational Operations">Relational Operations</a> return negative one (-1, <b>all bits set</b>) for
+    <b>true</b> and zero (0, <b>no bits set</b>) for <b>false</b>, this allows us to use these
+    bitwise logical operations to invert or combine any relational checks,
+    as the outcome is the same for each bit and so always results into a
+            <b>true</b> (-1) or <b>false</b> (0) again for further evaluations.
+</pre>
+</td></tr></tbody></table>
+<p>
+</p>
+<h2><span class="mw-headline" id="Examples">Examples</span></h2>
+<p><i>Example 1:</i> In a one line IF statement, only <a href="REM" title="REM">REM</a> can be used to comment out the action without an <a class="mw-redirect" href="END_IF" title="END IF">END IF</a> error:
+</p>
+<table cellpadding="15px" width="100%">
+<tbody><tr>
+<td><pre class="codeide"><a href="INPUT" title="INPUT"><span style="color:#4593D8;">INPUT</span></a> "Enter a number over or under 100: ", x
+<a class="mw-selflink selflink"><span style="color:#4593D8;">IF</span></a> x &gt; 100 <a href="THEN" title="THEN"><span style="color:#4593D8;">THEN</span></a> <a href="PRINT" title="PRINT"><span style="color:#4593D8;">PRINT</span></a> x
+<a class="mw-selflink selflink"><span style="color:#4593D8;">IF</span></a> x &gt; 100 <a href="THEN" title="THEN"><span style="color:#4593D8;">THEN</span></a> <a href="REM" title="REM"><span style="color:#4593D8;">REM</span></a> <a href="PRINT" title="PRINT"><span style="color:#4593D8;">PRINT</span></a> x <i> '</i>
+</pre>
+</td></tr></tbody></table>
+<p>
+<i>Example 2:</i> IF statement blocks require that the IF THEN and END IF statements be separate from the code executed.
+</p>
+<table cellpadding="15px" width="100%">
+<tbody><tr>
+<td><pre class="codeide"><a href="INPUT" title="INPUT"><span style="color:#4593D8;">INPUT</span></a> "Enter a number over or under 100: ", x
+<a class="mw-selflink selflink"><span style="color:#4593D8;">IF</span></a> x &gt; 100 <a href="THEN" title="THEN"><span style="color:#4593D8;">THEN</span></a>
+  y = 200
+  <a href="PRINT" title="PRINT"><span style="color:#4593D8;">PRINT</span></a> y
+  <a href="PRINT" title="PRINT"><span style="color:#4593D8;">PRINT</span></a> x
+<a class="mw-redirect" href="END_IF" title="END IF"><span style="color:#4593D8;">END IF</span></a>
+</pre>
+</td></tr></tbody></table>
+<p>
+<i>Example 3:</i> True or False evaluation of a numerical value executes only when the value is not 0. <b>Cannot evaluate <a href="STRING" title="STRING">STRING</a> values.</b>
+</p>
+<table cellpadding="15px" width="100%">
+<tbody><tr>
+<td><pre class="codeide"><a href="INPUT" title="INPUT"><span style="color:#4593D8;">INPUT</span></a> "Enter a number or just hit Enter: ", x
+<a class="mw-selflink selflink"><span style="color:#4593D8;">IF</span></a> x <a href="THEN" title="THEN"><span style="color:#4593D8;">THEN</span></a> <a href="PRINT" title="PRINT"><span style="color:#4593D8;">PRINT</span></a> x
+</pre>
+</td></tr></tbody></table>
+<dl><dd>Example will only print if a numerical value is True (positive or negative). (Equivalent to: IF x &gt; 0 OR x &lt; 0 THEN evaluation)</dd></dl>
+<p>
+<i>Example 4:</i> Multiple evaluations using parenthesis to determine the order.
+</p>
+<table cellpadding="15px" width="100%">
+<tbody><tr>
+<td><pre class="codeide"><a href="INPUT" title="INPUT"><span style="color:#4593D8;">INPUT</span></a> "Enter a number over or under 100 or 50: ", value
+<a class="mw-selflink selflink"><span style="color:#4593D8;">IF</span></a> (value% &gt; 100 <a href="AND_(boolean)" title="AND (boolean)"><span style="color:#4593D8;">AND</span></a> value% &lt; 200) <a href="OR_(boolean)" title="OR (boolean)"><span style="color:#4593D8;">OR</span></a> value% = 50 <a href="THEN" title="THEN"><span style="color:#4593D8;">THEN</span></a> <a href="PRINT" title="PRINT"><span style="color:#4593D8;">PRINT</span></a> "OK"
+</pre>
+</td></tr></tbody></table>
+<p>
+<i>Example 5:</i> Using multiple IF options in a one line statement.
+</p>
+<table cellpadding="15px" width="100%">
+<tbody><tr>
+<td><pre class="codeide"><a href="INPUT" title="INPUT"><span style="color:#4593D8;">INPUT</span></a> "Enter a number over or under 200: ", x
+<a class="mw-selflink selflink"><span style="color:#4593D8;">IF</span></a> x &gt; 200 <a href="THEN" title="THEN"><span style="color:#4593D8;">THEN</span></a> <a href="PRINT" title="PRINT"><span style="color:#4593D8;">PRINT</span></a> "High" <span style="color:#4593D8;"><a href="ELSEIF" title="ELSEIF"><span style="color:#4593D8;">ELSEIF</span></a></span> x &lt; 0 <a href="THEN" title="THEN"><span style="color:#4593D8;">THEN</span></a> <a href="PRINT" title="PRINT"><span style="color:#4593D8;">PRINT</span></a> "Low" <span style="color:#4593D8;"><a href="ELSE" title="ELSE"><span style="color:#4593D8;">ELSE</span></a></span> <a href="PRINT" title="PRINT"><span style="color:#4593D8;">PRINT</span></a> "OK"
+</pre>
+</td></tr></tbody></table>
+<p>
+<i>Example 6:</i> <a href="STRING" title="STRING">STRING</a> values can be compared using greater than, less than, not equal to or equal to operators only.
+</p>
+<table cellpadding="15px" width="100%">
+<tbody><tr>
+<td><pre class="codeide">PRINT "Press a letter key: ";
+Key$ = <a href="INPUT$" title="INPUT$"><span style="color:#4593D8;">INPUT$</span></a>(1)
+PRINT Key$
+IF Key$ &gt;= <a href="CHR$" title="CHR$"><span style="color:#4593D8;">CHR$</span></a>(65) AND Key$ &lt;= <a href="CHR$" title="CHR$"><span style="color:#4593D8;">CHR$</span></a>(90) THEN PRINT "A to Z"
+</pre>
+</td></tr></tbody></table>
+<dl><dd><i>Explanation:</i> Long <a href="STRING" title="STRING">STRING</a> expression values are compared by their cumulative <a href="ASCII" title="ASCII">ASCII</a> code values.</dd></dl>
+<p>
+</p>
+<ul><li>Floating decimal point numerical values may not be compared as exactly the same value. QB64 will compare them the same.</li></ul>
+<dl><dd><i>Example:</i> QBasic would print <i>unequal</i> in the IF comparison code below even though it is exactly the same value printed.</dd></dl>
+<table cellpadding="15px" width="100%">
+<tbody><tr>
+<td><pre class="codeide">x# = 5 / 10
+y# = 6 / 10
+z# = x# + y#
+<a href="PRINT" title="PRINT"><span style="color:#4593D8;">PRINT</span></a> x#, y#, z#
+<a class="mw-selflink selflink"><span style="color:#4593D8;">IF</span></a> x# + y# = z# <a href="THEN" title="THEN"><span style="color:#4593D8;">THEN</span></a> <a href="PRINT" title="PRINT"><span style="color:#4593D8;">PRINT</span></a> "equal" <a href="ELSE" title="ELSE"><span style="color:#4593D8;">ELSE</span></a> <a href="PRINT" title="PRINT"><span style="color:#4593D8;">PRINT</span></a> "unequal"
+</pre>
+</td></tr></tbody></table>
+<dl><dd>Note: QB64 will make the calculation correctly and print <i>equal</i>. Change older program code that relies on the error accordingly.</dd></dl>
+<p>
+</p>
+<h2><span class="mw-headline" id="See_also">See also</span></h2>
+<ul><li><a href="ELSEIF" title="ELSEIF">ELSEIF</a>, <a href="ELSE" title="ELSE">ELSE</a></li>
+<li><a href="AND_(boolean)" title="AND (boolean)">AND (boolean)</a>, <a href="OR_(boolean)" title="OR (boolean)">OR (boolean)</a></li>
+<li><a href="NOT" title="NOT">NOT</a>, <a href="GOTO" title="GOTO">GOTO</a></li>
+<li><a href="SELECT_CASE" title="SELECT CASE">SELECT CASE</a></li>
+<li><a href="Boolean" title="Boolean">Boolean</a> <span style="color:#777777;">(numerical comparisons return a true or false value)</span></li></ul>
+<p>
+</p>
+<!-- 
+NewPP limit report
+Cached time: 20240714180352
+Cache expiry: 86400
+Reduced expiry: false
+Complications: [show‐toc]
+CPU time usage: 0.083 seconds
+Real time usage: 0.101 seconds
+Preprocessor visited node count: 404/1000000
+Post‐expand include size: 11681/2097152 bytes
+Template argument size: 762/2097152 bytes
+Highest expansion depth: 5/100
+Expensive parser function count: 0/100
+Unstrip recursion depth: 0/20
+Unstrip post‐expand size: 0/5000000 bytes
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%   52.122      1 -total
+ 18.59%    9.689      1 Template:RelationalOperationsPlugin
+ 10.46%    5.450     44 Template:Cl
+  8.94%    4.661      1 Template:LogicalTruthPlugin
+  8.08%    4.213      1 Template:PageDescription
+  6.50%    3.388      1 Template:PageSyntax
+  5.58%    2.908      5 Template:Parameter
+  5.43%    2.830      7 Template:CodeStart
+  5.42%    2.824      1 Template:PageSeeAlso
+  5.26%    2.743      1 Template:PageExamples
+-->
+<!-- Saved in parser cache with key qb64pnix_mw19894-mwmb_:pcache:idhash:380-0!canonical and timestamp 20240714180352 and revision id 8134.
+ -->
+</div>
+</div>
+</div>
+</div>
+</body>
+</html>

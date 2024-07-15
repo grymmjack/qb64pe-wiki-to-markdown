@@ -1,36 +1,117 @@
-# _glVertexPointer
-
-The **_glVertexPointer** statement defines an array of vertex data.
-
-  
-
-## Syntax
-
-_glVertexPointer GLint *size*, GLenum *type*, GLsizei *stride*, const GLvoid **pointer*
-  
-
-## Parameters
-
-* OpenGL is using its own set of variable types to describe its command parameters.
-* Use the following table to find the respective QB64 [Variable Types](Variable Types.md).
-
-```    Table 2: Relations between the OpenGL variable types vs. C/C++ and QB64.  ┌──────────────┬────────────────┬──────────────────────────────────────────┐  │    **OpenGL**    │     **C/C++**      │     **QB64**                                 │  ├──────────────┼────────────────┼──────────────────────────────────────────┤  │ GLenum       │ unsigned int   │ [_UNSIGNED](_UNSIGNED.md) [LONG](LONG.md)                           │  ├──────────────┼────────────────┼──────────────────────────────────────────┤  │ GLboolean    │ unsigned char  │ [_UNSIGNED](_UNSIGNED.md) [_BYTE](_BYTE.md)                          │  ├──────────────┼────────────────┼──────────────────────────────────────────┤  │ GLbitfield   │ unsigned int   │ [_UNSIGNED](_UNSIGNED.md) [LONG](LONG.md)                           │  ├──────────────┼────────────────┼──────────────────────────────────────────┤  │ GLbyte       │ signed char    │ [_BYTE](_BYTE.md)                                    │  ├──────────────┼────────────────┼──────────────────────────────────────────┤  │ GLshort      │ short          │ [INTEGER](INTEGER.md)                                  │  ├──────────────┼────────────────┼──────────────────────────────────────────┤  │ GLint        │ int            │ [LONG](LONG.md)                                     │  ├──────────────┼────────────────┼──────────────────────────────────────────┤  │ GLsizei      │ int            │ [LONG](LONG.md)                                     │  ├──────────────┼────────────────┼──────────────────────────────────────────┤  │ GLubyte      │ unsigned char  │ [_UNSIGNED](_UNSIGNED.md) [_BYTE](_BYTE.md)                          │  ├──────────────┼────────────────┼──────────────────────────────────────────┤  │ GLushort     │ unsigned short │ [_UNSIGNED](_UNSIGNED.md) [INTEGER](INTEGER.md)                        │  ├──────────────┼────────────────┼──────────────────────────────────────────┤  │ GLuint       │ unsigned int   │ [_UNSIGNED](_UNSIGNED.md) [LONG](LONG.md)                           │  ├──────────────┼────────────────┼──────────────────────────────────────────┤  │ GLfloat      │ float          │ [SINGLE](SINGLE.md)                                   │  ├──────────────┼────────────────┼──────────────────────────────────────────┤  │ GLclampf     │ float          │ [SINGLE](SINGLE.md)                                   │  ├──────────────┼────────────────┼──────────────────────────────────────────┤  │ GLdouble     │ double         │ [DOUBLE](DOUBLE.md)                                   │  ├──────────────┼────────────────┼──────────────────────────────────────────┤  │ GLclampd     │ double         │ [DOUBLE](DOUBLE.md)                                   │  ├──────────────┼────────────────┼──────────────────────────────────────────┤  │ GLvoid   **(1)** │ void           │ [_OFFSET](_OFFSET.md)(any fixed lenght string or [_BYTE](_BYTE.md) │  │              │                │         array element)                   │  └──────────────┴────────────────┴──────────────────────────────────────────┘  **Note:** If a parameter has an asterisk (*) in front, then it's a pointer to        the designated OpenGL variable type, rather than a value of that type.        Those must be passed using the [_OFFSET](_OFFSET.md)(...) notation.   **E.g.**  GLuint *anyParam is actually the offset of a [_UNSIGNED](_UNSIGNED.md) [LONG](LONG.md) (~&)        variable or array, which must be passed as [_OFFSET](_OFFSET.md)(anyVar~&) or        [_OFFSET](_OFFSET.md)(anyArr~&()) respectively.    **(1)**  This type is regularly only used for pointers (with asterisk (*)) to        any byte sized memory data, hence [_BYTE](_BYTE.md) or fixed length strings.  
-```
-
-  
-
-## Description
-
-* OpenGL's documentation is available in several places, so we won't reproduce it here for another time.
-* The full description for this command can be found at [Microsoft Docs](Microsoft Docs.md) and is also valid for QB64 usage.
-
-  
-
-## See also
-
-* [SUB _GL](SUB _GL.md)
-* [_glArrayElement](_glArrayElement.md), [_glColorPointer](_glColorPointer.md), [_glDrawArrays](_glDrawArrays.md), [_glEdgeFlagPointer](_glEdgeFlagPointer.md)
-* [_glEnableClientState](_glEnableClientState.md), [_glGetPointerv](_glGetPointerv.md), [_glGetString](_glGetString.md), [_glIndexPointer](_glIndexPointer.md)
-* [_glIsEnabled](_glIsEnabled.md), [_glNormalPointer](_glNormalPointer.md), [_glTexCoordPointer](_glTexCoordPointer.md)
-
-  
+<style>pre.codeide, pre.outputfixed, .outputcrt0 { background-color: #000 !important; color: #FFF !important; }</style><!DOCTYPE html>
+<html class="client-nojs" dir="ltr" lang="en">
+<head>
+<title>_glVertexPointer - QB64 Phoenix Edition Wiki</title>
+</head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject page-GlVertexPointer rootpage-GlVertexPointer skin-vector action-view skin-vector-legacy vector-feature-language-in-header-enabled vector-feature-language-in-main-page-header-disabled vector-feature-language-alert-in-sidebar-disabled vector-feature-sticky-header-disabled vector-feature-sticky-header-edit-disabled vector-feature-table-of-contents-disabled vector-feature-visual-enhancement-next-disabled">
+<div class="mw-body" id="content" role="main">
+<a id="top"></a>
+<h1 class="firstHeading mw-first-heading" id="firstHeading">_glVertexPointer</h1>
+<div class="vector-body" id="bodyContent">
+<div class="mw-body-content mw-content-ltr" dir="ltr" id="mw-content-text" lang="en"><div class="mw-parser-output"><p>The <b>_glVertexPointer</b> statement defines an array of vertex data.
+</p>
+<h2><span class="mw-headline" id="Syntax">Syntax</span></h2>
+<dl><dd><a class="mw-selflink selflink">_glVertexPointer</a> GLint <i>size</i>, GLenum <i>type</i>, GLsizei <i>stride</i>, const GLvoid <i>*pointer</i></dd></dl>
+<p>
+</p>
+<h2><span class="mw-headline" id="Parameters">Parameters</span></h2>
+<ul><li>OpenGL is using its own set of variable types to describe its command parameters.</li>
+<li>Use the following table to find the respective QB64 <a href="Variable_Types" title="Variable Types">Variable Types</a>.</li></ul>
+<table cellpadding="5px" width="100%">
+<tbody><tr>
+<td><pre class="outputfixed">   Table 2: Relations between the OpenGL variable types vs. C/C++ and QB64.
+ ┌──────────────┬────────────────┬──────────────────────────────────────────┐
+ │    <b>OpenGL</b>    │     <b>C/C++</b>      │     <b>QB64</b>                                 │
+ ├──────────────┼────────────────┼──────────────────────────────────────────┤
+ │ GLenum       │ unsigned int   │ <a href="UNSIGNED" title="UNSIGNED">_UNSIGNED</a> <a href="LONG" title="LONG">LONG</a>                           │
+ ├──────────────┼────────────────┼──────────────────────────────────────────┤
+ │ GLboolean    │ unsigned char  │ <a href="UNSIGNED" title="UNSIGNED">_UNSIGNED</a> <a href="BYTE" title="BYTE">_BYTE</a>                          │
+ ├──────────────┼────────────────┼──────────────────────────────────────────┤
+ │ GLbitfield   │ unsigned int   │ <a href="UNSIGNED" title="UNSIGNED">_UNSIGNED</a> <a href="LONG" title="LONG">LONG</a>                           │
+ ├──────────────┼────────────────┼──────────────────────────────────────────┤
+ │ GLbyte       │ signed char    │ <a href="BYTE" title="BYTE">_BYTE</a>                                    │
+ ├──────────────┼────────────────┼──────────────────────────────────────────┤
+ │ GLshort      │ short          │ <a href="INTEGER" title="INTEGER">INTEGER</a>                                  │
+ ├──────────────┼────────────────┼──────────────────────────────────────────┤
+ │ GLint        │ int            │ <a href="LONG" title="LONG">LONG</a>                                     │
+ ├──────────────┼────────────────┼──────────────────────────────────────────┤
+ │ GLsizei      │ int            │ <a href="LONG" title="LONG">LONG</a>                                     │
+ ├──────────────┼────────────────┼──────────────────────────────────────────┤
+ │ GLubyte      │ unsigned char  │ <a href="UNSIGNED" title="UNSIGNED">_UNSIGNED</a> <a href="BYTE" title="BYTE">_BYTE</a>                          │
+ ├──────────────┼────────────────┼──────────────────────────────────────────┤
+ │ GLushort     │ unsigned short │ <a href="UNSIGNED" title="UNSIGNED">_UNSIGNED</a> <a href="INTEGER" title="INTEGER">INTEGER</a>                        │
+ ├──────────────┼────────────────┼──────────────────────────────────────────┤
+ │ GLuint       │ unsigned int   │ <a href="UNSIGNED" title="UNSIGNED">_UNSIGNED</a> <a href="LONG" title="LONG">LONG</a>                           │
+ ├──────────────┼────────────────┼──────────────────────────────────────────┤
+ │ GLfloat      │ float          │ <a href="SINGLE" title="SINGLE">SINGLE</a>                                   │
+ ├──────────────┼────────────────┼──────────────────────────────────────────┤
+ │ GLclampf     │ float          │ <a href="SINGLE" title="SINGLE">SINGLE</a>                                   │
+ ├──────────────┼────────────────┼──────────────────────────────────────────┤
+ │ GLdouble     │ double         │ <a href="DOUBLE" title="DOUBLE">DOUBLE</a>                                   │
+ ├──────────────┼────────────────┼──────────────────────────────────────────┤
+ │ GLclampd     │ double         │ <a href="DOUBLE" title="DOUBLE">DOUBLE</a>                                   │
+ ├──────────────┼────────────────┼──────────────────────────────────────────┤
+ │ GLvoid   <b>(1)</b> │ void           │ <a href="OFFSET" title="OFFSET">_OFFSET</a>(any fixed lenght string or <a href="BYTE" title="BYTE">_BYTE</a> │
+ │              │                │         array element)                   │
+ └──────────────┴────────────────┴──────────────────────────────────────────┘
+ <b>Note:</b> If a parameter has an asterisk (*) in front, then it's a pointer to
+       the designated OpenGL variable type, rather than a value of that type.
+       Those must be passed using the <a href="OFFSET" title="OFFSET">_OFFSET</a>(...) notation.
+ <b>E.g.</b>  GLuint *anyParam is actually the offset of a <a href="UNSIGNED" title="UNSIGNED">_UNSIGNED</a> <a href="LONG" title="LONG">LONG</a> (~&amp;)
+       variable or array, which must be passed as <a href="OFFSET" title="OFFSET">_OFFSET</a>(anyVar~&amp;) or
+       <a href="OFFSET" title="OFFSET">_OFFSET</a>(anyArr~&amp;()) respectively.
+  <b>(1)</b>  This type is regularly only used for pointers (with asterisk (*)) to
+       any byte sized memory data, hence <a href="BYTE" title="BYTE">_BYTE</a> or fixed length strings.
+</pre>
+</td></tr></tbody></table>
+<p>
+</p>
+<h2><span class="mw-headline" id="Description">Description</span></h2>
+<ul><li>OpenGL's documentation is available in several places, so we won't reproduce it here for another time.</li>
+<li>The full description for this command can be found at <a class="external text" href="https://learn.microsoft.com/en-us/windows/win32/opengl/glvertexpointer" rel="nofollow">Microsoft Docs</a> and is also valid for QB64 usage.</li></ul>
+<p>
+</p>
+<h2><span class="mw-headline" id="See_also">See also</span></h2>
+<ul><li><a href="GL" title="GL">SUB _GL</a></li>
+<li><a href="GlArrayElement" title="GlArrayElement">_glArrayElement</a>, <a href="GlColorPointer" title="GlColorPointer">_glColorPointer</a>, <a href="GlDrawArrays" title="GlDrawArrays">_glDrawArrays</a>, <a href="GlEdgeFlagPointer" title="GlEdgeFlagPointer">_glEdgeFlagPointer</a></li>
+<li><a href="GlEnableClientState" title="GlEnableClientState">_glEnableClientState</a>, <a href="GlGetPointerv" title="GlGetPointerv">_glGetPointerv</a>, <a href="GlGetString" title="GlGetString">_glGetString</a>, <a href="GlIndexPointer" title="GlIndexPointer">_glIndexPointer</a></li>
+<li><a href="GlIsEnabled" title="GlIsEnabled">_glIsEnabled</a>, <a href="GlNormalPointer" title="GlNormalPointer">_glNormalPointer</a>, <a href="GlTexCoordPointer" title="GlTexCoordPointer">_glTexCoordPointer</a></li></ul>
+<p>
+</p>
+<!-- 
+NewPP limit report
+Cached time: 20240714212508
+Cache expiry: 86400
+Reduced expiry: false
+Complications: [show‐toc]
+CPU time usage: 0.033 seconds
+Real time usage: 0.045 seconds
+Preprocessor visited node count: 39/1000000
+Post‐expand include size: 6917/2097152 bytes
+Template argument size: 22/2097152 bytes
+Highest expansion depth: 3/100
+Expensive parser function count: 0/100
+Unstrip recursion depth: 0/20
+Unstrip post‐expand size: 0/5000000 bytes
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%   26.703      1 -total
+ 28.90%    7.718      1 Template:OpenGLTypesPlugin
+ 17.99%    4.804      1 Template:PageSeeAlso
+ 11.57%    3.090      1 Template:PageSyntax
+  9.84%    2.627      4 Template:Parameter
+  9.69%    2.588      1 Template:PageNavigation
+  9.21%    2.458      1 Template:PageParameters
+  8.58%    2.291      1 Template:FixedStart
+  8.51%    2.273      1 Template:PageDescription
+  8.44%    2.255      1 Template:FixedEnd
+-->
+<!-- Saved in parser cache with key qb64pnix_mw19894-mwmb_:pcache:idhash:1145-0!canonical and timestamp 20240714212508 and revision id 7111.
+ -->
+</div>
+</div>
+</div>
+</div>
+</body>
+</html>

@@ -1,25 +1,62 @@
-# _ACOSH
-
-The _ACOSH returns the nonnegative arc hyperbolic cosine of *x!*, expressed in radians.
-
-  
-
-## Syntax
-
-*return_value!* = _ACOSH(*x!*)
-  
-
-## See also
-
-* [_D2G](_D2G.md) (degree to gradient, [_D2R](_D2R.md) (degree to radian)
-* [_G2D](_G2D.md) (gradient to degree), [_G2R](_G2R.md) (gradient to degree)
-* [_R2D](_R2D.md) (radian to degree), [_R2G](_R2G.md) (radian to gradient)
-* [COS](COS.md) (cosine), [SIN](SIN.md) (sine), [TAN](TAN.md) (tangent)
-* [_ACOS](_ACOS.md) (arc cosine), [_ASIN](_ASIN.md) (arc sine), [ATN](ATN.md) (arc tangent)
-* [_ASINH](_ASINH.md) (arc hyperbolic sine), [_ATANH](_ATANH.md) (arc hyperbolic tangent)
-* [_ATAN2](_ATAN2.md) (Compute arc tangent with two parameters)
-* [_HYPOT](_HYPOT.md) (hypotenuse)
-* [Mathematical Operations](Mathematical Operations.md)
-* [Derived Mathematical Functions](Derived Mathematical Functions.md)
-
-  
+<style>pre.codeide, pre.outputfixed, .outputcrt0 { background-color: #000 !important; color: #FFF !important; }</style><!DOCTYPE html>
+<html class="client-nojs" dir="ltr" lang="en">
+<head>
+<title>_ACOSH - QB64 Phoenix Edition Wiki</title>
+</head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject page-ACOSH rootpage-ACOSH skin-vector action-view skin-vector-legacy vector-feature-language-in-header-enabled vector-feature-language-in-main-page-header-disabled vector-feature-language-alert-in-sidebar-disabled vector-feature-sticky-header-disabled vector-feature-sticky-header-edit-disabled vector-feature-table-of-contents-disabled vector-feature-visual-enhancement-next-disabled">
+<div class="mw-body" id="content" role="main">
+<a id="top"></a>
+<h1 class="firstHeading mw-first-heading" id="firstHeading">_ACOSH</h1>
+<div class="vector-body" id="bodyContent">
+<div class="mw-body-content mw-content-ltr" dir="ltr" id="mw-content-text" lang="en"><div class="mw-parser-output"><p>The <a class="mw-selflink selflink">_ACOSH</a> returns the nonnegative arc hyperbolic cosine of <i>x!</i>, expressed in radians.
+</p>
+<h2><span class="mw-headline" id="Syntax">Syntax</span></h2>
+<dl><dd><i>return_value!</i> = <a class="mw-selflink selflink">_ACOSH</a>(<i>x!</i>)</dd></dl>
+<p>
+</p>
+<h2><span class="mw-headline" id="See_also">See also</span></h2>
+<ul><li><a href="D2G" title="D2G">_D2G</a> <span style="color:#777777;">(degree to gradient</span>, <a href="D2R" title="D2R">_D2R</a> <span style="color:#777777;">(degree to radian)</span></li>
+<li><a href="G2D" title="G2D">_G2D</a> <span style="color:#777777;">(gradient to degree)</span>, <a href="G2R" title="G2R">_G2R</a> <span style="color:#777777;">(gradient to degree)</span></li>
+<li><a href="R2D" title="R2D">_R2D</a> <span style="color:#777777;">(radian to degree)</span>, <a href="R2G" title="R2G">_R2G</a> <span style="color:#777777;">(radian to gradient)</span></li>
+<li><a href="COS" title="COS">COS</a> <span style="color:#777777;">(cosine)</span>, <a href="SIN" title="SIN">SIN</a> <span style="color:#777777;">(sine)</span>, <a href="TAN" title="TAN">TAN</a> <span style="color:#777777;">(tangent)</span></li>
+<li><a href="ACOS" title="ACOS">_ACOS</a> <span style="color:#777777;">(arc cosine)</span>, <a href="ASIN" title="ASIN">_ASIN</a> <span style="color:#777777;">(arc sine)</span>, <a href="ATN" title="ATN">ATN</a> <span style="color:#777777;">(arc tangent)</span></li>
+<li><a href="ASINH" title="ASINH">_ASINH</a> <span style="color:#777777;">(arc hyperbolic  sine)</span>, <a href="ATANH" title="ATANH">_ATANH</a> <span style="color:#777777;">(arc hyperbolic  tangent)</span></li>
+<li><a href="ATAN2" title="ATAN2">_ATAN2</a> <span style="color:#777777;">(Compute arc tangent with two parameters)</span></li>
+<li><a href="HYPOT" title="HYPOT">_HYPOT</a> <span style="color:#777777;">(hypotenuse)</span></li>
+<li><a href="Mathematical_Operations" title="Mathematical Operations">Mathematical Operations</a></li>
+<li><a href="Mathematical_Operations#Derived_Mathematical_Functions" title="Mathematical Operations">Derived Mathematical Functions</a></li></ul>
+<p>
+</p>
+<!-- 
+NewPP limit report
+Cached time: 20240715062235
+Cache expiry: 86400
+Reduced expiry: false
+Complications: [show‐toc]
+CPU time usage: 0.025 seconds
+Real time usage: 0.032 seconds
+Preprocessor visited node count: 118/1000000
+Post‐expand include size: 1383/2097152 bytes
+Template argument size: 290/2097152 bytes
+Highest expansion depth: 3/100
+Expensive parser function count: 0/100
+Unstrip recursion depth: 0/20
+Unstrip post‐expand size: 0/5000000 bytes
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%   16.546      1 -total
+ 19.80%    3.276     16 Template:Text
+ 18.54%    3.067      3 Template:Parameter
+ 17.07%    2.825      1 Template:PageNavigation
+ 15.49%    2.563      1 Template:PageSyntax
+ 14.79%    2.448      1 Template:PageSeeAlso
+-->
+<!-- Saved in parser cache with key qb64pnix_mw19894-mwmb_:pcache:idhash:38-0!canonical and timestamp 20240715062235 and revision id 7805.
+ -->
+</div>
+</div>
+</div>
+</div>
+</body>
+</html>

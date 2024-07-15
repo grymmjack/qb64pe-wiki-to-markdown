@@ -1,44 +1,125 @@
-# _glDisable
-
-The **_glEnable** and **_glDisable** statements enable or disable OpenGL capabilities.
-
-  
-
-## Syntax
-
-_glDisable GLenum *cap*
-  
-
-## Parameters
-
-* OpenGL is using its own set of variable types to describe its command parameters.
-* Use the following table to find the respective QB64 [Variable Types](Variable Types.md).
-
-```    Table 2: Relations between the OpenGL variable types vs. C/C++ and QB64.  ┌──────────────┬────────────────┬──────────────────────────────────────────┐  │    **OpenGL**    │     **C/C++**      │     **QB64**                                 │  ├──────────────┼────────────────┼──────────────────────────────────────────┤  │ GLenum       │ unsigned int   │ [_UNSIGNED](_UNSIGNED.md) [LONG](LONG.md)                           │  ├──────────────┼────────────────┼──────────────────────────────────────────┤  │ GLboolean    │ unsigned char  │ [_UNSIGNED](_UNSIGNED.md) [_BYTE](_BYTE.md)                          │  ├──────────────┼────────────────┼──────────────────────────────────────────┤  │ GLbitfield   │ unsigned int   │ [_UNSIGNED](_UNSIGNED.md) [LONG](LONG.md)                           │  ├──────────────┼────────────────┼──────────────────────────────────────────┤  │ GLbyte       │ signed char    │ [_BYTE](_BYTE.md)                                    │  ├──────────────┼────────────────┼──────────────────────────────────────────┤  │ GLshort      │ short          │ [INTEGER](INTEGER.md)                                  │  ├──────────────┼────────────────┼──────────────────────────────────────────┤  │ GLint        │ int            │ [LONG](LONG.md)                                     │  ├──────────────┼────────────────┼──────────────────────────────────────────┤  │ GLsizei      │ int            │ [LONG](LONG.md)                                     │  ├──────────────┼────────────────┼──────────────────────────────────────────┤  │ GLubyte      │ unsigned char  │ [_UNSIGNED](_UNSIGNED.md) [_BYTE](_BYTE.md)                          │  ├──────────────┼────────────────┼──────────────────────────────────────────┤  │ GLushort     │ unsigned short │ [_UNSIGNED](_UNSIGNED.md) [INTEGER](INTEGER.md)                        │  ├──────────────┼────────────────┼──────────────────────────────────────────┤  │ GLuint       │ unsigned int   │ [_UNSIGNED](_UNSIGNED.md) [LONG](LONG.md)                           │  ├──────────────┼────────────────┼──────────────────────────────────────────┤  │ GLfloat      │ float          │ [SINGLE](SINGLE.md)                                   │  ├──────────────┼────────────────┼──────────────────────────────────────────┤  │ GLclampf     │ float          │ [SINGLE](SINGLE.md)                                   │  ├──────────────┼────────────────┼──────────────────────────────────────────┤  │ GLdouble     │ double         │ [DOUBLE](DOUBLE.md)                                   │  ├──────────────┼────────────────┼──────────────────────────────────────────┤  │ GLclampd     │ double         │ [DOUBLE](DOUBLE.md)                                   │  ├──────────────┼────────────────┼──────────────────────────────────────────┤  │ GLvoid   **(1)** │ void           │ [_OFFSET](_OFFSET.md)(any fixed lenght string or [_BYTE](_BYTE.md) │  │              │                │         array element)                   │  └──────────────┴────────────────┴──────────────────────────────────────────┘  **Note:** If a parameter has an asterisk (*) in front, then it's a pointer to        the designated OpenGL variable type, rather than a value of that type.        Those must be passed using the [_OFFSET](_OFFSET.md)(...) notation.   **E.g.**  GLuint *anyParam is actually the offset of a [_UNSIGNED](_UNSIGNED.md) [LONG](LONG.md) (~&)        variable or array, which must be passed as [_OFFSET](_OFFSET.md)(anyVar~&) or        [_OFFSET](_OFFSET.md)(anyArr~&()) respectively.    **(1)**  This type is regularly only used for pointers (with asterisk (*)) to        any byte sized memory data, hence [_BYTE](_BYTE.md) or fixed length strings.  
-```
-
-  
-
-## Description
-
-* OpenGL's documentation is available in several places, so we won't reproduce it here for another time.
-* The full description for this command can be found at [Microsoft Docs](Microsoft Docs.md) and is also valid for QB64 usage.
-
-  
-
-## See also
-
-* [SUB _GL](SUB _GL.md)
-* [_glAlphaFunc](_glAlphaFunc.md), [_glArrayElement](_glArrayElement.md), [_glBegin](_glBegin.md), [_glBlendFunc](_glBlendFunc.md)
-* [_glClipPlane](_glClipPlane.md), [_glColorMaterial](_glColorMaterial.md), [_glColorPointer](_glColorPointer.md), [_glCullFace](_glCullFace.md)
-* [_glDepthFunc](_glDepthFunc.md), [_glDepthRange](_glDepthRange.md), [_glDrawArrays](_glDrawArrays.md), [_glEdgeFlagPointer](_glEdgeFlagPointer.md)
-* [_glEnable](_glEnable.md), [_glEnd](_glEnd.md), [_glEvalCoord](_glEvalCoord.md), [_glEvalMesh](_glEvalMesh.md)
-* [_glEvalPoint](_glEvalPoint.md), [_glFog](_glFog.md), [_glGet](_glGet.md), [_glIndexPointer](_glIndexPointer.md)
-* [_glIsEnabled](_glIsEnabled.md), [_glLight](_glLight.md), [_glLightModel](_glLightModel.md), [_glLineWidth](_glLineWidth.md)
-* [_glLineStipple](_glLineStipple.md), [_glLogicOp](_glLogicOp.md), [_glMap1](_glMap1.md), [_glMap2](_glMap2.md)
-* [_glMaterial](_glMaterial.md), [_glNormal](_glNormal.md), [_glNormalPointer](_glNormalPointer.md), [_glPointSize](_glPointSize.md)
-* [_glPolygonMode](_glPolygonMode.md), [_glPolygonStipple](_glPolygonStipple.md), [_glScissor](_glScissor.md), [_glStencilFunc](_glStencilFunc.md)
-* [_glStencilOp](_glStencilOp.md), [_glTexCoordPointer](_glTexCoordPointer.md), [_glTexGen](_glTexGen.md), [_glTexImage1D](_glTexImage1D.md)
-* [_glTexImage2D](_glTexImage2D.md)
-
-  
+<style>pre.codeide, pre.outputfixed, .outputcrt0 { background-color: #000 !important; color: #FFF !important; }</style><!DOCTYPE html>
+<html class="client-nojs" dir="ltr" lang="en">
+<head>
+<title>_glDisable - QB64 Phoenix Edition Wiki</title>
+</head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject page-GlDisable rootpage-GlDisable skin-vector action-view skin-vector-legacy vector-feature-language-in-header-enabled vector-feature-language-in-main-page-header-disabled vector-feature-language-alert-in-sidebar-disabled vector-feature-sticky-header-disabled vector-feature-sticky-header-edit-disabled vector-feature-table-of-contents-disabled vector-feature-visual-enhancement-next-disabled">
+<div class="mw-body" id="content" role="main">
+<a id="top"></a>
+<h1 class="firstHeading mw-first-heading" id="firstHeading">_glDisable</h1>
+<div class="vector-body" id="bodyContent">
+<div class="mw-body-content mw-content-ltr" dir="ltr" id="mw-content-text" lang="en"><div class="mw-parser-output"><p>The <b>_glEnable</b> and <b>_glDisable</b> statements enable or disable OpenGL capabilities.
+</p>
+<h2><span class="mw-headline" id="Syntax">Syntax</span></h2>
+<dl><dd><a class="mw-selflink selflink">_glDisable</a> GLenum <i>cap</i></dd></dl>
+<p>
+</p>
+<h2><span class="mw-headline" id="Parameters">Parameters</span></h2>
+<ul><li>OpenGL is using its own set of variable types to describe its command parameters.</li>
+<li>Use the following table to find the respective QB64 <a href="Variable_Types" title="Variable Types">Variable Types</a>.</li></ul>
+<table cellpadding="5px" width="100%">
+<tbody><tr>
+<td><pre class="outputfixed">   Table 2: Relations between the OpenGL variable types vs. C/C++ and QB64.
+ ┌──────────────┬────────────────┬──────────────────────────────────────────┐
+ │    <b>OpenGL</b>    │     <b>C/C++</b>      │     <b>QB64</b>                                 │
+ ├──────────────┼────────────────┼──────────────────────────────────────────┤
+ │ GLenum       │ unsigned int   │ <a href="UNSIGNED" title="UNSIGNED">_UNSIGNED</a> <a href="LONG" title="LONG">LONG</a>                           │
+ ├──────────────┼────────────────┼──────────────────────────────────────────┤
+ │ GLboolean    │ unsigned char  │ <a href="UNSIGNED" title="UNSIGNED">_UNSIGNED</a> <a href="BYTE" title="BYTE">_BYTE</a>                          │
+ ├──────────────┼────────────────┼──────────────────────────────────────────┤
+ │ GLbitfield   │ unsigned int   │ <a href="UNSIGNED" title="UNSIGNED">_UNSIGNED</a> <a href="LONG" title="LONG">LONG</a>                           │
+ ├──────────────┼────────────────┼──────────────────────────────────────────┤
+ │ GLbyte       │ signed char    │ <a href="BYTE" title="BYTE">_BYTE</a>                                    │
+ ├──────────────┼────────────────┼──────────────────────────────────────────┤
+ │ GLshort      │ short          │ <a href="INTEGER" title="INTEGER">INTEGER</a>                                  │
+ ├──────────────┼────────────────┼──────────────────────────────────────────┤
+ │ GLint        │ int            │ <a href="LONG" title="LONG">LONG</a>                                     │
+ ├──────────────┼────────────────┼──────────────────────────────────────────┤
+ │ GLsizei      │ int            │ <a href="LONG" title="LONG">LONG</a>                                     │
+ ├──────────────┼────────────────┼──────────────────────────────────────────┤
+ │ GLubyte      │ unsigned char  │ <a href="UNSIGNED" title="UNSIGNED">_UNSIGNED</a> <a href="BYTE" title="BYTE">_BYTE</a>                          │
+ ├──────────────┼────────────────┼──────────────────────────────────────────┤
+ │ GLushort     │ unsigned short │ <a href="UNSIGNED" title="UNSIGNED">_UNSIGNED</a> <a href="INTEGER" title="INTEGER">INTEGER</a>                        │
+ ├──────────────┼────────────────┼──────────────────────────────────────────┤
+ │ GLuint       │ unsigned int   │ <a href="UNSIGNED" title="UNSIGNED">_UNSIGNED</a> <a href="LONG" title="LONG">LONG</a>                           │
+ ├──────────────┼────────────────┼──────────────────────────────────────────┤
+ │ GLfloat      │ float          │ <a href="SINGLE" title="SINGLE">SINGLE</a>                                   │
+ ├──────────────┼────────────────┼──────────────────────────────────────────┤
+ │ GLclampf     │ float          │ <a href="SINGLE" title="SINGLE">SINGLE</a>                                   │
+ ├──────────────┼────────────────┼──────────────────────────────────────────┤
+ │ GLdouble     │ double         │ <a href="DOUBLE" title="DOUBLE">DOUBLE</a>                                   │
+ ├──────────────┼────────────────┼──────────────────────────────────────────┤
+ │ GLclampd     │ double         │ <a href="DOUBLE" title="DOUBLE">DOUBLE</a>                                   │
+ ├──────────────┼────────────────┼──────────────────────────────────────────┤
+ │ GLvoid   <b>(1)</b> │ void           │ <a href="OFFSET" title="OFFSET">_OFFSET</a>(any fixed lenght string or <a href="BYTE" title="BYTE">_BYTE</a> │
+ │              │                │         array element)                   │
+ └──────────────┴────────────────┴──────────────────────────────────────────┘
+ <b>Note:</b> If a parameter has an asterisk (*) in front, then it's a pointer to
+       the designated OpenGL variable type, rather than a value of that type.
+       Those must be passed using the <a href="OFFSET" title="OFFSET">_OFFSET</a>(...) notation.
+ <b>E.g.</b>  GLuint *anyParam is actually the offset of a <a href="UNSIGNED" title="UNSIGNED">_UNSIGNED</a> <a href="LONG" title="LONG">LONG</a> (~&amp;)
+       variable or array, which must be passed as <a href="OFFSET" title="OFFSET">_OFFSET</a>(anyVar~&amp;) or
+       <a href="OFFSET" title="OFFSET">_OFFSET</a>(anyArr~&amp;()) respectively.
+  <b>(1)</b>  This type is regularly only used for pointers (with asterisk (*)) to
+       any byte sized memory data, hence <a href="BYTE" title="BYTE">_BYTE</a> or fixed length strings.
+</pre>
+</td></tr></tbody></table>
+<p>
+</p>
+<h2><span class="mw-headline" id="Description">Description</span></h2>
+<ul><li>OpenGL's documentation is available in several places, so we won't reproduce it here for another time.</li>
+<li>The full description for this command can be found at <a class="external text" href="https://learn.microsoft.com/en-us/windows/win32/opengl/gldisable" rel="nofollow">Microsoft Docs</a> and is also valid for QB64 usage.</li></ul>
+<p>
+</p>
+<h2><span class="mw-headline" id="See_also">See also</span></h2>
+<ul><li><a href="GL" title="GL">SUB _GL</a></li>
+<li><a href="GlAlphaFunc" title="GlAlphaFunc">_glAlphaFunc</a>, <a href="GlArrayElement" title="GlArrayElement">_glArrayElement</a>, <a href="GlBegin" title="GlBegin">_glBegin</a>, <a href="GlBlendFunc" title="GlBlendFunc">_glBlendFunc</a></li>
+<li><a href="GlClipPlane" title="GlClipPlane">_glClipPlane</a>, <a href="GlColorMaterial" title="GlColorMaterial">_glColorMaterial</a>, <a href="GlColorPointer" title="GlColorPointer">_glColorPointer</a>, <a href="GlCullFace" title="GlCullFace">_glCullFace</a></li>
+<li><a href="GlDepthFunc" title="GlDepthFunc">_glDepthFunc</a>, <a href="GlDepthRange" title="GlDepthRange">_glDepthRange</a>, <a href="GlDrawArrays" title="GlDrawArrays">_glDrawArrays</a>, <a href="GlEdgeFlagPointer" title="GlEdgeFlagPointer">_glEdgeFlagPointer</a></li>
+<li><a href="GlEnable" title="GlEnable">_glEnable</a>, <a href="GlEnd" title="GlEnd">_glEnd</a>, <a class="external text" href="https://learn.microsoft.com/en-us/windows/win32/opengl/glevalcoord-functions" rel="nofollow">_glEvalCoord</a>, <a class="external text" href="https://learn.microsoft.com/en-us/windows/win32/opengl/glevalmesh-functions" rel="nofollow">_glEvalMesh</a></li>
+<li><a class="external text" href="https://learn.microsoft.com/en-us/windows/win32/opengl/glevalpoint" rel="nofollow">_glEvalPoint</a>, <a class="external text" href="https://learn.microsoft.com/en-us/windows/win32/opengl/glfog" rel="nofollow">_glFog</a>, <a class="external text" href="https://learn.microsoft.com/en-us/windows/win32/opengl/glgetbooleanv--glgetdoublev--glgetfloatv--glgetintegerv" rel="nofollow">_glGet</a>, <a href="GlIndexPointer" title="GlIndexPointer">_glIndexPointer</a></li>
+<li><a href="GlIsEnabled" title="GlIsEnabled">_glIsEnabled</a>, <a class="external text" href="https://learn.microsoft.com/en-us/windows/win32/opengl/gllight-functions" rel="nofollow">_glLight</a>, <a class="external text" href="https://learn.microsoft.com/en-us/windows/win32/opengl/gllightmodel-functions" rel="nofollow">_glLightModel</a>, <a href="GlLineWidth" title="GlLineWidth">_glLineWidth</a></li>
+<li><a href="GlLineStipple" title="GlLineStipple">_glLineStipple</a>, <a href="GlLogicOp" title="GlLogicOp">_glLogicOp</a>, <a class="external text" href="https://learn.microsoft.com/en-us/windows/win32/opengl/glmap1" rel="nofollow">_glMap1</a>, <a class="external text" href="https://learn.microsoft.com/en-us/windows/win32/opengl/glmap2" rel="nofollow">_glMap2</a></li>
+<li><a class="external text" href="https://learn.microsoft.com/en-us/windows/win32/opengl/glmaterial-functions" rel="nofollow">_glMaterial</a>, <a class="external text" href="https://learn.microsoft.com/en-us/windows/win32/opengl/glnormal-functions" rel="nofollow">_glNormal</a>, <a href="GlNormalPointer" title="GlNormalPointer">_glNormalPointer</a>, <a href="GlPointSize" title="GlPointSize">_glPointSize</a></li>
+<li><a href="GlPolygonMode" title="GlPolygonMode">_glPolygonMode</a>, <a href="GlPolygonStipple" title="GlPolygonStipple">_glPolygonStipple</a>, <a href="GlScissor" title="GlScissor">_glScissor</a>, <a href="GlStencilFunc" title="GlStencilFunc">_glStencilFunc</a></li>
+<li><a href="GlStencilOp" title="GlStencilOp">_glStencilOp</a>, <a href="GlTexCoordPointer" title="GlTexCoordPointer">_glTexCoordPointer</a>, <a class="external text" href="https://learn.microsoft.com/en-us/windows/win32/opengl/gltexgen-functions" rel="nofollow">_glTexGen</a>, <a href="GlTexImage1D" title="GlTexImage1D">_glTexImage1D</a></li>
+<li><a href="GlTexImage2D" title="GlTexImage2D">_glTexImage2D</a></li></ul>
+<p>
+</p>
+<!-- 
+NewPP limit report
+Cached time: 20240715032813
+Cache expiry: 86400
+Reduced expiry: false
+Complications: [show‐toc]
+CPU time usage: 0.039 seconds
+Real time usage: 0.046 seconds
+Preprocessor visited node count: 27/1000000
+Post‐expand include size: 6886/2097152 bytes
+Template argument size: 3/2097152 bytes
+Highest expansion depth: 3/100
+Expensive parser function count: 0/100
+Unstrip recursion depth: 0/20
+Unstrip post‐expand size: 0/5000000 bytes
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%   19.539      1 -total
+ 32.99%    6.446      1 Template:OpenGLTypesPlugin
+ 11.93%    2.332      1 Template:PageSyntax
+ 11.12%    2.173      1 Template:PageNavigation
+ 10.80%    2.111      1 Template:PageSeeAlso
+ 10.30%    2.013      1 Template:FixedStart
+  9.96%    1.947      1 Template:PageDescription
+  9.82%    1.918      1 Template:FixedEnd
+  9.70%    1.896      1 Template:Parameter
+  9.52%    1.861      1 Template:PageParameters
+-->
+<!-- Saved in parser cache with key qb64pnix_mw19894-mwmb_:pcache:idhash:843-0!canonical and timestamp 20240715032813 and revision id 6840.
+ -->
+</div>
+</div>
+</div>
+</div>
+</body>
+</html>
