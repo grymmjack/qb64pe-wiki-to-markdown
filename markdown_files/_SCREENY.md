@@ -1,142 +1,39 @@
+# _SCREENY
 
-
-
-\_SCREENY - QB64 Phoenix Edition Wiki
-
-
-
-
-
-
-
-
-# \_SCREENY
-
-
-
-From QB64 Phoenix Edition Wiki
-
-
-
-[Jump to navigation](#mw-head)
-[Jump to search](#searchInput)
-The \_SCREENY function returns the current row pixel coordinate of the program window on the desktop.
-
+The _SCREENY function returns the current row pixel coordinate of the program window on the desktop.
 
   
 
-
-
-
-
-
-| Contents * [1 Syntax](#Syntax) * [2 Description](#Description) * [3 Examples](#Examples) * [4 See also](#See_also) |
-| --- |
-
+|  |
 
 ## Syntax
 
-
-*positionY&* = \_SCREENY
+*positionY&* = _SCREENY
   
-
-
-
 
 ## Description
 
-
 * Function returns the current program window's upper left corner row position on the desktop.
-* Use [\_DESKTOPWIDTH](/qb64wiki/index.php/DESKTOPWIDTH "DESKTOPWIDTH") and [\_DESKTOPHEIGHT](/qb64wiki/index.php/DESKTOPHEIGHT "DESKTOPHEIGHT") to find the current user's Windows desktop resolution to adjust the position with [\_SCREENMOVE](/qb64wiki/index.php/SCREENMOVE "SCREENMOVE").
-* **[Keyword not supported in Linux or macOS versions](/qb64wiki/index.php/Keywords_currently_not_supported_by_QB64#Keywords_not_supported_in_Linux_or_macOS_versions "Keywords currently not supported by QB64")**
-
+* Use [_DESKTOPWIDTH](_DESKTOPWIDTH.md) and [_DESKTOPHEIGHT](_DESKTOPHEIGHT.md) to find the current user's Windows desktop resolution to adjust the position with [_SCREENMOVE](_SCREENMOVE.md).
+* **[Keyword not supported in Linux or macOS versions](Keyword not supported in Linux or macOS versions.md)**
 
   
-
-
-
 
 ## Examples
 
-
 *Example:* Clicks and opens program window header menu:
 
-
-
-
-
-| ``` [_SCREENMOVE](/qb64wiki/index.php/SCREENMOVE "SCREENMOVE") [_MIDDLE](/qb64wiki/index.php/SCREENMOVE "SCREENMOVE") [_SCREENCLICK](/qb64wiki/index.php/SCREENCLICK "SCREENCLICK") [_SCREENX](/qb64wiki/index.php/SCREENX "SCREENX") + 10, _SCREENY + 10 [PRINT](/qb64wiki/index.php/PRINT "PRINT") "Hello window!"  ``` |
-| --- |
-
+``` [_SCREENMOVE](_SCREENMOVE.md) [_MIDDLE](_MIDDLE.md) [_SCREENCLICK](_SCREENCLICK.md) [_SCREENX](_SCREENX.md) + 10, _SCREENY + 10 [PRINT](PRINT.md) "Hello window!"  
+```
 
   
-
-
-
 
 ## See also
 
-
-* [\_SCREENX](/qb64wiki/index.php/SCREENX "SCREENX")
-* [\_SCREENIMAGE](/qb64wiki/index.php/SCREENIMAGE "SCREENIMAGE")
-* [\_SCREENCLICK](/qb64wiki/index.php/SCREENCLICK "SCREENCLICK")
-* [\_SCREENPRINT](/qb64wiki/index.php/SCREENPRINT "SCREENPRINT")
-* [\_SCREENMOVE](/qb64wiki/index.php/SCREENMOVE "SCREENMOVE")
-
+* [_SCREENX](_SCREENX.md)
+* [_SCREENIMAGE](_SCREENIMAGE.md)
+* [_SCREENCLICK](_SCREENCLICK.md)
+* [_SCREENPRINT](_SCREENPRINT.md)
+* [_SCREENMOVE](_SCREENMOVE.md)
 
   
-
-
-
-
-
-
----
-
-
-**Navigation:**
-[Main Page with Articles and Tutorials](/qb64wiki/index.php/Main_Page "Main Page")
-[Keyword Reference - Alphabetical](/qb64wiki/index.php/Keyword_Reference_-_Alphabetical "Keyword Reference - Alphabetical")
-[Keyword Reference - By usage](/qb64wiki/index.php/Keyword_Reference_-_By_usage "Keyword Reference - By usage")
-**[Report a broken link](https://qb64phoenix.com/forum/showthread.php?tid=2800)**  
-
-
-
-
-
-Retrieved from "<https://qb64phoenix.com/qb64wiki/index.php?title=SCREENY&oldid=6526>"
-
-
-
-
-## Navigation menu
-
-
-
-
-
-
-
-
-### Search
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

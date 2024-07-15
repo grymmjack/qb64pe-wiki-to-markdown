@@ -1,133 +1,34 @@
+# _GREEN32
 
-
-
-\_GREEN32 - QB64 Phoenix Edition Wiki
-
-
-
-
-
-
-
-
-# \_GREEN32
-
-
-
-From QB64 Phoenix Edition Wiki
-
-
-
-[Jump to navigation](#mw-head)
-[Jump to search](#searchInput)
-The \_GREEN32 function returns the green component intensity of a 32-bit image or surface color.
-
+The _GREEN32 function returns the green component intensity of a 32-bit image or surface color.
 
   
 
-
-
-
-
-
-| Contents * [1 Syntax](#Syntax) * [2 Description](#Description) * [3 Examples](#Examples) * [4 See also](#See_also) |
-| --- |
-
+|  |
 
 ## Syntax
 
-
-green32color& = \_GREEN32(*rgbaColor&*)
+green32color& = _GREEN32(*rgbaColor&*)
   
-
-
-
 
 ## Description
 
-
 * *rgbaColor&* is the 32-bit *RGBA* color value to retrieve the green component intensity value from.
-* *RGBA* color values are returned by the [\_PALETTECOLOR](/qb64wiki/index.php/PALETTECOLOR_(function) "PALETTECOLOR (function)"), [POINT](/qb64wiki/index.php/POINT "POINT"), [\_RGB](/qb64wiki/index.php/RGB "RGB"), [\_RGB32](/qb64wiki/index.php/RGB32 "RGB32"), [\_RGBA](/qb64wiki/index.php/RGBA "RGBA") or [\_RGBA32](/qb64wiki/index.php/RGBA32 "RGBA32") functions.
-* [LONG](/qb64wiki/index.php/LONG "LONG") intensity values returned range from 0 (no intensity, not present) to 255 (full intensity).
-
+* *RGBA* color values are returned by the [_PALETTECOLOR](_PALETTECOLOR.md) "PALETTECOLOR (function)"), [POINT](POINT.md), [_RGB](_RGB.md), [_RGB32](_RGB32.md), [_RGBA](_RGBA.md) or [_RGBA32](_RGBA32.md) functions.
+* [LONG](LONG.md) intensity values returned range from 0 (no intensity, not present) to 255 (full intensity).
 
   
-
-
-
 
 ## Examples
 
-
-* See example in [POINT](/qb64wiki/index.php/POINT "POINT").
-
+* See example in [POINT](POINT.md).
 
   
-
-
-
 
 ## See also
 
-
-* [Featured in our "Keyword of the Day" series](https://qb64phoenix.com/forum/showthread.php?tid=1060)
-* [\_RED32](/qb64wiki/index.php/RED32 "RED32"), [\_BLUE32](/qb64wiki/index.php/BLUE32 "BLUE32")
-* [\_RGB32](/qb64wiki/index.php/RGB32 "RGB32"), [\_GREEN](/qb64wiki/index.php/GREEN "GREEN")
-
+* [Featured in our "Keyword of the Day" series](Featured in our "Keyword of the Day" series.md)
+* [_RED32](_RED32.md), [_BLUE32](_BLUE32.md)
+* [_RGB32](_RGB32.md), [_GREEN](_GREEN.md)
 
   
-
-
-
-
-
-
----
-
-
-**Navigation:**
-[Main Page with Articles and Tutorials](/qb64wiki/index.php/Main_Page "Main Page")
-[Keyword Reference - Alphabetical](/qb64wiki/index.php/Keyword_Reference_-_Alphabetical "Keyword Reference - Alphabetical")
-[Keyword Reference - By usage](/qb64wiki/index.php/Keyword_Reference_-_By_usage "Keyword Reference - By usage")
-**[Report a broken link](https://qb64phoenix.com/forum/showthread.php?tid=2800)**  
-
-
-
-
-
-Retrieved from "<https://qb64phoenix.com/qb64wiki/index.php?title=GREEN32&oldid=8875>"
-
-
-
-
-## Navigation menu
-
-
-
-
-
-
-
-
-### Search
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

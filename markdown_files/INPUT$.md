@@ -1,179 +1,64 @@
-
-
-
-INPUT$ - QB64 Phoenix Edition Wiki
-
-
-
-
-
-
-
-
 # INPUT$
 
-
-
-From QB64 Phoenix Edition Wiki
-
-
-
-[Jump to navigation](#mw-head)
-[Jump to search](#searchInput)
 The INPUT$ function is used to receive data from the user's keyboard, an open file or an open port.
-
 
   
 
-
-
-
-
-
-| Contents * [1 Syntax](#Syntax) * [2 Description](#Description) 	+ [2.1 QBasic/QuickBASIC](#QBasic/QuickBASIC) * [3 Examples](#Examples) * [4 See also](#See_also) |
-| --- |
-
+|  |
 
 ## Syntax
-
 
 *result$* = INPUT$(*numberOfBytes%*[, fileOrPortNumber])
   
 
-
-
-
 ## Description
 
-
-* Keyboard input is limited to the [INTEGER](/qb64wiki/index.php/INTEGER "INTEGER") *numberOfBytes%* (characters) designated by program.
+* Keyboard input is limited to the [INTEGER](INTEGER.md) *numberOfBytes%* (characters) designated by program.
 * The keyboard is the default device when a file or port number is omitted. The *numberOfBytes%* is number of key presses to read.
 * INPUT$ will wait until the number of bytes are read from the keyboard or port. One byte per loop is recommended with ports.
-* [RANDOM](/qb64wiki/index.php/RANDOM "RANDOM") opened file bytes can be up to the [LEN](/qb64wiki/index.php/LEN "LEN") = recordLength statement, or 128 if no statement is used.
-* fileOrPortNumber is the number that was used in the [OPEN](/qb64wiki/index.php/OPEN "OPEN") AS statement.
-* Returns [STRING](/qb64wiki/index.php/STRING "STRING") values including spaces or even extended [ASCII](/qb64wiki/index.php/ASCII "ASCII") characters.
-* Backspace key results in the [CHR$](/qb64wiki/index.php/CHR$ "CHR$")(8) character being added to an entry.
-* Use [LOCATE](/qb64wiki/index.php/LOCATE "LOCATE") , , 1 to view the cursor entry. Turn the cursor off using [LOCATE](/qb64wiki/index.php/LOCATE "LOCATE") , , 0.
-* Use [\_DEST](/qb64wiki/index.php/DEST "DEST") [\_CONSOLE](/qb64wiki/index.php/CONSOLE "CONSOLE") before INPUT$ is used to receive input from a [console](/qb64wiki/index.php/$CONSOLE "$CONSOLE") window.
-
+* [RANDOM](RANDOM.md) opened file bytes can be up to the [LEN](LEN.md) = recordLength statement, or 128 if no statement is used.
+* fileOrPortNumber is the number that was used in the [OPEN](OPEN.md) AS statement.
+* Returns [STRING](STRING.md) values including spaces or even extended [ASCII](ASCII.md) characters.
+* Backspace key results in the [CHR$](CHR$.md)(8) character being added to an entry.
+* Use [LOCATE](LOCATE.md) , , 1 to view the cursor entry. Turn the cursor off using [LOCATE](LOCATE.md) , , 0.
+* Use [_DEST](_DEST.md) [_CONSOLE](_CONSOLE.md) before INPUT$ is used to receive input from a [console](console.md) window.
 
 ### QBasic/QuickBASIC
 
-
-* *numberOfBytes%* could not exceed 32767 in [BINARY](/qb64wiki/index.php/BINARY "BINARY") files or a QBasic error would occur.
+* *numberOfBytes%* could not exceed 32767 in [BINARY](BINARY.md) files or a QBasic error would occur.
 * Ctrl + Break would not interrupt the QBasic program until there was a full INPUT$ key entry. In **QB64** Ctrl + Break will immediately exit a running program.
-
 
   
 
-
-
-
 ## Examples
-
 
 *Example 1:* A keyboard limited length entry can be made with a fixed blinking cursor. Entry must be completed before it can be shown.
 
-
-
-
-
-| ``` [LOCATE](/qb64wiki/index.php/LOCATE "LOCATE") 10, 10, 1         'display fixed cursor at location year$ = INPUT$(4)        'waits until all 4 digits are entered PRINT year$              'display the text entry  ``` |
-| --- |
-
+``` [LOCATE](LOCATE.md) 10, 10, 1         'display fixed cursor at location year$ = INPUT$(4)        'waits until all 4 digits are entered PRINT year$              'display the text entry  
+```
 
   
 
 *Example 2:* Reading bytes from a text file for an 80 wide screen mode.
 
-
-
-
-
-| ``` [LOCATE](/qb64wiki/index.php/LOCATE "LOCATE") 5, 5, 1                    'locate and display cursor [OPEN](/qb64wiki/index.php/OPEN "OPEN") "Diary.txt" FOR [INPUT](/qb64wiki/index.php/INPUT_(file_mode) "INPUT (file mode)") AS #1  'open existing text file text$ = INPUT$(70, 1) [LOCATE](/qb64wiki/index.php/LOCATE "LOCATE") 5, 6, 0: PRINT text$       'print text and turn cursor off  ``` |
-| --- |
-
+``` [LOCATE](LOCATE.md) 5, 5, 1                    'locate and display cursor [OPEN](OPEN.md) "Diary.txt" FOR [INPUT](INPUT.md) "INPUT (file mode)") AS #1  'open existing text file text$ = INPUT$(70, 1) [LOCATE](LOCATE.md) 5, 6, 0: PRINT text$       'print text and turn cursor off  
+```
 
   
 
 *Example 3:* Getting the entire text file data as one string value.
 
+``` [OPEN](OPEN.md) "Diary.txt FOR [BINARY](BINARY.md) AS #1  'open an existing file up to 32767 bytes IF [LOF](LOF.md)(1) <= 32767 THEN Text$ = INPUT$(LOF(1), 1) [CLOSE](CLOSE.md) #1  
+```
 
-
-
-
-| ``` [OPEN](/qb64wiki/index.php/OPEN "OPEN") "Diary.txt FOR [BINARY](/qb64wiki/index.php/BINARY "BINARY") AS #1  'open an existing file up to 32767 bytes IF [LOF](/qb64wiki/index.php/LOF "LOF")(1) <= 32767 THEN Text$ = INPUT$(LOF(1), 1) [CLOSE](/qb64wiki/index.php/CLOSE "CLOSE") #1  ``` |
-| --- |
-
-
-*Explanation:* The IF statement gets the entire contents when the file size is less than 32768. The program can then work with the string by using [MID$](/qb64wiki/index.php/MID$_(function) "MID$ (function)") or [INSTR](/qb64wiki/index.php/INSTR "INSTR"). Note: A text file string will also have **CrLf** line break end characters [CHR$](/qb64wiki/index.php/CHR$ "CHR$")(13) + [CHR$](/qb64wiki/index.php/CHR$ "CHR$")(10).
+*Explanation:* The IF statement gets the entire contents when the file size is less than 32768. The program can then work with the string by using [MID$](MID$.md) "MID$ (function)") or [INSTR](INSTR.md). Note: A text file string will also have **CrLf** line break end characters [CHR$](CHR$.md)(13) + [CHR$](CHR$.md)(10).
   
-
-
-
 
 ## See also
 
-
-* [INPUT](/qb64wiki/index.php/INPUT "INPUT"), [LINE INPUT](/qb64wiki/index.php/LINE_INPUT "LINE INPUT") (keyboard input)
-* [INPUT (file mode)](/qb64wiki/index.php/INPUT_(file_mode) "INPUT (file mode)"), [INPUT #](/qb64wiki/index.php/INPUT_(file_statement) "INPUT (file statement)"), [LINE INPUT #](/qb64wiki/index.php/LINE_INPUT_(file_statement) "LINE INPUT (file statement)") (file input)
-* [OPEN](/qb64wiki/index.php/OPEN "OPEN"), [LOC](/qb64wiki/index.php/LOC "LOC") (file)
-* [LOCATE](/qb64wiki/index.php/LOCATE "LOCATE") (cursor on/off)
-
+* [INPUT](INPUT.md), [LINE INPUT](LINE INPUT.md) (keyboard input)
+* [INPUT (file mode)](INPUT (file mode).md) "INPUT (file mode)"), [INPUT #](INPUT #.md) "INPUT (file statement)"), [LINE INPUT #](LINE INPUT #.md) "LINE INPUT (file statement)") (file input)
+* [OPEN](OPEN.md), [LOC](LOC.md) (file)
+* [LOCATE](LOCATE.md) (cursor on/off)
 
   
-
-
-
-
-
-
----
-
-
-**Navigation:**
-[Main Page with Articles and Tutorials](/qb64wiki/index.php/Main_Page "Main Page")
-[Keyword Reference - Alphabetical](/qb64wiki/index.php/Keyword_Reference_-_Alphabetical "Keyword Reference - Alphabetical")
-[Keyword Reference - By usage](/qb64wiki/index.php/Keyword_Reference_-_By_usage "Keyword Reference - By usage")
-**[Report a broken link](https://qb64phoenix.com/forum/showthread.php?tid=2800)**  
-
-
-
-
-
-Retrieved from "<https://qb64phoenix.com/qb64wiki/index.php?title=INPUT$&oldid=8136>"
-
-
-
-
-## Navigation menu
-
-
-
-
-
-
-
-
-### Search
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

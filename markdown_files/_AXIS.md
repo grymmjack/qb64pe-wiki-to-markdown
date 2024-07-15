@@ -1,144 +1,41 @@
+# _AXIS
 
-
-
-\_AXIS - QB64 Phoenix Edition Wiki
-
-
-
-
-
-
-
-
-# \_AXIS
-
-
-
-From QB64 Phoenix Edition Wiki
-
-
-
-[Jump to navigation](#mw-head)
-[Jump to search](#searchInput)
-The \_AXIS function returns the relative position of a specified axis number on a controller device.
-
+The _AXIS function returns the relative position of a specified axis number on a controller device.
 
   
 
-
-
-
-
-
-| Contents * [1 Syntax](#Syntax) * [2 Description](#Description) * [3 Examples](#Examples) * [4 See also](#See_also) |
-| --- |
-
+|  |
 
 ## Syntax
 
-
-*move!* = \_AXIS(*axis\_number%*)
+*move!* = _AXIS(*axis_number%*)
   
-
-
-
 
 ## Description
 
-
-* [SINGLE](/qb64wiki/index.php/SINGLE "SINGLE") values returned range between -1 and 1 as maximums and 0 indicating minimum or axis center.
+* [SINGLE](SINGLE.md) values returned range between -1 and 1 as maximums and 0 indicating minimum or axis center.
 * When the mouse is moved on the program screen, moves left or above center are negative while below or right are positive.
-* The *axis\_number* must be a number which does not exceed the number of axis found by the [\_LASTAXIS](/qb64wiki/index.php/LASTAXIS "LASTAXIS") function.
-* **The number of [\_DEVICES](/qb64wiki/index.php/DEVICES "DEVICES") must be read before using [\_DEVICE$](/qb64wiki/index.php/DEVICE$ "DEVICE$"), [\_DEVICEINPUT](/qb64wiki/index.php/DEVICEINPUT "DEVICEINPUT") or [\_LASTAXIS](/qb64wiki/index.php/LASTAXIS "LASTAXIS").**
-
+* The *axis_number* must be a number which does not exceed the number of axis found by the [_LASTAXIS](_LASTAXIS.md) function.
+* **The number of [_DEVICES](_DEVICES.md) must be read before using [_DEVICE$](_DEVICE$.md), [_DEVICEINPUT](_DEVICEINPUT.md) or [_LASTAXIS](_LASTAXIS.md).**
 
   
-
-
-
 
 ## Examples
 
-
 *Example:* Reading multiple controller device buttons, axis and wheels.
 
+``` [FOR](FOR.md) i = 1 [TO](TO.md) [_DEVICES](_DEVICES.md)     [PRINT](PRINT.md) [STR$](STR$.md)(i) + ") " + [_DEVICE$](_DEVICE$.md)(i) + " Buttons:"; [_LASTBUTTON](_LASTBUTTON.md)(i); ",Axis:"; [_LASTAXIS](_LASTAXIS.md)(i); ",Wheel:"; [_LASTWHEEL](_LASTWHEEL.md)(i) [NEXT](NEXT.md)  [DO](DO.md)     d& = [_DEVICEINPUT](_DEVICEINPUT.md)     [IF](IF.md) d& [THEN](THEN.md) '             the device number cannot be zero!         [PRINT](PRINT.md) "Found"; d&;         [FOR](FOR.md) b = 1 [TO](TO.md) [_LASTBUTTON](_LASTBUTTON.md)(d&)             [PRINT](PRINT.md) [_BUTTONCHANGE](_BUTTONCHANGE.md)(b); [_BUTTON](_BUTTON.md)(b);         [NEXT](NEXT.md)         [FOR](FOR.md) a = 1 [TO](TO.md) [_LASTAXIS](_LASTAXIS.md)(d&)             [PRINT](PRINT.md) _AXIS(a);         [NEXT](NEXT.md)         [FOR](FOR.md) w = 1 [TO](TO.md) [_LASTWHEEL](_LASTWHEEL.md)(d&)             [PRINT](PRINT.md) [_WHEEL](_WHEEL.md)(w);         [NEXT](NEXT.md)         [PRINT](PRINT.md)     [END IF](END IF.md) [LOOP UNTIL](LOOP UNTIL.md) [INKEY$](INKEY$.md) = [CHR$](CHR$.md)(27) 'escape key exit  [END](END.md)  
+```
 
-
-
-
-| ``` [FOR](/qb64wiki/index.php/FOR "FOR") i = 1 [TO](/qb64wiki/index.php/TO "TO") [_DEVICES](/qb64wiki/index.php/DEVICES "DEVICES")     [PRINT](/qb64wiki/index.php/PRINT "PRINT") [STR$](/qb64wiki/index.php/STR$ "STR$")(i) + ") " + [_DEVICE$](/qb64wiki/index.php/DEVICE$ "DEVICE$")(i) + " Buttons:"; [_LASTBUTTON](/qb64wiki/index.php/LASTBUTTON "LASTBUTTON")(i); ",Axis:"; [_LASTAXIS](/qb64wiki/index.php/LASTAXIS "LASTAXIS")(i); ",Wheel:"; [_LASTWHEEL](/qb64wiki/index.php/LASTWHEEL "LASTWHEEL")(i) [NEXT](/qb64wiki/index.php/NEXT "NEXT")  [DO](/qb64wiki/index.php/DO "DO")     d& = [_DEVICEINPUT](/qb64wiki/index.php/DEVICEINPUT "DEVICEINPUT")     [IF](/qb64wiki/index.php/IF "IF") d& [THEN](/qb64wiki/index.php/THEN "THEN") '             the device number cannot be zero!         [PRINT](/qb64wiki/index.php/PRINT "PRINT") "Found"; d&;         [FOR](/qb64wiki/index.php/FOR "FOR") b = 1 [TO](/qb64wiki/index.php/TO "TO") [_LASTBUTTON](/qb64wiki/index.php/LASTBUTTON "LASTBUTTON")(d&)             [PRINT](/qb64wiki/index.php/PRINT "PRINT") [_BUTTONCHANGE](/qb64wiki/index.php/BUTTONCHANGE "BUTTONCHANGE")(b); [_BUTTON](/qb64wiki/index.php/BUTTON "BUTTON")(b);         [NEXT](/qb64wiki/index.php/NEXT "NEXT")         [FOR](/qb64wiki/index.php/FOR "FOR") a = 1 [TO](/qb64wiki/index.php/TO "TO") [_LASTAXIS](/qb64wiki/index.php/LASTAXIS "LASTAXIS")(d&)             [PRINT](/qb64wiki/index.php/PRINT "PRINT") _AXIS(a);         [NEXT](/qb64wiki/index.php/NEXT "NEXT")         [FOR](/qb64wiki/index.php/FOR "FOR") w = 1 [TO](/qb64wiki/index.php/TO "TO") [_LASTWHEEL](/qb64wiki/index.php/LASTWHEEL "LASTWHEEL")(d&)             [PRINT](/qb64wiki/index.php/PRINT "PRINT") [_WHEEL](/qb64wiki/index.php/WHEEL "WHEEL")(w);         [NEXT](/qb64wiki/index.php/NEXT "NEXT")         [PRINT](/qb64wiki/index.php/PRINT "PRINT")     [END IF](/qb64wiki/index.php/END_IF "END IF") [LOOP UNTIL](/qb64wiki/index.php/DO...LOOP "DO...LOOP") [INKEY$](/qb64wiki/index.php/INKEY$ "INKEY$") = [CHR$](/qb64wiki/index.php/CHR$ "CHR$")(27) 'escape key exit  [END](/qb64wiki/index.php/END "END")  ``` |
-| --- |
-
-
-*Note:* When there is no device control to read, a [FOR](/qb64wiki/index.php/FOR...NEXT "FOR...NEXT") n = 1 TO 0 loop will not run thus avoiding a control function read error.
+*Note:* When there is no device control to read, a [FOR](FOR.md) n = 1 TO 0 loop will not run thus avoiding a control function read error.
   
-
-
-
 
 ## See also
 
-
-* [\_LASTWHEEL](/qb64wiki/index.php/LASTWHEEL "LASTWHEEL"), [\_LASTBUTTON](/qb64wiki/index.php/LASTBUTTON "LASTBUTTON"), [\_LASTAXIS](/qb64wiki/index.php/LASTAXIS "LASTAXIS")
-* [\_WHEEL](/qb64wiki/index.php/WHEEL "WHEEL"), [\_BUTTON](/qb64wiki/index.php/BUTTON "BUTTON"), [\_BUTTONCHANGE](/qb64wiki/index.php/BUTTONCHANGE "BUTTONCHANGE")
-* [\_DEVICE$](/qb64wiki/index.php/DEVICE$ "DEVICE$"), [\_DEVICES](/qb64wiki/index.php/DEVICES "DEVICES")
-* [\_MOUSEMOVEMENTX](/qb64wiki/index.php/MOUSEMOVEMENTX "MOUSEMOVEMENTX"), [\_MOUSEMOVEMENTY](/qb64wiki/index.php/MOUSEMOVEMENTY "MOUSEMOVEMENTY") (relative movement)
-* [Controller Devices](/qb64wiki/index.php/Controller_Devices "Controller Devices")
-
+* [_LASTWHEEL](_LASTWHEEL.md), [_LASTBUTTON](_LASTBUTTON.md), [_LASTAXIS](_LASTAXIS.md)
+* [_WHEEL](_WHEEL.md), [_BUTTON](_BUTTON.md), [_BUTTONCHANGE](_BUTTONCHANGE.md)
+* [_DEVICE$](_DEVICE$.md), [_DEVICES](_DEVICES.md)
+* [_MOUSEMOVEMENTX](_MOUSEMOVEMENTX.md), [_MOUSEMOVEMENTY](_MOUSEMOVEMENTY.md) (relative movement)
+* [Controller Devices](Controller Devices.md)
 
   
-
-
-
-
-
-
----
-
-
-**Navigation:**
-[Main Page with Articles and Tutorials](/qb64wiki/index.php/Main_Page "Main Page")
-[Keyword Reference - Alphabetical](/qb64wiki/index.php/Keyword_Reference_-_Alphabetical "Keyword Reference - Alphabetical")
-[Keyword Reference - By usage](/qb64wiki/index.php/Keyword_Reference_-_By_usage "Keyword Reference - By usage")
-**[Report a broken link](https://qb64phoenix.com/forum/showthread.php?tid=2800)**  
-
-
-
-
-
-Retrieved from "<https://qb64phoenix.com/qb64wiki/index.php?title=AXIS&oldid=8263>"
-
-
-
-
-## Navigation menu
-
-
-
-
-
-
-
-
-### Search
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

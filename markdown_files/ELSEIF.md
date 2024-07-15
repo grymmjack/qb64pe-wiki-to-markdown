@@ -1,174 +1,60 @@
-
-
-
-ELSEIF - QB64 Phoenix Edition Wiki
-
-
-
-
-
-
-
-
 # ELSEIF
 
-
-
-From QB64 Phoenix Edition Wiki
-
-
-
-[Jump to navigation](#mw-head)
-[Jump to search](#searchInput)
-ELSEIF is used in an [IF...THEN](/qb64wiki/index.php/IF...THEN "IF...THEN") block statement to offer an alternative condition.
-
+ELSEIF is used in an [IF...THEN](IF...THEN.md) block statement to offer an alternative condition.
 
   
 
-
-
-
-
-
-| Contents * [1 Syntax](#Syntax) * [2 Description](#Description) * [3 Examples](#Examples) * [4 See also](#See_also) |
-| --- |
-
+|  |
 
 ## Syntax
 
-
-[IF](/qb64wiki/index.php/IF "IF") *condition* [THEN](/qb64wiki/index.php/THEN "THEN")
+[IF](IF.md) *condition* [THEN](THEN.md)
 *{code}*
 ⋮
-ELSEIF *condition2* [THEN](/qb64wiki/index.php/THEN "THEN")
+ELSEIF *condition2* [THEN](THEN.md)
 *{code}*
 ⋮
-[ELSE](/qb64wiki/index.php/ELSE "ELSE")
+[ELSE](ELSE.md)
 *{alternative-code}*
 ⋮
-[END IF](/qb64wiki/index.php/END_IF "END IF")
+[END IF](END IF.md)
   
-
-
-
 
 ## Description
 
-
-* ELSEIF statements require a **separate** code block line with [THEN](/qb64wiki/index.php/THEN "THEN") for each alternative condition.
-* There can be more than one [ELSE](/qb64wiki/index.php/ELSE "ELSE") IF statement in a single-line IF statement.
-* If there is only one possible alternative condition (such as 0 or [NOT](/qb64wiki/index.php/NOT "NOT") 0), use [ELSE](/qb64wiki/index.php/ELSE "ELSE") instead.
+* ELSEIF statements require a **separate** code block line with [THEN](THEN.md) for each alternative condition.
+* There can be more than one [ELSE](ELSE.md) IF statement in a single-line IF statement.
+* If there is only one possible alternative condition (such as 0 or [NOT](NOT.md) 0), use [ELSE](ELSE.md) instead.
 * If the comparisons are based on multiple conditions being true, it may require many ELSEIF comparisons. ELSE could help cover some of those conditions.
-* You can use [SELECT CASE](/qb64wiki/index.php/SELECT_CASE "SELECT CASE") when IF blocks have a long list of alterative ELSEIF conditions.
-
-
-  
-
-
-
-
-
-
-| ```          Table 3: The relational operations for condition checking.   In this table, **A** and **B** are the [Expressions](/qb64wiki/index.php/Expression "Expression") to compare. Both must represent  the same general type, i.e. they must result into either numerical values  or [STRING](/qb64wiki/index.php/STRING "STRING") values. If a test succeeds, then **true** (-1) is returned, **false** (0)      if it fails, which both can be used in further [Boolean](/qb64wiki/index.php/Boolean "Boolean") evaluations.  ┌─────────────────────────────────────────────────────────────────────────┐  │                          **[Relational Operations](/qb64wiki/index.php/Relational_Operations "Relational Operations")**                          │  ├────────────┬───────────────────────────────────────────┬────────────────┤  │ **Operation**  │                **Description**                │ **Example usage**  │  ├────────────┼───────────────────────────────────────────┼────────────────┤  │   A [=](/qb64wiki/index.php/Equal "Equal") B    │ Tests if A is **equal** to B.                 │ [IF](/qb64wiki/index.php/IF "IF") A [=](/qb64wiki/index.php/Equal "Equal") B [THEN](/qb64wiki/index.php/THEN "THEN")  │  ├────────────┼───────────────────────────────────────────┼────────────────┤  │   A [<>](/qb64wiki/index.php/Not_Equal "Not Equal") B   │ Tests if A is **not equal** to B.             │ [IF](/qb64wiki/index.php/IF "IF") A [<>](/qb64wiki/index.php/Not_Equal "Not Equal") B [THEN](/qb64wiki/index.php/THEN "THEN") │  ├────────────┼───────────────────────────────────────────┼────────────────┤  │   A [<](/qb64wiki/index.php/Less_Than "Less Than") B    │ Tests if A is **less than** B.                │ [IF](/qb64wiki/index.php/IF "IF") A [<](/qb64wiki/index.php/Less_Than "Less Than") B [THEN](/qb64wiki/index.php/THEN "THEN")  │  ├────────────┼───────────────────────────────────────────┼────────────────┤  │   A [>](/qb64wiki/index.php/Greater_Than "Greater Than") B    │ Tests if A is **greater than** B.             │ [IF](/qb64wiki/index.php/IF "IF") A [>](/qb64wiki/index.php/Greater_Than "Greater Than") B [THEN](/qb64wiki/index.php/THEN "THEN")  │  ├────────────┼───────────────────────────────────────────┼────────────────┤  │   A [<=](/qb64wiki/index.php/Less_Than_Or_Equal "Less Than Or Equal") B   │ Tests if A is **less than or equal** to B.    │ [IF](/qb64wiki/index.php/IF "IF") A [<=](/qb64wiki/index.php/Less_Than_Or_Equal "Less Than Or Equal") B [THEN](/qb64wiki/index.php/THEN "THEN") │  ├────────────┼───────────────────────────────────────────┼────────────────┤  │   A [>=](/qb64wiki/index.php/Greater_Than_Or_Equal "Greater Than Or Equal") B   │ Tests if A is **greater than or equal** to B. │ [IF](/qb64wiki/index.php/IF "IF") A [>=](/qb64wiki/index.php/Greater_Than_Or_Equal "Greater Than Or Equal") B [THEN](/qb64wiki/index.php/THEN "THEN") │  └────────────┴───────────────────────────────────────────┴────────────────┘    The operations should be very obvious for numerical values. For strings    be aware that all checks are done **case sensitive** (i.e. "Foo" <> "foo").    The **equal**/**not equal** check is pretty much straight forward, but for the    **less**/**greater** checks the [ASCII](/qb64wiki/index.php/ASCII "ASCII") value of the first different character is                           used for decision making:     **E.g.** "abc" is **less** than "abd", because in the first difference (the 3rd         character) the "c" has a lower [ASCII](/qb64wiki/index.php/ASCII "ASCII") value than the "d".     This behavior may give you some subtle results, if you are not aware of                    the [ASCII](/qb64wiki/index.php/ASCII "ASCII") values and the written case:     **E.g.** "abc" is **greater** than "abD", because the small letters have higher         [ASCII](/qb64wiki/index.php/ASCII "ASCII") values than the capital letters, hence "c" > "D". You may use         [LCASE$](/qb64wiki/index.php/LCASE$ "LCASE$") or [UCASE$](/qb64wiki/index.php/UCASE$ "UCASE$") to make sure both strings have the same case.  ``` |
-| --- |
-
+* You can use [SELECT CASE](SELECT CASE.md) when IF blocks have a long list of alterative ELSEIF conditions.
 
   
 
+```          Table 3: The relational operations for condition checking.   In this table, **A** and **B** are the [Expressions](Expressions.md) to compare. Both must represent  the same general type, i.e. they must result into either numerical values  or [STRING](STRING.md) values. If a test succeeds, then **true** (-1) is returned, **false** (0)      if it fails, which both can be used in further [Boolean](Boolean.md) evaluations.  ┌─────────────────────────────────────────────────────────────────────────┐  │                          **[Relational Operations](Relational Operations.md)**                          │  ├────────────┬───────────────────────────────────────────┬────────────────┤  │ **Operation**  │                **Description**                │ **Example usage**  │  ├────────────┼───────────────────────────────────────────┼────────────────┤  │   A [=](=.md) B    │ Tests if A is **equal** to B.                 │ [IF](IF.md) A [=](=.md) B [THEN](THEN.md)  │  ├────────────┼───────────────────────────────────────────┼────────────────┤  │   A [<>](<>.md) B   │ Tests if A is **not equal** to B.             │ [IF](IF.md) A [<>](<>.md) B [THEN](THEN.md) │  ├────────────┼───────────────────────────────────────────┼────────────────┤  │   A [<](<.md) B    │ Tests if A is **less than** B.                │ [IF](IF.md) A [<](<.md) B [THEN](THEN.md)  │  ├────────────┼───────────────────────────────────────────┼────────────────┤  │   A [>](>.md) B    │ Tests if A is **greater than** B.             │ [IF](IF.md) A [>](>.md) B [THEN](THEN.md)  │  ├────────────┼───────────────────────────────────────────┼────────────────┤  │   A [<=](<=.md) B   │ Tests if A is **less than or equal** to B.    │ [IF](IF.md) A [<=](<=.md) B [THEN](THEN.md) │  ├────────────┼───────────────────────────────────────────┼────────────────┤  │   A [>=](>=.md) B   │ Tests if A is **greater than or equal** to B. │ [IF](IF.md) A [>=](>=.md) B [THEN](THEN.md) │  └────────────┴───────────────────────────────────────────┴────────────────┘    The operations should be very obvious for numerical values. For strings    be aware that all checks are done **case sensitive** (i.e. "Foo" <> "foo").    The **equal**/**not equal** check is pretty much straight forward, but for the    **less**/**greater** checks the [ASCII](ASCII.md) value of the first different character is                           used for decision making:     **E.g.** "abc" is **less** than "abd", because in the first difference (the 3rd         character) the "c" has a lower [ASCII](ASCII.md) value than the "d".     This behavior may give you some subtle results, if you are not aware of                    the [ASCII](ASCII.md) values and the written case:     **E.g.** "abc" is **greater** than "abD", because the small letters have higher         [ASCII](ASCII.md) values than the capital letters, hence "c" > "D". You may use         [LCASE$](LCASE$.md) or [UCASE$](UCASE$.md) to make sure both strings have the same case.  
+```
 
-
+  
 
 ## Examples
 
-
 *Example 1:* IF statement using ELSE IF in one statement line.
 
-
-
-
-
-| ```   IF x = 100 THEN COLOR 10: PRINT x ELSE IF x > 100 THEN COLOR 12: PRINT x ELSE PRINT "< 100"   ``` |
-| --- |
-
+```   IF x = 100 THEN COLOR 10: PRINT x ELSE IF x > 100 THEN COLOR 12: PRINT x ELSE PRINT "< 100"   
+```
 
   
 
 *Example 2:* IF statement block
 
-
-
-
-
-| ```   IF x = 100 THEN ' must place ANY code on next line!   COLOR 10: PRINT x ELSEIF x > 100 THEN COLOR 12: PRINT x ELSE : PRINT "< 100" END IF   ``` |
-| --- |
-
+```   IF x = 100 THEN ' must place ANY code on next line!   COLOR 10: PRINT x ELSEIF x > 100 THEN COLOR 12: PRINT x ELSE : PRINT "< 100" END IF   
+```
 
   
-
-
-
 
 ## See also
 
-
-* [Featured in our "Keyword of the Day" series](https://qb64phoenix.com/forum/showthread.php?tid=1313)
-* [ELSE](/qb64wiki/index.php/ELSE "ELSE"), [END IF](/qb64wiki/index.php/END_IF "END IF")
-* [IF...THEN](/qb64wiki/index.php/IF...THEN "IF...THEN")
-
+* [Featured in our "Keyword of the Day" series](Featured in our "Keyword of the Day" series.md)
+* [ELSE](ELSE.md), [END IF](END IF.md)
+* [IF...THEN](IF...THEN.md)
 
   
-
-
-
-
-
-
----
-
-
-**Navigation:**
-[Main Page with Articles and Tutorials](/qb64wiki/index.php/Main_Page "Main Page")
-[Keyword Reference - Alphabetical](/qb64wiki/index.php/Keyword_Reference_-_Alphabetical "Keyword Reference - Alphabetical")
-[Keyword Reference - By usage](/qb64wiki/index.php/Keyword_Reference_-_By_usage "Keyword Reference - By usage")
-**[Report a broken link](https://qb64phoenix.com/forum/showthread.php?tid=2800)**  
-
-
-
-
-
-Retrieved from "<https://qb64phoenix.com/qb64wiki/index.php?title=ELSEIF&oldid=8933>"
-
-
-
-
-## Navigation menu
-
-
-
-
-
-
-
-
-### Search
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

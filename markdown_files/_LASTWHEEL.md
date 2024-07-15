@@ -1,149 +1,44 @@
+# _LASTWHEEL
 
-
-
-\_LASTWHEEL - QB64 Phoenix Edition Wiki
-
-
-
-
-
-
-
-
-# \_LASTWHEEL
-
-
-
-From QB64 Phoenix Edition Wiki
-
-
-
-[Jump to navigation](#mw-head)
-[Jump to search](#searchInput)
-The \_LASTWHEEL function returns the number of wheels a specified number INPUT device on your computer has.
-
+The _LASTWHEEL function returns the number of wheels a specified number INPUT device on your computer has.
 
   
 
-
-
-
-
-
-| Contents * [1 Syntax](#Syntax) * [2 Examples](#Examples) * [3 See also](#See_also) |
-| --- |
-
+|  |
 
 ## Syntax
 
-
-*wheelCount%* = \_LASTWHEEL(*deviceNumber*)
+*wheelCount%* = _LASTWHEEL(*deviceNumber*)
   
 
-
-
-
-* Returns the number of wheels that can be used on a specified device number within the number of [\_DEVICES](/qb64wiki/index.php/DEVICES "DEVICES") found.
-* A valid number can be sent to the [\_WHEEL](/qb64wiki/index.php/WHEEL "WHEEL") function to find any relative positive or negative wheel movements.
-* The devices are listed in a numerical order determined by the OS and can be read by the [\_DEVICE$](/qb64wiki/index.php/DEVICE$ "DEVICE$") function.
-* **The [\_DEVICES](/qb64wiki/index.php/DEVICES "DEVICES") function must be read before using \_LASTWHEEL or an ["Illegal Function Call" error](/qb64wiki/index.php/ERROR_Codes "ERROR Codes") may occur.**
+* Returns the number of wheels that can be used on a specified device number within the number of [_DEVICES](_DEVICES.md) found.
+* A valid number can be sent to the [_WHEEL](_WHEEL.md) function to find any relative positive or negative wheel movements.
+* The devices are listed in a numerical order determined by the OS and can be read by the [_DEVICE$](_DEVICE$.md) function.
+* **The [_DEVICES](_DEVICES.md) function must be read before using _LASTWHEEL or an ["Illegal Function Call" error]("Illegal Function Call" error.md) may occur.**
 * Devices include keyboard (reported as 1), mouse (reported as 2), joysticks, game pads and multiple stick game controllers.
 
-
   
-
-
-
 
 ## Examples
 
-
 *Example:* Checking for the system's input devices and number of wheels available.
 
+``` devices = [_DEVICES](_DEVICES.md)  'MUST be read in order for other 2 device functions to work! PRINT "Number of input devices found ="; devices FOR i = 1 TO devices   PRINT [_DEVICE$](_DEVICE$.md)(i)   IF [INSTR](INSTR.md)([_DEVICE$](_DEVICE$.md)(i), "[WHEEL]") THEN PRINT "Wheels:"; _LASTWHEEL(i) NEXT  
+```
 
-
-
-
-| ``` devices = [_DEVICES](/qb64wiki/index.php/DEVICES "DEVICES")  'MUST be read in order for other 2 device functions to work! PRINT "Number of input devices found ="; devices FOR i = 1 TO devices   PRINT [_DEVICE$](/qb64wiki/index.php/DEVICE$ "DEVICE$")(i)   IF [INSTR](/qb64wiki/index.php/INSTR "INSTR")([_DEVICE$](/qb64wiki/index.php/DEVICE$ "DEVICE$")(i), "[WHEEL]") THEN PRINT "Wheels:"; _LASTWHEEL(i) NEXT  ``` |
-| --- |
-
-
-
-
-| ``` Number of input devices found = 2 [KEYBOARD][BUTTON] [MOUSE][BUTTON][AXIS][WHEEL] Wheels: 3  ``` |
-| --- |
-
+``` Number of input devices found = 2 [KEYBOARD][BUTTON] [MOUSE][BUTTON][AXIS][WHEEL] Wheels: 3  
+```
 
 *Note:* A mouse may have 3 wheels listed when there is only one scroll wheel.
   
 
-
-
-
 ## See also
 
-
-* [\_LASTBUTTON](/qb64wiki/index.php/LASTBUTTON "LASTBUTTON"), [\_LASTAXIS](/qb64wiki/index.php/LASTAXIS "LASTAXIS")
-* [\_AXIS](/qb64wiki/index.php/AXIS "AXIS"), [\_BUTTON](/qb64wiki/index.php/BUTTON "BUTTON"), [\_WHEEL](/qb64wiki/index.php/WHEEL "WHEEL")
-* [\_DEVICE$](/qb64wiki/index.php/DEVICE$ "DEVICE$"), [\_DEVICES](/qb64wiki/index.php/DEVICES "DEVICES")
-* [\_MOUSEBUTTON](/qb64wiki/index.php/MOUSEBUTTON "MOUSEBUTTON")
-* [STRIG](/qb64wiki/index.php/STRIG "STRIG"), [STICK](/qb64wiki/index.php/STICK "STICK")
-* [ON STRIG(n)](/qb64wiki/index.php/ON_STRIG(n) "ON STRIG(n)"), [STRIG(n)](/qb64wiki/index.php/STRIG(n) "STRIG(n)")
-
+* [_LASTBUTTON](_LASTBUTTON.md), [_LASTAXIS](_LASTAXIS.md)
+* [_AXIS](_AXIS.md), [_BUTTON](_BUTTON.md), [_WHEEL](_WHEEL.md)
+* [_DEVICE$](_DEVICE$.md), [_DEVICES](_DEVICES.md)
+* [_MOUSEBUTTON](_MOUSEBUTTON.md)
+* [STRIG](STRIG.md), [STICK](STICK.md)
+* [ON STRIG(n)](ON STRIG(n).md) "ON STRIG(n)"), [STRIG(n)](STRIG(n).md) "STRIG(n)")
 
   
-
-
-
-
-
-
----
-
-
-**Navigation:**
-[Main Page with Articles and Tutorials](/qb64wiki/index.php/Main_Page "Main Page")
-[Keyword Reference - Alphabetical](/qb64wiki/index.php/Keyword_Reference_-_Alphabetical "Keyword Reference - Alphabetical")
-[Keyword Reference - By usage](/qb64wiki/index.php/Keyword_Reference_-_By_usage "Keyword Reference - By usage")
-**[Report a broken link](https://qb64phoenix.com/forum/showthread.php?tid=2800)**  
-
-
-
-
-
-Retrieved from "<https://qb64phoenix.com/qb64wiki/index.php?title=LASTWHEEL&oldid=6065>"
-
-
-
-
-## Navigation menu
-
-
-
-
-
-
-
-
-### Search
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
