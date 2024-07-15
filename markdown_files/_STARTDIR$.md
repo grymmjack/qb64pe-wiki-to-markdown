@@ -1,39 +1,50 @@
 # _STARTDIR$
+> The _STARTDIR$ function returns the path a user called a QB64 program from as a string value without a trailing path separator.
 
-The _STARTDIR$ function returns the path a user called a QB64 program from as a string value without a trailing path separator.
+## SYNTAX
+`callPath$ = _STARTDIR$`
 
-  
-
-## Syntax
-
-*callPath$* = _STARTDIR$
-  
-
-## Description
-
+## DESCRIPTION
 * Returns a [STRING](STRING.md) representing the user's program calling path.
 
-  
 
-## Availability
+## EXAMPLES
+> Example: Showcasing QB64 path functions:
 
-* **QB64 v1.0 and up**
-* **QB64-PE all versions**
-
-  
-
-## Examples
-
-*Example:* Showcasing QB64 path functions:
-
-``` [$CONSOLE]($CONSOLE.md):ONLY [_DEST](_DEST.md) [_CONSOLE](_CONSOLE.md) [SHELL](SHELL.md) "cd" [PRINT](PRINT.md) [_CWD$](_CWD$.md) [PRINT](PRINT.md) _STARTDIR$ [SYSTEM](SYSTEM.md)  
+```vb
+$CONSOLE:ONLY
+_DEST _CONSOLE
+SHELL "cd"
+PRINT _CWD$
+PRINT _STARTDIR$
+SYSTEM
 ```
 
-  
 
-## See also
+```vb
+$CONSOLE:ONLY
+_DEST _CONSOLE
+SHELL "cd"
+PRINT _CWD$
+PRINT _STARTDIR$
+SYSTEM
+```
 
-* [_CWD$](_CWD$.md)
+* _CWD$
 * [SHELL](SHELL.md)
 
-  
+```vb
+$CONSOLE:ONLY
+_DEST _CONSOLE
+SHELL "cd"
+PRINT _CWD$
+PRINT _STARTDIR$
+SYSTEM
+```
+
+
+
+# SEE ALSO
+* _CWD$
+* [SHELL](SHELL.md)
+

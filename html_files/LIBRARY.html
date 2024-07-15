@@ -1,0 +1,1340 @@
+<!DOCTYPE html>
+<html class="client-nojs" dir="ltr" lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <title>
+   DECLARE LIBRARY - QB64 Phoenix Edition Wiki
+  </title>
+  <script>
+   document.documentElement.className="client-js";RLCONF={"wgBreakFrames":false,"wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgRequestId":"ZpWfyfSudf_TYjnwJ2d0RgAAAzo","wgCSPNonce":false,"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"DECLARE_LIBRARY","wgTitle":"DECLARE LIBRARY","wgCurRevisionId":8832,"wgRevisionId":8832,"wgArticleId":107,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":[],"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgRelevantPageName":"DECLARE_LIBRARY","wgRelevantArticleId":107,"wgIsProbablyEditable":false,"wgRelevantPageIsProbablyEditable":false,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgRedirectedFrom":"LIBRARY","wgVector2022PreviewPages":[],
+"wgInternalRedirectTargetUrl":"/qb64wiki/index.php/DECLARE_LIBRARY"};RLSTATE={"site.styles":"ready","user.styles":"ready","user":"ready","user.options":"loading","mediawiki.page.gallery.styles":"ready","skins.vector.styles.legacy":"ready"};RLPAGEMODULES=["mediawiki.action.view.redirect","site","mediawiki.page.ready","mediawiki.toc","skins.vector.legacy.js"];
+  </script>
+  <script>
+   (RLQ=window.RLQ||[]).push(function(){mw.loader.implement("user.options@12s5i",function($,jQuery,require,module){mw.user.tokens.set({"patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});});});
+  </script>
+  <link href="/qb64wiki/load.php?lang=en&amp;modules=mediawiki.page.gallery.styles%7Cskins.vector.styles.legacy&amp;only=styles&amp;skin=vector" rel="stylesheet"/>
+  <script async="" src="/qb64wiki/load.php?lang=en&amp;modules=startup&amp;only=scripts&amp;raw=1&amp;skin=vector">
+  </script>
+  <meta content="" name="ResourceLoaderDynamicStyles"/>
+  <link href="/qb64wiki/load.php?lang=en&amp;modules=site.styles&amp;only=styles&amp;skin=vector" rel="stylesheet"/>
+  <meta content="MediaWiki 1.39.3" name="generator"/>
+  <meta content="telephone=no" name="format-detection"/>
+  <meta content="width=1000" name="viewport"/>
+  <link href="/favicon.ico" rel="icon"/>
+  <link href="/qb64wiki/opensearch_desc.php" rel="search" title="QB64 Phoenix Edition Wiki (en)" type="application/opensearchdescription+xml"/>
+  <link href="https://qb64phoenix.com/qb64wiki/api.php?action=rsd" rel="EditURI" type="application/rsd+xml"/>
+  <link href="/qb64wiki/index.php?title=Special:RecentChanges&amp;feed=atom" rel="alternate" title="QB64 Phoenix Edition Wiki Atom feed" type="application/atom+xml"/>
+  <link href="https://qb64phoenix.com/qb64wiki/index.php/DECLARE_LIBRARY" rel="canonical"/>
+ </head>
+ <body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject page-DECLARE_LIBRARY rootpage-DECLARE_LIBRARY skin-vector action-view skin-vector-legacy vector-feature-language-in-header-enabled vector-feature-language-in-main-page-header-disabled vector-feature-language-alert-in-sidebar-disabled vector-feature-sticky-header-disabled vector-feature-sticky-header-edit-disabled vector-feature-table-of-contents-disabled vector-feature-visual-enhancement-next-disabled">
+  <div class="noprint" id="mw-page-base">
+  </div>
+  <div class="noprint" id="mw-head-base">
+  </div>
+  <div class="mw-body" id="content" role="main">
+   <a id="top">
+   </a>
+   <div id="siteNotice">
+   </div>
+   <div class="mw-indicators">
+   </div>
+   <h1 class="firstHeading mw-first-heading" id="firstHeading">
+    <span class="mw-page-title-main">
+     DECLARE LIBRARY
+    </span>
+   </h1>
+   <div class="vector-body" id="bodyContent">
+    <div class="noprint" id="siteSub">
+     From QB64 Phoenix Edition Wiki
+    </div>
+    <div id="contentSub">
+     <span class="mw-redirectedfrom">
+      (Redirected from
+      <a class="mw-redirect" href="/qb64wiki/index.php?title=LIBRARY&amp;redirect=no" title="LIBRARY">
+       LIBRARY
+      </a>
+      )
+     </span>
+    </div>
+    <div id="contentSub2">
+    </div>
+    <div id="jump-to-nav">
+    </div>
+    <a class="mw-jump-link" href="#mw-head">
+     Jump to navigation
+    </a>
+    <a class="mw-jump-link" href="#searchInput">
+     Jump to search
+    </a>
+    <div class="mw-body-content mw-content-ltr" dir="ltr" id="mw-content-text" lang="en">
+     <div class="mw-parser-output">
+      <p>
+       The
+       <b>
+        DECLARE LIBRARY
+       </b>
+       declaration allows for the utilization of external library
+       <a href="/qb64wiki/index.php/SUB" title="SUB">
+        SUB
+       </a>
+       and
+       <a href="/qb64wiki/index.php/FUNCTION" title="FUNCTION">
+        FUNCTION
+       </a>
+       procedures.
+      </p>
+      <p>
+       <br/>
+      </p>
+      <table align="right" style="max-width:25%;">
+       <tbody>
+        <tr>
+         <td>
+          <div aria-labelledby="mw-toc-heading" class="toc" id="toc" role="navigation">
+           <input class="toctogglecheckbox" id="toctogglecheckbox" role="button" style="display:none" type="checkbox"/>
+           <div class="toctitle" dir="ltr" lang="en">
+            <h2 id="mw-toc-heading">
+             Contents
+            </h2>
+            <span class="toctogglespan">
+             <label class="toctogglelabel" for="toctogglecheckbox">
+             </label>
+            </span>
+           </div>
+           <ul>
+            <li class="toclevel-1">
+             <a href="#Syntax">
+              <span class="tocnumber">
+               1
+              </span>
+              <span class="toctext">
+               Syntax
+              </span>
+             </a>
+            </li>
+            <li class="toclevel-1">
+             <a href="#Description">
+              <span class="tocnumber">
+               2
+              </span>
+              <span class="toctext">
+               Description
+              </span>
+             </a>
+            </li>
+            <li class="toclevel-1">
+             <a href="#Parameters">
+              <span class="tocnumber">
+               3
+              </span>
+              <span class="toctext">
+               Parameters
+              </span>
+             </a>
+            </li>
+            <li class="toclevel-1">
+             <a href="#Availability">
+              <span class="tocnumber">
+               4
+              </span>
+              <span class="toctext">
+               Availability
+              </span>
+             </a>
+            </li>
+            <li class="toclevel-1">
+             <a href="#Examples">
+              <span class="tocnumber">
+               5
+              </span>
+              <span class="toctext">
+               Examples
+              </span>
+             </a>
+            </li>
+            <li class="toclevel-1">
+             <a href="#See_also">
+              <span class="tocnumber">
+               6
+              </span>
+              <span class="toctext">
+               See also
+              </span>
+             </a>
+            </li>
+           </ul>
+          </div>
+         </td>
+        </tr>
+       </tbody>
+      </table>
+      <h2>
+       <span class="mw-headline" id="Syntax">
+        Syntax
+       </span>
+      </h2>
+      <dl>
+       <dd>
+        <b>
+         DECLARE [DYNAMIC|CUSTOMTYPE|STATIC] LIBRARY
+        </b>
+        [
+        <i>
+         "Library_name"
+        </i>
+        ][,
+        <i>
+         "Library_name2"
+        </i>
+        ][, ...]
+        <dl>
+         <dd>
+          {
+          <a href="/qb64wiki/index.php/SUB" title="SUB">
+           SUB
+          </a>
+          |
+          <a href="/qb64wiki/index.php/FUNCTION" title="FUNCTION">
+           FUNCTION
+          </a>
+          }
+          <i>
+           Procedure_name
+          </i>
+          [
+          <b>
+           ALIAS
+          </b>
+          <i>
+           Library_procedure
+          </i>
+          ] (
+          <a class="mw-redirect" href="/qb64wiki/index.php/BYVAL" title="BYVAL">
+           BYVAL
+          </a>
+          <i>
+           Parameter
+          </i>
+          [{suffix|
+          <a href="/qb64wiki/index.php/AS" title="AS">
+           AS
+          </a>
+          <a href="/qb64wiki/index.php/Variable_Types" title="Variable Types">
+           type
+          </a>
+          [,
+          <i>
+           Parameter2
+          </i>
+          ...][, ...]])
+         </dd>
+         <dd>
+          .
+         </dd>
+         <dd>
+          . ' Other SUBs or FUNCTIONs as required
+         </dd>
+         <dd>
+          .
+         </dd>
+        </dl>
+       </dd>
+       <dd>
+        <b>
+         END DECLARE
+        </b>
+       </dd>
+      </dl>
+      <p>
+       <br/>
+      </p>
+      <h2>
+       <span class="mw-headline" id="Description">
+        Description
+       </span>
+      </h2>
+      <ul>
+       <li>
+        The declaration can be used with:
+        <ul>
+         <li>
+          C/C++ sub-procedures files (
+          <i>
+           .h
+          </i>
+          and
+          <i>
+           .hpp
+          </i>
+          )
+         </li>
+         <li>
+          Dynamically linked libraries and shared object files (
+          <i>
+           .dll
+          </i>
+          ,
+          <i>
+           .so
+          </i>
+          and
+          <i>
+           .dylib
+          </i>
+          )
+         </li>
+         <li>
+          Static libraries (
+          <i>
+           .a
+          </i>
+          )
+         </li>
+         <li>
+          Object files (
+          <i>
+           .o
+          </i>
+          )
+         </li>
+        </ul>
+       </li>
+       <li>
+        <i>
+         Library file names
+        </i>
+        can be listed to combine more than one supported file name or path into one DECLARE LIBRARY block (
+        <b>
+         except for dynamically linked libraries and shared object files
+        </b>
+        ). Do not include any file extension (
+        <i>
+         .h
+        </i>
+        ,
+        <i>
+         .dll
+        </i>
+        ,
+        <i>
+         .a
+        </i>
+        etc.).
+       </li>
+       <li>
+        The dynamically linked library or shared object file can be in a relative/absolute path specified along with the library name, in the operating system's directory (e.g., C:\Windows\System32), or in the QB64 directory (alongside your program's executable).
+       </li>
+       <li>
+        Specify
+        <i>
+         ""
+        </i>
+        as the library file name to inform QB64 that the function exists in a library that is already linked and that it must define the C function before calling it, as well as allowing QB64 code to call it.
+       </li>
+       <li>
+        It's a good idea to try declaring Operating System API libraries without a library file name first, as most common Operating System headers are already included in QB64 source.
+       </li>
+       <li>
+        When using a procedure from a dynamically linked library or shared object (
+        <i>
+         .dll
+        </i>
+        ,
+        <i>
+         .so
+        </i>
+        and
+        <i>
+         .dylib
+        </i>
+        files) use
+        <b>
+         DECLARE DYNAMIC LIBRARY
+        </b>
+        .
+       </li>
+       <li>
+        When using a procedure from a static library (
+        <i>
+         .a
+        </i>
+        files) use
+        <b>
+         DECLARE STATIC LIBRARY
+        </b>
+        .
+       </li>
+       <li>
+        <i>
+         Procedure_name
+        </i>
+        can be any desired procedure name designated by using
+        <a href="/qb64wiki/index.php/ALIAS" title="ALIAS">
+         ALIAS
+        </a>
+        with the
+        <i>
+         Library_procedure
+        </i>
+        name following. Enclose
+        <i>
+         Library_procedure
+        </i>
+        in
+        <i>
+         ""
+        </i>
+        when using a C++ function with the scope operator (e.g., "std::clamp").
+       </li>
+       <li>
+        <i>
+         Parameters
+        </i>
+        used by the library procedure can be passed by value (
+        <a class="mw-redirect" href="/qb64wiki/index.php/BYVAL" title="BYVAL">
+         BYVAL
+        </a>
+        ) when needed, except for
+        <a href="/qb64wiki/index.php/STRING" title="STRING">
+         STRING
+        </a>
+        values.
+       </li>
+       <li>
+        QB64
+        <a href="/qb64wiki/index.php/STRING" title="STRING">
+         STRINGs
+        </a>
+        are passed to external libraries as pointers to first character. Many external library procedures expect strings to be NULL terminated. Terminate
+        <a href="/qb64wiki/index.php/STRING" title="STRING">
+         STRINGs
+        </a>
+        using
+        <a href="/qb64wiki/index.php/CHR$" title="CHR$">
+         CHR$
+        </a>
+        (0) wherever it is needed.
+       </li>
+       <li>
+        Declarations can be made inside of
+        <a href="/qb64wiki/index.php/SUB" title="SUB">
+         SUB
+        </a>
+        or
+        <a href="/qb64wiki/index.php/FUNCTION" title="FUNCTION">
+         FUNCTION
+        </a>
+        procedures. Declarations do not need to be at program start.
+       </li>
+       <li>
+        C/C++ procedures can use a header file name and the file code must be included with program code.
+       </li>
+       <li>
+        C/C++ header files cannot be used with
+        <b>
+         DECLARE DYNAMIC LIBRARY
+        </b>
+        . Existence of any
+        <i>
+         .h
+        </i>
+        or
+        <i>
+         .hpp
+        </i>
+        file of the same name as the dynamically linked library or shared object file will cause DECLARE DYNAMIC LIBRARY to fail.
+       </li>
+       <li>
+        The
+        <a href="/qb64wiki/index.php/OFFSET" title="OFFSET">
+         _OFFSET
+        </a>
+        in memory can be used in
+        <b>
+         CUSTOMTYPE
+        </b>
+        ,
+        <b>
+         STATIC
+        </b>
+        and
+        <b>
+         DYNAMIC LIBRARY
+        </b>
+        declarations.
+       </li>
+       <li>
+        <b>
+         DECLARE DYNAMIC LIBRARY
+        </b>
+        let's you specify any
+        <a href="/qb64wiki/index.php/SUB" title="SUB">
+         SUB
+        </a>
+        /
+        <a href="/qb64wiki/index.php/FUNCTION" title="FUNCTION">
+         FUNCTION
+        </a>
+        calling format you wish, but if the size of the parameters does not match, the size expected within the library, your code will probably cause a GPF (General Protection Fault). It is important to understand that pointers (if required) will be 32-bits in size (the equivalent of a
+        <a href="/qb64wiki/index.php/LONG" title="LONG">
+         LONG
+        </a>
+        ) when creating a 32-bit program (even under 64-bit Windows).
+       </li>
+       <li>
+        <b>
+         STATIC
+        </b>
+        is the same as
+        <b>
+         DYNAMIC
+        </b>
+        except that it prioritizes linking to static libraries (
+        <i>
+         .a
+        </i>
+        and
+        <i>
+         .o
+        </i>
+        files) over dynamically linked libraries and shared object files, if both exist.
+       </li>
+       <li>
+        <b>
+         CUSTOMTYPE
+        </b>
+        is already implied when using
+        <b>
+         DECLARE DYNAMIC LIBRARY
+        </b>
+        . This type of library just allows the same flexibility to apply when referencing STATIC libraries that are used to refer to dynamic libraries.
+       </li>
+       <li>
+        <a href="/qb64wiki/index.php/SUB" title="SUB">
+         SUB
+        </a>
+        procedures using
+        <b>
+         DECLARE CUSTOMTYPE LIBRARY
+        </b>
+        API procedures
+        <b>
+         may error
+        </b>
+        . Try
+        <b>
+         DYNAMIC
+        </b>
+        with the dynamically linked library or shared object file name.
+       </li>
+       <li>
+        It is up to the user to document and determine the suitability of all libraries and procedures they choose to use. QB64 cannot guarantee that any procedure will work and cannot guarantee any troubleshooting help.
+       </li>
+       <li>
+        QB64 version 1.000 and up produce standalone executables. External dynamically linked libraries or shared object files must be distributed with your program.
+       </li>
+       <li>
+        What libraries are or aren't automatically used in the linking process is not formally defined, nor is it guaranteed to stay that way in future versions of QB64.
+       </li>
+      </ul>
+      <p>
+       <br/>
+      </p>
+      <h2>
+       <span class="mw-headline" id="Parameters">
+        Parameters
+       </span>
+      </h2>
+      <ul>
+       <li>
+        The
+        <i>
+         Library_name
+        </i>
+        is needed if a library is not already loaded by QB64. Do not include the file extension. Begin the
+        <i>
+         Library_name
+        </i>
+        with
+        <b>
+         ./
+        </b>
+        or
+        <b>
+         .\
+        </b>
+        to make it relative to the path where your source file is saved, so you can keep all your project files together.
+       </li>
+       <li>
+        <i>
+         Procedure_name
+        </i>
+        is any program procedure name you want to designate by using
+        <a href="/qb64wiki/index.php/ALIAS" title="ALIAS">
+         ALIAS
+        </a>
+        with the
+        <i>
+         Library_procedure
+        </i>
+        name.
+       </li>
+       <li>
+        <i>
+         Library procedure
+        </i>
+        is the actual procedure name used inside of the library or header file.
+       </li>
+      </ul>
+      <p>
+       <br/>
+      </p>
+      <h2>
+       <span class="mw-headline" id="Availability">
+        Availability
+       </span>
+      </h2>
+      <ul class="gallery mw-gallery-nolines">
+       <li class="gallerybox" style="width: 53px">
+        <div style="width: 53px">
+         <div class="thumb" style="width: 48px;">
+          <div style="margin:0px auto;">
+           <a class="image" href="/qb64wiki/index.php/File:Qb64.png" title="v0.923">
+            <img alt="v0.923" decoding="async" height="48" src="/qb64wiki/images/9/91/Qb64.png" width="48"/>
+           </a>
+          </div>
+         </div>
+         <div class="gallerytext">
+          <p>
+           <b>
+            v0.923
+           </b>
+          </p>
+         </div>
+        </div>
+       </li>
+       <li class="gallerybox" style="width: 53px">
+        <div style="width: 53px">
+         <div class="thumb" style="width: 48px;">
+          <div style="margin:0px auto;">
+           <a class="image" href="/qb64wiki/index.php/File:Qbpe.png" title="all">
+            <img alt="all" decoding="async" height="48" src="/qb64wiki/images/0/07/Qbpe.png" width="48"/>
+           </a>
+          </div>
+         </div>
+         <div class="gallerytext">
+          <p>
+           <b>
+            all
+           </b>
+          </p>
+         </div>
+        </div>
+       </li>
+       <li class="gallerybox" style="width: 53px">
+        <div style="width: 53px">
+         <div class="thumb" style="width: 48px;">
+          <div style="margin:0px auto;">
+           <a class="image" href="/qb64wiki/index.php/File:Apix.png">
+            <img alt="Apix.png" decoding="async" height="48" src="/qb64wiki/images/5/5f/Apix.png" width="48"/>
+           </a>
+          </div>
+         </div>
+         <div class="gallerytext">
+         </div>
+        </div>
+       </li>
+       <li class="gallerybox" style="width: 53px">
+        <div style="width: 53px">
+         <div class="thumb" style="width: 48px;">
+          <div style="margin:0px auto;">
+           <a class="image" href="/qb64wiki/index.php/File:Win.png" title="yes">
+            <img alt="yes" decoding="async" height="48" src="/qb64wiki/images/2/29/Win.png" width="48"/>
+           </a>
+          </div>
+         </div>
+         <div class="gallerytext">
+          <p>
+           <b>
+            yes
+           </b>
+          </p>
+         </div>
+        </div>
+       </li>
+       <li class="gallerybox" style="width: 53px">
+        <div style="width: 53px">
+         <div class="thumb" style="width: 48px;">
+          <div style="margin:0px auto;">
+           <a class="image" href="/qb64wiki/index.php/File:Lnx.png" title="yes">
+            <img alt="yes" decoding="async" height="48" src="/qb64wiki/images/7/7a/Lnx.png" width="48"/>
+           </a>
+          </div>
+         </div>
+         <div class="gallerytext">
+          <p>
+           <b>
+            yes
+           </b>
+          </p>
+         </div>
+        </div>
+       </li>
+       <li class="gallerybox" style="width: 53px">
+        <div style="width: 53px">
+         <div class="thumb" style="width: 48px;">
+          <div style="margin:0px auto;">
+           <a class="image" href="/qb64wiki/index.php/File:Osx.png" title="yes">
+            <img alt="yes" decoding="async" height="48" src="/qb64wiki/images/2/22/Osx.png" width="48"/>
+           </a>
+          </div>
+         </div>
+         <div class="gallerytext">
+          <p>
+           <b>
+            yes
+           </b>
+          </p>
+         </div>
+        </div>
+       </li>
+      </ul>
+      <ul>
+       <li>
+        Available for
+        <i>
+         Linux
+        </i>
+        and
+        <i>
+         macOS
+        </i>
+        since
+        <b>
+         QB64 v0.940
+        </b>
+       </li>
+      </ul>
+      <p>
+       <br/>
+      </p>
+      <h2>
+       <span class="mw-headline" id="Examples">
+        Examples
+       </span>
+      </h2>
+      <dl>
+       <dt>
+        Example 1
+       </dt>
+       <dd>
+        Using GLUT library procedure as a program SUB procedure to set the mouse pointer style.
+       </dd>
+      </dl>
+      <table cellpadding="15px" width="100%">
+       <tbody>
+        <tr>
+         <td>
+          <pre class="codeide"><a href="/qb64wiki/index.php/CONST" title="CONST"><span style="color:#4593D8;">CONST</span></a> CURSOR_NORMAL = <span style="color:#F580B1;">1</span>
+<a href="/qb64wiki/index.php/CONST" title="CONST"><span style="color:#4593D8;">CONST</span></a> CURSOR_HAND = <span style="color:#F580B1;">2</span>
+<a href="/qb64wiki/index.php/CONST" title="CONST"><span style="color:#4593D8;">CONST</span></a> CURSOR_HELP = <span style="color:#F580B1;">4</span>
+<a href="/qb64wiki/index.php/CONST" title="CONST"><span style="color:#4593D8;">CONST</span></a> CURSOR_CYCLE = <span style="color:#F580B1;">7</span>
+<a href="/qb64wiki/index.php/CONST" title="CONST"><span style="color:#4593D8;">CONST</span></a> CURSOR_TEXT = <span style="color:#F580B1;">8</span>
+<a href="/qb64wiki/index.php/CONST" title="CONST"><span style="color:#4593D8;">CONST</span></a> CURSOR_CROSSHAIR = <span style="color:#F580B1;">3</span>
+<a href="/qb64wiki/index.php/CONST" title="CONST"><span style="color:#4593D8;">CONST</span></a> CURSOR_UP_DOWN = <span style="color:#F580B1;">10</span>
+<a href="/qb64wiki/index.php/CONST" title="CONST"><span style="color:#4593D8;">CONST</span></a> CURSOR_LEFT_RIGHT = <span style="color:#F580B1;">11</span>
+<a href="/qb64wiki/index.php/CONST" title="CONST"><span style="color:#4593D8;">CONST</span></a> CURSOR_LEFT_RIGHT_CORNER = <span style="color:#F580B1;">16</span>
+<a href="/qb64wiki/index.php/CONST" title="CONST"><span style="color:#4593D8;">CONST</span></a> CURSOR_RIGHT_LEFT_CORNER = <span style="color:#F580B1;">17</span>
+<a href="/qb64wiki/index.php/CONST" title="CONST"><span style="color:#4593D8;">CONST</span></a> CURSOR_MOVE = <span style="color:#F580B1;">5</span>
+<a href="/qb64wiki/index.php/CONST" title="CONST"><span style="color:#4593D8;">CONST</span></a> CURSOR_NONE = <span style="color:#F580B1;">23</span>
+
+<a class="mw-selflink selflink"><span style="color:#4593D8;">DECLARE LIBRARY</span></a>
+    <a href="/qb64wiki/index.php/SUB" title="SUB"><span style="color:#4593D8;">SUB</span></a> <span style="color:#55FF55;">glutSetCursor</span> (<a class="mw-redirect" href="/qb64wiki/index.php/BYVAL" title="BYVAL"><span style="color:#4593D8;">BYVAL</span></a> style&amp;)
+<a class="mw-redirect" href="/qb64wiki/index.php/END_DECLARE" title="END DECLARE"><span style="color:#4593D8;">END DECLARE</span></a>
+
+<span style="color:#55FF55;">glutSetCursor</span> CURSOR_CROSSHAIR
+</pre>
+         </td>
+        </tr>
+       </tbody>
+      </table>
+      <p>
+       <br/>
+      </p>
+      <dl>
+       <dt>
+        Example 2
+       </dt>
+       <dd>
+        Using
+        <a href="/qb64wiki/index.php/ALIAS" title="ALIAS">
+         ALIAS
+        </a>
+        to create a program SUB or FUNCTION
+        <b>
+         .
+        </b>
+       </dd>
+      </dl>
+      <table cellpadding="15px" width="100%">
+       <tbody>
+        <tr>
+         <td>
+          <pre class="codeide"><a class="mw-selflink selflink"><span style="color:#4593D8;">DECLARE LIBRARY</span></a>
+    <a href="/qb64wiki/index.php/FUNCTION" title="FUNCTION"><span style="color:#4593D8;">FUNCTION</span></a> <span style="color:#55FF55;">GetMilliseconds~&amp;&amp;</span> <a href="/qb64wiki/index.php/ALIAS" title="ALIAS"><span style="color:#4593D8;">ALIAS</span></a> GetTicks
+<a class="mw-redirect" href="/qb64wiki/index.php/END_DECLARE" title="END DECLARE"><span style="color:#4593D8;">END DECLARE</span></a>
+
+<a class="mw-redirect" href="/qb64wiki/index.php/DO" title="DO"><span style="color:#4593D8;">DO</span></a>
+    <a href="/qb64wiki/index.php/LOCATE" title="LOCATE"><span style="color:#4593D8;">LOCATE</span></a> , <span style="color:#F580B1;">1</span>: <a href="/qb64wiki/index.php/PRINT" title="PRINT"><span style="color:#4593D8;">PRINT</span></a> <span style="color:#FFB100;">"Seconds since program start:"</span>; <span style="color:#55FF55;">GetMilliseconds</span> \ <span style="color:#F580B1;">1000</span>;
+<a href="/qb64wiki/index.php/DO...LOOP" title="DO...LOOP"><span style="color:#4593D8;">LOOP UNTIL</span></a> <a href="/qb64wiki/index.php/KEYHIT" title="KEYHIT"><span style="color:#4593D8;">_KEYHIT</span></a> = <span style="color:#F580B1;">27</span>
+</pre>
+         </td>
+        </tr>
+       </tbody>
+      </table>
+      <dl>
+       <dd>
+        <i>
+         Explanation:
+        </i>
+        When a library procedure is used to represent another procedure name use
+        <a href="/qb64wiki/index.php/ALIAS" title="ALIAS">
+         ALIAS
+        </a>
+        instead. Saves creating a SUB!
+       </dd>
+      </dl>
+      <p>
+       <br/>
+      </p>
+      <dl>
+       <dt>
+        Example 3
+       </dt>
+       <dd>
+        Don't know if a C function is defined by C++ or QB64? Try using empty quotes.
+       </dd>
+      </dl>
+      <table cellpadding="15px" width="100%">
+       <tbody>
+        <tr>
+         <td>
+          <pre class="codeide"><a class="mw-selflink selflink"><span style="color:#4593D8;">DECLARE LIBRARY</span></a> <span style="color:#FFB100;">""</span>
+    <a href="/qb64wiki/index.php/FUNCTION" title="FUNCTION"><span style="color:#4593D8;">FUNCTION</span></a> <span style="color:#55FF55;">addone&amp;</span> (<a class="mw-redirect" href="/qb64wiki/index.php/BYVAL" title="BYVAL"><span style="color:#4593D8;">BYVAL</span></a> value&amp;)
+<a class="mw-redirect" href="/qb64wiki/index.php/END_DECLARE" title="END DECLARE"><span style="color:#4593D8;">END DECLARE</span></a>
+</pre>
+         </td>
+        </tr>
+       </tbody>
+      </table>
+      <dl>
+       <dd>
+        <i>
+         Explanation:
+        </i>
+        The C function 'addone' exists in a library QB64 already links to, but it hasn't been defined as a C function or a QB64 function. By using "" we are telling QB64 the function exists in a library which is already linked to and that it must define the C function before calling it, as well as allowing QB64 code to call it. Trying the above code without the "" will fail.
+       </dd>
+      </dl>
+      <p>
+       <br/>
+      </p>
+      <dl>
+       <dt>
+        Example 4
+       </dt>
+       <dd>
+        This example plays MIDI files using the
+        <i>
+         playmidi32.dll
+        </i>
+        documented here:
+        <a class="external text" href="http://libertybasicuniversity.com/lbnews/nl110/midi3.htm" rel="nofollow">
+         Liberty Basic University
+        </a>
+        . Download the following DLL file to your main QB64 directory:
+        <a class="external text" href="https://www.qb64.org/resources/Playmidi32.dll" rel="nofollow">
+         PlayMidi32.dll
+        </a>
+       </dd>
+      </dl>
+      <table cellpadding="15px" width="100%">
+       <tbody>
+        <tr>
+         <td>
+          <pre class="codeide"><a href="/qb64wiki/index.php/DECLARE" title="DECLARE"><span style="color:#4593D8;">DECLARE</span></a> <a href="/qb64wiki/index.php/DYNAMIC" title="DYNAMIC"><span style="color:#4593D8;">DYNAMIC</span></a> <a class="mw-redirect" href="/qb64wiki/index.php/LIBRARY" title="LIBRARY"><span style="color:#4593D8;">LIBRARY</span></a> <span style="color:#FFB100;">"playmidi32"</span>
+    <a href="/qb64wiki/index.php/FUNCTION" title="FUNCTION"><span style="color:#4593D8;">FUNCTION</span></a> <span style="color:#55FF55;">PlayMIDI&amp;</span> (filename <a href="/qb64wiki/index.php/AS" title="AS"><span style="color:#4593D8;">AS</span></a> <a href="/qb64wiki/index.php/STRING" title="STRING"><span style="color:#4593D8;">STRING</span></a>)
+<a class="mw-redirect" href="/qb64wiki/index.php/END_DECLARE" title="END DECLARE"><span style="color:#4593D8;">END DECLARE</span></a>
+result = <span style="color:#55FF55;">PlayMIDI</span>(<span style="color:#FFB100;">".\samples\qb64\original\ps2battl.mid"</span> + <a href="/qb64wiki/index.php/CHR$" title="CHR$"><span style="color:#4593D8;">CHR$</span></a>(<span style="color:#F580B1;">0</span>))
+<a href="/qb64wiki/index.php/PRINT" title="PRINT"><span style="color:#4593D8;">PRINT</span></a> result
+</pre>
+         </td>
+        </tr>
+       </tbody>
+      </table>
+      <p>
+       <br/>
+      </p>
+      <dl>
+       <dt>
+        Example 5
+       </dt>
+       <dd>
+        Using a CUSTOMTYPE LIBRARY to return the
+        <a href="/qb64wiki/index.php/Unicode" title="Unicode">
+         Unicode
+        </a>
+        version of the current running program's name.
+       </dd>
+      </dl>
+      <table cellpadding="15px" width="100%">
+       <tbody>
+        <tr>
+         <td>
+          <pre class="codeide"><a href="/qb64wiki/index.php/SCREEN" title="SCREEN"><span style="color:#4593D8;">SCREEN</span></a> <span style="color:#F580B1;">12</span>
+
+<a href="/qb64wiki/index.php/DECLARE" title="DECLARE"><span style="color:#4593D8;">DECLARE</span></a> <a class="mw-redirect" href="/qb64wiki/index.php/CUSTOMTYPE" title="CUSTOMTYPE"><span style="color:#4593D8;">CUSTOMTYPE</span></a> <a class="mw-redirect" href="/qb64wiki/index.php/LIBRARY" title="LIBRARY"><span style="color:#4593D8;">LIBRARY</span></a> <span style="color:#919191;">'Directory Information using KERNEL32 provided by Dav</span>
+    <a href="/qb64wiki/index.php/FUNCTION" title="FUNCTION"><span style="color:#4593D8;">FUNCTION</span></a> <span style="color:#55FF55;">GetModuleFileNameA&amp;</span> (<a class="mw-redirect" href="/qb64wiki/index.php/BYVAL" title="BYVAL"><span style="color:#4593D8;">BYVAL</span></a> hModule <a href="/qb64wiki/index.php/AS" title="AS"><span style="color:#4593D8;">AS</span></a> <a href="/qb64wiki/index.php/LONG" title="LONG"><span style="color:#4593D8;">LONG</span></a>, lpFileName <a href="/qb64wiki/index.php/AS" title="AS"><span style="color:#4593D8;">AS</span></a> <a href="/qb64wiki/index.php/STRING" title="STRING"><span style="color:#4593D8;">STRING</span></a>, <a class="mw-redirect" href="/qb64wiki/index.php/BYVAL" title="BYVAL"><span style="color:#4593D8;">BYVAL</span></a> nSize <a href="/qb64wiki/index.php/AS" title="AS"><span style="color:#4593D8;">AS</span></a> <a href="/qb64wiki/index.php/LONG" title="LONG"><span style="color:#4593D8;">LONG</span></a>)
+    <a href="/qb64wiki/index.php/FUNCTION" title="FUNCTION"><span style="color:#4593D8;">FUNCTION</span></a> <span style="color:#55FF55;">GetModuleFileNameW&amp;</span> (<a class="mw-redirect" href="/qb64wiki/index.php/BYVAL" title="BYVAL"><span style="color:#4593D8;">BYVAL</span></a> hModule <a href="/qb64wiki/index.php/AS" title="AS"><span style="color:#4593D8;">AS</span></a> <a href="/qb64wiki/index.php/LONG" title="LONG"><span style="color:#4593D8;">LONG</span></a>, lpFileName <a href="/qb64wiki/index.php/AS" title="AS"><span style="color:#4593D8;">AS</span></a> <a href="/qb64wiki/index.php/STRING" title="STRING"><span style="color:#4593D8;">STRING</span></a>, <a class="mw-redirect" href="/qb64wiki/index.php/BYVAL" title="BYVAL"><span style="color:#4593D8;">BYVAL</span></a> nSize <a href="/qb64wiki/index.php/AS" title="AS"><span style="color:#4593D8;">AS</span></a> <a href="/qb64wiki/index.php/LONG" title="LONG"><span style="color:#4593D8;">LONG</span></a>)
+<a class="mw-redirect" href="/qb64wiki/index.php/END_DECLARE" title="END DECLARE"><span style="color:#4593D8;">END DECLARE</span></a>
+
+<span style="color:#919191;">'=== SHOW CURRENT PROGRAM</span>
+FileName$ = <a href="/qb64wiki/index.php/SPACE$" title="SPACE$"><span style="color:#4593D8;">SPACE$</span></a>(<span style="color:#F580B1;">512</span>)
+
+Result = <span style="color:#55FF55;">GetModuleFileNameA</span>(<span style="color:#F580B1;">0</span>, FileName$, <a href="/qb64wiki/index.php/LEN" title="LEN"><span style="color:#4593D8;">LEN</span></a>(FileName$))
+<a class="mw-redirect" href="/qb64wiki/index.php/IF" title="IF"><span style="color:#4593D8;">IF</span></a> Result <a href="/qb64wiki/index.php/THEN" title="THEN"><span style="color:#4593D8;">THEN</span></a> <a href="/qb64wiki/index.php/PRINT" title="PRINT"><span style="color:#4593D8;">PRINT</span></a> <span style="color:#FFB100;">"CURRENT PROGRAM (ASCII): "</span>; <a href="/qb64wiki/index.php/LEFT$" title="LEFT$"><span style="color:#4593D8;">LEFT$</span></a>(FileName$, Result)
+
+<span style="color:#919191;">'load a unicode font</span>
+f = <a href="/qb64wiki/index.php/LOADFONT" title="LOADFONT"><span style="color:#4593D8;">_LOADFONT</span></a>(<span style="color:#FFB100;">"cyberbit.ttf"</span>, <span style="color:#F580B1;">24</span>, <span style="color:#FFB100;">"UNICODE"</span>)
+<a href="/qb64wiki/index.php/FONT" title="FONT"><span style="color:#4593D8;">_FONT</span></a> f
+Result = <span style="color:#55FF55;">GetModuleFileNameW</span>(<span style="color:#F580B1;">0</span>, FileName$, <a href="/qb64wiki/index.php/LEN" title="LEN"><span style="color:#4593D8;">LEN</span></a>(FileName$) \ <span style="color:#F580B1;">2</span>)
+<a href="/qb64wiki/index.php/LOCATE" title="LOCATE"><span style="color:#4593D8;">LOCATE</span></a> <span style="color:#F580B1;">2</span>, <span style="color:#F580B1;">1</span>
+<a href="/qb64wiki/index.php/PRINT" title="PRINT"><span style="color:#4593D8;">PRINT</span></a> <span style="color:#55FF55;">QuickCP437toUTF32$</span>(<span style="color:#FFB100;">"CURRENT PROGRAM (UTF): "</span>) + <span style="color:#55FF55;">QuickUTF16toUTF32$</span>(<a href="/qb64wiki/index.php/LEFT$" title="LEFT$"><span style="color:#4593D8;">LEFT$</span></a>(FileName$, Result * <span style="color:#F580B1;">2</span>))
+<a href="/qb64wiki/index.php/FONT" title="FONT"><span style="color:#4593D8;">_FONT</span></a> <span style="color:#F580B1;">16</span> <span style="color:#919191;">'restore CP437 font</span>
+
+<a href="/qb64wiki/index.php/FUNCTION" title="FUNCTION"><span style="color:#4593D8;">FUNCTION</span></a> <span style="color:#55FF55;">QuickCP437toUTF32$</span> (a$)
+    b$ = <a href="/qb64wiki/index.php/STRING$" title="STRING$"><span style="color:#4593D8;">STRING$</span></a>(<a href="/qb64wiki/index.php/LEN" title="LEN"><span style="color:#4593D8;">LEN</span></a>(a$) * <span style="color:#F580B1;">4</span>, <span style="color:#F580B1;">0</span>)
+    <a href="/qb64wiki/index.php/FOR" title="FOR"><span style="color:#4593D8;">FOR</span></a> i = <span style="color:#F580B1;">1</span> <a href="/qb64wiki/index.php/TO" title="TO"><span style="color:#4593D8;">TO</span></a> <a href="/qb64wiki/index.php/LEN" title="LEN"><span style="color:#4593D8;">LEN</span></a>(a$)
+        <a href="/qb64wiki/index.php/ASC" title="ASC"><span style="color:#4593D8;">ASC</span></a>(b$, i * <span style="color:#F580B1;">4</span> - <span style="color:#F580B1;">3</span>) = <a href="/qb64wiki/index.php/ASC_(function)" title="ASC (function)"><span style="color:#4593D8;">ASC</span></a>(a$, i)
+    <a href="/qb64wiki/index.php/NEXT" title="NEXT"><span style="color:#4593D8;">NEXT</span></a>
+    <span style="color:#55FF55;">QuickCP437toUTF32$</span> = b$
+<a class="mw-redirect" href="/qb64wiki/index.php/END_FUNCTION" title="END FUNCTION"><span style="color:#4593D8;">END FUNCTION</span></a>
+
+<a href="/qb64wiki/index.php/FUNCTION" title="FUNCTION"><span style="color:#4593D8;">FUNCTION</span></a> <span style="color:#55FF55;">QuickUTF16toUTF32$</span> (a$)
+    b$ = <a href="/qb64wiki/index.php/STRING$" title="STRING$"><span style="color:#4593D8;">STRING$</span></a>(<a href="/qb64wiki/index.php/LEN" title="LEN"><span style="color:#4593D8;">LEN</span></a>(a$) * <span style="color:#F580B1;">2</span>, <span style="color:#F580B1;">0</span>)
+    <a href="/qb64wiki/index.php/FOR" title="FOR"><span style="color:#4593D8;">FOR</span></a> i = <span style="color:#F580B1;">1</span> <a href="/qb64wiki/index.php/TO" title="TO"><span style="color:#4593D8;">TO</span></a> <a href="/qb64wiki/index.php/LEN" title="LEN"><span style="color:#4593D8;">LEN</span></a>(a$) \ <span style="color:#F580B1;">2</span>
+        <a href="/qb64wiki/index.php/ASC" title="ASC"><span style="color:#4593D8;">ASC</span></a>(b$, i * <span style="color:#F580B1;">4</span> - <span style="color:#F580B1;">3</span>) = <a href="/qb64wiki/index.php/ASC_(function)" title="ASC (function)"><span style="color:#4593D8;">ASC</span></a>(a$, i * <span style="color:#F580B1;">2</span> - <span style="color:#F580B1;">1</span>)
+        <a href="/qb64wiki/index.php/ASC" title="ASC"><span style="color:#4593D8;">ASC</span></a>(b$, i * <span style="color:#F580B1;">4</span> - <span style="color:#F580B1;">2</span>) = <a href="/qb64wiki/index.php/ASC_(function)" title="ASC (function)"><span style="color:#4593D8;">ASC</span></a>(a$, i * <span style="color:#F580B1;">2</span>)
+    <a href="/qb64wiki/index.php/NEXT" title="NEXT"><span style="color:#4593D8;">NEXT</span></a>
+    <span style="color:#55FF55;">QuickUTF16toUTF32$</span> = b$
+<a class="mw-redirect" href="/qb64wiki/index.php/END_FUNCTION" title="END FUNCTION"><span style="color:#4593D8;">END FUNCTION</span></a>
+</pre>
+         </td>
+        </tr>
+       </tbody>
+      </table>
+      <center>
+       <span style="font-family: Courier New, Courier, monospace; font-size: 0.80em; line-height: 50%;">
+        Code by Galleon
+       </span>
+      </center>
+      <p>
+       <br/>
+      </p>
+      <h2>
+       <span class="mw-headline" id="See_also">
+        See also
+       </span>
+      </h2>
+      <ul>
+       <li>
+        <a href="/qb64wiki/index.php/SUB" title="SUB">
+         SUB
+        </a>
+        ,
+        <a href="/qb64wiki/index.php/FUNCTION" title="FUNCTION">
+         FUNCTION
+        </a>
+       </li>
+       <li>
+        <a class="mw-redirect" href="/qb64wiki/index.php/BYVAL" title="BYVAL">
+         BYVAL
+        </a>
+        ,
+        <a href="/qb64wiki/index.php/ALIAS" title="ALIAS">
+         ALIAS
+        </a>
+       </li>
+       <li>
+        <a href="/qb64wiki/index.php/OFFSET_(function)" title="OFFSET (function)">
+         _OFFSET (function)
+        </a>
+        ,
+        <a href="/qb64wiki/index.php/OFFSET" title="OFFSET">
+         _OFFSET
+        </a>
+        <span style="color:#777777;">
+         (variable type)
+        </span>
+       </li>
+       <li>
+        <a href="/qb64wiki/index.php/C_Libraries" title="C Libraries">
+         C Libraries
+        </a>
+        ,
+        <a href="/qb64wiki/index.php/DLL_Libraries" title="DLL Libraries">
+         DLL Libraries
+        </a>
+        ,
+        <a href="/qb64wiki/index.php/Windows_Libraries" title="Windows Libraries">
+         Windows Libraries
+        </a>
+       </li>
+       <li>
+        <a href="/qb64wiki/index.php/Port_Access_Libraries" title="Port Access Libraries">
+         Port Access Libraries
+        </a>
+       </li>
+       <li>
+        <a href="/qb64wiki/index.php/SQL_Client" title="SQL Client">
+         SQL Client
+        </a>
+       </li>
+      </ul>
+      <p>
+       <br/>
+      </p>
+      <hr/>
+      <center>
+       <b>
+        Navigation:
+       </b>
+      </center>
+      <center>
+       <a href="/qb64wiki/index.php/Main_Page" title="Main Page">
+        Main Page with Articles and Tutorials
+       </a>
+      </center>
+      <center>
+       <a href="/qb64wiki/index.php/Keyword_Reference_-_Alphabetical" title="Keyword Reference - Alphabetical">
+        Keyword Reference - Alphabetical
+       </a>
+      </center>
+      <center>
+       <a href="/qb64wiki/index.php/Keyword_Reference_-_By_usage" title="Keyword Reference - By usage">
+        Keyword Reference - By usage
+       </a>
+      </center>
+      <center>
+       <b>
+        <a class="external text" href="https://qb64phoenix.com/forum/showthread.php?tid=2800" rel="nofollow">
+         Report a broken link
+        </a>
+       </b>
+       <br/>
+      </center>
+      <!-- 
+NewPP limit report
+Cached time: 20240715221545
+Cache expiry: 86400
+Reduced expiry: false
+Complications: [show‐toc]
+CPU time usage: 0.083 seconds
+Real time usage: 0.100 seconds
+Preprocessor visited node count: 1282/1000000
+Post‐expand include size: 9616/2097152 bytes
+Template argument size: 2442/2097152 bytes
+Highest expansion depth: 4/100
+Expensive parser function count: 0/100
+Unstrip recursion depth: 0/20
+Unstrip post‐expand size: 2639/5000000 bytes
+-->
+      <!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%   61.373      1 -total
+  8.42%    5.167     96 Template:Cl
+  6.14%    3.771     72 Template:Text
+  5.27%    3.237      1 Template:PageSyntax
+  4.72%    2.896      1 Template:PageSeeAlso
+  4.26%    2.612      5 Template:Parameter
+  4.05%    2.488      1 Template:PageDescription
+  3.99%    2.448      1 Template:PageParameters
+  3.97%    2.434      1 Template:PageAvailability
+  3.42%    2.100      1 Template:Small
+-->
+      <!-- Saved in parser cache with key qb64pnix_mw19894-mwmb_:pcache:idhash:107-0!canonical and timestamp 20240715221545 and revision id 8832.
+ -->
+     </div>
+     <div class="printfooter" data-nosnippet="">
+      Retrieved from "
+      <a dir="ltr" href="https://qb64phoenix.com/qb64wiki/index.php?title=DECLARE_LIBRARY&amp;oldid=8832">
+       https://qb64phoenix.com/qb64wiki/index.php?title=DECLARE_LIBRARY&amp;oldid=8832
+      </a>
+      "
+     </div>
+    </div>
+    <div class="catlinks catlinks-allhidden" data-mw="interface" id="catlinks">
+    </div>
+   </div>
+  </div>
+  <div id="mw-navigation">
+   <h2>
+    Navigation menu
+   </h2>
+   <div id="mw-head">
+    <nav aria-labelledby="p-personal-label" class="vector-menu mw-portlet mw-portlet-personal vector-user-menu-legacy" id="p-personal" role="navigation">
+     <h3 class="vector-menu-heading" id="p-personal-label">
+      <span class="vector-menu-heading-label">
+       Personal tools
+      </span>
+     </h3>
+     <div class="vector-menu-content">
+      <ul class="vector-menu-content-list">
+       <li class="mw-list-item" id="pt-login">
+        <a accesskey="o" href="/qb64wiki/index.php?title=Special:UserLogin&amp;returnto=DECLARE+LIBRARY" title="You are encouraged to log in; however, it is not mandatory [o]">
+         <span>
+          Log in
+         </span>
+        </a>
+       </li>
+      </ul>
+     </div>
+    </nav>
+    <div id="left-navigation">
+     <nav aria-labelledby="p-namespaces-label" class="vector-menu mw-portlet mw-portlet-namespaces vector-menu-tabs vector-menu-tabs-legacy" id="p-namespaces" role="navigation">
+      <h3 class="vector-menu-heading" id="p-namespaces-label">
+       <span class="vector-menu-heading-label">
+        Namespaces
+       </span>
+      </h3>
+      <div class="vector-menu-content">
+       <ul class="vector-menu-content-list">
+        <li class="selected mw-list-item" id="ca-nstab-main">
+         <a accesskey="c" href="/qb64wiki/index.php/DECLARE_LIBRARY" title="View the content page [c]">
+          <span>
+           Page
+          </span>
+         </a>
+        </li>
+        <li class="new mw-list-item" id="ca-talk">
+         <a accesskey="t" href="/qb64wiki/index.php?title=Talk:DECLARE_LIBRARY&amp;action=edit&amp;redlink=1" rel="discussion" title="Discussion about the content page (page does not exist) [t]">
+          <span>
+           Discussion
+          </span>
+         </a>
+        </li>
+       </ul>
+      </div>
+     </nav>
+     <nav aria-labelledby="p-variants-label" class="vector-menu mw-portlet mw-portlet-variants emptyPortlet vector-menu-dropdown" id="p-variants" role="navigation">
+      <input aria-haspopup="true" aria-labelledby="p-variants-label" class="vector-menu-checkbox" data-event-name="ui.dropdown-p-variants" id="p-variants-checkbox" role="button" type="checkbox"/>
+      <label aria-label="Change language variant" class="vector-menu-heading" id="p-variants-label">
+       <span class="vector-menu-heading-label">
+        English
+       </span>
+      </label>
+      <div class="vector-menu-content">
+       <ul class="vector-menu-content-list">
+       </ul>
+      </div>
+     </nav>
+    </div>
+    <div id="right-navigation">
+     <nav aria-labelledby="p-views-label" class="vector-menu mw-portlet mw-portlet-views vector-menu-tabs vector-menu-tabs-legacy" id="p-views" role="navigation">
+      <h3 class="vector-menu-heading" id="p-views-label">
+       <span class="vector-menu-heading-label">
+        Views
+       </span>
+      </h3>
+      <div class="vector-menu-content">
+       <ul class="vector-menu-content-list">
+        <li class="selected mw-list-item" id="ca-view">
+         <a href="/qb64wiki/index.php/DECLARE_LIBRARY">
+          <span>
+           Read
+          </span>
+         </a>
+        </li>
+        <li class="mw-list-item" id="ca-viewsource">
+         <a accesskey="e" href="/qb64wiki/index.php?title=DECLARE_LIBRARY&amp;action=edit" title="This page is protected.
+You can view its source [e]">
+          <span>
+           View source
+          </span>
+         </a>
+        </li>
+        <li class="mw-list-item" id="ca-history">
+         <a accesskey="h" href="/qb64wiki/index.php?title=DECLARE_LIBRARY&amp;action=history" title="Past revisions of this page [h]">
+          <span>
+           View history
+          </span>
+         </a>
+        </li>
+       </ul>
+      </div>
+     </nav>
+     <nav aria-labelledby="p-cactions-label" class="vector-menu mw-portlet mw-portlet-cactions emptyPortlet vector-menu-dropdown" id="p-cactions" role="navigation" title="More options">
+      <input aria-haspopup="true" aria-labelledby="p-cactions-label" class="vector-menu-checkbox" data-event-name="ui.dropdown-p-cactions" id="p-cactions-checkbox" role="button" type="checkbox"/>
+      <label class="vector-menu-heading" id="p-cactions-label">
+       <span class="vector-menu-heading-label">
+        More
+       </span>
+      </label>
+      <div class="vector-menu-content">
+       <ul class="vector-menu-content-list">
+       </ul>
+      </div>
+     </nav>
+     <div class="vector-search-box-vue vector-search-box-show-thumbnail vector-search-box-auto-expand-width vector-search-box" id="p-search" role="search">
+      <div>
+       <h3>
+        <label for="searchInput">
+         Search
+        </label>
+       </h3>
+       <form action="/qb64wiki/index.php" class="vector-search-box-form" id="searchform">
+        <div class="vector-search-box-inner" data-search-loc="header-navigation" id="simpleSearch">
+         <input accesskey="f" aria-label="Search QB64 Phoenix Edition Wiki" autocapitalize="sentences" class="vector-search-box-input" id="searchInput" name="search" placeholder="Search QB64 Phoenix Edition Wiki" title="Search QB64 Phoenix Edition Wiki [f]" type="search"/>
+         <input name="title" type="hidden" value="Special:Search"/>
+         <input class="searchButton mw-fallbackSearchButton" id="mw-searchButton" name="fulltext" title="Search the pages for this text" type="submit" value="Search"/>
+         <input class="searchButton" id="searchButton" name="go" title="Go to a page with this exact name if it exists" type="submit" value="Go"/>
+        </div>
+       </form>
+      </div>
+     </div>
+    </div>
+   </div>
+   <div id="mw-panel">
+    <div id="p-logo" role="banner">
+     <a class="mw-wiki-logo" href="/qb64wiki/index.php/Main_Page" title="Visit the main page">
+     </a>
+    </div>
+    <nav aria-labelledby="p-navigation-label" class="vector-menu mw-portlet mw-portlet-navigation vector-menu-portal portal" id="p-navigation" role="navigation">
+     <h3 class="vector-menu-heading" id="p-navigation-label">
+      <span class="vector-menu-heading-label">
+       Navigation
+      </span>
+     </h3>
+     <div class="vector-menu-content">
+      <ul class="vector-menu-content-list">
+       <li class="mw-list-item" id="n-mainpage-description">
+        <a accesskey="z" href="/qb64wiki/index.php/Main_Page" title="Visit the main page [z]">
+         <span>
+          Main page
+         </span>
+        </a>
+       </li>
+       <li class="mw-list-item" id="n-recentchanges">
+        <a accesskey="r" href="/qb64wiki/index.php/Special:RecentChanges" title="A list of recent changes in the wiki [r]">
+         <span>
+          Recent changes
+         </span>
+        </a>
+       </li>
+       <li class="mw-list-item" id="n-randompage">
+        <a accesskey="x" href="/qb64wiki/index.php/Special:Random" title="Load a random page [x]">
+         <span>
+          Random page
+         </span>
+        </a>
+       </li>
+       <li class="mw-list-item" id="n-help-mediawiki">
+        <a href="https://www.mediawiki.org/wiki/Special:MyLanguage/Help:Contents">
+         <span>
+          Help about MediaWiki
+         </span>
+        </a>
+       </li>
+      </ul>
+     </div>
+    </nav>
+    <nav aria-labelledby="p-tb-label" class="vector-menu mw-portlet mw-portlet-tb vector-menu-portal portal" id="p-tb" role="navigation">
+     <h3 class="vector-menu-heading" id="p-tb-label">
+      <span class="vector-menu-heading-label">
+       Tools
+      </span>
+     </h3>
+     <div class="vector-menu-content">
+      <ul class="vector-menu-content-list">
+       <li class="mw-list-item" id="t-whatlinkshere">
+        <a accesskey="j" href="/qb64wiki/index.php/Special:WhatLinksHere/DECLARE_LIBRARY" title="A list of all wiki pages that link here [j]">
+         <span>
+          What links here
+         </span>
+        </a>
+       </li>
+       <li class="mw-list-item" id="t-recentchangeslinked">
+        <a accesskey="k" href="/qb64wiki/index.php/Special:RecentChangesLinked/DECLARE_LIBRARY" rel="nofollow" title="Recent changes in pages linked from this page [k]">
+         <span>
+          Related changes
+         </span>
+        </a>
+       </li>
+       <li class="mw-list-item" id="t-specialpages">
+        <a accesskey="q" href="/qb64wiki/index.php/Special:SpecialPages" title="A list of all special pages [q]">
+         <span>
+          Special pages
+         </span>
+        </a>
+       </li>
+       <li class="mw-list-item" id="t-print">
+        <a accesskey="p" href="javascript:print();" rel="alternate" title="Printable version of this page [p]">
+         <span>
+          Printable version
+         </span>
+        </a>
+       </li>
+       <li class="mw-list-item" id="t-permalink">
+        <a href="/qb64wiki/index.php?title=DECLARE_LIBRARY&amp;oldid=8832" title="Permanent link to this revision of this page">
+         <span>
+          Permanent link
+         </span>
+        </a>
+       </li>
+       <li class="mw-list-item" id="t-info">
+        <a href="/qb64wiki/index.php?title=DECLARE_LIBRARY&amp;action=info" title="More information about this page">
+         <span>
+          Page information
+         </span>
+        </a>
+       </li>
+      </ul>
+     </div>
+    </nav>
+   </div>
+  </div>
+  <footer class="mw-footer" id="footer" role="contentinfo">
+   <ul id="footer-info">
+    <li id="footer-info-lastmod">
+     This page was last edited on 8 March 2024, at 20:17.
+    </li>
+   </ul>
+   <ul id="footer-places">
+    <li id="footer-places-privacy">
+     <a href="/qb64wiki/index.php/QB64_Phoenix_Edition_Wiki:Privacy_policy">
+      Privacy policy
+     </a>
+    </li>
+    <li id="footer-places-about">
+     <a href="/qb64wiki/index.php/QB64_Phoenix_Edition_Wiki:About">
+      About QB64 Phoenix Edition Wiki
+     </a>
+    </li>
+    <li id="footer-places-disclaimer">
+     <a href="/qb64wiki/index.php/QB64_Phoenix_Edition_Wiki:General_disclaimer">
+      Disclaimers
+     </a>
+    </li>
+   </ul>
+   <ul class="noprint" id="footer-icons">
+    <li id="footer-poweredbyico">
+     <a href="https://www.mediawiki.org/">
+      <img alt="Powered by MediaWiki" height="31" loading="lazy" src="/qb64wiki/resources/assets/poweredby_mediawiki_88x31.png" srcset="/qb64wiki/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /qb64wiki/resources/assets/poweredby_mediawiki_176x62.png 2x" width="88"/>
+     </a>
+    </li>
+   </ul>
+  </footer>
+  <script>
+   (RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgPageParseReport":{"limitreport":{"cputime":"0.083","walltime":"0.100","ppvisitednodes":{"value":1282,"limit":1000000},"postexpandincludesize":{"value":9616,"limit":2097152},"templateargumentsize":{"value":2442,"limit":2097152},"expansiondepth":{"value":4,"limit":100},"expensivefunctioncount":{"value":0,"limit":100},"unstrip-depth":{"value":0,"limit":20},"unstrip-size":{"value":2639,"limit":5000000},"timingprofile":["100.00%   61.373      1 -total","  8.42%    5.167     96 Template:Cl","  6.14%    3.771     72 Template:Text","  5.27%    3.237      1 Template:PageSyntax","  4.72%    2.896      1 Template:PageSeeAlso","  4.26%    2.612      5 Template:Parameter","  4.05%    2.488      1 Template:PageDescription","  3.99%    2.448      1 Template:PageParameters","  3.97%    2.434      1 Template:PageAvailability","  3.42%    2.100      1 Template:Small"]},"cachereport":{"timestamp":"20240715221545","ttl":86400,"transientcontent":false}}});mw.config.set({"wgBackendResponseTime":114});});
+  </script>
+ </body>
+</html>

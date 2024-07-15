@@ -1,45 +1,84 @@
 # _INCLERRORLINE
+> The _INCLERRORFILE$ function returns the line number in an $INCLUDE file that caused the most recent error.
 
-The [_INCLERRORFILE$](_INCLERRORFILE$.md) function returns the line number in an [$INCLUDE]($INCLUDE.md) file that caused the most recent error.
+## SYNTAX
+`errline& = _INCLERRORLINE`
 
-  
+## DESCRIPTION
+* If the last error occurred in the main module, [_INCLERRORLINE](_INCLERRORLINE.md) returns 0.
+* By checking [_INCLERRORLINE](_INCLERRORLINE.md) you can report exactly what line inside an included module caused the last error.
 
-## Syntax
 
-*errline&* = _INCLERRORLINE
-  
+## EXAMPLES
+> Example:
 
-## Description
+```vb
+ON ERROR GOTO DebugLine
 
-* If the last error occurred in the main module, _INCLERRORLINE returns 0.
-* By checking _INCLERRORLINE you can report exactly what line inside an included module caused the last error.
+ERROR 250 'simulated error code - an error in the main module leaves _INCLERRORLINE empty (= 0)
 
-  
+'$INCLUDE:'haserror.bi'
 
-## Availability
+END
 
-* **Version 1.1 and up**.
-
-  
-
-## Examples
-
-*Example:*
-
-``` [ON ERROR](ON ERROR.md) [GOTO](GOTO.md) DebugLine  [ERROR](ERROR.md) 250 'simulated error code - an error in the main module leaves _INCLERRORLINE empty (= 0)  '[$INCLUDE]($INCLUDE.md):'haserror.bi'  [END](END.md)  DebugLine: [PRINT](PRINT.md) "An error occurred. Please contact support with the following details: [PRINT](PRINT.md) "ERROR "; [ERR](ERR.md); " ON LINE: "; [_ERRORLINE](_ERRORLINE.md) [IF](IF.md) _INCLERRORLINE [THEN](THEN.md)     [PRINT](PRINT.md) "    IN MODULE "; [_INCLERRORFILE$](_INCLERRORFILE$.md); " (line"; _INCLERRORLINE; ")" [END IF](END IF.md) [RESUME](RESUME.md) [NEXT](NEXT.md)  
+DebugLine:
+PRINT "An error occurred. Please contact support with the following details:
+PRINT "ERROR "; ERR; " ON LINE: "; _ERRORLINE
+IF _INCLERRORLINE THEN
+   PRINT "    IN MODULE "; _INCLERRORFILE$; " (line"; _INCLERRORLINE; ")"
+END IF
+RESUME NEXT
 ```
 
-``` An error occurred. Please contact support with the following details: ERROR  250  ON LINE:  6  An error occurred. Please contact support with the following details: ERROR  250  ON LINE:  9     IN MODULE haserror.bi ( line 1 )  
+
+```vb
+ON ERROR GOTO DebugLine
+
+ERROR 250 'simulated error code - an error in the main module leaves _INCLERRORLINE empty (= 0)
+
+'$INCLUDE:'haserror.bi'
+
+END
+
+DebugLine:
+PRINT "An error occurred. Please contact support with the following details:
+PRINT "ERROR "; ERR; " ON LINE: "; _ERRORLINE
+IF _INCLERRORLINE THEN
+   PRINT "    IN MODULE "; _INCLERRORFILE$; " (line"; _INCLERRORLINE; ")"
+END IF
+RESUME NEXT
 ```
 
-  
-
-## See also
-
-* [_INCLERRORFILE$](_INCLERRORFILE$.md)
-* [ON ERROR](ON ERROR.md), [ERR](ERR.md)
+* _INCLERRORFILE$
+* [ON](ON.md) [ERROR](ERROR.md) , [ERR](ERR.md)
 * [ERROR](ERROR.md)
-* [ERROR Codes](ERROR Codes.md)
-* [$INCLUDE]($INCLUDE.md)
+* [ERROR](ERROR.md) Codes
+* $INCLUDE
 
-  
+```vb
+ON ERROR GOTO DebugLine
+
+ERROR 250 'simulated error code - an error in the main module leaves _INCLERRORLINE empty (= 0)
+
+'$INCLUDE:'haserror.bi'
+
+END
+
+DebugLine:
+PRINT "An error occurred. Please contact support with the following details:
+PRINT "ERROR "; ERR; " ON LINE: "; _ERRORLINE
+IF _INCLERRORLINE THEN
+   PRINT "    IN MODULE "; _INCLERRORFILE$; " (line"; _INCLERRORLINE; ")"
+END IF
+RESUME NEXT
+```
+
+
+
+# SEE ALSO
+* _INCLERRORFILE$
+* [ON](ON.md) [ERROR](ERROR.md) , [ERR](ERR.md)
+* [ERROR](ERROR.md)
+* [ERROR](ERROR.md) Codes
+* $INCLUDE
+

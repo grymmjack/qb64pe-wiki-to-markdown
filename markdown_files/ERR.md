@@ -1,36 +1,90 @@
 # ERR
+> The ERR function returns the last QBasic error code number.
 
-The ERR function returns the last QBasic error code number.
+## SYNTAX
+`errorNum% = ERR`
 
-  
-
-## Syntax
-
-*errorNum%* = ERR
-  
-
-## Description
-
+## DESCRIPTION
 * If there is no error, the function returns 0
 * Can be used in an error handling routine to report the last error code number.
 
-  
 
-## Examples
+## EXAMPLES
+> Example: Simulating an error to test a program error handler that looks for a "Subscript out of range" error.
 
-*Example:* Simulating an error to test a program error handler that looks for a "Subscript out of range" error.
+```vb
+ON ERROR GOTO handler
 
-``` [ON ERROR](ON ERROR.md) [GOTO](GOTO.md) handler  [IF](IF.md) x = 0 [THEN](THEN.md) [ERROR](ERROR.md) 111  'simulate an error code that does not exist x = x + 1 [IF](IF.md) x [THEN](THEN.md) [ERROR](ERROR.md) 9        'simulate array boundary being exceeded  [END](END.md)  handler: [PRINT](PRINT.md) ERR, [_ERRORLINE](_ERRORLINE.md) [BEEP](BEEP.md) [IF](IF.md) ERR = 9 [THEN](THEN.md)   [PRINT](PRINT.md) "The program has encountered an error and needs to close! Press a key!"   K$ = [INPUT$](INPUT$.md)(1)   [SYSTEM](SYSTEM.md) [END IF](END IF.md) [RESUME](RESUME.md) [NEXT](NEXT.md)               'RESUME can only be used in error handlers  
+IF x = 0 THEN ERROR 111  'simulate an error code that does not exist
+x = x + 1
+IF x THEN ERROR 9        'simulate array boundary being exceeded
+
+END
+
+handler:
+PRINT ERR, _ERRORLINE
+BEEP
+IF ERR = 9 THEN
+ PRINT "The program has encountered an error and needs to close! Press a key!"
+ K$ = INPUT$(1)
+ SYSTEM
+END IF
+RESUME NEXT               'RESUME can only be used in error handlers
 ```
 
-  
 
-## See also
+```vb
+ON ERROR GOTO handler
 
-* [ON ERROR](ON ERROR.md), [RESUME](RESUME.md)
+IF x = 0 THEN ERROR 111  'simulate an error code that does not exist
+x = x + 1
+IF x THEN ERROR 9        'simulate array boundary being exceeded
+
+END
+
+handler:
+PRINT ERR, _ERRORLINE
+BEEP
+IF ERR = 9 THEN
+ PRINT "The program has encountered an error and needs to close! Press a key!"
+ K$ = INPUT$(1)
+ SYSTEM
+END IF
+RESUME NEXT               'RESUME can only be used in error handlers
+```
+
+* [ON](ON.md) [ERROR](ERROR.md) , [RESUME](RESUME.md)
 * [ERL](ERL.md)
-* [_ERRORLINE](_ERRORLINE.md), [_INCLERRORLINE](_INCLERRORLINE.md), [_INCLERRORFILE$](_INCLERRORFILE$.md)
+* [_ERRORLINE](_ERRORLINE.md) , [_INCLERRORLINE](_INCLERRORLINE.md) , _INCLERRORFILE$
 * [ERROR](ERROR.md)
-* [ERROR Codes](ERROR Codes.md)
+* [ERROR](ERROR.md) Codes
 
-  
+```vb
+ON ERROR GOTO handler
+
+IF x = 0 THEN ERROR 111  'simulate an error code that does not exist
+x = x + 1
+IF x THEN ERROR 9        'simulate array boundary being exceeded
+
+END
+
+handler:
+PRINT ERR, _ERRORLINE
+BEEP
+IF ERR = 9 THEN
+ PRINT "The program has encountered an error and needs to close! Press a key!"
+ K$ = INPUT$(1)
+ SYSTEM
+END IF
+RESUME NEXT               'RESUME can only be used in error handlers
+```
+
+
+
+# SEE ALSO
+* [ON](ON.md) [ERROR](ERROR.md) , [RESUME](RESUME.md)
+* [ERL](ERL.md)
+* [_ERRORLINE](_ERRORLINE.md) , [_INCLERRORLINE](_INCLERRORLINE.md) , _INCLERRORFILE$
+* [ERROR](ERROR.md)
+* [ERROR](ERROR.md) Codes
+

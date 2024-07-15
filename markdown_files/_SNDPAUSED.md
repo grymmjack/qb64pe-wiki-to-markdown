@@ -1,30 +1,29 @@
 # _SNDPAUSED
+> The _SNDPAUSED function checks if a sound is paused. Uses a handle parameter passed from _SNDOPEN .
 
-The _SNDPAUSED function checks if a sound is paused. Uses a handle parameter passed from [_SNDOPEN](_SNDOPEN.md).
+## SYNTAX
+`isPaused%% = _SNDPAUSED ( handle& )`
 
-  
-
-## Syntax
-
-*isPaused%%* = _SNDPAUSED(*handle&*)
-  
-
-## Description
-
+## DESCRIPTION
 * Returns true (-1) if the sound is paused. False (0) if not paused.
 
-  
 
-## Examples
+## EXAMPLES
 
-``` [PRINT](PRINT.md) _SNDPAUSED(h&)  
+```vb
+PRINT _SNDPAUSED(h&)
 ```
 
-  
-
-## See also
-
-* [_SNDPAUSE](_SNDPAUSE.md), [_SNDPLAY](_SNDPLAY.md)
+* [_SNDPAUSE](_SNDPAUSE.md) , [_SNDPLAY](_SNDPLAY.md)
 * [_SNDSTOP](_SNDSTOP.md)
 
-  
+```vb
+PRINT _SNDPAUSED(h&)
+```
+
+
+
+# SEE ALSO
+* [_SNDPAUSE](_SNDPAUSE.md) , [_SNDPLAY](_SNDPLAY.md)
+* [_SNDSTOP](_SNDSTOP.md)
+

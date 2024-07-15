@@ -1,42 +1,72 @@
 # _INFLATE$
+> The _INFLATE$ function decompresses a string compressed by the _DEFLATE$ function.
 
-The _INFLATE$ function decompresses a [string](string.md) compressed by the [_DEFLATE$](_DEFLATE$.md) function.
+## SYNTAX
+`result$ = _INFLATE$ ( stringToDecompress$[, originalSize&] )`
 
-  
+## DESCRIPTION
+* result$ will contain the original version of stringToDecompress$ .
+* Optional parameter originalSize& can be used if the original size of the uncompressed data is known beforehand, which makes the decompression routine run more efficiently. If unspecified, decompression still works as expected, but may use more steps and need to allocate more memory internally.
+	* If unspecified, decompression still works as expected, but may use more steps and need to allocate more memory internally.
+* If unspecified, decompression still works as expected, but may use more steps and need to allocate more memory internally.
 
-## Syntax
 
-*result$* = _INFLATE$(*stringToDecompress$[, originalSize&]*)
-  
+## EXAMPLES
+> Example 1: Compressing a long string of text.
 
-## Description
+```vb
+a$ = "The quick brown fox jumps over the lazy dog. "
+PRINT "Original string (a$): "; a$
+FOR i = 1 TO 15
+   a$ = a$ + a$
+NEXT
 
-* *result$* will contain the original version of *stringToDecompress$*.
-* Optional parameter *originalSize&* can be used if the original size of the uncompressed data is known beforehand, which makes the decompression routine run more efficiently.
-	+ If unspecified, decompression still works as expected, but may use more steps and need to allocate more memory internally.
+PRINT "After concatenating it into itself several times, LEN(a$) ="; LEN(a$)
 
-  
-
-## Availability
-
-* **Version 1.4 and up**.
-
-  
-
-## Examples
-
-*Example 1:* Compressing a long string of text.
-
-``` a$ = "The quick brown fox jumps over the lazy dog. " [PRINT](PRINT.md) "Original string (a$): "; a$ [FOR](FOR.md) i = 1 [TO](TO.md) 15     a$ = a$ + a$ [NEXT](NEXT.md)  [PRINT](PRINT.md) "After concatenating it into itself several times, LEN(a$) ="; [LEN](LEN.md)(a$)  b$ = [_DEFLATE$](_DEFLATE$.md)(a$) [PRINT](PRINT.md) "After using _DEFLATE$ to compress it, LEN ="; [LEN](LEN.md)(b$) [PRINT USING](PRINT USING.md) "(compressed size is #.###% of the original)"; (([LEN](LEN.md)(b$) * 100) / [LEN](LEN.md)(a$)) c$ = _INFLATE$(b$) PRINT "After using _INFLATE$ to decompress it, LEN ="; [LEN](LEN.md)(c$)   
+b$ = _DEFLATE$(a$)
+PRINT "After using _DEFLATE$ to compress it, LEN ="; LEN(b$)
+PRINT USING "(compressed size is #.###% of the original)"; ((LEN(b$) * 100) / LEN(a$))
+c$ = _INFLATE$(b$)
+PRINT "After using _INFLATE$ to decompress it, LEN ="; LEN(c$)
 ```
 
-``` Original string (a$): The quick brown fox jumps over the lazy dog After concatenating it into itself several times, LEN(a$) = 1474560 After using _DEFLATE$ to compress it, LEN = 4335 (compressed size is 0.295% of the original) After using _INFLATE$ to decompress it, LEN = 1474560  
+
+```vb
+a$ = "The quick brown fox jumps over the lazy dog. "
+PRINT "Original string (a$): "; a$
+FOR i = 1 TO 15
+   a$ = a$ + a$
+NEXT
+
+PRINT "After concatenating it into itself several times, LEN(a$) ="; LEN(a$)
+
+b$ = _DEFLATE$(a$)
+PRINT "After using _DEFLATE$ to compress it, LEN ="; LEN(b$)
+PRINT USING "(compressed size is #.###% of the original)"; ((LEN(b$) * 100) / LEN(a$))
+c$ = _INFLATE$(b$)
+PRINT "After using _INFLATE$ to decompress it, LEN ="; LEN(c$)
 ```
 
-  
+* _DEFLATE$
 
-## See also
+```vb
+a$ = "The quick brown fox jumps over the lazy dog. "
+PRINT "Original string (a$): "; a$
+FOR i = 1 TO 15
+   a$ = a$ + a$
+NEXT
 
-* [_DEFLATE$](_DEFLATE$.md)
+PRINT "After concatenating it into itself several times, LEN(a$) ="; LEN(a$)
 
-  
+b$ = _DEFLATE$(a$)
+PRINT "After using _DEFLATE$ to compress it, LEN ="; LEN(b$)
+PRINT USING "(compressed size is #.###% of the original)"; ((LEN(b$) * 100) / LEN(a$))
+c$ = _INFLATE$(b$)
+PRINT "After using _INFLATE$ to decompress it, LEN ="; LEN(c$)
+```
+
+
+
+# SEE ALSO
+* _DEFLATE$
+

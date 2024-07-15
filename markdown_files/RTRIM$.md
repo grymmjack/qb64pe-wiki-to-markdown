@@ -1,43 +1,45 @@
 # RTRIM$
+> The RTRIM$ function removes trailing space characters from a STRING value.
 
-The RTRIM$ function removes trailing space characters from a [STRING](STRING.md) value.
+## SYNTAX
+`return$ = RTRIM$ ( value$ )`
 
-  
+## DESCRIPTION
+* value$ is the [STRING](STRING.md) value to trim.
+* If value$ contains no trailing space characters, value$ is returned unchanged.
+* Convert fixed length [STRING](STRING.md) values by using a different return$ variable.
 
-## Syntax
 
-*return$* = RTRIM$(*value$*)
-  
+## EXAMPLES
+> Trimming a fixed length string value for use by another string variable:
 
-## Description
-
-* *value$* is the [STRING](STRING.md) value to trim.
-* If *value$* contains no trailing space characters, *value$* is returned unchanged.
-* Convert fixed length [STRING](STRING.md) values by using a different *return$* variable.
-
-  
-
-## Examples
-
-Trimming a fixed length string value for use by another string variable:
-
-``` name$ = RTRIM$(contact.name) ' trims spaces from end of fixed length [TYPE](TYPE.md) value.  
+```vb
+name$ = RTRIM$(contact.name) ' trims spaces from end of fixed length TYPE value.
 ```
 
-Trimming text string ends:
+> Trimming text string ends:
 
-``` [PRINT](PRINT.md) RTRIM$("some text") + "." [PRINT](PRINT.md) RTRIM$("some text   ") + "." [PRINT](PRINT.md) RTRIM$("Tommy    ")  
+```vb
+name$ = RTRIM$(contact.name) ' trims spaces from end of fixed length TYPE value.
 ```
 
-``` some text. some text. Tommy  
+
+```vb
+name$ = RTRIM$(contact.name) ' trims spaces from end of fixed length TYPE value.
 ```
 
-  
+* Featured in our "Keyword of the Day" series
+* _TRIM$ , LTRIM$ , STR$
+* [LSET](LSET.md) , [RSET](RSET.md)
 
-## See also
+```vb
+name$ = RTRIM$(contact.name) ' trims spaces from end of fixed length TYPE value.
+```
 
-* [Featured in our "Keyword of the Day" series](Featured in our "Keyword of the Day" series.md)
-* [_TRIM$](_TRIM$.md), [LTRIM$](LTRIM$.md), [STR$](STR$.md)
-* [LSET](LSET.md), [RSET](RSET.md)
 
-  
+
+# SEE ALSO
+* Featured in our "Keyword of the Day" series
+* _TRIM$ , LTRIM$ , STR$
+* [LSET](LSET.md) , [RSET](RSET.md)
+

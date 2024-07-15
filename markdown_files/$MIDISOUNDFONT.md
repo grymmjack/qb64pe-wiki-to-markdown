@@ -1,66 +1,49 @@
 # $MIDISOUNDFONT
+> The $MIDISOUNDFONT metacommand enables MIDI support for _SNDOPEN .
 
-The $MIDISOUNDFONT metacommand enables MIDI support for [_SNDOPEN](_SNDOPEN.md).
+## SYNTAX
+`$MIDISOUNDFONT : {DEFAULT|" Filename "}`
 
-**MIDI functionality is current unstable, and requires [$UNSTABLE]($UNSTABLE.md):MIDI to be able to use.**
+## PARAMETERS
+* DEFAULT indicates that the soundfont provided by QB64-PE should be used to play MIDI files. The provided soundfont is about 1MB in size.
+	* The provided soundfont is about 1MB in size.
+* The provided soundfont is about 1MB in size.
+* Filename can be used to provide your own soundfont for playing MIDI files. The specified soundfont file is compiled into your program and is not required at runtime.
+	* The specified soundfont file is compiled into your program and is not required at runtime.
+* The specified soundfont file is compiled into your program and is not required at runtime.
 
-  
 
-## Syntax
-
-$MIDISOUNDFONT: {DEFAULT|"*Filename*"}
-  
-
-## Parameters
-
-* DEFAULT indicates that the soundfont provided by QB64-PE should be used to play MIDI files.
-	+ The provided soundfont is about 1MB in size.
-* *Filename* can be used to provide your own soundfont for playing MIDI files.
-	+ The specified soundfont file is compiled into your program and is not required at runtime.
-
-  
-
-## Description
-
+## DESCRIPTION
 * The use of this metacommand allows [_SNDOPEN](_SNDOPEN.md) to open MIDI files.
 * The selected soundfont is what is used to play all MIDI files.
 
-  
 
-## Availability
+## EXAMPLES
 
-* [![none](![none.md)](File:Qb64.png "none")
+```vb
+$UNSTABLE:MIDI
 
-**none**
-* [![v3.2.0](![v3.2.0.md)](File:Qbpe.png "v3.2.0")
+' This line is only allowed when $UNSTABLE:MIDI is used
+$MIDISOUNDFONT: Default
 
-**v3.2.0**
-* [![Apix.png](![Apix.png.md)](File:Apix.png)
-* [![yes](![yes.md)](File:Win.png "yes")
-
-**yes**
-* [![yes](![yes.md)](File:Lnx.png "yes")
-
-**yes**
-* [![yes](![yes.md)](File:Osx.png "yes")
-
-**yes**
-
-  
-
-## Examples
-
-``` [$UNSTABLE]($UNSTABLE.md):MIDI  ' This line is only allowed when [$UNSTABLE]($UNSTABLE.md):MIDI is used $MIDISOUNDFONT: Default  [_SNDPLAYFILE](_SNDPLAYFILE.md) "example.mid"  
+_SNDPLAYFILE "example.mid"
 ```
 
-``` [$UNSTABLE]($UNSTABLE.md):MIDI  ' Using a custom soundfont rather than the default $MIDISOUNDFONT: "soundfont.sf2"  [_SNDPLAYFILE](_SNDPLAYFILE.md) "example.mid"  
-```
-
-  
-
-## See also
-
-* [$UNSTABLE]($UNSTABLE.md)
+* $UNSTABLE
 * [_SNDOPEN](_SNDOPEN.md)
 
-  
+```vb
+$UNSTABLE:MIDI
+
+' This line is only allowed when $UNSTABLE:MIDI is used
+$MIDISOUNDFONT: Default
+
+_SNDPLAYFILE "example.mid"
+```
+
+
+
+# SEE ALSO
+* $UNSTABLE
+* [_SNDOPEN](_SNDOPEN.md)
+

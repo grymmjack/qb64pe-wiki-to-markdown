@@ -1,31 +1,54 @@
 # _SNDLOOP
+> The _SNDLOOP statement is like _SNDPLAY but the sound is looped. Uses a handle from the _SNDOPEN function.
 
-The _SNDLOOP statement is like [_SNDPLAY](_SNDPLAY.md) but the sound is looped. Uses a handle from the [_SNDOPEN](_SNDOPEN.md) function.
+## SYNTAX
+`_SNDLOOP handle&`
 
-  
+## DESCRIPTION
+* Plays the sound identified by handle& in a loop.
 
-## Syntax
 
-_SNDLOOP *handle&*
-  
+## EXAMPLES
+> Example: Loading a sound or music file and playing it in a loop until a key is pressed.
 
-## Description
+```vb
+bg = _SNDOPEN("back.ogg") '<<<<<<<<<< change to your sound file name
+_SNDLOOP bg
 
-* Plays the sound identified by *handle&* in a loop.
-
-  
-
-## Examples
-
-*Example:* Loading a sound or music file and playing it in a loop until a key is pressed.
-
-``` bg = [_SNDOPEN](_SNDOPEN.md)("back.ogg") '<<<<<<<<<< change to your sound file name _SNDLOOP bg  DO     [_LIMIT](_LIMIT.md) 10   'keep CPU resources used low [LOOP](LOOP.md) [UNTIL](UNTIL.md) [INKEY$](INKEY$.md) <> "" 'key press program exit [_SNDSTOP](_SNDSTOP.md) bg [_SNDCLOSE](_SNDCLOSE.md) bg  
+DO
+   _LIMIT 10   'keep CPU resources used low
+LOOP UNTIL INKEY$ <> "" 'key press program exit
+_SNDSTOP bg
+_SNDCLOSE bg
 ```
 
-  
 
-## See also
+```vb
+bg = _SNDOPEN("back.ogg") '<<<<<<<<<< change to your sound file name
+_SNDLOOP bg
 
-* [_SNDOPEN](_SNDOPEN.md), [_SNDSTOP](_SNDSTOP.md)
+DO
+   _LIMIT 10   'keep CPU resources used low
+LOOP UNTIL INKEY$ <> "" 'key press program exit
+_SNDSTOP bg
+_SNDCLOSE bg
+```
 
-  
+* [_SNDOPEN](_SNDOPEN.md) , [_SNDSTOP](_SNDSTOP.md)
+
+```vb
+bg = _SNDOPEN("back.ogg") '<<<<<<<<<< change to your sound file name
+_SNDLOOP bg
+
+DO
+   _LIMIT 10   'keep CPU resources used low
+LOOP UNTIL INKEY$ <> "" 'key press program exit
+_SNDSTOP bg
+_SNDCLOSE bg
+```
+
+
+
+# SEE ALSO
+* [_SNDOPEN](_SNDOPEN.md) , [_SNDSTOP](_SNDSTOP.md)
+

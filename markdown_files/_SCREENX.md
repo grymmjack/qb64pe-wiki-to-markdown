@@ -1,32 +1,30 @@
 # _SCREENX
+> The _SCREENX function returns the current column pixel coordinate of the program window on the desktop.
 
-The _SCREENX function returns the current column pixel coordinate of the program window on the desktop.
+## SYNTAX
+`positionX& = _SCREENX`
 
-  
-
-## Syntax
-
-*positionX&* = _SCREENX
-  
-
-## Description
-
+## DESCRIPTION
 * Function returns the current program window's upper left corner column position on the desktop.
-* Use [_DESKTOPWIDTH](_DESKTOPWIDTH.md) and [_DESKTOPHEIGHT](_DESKTOPHEIGHT.md) to find the current Windows desktop resolution to adjust the position with [_SCREENMOVE](_SCREENMOVE.md).
-* **[Keyword not supported in Linux or macOS versions](Keyword not supported in Linux or macOS versions.md)**
+* Use [_DESKTOPWIDTH](_DESKTOPWIDTH.md) and [_DESKTOPHEIGHT](_DESKTOPHEIGHT.md) to find the current Windows desktop resolution to adjust the position with [_SCREENMOVE](_SCREENMOVE.md) .
+* Keyword not supported in Linux or macOS versions
 
-  
 
-## Examples
+## EXAMPLES
+> Example: Clicks and opens program window header menu:
 
-*Example:* Clicks and opens program window header menu:
-
-``` [_SCREENMOVE](_SCREENMOVE.md) [_MIDDLE](_MIDDLE.md) [_SCREENCLICK](_SCREENCLICK.md) _SCREENX + 10, [_SCREENY](_SCREENY.md) + 10 [PRINT](PRINT.md) "Hello window!"  
+```vb
+_SCREENMOVE _MIDDLE
+_SCREENCLICK _SCREENX + 10, _SCREENY + 10
+PRINT "Hello window!"
 ```
 
-  
 
-## See also
+```vb
+_SCREENMOVE _MIDDLE
+_SCREENCLICK _SCREENX + 10, _SCREENY + 10
+PRINT "Hello window!"
+```
 
 * [_SCREENY](_SCREENY.md)
 * [_SCREENIMAGE](_SCREENIMAGE.md)
@@ -34,4 +32,18 @@ The _SCREENX function returns the current column pixel coordinate of the program
 * [_SCREENPRINT](_SCREENPRINT.md)
 * [_SCREENMOVE](_SCREENMOVE.md)
 
-  
+```vb
+_SCREENMOVE _MIDDLE
+_SCREENCLICK _SCREENX + 10, _SCREENY + 10
+PRINT "Hello window!"
+```
+
+
+
+# SEE ALSO
+* [_SCREENY](_SCREENY.md)
+* [_SCREENIMAGE](_SCREENIMAGE.md)
+* [_SCREENCLICK](_SCREENCLICK.md)
+* [_SCREENPRINT](_SCREENPRINT.md)
+* [_SCREENMOVE](_SCREENMOVE.md)
+

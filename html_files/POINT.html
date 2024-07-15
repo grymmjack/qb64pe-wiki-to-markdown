@@ -1,0 +1,1111 @@
+<!DOCTYPE html>
+<html class="client-nojs" dir="ltr" lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <title>
+   POINT - QB64 Phoenix Edition Wiki
+  </title>
+  <script>
+   document.documentElement.className="client-js";RLCONF={"wgBreakFrames":false,"wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgRequestId":"ZpWf4vSudf_TYjnwJ2d1iwAAA3c","wgCSPNonce":false,"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"POINT","wgTitle":"POINT","wgCurRevisionId":8665,"wgRevisionId":8665,"wgArticleId":232,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":[],"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgRelevantPageName":"POINT","wgRelevantArticleId":232,"wgIsProbablyEditable":false,"wgRelevantPageIsProbablyEditable":false,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgVector2022PreviewPages":[]};RLSTATE={"site.styles":"ready","user.styles":"ready","user":"ready",
+"user.options":"loading","skins.vector.styles.legacy":"ready"};RLPAGEMODULES=["site","mediawiki.page.ready","mediawiki.toc","skins.vector.legacy.js"];
+  </script>
+  <script>
+   (RLQ=window.RLQ||[]).push(function(){mw.loader.implement("user.options@12s5i",function($,jQuery,require,module){mw.user.tokens.set({"patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});});});
+  </script>
+  <link href="/qb64wiki/load.php?lang=en&amp;modules=skins.vector.styles.legacy&amp;only=styles&amp;skin=vector" rel="stylesheet"/>
+  <script async="" src="/qb64wiki/load.php?lang=en&amp;modules=startup&amp;only=scripts&amp;raw=1&amp;skin=vector">
+  </script>
+  <meta content="" name="ResourceLoaderDynamicStyles"/>
+  <link href="/qb64wiki/load.php?lang=en&amp;modules=site.styles&amp;only=styles&amp;skin=vector" rel="stylesheet"/>
+  <meta content="MediaWiki 1.39.3" name="generator"/>
+  <meta content="telephone=no" name="format-detection"/>
+  <meta content="width=1000" name="viewport"/>
+  <link href="/favicon.ico" rel="icon"/>
+  <link href="/qb64wiki/opensearch_desc.php" rel="search" title="QB64 Phoenix Edition Wiki (en)" type="application/opensearchdescription+xml"/>
+  <link href="https://qb64phoenix.com/qb64wiki/api.php?action=rsd" rel="EditURI" type="application/rsd+xml"/>
+  <link href="/qb64wiki/index.php?title=Special:RecentChanges&amp;feed=atom" rel="alternate" title="QB64 Phoenix Edition Wiki Atom feed" type="application/atom+xml"/>
+ </head>
+ <body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject page-POINT rootpage-POINT skin-vector action-view skin-vector-legacy vector-feature-language-in-header-enabled vector-feature-language-in-main-page-header-disabled vector-feature-language-alert-in-sidebar-disabled vector-feature-sticky-header-disabled vector-feature-sticky-header-edit-disabled vector-feature-table-of-contents-disabled vector-feature-visual-enhancement-next-disabled">
+  <div class="noprint" id="mw-page-base">
+  </div>
+  <div class="noprint" id="mw-head-base">
+  </div>
+  <div class="mw-body" id="content" role="main">
+   <a id="top">
+   </a>
+   <div id="siteNotice">
+   </div>
+   <div class="mw-indicators">
+   </div>
+   <h1 class="firstHeading mw-first-heading" id="firstHeading">
+    <span class="mw-page-title-main">
+     POINT
+    </span>
+   </h1>
+   <div class="vector-body" id="bodyContent">
+    <div class="noprint" id="siteSub">
+     From QB64 Phoenix Edition Wiki
+    </div>
+    <div id="contentSub">
+    </div>
+    <div id="contentSub2">
+    </div>
+    <div id="jump-to-nav">
+    </div>
+    <a class="mw-jump-link" href="#mw-head">
+     Jump to navigation
+    </a>
+    <a class="mw-jump-link" href="#searchInput">
+     Jump to search
+    </a>
+    <div class="mw-body-content mw-content-ltr" dir="ltr" id="mw-content-text" lang="en">
+     <div class="mw-parser-output">
+      <p>
+       The
+       <b>
+        POINT
+       </b>
+       function returns the pixel
+       <a href="/qb64wiki/index.php/COLOR" title="COLOR">
+        COLOR
+       </a>
+       attribute at a specified graphics coordinate or the current graphic cursor position.
+      </p>
+      <p>
+       <br/>
+      </p>
+      <table align="right" style="max-width:25%;">
+       <tbody>
+        <tr>
+         <td>
+          <div aria-labelledby="mw-toc-heading" class="toc" id="toc" role="navigation">
+           <input class="toctogglecheckbox" id="toctogglecheckbox" role="button" style="display:none" type="checkbox"/>
+           <div class="toctitle" dir="ltr" lang="en">
+            <h2 id="mw-toc-heading">
+             Contents
+            </h2>
+            <span class="toctogglespan">
+             <label class="toctogglelabel" for="toctogglecheckbox">
+             </label>
+            </span>
+           </div>
+           <ul>
+            <li class="toclevel-1">
+             <a href="#Syntax">
+              <span class="tocnumber">
+               1
+              </span>
+              <span class="toctext">
+               Syntax
+              </span>
+             </a>
+            </li>
+            <li class="toclevel-1">
+             <a href="#Parameters">
+              <span class="tocnumber">
+               2
+              </span>
+              <span class="toctext">
+               Parameters
+              </span>
+             </a>
+             <ul>
+              <li class="toclevel-2 tocsection-1">
+               <a href="#More_Examples">
+                <span class="tocnumber">
+                 2.1
+                </span>
+                <span class="toctext">
+                 More Examples
+                </span>
+               </a>
+              </li>
+             </ul>
+            </li>
+            <li class="toclevel-1">
+             <a href="#See_also">
+              <span class="tocnumber">
+               3
+              </span>
+              <span class="toctext">
+               See also
+              </span>
+             </a>
+            </li>
+           </ul>
+          </div>
+         </td>
+        </tr>
+       </tbody>
+      </table>
+      <h2>
+       <span class="mw-headline" id="Syntax">
+        Syntax
+       </span>
+      </h2>
+      <dl>
+       <dt>
+        Graphic Color
+       </dt>
+       <dd>
+        color_attribute% =
+        <b>
+         POINT (
+        </b>
+        <i>
+         column%, row%
+        </i>
+        <b>
+         )
+        </b>
+       </dd>
+       <dt>
+        Graphic cursor position
+       </dt>
+       <dd>
+        pointer_coordinate% =
+        <b>
+         POINT(
+        </b>
+        {0|1|2|3}
+        <b>
+         )
+        </b>
+       </dd>
+      </dl>
+      <p>
+       <br/>
+      </p>
+      <h2>
+       <span class="mw-headline" id="Parameters">
+        Parameters
+       </span>
+      </h2>
+      <p>
+       <b>
+        Graphic Color syntax:
+       </b>
+      </p>
+      <ul>
+       <li>
+        The
+        <a href="/qb64wiki/index.php/INTEGER" title="INTEGER">
+         INTEGER
+        </a>
+        <i>
+         column
+        </i>
+        and
+        <i>
+         row
+        </i>
+        coordinates designate the pixel position color on the screen to read.
+       </li>
+       <li>
+        The return value is an
+        <a href="/qb64wiki/index.php/INTEGER" title="INTEGER">
+         INTEGER
+        </a>
+        palette attribute value or an
+        <a href="/qb64wiki/index.php/UNSIGNED" title="UNSIGNED">
+         _UNSIGNED
+        </a>
+        <a href="/qb64wiki/index.php/LONG" title="LONG">
+         LONG
+        </a>
+        <a href="/qb64wiki/index.php/RGBA" title="RGBA">
+         _RGBA
+        </a>
+        32 bit value in QB64.
+       </li>
+      </ul>
+      <p>
+       <b>
+        Graphic cursor position syntax:
+       </b>
+      </p>
+      <ul>
+       <li>
+        The
+        <a href="/qb64wiki/index.php/INTEGER" title="INTEGER">
+         INTEGER
+        </a>
+        position number can be 0 to 3 depending on the cursor position desired:
+        <ul>
+         <li>
+          POINT(0) returns the current graphic cursor
+          <a href="/qb64wiki/index.php/SCREEN" title="SCREEN">
+           SCREEN
+          </a>
+          column pixel coordinate.
+         </li>
+         <li>
+          POINT(1) returns the current graphic cursor
+          <a href="/qb64wiki/index.php/SCREEN" title="SCREEN">
+           SCREEN
+          </a>
+          row pixel coordinate.
+         </li>
+         <li>
+          POINT(2) returns the current graphic cursor
+          <a href="/qb64wiki/index.php/WINDOW" title="WINDOW">
+           WINDOW
+          </a>
+          column position.
+         </li>
+         <li>
+          POINT(3) returns the current graphic cursor
+          <a href="/qb64wiki/index.php/WINDOW" title="WINDOW">
+           WINDOW
+          </a>
+          row position.
+         </li>
+        </ul>
+       </li>
+       <li>
+        If a
+        <a href="/qb64wiki/index.php/WINDOW" title="WINDOW">
+         WINDOW
+        </a>
+        view port has not been established, the coordinate returned will be the
+        <a href="/qb64wiki/index.php/SCREEN" title="SCREEN">
+         SCREEN
+        </a>
+        cursor pixel position.
+       </li>
+       <li>
+        The return value is the current graphic cursor
+        <i>
+         column
+        </i>
+        or
+        <i>
+         row
+        </i>
+        pixel position on the
+        <a href="/qb64wiki/index.php/SCREEN" title="SCREEN">
+         SCREEN
+        </a>
+        or
+        <a href="/qb64wiki/index.php/WINDOW" title="WINDOW">
+         WINDOW
+        </a>
+        .
+       </li>
+       <li>
+        Graphic cursor positions returned will be the last ones used in a graphic shape such as a
+        <a href="/qb64wiki/index.php/CIRCLE" title="CIRCLE">
+         CIRCLE
+        </a>
+        center point.
+       </li>
+      </ul>
+      <p>
+       <br/>
+       <i>
+        Usage:
+       </i>
+      </p>
+      <ul>
+       <li>
+        Use
+        <b>
+         <a href="/qb64wiki/index.php/SOURCE" title="SOURCE">
+          _SOURCE
+         </a>
+        </b>
+        first to set the image handle that POINT should read or QB64 will assume the current source image.
+       </li>
+      </ul>
+      <dl>
+       <dd>
+        <dl>
+         <dd>
+          <b>
+           <span style="color:green;">
+            _SOURCE 0
+           </span>
+          </b>
+          'sets POINT to read the current SCREEN image after reading a previous source image
+         </dd>
+        </dl>
+       </dd>
+      </dl>
+      <ul>
+       <li>
+        <b>
+         POINT cannot be used in SCREEN 0!
+        </b>
+        Use the
+        <a href="/qb64wiki/index.php/SCREEN_(function)" title="SCREEN (function)">
+         SCREEN
+        </a>
+        function to point text character codes and colors in SCREEN 0.
+       </li>
+      </ul>
+      <p>
+       <br/>
+      </p>
+      <center>
+       <b>
+        POINT in QBasic Legacy Graphic SCREEN Modes:
+       </b>
+      </center>
+      <ul>
+       <li>
+        The
+        <a href="/qb64wiki/index.php/INTEGER" title="INTEGER">
+         INTEGER
+        </a>
+        color attributes returned are limited by the number of colors in the legacy SCREEN mode used.
+       </li>
+       <li>
+        <i>
+         Column
+        </i>
+        and
+        <i>
+         row
+        </i>
+        <a href="/qb64wiki/index.php/INTEGER" title="INTEGER">
+         INTEGER
+        </a>
+        parameters denote the graphic pixel coordinate to read.
+       </li>
+       <li>
+        In
+        <b>
+         QB64
+        </b>
+        the offscreen or off image value returned is -1. Use IF POINT(x, y) &lt;&gt; -1 THEN...
+       </li>
+       <li>
+        In QBasic the coordinates MUST be on the screen or an
+        <a href="/qb64wiki/index.php/ERROR_Codes" title="ERROR Codes">
+         Illegal Function Call error
+        </a>
+        will occur.
+       </li>
+      </ul>
+      <p>
+       <br/>
+      </p>
+      <center>
+       <b>
+        POINT in QB64 32 Bit Graphic
+        <a href="/qb64wiki/index.php/NEWIMAGE" title="NEWIMAGE">
+         _NEWIMAGE
+        </a>
+        or
+        <a href="/qb64wiki/index.php/LOADIMAGE" title="LOADIMAGE">
+         _LOADIMAGE
+        </a>
+        Modes:
+       </b>
+      </center>
+      <ul>
+       <li>
+        Returns
+        <a href="/qb64wiki/index.php/UNSIGNED" title="UNSIGNED">
+         _UNSIGNED
+        </a>
+        <a href="/qb64wiki/index.php/LONG" title="LONG">
+         LONG
+        </a>
+        32 bit color values. Use
+        <a href="/qb64wiki/index.php/UNSIGNED" title="UNSIGNED">
+         _UNSIGNED
+        </a>
+        values when you don't want negative values.
+       </li>
+       <li>
+        <b>
+         <a href="/qb64wiki/index.php/UNSIGNED" title="UNSIGNED">
+          _UNSIGNED
+         </a>
+         <a href="/qb64wiki/index.php/LONG" title="LONG">
+          LONG
+         </a>
+         variables should be used when comparing POINT returns with
+         <a href="/qb64wiki/index.php/RGB" title="RGB">
+          _RGB
+         </a>
+         or
+         <a href="/qb64wiki/index.php/RGB32" title="RGB32">
+          _RGB32
+         </a>
+         <a href="/qb64wiki/index.php/ALPHA" title="ALPHA">
+          _ALPHA
+         </a>
+         bit values
+        </b>
+       </li>
+       <li>
+        Convert 32 bit color values to RGB intensities(0 to 255) using the
+        <a href="/qb64wiki/index.php/RED32" title="RED32">
+         _RED32
+        </a>
+        ,
+        <a href="/qb64wiki/index.php/GREEN32" title="GREEN32">
+         _GREEN32
+        </a>
+        and
+        <a href="/qb64wiki/index.php/BLUE32" title="BLUE32">
+         _BLUE32
+        </a>
+        functions.
+       </li>
+       <li>
+        To convert color intensities to OUT &amp;H3C9 color port palette intensity values divide the values of 0 to 255 by 4.
+       </li>
+       <li>
+        Use the
+        <a href="/qb64wiki/index.php/PALETTECOLOR_(function)" title="PALETTECOLOR (function)">
+         _PALETTECOLOR (function)
+        </a>
+        to convert color port palette intensities in 32 bit modes.
+       </li>
+      </ul>
+      <p>
+       <br/>
+       <i>
+        Example 1:
+       </i>
+       How
+       <a href="/qb64wiki/index.php/RGB" title="RGB">
+        _RGB
+       </a>
+       32 bit values return
+       <a href="/qb64wiki/index.php/DOUBLE" title="DOUBLE">
+        DOUBLE
+       </a>
+       or
+       <a href="/qb64wiki/index.php/UNSIGNED" title="UNSIGNED">
+        _UNSIGNED
+       </a>
+       <a href="/qb64wiki/index.php/LONG" title="LONG">
+        LONG
+       </a>
+       values in QB64.
+      </p>
+      <table cellpadding="15px" width="100%">
+       <tbody>
+        <tr>
+         <td>
+          <pre class="codeide"><a href="/qb64wiki/index.php/DIM" title="DIM"><span style="color:#4593D8;">DIM</span></a> clr <a href="/qb64wiki/index.php/AS" title="AS"><span style="color:#4593D8;">AS</span></a> <a href="/qb64wiki/index.php/LONG" title="LONG"><span style="color:#4593D8;">LONG</span></a> 'DO NOT use LONG in older versions of QB64 (V .936 down)
+<a href="/qb64wiki/index.php/SCREEN" title="SCREEN"><span style="color:#4593D8;">SCREEN</span></a> <a href="/qb64wiki/index.php/NEWIMAGE" title="NEWIMAGE"><span style="color:#4593D8;">_NEWIMAGE</span></a>(640, 480, 32)
+<a href="/qb64wiki/index.php/CLS" title="CLS"><span style="color:#4593D8;">CLS</span></a> , <a href="/qb64wiki/index.php/RGB" title="RGB"><span style="color:#4593D8;">_RGB</span></a>(255, 255, 255)  'makes the background opaque white
+
+<a href="/qb64wiki/index.php/PRINT" title="PRINT"><span style="color:#4593D8;">PRINT</span></a> "POINT(100, 100) ="; <a class="mw-selflink selflink"><span style="color:#4593D8;">POINT</span></a>(100, 100)
+clr = <a class="mw-selflink selflink"><span style="color:#4593D8;">POINT</span></a>(100, 100)
+<a href="/qb64wiki/index.php/PRINT" title="PRINT"><span style="color:#4593D8;">PRINT</span></a> "Variable clr = ";  clr
+<a href="/qb64wiki/index.php/IF...THEN" title="IF...THEN"><span style="color:#4593D8;">IF</span></a> clr = <a href="/qb64wiki/index.php/RGB" title="RGB"><span style="color:#4593D8;">_RGB</span></a>(255, 255, 255) <a href="/qb64wiki/index.php/THEN" title="THEN"><span style="color:#4593D8;">THEN</span></a> <a href="/qb64wiki/index.php/PRINT" title="PRINT"><span style="color:#4593D8;">PRINT</span></a> "Long OK"
+<a href="/qb64wiki/index.php/IF...THEN" title="IF...THEN"><span style="color:#4593D8;">IF</span></a> <a class="mw-selflink selflink"><span style="color:#4593D8;">POINT</span></a>(100, 100) = <a href="/qb64wiki/index.php/RGB" title="RGB"><span style="color:#4593D8;">_RGB</span></a>(255, 255, 255) <a href="/qb64wiki/index.php/THEN" title="THEN"><span style="color:#4593D8;">THEN</span></a> <a href="/qb64wiki/index.php/PRINT" title="PRINT"><span style="color:#4593D8;">PRINT</span></a> "_RGB OK"
+<a href="/qb64wiki/index.php/IF...THEN" title="IF...THEN"><span style="color:#4593D8;">IF</span></a> <a class="mw-selflink selflink"><span style="color:#4593D8;">POINT</span></a>(100, 100) = clr <a href="/qb64wiki/index.php/THEN" title="THEN"><span style="color:#4593D8;">THEN</span></a> <a href="/qb64wiki/index.php/PRINT" title="PRINT"><span style="color:#4593D8;">PRINT</span></a> "Type OK" 'will not print with a LONG variable type
+</pre>
+         </td>
+        </tr>
+       </tbody>
+      </table>
+      <dl>
+       <dd>
+        <b>
+         Note:
+        </b>
+        Change the
+        <a href="/qb64wiki/index.php/DIM" title="DIM">
+         DIM
+        </a>
+        <i>
+         clr
+        </i>
+        variable type to
+        <a href="/qb64wiki/index.php/LONG" title="LONG">
+         LONG
+        </a>
+        to see how the last
+        <a class="mw-redirect" href="/qb64wiki/index.php/IF" title="IF">
+         IF
+        </a>
+        statement doesn't
+        <a href="/qb64wiki/index.php/PRINT" title="PRINT">
+         PRINT
+        </a>
+        as shown in the output below:
+       </dd>
+      </dl>
+      <table cellpadding="15px" width="100%">
+       <tbody>
+        <tr>
+         <td>
+          <pre class="outputcrt0">POINT(100, 100) = 4294967295
+Variable clr = -1
+Long OK
+_RGB OK
+</pre>
+         </td>
+        </tr>
+       </tbody>
+      </table>
+      <p>
+       <br/>
+      </p>
+      <p>
+       <i>
+        Example 2:
+       </i>
+       Using a
+       <a class="mw-selflink selflink">
+        POINT
+       </a>
+       mouse routine to get the 32 bit color values of the image.
+      </p>
+      <table cellpadding="15px" width="100%">
+       <tbody>
+        <tr>
+         <td>
+          <pre class="codeide"><a href="/qb64wiki/index.php/SCREEN" title="SCREEN"><span style="color:#4593D8;">SCREEN</span></a> <a href="/qb64wiki/index.php/NEWIMAGE" title="NEWIMAGE"><span style="color:#4593D8;">_NEWIMAGE</span></a>(640, 480, 32)
+<a href="/qb64wiki/index.php/TITLE" title="TITLE"><span style="color:#4593D8;">_TITLE</span></a> "Mouse <a class="mw-selflink selflink"><span style="color:#4593D8;">POINT</span>er</a> 32"
+
+
+'<a href="/qb64wiki/index.php/LINE_INPUT" title="LINE INPUT"><span style="color:#4593D8;">LINE INPUT</span></a> "Enter an image file: ", image$  'use quotes around file names with spaces
+image$ = "QB64bee.png" 'any 24/32 bit image up to 320 X 240 with current <a href="/qb64wiki/index.php/PUTIMAGE" title="PUTIMAGE"><span style="color:#4593D8;">_PUTIMAGE</span></a> settings
+i&amp; = <a href="/qb64wiki/index.php/LOADIMAGE" title="LOADIMAGE"><span style="color:#4593D8;">_LOADIMAGE</span></a>(image$, 32)
+<a href="/qb64wiki/index.php/IF...THEN" title="IF...THEN"><span style="color:#4593D8;">IF</span></a> i&amp; &gt;= -1 <a href="/qb64wiki/index.php/THEN" title="THEN"><span style="color:#4593D8;">THEN</span></a> <a href="/qb64wiki/index.php/BEEP" title="BEEP"><span style="color:#4593D8;">BEEP</span></a>: <a href="/qb64wiki/index.php/PRINT" title="PRINT"><span style="color:#4593D8;">PRINT</span></a> "Could <a href="/qb64wiki/index.php/NOT" title="NOT"><span style="color:#4593D8;">NOT</span></a> load image!": <a href="/qb64wiki/index.php/END" title="END"><span style="color:#4593D8;">END</span></a>
+w&amp; = <a href="/qb64wiki/index.php/WIDTH_(function)" title="WIDTH (function)"><span style="color:#4593D8;">_WIDTH</span></a>(i&amp;): h&amp; = <a href="/qb64wiki/index.php/HEIGHT" title="HEIGHT"><span style="color:#4593D8;">_HEIGHT</span></a>(i&amp;)
+
+<a href="/qb64wiki/index.php/PRINT" title="PRINT"><span style="color:#4593D8;">PRINT</span></a> "Make background transparent?(Y\N)";
+BG$ = <a href="/qb64wiki/index.php/UCASE$" title="UCASE$"><span style="color:#4593D8;">UCASE$</span></a>(<a href="/qb64wiki/index.php/INPUT$" title="INPUT$"><span style="color:#4593D8;">INPUT$</span></a>(1))
+<a href="/qb64wiki/index.php/PRINT" title="PRINT"><span style="color:#4593D8;">PRINT</span></a> BG$
+<a href="/qb64wiki/index.php/DELAY" title="DELAY"><span style="color:#4593D8;">_DELAY</span></a> 1
+
+'<a href="/qb64wiki/index.php/CLS" title="CLS"><span style="color:#4593D8;">CLS</span></a> 'commented to keep background alpha 0
+
+<a href="/qb64wiki/index.php/IF...THEN" title="IF...THEN"><span style="color:#4593D8;">IF</span></a> BG$ = "Y" <a href="/qb64wiki/index.php/THEN" title="THEN"><span style="color:#4593D8;">THEN</span></a> <a href="/qb64wiki/index.php/CLEARCOLOR" title="CLEARCOLOR"><span style="color:#4593D8;">_CLEARCOLOR</span></a> <a href="/qb64wiki/index.php/RGB32" title="RGB32"><span style="color:#4593D8;">_RGB32</span></a>(255, 255, 255), i&amp; 'make white Background transparent
+<a href="/qb64wiki/index.php/PUTIMAGE" title="PUTIMAGE"><span style="color:#4593D8;">_PUTIMAGE</span></a> (320 - w&amp;, 240 - h&amp;)-((2 * w&amp;) + (320 - w&amp;), (2 * h&amp;) + (240 - h&amp;)), i&amp;, 0
+<a href="/qb64wiki/index.php/FREEIMAGE" title="FREEIMAGE"><span style="color:#4593D8;">_FREEIMAGE</span></a> i&amp;
+
+<a href="/qb64wiki/index.php/MOUSEMOVE" title="MOUSEMOVE"><span style="color:#4593D8;">_MOUSEMOVE</span></a> 320, 240 'center mouse pointer on screen
+
+<a href="/qb64wiki/index.php/DO...LOOP" title="DO...LOOP"><span style="color:#4593D8;">DO</span></a>: <a href="/qb64wiki/index.php/LIMIT" title="LIMIT"><span style="color:#4593D8;">_LIMIT</span></a> 100
+  <a href="/qb64wiki/index.php/DO...LOOP" title="DO...LOOP"><span style="color:#4593D8;">DO</span></a> <a class="mw-redirect" href="/qb64wiki/index.php/WHILE" title="WHILE"><span style="color:#4593D8;">WHILE</span></a> <a href="/qb64wiki/index.php/MOUSEINPUT" title="MOUSEINPUT"><span style="color:#4593D8;">_MOUSEINPUT</span></a>
+    mx = <a href="/qb64wiki/index.php/MOUSEX" title="MOUSEX"><span style="color:#4593D8;">_MOUSEX</span></a>
+    my = <a href="/qb64wiki/index.php/MOUSEY" title="MOUSEY"><span style="color:#4593D8;">_MOUSEY</span></a>
+    c&amp; = <a class="mw-selflink selflink"><span style="color:#4593D8;">POINT</span></a>(mx, my)
+    r = <a href="/qb64wiki/index.php/RED32" title="RED32"><span style="color:#4593D8;">_RED32</span></a>(c&amp;)
+    g = <a href="/qb64wiki/index.php/GREEN32" title="GREEN32"><span style="color:#4593D8;">_GREEN32</span></a>(c&amp;)
+    b = <a href="/qb64wiki/index.php/BLUE32" title="BLUE32"><span style="color:#4593D8;">_BLUE32</span></a>(c&amp;)
+    a = <a href="/qb64wiki/index.php/ALPHA32" title="ALPHA32"><span style="color:#4593D8;">_ALPHA32</span></a>(c&amp;)
+    <a href="/qb64wiki/index.php/LOCATE" title="LOCATE"><span style="color:#4593D8;">LOCATE</span></a> 1, 1: <a href="/qb64wiki/index.php/PRINT" title="PRINT"><span style="color:#4593D8;">PRINT</span></a> mx; my, "R:"; r, "G:"; g, "B:"; b, "A:"; a; "  "
+    <a href="/qb64wiki/index.php/LOCATE" title="LOCATE"><span style="color:#4593D8;">LOCATE</span></a> 2, 2: <a href="/qb64wiki/index.php/PRINT" title="PRINT"><span style="color:#4593D8;">PRINT</span></a> "HTML Color: <a href="/qb64wiki/index.php/%26H" title="&amp;H"><span style="color:#4593D8;">&amp;H</span></a>" + <a href="/qb64wiki/index.php/RIGHT$" title="RIGHT$"><span style="color:#4593D8;">RIGHT$</span></a>(<a href="/qb64wiki/index.php/HEX$" title="HEX$"><span style="color:#4593D8;">HEX$</span></a>(c&amp;), 6)
+  <a href="/qb64wiki/index.php/LOOP" title="LOOP"><span style="color:#4593D8;">LOOP</span></a>
+<a href="/qb64wiki/index.php/LOOP" title="LOOP"><span style="color:#4593D8;">LOOP</span></a> <a href="/qb64wiki/index.php/UNTIL" title="UNTIL"><span style="color:#4593D8;">UNTIL</span></a> <a href="/qb64wiki/index.php/INKEY$" title="INKEY$"><span style="color:#4593D8;">INKEY$</span></a> &gt; ""
+<a href="/qb64wiki/index.php/END" title="END"><span style="color:#4593D8;">END</span></a>
+</pre>
+         </td>
+        </tr>
+       </tbody>
+      </table>
+      <center>
+       <span style="font-family: Courier New, Courier, monospace; font-size: 0.80em; line-height: 50%;">
+        Code by Ted Weissgerber
+       </span>
+      </center>
+      <dl>
+       <dd>
+        <i>
+         Explanation:
+        </i>
+        Use the mouse pointer to get the background RGB of the image to make it transparent with
+        <a href="/qb64wiki/index.php/CLEARCOLOR" title="CLEARCOLOR">
+         _CLEARCOLOR
+        </a>
+        .
+       </dd>
+      </dl>
+      <p>
+       <br/>
+       <i>
+        Snippet:
+       </i>
+       Creating an image mask to PUT an image over other colored backgrounds. See:
+       <a href="/qb64wiki/index.php/GET_and_PUT_Demo" title="GET and PUT Demo">
+        GET and PUT Demo
+       </a>
+       to run code.
+      </p>
+      <table cellpadding="5px" width="100%">
+       <tbody>
+        <tr>
+         <td>
+          <pre class="outputtext"> FOR c = 0 TO 59    '60 X 60 area from 0 pixel
+   FOR r = 0 TO 59
+    IF <a class="mw-selflink selflink"><span style="color:blue;">POINT</span></a>(c, r) = 0 THEN <a href="/qb64wiki/index.php/PSET" title="PSET"><span style="color:blue;">PSET</span></a> (c, r), 15 ELSE PSET (c, r), 0
+   NEXT r
+ NEXT c
+ <a href="/qb64wiki/index.php/GET_(graphics_statement)" title="GET (graphics statement)"><span style="color:blue;">GET</span></a>(0, 0)-(60, 60), Image(1500) ' save mask in an array(indexed above original image).
+</pre>
+         </td>
+        </tr>
+       </tbody>
+      </table>
+      <dl>
+       <dd>
+        <i>
+         Explanation:
+        </i>
+        In the procedure all black areas(background) are changed to white for a PUT using AND over other colored objects. The other image colors are changed to black for a PUT of the original image using XOR. The array images can be
+        <a href="/qb64wiki/index.php/BSAVE" title="BSAVE">
+         BSAVEd
+        </a>
+        for later use.
+        <b>
+         QB64 can also
+        </b>
+        <a href="/qb64wiki/index.php/PUT" title="PUT">
+         PUT
+        </a>
+        <b>
+         a full screen 12 image from an array directly into a
+        </b>
+        <a class="mw-redirect" href="/qb64wiki/index.php/BINARY" title="BINARY">
+         BINARY
+        </a>
+        <b>
+         file.
+        </b>
+       </dd>
+      </dl>
+      <h3>
+       <span class="mw-headline" id="More_Examples">
+        More Examples
+       </span>
+      </h3>
+      <ul>
+       <li>
+        <a href="/qb64wiki/index.php/SaveImage_SUB" title="SaveImage SUB">
+         SaveImage SUB
+        </a>
+       </li>
+       <li>
+        <a href="/qb64wiki/index.php/Program_ScreenShots" title="Program ScreenShots">
+         Program ScreenShots
+        </a>
+       </li>
+       <li>
+        <a href="/qb64wiki/index.php/ThirtyTwoBit_SUB" title="ThirtyTwoBit SUB">
+         ThirtyTwoBit SUB
+        </a>
+       </li>
+       <li>
+        <a href="/qb64wiki/index.php/ThirtyTwoBit_MEM_SUB" title="ThirtyTwoBit MEM SUB">
+         ThirtyTwoBit MEM SUB
+        </a>
+       </li>
+      </ul>
+      <p>
+       <br/>
+      </p>
+      <h2>
+       <span class="mw-headline" id="See_also">
+        See also
+       </span>
+      </h2>
+      <ul>
+       <li>
+        <a href="/qb64wiki/index.php/NEWIMAGE" title="NEWIMAGE">
+         _NEWIMAGE
+        </a>
+        ,
+        <a href="/qb64wiki/index.php/LOADIMAGE" title="LOADIMAGE">
+         _LOADIMAGE
+        </a>
+       </li>
+       <li>
+        <a href="/qb64wiki/index.php/MEMIMAGE" title="MEMIMAGE">
+         _MEMIMAGE
+        </a>
+        ,
+        <a href="/qb64wiki/index.php/MEMGET" title="MEMGET">
+         _MEMGET
+        </a>
+       </li>
+       <li>
+        <a href="/qb64wiki/index.php/PSET" title="PSET">
+         PSET
+        </a>
+        ,
+        <a href="/qb64wiki/index.php/PRESET" title="PRESET">
+         PRESET
+        </a>
+       </li>
+       <li>
+        <a href="/qb64wiki/index.php/SCREEN" title="SCREEN">
+         SCREEN
+        </a>
+        ,
+        <a href="/qb64wiki/index.php/SCREEN_(function)" title="SCREEN (function)">
+         SCREEN (function)
+        </a>
+       </li>
+       <li>
+        <a href="/qb64wiki/index.php/GET_(graphics_statement)" title="GET (graphics statement)">
+         GET (graphics statement)
+        </a>
+        ,
+        <a href="/qb64wiki/index.php/PUT_(graphics_statement)" title="PUT (graphics statement)">
+         PUT (graphics statement)
+        </a>
+       </li>
+       <li>
+        <a href="/qb64wiki/index.php/Bitmaps" title="Bitmaps">
+         Bitmaps
+        </a>
+        ,
+        <a href="/qb64wiki/index.php/Creating_Sprite_Masks" title="Creating Sprite Masks">
+         Creating Sprite Masks
+        </a>
+        ,
+        <a href="/qb64wiki/index.php/Text_Using_Graphics" title="Text Using Graphics">
+         Text Using Graphics
+        </a>
+       </li>
+      </ul>
+      <p>
+       <br/>
+      </p>
+      <hr/>
+      <center>
+       <b>
+        Navigation:
+       </b>
+      </center>
+      <center>
+       <a href="/qb64wiki/index.php/Main_Page" title="Main Page">
+        Main Page with Articles and Tutorials
+       </a>
+      </center>
+      <center>
+       <a href="/qb64wiki/index.php/Keyword_Reference_-_Alphabetical" title="Keyword Reference - Alphabetical">
+        Keyword Reference - Alphabetical
+       </a>
+      </center>
+      <center>
+       <a href="/qb64wiki/index.php/Keyword_Reference_-_By_usage" title="Keyword Reference - By usage">
+        Keyword Reference - By usage
+       </a>
+      </center>
+      <center>
+       <b>
+        <a class="external text" href="https://qb64phoenix.com/forum/showthread.php?tid=2800" rel="nofollow">
+         Report a broken link
+        </a>
+       </b>
+       <br/>
+      </center>
+      <!-- 
+NewPP limit report
+Cached time: 20240715031651
+Cache expiry: 86400
+Reduced expiry: false
+Complications: [show‐toc]
+CPU time usage: 0.066 seconds
+Real time usage: 0.085 seconds
+Preprocessor visited node count: 827/1000000
+Post‐expand include size: 5151/2097152 bytes
+Template argument size: 950/2097152 bytes
+Highest expansion depth: 3/100
+Expensive parser function count: 0/100
+Unstrip recursion depth: 0/20
+Unstrip post‐expand size: 0/5000000 bytes
+-->
+      <!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%   46.238      1 -total
+ 16.92%    7.824      3 Template:CodeEnd
+ 13.85%    6.404     76 Template:Cl
+  6.14%    2.837      1 Template:PageSyntax
+  5.62%    2.599      1 Template:Small
+  5.36%    2.480      1 Template:OutputStart
+  5.12%    2.367      1 Template:Text
+  5.03%    2.326      2 Template:CodeStart
+  4.98%    2.304      1 Template:PageParameters
+  4.70%    2.174      1 Template:PageNavigation
+-->
+      <!-- Saved in parser cache with key qb64pnix_mw19894-mwmb_:pcache:idhash:232-0!canonical and timestamp 20240715031651 and revision id 8665.
+ -->
+     </div>
+     <div class="printfooter" data-nosnippet="">
+      Retrieved from "
+      <a dir="ltr" href="https://qb64phoenix.com/qb64wiki/index.php?title=POINT&amp;oldid=8665">
+       https://qb64phoenix.com/qb64wiki/index.php?title=POINT&amp;oldid=8665
+      </a>
+      "
+     </div>
+    </div>
+    <div class="catlinks catlinks-allhidden" data-mw="interface" id="catlinks">
+    </div>
+   </div>
+  </div>
+  <div id="mw-navigation">
+   <h2>
+    Navigation menu
+   </h2>
+   <div id="mw-head">
+    <nav aria-labelledby="p-personal-label" class="vector-menu mw-portlet mw-portlet-personal vector-user-menu-legacy" id="p-personal" role="navigation">
+     <h3 class="vector-menu-heading" id="p-personal-label">
+      <span class="vector-menu-heading-label">
+       Personal tools
+      </span>
+     </h3>
+     <div class="vector-menu-content">
+      <ul class="vector-menu-content-list">
+       <li class="mw-list-item" id="pt-login">
+        <a accesskey="o" href="/qb64wiki/index.php?title=Special:UserLogin&amp;returnto=POINT" title="You are encouraged to log in; however, it is not mandatory [o]">
+         <span>
+          Log in
+         </span>
+        </a>
+       </li>
+      </ul>
+     </div>
+    </nav>
+    <div id="left-navigation">
+     <nav aria-labelledby="p-namespaces-label" class="vector-menu mw-portlet mw-portlet-namespaces vector-menu-tabs vector-menu-tabs-legacy" id="p-namespaces" role="navigation">
+      <h3 class="vector-menu-heading" id="p-namespaces-label">
+       <span class="vector-menu-heading-label">
+        Namespaces
+       </span>
+      </h3>
+      <div class="vector-menu-content">
+       <ul class="vector-menu-content-list">
+        <li class="selected mw-list-item" id="ca-nstab-main">
+         <a accesskey="c" href="/qb64wiki/index.php/POINT" title="View the content page [c]">
+          <span>
+           Page
+          </span>
+         </a>
+        </li>
+        <li class="new mw-list-item" id="ca-talk">
+         <a accesskey="t" href="/qb64wiki/index.php?title=Talk:POINT&amp;action=edit&amp;redlink=1" rel="discussion" title="Discussion about the content page (page does not exist) [t]">
+          <span>
+           Discussion
+          </span>
+         </a>
+        </li>
+       </ul>
+      </div>
+     </nav>
+     <nav aria-labelledby="p-variants-label" class="vector-menu mw-portlet mw-portlet-variants emptyPortlet vector-menu-dropdown" id="p-variants" role="navigation">
+      <input aria-haspopup="true" aria-labelledby="p-variants-label" class="vector-menu-checkbox" data-event-name="ui.dropdown-p-variants" id="p-variants-checkbox" role="button" type="checkbox"/>
+      <label aria-label="Change language variant" class="vector-menu-heading" id="p-variants-label">
+       <span class="vector-menu-heading-label">
+        English
+       </span>
+      </label>
+      <div class="vector-menu-content">
+       <ul class="vector-menu-content-list">
+       </ul>
+      </div>
+     </nav>
+    </div>
+    <div id="right-navigation">
+     <nav aria-labelledby="p-views-label" class="vector-menu mw-portlet mw-portlet-views vector-menu-tabs vector-menu-tabs-legacy" id="p-views" role="navigation">
+      <h3 class="vector-menu-heading" id="p-views-label">
+       <span class="vector-menu-heading-label">
+        Views
+       </span>
+      </h3>
+      <div class="vector-menu-content">
+       <ul class="vector-menu-content-list">
+        <li class="selected mw-list-item" id="ca-view">
+         <a href="/qb64wiki/index.php/POINT">
+          <span>
+           Read
+          </span>
+         </a>
+        </li>
+        <li class="mw-list-item" id="ca-viewsource">
+         <a accesskey="e" href="/qb64wiki/index.php?title=POINT&amp;action=edit" title="This page is protected.
+You can view its source [e]">
+          <span>
+           View source
+          </span>
+         </a>
+        </li>
+        <li class="mw-list-item" id="ca-history">
+         <a accesskey="h" href="/qb64wiki/index.php?title=POINT&amp;action=history" title="Past revisions of this page [h]">
+          <span>
+           View history
+          </span>
+         </a>
+        </li>
+       </ul>
+      </div>
+     </nav>
+     <nav aria-labelledby="p-cactions-label" class="vector-menu mw-portlet mw-portlet-cactions emptyPortlet vector-menu-dropdown" id="p-cactions" role="navigation" title="More options">
+      <input aria-haspopup="true" aria-labelledby="p-cactions-label" class="vector-menu-checkbox" data-event-name="ui.dropdown-p-cactions" id="p-cactions-checkbox" role="button" type="checkbox"/>
+      <label class="vector-menu-heading" id="p-cactions-label">
+       <span class="vector-menu-heading-label">
+        More
+       </span>
+      </label>
+      <div class="vector-menu-content">
+       <ul class="vector-menu-content-list">
+       </ul>
+      </div>
+     </nav>
+     <div class="vector-search-box-vue vector-search-box-show-thumbnail vector-search-box-auto-expand-width vector-search-box" id="p-search" role="search">
+      <div>
+       <h3>
+        <label for="searchInput">
+         Search
+        </label>
+       </h3>
+       <form action="/qb64wiki/index.php" class="vector-search-box-form" id="searchform">
+        <div class="vector-search-box-inner" data-search-loc="header-navigation" id="simpleSearch">
+         <input accesskey="f" aria-label="Search QB64 Phoenix Edition Wiki" autocapitalize="sentences" class="vector-search-box-input" id="searchInput" name="search" placeholder="Search QB64 Phoenix Edition Wiki" title="Search QB64 Phoenix Edition Wiki [f]" type="search"/>
+         <input name="title" type="hidden" value="Special:Search"/>
+         <input class="searchButton mw-fallbackSearchButton" id="mw-searchButton" name="fulltext" title="Search the pages for this text" type="submit" value="Search"/>
+         <input class="searchButton" id="searchButton" name="go" title="Go to a page with this exact name if it exists" type="submit" value="Go"/>
+        </div>
+       </form>
+      </div>
+     </div>
+    </div>
+   </div>
+   <div id="mw-panel">
+    <div id="p-logo" role="banner">
+     <a class="mw-wiki-logo" href="/qb64wiki/index.php/Main_Page" title="Visit the main page">
+     </a>
+    </div>
+    <nav aria-labelledby="p-navigation-label" class="vector-menu mw-portlet mw-portlet-navigation vector-menu-portal portal" id="p-navigation" role="navigation">
+     <h3 class="vector-menu-heading" id="p-navigation-label">
+      <span class="vector-menu-heading-label">
+       Navigation
+      </span>
+     </h3>
+     <div class="vector-menu-content">
+      <ul class="vector-menu-content-list">
+       <li class="mw-list-item" id="n-mainpage-description">
+        <a accesskey="z" href="/qb64wiki/index.php/Main_Page" title="Visit the main page [z]">
+         <span>
+          Main page
+         </span>
+        </a>
+       </li>
+       <li class="mw-list-item" id="n-recentchanges">
+        <a accesskey="r" href="/qb64wiki/index.php/Special:RecentChanges" title="A list of recent changes in the wiki [r]">
+         <span>
+          Recent changes
+         </span>
+        </a>
+       </li>
+       <li class="mw-list-item" id="n-randompage">
+        <a accesskey="x" href="/qb64wiki/index.php/Special:Random" title="Load a random page [x]">
+         <span>
+          Random page
+         </span>
+        </a>
+       </li>
+       <li class="mw-list-item" id="n-help-mediawiki">
+        <a href="https://www.mediawiki.org/wiki/Special:MyLanguage/Help:Contents">
+         <span>
+          Help about MediaWiki
+         </span>
+        </a>
+       </li>
+      </ul>
+     </div>
+    </nav>
+    <nav aria-labelledby="p-tb-label" class="vector-menu mw-portlet mw-portlet-tb vector-menu-portal portal" id="p-tb" role="navigation">
+     <h3 class="vector-menu-heading" id="p-tb-label">
+      <span class="vector-menu-heading-label">
+       Tools
+      </span>
+     </h3>
+     <div class="vector-menu-content">
+      <ul class="vector-menu-content-list">
+       <li class="mw-list-item" id="t-whatlinkshere">
+        <a accesskey="j" href="/qb64wiki/index.php/Special:WhatLinksHere/POINT" title="A list of all wiki pages that link here [j]">
+         <span>
+          What links here
+         </span>
+        </a>
+       </li>
+       <li class="mw-list-item" id="t-recentchangeslinked">
+        <a accesskey="k" href="/qb64wiki/index.php/Special:RecentChangesLinked/POINT" rel="nofollow" title="Recent changes in pages linked from this page [k]">
+         <span>
+          Related changes
+         </span>
+        </a>
+       </li>
+       <li class="mw-list-item" id="t-specialpages">
+        <a accesskey="q" href="/qb64wiki/index.php/Special:SpecialPages" title="A list of all special pages [q]">
+         <span>
+          Special pages
+         </span>
+        </a>
+       </li>
+       <li class="mw-list-item" id="t-print">
+        <a accesskey="p" href="javascript:print();" rel="alternate" title="Printable version of this page [p]">
+         <span>
+          Printable version
+         </span>
+        </a>
+       </li>
+       <li class="mw-list-item" id="t-permalink">
+        <a href="/qb64wiki/index.php?title=POINT&amp;oldid=8665" title="Permanent link to this revision of this page">
+         <span>
+          Permanent link
+         </span>
+        </a>
+       </li>
+       <li class="mw-list-item" id="t-info">
+        <a href="/qb64wiki/index.php?title=POINT&amp;action=info" title="More information about this page">
+         <span>
+          Page information
+         </span>
+        </a>
+       </li>
+      </ul>
+     </div>
+    </nav>
+   </div>
+  </div>
+  <footer class="mw-footer" id="footer" role="contentinfo">
+   <ul id="footer-info">
+    <li id="footer-info-lastmod">
+     This page was last edited on 5 January 2024, at 20:03.
+    </li>
+   </ul>
+   <ul id="footer-places">
+    <li id="footer-places-privacy">
+     <a href="/qb64wiki/index.php/QB64_Phoenix_Edition_Wiki:Privacy_policy">
+      Privacy policy
+     </a>
+    </li>
+    <li id="footer-places-about">
+     <a href="/qb64wiki/index.php/QB64_Phoenix_Edition_Wiki:About">
+      About QB64 Phoenix Edition Wiki
+     </a>
+    </li>
+    <li id="footer-places-disclaimer">
+     <a href="/qb64wiki/index.php/QB64_Phoenix_Edition_Wiki:General_disclaimer">
+      Disclaimers
+     </a>
+    </li>
+   </ul>
+   <ul class="noprint" id="footer-icons">
+    <li id="footer-poweredbyico">
+     <a href="https://www.mediawiki.org/">
+      <img alt="Powered by MediaWiki" height="31" loading="lazy" src="/qb64wiki/resources/assets/poweredby_mediawiki_88x31.png" srcset="/qb64wiki/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /qb64wiki/resources/assets/poweredby_mediawiki_176x62.png 2x" width="88"/>
+     </a>
+    </li>
+   </ul>
+  </footer>
+  <script>
+   (RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgPageParseReport":{"limitreport":{"cputime":"0.066","walltime":"0.085","ppvisitednodes":{"value":827,"limit":1000000},"postexpandincludesize":{"value":5151,"limit":2097152},"templateargumentsize":{"value":950,"limit":2097152},"expansiondepth":{"value":3,"limit":100},"expensivefunctioncount":{"value":0,"limit":100},"unstrip-depth":{"value":0,"limit":20},"unstrip-size":{"value":0,"limit":5000000},"timingprofile":["100.00%   46.238      1 -total"," 16.92%    7.824      3 Template:CodeEnd"," 13.85%    6.404     76 Template:Cl","  6.14%    2.837      1 Template:PageSyntax","  5.62%    2.599      1 Template:Small","  5.36%    2.480      1 Template:OutputStart","  5.12%    2.367      1 Template:Text","  5.03%    2.326      2 Template:CodeStart","  4.98%    2.304      1 Template:PageParameters","  4.70%    2.174      1 Template:PageNavigation"]},"cachereport":{"timestamp":"20240715031651","ttl":86400,"transientcontent":false}}});mw.config.set({"wgBackendResponseTime":85});});
+  </script>
+ </body>
+</html>

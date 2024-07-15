@@ -1,12 +1,7 @@
 # ONLY
+> The ONLY statement is used as additional option for other keywords, please select a page below.
 
-The **ONLY** statement is used as additional option for other keywords, please select a page below.
+# SEE ALSO
+* $[CONSOLE](CONSOLE.md) ( Metacommand )
+* GLRENDER (OpenGL statement)
 
-  
-
-## See also
-
-* [$CONSOLE]($CONSOLE.md) ([Metacommand](Metacommand.md))
-* [GLRENDER](GLRENDER.md) (OpenGL statement)
-
-  

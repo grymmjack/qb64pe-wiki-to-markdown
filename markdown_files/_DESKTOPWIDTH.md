@@ -1,39 +1,36 @@
 # _DESKTOPWIDTH
+> The _DESKTOPWIDTH function returns the width of the users current desktop.
 
-The _DESKTOPWIDTH function returns the width of the users current desktop.
+## SYNTAX
+`x& = _DESKTOPWIDTH`
 
-  
-
-## Syntax
-
-*x&* = _DESKTOPWIDTH
-  
-
-## Description
-
+## DESCRIPTION
 * No parameters are needed for this function.
 * This returns the width of the user's desktop, not the size of any screen or window which might be open on that desktop.
 
-  
 
-## Availability
+## EXAMPLES
 
-* **QB64 v1.0 and up**
-* **QB64-PE all versions**
-
-  
-
-## Examples
-
-``` s& = [_NEWIMAGE](_NEWIMAGE.md)(800, 600, 256) [SCREEN](SCREEN.md) s& [PRINT](PRINT.md) _DESKTOPWIDTH, [_DESKTOPHEIGHT](_DESKTOPHEIGHT.md) [PRINT](PRINT.md) [_WIDTH](_WIDTH.md) "WIDTH (function)"), [_HEIGHT](_HEIGHT.md)  
+```vb
+s& = _NEWIMAGE(800, 600, 256)
+SCREEN s&
+PRINT _DESKTOPWIDTH, _DESKTOPHEIGHT
+PRINT _WIDTH, _HEIGHT
 ```
 
-*Explanation:* This will print the size of the user desktop (for example *1920, 1080* for a standard hdmi monitor), and then the size of the current [screen](screen.md) (800, 600).
-  
+* [_HEIGHT](_HEIGHT.md) , [_DESKTOPHEIGHT](_DESKTOPHEIGHT.md)
+* [_WIDTH](_WIDTH.md) , [_SCREENIMAGE](_SCREENIMAGE.md)
 
-## See also
+```vb
+s& = _NEWIMAGE(800, 600, 256)
+SCREEN s&
+PRINT _DESKTOPWIDTH, _DESKTOPHEIGHT
+PRINT _WIDTH, _HEIGHT
+```
 
-* [_HEIGHT](_HEIGHT.md), [_DESKTOPHEIGHT](_DESKTOPHEIGHT.md)
-* [_WIDTH](_WIDTH.md), [_SCREENIMAGE](_SCREENIMAGE.md)
 
-  
+
+# SEE ALSO
+* [_HEIGHT](_HEIGHT.md) , [_DESKTOPHEIGHT](_DESKTOPHEIGHT.md)
+* [_WIDTH](_WIDTH.md) , [_SCREENIMAGE](_SCREENIMAGE.md)
+

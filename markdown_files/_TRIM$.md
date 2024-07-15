@@ -1,38 +1,53 @@
 # _TRIM$
+> The _TRIM$ function removes both leading and trailing space characters from a STRING value.
 
-The _TRIM$ function removes both leading and trailing space characters from a [STRING](STRING.md) value.
+## SYNTAX
+`return$ = _TRIM$ ( text$ )`
 
-  
+## DESCRIPTION
+* Shorthand to using LTRIM$ ( RTRIM$ ("text"))
+* text$ is the [STRING](STRING.md) value to trim.
+* If text$ contains no leading or trailing space characters, it is returned unchanged.
+* Convert fixed length [STRING](STRING.md) values by using a different return$ variable.
 
-## Syntax
 
-*return$* = _TRIM$(*text$*)
-  
+## EXAMPLES
+> Example: Demonstrating how _TRIM$(text$) can replace LTRIM$(RTRIM$(text$)):
 
-## Description
-
-* Shorthand to using [LTRIM$](LTRIM$.md)([RTRIM$](RTRIM$.md)("text"))
-* *text$* is the [STRING](STRING.md) value to trim.
-* If *text$* contains no leading or trailing space characters, it is returned unchanged.
-* Convert fixed length [STRING](STRING.md) values by using a different *return$* variable.
-
-  
-
-## Examples
-
-*Example: Demonstrating how _TRIM$(text$) can replace LTRIM$(RTRIM$(text$)):*
-
-``` text$ = [SPACE$](SPACE$.md)(10) + "some text" + [SPACE$](SPACE$.md)(10) [PRINT](PRINT.md) "[" + text$ + "]" [PRINT](PRINT.md) "[" + [RTRIM$](" + [RTRIM$.md)(text$) + "]" [PRINT](PRINT.md) "[" + [LTRIM$](" + [LTRIM$.md)(text$) + "]" [PRINT](PRINT.md) "[" + [LTRIM$](" + [LTRIM$.md)([RTRIM$](RTRIM$.md)(text$)) + "]" [PRINT](PRINT.md) "[" + _TRIM$(text$) + "]"  
+```vb
+text$ = SPACE$(10) + "some text" + SPACE$(10)
+PRINT "[" + text$ + "]"
+PRINT "[" + RTRIM$(text$) + "]"
+PRINT "[" + LTRIM$(text$) + "]"
+PRINT "[" + LTRIM$(RTRIM$(text$)) + "]"
+PRINT "[" + _TRIM$(text$) + "]"
 ```
 
-``` [          some text          ] [          some text] [some text          ] [some text] [some text]  
+
+```vb
+text$ = SPACE$(10) + "some text" + SPACE$(10)
+PRINT "[" + text$ + "]"
+PRINT "[" + RTRIM$(text$) + "]"
+PRINT "[" + LTRIM$(text$) + "]"
+PRINT "[" + LTRIM$(RTRIM$(text$)) + "]"
+PRINT "[" + _TRIM$(text$) + "]"
 ```
 
-  
+* Featured in our "Keyword of the Day" series
+* RTRIM$ , LTRIM$
 
-## See also
+```vb
+text$ = SPACE$(10) + "some text" + SPACE$(10)
+PRINT "[" + text$ + "]"
+PRINT "[" + RTRIM$(text$) + "]"
+PRINT "[" + LTRIM$(text$) + "]"
+PRINT "[" + LTRIM$(RTRIM$(text$)) + "]"
+PRINT "[" + _TRIM$(text$) + "]"
+```
 
-* [Featured in our "Keyword of the Day" series](Featured in our "Keyword of the Day" series.md)
-* [RTRIM$](RTRIM$.md), [LTRIM$](LTRIM$.md)
 
-  
+
+# SEE ALSO
+* Featured in our "Keyword of the Day" series
+* RTRIM$ , LTRIM$
+

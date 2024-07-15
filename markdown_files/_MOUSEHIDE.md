@@ -1,18 +1,11 @@
 # _MOUSEHIDE
+> The _MOUSEHIDE statement hides the mouse cursor.
 
-The _MOUSEHIDE statement hides the mouse cursor.
+## SYNTAX
+`_MOUSEHIDE`
 
-  
-
-## Syntax
-
-_MOUSEHIDE
-  
-
-## See also
-
+# SEE ALSO
 * [_MOUSESHOW](_MOUSESHOW.md)
 * [_MOUSEINPUT](_MOUSEINPUT.md)
 * [_MOUSEMOVE](_MOUSEMOVE.md)
 
-  

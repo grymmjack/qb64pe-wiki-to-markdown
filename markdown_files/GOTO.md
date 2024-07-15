@@ -1,47 +1,65 @@
 # GOTO
+> The GOTO statement sends the procedure to a line label or a line number in the program.
 
-The GOTO statement sends the procedure to a line label or a line number in the program.
+## SYNTAX
+`GOTO { lineNumber | lineLabel }`
 
-  
-
-## Syntax
-
-GOTO {*lineNumber*|*lineLabel*}
-  
-
-***IF** Syntax:*
-
-IF condition GOTO {*lineNumber*|*lineLabel*}
-  
-
-## Description
-
-* *lineNumber* or *lineLabel* must already exist or an IDE status error will be displayed until it is created.
+## DESCRIPTION
+* lineNumber or lineLabel must already exist or an IDE status error will be displayed until it is created.
 * Can be used in [SUB](SUB.md) or [FUNCTION](FUNCTION.md) procedures using their own line labels or numbers.
-* The frequent use of GOTO statements can become confusing when trying to follow the code and it could also cause endless loops.
-* GOTO is an easy trap for new programmers. Use loops instead when possible.
+* The frequent use of [GOTO](GOTO.md) statements can become confusing when trying to follow the code and it could also cause endless loops.
+* [GOTO](GOTO.md) is an easy trap for new programmers. Use loops instead when possible.
 
-  
 
-## Examples
+## EXAMPLES
+> Example:
 
-*Example:*
+```vb
+1 PRINT "first line": GOTO gohere
+2 PRINT "second line": GOTO 3
 
-``` 1 [PRINT](PRINT.md) "first line": GOTO gohere 2 [PRINT](PRINT.md) "second line": GOTO 3  gohere: [PRINT](PRINT.md) "third line" GOTO 2  3 [END](END.md)  
+gohere:
+PRINT "third line"
+GOTO 2
+
+3 END
 ```
 
-``` first line third line second line  
+
+```vb
+1 PRINT "first line": GOTO gohere
+2 PRINT "second line": GOTO 3
+
+gohere:
+PRINT "third line"
+GOTO 2
+
+3 END
 ```
 
-*Explanation:* After it prints "first line" it goes to the line label "gohere" where it prints "third line", then it goes to the line that is numbered "2" and prints "second line" and goes to line number 3 and an [END](END.md) statement which ends the program.
-  
+* [GOSUB](GOSUB.md) , [ON](ON.md) [ERROR](ERROR.md)
+* [ON](ON.md)...[GOTO](GOTO.md) , [ON](ON.md)...[GOSUB](GOSUB.md)
+* [DO](DO.md)...[LOOP](LOOP.md) , [FOR](FOR.md)...[NEXT](NEXT.md)
+* [IF](IF.md)...[THEN](THEN.md) , [SELECT](SELECT.md) [CASE](CASE.md)
+* Line numbers and labels
 
-## See also
+```vb
+1 PRINT "first line": GOTO gohere
+2 PRINT "second line": GOTO 3
 
-* [GOSUB](GOSUB.md), [ON ERROR](ON ERROR.md)
-* [ON...GOTO](ON...GOTO.md), [ON...GOSUB](ON...GOSUB.md)
-* [DO...LOOP](DO...LOOP.md), [FOR...NEXT](FOR...NEXT.md)
-* [IF...THEN](IF...THEN.md), [SELECT CASE](SELECT CASE.md)
-* [Line numbers and labels](Line numbers and labels.md)
+gohere:
+PRINT "third line"
+GOTO 2
 
-  
+3 END
+```
+
+
+
+# SEE ALSO
+* [GOSUB](GOSUB.md) , [ON](ON.md) [ERROR](ERROR.md)
+* [ON](ON.md)...[GOTO](GOTO.md) , [ON](ON.md)...[GOSUB](GOSUB.md)
+* [DO](DO.md)...[LOOP](LOOP.md) , [FOR](FOR.md)...[NEXT](NEXT.md)
+* [IF](IF.md)...[THEN](THEN.md) , [SELECT](SELECT.md) [CASE](CASE.md)
+* Line numbers and labels
+

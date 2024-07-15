@@ -1,49 +1,153 @@
 # OR
+> The OR numerical operator returns a comparative bit value of 1 if either value's bit is on.
 
-The OR numerical operator returns a comparative bit value of 1 if either value's bit is on.
+## SYNTAX
+`result = firstValue OR secondValue`
 
-  
-
-## Syntax
-
-*result* = firstValue OR secondValue
-  
-
-## Description
-
+## DESCRIPTION
 * If both bits are off, it returns 0.
 * If one or both bits are on then it returns 1.
-* OR never turns off a bit and can be used only to turn a bit on.
+* [OR](OR.md) never turns off a bit and can be used only to turn a bit on.
 
-```                Table 4: The logical operations and its results.         In this table, **A** and **B** are the [Expressions](Expressions.md) to invert or combine.               Both may be results of former [Boolean](Boolean.md) evaluations.   ┌────────────────────────────────────────────────────────────────────────┐   │                           **Logical Operations**                           │   ├───────┬───────┬───────┬─────────┬────────┬─────────┬─────────┬─────────┤   │   **A**   │   **B**   │ [NOT](NOT.md) **B** │ **A** [AND](AND.md) **B** │ **A** OR **B** │ **A** [XOR](XOR.md) **B** │ **A** [EQV](EQV.md) **B** │ **A** [IMP](IMP.md) **B** │   ├───────┼───────┼───────┼─────────┼────────┼─────────┼─────────┼─────────┤   │ **true**  │ **true**  │ false │  true   │ true   │  false  │  true   │  true   │   ├───────┼───────┼───────┼─────────┼────────┼─────────┼─────────┼─────────┤   │ **true**  │ **false** │ true  │  false  │ true   │  true   │  false  │  false  │   ├───────┼───────┼───────┼─────────┼────────┼─────────┼─────────┼─────────┤   │ **false** │ **true**  │ false │  false  │ true   │  true   │  false  │  true   │   ├───────┼───────┼───────┼─────────┼────────┼─────────┼─────────┼─────────┤   │ **false** │ **false** │ true  │  false  │ false  │  false  │  true   │  true   │   └───────┴───────┴───────┴─────────┴────────┴─────────┴─────────┴─────────┘    **Note:** In most BASIC languages incl. QB64 these are **bitwise** operations,          hence the logic is performed for each corresponding bit in both          operators, where **true** or **false** indicates whether a bit is **set** or          **not set**. The outcome of each bit is then placed into the respective          position to build the bit pattern of the final result value.     As all [Relational Operations](Relational Operations.md) return negative one (-1, **all bits set**) for     **true** and zero (0, **no bits set**) for **false**, this allows us to use these     bitwise logical operations to invert or combine any relational checks,     as the outcome is the same for each bit and so always results into a             **true** (-1) or **false** (0) again for further evaluations.  
+
+## EXAMPLES
+> Example 1: OR always turns bits on! Never off.
+
+```vb
+Table 4: The logical operations and its results.
+
+      In this table, A and B are the Expressions to invert or combine.
+             Both may be results of former Boolean evaluations.
+ ┌────────────────────────────────────────────────────────────────────────┐
+ │                           Logical Operations                           │
+ ├───────┬───────┬───────┬─────────┬────────┬─────────┬─────────┬─────────┤
+ │   A   │   B   │ NOT B │ A AND B │ A OR B │ A XOR B │ A EQV B │ A IMP B │
+ ├───────┼───────┼───────┼─────────┼────────┼─────────┼─────────┼─────────┤
+ │ true  │ true  │ false │  true   │ true   │  false  │  true   │  true   │
+ ├───────┼───────┼───────┼─────────┼────────┼─────────┼─────────┼─────────┤
+ │ true  │ false │ true  │  false  │ true   │  true   │  false  │  false  │
+ ├───────┼───────┼───────┼─────────┼────────┼─────────┼─────────┼─────────┤
+ │ false │ true  │ false │  false  │ true   │  true   │  false  │  true   │
+ ├───────┼───────┼───────┼─────────┼────────┼─────────┼─────────┼─────────┤
+ │ false │ false │ true  │  false  │ false  │  false  │  true   │  true   │
+ └───────┴───────┴───────┴─────────┴────────┴─────────┴─────────┴─────────┘
+  Note: In most BASIC languages incl. QB64 these are bitwise operations,
+        hence the logic is performed for each corresponding bit in both
+        operators, where true or false indicates whether a bit is set or
+        not set. The outcome of each bit is then placed into the respective
+        position to build the bit pattern of the final result value.
+
+  As all Relational Operations return negative one (-1, all bits set) for
+   true and zero (0, no bits set) for false, this allows us to use these
+   bitwise logical operations to invert or combine any relational checks,
+   as the outcome is the same for each bit and so always results into a
+           true (-1) or false (0) again for further evaluations.
 ```
 
-  
+> Example 2: Turning a data register bit on.
 
-## Examples
+```vb
+Table 4: The logical operations and its results.
 
-*Example 1:* OR always turns bits on! Never off.
+      In this table, A and B are the Expressions to invert or combine.
+             Both may be results of former Boolean evaluations.
+ ┌────────────────────────────────────────────────────────────────────────┐
+ │                           Logical Operations                           │
+ ├───────┬───────┬───────┬─────────┬────────┬─────────┬─────────┬─────────┤
+ │   A   │   B   │ NOT B │ A AND B │ A OR B │ A XOR B │ A EQV B │ A IMP B │
+ ├───────┼───────┼───────┼─────────┼────────┼─────────┼─────────┼─────────┤
+ │ true  │ true  │ false │  true   │ true   │  false  │  true   │  true   │
+ ├───────┼───────┼───────┼─────────┼────────┼─────────┼─────────┼─────────┤
+ │ true  │ false │ true  │  false  │ true   │  true   │  false  │  false  │
+ ├───────┼───────┼───────┼─────────┼────────┼─────────┼─────────┼─────────┤
+ │ false │ true  │ false │  false  │ true   │  true   │  false  │  true   │
+ ├───────┼───────┼───────┼─────────┼────────┼─────────┼─────────┼─────────┤
+ │ false │ false │ true  │  false  │ false  │  false  │  true   │  true   │
+ └───────┴───────┴───────┴─────────┴────────┴─────────┴─────────┴─────────┘
+  Note: In most BASIC languages incl. QB64 these are bitwise operations,
+        hence the logic is performed for each corresponding bit in both
+        operators, where true or false indicates whether a bit is set or
+        not set. The outcome of each bit is then placed into the respective
+        position to build the bit pattern of the final result value.
 
-```  a% = 5 ' 101 binary  b% = 4 ' 100 binary  results% = a% OR b%  ' still 101 binary using OR  [PRINT](PRINT.md) "Results% ="; results%  
+  As all Relational Operations return negative one (-1, all bits set) for
+   true and zero (0, no bits set) for false, this allows us to use these
+   bitwise logical operations to invert or combine any relational checks,
+   as the outcome is the same for each bit and so always results into a
+           true (-1) or false (0) again for further evaluations.
 ```
 
-```  Results% = 5  
+
+```vb
+Table 4: The logical operations and its results.
+
+      In this table, A and B are the Expressions to invert or combine.
+             Both may be results of former Boolean evaluations.
+ ┌────────────────────────────────────────────────────────────────────────┐
+ │                           Logical Operations                           │
+ ├───────┬───────┬───────┬─────────┬────────┬─────────┬─────────┬─────────┤
+ │   A   │   B   │ NOT B │ A AND B │ A OR B │ A XOR B │ A EQV B │ A IMP B │
+ ├───────┼───────┼───────┼─────────┼────────┼─────────┼─────────┼─────────┤
+ │ true  │ true  │ false │  true   │ true   │  false  │  true   │  true   │
+ ├───────┼───────┼───────┼─────────┼────────┼─────────┼─────────┼─────────┤
+ │ true  │ false │ true  │  false  │ true   │  true   │  false  │  false  │
+ ├───────┼───────┼───────┼─────────┼────────┼─────────┼─────────┼─────────┤
+ │ false │ true  │ false │  false  │ true   │  true   │  false  │  true   │
+ ├───────┼───────┼───────┼─────────┼────────┼─────────┼─────────┼─────────┤
+ │ false │ false │ true  │  false  │ false  │  false  │  true   │  true   │
+ └───────┴───────┴───────┴─────────┴────────┴─────────┴─────────┴─────────┘
+  Note: In most BASIC languages incl. QB64 these are bitwise operations,
+        hence the logic is performed for each corresponding bit in both
+        operators, where true or false indicates whether a bit is set or
+        not set. The outcome of each bit is then placed into the respective
+        position to build the bit pattern of the final result value.
+
+  As all Relational Operations return negative one (-1, all bits set) for
+   true and zero (0, no bits set) for false, this allows us to use these
+   bitwise logical operations to invert or combine any relational checks,
+   as the outcome is the same for each bit and so always results into a
+           true (-1) or false (0) again for further evaluations.
 ```
 
-  
+* [AND](AND.md) , [XOR](XOR.md)
+* [AND](AND.md) (boolean) , [OR](OR.md) (boolean)
+* Binary , Boolean
 
-*Example 2:* Turning a data register bit on.
+```vb
+Table 4: The logical operations and its results.
 
-```    address% = 888    'parallel port data register    bytevalue% = [INP](INP.md)(address%)    [OUT](OUT.md) address%, bytevalue% OR 4  
+      In this table, A and B are the Expressions to invert or combine.
+             Both may be results of former Boolean evaluations.
+ ┌────────────────────────────────────────────────────────────────────────┐
+ │                           Logical Operations                           │
+ ├───────┬───────┬───────┬─────────┬────────┬─────────┬─────────┬─────────┤
+ │   A   │   B   │ NOT B │ A AND B │ A OR B │ A XOR B │ A EQV B │ A IMP B │
+ ├───────┼───────┼───────┼─────────┼────────┼─────────┼─────────┼─────────┤
+ │ true  │ true  │ false │  true   │ true   │  false  │  true   │  true   │
+ ├───────┼───────┼───────┼─────────┼────────┼─────────┼─────────┼─────────┤
+ │ true  │ false │ true  │  false  │ true   │  true   │  false  │  false  │
+ ├───────┼───────┼───────┼─────────┼────────┼─────────┼─────────┼─────────┤
+ │ false │ true  │ false │  false  │ true   │  true   │  false  │  true   │
+ ├───────┼───────┼───────┼─────────┼────────┼─────────┼─────────┼─────────┤
+ │ false │ false │ true  │  false  │ false  │  false  │  true   │  true   │
+ └───────┴───────┴───────┴─────────┴────────┴─────────┴─────────┴─────────┘
+  Note: In most BASIC languages incl. QB64 these are bitwise operations,
+        hence the logic is performed for each corresponding bit in both
+        operators, where true or false indicates whether a bit is set or
+        not set. The outcome of each bit is then placed into the respective
+        position to build the bit pattern of the final result value.
+
+  As all Relational Operations return negative one (-1, all bits set) for
+   true and zero (0, no bits set) for false, this allows us to use these
+   bitwise logical operations to invert or combine any relational checks,
+   as the outcome is the same for each bit and so always results into a
+           true (-1) or false (0) again for further evaluations.
 ```
 
-*Explanation:* The third register bit is only turned on if it was off. This ensures that a bit is set. OR could set more bits on with a sum of bit values such as: OUT address%, 7 would turn the first, second and third bits on. 1 + 2 + 4 = 7
-  
 
-## See also
 
-* [AND](AND.md), [XOR](XOR.md)
-* [AND (boolean)](AND (boolean).md) "AND (boolean)"), [OR (boolean)](OR (boolean).md) "OR (boolean)")
-* [Binary](Binary.md), [Boolean](Boolean.md)
+# SEE ALSO
+* [AND](AND.md) , [XOR](XOR.md)
+* [AND](AND.md) (boolean) , [OR](OR.md) (boolean)
+* Binary , Boolean
 
-  

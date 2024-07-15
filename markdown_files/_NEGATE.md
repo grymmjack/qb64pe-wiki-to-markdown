@@ -1,63 +1,94 @@
 # _NEGATE
+> _NEGATE is a boolean logical operator that will change a false statement to a true one and vice-versa.
 
-_NEGATE is a [boolean](boolean.md) logical operator that will change a false statement to a true one and vice-versa.
+## SYNTAX
+`result = _NEGATE value`
 
-  
-
-## Syntax
-
-*result* = _NEGATE *value*
-  
-
-## Description
-
-* Unlike [NOT](NOT.md), which evaluates a value and returns the bitwise opposite, _NEGATE returns the logical opposite. Meaning that _NEGATE *non_zero_value* = 0.
+## DESCRIPTION
+* Unlike [NOT](NOT.md) , which evaluates a value and returns the bitwise opposite, [_NEGATE](_NEGATE.md) returns the logical opposite. Meaning that [_NEGATE](_NEGATE.md) non_zero_value = 0 .
 * Often called a negative logic operator, it returns the opposite of a value as true or false.
 
-  
 
-## Availability
+## EXAMPLES
+> Example: NOT versus _NEGATE
 
-* [![none](![none.md)](File:Qb64.png "none")
+```vb
+DECLARE LIBRARY
+   FUNCTION isdigit& (BYVAL n AS LONG)
+END DECLARE
 
-**none**
-* [![v3.13.0](![v3.13.0.md)](File:Qbpe.png "v3.13.0")
+IF NOT isdigit(ASC("1")) THEN
+   PRINT "NOT: 1 is not a digit."
+ELSE
+   PRINT "NOT: 1 is a digit."
+END IF
 
-**v3.13.0**
-* [![Apix.png](![Apix.png.md)](File:Apix.png)
-* [![yes](![yes.md)](File:Win.png "yes")
+IF _NEGATE isdigit(ASC("1")) THEN
+   PRINT "_NEGATE: 1 is not a digit."
+ELSE
+   PRINT "_NEGATE: 1 is a digit."
+END IF
 
-**yes**
-* [![yes](![yes.md)](File:Lnx.png "yes")
-
-**yes**
-* [![yes](![yes.md)](File:Osx.png "yes")
-
-**yes**
-
-  
-
-## Examples
-
-*Example:* NOT versus _NEGATE
-
-``` [DECLARE LIBRARY](DECLARE LIBRARY.md)     [FUNCTION](FUNCTION.md) isdigit& ([BYVAL](BYVAL.md) n [AS](AS.md) [LONG](LONG.md)) [END DECLARE](END DECLARE.md)  [IF](IF.md) [NOT](NOT.md) isdigit([ASC](ASC.md) "ASC (function)")("1")) [THEN](THEN.md)     [PRINT](PRINT.md) "NOT: 1 is not a digit." [ELSE](ELSE.md)     [PRINT](PRINT.md) "NOT: 1 is a digit." [END IF](END IF.md)  [IF](IF.md) _NEGATE isdigit([ASC](ASC.md) "ASC (function)")("1")) [THEN](THEN.md)     [PRINT](PRINT.md) "_NEGATE: 1 is not a digit." [ELSE](ELSE.md)     [PRINT](PRINT.md) "_NEGATE: 1 is a digit." [END IF](END IF.md)  [END](END.md)  
+END
 ```
 
-``` NOT: 1 is not a digit. _NEGATE: 1 is a digit.  
+
+```vb
+DECLARE LIBRARY
+   FUNCTION isdigit& (BYVAL n AS LONG)
+END DECLARE
+
+IF NOT isdigit(ASC("1")) THEN
+   PRINT "NOT: 1 is not a digit."
+ELSE
+   PRINT "NOT: 1 is a digit."
+END IF
+
+IF _NEGATE isdigit(ASC("1")) THEN
+   PRINT "_NEGATE: 1 is not a digit."
+ELSE
+   PRINT "_NEGATE: 1 is a digit."
+END IF
+
+END
 ```
 
-*Explanation:* NOT is a bitwise operator that inverts all the bits in an integer, whereas _NEGATE is a logical operator that flips the truth value of a boolean expression.
-  
+* Featured in our "Keyword of the Day" series
+* [_BIT](_BIT.md) , &B , [_BYTE](_BYTE.md)
+* [AND](AND.md) , [XOR](XOR.md) , [OR](OR.md)
+* [AND](AND.md) (boolean) , [XOR](XOR.md) (boolean) , [OR](OR.md) (boolean)
+* [_ANDALSO](_ANDALSO.md) , [_ORELSE](_ORELSE.md)
+* Binary , Boolean
+* Mathematical Operations
 
-## See also
+```vb
+DECLARE LIBRARY
+   FUNCTION isdigit& (BYVAL n AS LONG)
+END DECLARE
 
-* [Featured in our "Keyword of the Day" series](Featured in our "Keyword of the Day" series.md)
-* [_BIT](_BIT.md), [&B](&B.md), [_BYTE](_BYTE.md)
-* [AND](AND.md), [XOR](XOR.md), [OR](OR.md)
-* [AND (boolean)](AND (boolean).md) "AND (boolean)"), [XOR (boolean)](XOR (boolean).md) "XOR (boolean)"), [OR (boolean)](OR (boolean).md) "OR (boolean)")
-* [_ANDALSO](_ANDALSO.md), [_ORELSE](_ORELSE.md)
-* [Binary](Binary.md), [Boolean](Boolean.md)
-* [Mathematical Operations](Mathematical Operations.md)
+IF NOT isdigit(ASC("1")) THEN
+   PRINT "NOT: 1 is not a digit."
+ELSE
+   PRINT "NOT: 1 is a digit."
+END IF
 
-  
+IF _NEGATE isdigit(ASC("1")) THEN
+   PRINT "_NEGATE: 1 is not a digit."
+ELSE
+   PRINT "_NEGATE: 1 is a digit."
+END IF
+
+END
+```
+
+
+
+# SEE ALSO
+* Featured in our "Keyword of the Day" series
+* [_BIT](_BIT.md) , &B , [_BYTE](_BYTE.md)
+* [AND](AND.md) , [XOR](XOR.md) , [OR](OR.md)
+* [AND](AND.md) (boolean) , [XOR](XOR.md) (boolean) , [OR](OR.md) (boolean)
+* [_ANDALSO](_ANDALSO.md) , [_ORELSE](_ORELSE.md)
+* Binary , Boolean
+* Mathematical Operations
+

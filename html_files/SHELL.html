@@ -1,0 +1,1186 @@
+<!DOCTYPE html>
+<html class="client-nojs" dir="ltr" lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <title>
+   SHELL - QB64 Phoenix Edition Wiki
+  </title>
+  <script>
+   document.documentElement.className="client-js";RLCONF={"wgBreakFrames":false,"wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgRequestId":"ZpWf9vSudf_TYjnwJ2d28gAAA44","wgCSPNonce":false,"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"SHELL","wgTitle":"SHELL","wgCurRevisionId":8924,"wgRevisionId":8924,"wgArticleId":140,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":[],"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgRelevantPageName":"SHELL","wgRelevantArticleId":140,"wgIsProbablyEditable":false,"wgRelevantPageIsProbablyEditable":false,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgVector2022PreviewPages":[]};RLSTATE={"site.styles":"ready","user.styles":"ready","user":"ready",
+"user.options":"loading","skins.vector.styles.legacy":"ready"};RLPAGEMODULES=["site","mediawiki.page.ready","mediawiki.toc","skins.vector.legacy.js"];
+  </script>
+  <script>
+   (RLQ=window.RLQ||[]).push(function(){mw.loader.implement("user.options@12s5i",function($,jQuery,require,module){mw.user.tokens.set({"patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});});});
+  </script>
+  <link href="/qb64wiki/load.php?lang=en&amp;modules=skins.vector.styles.legacy&amp;only=styles&amp;skin=vector" rel="stylesheet"/>
+  <script async="" src="/qb64wiki/load.php?lang=en&amp;modules=startup&amp;only=scripts&amp;raw=1&amp;skin=vector">
+  </script>
+  <meta content="" name="ResourceLoaderDynamicStyles"/>
+  <link href="/qb64wiki/load.php?lang=en&amp;modules=site.styles&amp;only=styles&amp;skin=vector" rel="stylesheet"/>
+  <meta content="MediaWiki 1.39.3" name="generator"/>
+  <meta content="telephone=no" name="format-detection"/>
+  <meta content="width=1000" name="viewport"/>
+  <link href="/favicon.ico" rel="icon"/>
+  <link href="/qb64wiki/opensearch_desc.php" rel="search" title="QB64 Phoenix Edition Wiki (en)" type="application/opensearchdescription+xml"/>
+  <link href="https://qb64phoenix.com/qb64wiki/api.php?action=rsd" rel="EditURI" type="application/rsd+xml"/>
+  <link href="/qb64wiki/index.php?title=Special:RecentChanges&amp;feed=atom" rel="alternate" title="QB64 Phoenix Edition Wiki Atom feed" type="application/atom+xml"/>
+ </head>
+ <body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject page-SHELL rootpage-SHELL skin-vector action-view skin-vector-legacy vector-feature-language-in-header-enabled vector-feature-language-in-main-page-header-disabled vector-feature-language-alert-in-sidebar-disabled vector-feature-sticky-header-disabled vector-feature-sticky-header-edit-disabled vector-feature-table-of-contents-disabled vector-feature-visual-enhancement-next-disabled">
+  <div class="noprint" id="mw-page-base">
+  </div>
+  <div class="noprint" id="mw-head-base">
+  </div>
+  <div class="mw-body" id="content" role="main">
+   <a id="top">
+   </a>
+   <div id="siteNotice">
+   </div>
+   <div class="mw-indicators">
+   </div>
+   <h1 class="firstHeading mw-first-heading" id="firstHeading">
+    <span class="mw-page-title-main">
+     SHELL
+    </span>
+   </h1>
+   <div class="vector-body" id="bodyContent">
+    <div class="noprint" id="siteSub">
+     From QB64 Phoenix Edition Wiki
+    </div>
+    <div id="contentSub">
+    </div>
+    <div id="contentSub2">
+    </div>
+    <div id="jump-to-nav">
+    </div>
+    <a class="mw-jump-link" href="#mw-head">
+     Jump to navigation
+    </a>
+    <a class="mw-jump-link" href="#searchInput">
+     Jump to search
+    </a>
+    <div class="mw-body-content mw-content-ltr" dir="ltr" id="mw-content-text" lang="en">
+     <div class="mw-parser-output">
+      <p>
+       The
+       <a class="mw-selflink selflink">
+        SHELL
+       </a>
+       statement allows a program to run external programs or command line statements in Windows, macOS and Linux.
+      </p>
+      <p>
+       <br/>
+      </p>
+      <table align="right" style="max-width:25%;">
+       <tbody>
+        <tr>
+         <td>
+          <div aria-labelledby="mw-toc-heading" class="toc" id="toc" role="navigation">
+           <input class="toctogglecheckbox" id="toctogglecheckbox" role="button" style="display:none" type="checkbox"/>
+           <div class="toctitle" dir="ltr" lang="en">
+            <h2 id="mw-toc-heading">
+             Contents
+            </h2>
+            <span class="toctogglespan">
+             <label class="toctogglelabel" for="toctogglecheckbox">
+             </label>
+            </span>
+           </div>
+           <ul>
+            <li class="toclevel-1">
+             <a href="#Syntax">
+              <span class="tocnumber">
+               1
+              </span>
+              <span class="toctext">
+               Syntax
+              </span>
+             </a>
+            </li>
+            <li class="toclevel-1">
+             <a href="#Description">
+              <span class="tocnumber">
+               2
+              </span>
+              <span class="toctext">
+               Description
+              </span>
+             </a>
+             <ul>
+              <li class="toclevel-2 tocsection-1">
+               <a href="#QBasic/QuickBASIC">
+                <span class="tocnumber">
+                 2.1
+                </span>
+                <span class="toctext">
+                 QBasic/QuickBASIC
+                </span>
+               </a>
+              </li>
+             </ul>
+            </li>
+            <li class="toclevel-1">
+             <a href="#Examples">
+              <span class="tocnumber">
+               3
+              </span>
+              <span class="toctext">
+               Examples
+              </span>
+             </a>
+             <ul>
+              <li class="toclevel-2 tocsection-2">
+               <a href="#More_examples">
+                <span class="tocnumber">
+                 3.1
+                </span>
+                <span class="toctext">
+                 More examples
+                </span>
+               </a>
+              </li>
+             </ul>
+            </li>
+            <li class="toclevel-1">
+             <a href="#See_also">
+              <span class="tocnumber">
+               4
+              </span>
+              <span class="toctext">
+               See also
+              </span>
+             </a>
+            </li>
+           </ul>
+          </div>
+         </td>
+        </tr>
+       </tbody>
+      </table>
+      <h2>
+       <span class="mw-headline" id="Syntax">
+        Syntax
+       </span>
+      </h2>
+      <dl>
+       <dd>
+        <a class="mw-selflink selflink">
+         SHELL
+        </a>
+        [
+        <i>
+         DOSCommand$
+        </i>
+        ]
+       </dd>
+       <dd>
+        <a class="mw-selflink selflink">
+         SHELL
+        </a>
+        [
+        <b>
+         _DONTWAIT
+        </b>
+        ] [
+        <b>
+         _HIDE
+        </b>
+        ] [
+        <i>
+         DOSCommand$
+        </i>
+        ]
+       </dd>
+      </dl>
+      <p>
+       <br/>
+      </p>
+      <h2>
+       <span class="mw-headline" id="Description">
+        Description
+       </span>
+      </h2>
+      <ul>
+       <li>
+        If the
+        <i>
+         DOSCommand$
+        </i>
+        <a href="/qb64wiki/index.php/STRING" title="STRING">
+         STRING
+        </a>
+        parameter isn't used, the "command console" is opened and execution is halted until the user closes it manually.
+       </li>
+       <li>
+        If
+        <a href="/qb64wiki/index.php/DONTWAIT" title="DONTWAIT">
+         _DONTWAIT
+        </a>
+        is used, the
+        <b>
+         QB64
+        </b>
+        program doesn't wait for the SHELLed program/command to end.
+       </li>
+       <li>
+        When the
+        <a href="/qb64wiki/index.php/HIDE" title="HIDE">
+         _HIDE
+        </a>
+        action is used, the
+        <a href="/qb64wiki/index.php/CONSOLE" title="CONSOLE">
+         console
+        </a>
+        window is hidden and screen info can be "redirected" (using redirection characters like &gt;) to a file (recommended).
+       </li>
+       <li>
+        Commands are external commands, according to the user's operating system, passed as
+        <a href="/qb64wiki/index.php/STRING" title="STRING">
+         strings
+        </a>
+        enclosed in quotes or string variables.
+       </li>
+       <li>
+        Commands can be a mixture of
+        <a href="/qb64wiki/index.php/STRING" title="STRING">
+         strings
+        </a>
+        and string variables added together using the +
+        <a href="/qb64wiki/index.php/Concatenation" title="Concatenation">
+         concatenation
+        </a>
+        operator.
+       </li>
+       <li>
+        Command text can be in upper or lower case. Use single spacing between items and options.
+       </li>
+       <li>
+        <b>
+         QB64
+        </b>
+        automatically uses CMD /C when using
+        <a class="mw-selflink selflink">
+         SHELL
+        </a>
+        , but it is allowed in a command string.
+        <span style="color:red;">
+         Note: CMD alone may lock up program.
+        </span>
+        <ul>
+         <li>
+          <b>
+           Note: Some commands may not work without adding CMD /C to the start of the command line.
+          </b>
+         </li>
+        </ul>
+       </li>
+       <li>
+        <b>
+         QB64
+        </b>
+        program screens will not get distorted, minimized or freeze the program like QBasic fullscreen modes would.
+       </li>
+       <li>
+        <b>
+         QB64
+        </b>
+        can use long path folder names and file names and
+        <a class="mw-selflink selflink">
+         SHELL
+        </a>
+        command lines can be longer than 124 characters.
+       </li>
+       <li>
+        In Windows, use additional
+        <a href="/qb64wiki/index.php/CHR$" title="CHR$">
+         CHR$
+        </a>
+        (34) quotation marks around folder or file names that contain spaces.
+       </li>
+       <li>
+        For other operating systems, both the quotation mark character and the apostrophe can be used to enclose a file name that contains spaces.
+       </li>
+       <li>
+        <b>
+         NOTE: Use
+         <a href="/qb64wiki/index.php/CHDIR" title="CHDIR">
+          CHDIR
+         </a>
+         instead of CD as SHELL commands cannot affect the current program path.
+        </b>
+       </li>
+      </ul>
+      <h3>
+       <span id="QBasic.2FQuickBASIC">
+       </span>
+       <span class="mw-headline" id="QBasic/QuickBASIC">
+        QBasic/QuickBASIC
+       </span>
+      </h3>
+      <ul>
+       <li>
+        <b>
+         QBasic BAS files could be run like compiled programs without returning to the IDE when
+         <a href="/qb64wiki/index.php/SYSTEM" title="SYSTEM">
+          SYSTEM
+         </a>
+         was used to
+         <a href="/qb64wiki/index.php/END" title="END">
+          end
+         </a>
+         them.
+        </b>
+       </li>
+       <li>
+        A user would invoke it with
+        <span style="border: 2px solid #87cefa; border-radius: 4px; padding: 4px; font-family: Courier New, monospace, Courier; font-size: 16px; white-space: nowrap; background: #082080; color: #e2e2e2;">
+         SHELL "QB.EXE /L /RUN program.BAS"
+        </span>
+       </li>
+      </ul>
+      <p>
+       <br/>
+      </p>
+      <h2>
+       <span class="mw-headline" id="Examples">
+        Examples
+       </span>
+      </h2>
+      <p>
+       <i>
+        Example 1:
+       </i>
+       When working with file or folder names with spaces, add quotation marks around the path and/or file name with
+       <a href="/qb64wiki/index.php/CHR$" title="CHR$">
+        CHR$
+       </a>
+       (34).
+      </p>
+      <table cellpadding="15px" width="100%">
+       <tbody>
+        <tr>
+         <td>
+          <pre class="codeide"><a class="mw-selflink selflink"><span style="color:#4593D8;">SHELL</span></a> <a href="/qb64wiki/index.php/HIDE" title="HIDE"><span style="color:#4593D8;">_HIDE</span></a> "dir " + <a href="/qb64wiki/index.php/CHR$" title="CHR$"><span style="color:#4593D8;">CHR$</span></a>(34) + "free cell.ico" + <a href="/qb64wiki/index.php/CHR$" title="CHR$"><span style="color:#4593D8;">CHR$</span></a>(34) + " /b &gt; temp.dir"
+<a class="mw-selflink selflink"><span style="color:#4593D8;">SHELL</span></a> "start Notepad temp.dir" ' display temp file contents in Notepad window
+</pre>
+         </td>
+        </tr>
+       </tbody>
+      </table>
+      <table cellpadding="5px" width="100%">
+       <tbody>
+        <tr>
+         <td>
+          <pre class="outputtext">Free Cell.ico
+</pre>
+         </td>
+        </tr>
+       </tbody>
+      </table>
+      <center>
+       <span style="font-family: Courier New, Courier, monospace; font-size: 0.80em; line-height: 50%;">
+        Contents of the temp.dir text file
+       </span>
+      </center>
+      <p>
+       <br/>
+       <i>
+        Example 2:
+       </i>
+       Opening a Windows program (Notepad) to read or print a Basic created text file.
+      </p>
+      <table cellpadding="15px" width="100%">
+       <tbody>
+        <tr>
+         <td>
+          <pre class="codeide"><a href="/qb64wiki/index.php/INPUT" title="INPUT"><span style="color:#4593D8;">INPUT</span></a> "Enter a file name to read in Notepad: ", filename$
+<a class="mw-selflink selflink"><span style="color:#4593D8;">SHELL</span></a> "CMD /C start /max notepad " + filename$  ' display in Notepad full screen in XP or NT
+
+'<a class="mw-selflink selflink"><span style="color:#4593D8;">SHELL</span></a> "start /min notepad /p " + filename$ ' taskbar print using QB64 CMD /C not necessary
+</pre>
+         </td>
+        </tr>
+       </tbody>
+      </table>
+      <dl>
+       <dd>
+        <i>
+         Explanation:
+        </i>
+        Notepad is an easy program to open in Windows as no path is needed. Windows NT computers, including XP, use CMD /C where older versions of DOS don't require any command reference. The top command opens Notepad in a normal window for a user to view the file. They can use Notepad to print it. The second command places Notepad file in the taskbar and prints it automatically. The filename variable is added by the program using proper spacing.
+       </dd>
+      </dl>
+      <dl>
+       <dd>
+        <dl>
+         <dd>
+          <ul>
+           <li>
+            <b>
+             Start
+            </b>
+            is used to allow a Basic program to run without waiting for Notepad to be closed.
+           </li>
+           <li>
+            <b>
+             /min
+            </b>
+            places the window into the taskbar.
+            <b>
+             /max
+            </b>
+            is fullscreen and no option is a normal window.
+           </li>
+           <li>
+            Notepad's
+            <b>
+             /p
+            </b>
+            option prints the file contents, even with USB printers.
+           </li>
+          </ul>
+         </dd>
+        </dl>
+       </dd>
+      </dl>
+      <p>
+       <br/>
+      </p>
+      <p>
+       <i>
+        Example 3:
+       </i>
+       Function that returns the program's current working path.
+      </p>
+      <table cellpadding="15px" width="100%">
+       <tbody>
+        <tr>
+         <td>
+          <pre class="codeide"> currentpath$ = Path$ ' function call saves a path for later program use
+ PRINT currentpath$
+
+ <a href="/qb64wiki/index.php/FUNCTION" title="FUNCTION"><span style="color:#4593D8;">FUNCTION</span></a> Path$
+   <a class="mw-selflink selflink"><span style="color:#4593D8;">SHELL</span></a> <a href="/qb64wiki/index.php/HIDE" title="HIDE"><span style="color:#4593D8;">_HIDE</span></a> "CD &gt; D0S-DATA.INF"   'code to hide window in <b>QB64</b>
+   <a href="/qb64wiki/index.php/OPEN" title="OPEN"><span style="color:#4593D8;">OPEN</span></a> "D0S-DATA.INF" FOR <a class="mw-redirect" href="/qb64wiki/index.php/APPEND" title="APPEND"><span style="color:#4593D8;">APPEND</span></a> AS #1  'this may create the file
+        L% = <a href="/qb64wiki/index.php/LOF" title="LOF"><span style="color:#4593D8;">LOF</span></a>(1)          'verify that file and data exist
+   <a href="/qb64wiki/index.php/CLOSE" title="CLOSE"><span style="color:#4593D8;">CLOSE</span></a> #1
+   <a class="mw-redirect" href="/qb64wiki/index.php/IF" title="IF"><span style="color:#4593D8;">IF</span></a> L% <a href="/qb64wiki/index.php/THEN" title="THEN"><span style="color:#4593D8;">THEN</span></a>                       'read file if it has data
+     <a href="/qb64wiki/index.php/OPEN" title="OPEN"><span style="color:#4593D8;">OPEN</span></a> "D0S-DATA.INF" FOR <a class="mw-redirect" href="/qb64wiki/index.php/INPUT_(file_mode)" title="INPUT (file mode)"><span style="color:#4593D8;">INPUT</span></a> AS #1
+     <a href="/qb64wiki/index.php/LINE_INPUT_(file_statement)" title="LINE INPUT (file statement)"><span style="color:#4593D8;">LINE INPUT</span></a> #1, line$           'read only line in file
+     Path$ = line$ + "\"            'add slash to path so only a filename needs added later
+     <a href="/qb64wiki/index.php/CLOSE" title="CLOSE"><span style="color:#4593D8;">CLOSE</span></a> #1
+   <a href="/qb64wiki/index.php/ELSE" title="ELSE"><span style="color:#4593D8;">ELSE</span></a> : Path = ""                 'returns zero length string if path not found
+   END IF
+   <a href="/qb64wiki/index.php/KILL" title="KILL"><span style="color:#4593D8;">KILL</span></a> "D0S-DATA.INF"              'deleting the file is optional
+ <a class="mw-redirect" href="/qb64wiki/index.php/END_FUNCTION" title="END FUNCTION"><span style="color:#4593D8;">END FUNCTION</span></a>
+</pre>
+         </td>
+        </tr>
+       </tbody>
+      </table>
+      <center>
+       <span style="font-family: Courier New, Courier, monospace; font-size: 0.80em; line-height: 50%;">
+        Code by Ted Weissgerber
+       </span>
+      </center>
+      <dl>
+       <dd>
+        <i>
+         Explanation:
+        </i>
+        The
+        <b>
+         SHELL "CD"
+        </b>
+        statement requests the current working path. This info is normally printed to the screen, but the
+        <b>
+         &gt;
+        </b>
+        pipe character sends the information to the DOS-DATA.INF file instead(
+        <b>
+         QB64
+        </b>
+        can use
+        <a href="/qb64wiki/index.php/HIDE" title="HIDE">
+         _HIDE
+        </a>
+        to not display the DOS window). The function uses the
+        <a href="/qb64wiki/index.php/OPEN" title="OPEN">
+         OPEN
+        </a>
+        FOR
+        <a class="mw-redirect" href="/qb64wiki/index.php/APPEND" title="APPEND">
+         APPEND
+        </a>
+        mode to check for the file and the data(
+        <a class="mw-redirect" href="/qb64wiki/index.php/INPUT_(file_mode)" title="INPUT (file mode)">
+         INPUT
+        </a>
+        would create an error if file does not exist). The current path is listed on one line of the file. The file is opened and
+        <a href="/qb64wiki/index.php/LINE_INPUT_(file_statement)" title="LINE INPUT (file statement)">
+         LINE INPUT
+        </a>
+        returns one line of the file text. The function adds a "\" so that the Path$ returned can be used in another file statement by just adding a file name. Save the Path$ to another variable for later use when the program has moved to another directory.
+       </dd>
+       <dd>
+        In
+        <b>
+         QB64
+        </b>
+        you can simply use the
+        <a href="/qb64wiki/index.php/CWD$" title="CWD$">
+         _CWD$
+        </a>
+        statement for the same purpose of the example above.
+       </dd>
+      </dl>
+      <p>
+       <br/>
+       <i>
+        Example 4:
+       </i>
+       Determining if a drive or path exists. Cannot use with a file name specification.
+      </p>
+      <table cellpadding="15px" width="100%">
+       <tbody>
+        <tr>
+         <td>
+          <pre class="codeide"><a href="/qb64wiki/index.php/LINE_INPUT" title="LINE INPUT"><span style="color:#4593D8;">LINE INPUT</span></a> "Enter a drive or path (no file name): ", DirPath$
+<a class="mw-redirect" href="/qb64wiki/index.php/IF" title="IF"><span style="color:#4593D8;">IF</span></a> PathExist%(DirPath$) <a href="/qb64wiki/index.php/THEN" title="THEN"><span style="color:#4593D8;">THEN</span></a> PRINT "Drive Path exists!" <a href="/qb64wiki/index.php/ELSE" title="ELSE"><span style="color:#4593D8;">ELSE</span></a> PRINT "Drive Path does not exist!"
+<a href="/qb64wiki/index.php/END" title="END"><span style="color:#4593D8;">END</span></a>
+
+<a href="/qb64wiki/index.php/FUNCTION" title="FUNCTION"><span style="color:#4593D8;">FUNCTION</span></a> PathExist% (Path$)
+PathExist% = 0
+<a class="mw-redirect" href="/qb64wiki/index.php/IF" title="IF"><span style="color:#4593D8;">IF</span></a> <a href="/qb64wiki/index.php/LEN" title="LEN"><span style="color:#4593D8;">LEN</span></a>(Path$) = 0 <a href="/qb64wiki/index.php/THEN" title="THEN"><span style="color:#4593D8;">THEN</span></a> <a href="/qb64wiki/index.php/EXIT_FUNCTION" title="EXIT FUNCTION"><span style="color:#4593D8;">EXIT FUNCTION</span></a> 'no entry
+<a class="mw-redirect" href="/qb64wiki/index.php/IF" title="IF"><span style="color:#4593D8;">IF</span></a> <a href="/qb64wiki/index.php/LEN" title="LEN"><span style="color:#4593D8;">LEN</span></a>(<a href="/qb64wiki/index.php/ENVIRON$" title="ENVIRON$"><span style="color:#4593D8;">ENVIRON$</span></a>("OS")) <a href="/qb64wiki/index.php/THEN" title="THEN"><span style="color:#4593D8;">THEN</span></a> CMD$ = "CMD /C " <a href="/qb64wiki/index.php/ELSE" title="ELSE"><span style="color:#4593D8;">ELSE</span></a> CMD$ = "COMMAND /C "
+<a class="mw-selflink selflink"><span style="color:#4593D8;">SHELL</span></a> <a href="/qb64wiki/index.php/HIDE" title="HIDE"><span style="color:#4593D8;">_HIDE</span></a> CMD$ + "If Exist " + Path$ + "\nul echo yes &gt; D0S-DATA.INF"
+<a href="/qb64wiki/index.php/OPEN" title="OPEN"><span style="color:#4593D8;">OPEN</span></a> "D0S-DATA.INF" <a class="mw-redirect" href="/qb64wiki/index.php/FOR_(file_statement)" title="FOR (file statement)"><span style="color:#4593D8;">FOR</span></a> <a class="mw-redirect" href="/qb64wiki/index.php/APPEND" title="APPEND"><span style="color:#4593D8;">APPEND</span></a> <a href="/qb64wiki/index.php/AS" title="AS"><span style="color:#4593D8;">AS</span></a> #1
+<a class="mw-redirect" href="/qb64wiki/index.php/IF" title="IF"><span style="color:#4593D8;">IF</span></a> <a href="/qb64wiki/index.php/LOF" title="LOF"><span style="color:#4593D8;">LOF</span></a>(1) <a href="/qb64wiki/index.php/THEN" title="THEN"><span style="color:#4593D8;">THEN</span></a> PathExist% = -1             'yes will be in file if path exists
+<a href="/qb64wiki/index.php/CLOSE" title="CLOSE"><span style="color:#4593D8;">CLOSE</span></a> #1
+<a href="/qb64wiki/index.php/KILL" title="KILL"><span style="color:#4593D8;">KILL</span></a> "D0S-DATA.INF"               'delete data file optional
+<a class="mw-redirect" href="/qb64wiki/index.php/END_FUNCTION" title="END FUNCTION"><span style="color:#4593D8;">END FUNCTION</span></a>
+</pre>
+         </td>
+        </tr>
+       </tbody>
+      </table>
+      <center>
+       <span style="font-family: Courier New, Courier, monospace; font-size: 0.80em; line-height: 50%;">
+        Code by Ted Weissgerber
+       </span>
+      </center>
+      <dl>
+       <dd>
+        <i>
+         Explanation: IF Exist
+        </i>
+        checks for the drive path.
+        <i>
+         \Nul
+        </i>
+        allows an emply folder at end of path.
+        <i>
+         Echo
+        </i>
+        prints
+        <b>
+         yes
+        </b>
+        in the file if it exists.
+       </dd>
+       <dd>
+        In
+        <b>
+         QB64
+        </b>
+        you can simply use the
+        <a href="/qb64wiki/index.php/FILEEXISTS" title="FILEEXISTS">
+         _FILEEXISTS
+        </a>
+        statement for the same purpose of the example above.
+       </dd>
+      </dl>
+      <p>
+       <br/>
+       <i>
+        Snippet 1:
+       </i>
+       When looking for
+       <b>
+        printers
+       </b>
+       this command gives you a file list with the default printer marked as
+       <b>
+        TRUE
+       </b>
+       :
+      </p>
+      <table cellpadding="5px" width="100%">
+       <tbody>
+        <tr>
+         <td>
+          <pre class="outputtext"><a class="mw-selflink selflink"><span style="color:blue;">SHELL</span></a> <a href="/qb64wiki/index.php/HIDE" title="HIDE"><span style="color:blue;">_HIDE</span></a> "CMD /C" + "wmic printer get name,default &gt; default.txt"
+</pre>
+         </td>
+        </tr>
+       </tbody>
+      </table>
+      <p>
+       <b>
+        Created file's text:
+       </b>
+      </p>
+      <table cellpadding="5px" width="100%">
+       <tbody>
+        <tr>
+         <td>
+          <pre class="outputtext">Default  Name
+  FALSE    Microsoft XPS Document Writer
+  TRUE     HP Photosmart C7200 series
+  FALSE    HP Officejet Pro 8600
+  FALSE    Fax
+</pre>
+         </td>
+        </tr>
+       </tbody>
+      </table>
+      <dl>
+       <dd>
+        <i>
+         Explanation:
+        </i>
+        <a href="/qb64wiki/index.php/LINE_INPUT" title="LINE INPUT">
+         LINE INPUT
+        </a>
+        could be used to find the printer names as
+        <a href="/qb64wiki/index.php/STRING" title="STRING">
+         STRING
+        </a>
+        variables.
+       </dd>
+      </dl>
+      <p>
+       <br/>
+       <i>
+        Snippet 2:
+       </i>
+       Here is the code to set the default printer to the "HP Officejet Pro 8600":
+      </p>
+      <table cellpadding="5px" width="100%">
+       <tbody>
+        <tr>
+         <td>
+          <pre class="outputtext">SHELL _HIDE "CMD /C" + "wmic printer where name='HP Officejet Pro 8600' call setdefaultprinter"
+</pre>
+         </td>
+        </tr>
+       </tbody>
+      </table>
+      <dl>
+       <dd>
+        After executing this program, and then running the first snippet again, we see the following
+        <b>
+         contents of the text file:
+        </b>
+       </dd>
+      </dl>
+      <table cellpadding="5px" width="100%">
+       <tbody>
+        <tr>
+         <td>
+          <pre class="outputtext">Default  Name
+  FALSE    Microsoft XPS Document Writer
+  FALSE    HP Photosmart C7200 series
+  TRUE     HP Officejet Pro 8600
+  FALSE    Fax
+</pre>
+         </td>
+        </tr>
+       </tbody>
+      </table>
+      <h3>
+       <span class="mw-headline" id="More_examples">
+        More examples
+       </span>
+      </h3>
+      <ul>
+       <li>
+        <a href="/qb64wiki/index.php/FILELIST$_(function)" title="FILELIST$ (function)">
+         FILELIST$ (function)
+        </a>
+       </li>
+       <li>
+        <a href="/qb64wiki/index.php/Windows_Libraries#File_Exist" title="Windows Libraries">
+         FileExist Library Function
+        </a>
+       </li>
+      </ul>
+      <p>
+       <br/>
+      </p>
+      <h2>
+       <span class="mw-headline" id="See_also">
+        See also
+       </span>
+      </h2>
+      <ul>
+       <li>
+        <a class="external text" href="https://qb64phoenix.com/forum/showthread.php?tid=1282" rel="nofollow">
+         Featured in our "Keyword of the Day" series
+        </a>
+       </li>
+       <li>
+        <a href="/qb64wiki/index.php/SHELL_(function)" title="SHELL (function)">
+         SHELL (function)
+        </a>
+        ,
+        <a href="/qb64wiki/index.php/SHELLHIDE" title="SHELLHIDE">
+         _SHELLHIDE
+        </a>
+       </li>
+       <li>
+        <a href="/qb64wiki/index.php/FILES" title="FILES">
+         FILES
+        </a>
+        ,
+        <a href="/qb64wiki/index.php/CHDIR" title="CHDIR">
+         CHDIR
+        </a>
+        ,
+        <a href="/qb64wiki/index.php/MKDIR" title="MKDIR">
+         MKDIR
+        </a>
+       </li>
+       <li>
+        <a href="/qb64wiki/index.php/CWD$" title="CWD$">
+         _CWD$
+        </a>
+        ,
+        <a href="/qb64wiki/index.php/STARTDIR$" title="STARTDIR$">
+         _STARTDIR$
+        </a>
+       </li>
+       <li>
+        <a href="/qb64wiki/index.php/FILEEXISTS" title="FILEEXISTS">
+         _FILEEXISTS
+        </a>
+        ,
+        <a href="/qb64wiki/index.php/DIREXISTS" title="DIREXISTS">
+         _DIREXISTS
+        </a>
+       </li>
+       <li>
+        <a href="/qb64wiki/index.php/RMDIR" title="RMDIR">
+         RMDIR
+        </a>
+        ,
+        <a href="/qb64wiki/index.php/NAME" title="NAME">
+         NAME
+        </a>
+        ,
+        <a href="/qb64wiki/index.php/KILL" title="KILL">
+         KILL
+        </a>
+        ,
+        <a href="/qb64wiki/index.php/RUN" title="RUN">
+         RUN
+        </a>
+       </li>
+       <li>
+        <a href="/qb64wiki/index.php/HIDE" title="HIDE">
+         _HIDE
+        </a>
+        ,
+        <a href="/qb64wiki/index.php/DONTWAIT" title="DONTWAIT">
+         _DONTWAIT
+        </a>
+       </li>
+       <li>
+        <a href="/qb64wiki/index.php/CONSOLE" title="CONSOLE">
+         _CONSOLE
+        </a>
+        ,
+        <a href="/qb64wiki/index.php/$CONSOLE" title="$CONSOLE">
+         $CONSOLE
+        </a>
+       </li>
+       <li>
+        <a href="/qb64wiki/index.php/$SCREENHIDE" title="$SCREENHIDE">
+         $SCREENHIDE
+        </a>
+        ,
+        <a href="/qb64wiki/index.php/$SCREENSHOW" title="$SCREENSHOW">
+         $SCREENSHOW
+        </a>
+       </li>
+       <li>
+        <a href="/qb64wiki/index.php/SCREENHIDE" title="SCREENHIDE">
+         _SCREENHIDE
+        </a>
+        ,
+        <a href="/qb64wiki/index.php/SCREENSHOW" title="SCREENSHOW">
+         _SCREENSHOW
+        </a>
+       </li>
+       <li>
+        <a href="/qb64wiki/index.php/FILELIST$" title="FILELIST$">
+         FILELIST$
+        </a>
+        ,
+        <a href="/qb64wiki/index.php/PDS(7.1)_Procedures#DIR$" title="PDS(7.1) Procedures">
+         DIR$
+        </a>
+       </li>
+       <li>
+        <a href="/qb64wiki/index.php/Windows_Libraries#File_Dialog_Boxes" title="Windows Libraries">
+         Windows Open and Save Dialog Boxes
+        </a>
+       </li>
+       <li>
+        <a href="/qb64wiki/index.php/C_Libraries#Console_Window" title="C Libraries">
+         C Console Library
+        </a>
+       </li>
+       <li>
+        <a href="/qb64wiki/index.php/Windows_Printer_Settings" title="Windows Printer Settings">
+         Windows Printer Settings
+        </a>
+       </li>
+      </ul>
+      <p>
+       <br/>
+      </p>
+      <hr/>
+      <center>
+       <b>
+        Navigation:
+       </b>
+      </center>
+      <center>
+       <a href="/qb64wiki/index.php/Main_Page" title="Main Page">
+        Main Page with Articles and Tutorials
+       </a>
+      </center>
+      <center>
+       <a href="/qb64wiki/index.php/Keyword_Reference_-_Alphabetical" title="Keyword Reference - Alphabetical">
+        Keyword Reference - Alphabetical
+       </a>
+      </center>
+      <center>
+       <a href="/qb64wiki/index.php/Keyword_Reference_-_By_usage" title="Keyword Reference - By usage">
+        Keyword Reference - By usage
+       </a>
+      </center>
+      <center>
+       <b>
+        <a class="external text" href="https://qb64phoenix.com/forum/showthread.php?tid=2800" rel="nofollow">
+         Report a broken link
+        </a>
+       </b>
+       <br/>
+      </center>
+      <!-- 
+NewPP limit report
+Cached time: 20240715221726
+Cache expiry: 86400
+Reduced expiry: false
+Complications: [show‐toc]
+CPU time usage: 0.055 seconds
+Real time usage: 0.075 seconds
+Preprocessor visited node count: 646/1000000
+Post‐expand include size: 4687/2097152 bytes
+Template argument size: 713/2097152 bytes
+Highest expansion depth: 3/100
+Expensive parser function count: 0/100
+Unstrip recursion depth: 0/20
+Unstrip post‐expand size: 0/5000000 bytes
+-->
+      <!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%   48.029      1 -total
+ 13.45%    6.460      1 Template:InlineCode
+  8.42%    4.043      1 Template:PageSyntax
+  7.54%    3.619     51 Template:Cl
+  6.06%    2.912      2 Template:Parameter
+  5.91%    2.837      5 Template:TextStart
+  5.83%    2.799      1 Template:PageDescription
+  4.82%    2.315      1 Template:InlineCodeEnd
+  4.74%    2.276      2 Template:Cb
+  4.59%    2.206      1 Template:Text
+-->
+      <!-- Saved in parser cache with key qb64pnix_mw19894-mwmb_:pcache:idhash:140-0!canonical and timestamp 20240715221726 and revision id 8924.
+ -->
+     </div>
+     <div class="printfooter" data-nosnippet="">
+      Retrieved from "
+      <a dir="ltr" href="https://qb64phoenix.com/qb64wiki/index.php?title=SHELL&amp;oldid=8924">
+       https://qb64phoenix.com/qb64wiki/index.php?title=SHELL&amp;oldid=8924
+      </a>
+      "
+     </div>
+    </div>
+    <div class="catlinks catlinks-allhidden" data-mw="interface" id="catlinks">
+    </div>
+   </div>
+  </div>
+  <div id="mw-navigation">
+   <h2>
+    Navigation menu
+   </h2>
+   <div id="mw-head">
+    <nav aria-labelledby="p-personal-label" class="vector-menu mw-portlet mw-portlet-personal vector-user-menu-legacy" id="p-personal" role="navigation">
+     <h3 class="vector-menu-heading" id="p-personal-label">
+      <span class="vector-menu-heading-label">
+       Personal tools
+      </span>
+     </h3>
+     <div class="vector-menu-content">
+      <ul class="vector-menu-content-list">
+       <li class="mw-list-item" id="pt-login">
+        <a accesskey="o" href="/qb64wiki/index.php?title=Special:UserLogin&amp;returnto=SHELL" title="You are encouraged to log in; however, it is not mandatory [o]">
+         <span>
+          Log in
+         </span>
+        </a>
+       </li>
+      </ul>
+     </div>
+    </nav>
+    <div id="left-navigation">
+     <nav aria-labelledby="p-namespaces-label" class="vector-menu mw-portlet mw-portlet-namespaces vector-menu-tabs vector-menu-tabs-legacy" id="p-namespaces" role="navigation">
+      <h3 class="vector-menu-heading" id="p-namespaces-label">
+       <span class="vector-menu-heading-label">
+        Namespaces
+       </span>
+      </h3>
+      <div class="vector-menu-content">
+       <ul class="vector-menu-content-list">
+        <li class="selected mw-list-item" id="ca-nstab-main">
+         <a accesskey="c" href="/qb64wiki/index.php/SHELL" title="View the content page [c]">
+          <span>
+           Page
+          </span>
+         </a>
+        </li>
+        <li class="new mw-list-item" id="ca-talk">
+         <a accesskey="t" href="/qb64wiki/index.php?title=Talk:SHELL&amp;action=edit&amp;redlink=1" rel="discussion" title="Discussion about the content page (page does not exist) [t]">
+          <span>
+           Discussion
+          </span>
+         </a>
+        </li>
+       </ul>
+      </div>
+     </nav>
+     <nav aria-labelledby="p-variants-label" class="vector-menu mw-portlet mw-portlet-variants emptyPortlet vector-menu-dropdown" id="p-variants" role="navigation">
+      <input aria-haspopup="true" aria-labelledby="p-variants-label" class="vector-menu-checkbox" data-event-name="ui.dropdown-p-variants" id="p-variants-checkbox" role="button" type="checkbox"/>
+      <label aria-label="Change language variant" class="vector-menu-heading" id="p-variants-label">
+       <span class="vector-menu-heading-label">
+        English
+       </span>
+      </label>
+      <div class="vector-menu-content">
+       <ul class="vector-menu-content-list">
+       </ul>
+      </div>
+     </nav>
+    </div>
+    <div id="right-navigation">
+     <nav aria-labelledby="p-views-label" class="vector-menu mw-portlet mw-portlet-views vector-menu-tabs vector-menu-tabs-legacy" id="p-views" role="navigation">
+      <h3 class="vector-menu-heading" id="p-views-label">
+       <span class="vector-menu-heading-label">
+        Views
+       </span>
+      </h3>
+      <div class="vector-menu-content">
+       <ul class="vector-menu-content-list">
+        <li class="selected mw-list-item" id="ca-view">
+         <a href="/qb64wiki/index.php/SHELL">
+          <span>
+           Read
+          </span>
+         </a>
+        </li>
+        <li class="mw-list-item" id="ca-viewsource">
+         <a accesskey="e" href="/qb64wiki/index.php?title=SHELL&amp;action=edit" title="This page is protected.
+You can view its source [e]">
+          <span>
+           View source
+          </span>
+         </a>
+        </li>
+        <li class="mw-list-item" id="ca-history">
+         <a accesskey="h" href="/qb64wiki/index.php?title=SHELL&amp;action=history" title="Past revisions of this page [h]">
+          <span>
+           View history
+          </span>
+         </a>
+        </li>
+       </ul>
+      </div>
+     </nav>
+     <nav aria-labelledby="p-cactions-label" class="vector-menu mw-portlet mw-portlet-cactions emptyPortlet vector-menu-dropdown" id="p-cactions" role="navigation" title="More options">
+      <input aria-haspopup="true" aria-labelledby="p-cactions-label" class="vector-menu-checkbox" data-event-name="ui.dropdown-p-cactions" id="p-cactions-checkbox" role="button" type="checkbox"/>
+      <label class="vector-menu-heading" id="p-cactions-label">
+       <span class="vector-menu-heading-label">
+        More
+       </span>
+      </label>
+      <div class="vector-menu-content">
+       <ul class="vector-menu-content-list">
+       </ul>
+      </div>
+     </nav>
+     <div class="vector-search-box-vue vector-search-box-show-thumbnail vector-search-box-auto-expand-width vector-search-box" id="p-search" role="search">
+      <div>
+       <h3>
+        <label for="searchInput">
+         Search
+        </label>
+       </h3>
+       <form action="/qb64wiki/index.php" class="vector-search-box-form" id="searchform">
+        <div class="vector-search-box-inner" data-search-loc="header-navigation" id="simpleSearch">
+         <input accesskey="f" aria-label="Search QB64 Phoenix Edition Wiki" autocapitalize="sentences" class="vector-search-box-input" id="searchInput" name="search" placeholder="Search QB64 Phoenix Edition Wiki" title="Search QB64 Phoenix Edition Wiki [f]" type="search"/>
+         <input name="title" type="hidden" value="Special:Search"/>
+         <input class="searchButton mw-fallbackSearchButton" id="mw-searchButton" name="fulltext" title="Search the pages for this text" type="submit" value="Search"/>
+         <input class="searchButton" id="searchButton" name="go" title="Go to a page with this exact name if it exists" type="submit" value="Go"/>
+        </div>
+       </form>
+      </div>
+     </div>
+    </div>
+   </div>
+   <div id="mw-panel">
+    <div id="p-logo" role="banner">
+     <a class="mw-wiki-logo" href="/qb64wiki/index.php/Main_Page" title="Visit the main page">
+     </a>
+    </div>
+    <nav aria-labelledby="p-navigation-label" class="vector-menu mw-portlet mw-portlet-navigation vector-menu-portal portal" id="p-navigation" role="navigation">
+     <h3 class="vector-menu-heading" id="p-navigation-label">
+      <span class="vector-menu-heading-label">
+       Navigation
+      </span>
+     </h3>
+     <div class="vector-menu-content">
+      <ul class="vector-menu-content-list">
+       <li class="mw-list-item" id="n-mainpage-description">
+        <a accesskey="z" href="/qb64wiki/index.php/Main_Page" title="Visit the main page [z]">
+         <span>
+          Main page
+         </span>
+        </a>
+       </li>
+       <li class="mw-list-item" id="n-recentchanges">
+        <a accesskey="r" href="/qb64wiki/index.php/Special:RecentChanges" title="A list of recent changes in the wiki [r]">
+         <span>
+          Recent changes
+         </span>
+        </a>
+       </li>
+       <li class="mw-list-item" id="n-randompage">
+        <a accesskey="x" href="/qb64wiki/index.php/Special:Random" title="Load a random page [x]">
+         <span>
+          Random page
+         </span>
+        </a>
+       </li>
+       <li class="mw-list-item" id="n-help-mediawiki">
+        <a href="https://www.mediawiki.org/wiki/Special:MyLanguage/Help:Contents">
+         <span>
+          Help about MediaWiki
+         </span>
+        </a>
+       </li>
+      </ul>
+     </div>
+    </nav>
+    <nav aria-labelledby="p-tb-label" class="vector-menu mw-portlet mw-portlet-tb vector-menu-portal portal" id="p-tb" role="navigation">
+     <h3 class="vector-menu-heading" id="p-tb-label">
+      <span class="vector-menu-heading-label">
+       Tools
+      </span>
+     </h3>
+     <div class="vector-menu-content">
+      <ul class="vector-menu-content-list">
+       <li class="mw-list-item" id="t-whatlinkshere">
+        <a accesskey="j" href="/qb64wiki/index.php/Special:WhatLinksHere/SHELL" title="A list of all wiki pages that link here [j]">
+         <span>
+          What links here
+         </span>
+        </a>
+       </li>
+       <li class="mw-list-item" id="t-recentchangeslinked">
+        <a accesskey="k" href="/qb64wiki/index.php/Special:RecentChangesLinked/SHELL" rel="nofollow" title="Recent changes in pages linked from this page [k]">
+         <span>
+          Related changes
+         </span>
+        </a>
+       </li>
+       <li class="mw-list-item" id="t-specialpages">
+        <a accesskey="q" href="/qb64wiki/index.php/Special:SpecialPages" title="A list of all special pages [q]">
+         <span>
+          Special pages
+         </span>
+        </a>
+       </li>
+       <li class="mw-list-item" id="t-print">
+        <a accesskey="p" href="javascript:print();" rel="alternate" title="Printable version of this page [p]">
+         <span>
+          Printable version
+         </span>
+        </a>
+       </li>
+       <li class="mw-list-item" id="t-permalink">
+        <a href="/qb64wiki/index.php?title=SHELL&amp;oldid=8924" title="Permanent link to this revision of this page">
+         <span>
+          Permanent link
+         </span>
+        </a>
+       </li>
+       <li class="mw-list-item" id="t-info">
+        <a href="/qb64wiki/index.php?title=SHELL&amp;action=info" title="More information about this page">
+         <span>
+          Page information
+         </span>
+        </a>
+       </li>
+      </ul>
+     </div>
+    </nav>
+   </div>
+  </div>
+  <footer class="mw-footer" id="footer" role="contentinfo">
+   <ul id="footer-info">
+    <li id="footer-info-lastmod">
+     This page was last edited on 25 May 2024, at 18:11.
+    </li>
+   </ul>
+   <ul id="footer-places">
+    <li id="footer-places-privacy">
+     <a href="/qb64wiki/index.php/QB64_Phoenix_Edition_Wiki:Privacy_policy">
+      Privacy policy
+     </a>
+    </li>
+    <li id="footer-places-about">
+     <a href="/qb64wiki/index.php/QB64_Phoenix_Edition_Wiki:About">
+      About QB64 Phoenix Edition Wiki
+     </a>
+    </li>
+    <li id="footer-places-disclaimer">
+     <a href="/qb64wiki/index.php/QB64_Phoenix_Edition_Wiki:General_disclaimer">
+      Disclaimers
+     </a>
+    </li>
+   </ul>
+   <ul class="noprint" id="footer-icons">
+    <li id="footer-poweredbyico">
+     <a href="https://www.mediawiki.org/">
+      <img alt="Powered by MediaWiki" height="31" loading="lazy" src="/qb64wiki/resources/assets/poweredby_mediawiki_88x31.png" srcset="/qb64wiki/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /qb64wiki/resources/assets/poweredby_mediawiki_176x62.png 2x" width="88"/>
+     </a>
+    </li>
+   </ul>
+  </footer>
+  <script>
+   (RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgPageParseReport":{"limitreport":{"cputime":"0.055","walltime":"0.075","ppvisitednodes":{"value":646,"limit":1000000},"postexpandincludesize":{"value":4687,"limit":2097152},"templateargumentsize":{"value":713,"limit":2097152},"expansiondepth":{"value":3,"limit":100},"expensivefunctioncount":{"value":0,"limit":100},"unstrip-depth":{"value":0,"limit":20},"unstrip-size":{"value":0,"limit":5000000},"timingprofile":["100.00%   48.029      1 -total"," 13.45%    6.460      1 Template:InlineCode","  8.42%    4.043      1 Template:PageSyntax","  7.54%    3.619     51 Template:Cl","  6.06%    2.912      2 Template:Parameter","  5.91%    2.837      5 Template:TextStart","  5.83%    2.799      1 Template:PageDescription","  4.82%    2.315      1 Template:InlineCodeEnd","  4.74%    2.276      2 Template:Cb","  4.59%    2.206      1 Template:Text"]},"cachereport":{"timestamp":"20240715221726","ttl":86400,"transientcontent":false}}});mw.config.set({"wgBackendResponseTime":177});});
+  </script>
+ </body>
+</html>
