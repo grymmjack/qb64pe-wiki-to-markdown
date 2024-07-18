@@ -2,7 +2,7 @@
 =====================================================
 mw-to-md.py - MediaWiki(mw) to Markdown(md) Converter
 -----------------------------------------------------
-This script fetches HTML content from the QB64PE wiki 
+This script fetches HTML content from the QB64PE wiki
 using a list of keywords (keywords.txt) and converts
 the content to Markdown format. The Markdown content is
 then saved to individual .md files in a specified directory.
@@ -130,7 +130,7 @@ def get_list_items(tag, keyword, linked=False, indent_level=0):
 
         # line = tag.get_text(strip=True, separator=' ')
         if linked:
-            ret = link_keywords('\t' * indent_level + '* ' + line + '\n', True)
+            ret = link_keywords('\t' * indent_level + '* ' + line + '\n', False)
         else:
             ret = '\t' * indent_level + '* ' + line + '\n'
     for child in tag.children:
@@ -321,6 +321,7 @@ def save_markdown(markdown, filename):
 
 def replace_backtick_with_grave(matchobj) -> str:
     if matchobj.group(0) == '`':
+        print('found')
         return '&grave;'
 
 
@@ -335,6 +336,12 @@ def backticks_to_graves(text:str) -> str:
         str: The text with backticks converted to html entity &grave;.
     """
     return re.sub(r'`', replace_backtick_with_grave, text)
+    # reg_flags = re.DEBUG | re.MULTILINE | re.IGNORECASE | re.DOTALL
+    # regex = re.compile('\u0060', reg_flags)
+    # result = regex.match('`')
+    # print(result)
+
+    # return re.sub(regex, '&grave;', text)
 
 
 def escape_dollar_signs(text: str) -> str:
@@ -366,17 +373,12 @@ def process_keyword(keyword, output_dir):
         os.makedirs(output_dir)
 
     # Correctly encode the keyword for URL use
-    encoded_keyword = urllib.parse.quote_plus(keyword)
+    encoded_keyword = escape_dollar_signs(keyword)
 
     # from wiki
-    url = f'https://qb64phoenix.com/qb64wiki/index.php/{encoded_keyword}'
-    print(f'\nProcessing: {url}...')
-    html_content = fetch_html(url)
-    if html_content:
-        with open(f'html_files/{keyword}.html', 'w') as f:
-            f.write(html_content)
-            f.close()
-            print(f'Requested and Saved HTML: html_files/{keyword}')
+    path = f'html_files/{encoded_keyword}.html'
+    html_content = fetch_html_offline(path)
+    print(f'\nProcessing: {path}...')
 
     if html_content:
         if '`' in html_content:

@@ -1,0 +1,13 @@
+[
+    {
+        "key": "CTRL+F5",
+        "command": "debug.startFromConfig",
+        "args": {
+            "type": "debygpy",
+            "request": "launch",
+            "name": "Python Debugger: Debug python file",
+            "program": "${file}",
+            "console": "integratedTerminal"
+        }
+    }
+]
