@@ -1,0 +1,773 @@
+<!DOCTYPE html>
+<html class="client-nojs" dir="ltr" lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <title>
+   LINE INPUT (file statement) - QB64 Phoenix Edition Wiki
+  </title>
+  <script>
+   document.documentElement.className="client-js";RLCONF={"wgBreakFrames":false,"wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgRequestId":"Zpp8UOZL16Jh9AOFAcaAZgAAANo","wgCSPNonce":false,"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"LINE_INPUT_(file_statement)","wgTitle":"LINE INPUT (file statement)","wgCurRevisionId":7900,"wgRevisionId":7900,"wgArticleId":548,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":[],"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgRelevantPageName":"LINE_INPUT_(file_statement)","wgRelevantArticleId":548,"wgIsProbablyEditable":false,"wgRelevantPageIsProbablyEditable":false,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgVector2022PreviewPages":[]};RLSTATE
+={"site.styles":"ready","user.styles":"ready","user":"ready","user.options":"loading","skins.vector.styles.legacy":"ready"};RLPAGEMODULES=["site","mediawiki.page.ready","mediawiki.toc","skins.vector.legacy.js"];
+  </script>
+  <script>
+   (RLQ=window.RLQ||[]).push(function(){mw.loader.implement("user.options@12s5i",function($,jQuery,require,module){mw.user.tokens.set({"patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});});});
+  </script>
+  <link href="/qb64wiki/load.php?lang=en&amp;modules=skins.vector.styles.legacy&amp;only=styles&amp;skin=vector" rel="stylesheet"/>
+  <script async="" src="/qb64wiki/load.php?lang=en&amp;modules=startup&amp;only=scripts&amp;raw=1&amp;skin=vector">
+  </script>
+  <meta content="" name="ResourceLoaderDynamicStyles"/>
+  <link href="/qb64wiki/load.php?lang=en&amp;modules=site.styles&amp;only=styles&amp;skin=vector" rel="stylesheet"/>
+  <meta content="MediaWiki 1.39.3" name="generator"/>
+  <meta content="telephone=no" name="format-detection"/>
+  <meta content="width=1000" name="viewport"/>
+  <link href="/favicon.ico" rel="icon"/>
+  <link href="/qb64wiki/opensearch_desc.php" rel="search" title="QB64 Phoenix Edition Wiki (en)" type="application/opensearchdescription+xml"/>
+  <link href="https://qb64phoenix.com/qb64wiki/api.php?action=rsd" rel="EditURI" type="application/rsd+xml"/>
+  <link href="/qb64wiki/index.php?title=Special:RecentChanges&amp;feed=atom" rel="alternate" title="QB64 Phoenix Edition Wiki Atom feed" type="application/atom+xml"/>
+ </head>
+ <body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject page-LINE_INPUT_file_statement rootpage-LINE_INPUT_file_statement skin-vector action-view skin-vector-legacy vector-feature-language-in-header-enabled vector-feature-language-in-main-page-header-disabled vector-feature-language-alert-in-sidebar-disabled vector-feature-sticky-header-disabled vector-feature-sticky-header-edit-disabled vector-feature-table-of-contents-disabled vector-feature-visual-enhancement-next-disabled">
+  <div class="noprint" id="mw-page-base">
+  </div>
+  <div class="noprint" id="mw-head-base">
+  </div>
+  <div class="mw-body" id="content" role="main">
+   <a id="top">
+   </a>
+   <div id="siteNotice">
+   </div>
+   <div class="mw-indicators">
+   </div>
+   <h1 class="firstHeading mw-first-heading" id="firstHeading">
+    <span class="mw-page-title-main">
+     LINE INPUT (file statement)
+    </span>
+   </h1>
+   <div class="vector-body" id="bodyContent">
+    <div class="noprint" id="siteSub">
+     From QB64 Phoenix Edition Wiki
+    </div>
+    <div id="contentSub">
+    </div>
+    <div id="contentSub2">
+    </div>
+    <div id="jump-to-nav">
+    </div>
+    <a class="mw-jump-link" href="#mw-head">
+     Jump to navigation
+    </a>
+    <a class="mw-jump-link" href="#searchInput">
+     Jump to search
+    </a>
+    <div class="mw-body-content mw-content-ltr" dir="ltr" id="mw-content-text" lang="en">
+     <div class="mw-parser-output">
+      <p>
+       The
+       <b>
+        LINE INPUT #
+       </b>
+       file statement reads an entire line from a text file into a string variable.
+      </p>
+      <p>
+       <br/>
+      </p>
+      <table align="right" style="max-width:25%;">
+       <tbody>
+        <tr>
+         <td>
+          <div aria-labelledby="mw-toc-heading" class="toc" id="toc" role="navigation">
+           <input class="toctogglecheckbox" id="toctogglecheckbox" role="button" style="display:none" type="checkbox"/>
+           <div class="toctitle" dir="ltr" lang="en">
+            <h2 id="mw-toc-heading">
+             Contents
+            </h2>
+            <span class="toctogglespan">
+             <label class="toctogglelabel" for="toctogglecheckbox">
+             </label>
+            </span>
+           </div>
+           <ul>
+            <li class="toclevel-1">
+             <a href="#Syntax">
+              <span class="tocnumber">
+               1
+              </span>
+              <span class="toctext">
+               Syntax
+              </span>
+             </a>
+            </li>
+            <li class="toclevel-1">
+             <a href="#Parameters">
+              <span class="tocnumber">
+               2
+              </span>
+              <span class="toctext">
+               Parameters
+              </span>
+             </a>
+            </li>
+            <li class="toclevel-1">
+             <a href="#Description">
+              <span class="tocnumber">
+               3
+              </span>
+              <span class="toctext">
+               Description
+              </span>
+             </a>
+             <ul>
+              <li class="toclevel-2 tocsection-1">
+               <a href="#Errors">
+                <span class="tocnumber">
+                 3.1
+                </span>
+                <span class="toctext">
+                 Errors
+                </span>
+               </a>
+              </li>
+             </ul>
+            </li>
+            <li class="toclevel-1">
+             <a href="#Examples">
+              <span class="tocnumber">
+               4
+              </span>
+              <span class="toctext">
+               Examples
+              </span>
+             </a>
+            </li>
+            <li class="toclevel-1">
+             <a href="#See_also">
+              <span class="tocnumber">
+               5
+              </span>
+              <span class="toctext">
+               See also
+              </span>
+             </a>
+            </li>
+           </ul>
+          </div>
+         </td>
+        </tr>
+       </tbody>
+      </table>
+      <h2>
+       <span class="mw-headline" id="Syntax">
+        Syntax
+       </span>
+      </h2>
+      <dl>
+       <dd>
+        <b>
+         LINE INPUT
+        </b>
+        <b>
+         #
+        </b>
+        <i>
+         fileNumber&amp;
+        </i>
+        <b>
+         ,
+        </b>
+        <i>
+         stringVariable$
+        </i>
+       </dd>
+      </dl>
+      <p>
+       <br/>
+      </p>
+      <h2>
+       <span class="mw-headline" id="Parameters">
+        Parameters
+       </span>
+      </h2>
+      <ul>
+       <li>
+        <i>
+         fileNumber&amp;
+        </i>
+        is the
+        <a href="/qb64wiki/index.php/INTEGER" title="INTEGER">
+         INTEGER
+        </a>
+        number of the file previously opened with the
+        <a href="/qb64wiki/index.php/OPEN" title="OPEN">
+         OPEN
+        </a>
+        statement.
+       </li>
+       <li>
+        <i>
+         stringVariable$
+        </i>
+        holds the text line read from the file.
+       </li>
+      </ul>
+      <p>
+       <br/>
+      </p>
+      <h2>
+       <span class="mw-headline" id="Description">
+        Description
+       </span>
+      </h2>
+      <ul>
+       <li>
+        Reads a file using the
+        <i>
+         fileNumber&amp;
+        </i>
+        <a href="/qb64wiki/index.php/OPEN" title="OPEN">
+         OPENed
+        </a>
+        in the
+        <a class="mw-redirect" href="/qb64wiki/index.php/INPUT_(file_mode)" title="INPUT (file mode)">
+         INPUT (file mode)
+        </a>
+        or
+        <a class="mw-redirect" href="/qb64wiki/index.php/BINARY" title="BINARY">
+         BINARY
+        </a>
+        file mode as one file line text string.
+       </li>
+       <li>
+        <b>
+         NOTE:
+        </b>
+        <a class="mw-selflink selflink">
+         LINE INPUT
+        </a>
+        will work faster in
+        <a class="mw-redirect" href="/qb64wiki/index.php/BINARY" title="BINARY">
+         BINARY
+        </a>
+        mode than in
+        <a class="mw-redirect" href="/qb64wiki/index.php/INPUT_(file_mode)" title="INPUT (file mode)">
+         INPUT
+        </a>
+        mode.
+        <ul>
+         <li>
+          Using
+          <b>
+           LINE INPUT #
+          </b>
+          in
+          <a class="mw-redirect" href="/qb64wiki/index.php/BINARY" title="BINARY">
+           BINARY
+          </a>
+          mode is possible in
+          <b>
+           version 1.000 and up
+          </b>
+         </li>
+        </ul>
+       </li>
+       <li>
+        Can be used with
+        <a href="/qb64wiki/index.php/EOF" title="EOF">
+         EOF
+        </a>
+        to count the number of lines of data (records) in a file using a loop.
+       </li>
+       <li>
+        Use the
+        <a href="/qb64wiki/index.php/EOF" title="EOF">
+         EOF
+        </a>
+        function to avoid going past the end of a file and creating an error.
+       </li>
+       <li>
+        <b>
+         LINE INPUT #
+        </b>
+        can even retain the original quotation marks in text.
+       </li>
+       <li>
+        <b>
+         Note: QB64
+        </b>
+        will not remove CHR$(0) from the end of
+        <b>
+         LINE INPUT #
+        </b>
+        string return values like QBasic did.
+       </li>
+      </ul>
+      <h3>
+       <span class="mw-headline" id="Errors">
+        Errors
+       </span>
+      </h3>
+      <ul>
+       <li>
+        <b>
+         If an "Input past End of file" error occurs, check for CHR$(26) (end of file character) in the files being read.
+        </b>
+       </li>
+       <li>
+        <b>
+         Warning: files must exist to be opened in
+        </b>
+        INPUT
+        <b>
+         mode. Use
+         <a href="/qb64wiki/index.php/FILEEXISTS" title="FILEEXISTS">
+          _FILEEXISTS
+         </a>
+         to avoid program
+         <a href="/qb64wiki/index.php/ERROR_Codes" title="ERROR Codes">
+          errors
+         </a>
+         .
+        </b>
+       </li>
+      </ul>
+      <p>
+       <br/>
+      </p>
+      <h2>
+       <span class="mw-headline" id="Examples">
+        Examples
+       </span>
+      </h2>
+      <p>
+       <i>
+        Example:
+       </i>
+       Finding the number of filenames listed in a file to dimension an array to hold them.
+      </p>
+      <table cellpadding="15px" width="100%">
+       <tbody>
+        <tr>
+         <td>
+          <pre class="codeide"><a href="/qb64wiki/index.php/REDIM" title="REDIM"><span style="color:#4593D8;">REDIM</span></a> FileArray$(100) 'create <a href="/qb64wiki/index.php/$DYNAMIC" title="$DYNAMIC"><span style="color:#4593D8;">dynamic</span></a> array
+<a href="/qb64wiki/index.php/SHELL" title="SHELL"><span style="color:#4593D8;">SHELL</span></a> <a href="/qb64wiki/index.php/HIDE" title="HIDE"><span style="color:#4593D8;">_HIDE</span></a> "DIR /B *.* &gt; D0S-DATA.INF"
+<a href="/qb64wiki/index.php/IF...THEN" title="IF...THEN"><span style="color:#4593D8;">IF</span></a> <a href="/qb64wiki/index.php/FILEEXISTS" title="FILEEXISTS"><span style="color:#4593D8;">_FILEEXISTS</span></a>("D0S-DATA.INF") THEN
+  <a href="/qb64wiki/index.php/OPEN" title="OPEN"><span style="color:#4593D8;">OPEN</span></a> "D0S-DATA.INF" FOR <a class="mw-redirect" href="/qb64wiki/index.php/INPUT_(file_mode)" title="INPUT (file mode)"><span style="color:#4593D8;">INPUT</span></a> AS #1
+  DO UNTIL <a href="/qb64wiki/index.php/EOF" title="EOF"><span style="color:#4593D8;">EOF</span></a>(1)
+    <a href="/qb64wiki/index.php/LINE_INPUT" title="LINE INPUT"><span style="color:#4593D8;">LINE INPUT</span></a> #1, file$        'read entire text file line
+    filecount% = filecount% + 1
+  LOOP
+  <a href="/qb64wiki/index.php/CLOSE" title="CLOSE"><span style="color:#4593D8;">CLOSE</span></a> #1
+<a class="mw-redirect" href="/qb64wiki/index.php/END_IF" title="END IF"><span style="color:#4593D8;">END IF</span></a>
+<a href="/qb64wiki/index.php/REDIM" title="REDIM"><span style="color:#4593D8;">REDIM</span></a> FileArray$(filecount%)
+<a href="/qb64wiki/index.php/PRINT" title="PRINT"><span style="color:#4593D8;">PRINT</span></a> filecount%
+</pre>
+         </td>
+        </tr>
+       </tbody>
+      </table>
+      <p>
+       <br/>
+      </p>
+      <h2>
+       <span class="mw-headline" id="See_also">
+        See also
+       </span>
+      </h2>
+      <ul>
+       <li>
+        <a href="/qb64wiki/index.php/OPEN" title="OPEN">
+         OPEN
+        </a>
+        ,
+        <a href="/qb64wiki/index.php/CLOSE" title="CLOSE">
+         CLOSE
+        </a>
+       </li>
+       <li>
+        <a class="mw-redirect" href="/qb64wiki/index.php/INPUT_(file_mode)" title="INPUT (file mode)">
+         INPUT (file mode)
+        </a>
+        ,
+        <a href="/qb64wiki/index.php/INPUT_(file_statement)" title="INPUT (file statement)">
+         INPUT #
+        </a>
+        ,
+        <a href="/qb64wiki/index.php/INPUT$" title="INPUT$">
+         INPUT$
+        </a>
+        <span style="color:#777777;">
+         (file input)
+        </span>
+       </li>
+       <li>
+        <a href="/qb64wiki/index.php/INPUT" title="INPUT">
+         INPUT
+        </a>
+        ,
+        <a href="/qb64wiki/index.php/LINE_INPUT" title="LINE INPUT">
+         LINE INPUT
+        </a>
+        ,
+        <a href="/qb64wiki/index.php/INPUT$" title="INPUT$">
+         INPUT$
+        </a>
+        <span style="color:#777777;">
+         (keyboard input)
+        </span>
+       </li>
+       <li>
+        <a href="/qb64wiki/index.php/FILEEXISTS" title="FILEEXISTS">
+         _FILEEXISTS
+        </a>
+        ,
+        <a href="/qb64wiki/index.php/DIREXISTS" title="DIREXISTS">
+         _DIREXISTS
+        </a>
+       </li>
+       <li>
+        <a href="/qb64wiki/index.php/FILELIST$" title="FILELIST$">
+         FILELIST$
+        </a>
+        (member-contributed function replacement for
+        <a href="/qb64wiki/index.php/FILES" title="FILES">
+         FILES
+        </a>
+        )
+       </li>
+      </ul>
+      <p>
+       <br/>
+      </p>
+      <hr/>
+      <center>
+       <b>
+        Navigation:
+       </b>
+      </center>
+      <center>
+       <a href="/qb64wiki/index.php/Main_Page" title="Main Page">
+        Main Page with Articles and Tutorials
+       </a>
+      </center>
+      <center>
+       <a href="/qb64wiki/index.php/Keyword_Reference_-_Alphabetical" title="Keyword Reference - Alphabetical">
+        Keyword Reference - Alphabetical
+       </a>
+      </center>
+      <center>
+       <a href="/qb64wiki/index.php/Keyword_Reference_-_By_usage" title="Keyword Reference - By usage">
+        Keyword Reference - By usage
+       </a>
+      </center>
+      <center>
+       <b>
+        <a class="external text" href="https://qb64phoenix.com/forum/showthread.php?tid=2800" rel="nofollow">
+         Report a broken link
+        </a>
+       </b>
+       <br/>
+      </center>
+      <!-- 
+NewPP limit report
+Cached time: 20240719143339
+Cache expiry: 86400
+Reduced expiry: false
+Complications: [show‐toc]
+CPU time usage: 0.026 seconds
+Real time usage: 0.034 seconds
+Preprocessor visited node count: 176/1000000
+Post‐expand include size: 1603/2097152 bytes
+Template argument size: 252/2097152 bytes
+Highest expansion depth: 3/100
+Expensive parser function count: 0/100
+Unstrip recursion depth: 0/20
+Unstrip post‐expand size: 0/5000000 bytes
+-->
+      <!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%   20.845      1 -total
+ 10.36%    2.159     14 Template:Cl
+ 10.14%    2.114      1 Template:PageSyntax
+  8.87%    1.849      4 Template:Parameter
+  8.12%    1.693      2 Template:Text
+  8.05%    1.679      1 Template:PageNavigation
+  7.98%    1.664      1 Template:PageParameters
+  7.94%    1.654      1 Template:PageSeeAlso
+  7.77%    1.620      1 Template:CodeEnd
+  7.69%    1.602      1 Template:PageDescription
+-->
+      <!-- Saved in parser cache with key qb64pnix_mw19894-mwmb_:pcache:idhash:548-0!canonical and timestamp 20240719143339 and revision id 7900.
+ -->
+     </div>
+     <div class="printfooter" data-nosnippet="">
+      Retrieved from "
+      <a dir="ltr" href="https://qb64phoenix.com/qb64wiki/index.php?title=LINE_INPUT_(file_statement)&amp;oldid=7900">
+       https://qb64phoenix.com/qb64wiki/index.php?title=LINE_INPUT_(file_statement)&amp;oldid=7900
+      </a>
+      "
+     </div>
+    </div>
+    <div class="catlinks catlinks-allhidden" data-mw="interface" id="catlinks">
+    </div>
+   </div>
+  </div>
+  <div id="mw-navigation">
+   <h2>
+    Navigation menu
+   </h2>
+   <div id="mw-head">
+    <nav aria-labelledby="p-personal-label" class="vector-menu mw-portlet mw-portlet-personal vector-user-menu-legacy" id="p-personal" role="navigation">
+     <h3 class="vector-menu-heading" id="p-personal-label">
+      <span class="vector-menu-heading-label">
+       Personal tools
+      </span>
+     </h3>
+     <div class="vector-menu-content">
+      <ul class="vector-menu-content-list">
+       <li class="mw-list-item" id="pt-login">
+        <a accesskey="o" href="/qb64wiki/index.php?title=Special:UserLogin&amp;returnto=LINE+INPUT+%28file+statement%29" title="You are encouraged to log in; however, it is not mandatory [o]">
+         <span>
+          Log in
+         </span>
+        </a>
+       </li>
+      </ul>
+     </div>
+    </nav>
+    <div id="left-navigation">
+     <nav aria-labelledby="p-namespaces-label" class="vector-menu mw-portlet mw-portlet-namespaces vector-menu-tabs vector-menu-tabs-legacy" id="p-namespaces" role="navigation">
+      <h3 class="vector-menu-heading" id="p-namespaces-label">
+       <span class="vector-menu-heading-label">
+        Namespaces
+       </span>
+      </h3>
+      <div class="vector-menu-content">
+       <ul class="vector-menu-content-list">
+        <li class="selected mw-list-item" id="ca-nstab-main">
+         <a accesskey="c" href="/qb64wiki/index.php/LINE_INPUT_(file_statement)" title="View the content page [c]">
+          <span>
+           Page
+          </span>
+         </a>
+        </li>
+        <li class="new mw-list-item" id="ca-talk">
+         <a accesskey="t" href="/qb64wiki/index.php?title=Talk:LINE_INPUT_(file_statement)&amp;action=edit&amp;redlink=1" rel="discussion" title="Discussion about the content page (page does not exist) [t]">
+          <span>
+           Discussion
+          </span>
+         </a>
+        </li>
+       </ul>
+      </div>
+     </nav>
+     <nav aria-labelledby="p-variants-label" class="vector-menu mw-portlet mw-portlet-variants emptyPortlet vector-menu-dropdown" id="p-variants" role="navigation">
+      <input aria-haspopup="true" aria-labelledby="p-variants-label" class="vector-menu-checkbox" data-event-name="ui.dropdown-p-variants" id="p-variants-checkbox" role="button" type="checkbox"/>
+      <label aria-label="Change language variant" class="vector-menu-heading" id="p-variants-label">
+       <span class="vector-menu-heading-label">
+        English
+       </span>
+      </label>
+      <div class="vector-menu-content">
+       <ul class="vector-menu-content-list">
+       </ul>
+      </div>
+     </nav>
+    </div>
+    <div id="right-navigation">
+     <nav aria-labelledby="p-views-label" class="vector-menu mw-portlet mw-portlet-views vector-menu-tabs vector-menu-tabs-legacy" id="p-views" role="navigation">
+      <h3 class="vector-menu-heading" id="p-views-label">
+       <span class="vector-menu-heading-label">
+        Views
+       </span>
+      </h3>
+      <div class="vector-menu-content">
+       <ul class="vector-menu-content-list">
+        <li class="selected mw-list-item" id="ca-view">
+         <a href="/qb64wiki/index.php/LINE_INPUT_(file_statement)">
+          <span>
+           Read
+          </span>
+         </a>
+        </li>
+        <li class="mw-list-item" id="ca-viewsource">
+         <a accesskey="e" href="/qb64wiki/index.php?title=LINE_INPUT_(file_statement)&amp;action=edit" title="This page is protected.
+You can view its source [e]">
+          <span>
+           View source
+          </span>
+         </a>
+        </li>
+        <li class="mw-list-item" id="ca-history">
+         <a accesskey="h" href="/qb64wiki/index.php?title=LINE_INPUT_(file_statement)&amp;action=history" title="Past revisions of this page [h]">
+          <span>
+           View history
+          </span>
+         </a>
+        </li>
+       </ul>
+      </div>
+     </nav>
+     <nav aria-labelledby="p-cactions-label" class="vector-menu mw-portlet mw-portlet-cactions emptyPortlet vector-menu-dropdown" id="p-cactions" role="navigation" title="More options">
+      <input aria-haspopup="true" aria-labelledby="p-cactions-label" class="vector-menu-checkbox" data-event-name="ui.dropdown-p-cactions" id="p-cactions-checkbox" role="button" type="checkbox"/>
+      <label class="vector-menu-heading" id="p-cactions-label">
+       <span class="vector-menu-heading-label">
+        More
+       </span>
+      </label>
+      <div class="vector-menu-content">
+       <ul class="vector-menu-content-list">
+       </ul>
+      </div>
+     </nav>
+     <div class="vector-search-box-vue vector-search-box-show-thumbnail vector-search-box-auto-expand-width vector-search-box" id="p-search" role="search">
+      <div>
+       <h3>
+        <label for="searchInput">
+         Search
+        </label>
+       </h3>
+       <form action="/qb64wiki/index.php" class="vector-search-box-form" id="searchform">
+        <div class="vector-search-box-inner" data-search-loc="header-navigation" id="simpleSearch">
+         <input accesskey="f" aria-label="Search QB64 Phoenix Edition Wiki" autocapitalize="sentences" class="vector-search-box-input" id="searchInput" name="search" placeholder="Search QB64 Phoenix Edition Wiki" title="Search QB64 Phoenix Edition Wiki [f]" type="search"/>
+         <input name="title" type="hidden" value="Special:Search"/>
+         <input class="searchButton mw-fallbackSearchButton" id="mw-searchButton" name="fulltext" title="Search the pages for this text" type="submit" value="Search"/>
+         <input class="searchButton" id="searchButton" name="go" title="Go to a page with this exact name if it exists" type="submit" value="Go"/>
+        </div>
+       </form>
+      </div>
+     </div>
+    </div>
+   </div>
+   <div id="mw-panel">
+    <div id="p-logo" role="banner">
+     <a class="mw-wiki-logo" href="/qb64wiki/index.php/Main_Page" title="Visit the main page">
+     </a>
+    </div>
+    <nav aria-labelledby="p-navigation-label" class="vector-menu mw-portlet mw-portlet-navigation vector-menu-portal portal" id="p-navigation" role="navigation">
+     <h3 class="vector-menu-heading" id="p-navigation-label">
+      <span class="vector-menu-heading-label">
+       Navigation
+      </span>
+     </h3>
+     <div class="vector-menu-content">
+      <ul class="vector-menu-content-list">
+       <li class="mw-list-item" id="n-mainpage-description">
+        <a accesskey="z" href="/qb64wiki/index.php/Main_Page" title="Visit the main page [z]">
+         <span>
+          Main page
+         </span>
+        </a>
+       </li>
+       <li class="mw-list-item" id="n-recentchanges">
+        <a accesskey="r" href="/qb64wiki/index.php/Special:RecentChanges" title="A list of recent changes in the wiki [r]">
+         <span>
+          Recent changes
+         </span>
+        </a>
+       </li>
+       <li class="mw-list-item" id="n-randompage">
+        <a accesskey="x" href="/qb64wiki/index.php/Special:Random" title="Load a random page [x]">
+         <span>
+          Random page
+         </span>
+        </a>
+       </li>
+       <li class="mw-list-item" id="n-help-mediawiki">
+        <a href="https://www.mediawiki.org/wiki/Special:MyLanguage/Help:Contents">
+         <span>
+          Help about MediaWiki
+         </span>
+        </a>
+       </li>
+      </ul>
+     </div>
+    </nav>
+    <nav aria-labelledby="p-tb-label" class="vector-menu mw-portlet mw-portlet-tb vector-menu-portal portal" id="p-tb" role="navigation">
+     <h3 class="vector-menu-heading" id="p-tb-label">
+      <span class="vector-menu-heading-label">
+       Tools
+      </span>
+     </h3>
+     <div class="vector-menu-content">
+      <ul class="vector-menu-content-list">
+       <li class="mw-list-item" id="t-whatlinkshere">
+        <a accesskey="j" href="/qb64wiki/index.php/Special:WhatLinksHere/LINE_INPUT_(file_statement)" title="A list of all wiki pages that link here [j]">
+         <span>
+          What links here
+         </span>
+        </a>
+       </li>
+       <li class="mw-list-item" id="t-recentchangeslinked">
+        <a accesskey="k" href="/qb64wiki/index.php/Special:RecentChangesLinked/LINE_INPUT_(file_statement)" rel="nofollow" title="Recent changes in pages linked from this page [k]">
+         <span>
+          Related changes
+         </span>
+        </a>
+       </li>
+       <li class="mw-list-item" id="t-specialpages">
+        <a accesskey="q" href="/qb64wiki/index.php/Special:SpecialPages" title="A list of all special pages [q]">
+         <span>
+          Special pages
+         </span>
+        </a>
+       </li>
+       <li class="mw-list-item" id="t-print">
+        <a accesskey="p" href="javascript:print();" rel="alternate" title="Printable version of this page [p]">
+         <span>
+          Printable version
+         </span>
+        </a>
+       </li>
+       <li class="mw-list-item" id="t-permalink">
+        <a href="/qb64wiki/index.php?title=LINE_INPUT_(file_statement)&amp;oldid=7900" title="Permanent link to this revision of this page">
+         <span>
+          Permanent link
+         </span>
+        </a>
+       </li>
+       <li class="mw-list-item" id="t-info">
+        <a href="/qb64wiki/index.php?title=LINE_INPUT_(file_statement)&amp;action=info" title="More information about this page">
+         <span>
+          Page information
+         </span>
+        </a>
+       </li>
+      </ul>
+     </div>
+    </nav>
+   </div>
+  </div>
+  <footer class="mw-footer" id="footer" role="contentinfo">
+   <ul id="footer-info">
+    <li id="footer-info-lastmod">
+     This page was last edited on 11 February 2023, at 22:35.
+    </li>
+   </ul>
+   <ul id="footer-places">
+    <li id="footer-places-privacy">
+     <a href="/qb64wiki/index.php/QB64_Phoenix_Edition_Wiki:Privacy_policy">
+      Privacy policy
+     </a>
+    </li>
+    <li id="footer-places-about">
+     <a href="/qb64wiki/index.php/QB64_Phoenix_Edition_Wiki:About">
+      About QB64 Phoenix Edition Wiki
+     </a>
+    </li>
+    <li id="footer-places-disclaimer">
+     <a href="/qb64wiki/index.php/QB64_Phoenix_Edition_Wiki:General_disclaimer">
+      Disclaimers
+     </a>
+    </li>
+   </ul>
+   <ul class="noprint" id="footer-icons">
+    <li id="footer-poweredbyico">
+     <a href="https://www.mediawiki.org/">
+      <img alt="Powered by MediaWiki" height="31" loading="lazy" src="/qb64wiki/resources/assets/poweredby_mediawiki_88x31.png" srcset="/qb64wiki/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /qb64wiki/resources/assets/poweredby_mediawiki_176x62.png 2x" width="88"/>
+     </a>
+    </li>
+   </ul>
+  </footer>
+  <script>
+   (RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgPageParseReport":{"limitreport":{"cputime":"0.026","walltime":"0.034","ppvisitednodes":{"value":176,"limit":1000000},"postexpandincludesize":{"value":1603,"limit":2097152},"templateargumentsize":{"value":252,"limit":2097152},"expansiondepth":{"value":3,"limit":100},"expensivefunctioncount":{"value":0,"limit":100},"unstrip-depth":{"value":0,"limit":20},"unstrip-size":{"value":0,"limit":5000000},"timingprofile":["100.00%   20.845      1 -total"," 10.36%    2.159     14 Template:Cl"," 10.14%    2.114      1 Template:PageSyntax","  8.87%    1.849      4 Template:Parameter","  8.12%    1.693      2 Template:Text","  8.05%    1.679      1 Template:PageNavigation","  7.98%    1.664      1 Template:PageParameters","  7.94%    1.654      1 Template:PageSeeAlso","  7.77%    1.620      1 Template:CodeEnd","  7.69%    1.602      1 Template:PageDescription"]},"cachereport":{"timestamp":"20240719143339","ttl":86400,"transientcontent":false}}});mw.config.set({"wgBackendResponseTime":89});});
+  </script>
+ </body>
+</html>

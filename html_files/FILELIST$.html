@@ -1,0 +1,734 @@
+<!DOCTYPE html>
+<html class="client-nojs" dir="ltr" lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <title>
+   FILELIST$ - QB64 Phoenix Edition Wiki
+  </title>
+  <script>
+   document.documentElement.className="client-js";RLCONF={"wgBreakFrames":false,"wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgRequestId":"Zpp7Op35EcyPqcm4ZfYtCgAAAHs","wgCSPNonce":false,"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"FILELIST$","wgTitle":"FILELIST$","wgCurRevisionId":8847,"wgRevisionId":8847,"wgArticleId":649,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":[],"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgRelevantPageName":"FILELIST$","wgRelevantArticleId":649,"wgIsProbablyEditable":false,"wgRelevantPageIsProbablyEditable":false,"wgRestrictionEdit":["sysop"],"wgRestrictionMove":["sysop"],"wgVector2022PreviewPages":[]};RLSTATE={"site.styles":"ready","user.styles":
+"ready","user":"ready","user.options":"loading","skins.vector.styles.legacy":"ready"};RLPAGEMODULES=["site","mediawiki.page.ready","skins.vector.legacy.js"];
+  </script>
+  <script>
+   (RLQ=window.RLQ||[]).push(function(){mw.loader.implement("user.options@12s5i",function($,jQuery,require,module){mw.user.tokens.set({"patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});});});
+  </script>
+  <link href="/qb64wiki/load.php?lang=en&amp;modules=skins.vector.styles.legacy&amp;only=styles&amp;skin=vector" rel="stylesheet"/>
+  <script async="" src="/qb64wiki/load.php?lang=en&amp;modules=startup&amp;only=scripts&amp;raw=1&amp;skin=vector">
+  </script>
+  <meta content="" name="ResourceLoaderDynamicStyles"/>
+  <link href="/qb64wiki/load.php?lang=en&amp;modules=site.styles&amp;only=styles&amp;skin=vector" rel="stylesheet"/>
+  <meta content="MediaWiki 1.39.3" name="generator"/>
+  <meta content="telephone=no" name="format-detection"/>
+  <meta content="width=1000" name="viewport"/>
+  <link href="/favicon.ico" rel="icon"/>
+  <link href="/qb64wiki/opensearch_desc.php" rel="search" title="QB64 Phoenix Edition Wiki (en)" type="application/opensearchdescription+xml"/>
+  <link href="https://qb64phoenix.com/qb64wiki/api.php?action=rsd" rel="EditURI" type="application/rsd+xml"/>
+  <link href="/qb64wiki/index.php?title=Special:RecentChanges&amp;feed=atom" rel="alternate" title="QB64 Phoenix Edition Wiki Atom feed" type="application/atom+xml"/>
+ </head>
+ <body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject page-FILELIST rootpage-FILELIST skin-vector action-view skin-vector-legacy vector-feature-language-in-header-enabled vector-feature-language-in-main-page-header-disabled vector-feature-language-alert-in-sidebar-disabled vector-feature-sticky-header-disabled vector-feature-sticky-header-edit-disabled vector-feature-table-of-contents-disabled vector-feature-visual-enhancement-next-disabled">
+  <div class="noprint" id="mw-page-base">
+  </div>
+  <div class="noprint" id="mw-head-base">
+  </div>
+  <div class="mw-body" id="content" role="main">
+   <a id="top">
+   </a>
+   <div id="siteNotice">
+   </div>
+   <div class="mw-indicators">
+   </div>
+   <h1 class="firstHeading mw-first-heading" id="firstHeading">
+    <span class="mw-page-title-main">
+     FILELIST$
+    </span>
+   </h1>
+   <div class="vector-body" id="bodyContent">
+    <div class="noprint" id="siteSub">
+     From QB64 Phoenix Edition Wiki
+    </div>
+    <div id="contentSub">
+    </div>
+    <div id="contentSub2">
+    </div>
+    <div id="jump-to-nav">
+    </div>
+    <a class="mw-jump-link" href="#mw-head">
+     Jump to navigation
+    </a>
+    <a class="mw-jump-link" href="#searchInput">
+     Jump to search
+    </a>
+    <div class="mw-body-content mw-content-ltr" dir="ltr" id="mw-content-text" lang="en">
+     <div class="mw-parser-output">
+      <hr/>
+      <hr/>
+      <center>
+       <b>
+        <span style="color:red;">
+         Attention!! - This page is outdated and provided for reference and/or education only.
+        </span>
+       </b>
+      </center>
+      <center>
+       (
+       <a href="/qb64wiki/index.php/Historic_Pages" title="Historic Pages">
+        Return to historic Table of Contents
+       </a>
+       )
+      </center>
+      <hr/>
+      <center>
+       Starting with
+       <b>
+        QB64-PE v3.4.0
+       </b>
+       the functionality described here was superseded by
+       <a href="/qb64wiki/index.php/OPENFILEDIALOG$" title="OPENFILEDIALOG$">
+        _OPENFILEDIALOG$
+       </a>
+       .
+      </center>
+      <center>
+       Additionally since
+       <b>
+        QB64-PE v3.11.0
+       </b>
+       <a href="/qb64wiki/index.php/FILES$" title="FILES$">
+        _FILES$
+       </a>
+       can be used to read file names programmatically.
+      </center>
+      <hr/>
+      <hr/>
+      <p>
+       <br/>
+      </p>
+      <center>
+       <b>
+        FILELIST$ Function Automatic Setup Version
+       </b>
+      </center>
+      <p>
+       <br/>
+       This version of the FILELIST$ string Function can be set up as a separate Window or be positioned anywhere on program screens larger than 640 X 480. Two position parameters are added to place the top left corner position on a QB64 custom
+       <a href="/qb64wiki/index.php/NEWIMAGE" title="NEWIMAGE">
+        _NEWIMAGE
+       </a>
+       screen. It can be used with ANY screen mode either as a separate window or combined with your program screen! Simply set the parameters to zero if you want to use it as a Window. It will completely restore your program after a file list is displayed. Like
+       <a href="/qb64wiki/index.php/FILELIST$_(function)" title="FILELIST$ (function)">
+        the original version
+       </a>
+       , this setup can also be INCLUDEd as a library and supports all of the original file specifications listed on the
+       <a href="/qb64wiki/index.php/FILELIST$_(function)" title="FILELIST$ (function)">
+        FILELIST$ (function)
+       </a>
+       page.
+      </p>
+      <p>
+       <br/>
+      </p>
+      <center>
+       <b>
+        <a class="external text" href="http://i301.photobucket.com/albums/nn53/burger2227/FILE-ss2.jpg" rel="nofollow">
+         Function Window Screenshot
+        </a>
+       </b>
+      </center>
+      <p>
+       <br/>
+      </p>
+      <table cellpadding="15px" width="100%">
+       <tbody>
+        <tr>
+         <td>
+          <pre class="codeide"><a href="/qb64wiki/index.php/TITLE" title="TITLE"><span style="color:#4593D8;">_TITLE</span></a> "Demo of FILELIST$ Function by Ted Weissgerber 2010"
+dst&amp; = <a href="/qb64wiki/index.php/NEWIMAGE" title="NEWIMAGE"><span style="color:#4593D8;">_NEWIMAGE</span></a>(800, 600, 32) 'for console bitmap
+<a href="/qb64wiki/index.php/SCREEN" title="SCREEN"><span style="color:#4593D8;">SCREEN</span></a> dst&amp;
+
+<a href="/qb64wiki/index.php/PAINT" title="PAINT"><span style="color:#4593D8;">PAINT</span></a> (799, 599), <a href="/qb64wiki/index.php/RGB" title="RGB"><span style="color:#4593D8;">_RGB</span></a>(180, 180, 180)
+<a href="/qb64wiki/index.php/LINE" title="LINE"><span style="color:#4593D8;">LINE</span></a> (7, 15)-(648, 496), <a href="/qb64wiki/index.php/RGB" title="RGB"><span style="color:#4593D8;">_RGB</span></a>(0, 0, 80), BF
+
+<a href="/qb64wiki/index.php/LOCATE" title="LOCATE"><span style="color:#4593D8;">LOCATE</span></a> 33, 10: <a href="/qb64wiki/index.php/PRINT" title="PRINT"><span style="color:#4593D8;">PRINT</span></a> "Do you want file display in a new window? (Y/N)"
+DO: <a href="/qb64wiki/index.php/SLEEP" title="SLEEP"><span style="color:#4593D8;">SLEEP</span></a>: yesno$ = <a href="/qb64wiki/index.php/UCASE$" title="UCASE$"><span style="color:#4593D8;">UCASE$</span></a>(<a href="/qb64wiki/index.php/INKEY$" title="INKEY$"><span style="color:#4593D8;">INKEY$</span></a>): <a href="/qb64wiki/index.php/LOOP" title="LOOP"><span style="color:#4593D8;">LOOP</span></a> <a href="/qb64wiki/index.php/UNTIL" title="UNTIL"><span style="color:#4593D8;">UNTIL</span></a> yesno$ &lt;&gt; ""
+<a href="/qb64wiki/index.php/IF...THEN" title="IF...THEN"><span style="color:#4593D8;">IF</span></a> yesno$ = "Y" <a href="/qb64wiki/index.php/THEN" title="THEN"><span style="color:#4593D8;">THEN</span></a> x% = 0: y% = 0 <a href="/qb64wiki/index.php/ELSE" title="ELSE"><span style="color:#4593D8;">ELSE</span></a> x% = 8: y% = 16 'set parameters
+
+<a href="/qb64wiki/index.php/LOCATE" title="LOCATE"><span style="color:#4593D8;">LOCATE</span></a> 33, 10: <a href="/qb64wiki/index.php/INPUT" title="INPUT"><span style="color:#4593D8;">INPUT</span></a> "Enter a File Type extension(*.BMP, *.TXT, etc): ", spec$
+spec$ = <a href="/qb64wiki/index.php/UCASE$" title="UCASE$"><span style="color:#4593D8;">UCASE$</span></a>(spec$)
+<a href="/qb64wiki/index.php/IF...THEN" title="IF...THEN"><span style="color:#4593D8;">IF</span></a> <a href="/qb64wiki/index.php/LEN" title="LEN"><span style="color:#4593D8;">LEN</span></a>(spec$) = 0 <a href="/qb64wiki/index.php/THEN" title="THEN"><span style="color:#4593D8;">THEN</span></a> spec$ = "*.BMP"
+'<a href="/qb64wiki/index.php/IF...THEN" title="IF...THEN"><span style="color:#4593D8;">IF</span></a> <a href="/qb64wiki/index.php/INSTR" title="INSTR"><span style="color:#4593D8;">INSTR</span></a>(spec$, "*.") = 0 <a href="/qb64wiki/index.php/THEN" title="THEN"><span style="color:#4593D8;">THEN</span></a> spec$ = "*." + spec$
+
+'&lt;&lt;&lt;&lt;&lt;&lt;&lt; If x% and y% parameters are 0, the display is in separate window.&gt;&gt;&gt;&gt;&gt;&gt;
+filename$ = FILELIST$(spec$, x%, y%) '&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt; added display position parameters
+
+
+<a href="/qb64wiki/index.php/LOCATE" title="LOCATE"><span style="color:#4593D8;">LOCATE</span></a> 35, 10: <a href="/qb64wiki/index.php/PRINT" title="PRINT"><span style="color:#4593D8;">PRINT</span></a> filename$, LFN$
+<a href="/qb64wiki/index.php/SLEEP" title="SLEEP"><span style="color:#4593D8;">SLEEP</span></a>
+'------------------------------------- <a href="/qb64wiki/index.php/END" title="END"><span style="color:#4593D8;">END</span></a> DEMO CODE -------------------------------
+</pre>
+         </td>
+        </tr>
+       </tbody>
+      </table>
+      <table cellpadding="5px" width="100%">
+       <tbody>
+        <tr>
+         <td>
+          <pre class="outputtext"><a href="/qb64wiki/index.php/FUNCTION" title="FUNCTION"><span style="color:blue;">FUNCTION</span></a> FILELIST$ (Spec$, xpos%, ypos%)
+<a href="/qb64wiki/index.php/SHARED" title="SHARED"><span style="color:blue;">SHARED</span></a> Path$, LFN$ 'values also accessable by program
+<a href="/qb64wiki/index.php/REDIM" title="REDIM"><span style="color:blue;">REDIM</span></a> LGFN$(25), SHFN$(25), Last$(25), DIR$(25), Paths$(25) '&lt;&lt;&lt;&lt; <a href="/qb64wiki/index.php/$DYNAMIC" title="$DYNAMIC"><span style="color:blue;">$DYNAMIC</span></a> only
+<a href="/qb64wiki/index.php/IF...THEN" title="IF...THEN"><span style="color:blue;">IF</span></a> <a href="/qb64wiki/index.php/LEN" title="LEN"><span style="color:blue;">LEN</span></a>(<a href="/qb64wiki/index.php/ENVIRON$" title="ENVIRON$"><span style="color:blue;">ENVIRON$</span></a>("OS")) = 0 <a href="/qb64wiki/index.php/THEN" title="THEN"><span style="color:blue;">THEN</span></a> <a href="/qb64wiki/index.php/EXIT_FUNCTION" title="EXIT FUNCTION"><span style="color:blue;">EXIT FUNCTION</span></a> 'DIR X cannot be used on Win 9X
+f% = <a href="/qb64wiki/index.php/FREEFILE" title="FREEFILE"><span style="color:blue;">FREEFILE</span></a>
+<a href="/qb64wiki/index.php/IF...THEN" title="IF...THEN"><span style="color:blue;">IF</span></a> xpos% + ypos% = 0 <a href="/qb64wiki/index.php/THEN" title="THEN"><span style="color:blue;">THEN</span></a> '****************** Root path TITLE in separate window only
+  <a href="/qb64wiki/index.php/SHELL" title="SHELL"><span style="color:blue;">SHELL</span></a> <a href="/qb64wiki/index.php/HIDE" title="HIDE"><span style="color:blue;">_HIDE</span></a> "CD &gt; D0S-DATA.INF"
+  <a href="/qb64wiki/index.php/OPEN" title="OPEN"><span style="color:blue;">OPEN</span></a> "D0S-DATA.INF" <a class="mw-redirect" href="/qb64wiki/index.php/FOR_(file_statement)" title="FOR (file statement)"><span style="color:blue;">FOR</span></a> <a class="mw-redirect" href="/qb64wiki/index.php/INPUT_(file_mode)" title="INPUT (file mode)"><span style="color:blue;">INPUT</span></a> <a href="/qb64wiki/index.php/AS" title="AS"><span style="color:blue;">AS</span></a> #f%
+  <a href="/qb64wiki/index.php/LINE_INPUT_(file_statement)" title="LINE INPUT (file statement)"><span style="color:blue;">LINE INPUT</span></a> #f%, current$
+  <a href="/qb64wiki/index.php/CLOSE" title="CLOSE"><span style="color:blue;">CLOSE</span></a> #f%
+<a class="mw-redirect" href="/qb64wiki/index.php/END_IF" title="END IF"><span style="color:blue;">END IF</span></a> ' ******************************************** <a href="/qb64wiki/index.php/END" title="END"><span style="color:blue;">END</span></a> TITLE(see <a href="/qb64wiki/index.php/TITLE" title="TITLE"><span style="color:blue;">_TITLE</span></a> below)
+Spec$ = <a href="/qb64wiki/index.php/UCASE$" title="UCASE$"><span style="color:blue;">UCASE$</span></a>(<a href="/qb64wiki/index.php/LTRIM$" title="LTRIM$"><span style="color:blue;">LTRIM$</span></a>(<a href="/qb64wiki/index.php/RTRIM$" title="RTRIM$"><span style="color:blue;">RTRIM$</span></a>(Spec$)))
+<a href="/qb64wiki/index.php/IF...THEN" title="IF...THEN"><span style="color:blue;">IF</span></a> <a href="/qb64wiki/index.php/INSTR" title="INSTR"><span style="color:blue;">INSTR</span></a>(Spec$, "/A:D") <a href="/qb64wiki/index.php/OR_(boolean)" title="OR (boolean)"><span style="color:blue;">OR</span></a> <a href="/qb64wiki/index.php/INSTR" title="INSTR"><span style="color:blue;">INSTR</span></a>(Spec$, "/O:G") <a href="/qb64wiki/index.php/THEN" title="THEN"><span style="color:blue;">THEN</span></a>
+  DL$ = "DIR": BS$ = "\" 'directory searches only
+<a href="/qb64wiki/index.php/ELSE" title="ELSE"><span style="color:blue;">ELSE</span></a>: DL$ = <a href="/qb64wiki/index.php/SPACE$" title="SPACE$"><span style="color:blue;">SPACE$</span></a>(3): BS$ = ""
+<a class="mw-redirect" href="/qb64wiki/index.php/END_IF" title="END IF"><span style="color:blue;">END IF</span></a>
+mode&amp; = <a href="/qb64wiki/index.php/COPYIMAGE" title="COPYIMAGE"><span style="color:blue;">_COPYIMAGE</span></a>(0) 'save previous screen value to restore if files displayed.
+' Get Specific file information if available
+<a href="/qb64wiki/index.php/SHELL" title="SHELL"><span style="color:blue;">SHELL</span></a> <a href="/qb64wiki/index.php/HIDE" title="HIDE"><span style="color:blue;">_HIDE</span></a> "cmd /c dir " + Spec$ + " /X &gt; D0S-DATA.INF" 'get data
+Head$ = "      Short Name          Long Name                     Last Modified     "
+tmp$ = " \ \  \          \   \                              \ \                  \"
+<a href="/qb64wiki/index.php/OPEN" title="OPEN"><span style="color:blue;">OPEN</span></a> "D0S-DATA.INF" <a class="mw-redirect" href="/qb64wiki/index.php/FOR_(file_statement)" title="FOR (file statement)"><span style="color:blue;">FOR</span></a> <a class="mw-redirect" href="/qb64wiki/index.php/INPUT_(file_mode)" title="INPUT (file mode)"><span style="color:blue;">INPUT</span></a> <a href="/qb64wiki/index.php/AS" title="AS"><span style="color:blue;">AS</span></a> #f% 'read the data file
+<a href="/qb64wiki/index.php/DO...LOOP" title="DO...LOOP"><span style="color:blue;">DO</span></a> <a href="/qb64wiki/index.php/UNTIL" title="UNTIL"><span style="color:blue;">UNTIL</span></a> <a href="/qb64wiki/index.php/EOF" title="EOF"><span style="color:blue;">EOF</span></a>(f%)
+  <a href="/qb64wiki/index.php/LINE_INPUT_(file_statement)" title="LINE INPUT (file statement)"><span style="color:blue;">LINE INPUT</span></a> #f%, line$
+  <a href="/qb64wiki/index.php/IF...THEN" title="IF...THEN"><span style="color:blue;">IF</span></a> <a href="/qb64wiki/index.php/INSTR" title="INSTR"><span style="color:blue;">INSTR</span></a>(line$, ":\") <a href="/qb64wiki/index.php/THEN" title="THEN"><span style="color:blue;">THEN</span></a>
+    Path$ = <a href="/qb64wiki/index.php/MID$_(function)" title="MID$ (function)"><span style="color:blue;">MID$</span></a>(line$, <a href="/qb64wiki/index.php/INSTR" title="INSTR"><span style="color:blue;">INSTR</span></a>(line$, ":\") - 1)
+    <a href="/qb64wiki/index.php/IF...THEN" title="IF...THEN"><span style="color:blue;">IF</span></a> <a href="/qb64wiki/index.php/RIGHT$" title="RIGHT$"><span style="color:blue;">RIGHT$</span></a>(Path$, 1) &lt;&gt; "\" <a href="/qb64wiki/index.php/THEN" title="THEN"><span style="color:blue;">THEN</span></a> Path$ = Path$ + "\"
+    setcode% = 0: filecode% = 0
+  <a class="mw-redirect" href="/qb64wiki/index.php/END_IF" title="END IF"><span style="color:blue;">END IF</span></a>
+  <a href="/qb64wiki/index.php/IF...THEN" title="IF...THEN"><span style="color:blue;">IF</span></a> <a href="/qb64wiki/index.php/LEN" title="LEN"><span style="color:blue;">LEN</span></a>(line$) &gt; 25 <a href="/qb64wiki/index.php/AND_(boolean)" title="AND (boolean)"><span style="color:blue;">AND</span></a> <a href="/qb64wiki/index.php/MID$_(function)" title="MID$ (function)"><span style="color:blue;">MID$</span></a>(line$, 1, 1) &lt;&gt; " " <a href="/qb64wiki/index.php/THEN" title="THEN"><span style="color:blue;">THEN</span></a> 'don't read other info
+    <a href="/qb64wiki/index.php/IF...THEN" title="IF...THEN"><span style="color:blue;">IF</span></a> format% = 0 <a href="/qb64wiki/index.php/THEN" title="THEN"><span style="color:blue;">THEN</span></a>
+      <a href="/qb64wiki/index.php/IF...THEN" title="IF...THEN"><span style="color:blue;">IF</span></a> <a href="/qb64wiki/index.php/MID$_(function)" title="MID$ (function)"><span style="color:blue;">MID$</span></a>(line$, 20, 1) = "M" <a href="/qb64wiki/index.php/OR_(boolean)" title="OR (boolean)"><span style="color:blue;">OR</span></a> <a href="/qb64wiki/index.php/INSTR" title="INSTR"><span style="color:blue;">INSTR</span></a>(line$, "&lt;") = 25 <a href="/qb64wiki/index.php/THEN" title="THEN"><span style="color:blue;">THEN</span></a>
+        Sst% = 40: Lst% = 53: Dst% = 26: format% = 1 ' XP
+      <a href="/qb64wiki/index.php/ELSE" title="ELSE"><span style="color:blue;">ELSE</span></a>: Sst% = 37: Lst% = 50: Dst% = 23: format% = 2 'VISTA
+      <a class="mw-redirect" href="/qb64wiki/index.php/END_IF" title="END IF"><span style="color:blue;">END IF</span></a>
+    <a class="mw-redirect" href="/qb64wiki/index.php/END_IF" title="END IF"><span style="color:blue;">END IF</span></a>
+    <a href="/qb64wiki/index.php/IF...THEN" title="IF...THEN"><span style="color:blue;">IF</span></a> <a href="/qb64wiki/index.php/LEN" title="LEN"><span style="color:blue;">LEN</span></a>(line$) &gt;= Lst% <a href="/qb64wiki/index.php/THEN" title="THEN"><span style="color:blue;">THEN</span></a> filecode% = <a href="/qb64wiki/index.php/ASC_(function)" title="ASC (function)"><span style="color:blue;">ASC</span></a>(<a href="/qb64wiki/index.php/UCASE$" title="UCASE$"><span style="color:blue;">UCASE$</span></a>(<a href="/qb64wiki/index.php/MID$_(function)" title="MID$ (function)"><span style="color:blue;">MID$</span></a>(line$, Lst%, 1))) <a href="/qb64wiki/index.php/ELSE" title="ELSE"><span style="color:blue;">ELSE</span></a> filecode% = 0
+    D1R$ = <a href="/qb64wiki/index.php/MID$_(function)" title="MID$ (function)"><span style="color:blue;">MID$</span></a>(line$, Dst%, 3) 'returns directories only with Spec$ = "/A:D" or "/O:G"
+    <a href="/qb64wiki/index.php/IF...THEN" title="IF...THEN"><span style="color:blue;">IF</span></a> D1R$ &lt;&gt; "DIR" <a href="/qb64wiki/index.php/THEN" title="THEN"><span style="color:blue;">THEN</span></a> D1R$ = <a href="/qb64wiki/index.php/SPACE$" title="SPACE$"><span style="color:blue;">SPACE$</span></a>(3) 'change if anything else
+    <a href="/qb64wiki/index.php/IF...THEN" title="IF...THEN"><span style="color:blue;">IF</span></a> D1R$ = DL$ <a href="/qb64wiki/index.php/AND_(boolean)" title="AND (boolean)"><span style="color:blue;">AND</span></a> filecode% &gt;= setcode% <a href="/qb64wiki/index.php/THEN" title="THEN"><span style="color:blue;">THEN</span></a>
+      cnt% = cnt% + 1
+      DIR$(cnt%) = D1R$: Paths$(cnt%) = Path$
+      Last$(cnt%) = <a href="/qb64wiki/index.php/MID$_(function)" title="MID$ (function)"><span style="color:blue;">MID$</span></a>(line$, 1, 20)
+      <a href="/qb64wiki/index.php/IF...THEN" title="IF...THEN"><span style="color:blue;">IF</span></a> <a href="/qb64wiki/index.php/MID$_(function)" title="MID$ (function)"><span style="color:blue;">MID$</span></a>(line$, Sst%, 1) &lt;&gt; <a href="/qb64wiki/index.php/SPACE$" title="SPACE$"><span style="color:blue;">SPACE$</span></a>(1) <a href="/qb64wiki/index.php/THEN" title="THEN"><span style="color:blue;">THEN</span></a>
+        SHFN$(cnt%) = <a href="/qb64wiki/index.php/MID$_(function)" title="MID$ (function)"><span style="color:blue;">MID$</span></a>(line$, Sst%, <a href="/qb64wiki/index.php/INSTR" title="INSTR"><span style="color:blue;">INSTR</span></a>(Sst%, line$, " ") - Sst%)
+        LGFN$(cnt%) = <a href="/qb64wiki/index.php/MID$_(function)" title="MID$ (function)"><span style="color:blue;">MID$</span></a>(line$, Lst%)
+      <a href="/qb64wiki/index.php/ELSE" title="ELSE"><span style="color:blue;">ELSE</span></a>: SHFN$(cnt%) = <a href="/qb64wiki/index.php/MID$_(function)" title="MID$ (function)"><span style="color:blue;">MID$</span></a>(line$, Lst%): LGFN$(cnt%) = ""
+      <a class="mw-redirect" href="/qb64wiki/index.php/END_IF" title="END IF"><span style="color:blue;">END IF</span></a>
+      <a href="/qb64wiki/index.php/IF...THEN" title="IF...THEN"><span style="color:blue;">IF</span></a> <a href="/qb64wiki/index.php/LEN" title="LEN"><span style="color:blue;">LEN</span></a>(Spec$) <a href="/qb64wiki/index.php/AND_(boolean)" title="AND (boolean)"><span style="color:blue;">AND</span></a> (Spec$ = <a href="/qb64wiki/index.php/UCASE$" title="UCASE$"><span style="color:blue;">UCASE$</span></a>(SHFN$(cnt%)) <a href="/qb64wiki/index.php/OR_(boolean)" title="OR (boolean)"><span style="color:blue;">OR</span></a> Spec$ = <a href="/qb64wiki/index.php/UCASE$" title="UCASE$"><span style="color:blue;">UCASE$</span></a>(LGFN$(cnt%))) <a href="/qb64wiki/index.php/THEN" title="THEN"><span style="color:blue;">THEN</span></a>
+        Spec$ = SHFN$(cnt%) + BS$: FILELIST$ = Spec$: LFN$ = LGFN$(cnt%) + BS$
+        noshow = -1: <a href="/qb64wiki/index.php/GOSUB" title="GOSUB"><span style="color:blue;">GOSUB</span></a> KILLdata ' verifies file exist query (no display)
+      <a class="mw-redirect" href="/qb64wiki/index.php/END_IF" title="END IF"><span style="color:blue;">END IF</span></a>
+      <a href="/qb64wiki/index.php/IF...THEN" title="IF...THEN"><span style="color:blue;">IF</span></a> page% &gt; 0 <a href="/qb64wiki/index.php/THEN" title="THEN"><span style="color:blue;">THEN</span></a> ' pages after first
+        <a href="/qb64wiki/index.php/IF...THEN" title="IF...THEN"><span style="color:blue;">IF</span></a> cnt% = 1 <a href="/qb64wiki/index.php/THEN" title="THEN"><span style="color:blue;">THEN</span></a> <a href="/qb64wiki/index.php/GOSUB" title="GOSUB"><span style="color:blue;">GOSUB</span></a> NewScreen
+        <a href="/qb64wiki/index.php/COLOR" title="COLOR"><span style="color:blue;">COLOR</span></a> 11: <a href="/qb64wiki/index.php/LOCATE" title="LOCATE"><span style="color:blue;">LOCATE</span></a> , 3: <a href="/qb64wiki/index.php/PRINT_USING" title="PRINT USING"><span style="color:blue;">PRINT USING</span></a> tmp$; DIR$(cnt%); SHFN$(cnt%); LGFN$(cnt%); Last$(cnt%)
+        <a href="/qb64wiki/index.php/IF...THEN" title="IF...THEN"><span style="color:blue;">IF</span></a> DIR$(cnt%) = "DIR" <a href="/qb64wiki/index.php/AND_(boolean)" title="AND (boolean)"><span style="color:blue;">AND</span></a> <a href="/qb64wiki/index.php/LEFT$" title="LEFT$"><span style="color:blue;">LEFT$</span></a>(SHFN$(cnt%), 1) = "." <a href="/qb64wiki/index.php/THEN" title="THEN"><span style="color:blue;">THEN</span></a> SHFN$(cnt%) = "": LGFN$(cnt%) = ""
+      <a href="/qb64wiki/index.php/ELSE" title="ELSE"><span style="color:blue;">ELSE</span></a> 'first page = 0
+        <a href="/qb64wiki/index.php/IF...THEN" title="IF...THEN"><span style="color:blue;">IF</span></a> cnt% = 2 <a href="/qb64wiki/index.php/THEN" title="THEN"><span style="color:blue;">THEN</span></a> 'only display to screen if 2 or more files are found
+          FList&amp; = <a href="/qb64wiki/index.php/NEWIMAGE" title="NEWIMAGE"><span style="color:blue;">_NEWIMAGE</span></a>(640, 480, 256)
+          <a href="/qb64wiki/index.php/IF...THEN" title="IF...THEN"><span style="color:blue;">IF</span></a> xpos% + ypos% &gt; 0 <a href="/qb64wiki/index.php/THEN" title="THEN"><span style="color:blue;">THEN</span></a> ' user wants display on program screen
+            Show&amp; = <a href="/qb64wiki/index.php/NEWIMAGE" title="NEWIMAGE"><span style="color:blue;">_NEWIMAGE</span></a>(640, 480, 256) '&lt;&lt;&lt;&lt;&lt;&lt; ONSCREEN program displays only
+            <a href="/qb64wiki/index.php/DEST" title="DEST"><span style="color:blue;">_DEST</span></a> FList&amp;
+          <a href="/qb64wiki/index.php/ELSE" title="ELSE"><span style="color:blue;">ELSE</span></a>: <a href="/qb64wiki/index.php/SCREEN" title="SCREEN"><span style="color:blue;">SCREEN</span></a> FList&amp; ' &lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt; Separate Window
+            <a href="/qb64wiki/index.php/TITLE" title="TITLE"><span style="color:blue;">_TITLE</span></a> current$ '&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt; TITLE optional
+          <a class="mw-redirect" href="/qb64wiki/index.php/END_IF" title="END IF"><span style="color:blue;">END IF</span></a>
+          <a href="/qb64wiki/index.php/GOSUB" title="GOSUB"><span style="color:blue;">GOSUB</span></a> NewScreen '&lt;&lt;&lt;&lt; update function's screen with Putimage(see notes)
+          <a href="/qb64wiki/index.php/COLOR" title="COLOR"><span style="color:blue;">COLOR</span></a> 11: <a href="/qb64wiki/index.php/LOCATE" title="LOCATE"><span style="color:blue;">LOCATE</span></a> , 3: <a href="/qb64wiki/index.php/PRINT_USING" title="PRINT USING"><span style="color:blue;">PRINT USING</span></a> tmp$; DIR$(1); SHFN$(1); LGFN$(1); Last$(1)
+          <a href="/qb64wiki/index.php/IF...THEN" title="IF...THEN"><span style="color:blue;">IF</span></a> DIR$(1) = "DIR" <a href="/qb64wiki/index.php/AND_(boolean)" title="AND (boolean)"><span style="color:blue;">AND</span></a> <a href="/qb64wiki/index.php/LEFT$" title="LEFT$"><span style="color:blue;">LEFT$</span></a>(SHFN$(1), 1) = "." <a href="/qb64wiki/index.php/THEN" title="THEN"><span style="color:blue;">THEN</span></a> SHFN$(1) = "": LGFN$(1) = ""
+        <a class="mw-redirect" href="/qb64wiki/index.php/END_IF" title="END IF"><span style="color:blue;">END IF</span></a>
+        <a href="/qb64wiki/index.php/IF...THEN" title="IF...THEN"><span style="color:blue;">IF</span></a> cnt% &gt; 1 <a href="/qb64wiki/index.php/THEN" title="THEN"><span style="color:blue;">THEN</span></a>
+          <a href="/qb64wiki/index.php/COLOR" title="COLOR"><span style="color:blue;">COLOR</span></a> 11: <a href="/qb64wiki/index.php/LOCATE" title="LOCATE"><span style="color:blue;">LOCATE</span></a> , 3: <a href="/qb64wiki/index.php/PRINT_USING" title="PRINT USING"><span style="color:blue;">PRINT USING</span></a> tmp$; DIR$(cnt%); SHFN$(cnt%); LGFN$(cnt%); Last$(cnt%)
+          <a href="/qb64wiki/index.php/IF...THEN" title="IF...THEN"><span style="color:blue;">IF</span></a> DIR$(cnt%) = "DIR" <a href="/qb64wiki/index.php/AND_(boolean)" title="AND (boolean)"><span style="color:blue;">AND</span></a> <a href="/qb64wiki/index.php/LEFT$" title="LEFT$"><span style="color:blue;">LEFT$</span></a>(SHFN$(cnt%), 1) = "." <a href="/qb64wiki/index.php/THEN" title="THEN"><span style="color:blue;">THEN</span></a> SHFN$(cnt%) = "": LGFN$(cnt%) = ""
+        <a class="mw-redirect" href="/qb64wiki/index.php/END_IF" title="END IF"><span style="color:blue;">END IF</span></a>
+      <a class="mw-redirect" href="/qb64wiki/index.php/END_IF" title="END IF"><span style="color:blue;">END IF</span></a> 'page%
+      <a href="/qb64wiki/index.php/IF...THEN" title="IF...THEN"><span style="color:blue;">IF</span></a> cnt% <a href="/qb64wiki/index.php/MOD" title="MOD"><span style="color:blue;">MOD</span></a> 25 = 0 <a href="/qb64wiki/index.php/THEN" title="THEN"><span style="color:blue;">THEN</span></a> 'each page holds 25 file names
+        <a href="/qb64wiki/index.php/COLOR" title="COLOR"><span style="color:blue;">COLOR</span></a> 14: <a href="/qb64wiki/index.php/LOCATE" title="LOCATE"><span style="color:blue;">LOCATE</span></a> 28, 24: <a href="/qb64wiki/index.php/PRINT" title="PRINT"><span style="color:blue;">PRINT</span></a> "Select file or click here for next.";
+        <a href="/qb64wiki/index.php/GOSUB" title="GOSUB"><span style="color:blue;">GOSUB</span></a> pickfile
+        page% = page% + 1: cnt% = 0
+        <a href="/qb64wiki/index.php/REDIM" title="REDIM"><span style="color:blue;">REDIM</span></a> LGFN$(25), SHFN$(25), Last$(25), DIR$(25), Paths$(25) '&lt;&lt;&lt;&lt; <a href="/qb64wiki/index.php/$DYNAMIC" title="$DYNAMIC"><span style="color:blue;">$DYNAMIC</span></a> only
+      <a class="mw-redirect" href="/qb64wiki/index.php/END_IF" title="END IF"><span style="color:blue;">END IF</span></a> 'mod  25
+    <a class="mw-redirect" href="/qb64wiki/index.php/END_IF" title="END IF"><span style="color:blue;">END IF</span></a> 'DIR = DL$
+  <a class="mw-redirect" href="/qb64wiki/index.php/END_IF" title="END IF"><span style="color:blue;">END IF</span></a> 'len line$ &gt; 25
+<a href="/qb64wiki/index.php/LOOP" title="LOOP"><span style="color:blue;">LOOP</span></a>
+<a href="/qb64wiki/index.php/CLOSE" title="CLOSE"><span style="color:blue;">CLOSE</span></a> #f%
+last = 1: total% = cnt% + (page% * 25)
+<a href="/qb64wiki/index.php/IF...THEN" title="IF...THEN"><span style="color:blue;">IF</span></a> total% = 0 <a href="/qb64wiki/index.php/THEN" title="THEN"><span style="color:blue;">THEN</span></a> FILELIST$ = "": Spec$ = "": LFN$ = "": noshow = -1: <a href="/qb64wiki/index.php/GOSUB" title="GOSUB"><span style="color:blue;">GOSUB</span></a> KILLdata: 'no files(no display)
+<a href="/qb64wiki/index.php/IF...THEN" title="IF...THEN"><span style="color:blue;">IF</span></a> total% = 1 <a href="/qb64wiki/index.php/THEN" title="THEN"><span style="color:blue;">THEN</span></a>   'one file(no display)
+  Spec$ = SHFN$(1) + BS$: FILELIST$ = Spec$: LFN$ = LGFN$(1) + BS$: noshow = -1: <a href="/qb64wiki/index.php/GOSUB" title="GOSUB"><span style="color:blue;">GOSUB</span></a> KILLdata
+<a class="mw-redirect" href="/qb64wiki/index.php/END_IF" title="END IF"><span style="color:blue;">END IF</span></a>
+<a href="/qb64wiki/index.php/IF...THEN" title="IF...THEN"><span style="color:blue;">IF</span></a> DL$ = <a href="/qb64wiki/index.php/SPACE$" title="SPACE$"><span style="color:blue;">SPACE$</span></a>(3) <a href="/qb64wiki/index.php/THEN" title="THEN"><span style="color:blue;">THEN</span></a>
+  <a href="/qb64wiki/index.php/COLOR" title="COLOR"><span style="color:blue;">COLOR</span></a> 10: <a href="/qb64wiki/index.php/LOCATE" title="LOCATE"><span style="color:blue;">LOCATE</span></a> 28, 65: <a href="/qb64wiki/index.php/PRINT" title="PRINT"><span style="color:blue;">PRINT</span></a> total%; "Files"
+<a href="/qb64wiki/index.php/ELSE" title="ELSE"><span style="color:blue;">ELSE</span></a>: <a href="/qb64wiki/index.php/COLOR" title="COLOR"><span style="color:blue;">COLOR</span></a> 10: <a href="/qb64wiki/index.php/LOCATE" title="LOCATE"><span style="color:blue;">LOCATE</span></a> 28, 65: <a href="/qb64wiki/index.php/PRINT" title="PRINT"><span style="color:blue;">PRINT</span></a> total%; "Folders"
+<a class="mw-redirect" href="/qb64wiki/index.php/END_IF" title="END IF"><span style="color:blue;">END IF</span></a>
+<a href="/qb64wiki/index.php/COLOR" title="COLOR"><span style="color:blue;">COLOR</span></a> 14: <a href="/qb64wiki/index.php/LOCATE" title="LOCATE"><span style="color:blue;">LOCATE</span></a> 28, 24: <a href="/qb64wiki/index.php/PRINT" title="PRINT"><span style="color:blue;">PRINT</span></a> "Select file or click here to Exit. ";
+pickfile:
+<a href="/qb64wiki/index.php/DEST" title="DEST"><span style="color:blue;">_DEST</span></a> FList&amp;
+ShowPath$ = <a href="/qb64wiki/index.php/RIGHT$" title="RIGHT$"><span style="color:blue;">RIGHT$</span></a>(Path$, 78)
+<a href="/qb64wiki/index.php/COLOR" title="COLOR"><span style="color:blue;">COLOR</span></a> 15: <a href="/qb64wiki/index.php/LOCATE" title="LOCATE"><span style="color:blue;">LOCATE</span></a> 29, 41 - (<a href="/qb64wiki/index.php/LEN" title="LEN"><span style="color:blue;">LEN</span></a>(ShowPath$) \ 2): <a href="/qb64wiki/index.php/PRINT" title="PRINT"><span style="color:blue;">PRINT</span></a> ShowPath$;
+<a href="/qb64wiki/index.php/GOSUB" title="GOSUB"><span style="color:blue;">GOSUB</span></a> NewDisplay
+DO: Key$ = <a href="/qb64wiki/index.php/UCASE$" title="UCASE$"><span style="color:blue;">UCASE$</span></a>(<a href="/qb64wiki/index.php/INKEY$" title="INKEY$"><span style="color:blue;">INKEY$</span></a>): <a href="/qb64wiki/index.php/LIMIT" title="LIMIT"><span style="color:blue;">_LIMIT</span></a> 30
+  <a href="/qb64wiki/index.php/DO...LOOP" title="DO...LOOP"><span style="color:blue;">DO</span></a> <a class="mw-redirect" href="/qb64wiki/index.php/WHILE" title="WHILE"><span style="color:blue;">WHILE</span></a> <a href="/qb64wiki/index.php/MOUSEINPUT" title="MOUSEINPUT"><span style="color:blue;">_MOUSEINPUT</span></a>
+    Tcol% = ((<a href="/qb64wiki/index.php/MOUSEX" title="MOUSEX"><span style="color:blue;">_MOUSEX</span></a> - xpos%) \ 8) + 1 'mouse column with Putimage offset
+    Trow% = ((<a href="/qb64wiki/index.php/MOUSEY" title="MOUSEY"><span style="color:blue;">_MOUSEY</span></a> - ypos%) \ 16) + 1 'mouse row with offset
+    Pick = <a href="/qb64wiki/index.php/MOUSEBUTTON" title="MOUSEBUTTON"><span style="color:blue;">_MOUSEBUTTON</span></a>(1) ' get left button selection click
+  <a href="/qb64wiki/index.php/LOOP" title="LOOP"><span style="color:blue;">LOOP</span></a>
+  <a href="/qb64wiki/index.php/IF...THEN" title="IF...THEN"><span style="color:blue;">IF</span></a> Trow% &gt; 2 <a href="/qb64wiki/index.php/AND_(boolean)" title="AND (boolean)"><span style="color:blue;">AND</span></a> Trow% &lt; cnt% + 3 <a href="/qb64wiki/index.php/AND_(boolean)" title="AND (boolean)"><span style="color:blue;">AND</span></a> Tcol% &gt; 0 <a href="/qb64wiki/index.php/AND_(boolean)" title="AND (boolean)"><span style="color:blue;">AND</span></a> Tcol% &lt; 80 <a href="/qb64wiki/index.php/THEN" title="THEN"><span style="color:blue;">THEN</span></a> 'when mouse in area
+    R% = Trow% - 2
+    <a href="/qb64wiki/index.php/IF...THEN" title="IF...THEN"><span style="color:blue;">IF</span></a> P% = 0 <a href="/qb64wiki/index.php/OR_(boolean)" title="OR (boolean)"><span style="color:blue;">OR</span></a> P% &gt; cnt% + 3 <a href="/qb64wiki/index.php/THEN" title="THEN"><span style="color:blue;">THEN</span></a> P% = R%
+    <a href="/qb64wiki/index.php/IF...THEN" title="IF...THEN"><span style="color:blue;">IF</span></a> P% = R% <a href="/qb64wiki/index.php/THEN" title="THEN"><span style="color:blue;">THEN</span></a>
+      <a href="/qb64wiki/index.php/COLOR" title="COLOR"><span style="color:blue;">COLOR</span></a> 15: <a href="/qb64wiki/index.php/LOCATE" title="LOCATE"><span style="color:blue;">LOCATE</span></a> R% + 2, 3: <a href="/qb64wiki/index.php/PRINT_USING" title="PRINT USING"><span style="color:blue;">PRINT USING</span></a> tmp$; DIR$(R%); SHFN$(R%); LGFN$(R%); Last$(R%)
+    <a href="/qb64wiki/index.php/ELSE" title="ELSE"><span style="color:blue;">ELSE</span></a>
+      <a href="/qb64wiki/index.php/COLOR" title="COLOR"><span style="color:blue;">COLOR</span></a> 11: <a href="/qb64wiki/index.php/LOCATE" title="LOCATE"><span style="color:blue;">LOCATE</span></a> P% + 2, 3: <a href="/qb64wiki/index.php/PRINT_USING" title="PRINT USING"><span style="color:blue;">PRINT USING</span></a> tmp$; DIR$(P%); SHFN$(P%); LGFN$(P%); Last$(P%)
+    <a class="mw-redirect" href="/qb64wiki/index.php/END_IF" title="END IF"><span style="color:blue;">END IF</span></a>
+    <a href="/qb64wiki/index.php/GOSUB" title="GOSUB"><span style="color:blue;">GOSUB</span></a> NewDisplay
+    P% = R%
+    <a href="/qb64wiki/index.php/IF...THEN" title="IF...THEN"><span style="color:blue;">IF</span></a> Pick <a href="/qb64wiki/index.php/THEN" title="THEN"><span style="color:blue;">THEN</span></a>
+      Spec$ = SHFN$(R%)
+      <a href="/qb64wiki/index.php/IF...THEN" title="IF...THEN"><span style="color:blue;">IF</span></a> <a href="/qb64wiki/index.php/LEN" title="LEN"><span style="color:blue;">LEN</span></a>(Spec$) <a href="/qb64wiki/index.php/THEN" title="THEN"><span style="color:blue;">THEN</span></a>
+        <a href="/qb64wiki/index.php/COLOR" title="COLOR"><span style="color:blue;">COLOR</span></a> 13: <a href="/qb64wiki/index.php/LOCATE" title="LOCATE"><span style="color:blue;">LOCATE</span></a> R% + 2, 3: <a href="/qb64wiki/index.php/PRINT_USING" title="PRINT USING"><span style="color:blue;">PRINT USING</span></a> tmp$; DIR$(R%); SHFN$(R%); LGFN$(R%); Last$(R%)
+        <a href="/qb64wiki/index.php/GOSUB" title="GOSUB"><span style="color:blue;">GOSUB</span></a> NewDisplay
+        Spec$ = Spec$ + BS$: FILELIST$ = Spec$: Path$ = Paths$(R%)
+        <a href="/qb64wiki/index.php/IF...THEN" title="IF...THEN"><span style="color:blue;">IF</span></a> <a href="/qb64wiki/index.php/LEN" title="LEN"><span style="color:blue;">LEN</span></a>(LGFN$(R%)) <a href="/qb64wiki/index.php/THEN" title="THEN"><span style="color:blue;">THEN</span></a> LFN$ = LGFN$(R%) + BS$ <a href="/qb64wiki/index.php/ELSE" title="ELSE"><span style="color:blue;">ELSE</span></a> LFN$ = ""
+        <a href="/qb64wiki/index.php/DELAY" title="DELAY"><span style="color:blue;">_DELAY</span></a> 1.5: <a href="/qb64wiki/index.php/CLS" title="CLS"><span style="color:blue;">CLS</span></a>: <a href="/qb64wiki/index.php/SCREEN" title="SCREEN"><span style="color:blue;">SCREEN</span></a> mode&amp;: <a href="/qb64wiki/index.php/GOSUB" title="GOSUB"><span style="color:blue;">GOSUB</span></a> KILLdata 'exit if user selection
+      <a class="mw-redirect" href="/qb64wiki/index.php/END_IF" title="END IF"><span style="color:blue;">END IF</span></a>
+    <a class="mw-redirect" href="/qb64wiki/index.php/END_IF" title="END IF"><span style="color:blue;">END IF</span></a> 'len spec
+  <a class="mw-redirect" href="/qb64wiki/index.php/END_IF" title="END IF"><span style="color:blue;">END IF</span></a> 'pick
+  <a href="/qb64wiki/index.php/IF...THEN" title="IF...THEN"><span style="color:blue;">IF</span></a> <a href="/qb64wiki/index.php/LEN" title="LEN"><span style="color:blue;">LEN</span></a>(Key$) <a href="/qb64wiki/index.php/THEN" title="THEN"><span style="color:blue;">THEN</span></a> usercode% = <a href="/qb64wiki/index.php/ASC_(function)" title="ASC (function)"><span style="color:blue;">ASC</span></a>(Key$) <a href="/qb64wiki/index.php/ELSE" title="ELSE"><span style="color:blue;">ELSE</span></a> usercode% = 0
+  <a href="/qb64wiki/index.php/IF...THEN" title="IF...THEN"><span style="color:blue;">IF</span></a> usercode% &gt; setcode% <a href="/qb64wiki/index.php/THEN" title="THEN"><span style="color:blue;">THEN</span></a> setcode% = usercode% 'user can press letter to jump to
+  <a href="/qb64wiki/index.php/IF...THEN" title="IF...THEN"><span style="color:blue;">IF</span></a> Pick <a href="/qb64wiki/index.php/AND_(boolean)" title="AND (boolean)"><span style="color:blue;">AND</span></a> Trow% &gt; 27 <a href="/qb64wiki/index.php/THEN" title="THEN"><span style="color:blue;">THEN</span></a> <a href="/qb64wiki/index.php/EXIT_DO" title="EXIT DO"><span style="color:blue;">EXIT DO</span></a>
+<a href="/qb64wiki/index.php/LOOP" title="LOOP"><span style="color:blue;">LOOP</span></a> <a href="/qb64wiki/index.php/UNTIL" title="UNTIL"><span style="color:blue;">UNTIL</span></a> <a href="/qb64wiki/index.php/LEN" title="LEN"><span style="color:blue;">LEN</span></a>(Key$)
+<a href="/qb64wiki/index.php/DELAY" title="DELAY"><span style="color:blue;">_DELAY</span></a> .4 'adjust delay for page scroll speed
+DO: Key$ = <a href="/qb64wiki/index.php/INKEY$" title="INKEY$"><span style="color:blue;">INKEY$</span></a>: <a href="/qb64wiki/index.php/LOOP" title="LOOP"><span style="color:blue;">LOOP</span></a> <a href="/qb64wiki/index.php/UNTIL" title="UNTIL"><span style="color:blue;">UNTIL</span></a> Key$ = ""
+<a href="/qb64wiki/index.php/IF...THEN" title="IF...THEN"><span style="color:blue;">IF</span></a> last = 0 <a href="/qb64wiki/index.php/THEN" title="THEN"><span style="color:blue;">THEN</span></a> <a href="/qb64wiki/index.php/RETURN" title="RETURN"><span style="color:blue;">RETURN</span></a> 'exit if file no more data
+FILELIST$ = "": Spec$ = "": LFN$ = ""
+<a href="/qb64wiki/index.php/CLS" title="CLS"><span style="color:blue;">CLS</span></a>: <a href="/qb64wiki/index.php/SCREEN" title="SCREEN"><span style="color:blue;">SCREEN</span></a> mode&amp; 'resets program screen to previous condition
+KILLdata:
+<a href="/qb64wiki/index.php/CLOSE" title="CLOSE"><span style="color:blue;">CLOSE</span></a> #f%: <a href="/qb64wiki/index.php/KILL" title="KILL"><span style="color:blue;">KILL</span></a> "D0S-DATA.INF" 'kill D0S-DATA.INF file and exit
+<a href="/qb64wiki/index.php/IF...THEN" title="IF...THEN"><span style="color:blue;">IF</span></a> FList&amp; &lt; -1 <a href="/qb64wiki/index.php/THEN" title="THEN"><span style="color:blue;">THEN</span></a> <a href="/qb64wiki/index.php/FREEIMAGE" title="FREEIMAGE"><span style="color:blue;">_FREEIMAGE</span></a> FList&amp;
+<a href="/qb64wiki/index.php/IF...THEN" title="IF...THEN"><span style="color:blue;">IF</span></a> Show&amp; &lt; -1 <a href="/qb64wiki/index.php/THEN" title="THEN"><span style="color:blue;">THEN</span></a> <a href="/qb64wiki/index.php/FREEIMAGE" title="FREEIMAGE"><span style="color:blue;">_FREEIMAGE</span></a> Show&amp;
+<a href="/qb64wiki/index.php/IF...THEN" title="IF...THEN"><span style="color:blue;">IF</span></a> noshow = -1 AND mode&amp; &lt; -1 THEN <a href="/qb64wiki/index.php/FREEIMAGE" title="FREEIMAGE"><span style="color:blue;">_FREEIMAGE</span></a> mode&amp;
+<a href="/qb64wiki/index.php/AUTODISPLAY" title="AUTODISPLAY"><span style="color:blue;">_AUTODISPLAY</span></a> 'reset default settings
+<a href="/qb64wiki/index.php/EXIT_FUNCTION" title="EXIT FUNCTION"><span style="color:blue;">EXIT FUNCTION</span></a>
+<a href="/qb64wiki/index.php/RETURN" title="RETURN"><span style="color:blue;">RETURN</span></a>
+NewScreen: 'clear screen and set display format
+<a href="/qb64wiki/index.php/LINE" title="LINE"><span style="color:blue;">LINE</span></a> (0, 0)-(639, 499), 0, BF
+<a href="/qb64wiki/index.php/COLOR" title="COLOR"><span style="color:blue;">COLOR</span></a> 14: <a href="/qb64wiki/index.php/LOCATE" title="LOCATE"><span style="color:blue;">LOCATE</span></a> 2, 3: <a href="/qb64wiki/index.php/PRINT" title="PRINT"><span style="color:blue;">PRINT</span></a> Head$
+<a href="/qb64wiki/index.php/LINE" title="LINE"><span style="color:blue;">LINE</span></a> (4, 4)-(636, 476), 13, B: <a href="/qb64wiki/index.php/LINE" title="LINE"><span style="color:blue;">LINE</span></a> (5, 5)-(635, 475), 13, B
+<a href="/qb64wiki/index.php/GOSUB" title="GOSUB"><span style="color:blue;">GOSUB</span></a> NewDisplay
+<a href="/qb64wiki/index.php/RETURN" title="RETURN"><span style="color:blue;">RETURN</span></a>
+NewDisplay: 'show program or window displays
+<a href="/qb64wiki/index.php/IF...THEN" title="IF...THEN"><span style="color:blue;">IF</span></a> xpos% + ypos% &gt; 0 <a href="/qb64wiki/index.php/THEN" title="THEN"><span style="color:blue;">THEN</span></a>
+  <a href="/qb64wiki/index.php/PUTIMAGE" title="PUTIMAGE"><span style="color:blue;">_PUTIMAGE</span></a> , FList&amp;, Show&amp;
+  <a href="/qb64wiki/index.php/DEST" title="DEST"><span style="color:blue;">_DEST</span></a> 0: <a href="/qb64wiki/index.php/PUTIMAGE" title="PUTIMAGE"><span style="color:blue;">_PUTIMAGE</span></a> (xpos%, ypos%), Show&amp;: <a href="/qb64wiki/index.php/DISPLAY" title="DISPLAY"><span style="color:blue;">_DISPLAY</span></a>
+  <a href="/qb64wiki/index.php/DEST" title="DEST"><span style="color:blue;">_DEST</span></a> FList&amp;
+<a href="/qb64wiki/index.php/ELSE" title="ELSE"><span style="color:blue;">ELSE</span></a>: <a href="/qb64wiki/index.php/DISPLAY" title="DISPLAY"><span style="color:blue;">_DISPLAY</span></a>
+<a class="mw-redirect" href="/qb64wiki/index.php/END_IF" title="END IF"><span style="color:blue;">END IF</span></a>
+<a href="/qb64wiki/index.php/RETURN" title="RETURN"><span style="color:blue;">RETURN</span></a>
+<a class="mw-redirect" href="/qb64wiki/index.php/END_FUNCTION" title="END FUNCTION"><span style="color:blue;">END FUNCTION</span></a>
+</pre>
+         </td>
+        </tr>
+       </tbody>
+      </table>
+      <center>
+       <b>
+        NOTE: Refresh browser if full code is not displayed!
+       </b>
+      </center>
+      <p>
+       <br/>
+      </p>
+      <center>
+       Updated for VISTA Screen format 8/20/2010
+      </center>
+      <center>
+       Added optional root path in _TITLE bar of windowed mode only 11/16/2010
+      </center>
+      <p>
+       <br/>
+      </p>
+      <center>
+       <b>
+        NOTE: IF
+        <a href="/qb64wiki/index.php/$STATIC" title="$STATIC">
+         $STATIC
+        </a>
+        Metacommand is required, change function Arrays to
+        <a href="/qb64wiki/index.php/STATIC" title="STATIC">
+         STATIC
+        </a>
+        and
+        <a href="/qb64wiki/index.php/ERASE" title="ERASE">
+         ERASE
+        </a>
+        them at start and every loop!
+       </b>
+      </center>
+      <p>
+       <br/>
+      </p>
+      <h2>
+       <span class="mw-headline" id="See_also">
+        See also
+       </span>
+      </h2>
+      <ul>
+       <li>
+        <a href="/qb64wiki/index.php/OPENFILEDIALOG$" title="OPENFILEDIALOG$">
+         _OPENFILEDIALOG$
+        </a>
+        ,
+        <a href="/qb64wiki/index.php/FILES$" title="FILES$">
+         _FILES$
+        </a>
+       </li>
+       <li>
+        <a href="/qb64wiki/index.php/FILELIST$_(function)" title="FILELIST$ (function)">
+         Return to original FILELIST$ function
+        </a>
+       </li>
+      </ul>
+      <p>
+       <br/>
+      </p>
+      <hr/>
+      <center>
+       <b>
+        Navigation:
+       </b>
+      </center>
+      <center>
+       <a href="/qb64wiki/index.php/Main_Page" title="Main Page">
+        Main Page with Articles and Tutorials
+       </a>
+      </center>
+      <center>
+       <a href="/qb64wiki/index.php/Keyword_Reference_-_Alphabetical" title="Keyword Reference - Alphabetical">
+        Keyword Reference - Alphabetical
+       </a>
+      </center>
+      <center>
+       <a href="/qb64wiki/index.php/Keyword_Reference_-_By_usage" title="Keyword Reference - By usage">
+        Keyword Reference - By usage
+       </a>
+      </center>
+      <center>
+       <b>
+        <a class="external text" href="https://qb64phoenix.com/forum/showthread.php?tid=2800" rel="nofollow">
+         Report a broken link
+        </a>
+       </b>
+       <br/>
+      </center>
+      <!-- 
+NewPP limit report
+Cached time: 20240718172350
+Cache expiry: 86400
+Reduced expiry: false
+Complications: []
+CPU time usage: 0.131 seconds
+Real time usage: 0.150 seconds
+Preprocessor visited node count: 2291/1000000
+Post‐expand include size: 16861/2097152 bytes
+Template argument size: 3876/2097152 bytes
+Highest expansion depth: 3/100
+Expensive parser function count: 0/100
+Unstrip recursion depth: 0/20
+Unstrip post‐expand size: 0/5000000 bytes
+-->
+      <!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%   66.581      1 -total
+ 27.90%   18.576    294 Template:Cb
+ 10.42%    6.940      1 Template:TextStart
+  6.09%    4.054      1 Template:Text
+  5.26%    3.501     30 Template:Cl
+  5.23%    3.480      1 Template:CodeStart
+  5.11%    3.404      1 Template:TextEnd
+  4.68%    3.113      1 Template:PageNavigation
+  3.11%    2.070      1 Template:PageSeeAlso
+  2.78%    1.850      1 Template:CodeEnd
+-->
+      <!-- Saved in parser cache with key qb64pnix_mw19894-mwmb_:pcache:idhash:649-0!canonical and timestamp 20240718172350 and revision id 8847.
+ -->
+     </div>
+     <div class="printfooter" data-nosnippet="">
+      Retrieved from "
+      <a dir="ltr" href="https://qb64phoenix.com/qb64wiki/index.php?title=FILELIST$&amp;oldid=8847">
+       https://qb64phoenix.com/qb64wiki/index.php?title=FILELIST$&amp;oldid=8847
+      </a>
+      "
+     </div>
+    </div>
+    <div class="catlinks catlinks-allhidden" data-mw="interface" id="catlinks">
+    </div>
+   </div>
+  </div>
+  <div id="mw-navigation">
+   <h2>
+    Navigation menu
+   </h2>
+   <div id="mw-head">
+    <nav aria-labelledby="p-personal-label" class="vector-menu mw-portlet mw-portlet-personal vector-user-menu-legacy" id="p-personal" role="navigation">
+     <h3 class="vector-menu-heading" id="p-personal-label">
+      <span class="vector-menu-heading-label">
+       Personal tools
+      </span>
+     </h3>
+     <div class="vector-menu-content">
+      <ul class="vector-menu-content-list">
+       <li class="mw-list-item" id="pt-login">
+        <a accesskey="o" href="/qb64wiki/index.php?title=Special:UserLogin&amp;returnto=FILELIST%24" title="You are encouraged to log in; however, it is not mandatory [o]">
+         <span>
+          Log in
+         </span>
+        </a>
+       </li>
+      </ul>
+     </div>
+    </nav>
+    <div id="left-navigation">
+     <nav aria-labelledby="p-namespaces-label" class="vector-menu mw-portlet mw-portlet-namespaces vector-menu-tabs vector-menu-tabs-legacy" id="p-namespaces" role="navigation">
+      <h3 class="vector-menu-heading" id="p-namespaces-label">
+       <span class="vector-menu-heading-label">
+        Namespaces
+       </span>
+      </h3>
+      <div class="vector-menu-content">
+       <ul class="vector-menu-content-list">
+        <li class="selected mw-list-item" id="ca-nstab-main">
+         <a accesskey="c" href="/qb64wiki/index.php/FILELIST$" title="View the content page [c]">
+          <span>
+           Page
+          </span>
+         </a>
+        </li>
+        <li class="new mw-list-item" id="ca-talk">
+         <a accesskey="t" href="/qb64wiki/index.php?title=Talk:FILELIST$&amp;action=edit&amp;redlink=1" rel="discussion" title="Discussion about the content page (page does not exist) [t]">
+          <span>
+           Discussion
+          </span>
+         </a>
+        </li>
+       </ul>
+      </div>
+     </nav>
+     <nav aria-labelledby="p-variants-label" class="vector-menu mw-portlet mw-portlet-variants emptyPortlet vector-menu-dropdown" id="p-variants" role="navigation">
+      <input aria-haspopup="true" aria-labelledby="p-variants-label" class="vector-menu-checkbox" data-event-name="ui.dropdown-p-variants" id="p-variants-checkbox" role="button" type="checkbox"/>
+      <label aria-label="Change language variant" class="vector-menu-heading" id="p-variants-label">
+       <span class="vector-menu-heading-label">
+        English
+       </span>
+      </label>
+      <div class="vector-menu-content">
+       <ul class="vector-menu-content-list">
+       </ul>
+      </div>
+     </nav>
+    </div>
+    <div id="right-navigation">
+     <nav aria-labelledby="p-views-label" class="vector-menu mw-portlet mw-portlet-views vector-menu-tabs vector-menu-tabs-legacy" id="p-views" role="navigation">
+      <h3 class="vector-menu-heading" id="p-views-label">
+       <span class="vector-menu-heading-label">
+        Views
+       </span>
+      </h3>
+      <div class="vector-menu-content">
+       <ul class="vector-menu-content-list">
+        <li class="selected mw-list-item" id="ca-view">
+         <a href="/qb64wiki/index.php/FILELIST$">
+          <span>
+           Read
+          </span>
+         </a>
+        </li>
+        <li class="mw-list-item" id="ca-viewsource">
+         <a accesskey="e" href="/qb64wiki/index.php?title=FILELIST$&amp;action=edit" title="This page is protected.
+You can view its source [e]">
+          <span>
+           View source
+          </span>
+         </a>
+        </li>
+        <li class="mw-list-item" id="ca-history">
+         <a accesskey="h" href="/qb64wiki/index.php?title=FILELIST$&amp;action=history" title="Past revisions of this page [h]">
+          <span>
+           View history
+          </span>
+         </a>
+        </li>
+       </ul>
+      </div>
+     </nav>
+     <nav aria-labelledby="p-cactions-label" class="vector-menu mw-portlet mw-portlet-cactions emptyPortlet vector-menu-dropdown" id="p-cactions" role="navigation" title="More options">
+      <input aria-haspopup="true" aria-labelledby="p-cactions-label" class="vector-menu-checkbox" data-event-name="ui.dropdown-p-cactions" id="p-cactions-checkbox" role="button" type="checkbox"/>
+      <label class="vector-menu-heading" id="p-cactions-label">
+       <span class="vector-menu-heading-label">
+        More
+       </span>
+      </label>
+      <div class="vector-menu-content">
+       <ul class="vector-menu-content-list">
+       </ul>
+      </div>
+     </nav>
+     <div class="vector-search-box-vue vector-search-box-show-thumbnail vector-search-box-auto-expand-width vector-search-box" id="p-search" role="search">
+      <div>
+       <h3>
+        <label for="searchInput">
+         Search
+        </label>
+       </h3>
+       <form action="/qb64wiki/index.php" class="vector-search-box-form" id="searchform">
+        <div class="vector-search-box-inner" data-search-loc="header-navigation" id="simpleSearch">
+         <input accesskey="f" aria-label="Search QB64 Phoenix Edition Wiki" autocapitalize="sentences" class="vector-search-box-input" id="searchInput" name="search" placeholder="Search QB64 Phoenix Edition Wiki" title="Search QB64 Phoenix Edition Wiki [f]" type="search"/>
+         <input name="title" type="hidden" value="Special:Search"/>
+         <input class="searchButton mw-fallbackSearchButton" id="mw-searchButton" name="fulltext" title="Search the pages for this text" type="submit" value="Search"/>
+         <input class="searchButton" id="searchButton" name="go" title="Go to a page with this exact name if it exists" type="submit" value="Go"/>
+        </div>
+       </form>
+      </div>
+     </div>
+    </div>
+   </div>
+   <div id="mw-panel">
+    <div id="p-logo" role="banner">
+     <a class="mw-wiki-logo" href="/qb64wiki/index.php/Main_Page" title="Visit the main page">
+     </a>
+    </div>
+    <nav aria-labelledby="p-navigation-label" class="vector-menu mw-portlet mw-portlet-navigation vector-menu-portal portal" id="p-navigation" role="navigation">
+     <h3 class="vector-menu-heading" id="p-navigation-label">
+      <span class="vector-menu-heading-label">
+       Navigation
+      </span>
+     </h3>
+     <div class="vector-menu-content">
+      <ul class="vector-menu-content-list">
+       <li class="mw-list-item" id="n-mainpage-description">
+        <a accesskey="z" href="/qb64wiki/index.php/Main_Page" title="Visit the main page [z]">
+         <span>
+          Main page
+         </span>
+        </a>
+       </li>
+       <li class="mw-list-item" id="n-recentchanges">
+        <a accesskey="r" href="/qb64wiki/index.php/Special:RecentChanges" title="A list of recent changes in the wiki [r]">
+         <span>
+          Recent changes
+         </span>
+        </a>
+       </li>
+       <li class="mw-list-item" id="n-randompage">
+        <a accesskey="x" href="/qb64wiki/index.php/Special:Random" title="Load a random page [x]">
+         <span>
+          Random page
+         </span>
+        </a>
+       </li>
+       <li class="mw-list-item" id="n-help-mediawiki">
+        <a href="https://www.mediawiki.org/wiki/Special:MyLanguage/Help:Contents">
+         <span>
+          Help about MediaWiki
+         </span>
+        </a>
+       </li>
+      </ul>
+     </div>
+    </nav>
+    <nav aria-labelledby="p-tb-label" class="vector-menu mw-portlet mw-portlet-tb vector-menu-portal portal" id="p-tb" role="navigation">
+     <h3 class="vector-menu-heading" id="p-tb-label">
+      <span class="vector-menu-heading-label">
+       Tools
+      </span>
+     </h3>
+     <div class="vector-menu-content">
+      <ul class="vector-menu-content-list">
+       <li class="mw-list-item" id="t-whatlinkshere">
+        <a accesskey="j" href="/qb64wiki/index.php/Special:WhatLinksHere/FILELIST$" title="A list of all wiki pages that link here [j]">
+         <span>
+          What links here
+         </span>
+        </a>
+       </li>
+       <li class="mw-list-item" id="t-recentchangeslinked">
+        <a accesskey="k" href="/qb64wiki/index.php/Special:RecentChangesLinked/FILELIST$" rel="nofollow" title="Recent changes in pages linked from this page [k]">
+         <span>
+          Related changes
+         </span>
+        </a>
+       </li>
+       <li class="mw-list-item" id="t-specialpages">
+        <a accesskey="q" href="/qb64wiki/index.php/Special:SpecialPages" title="A list of all special pages [q]">
+         <span>
+          Special pages
+         </span>
+        </a>
+       </li>
+       <li class="mw-list-item" id="t-print">
+        <a accesskey="p" href="javascript:print();" rel="alternate" title="Printable version of this page [p]">
+         <span>
+          Printable version
+         </span>
+        </a>
+       </li>
+       <li class="mw-list-item" id="t-permalink">
+        <a href="/qb64wiki/index.php?title=FILELIST$&amp;oldid=8847" title="Permanent link to this revision of this page">
+         <span>
+          Permanent link
+         </span>
+        </a>
+       </li>
+       <li class="mw-list-item" id="t-info">
+        <a href="/qb64wiki/index.php?title=FILELIST$&amp;action=info" title="More information about this page">
+         <span>
+          Page information
+         </span>
+        </a>
+       </li>
+      </ul>
+     </div>
+    </nav>
+   </div>
+  </div>
+  <footer class="mw-footer" id="footer" role="contentinfo">
+   <ul id="footer-info">
+    <li id="footer-info-lastmod">
+     This page was last edited on 6 April 2024, at 17:37.
+    </li>
+   </ul>
+   <ul id="footer-places">
+    <li id="footer-places-privacy">
+     <a href="/qb64wiki/index.php/QB64_Phoenix_Edition_Wiki:Privacy_policy">
+      Privacy policy
+     </a>
+    </li>
+    <li id="footer-places-about">
+     <a href="/qb64wiki/index.php/QB64_Phoenix_Edition_Wiki:About">
+      About QB64 Phoenix Edition Wiki
+     </a>
+    </li>
+    <li id="footer-places-disclaimer">
+     <a href="/qb64wiki/index.php/QB64_Phoenix_Edition_Wiki:General_disclaimer">
+      Disclaimers
+     </a>
+    </li>
+   </ul>
+   <ul class="noprint" id="footer-icons">
+    <li id="footer-poweredbyico">
+     <a href="https://www.mediawiki.org/">
+      <img alt="Powered by MediaWiki" height="31" loading="lazy" src="/qb64wiki/resources/assets/poweredby_mediawiki_88x31.png" srcset="/qb64wiki/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /qb64wiki/resources/assets/poweredby_mediawiki_176x62.png 2x" width="88"/>
+     </a>
+    </li>
+   </ul>
+  </footer>
+  <script>
+   (RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgPageParseReport":{"limitreport":{"cputime":"0.131","walltime":"0.150","ppvisitednodes":{"value":2291,"limit":1000000},"postexpandincludesize":{"value":16861,"limit":2097152},"templateargumentsize":{"value":3876,"limit":2097152},"expansiondepth":{"value":3,"limit":100},"expensivefunctioncount":{"value":0,"limit":100},"unstrip-depth":{"value":0,"limit":20},"unstrip-size":{"value":0,"limit":5000000},"timingprofile":["100.00%   66.581      1 -total"," 27.90%   18.576    294 Template:Cb"," 10.42%    6.940      1 Template:TextStart","  6.09%    4.054      1 Template:Text","  5.26%    3.501     30 Template:Cl","  5.23%    3.480      1 Template:CodeStart","  5.11%    3.404      1 Template:TextEnd","  4.68%    3.113      1 Template:PageNavigation","  3.11%    2.070      1 Template:PageSeeAlso","  2.78%    1.850      1 Template:CodeEnd"]},"cachereport":{"timestamp":"20240718172350","ttl":86400,"transientcontent":false}}});mw.config.set({"wgBackendResponseTime":190});});
+  </script>
+ </body>
+</html>

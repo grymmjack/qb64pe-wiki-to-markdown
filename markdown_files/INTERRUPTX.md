@@ -1,17 +1,19 @@
-# INTERRUPTX
-> The INTERRUPTX statement is an assembly routine for accessing computer information registers.
+## INTERRUPTX
+---
 
-## SYNTAX
+### The INTERRUPTX statement is an assembly routine for accessing computer information registers.
+
+#### SYNTAX
+
 `CALL INTERRUPTX ( intNum , inRegs , outRegs )`
 
-## PARAMETERS
+#### PARAMETERS
 * Registers are emulated in QB64 and there is no support for intNum 33h mouse functions above 3 or intNum requests other than 33.
 * inRegs are the values placed into the call and outRegs are the register return values.
 
 
-# SEE ALSO
+#### SEE ALSO
 * $INCLUDE:
-* QB.BI , [CALL](CALL.md) [ABSOLUTE](ABSOLUTE.md)
-* [INTERRUPT](INTERRUPT.md)
+* QB.BI , [CALL](./CALL.md) [ABSOLUTE](./ABSOLUTE.md)
+* [INTERRUPT](./INTERRUPT.md)
 * Ethan Winer's free QBasic Book and Programs: WINER.ZIP
-

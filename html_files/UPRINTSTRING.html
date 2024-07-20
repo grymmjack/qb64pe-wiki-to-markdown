@@ -1,0 +1,1012 @@
+<!DOCTYPE html>
+<html class="client-nojs" dir="ltr" lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <title>
+   _UPRINTSTRING - QB64 Phoenix Edition Wiki
+  </title>
+  <script>
+   document.documentElement.className="client-js";RLCONF={"wgBreakFrames":false,"wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgRequestId":"Zpp9HOZL16Jh9AOFAcaO4AAAAKE","wgCSPNonce":false,"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"UPRINTSTRING","wgTitle":"UPRINTSTRING","wgCurRevisionId":8970,"wgRevisionId":8970,"wgArticleId":1218,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":[],"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgRelevantPageName":"UPRINTSTRING","wgRelevantArticleId":1218,"wgIsProbablyEditable":false,"wgRelevantPageIsProbablyEditable":false,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgVector2022PreviewPages":[]};RLSTATE={"site.styles":"ready","user.styles":
+"ready","user":"ready","user.options":"loading","mediawiki.page.gallery.styles":"ready","skins.vector.styles.legacy":"ready"};RLPAGEMODULES=["site","mediawiki.page.ready","mediawiki.toc","skins.vector.legacy.js"];
+  </script>
+  <script>
+   (RLQ=window.RLQ||[]).push(function(){mw.loader.implement("user.options@12s5i",function($,jQuery,require,module){mw.user.tokens.set({"patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});});});
+  </script>
+  <link href="/qb64wiki/load.php?lang=en&amp;modules=mediawiki.page.gallery.styles%7Cskins.vector.styles.legacy&amp;only=styles&amp;skin=vector" rel="stylesheet"/>
+  <script async="" src="/qb64wiki/load.php?lang=en&amp;modules=startup&amp;only=scripts&amp;raw=1&amp;skin=vector">
+  </script>
+  <meta content="" name="ResourceLoaderDynamicStyles"/>
+  <link href="/qb64wiki/load.php?lang=en&amp;modules=site.styles&amp;only=styles&amp;skin=vector" rel="stylesheet"/>
+  <meta content="MediaWiki 1.39.3" name="generator"/>
+  <meta content="telephone=no" name="format-detection"/>
+  <meta content="width=1000" name="viewport"/>
+  <link href="/favicon.ico" rel="icon"/>
+  <link href="/qb64wiki/opensearch_desc.php" rel="search" title="QB64 Phoenix Edition Wiki (en)" type="application/opensearchdescription+xml"/>
+  <link href="https://qb64phoenix.com/qb64wiki/api.php?action=rsd" rel="EditURI" type="application/rsd+xml"/>
+  <link href="/qb64wiki/index.php?title=Special:RecentChanges&amp;feed=atom" rel="alternate" title="QB64 Phoenix Edition Wiki Atom feed" type="application/atom+xml"/>
+ </head>
+ <body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject page-UPRINTSTRING rootpage-UPRINTSTRING skin-vector action-view skin-vector-legacy vector-feature-language-in-header-enabled vector-feature-language-in-main-page-header-disabled vector-feature-language-alert-in-sidebar-disabled vector-feature-sticky-header-disabled vector-feature-sticky-header-edit-disabled vector-feature-table-of-contents-disabled vector-feature-visual-enhancement-next-disabled">
+  <div class="noprint" id="mw-page-base">
+  </div>
+  <div class="noprint" id="mw-head-base">
+  </div>
+  <div class="mw-body" id="content" role="main">
+   <a id="top">
+   </a>
+   <div id="siteNotice">
+   </div>
+   <div class="mw-indicators">
+   </div>
+   <h1 class="firstHeading mw-first-heading" id="firstHeading">
+    _UPRINTSTRING
+   </h1>
+   <div class="vector-body" id="bodyContent">
+    <div class="noprint" id="siteSub">
+     From QB64 Phoenix Edition Wiki
+    </div>
+    <div id="contentSub">
+    </div>
+    <div id="contentSub2">
+    </div>
+    <div id="jump-to-nav">
+    </div>
+    <a class="mw-jump-link" href="#mw-head">
+     Jump to navigation
+    </a>
+    <a class="mw-jump-link" href="#searchInput">
+     Jump to search
+    </a>
+    <div class="mw-body-content mw-content-ltr" dir="ltr" id="mw-content-text" lang="en">
+     <div class="mw-parser-output">
+      <p>
+       The
+       <b>
+        _UPRINTSTRING
+       </b>
+       statement prints ASCII / UNICODE text
+       <a href="/qb64wiki/index.php/STRING" title="STRING">
+        strings
+       </a>
+       using graphic column and row coordinate positions.
+      </p>
+      <p>
+       <br/>
+      </p>
+      <table align="right" style="max-width:25%;">
+       <tbody>
+        <tr>
+         <td>
+          <div aria-labelledby="mw-toc-heading" class="toc" id="toc" role="navigation">
+           <input class="toctogglecheckbox" id="toctogglecheckbox" role="button" style="display:none" type="checkbox"/>
+           <div class="toctitle" dir="ltr" lang="en">
+            <h2 id="mw-toc-heading">
+             Contents
+            </h2>
+            <span class="toctogglespan">
+             <label class="toctogglelabel" for="toctogglecheckbox">
+             </label>
+            </span>
+           </div>
+           <ul>
+            <li class="toclevel-1">
+             <a href="#Syntax">
+              <span class="tocnumber">
+               1
+              </span>
+              <span class="toctext">
+               Syntax
+              </span>
+             </a>
+            </li>
+            <li class="toclevel-1">
+             <a href="#Parameters">
+              <span class="tocnumber">
+               2
+              </span>
+              <span class="toctext">
+               Parameters
+              </span>
+             </a>
+            </li>
+            <li class="toclevel-1">
+             <a href="#Description">
+              <span class="tocnumber">
+               3
+              </span>
+              <span class="toctext">
+               Description
+              </span>
+             </a>
+            </li>
+            <li class="toclevel-1">
+             <a href="#Availability">
+              <span class="tocnumber">
+               4
+              </span>
+              <span class="toctext">
+               Availability
+              </span>
+             </a>
+            </li>
+            <li class="toclevel-1">
+             <a href="#Examples">
+              <span class="tocnumber">
+               5
+              </span>
+              <span class="toctext">
+               Examples
+              </span>
+             </a>
+            </li>
+            <li class="toclevel-1">
+             <a href="#See_also">
+              <span class="tocnumber">
+               6
+              </span>
+              <span class="toctext">
+               See also
+              </span>
+             </a>
+            </li>
+           </ul>
+          </div>
+         </td>
+        </tr>
+       </tbody>
+      </table>
+      <h2>
+       <span class="mw-headline" id="Syntax">
+        Syntax
+       </span>
+      </h2>
+      <dl>
+       <dd>
+        <a class="mw-selflink selflink">
+         _UPRINTSTRING
+        </a>
+        (
+        <i>
+         column
+        </i>
+        ,
+        <i>
+         row
+        </i>
+        ),
+        <i>
+         textExpression$
+        </i>
+        [,
+        <i>
+         maxWidth&amp;
+        </i>
+        ][,
+        <i>
+         utfEncoding&amp;
+        </i>
+        ][,
+        <i>
+         fontHandle&amp;
+        </i>
+        ][,
+        <i>
+         imageHandle&amp;
+        </i>
+        ]
+       </dd>
+      </dl>
+      <p>
+       <br/>
+      </p>
+      <h2>
+       <span class="mw-headline" id="Parameters">
+        Parameters
+       </span>
+      </h2>
+      <ul>
+       <li>
+        <i>
+         column
+        </i>
+        and
+        <i>
+         row
+        </i>
+        are
+        <a href="/qb64wiki/index.php/INTEGER" title="INTEGER">
+         INTEGER
+        </a>
+        or
+        <a href="/qb64wiki/index.php/LONG" title="LONG">
+         LONG
+        </a>
+        starting PIXEL (graphic) column and row coordinates to set text or custom fonts.
+       </li>
+       <li>
+        <i>
+         textExpression$
+        </i>
+        is any literal or variable
+        <a href="/qb64wiki/index.php/STRING" title="STRING">
+         string
+        </a>
+        value of text to be displayed.
+       </li>
+       <li>
+        <i>
+         maxWidth&amp;
+        </i>
+        is an optional horizontal pixel limit after which the text rendering will be clipped.
+       </li>
+       <li>
+        <i>
+         utfEncoding&amp;
+        </i>
+        is an optional UTF encoding of
+        <i>
+         textExpression$
+        </i>
+        . This can be 0 for ASCII, 8 for UTF-8, 16 for UTF-16 or 32 for UTF-32.
+       </li>
+       <li>
+        <i>
+         fontHandle&amp;
+        </i>
+        is an optional font handle.
+       </li>
+       <li>
+        <i>
+         imageHandle&amp;
+        </i>
+        is the optional image or destination to use. Zero designates current
+        <a href="/qb64wiki/index.php/SCREEN" title="SCREEN">
+         SCREEN
+        </a>
+        page.
+       </li>
+      </ul>
+      <p>
+       <br/>
+      </p>
+      <h2>
+       <span class="mw-headline" id="Description">
+        Description
+       </span>
+      </h2>
+      <ul>
+       <li>
+        The starting coordinate sets the top left corner of the text to be printed.
+       </li>
+       <li>
+        If
+        <i>
+         maxWidth&amp;
+        </i>
+        is omitted, then the entire
+        <i>
+         textExpression$
+        </i>
+        is rendered.
+       </li>
+       <li>
+        If
+        <i>
+         utfEncoding&amp;
+        </i>
+        is omitted, then it is assumed to be 0 (ASCII).
+       </li>
+       <li>
+        If
+        <i>
+         fontHandle&amp;
+        </i>
+        is omitted, then the current write page font is used.
+       </li>
+       <li>
+        <a href="/qb64wiki/index.php/UPRINTWIDTH" title="UPRINTWIDTH">
+         _UPRINTWIDTH
+        </a>
+        can be used to determine how wide a text print will be so that the screen width is not exceeded. Alternatively,
+        <i>
+         maxWidth&amp;
+        </i>
+        can be used to clip text rending after a certain amount of pixel width.
+       </li>
+       <li>
+        <a href="/qb64wiki/index.php/ULINESPACING" title="ULINESPACING">
+         _ULINESPACING
+        </a>
+        can be used to calculate the next
+        <a href="/qb64wiki/index.php/FONT" title="FONT">
+         font
+        </a>
+        vertical position.
+       </li>
+       <li>
+        Unicode byte order mark (BOM) is not processed and must be handled by user code except for UTF-16.
+       </li>
+       <li>
+        UTF-16 LE is assumed if BOM is absent in the string and
+        <i>
+         utfEncoding&amp;
+        </i>
+        is 16.
+       </li>
+       <li>
+        Can use the current font alpha blending with a designated image background. See the
+        <a href="/qb64wiki/index.php/RGBA" title="RGBA">
+         _RGBA
+        </a>
+        function example.
+       </li>
+       <li>
+        Use the
+        <a href="/qb64wiki/index.php/PRINTMODE" title="PRINTMODE">
+         _PRINTMODE
+        </a>
+        statement before printing to set how the background is rendered.
+        <ul>
+         <li>
+          Use the
+          <a href="/qb64wiki/index.php/PRINTMODE_(function)" title="PRINTMODE (function)">
+           _PRINTMODE (function)
+          </a>
+          to find the current _PRINTMODE setting.
+         </li>
+        </ul>
+       </li>
+       <li>
+        SCREEN 0 (text only) mode is not supported. Attempting to use this in SCREEN 0 will generate an error.
+       </li>
+      </ul>
+      <p>
+       <br/>
+      </p>
+      <h2>
+       <span class="mw-headline" id="Availability">
+        Availability
+       </span>
+      </h2>
+      <ul class="gallery mw-gallery-nolines">
+       <li class="gallerybox" style="width: 53px">
+        <div style="width: 53px">
+         <div class="thumb" style="width: 48px;">
+          <div style="margin:0px auto;">
+           <a class="image" href="/qb64wiki/index.php/File:Qb64.png" title="none">
+            <img alt="none" decoding="async" height="48" src="/qb64wiki/images/9/91/Qb64.png" width="48"/>
+           </a>
+          </div>
+         </div>
+         <div class="gallerytext">
+          <p>
+           <b>
+            none
+           </b>
+          </p>
+         </div>
+        </div>
+       </li>
+       <li class="gallerybox" style="width: 53px">
+        <div style="width: 53px">
+         <div class="thumb" style="width: 48px;">
+          <div style="margin:0px auto;">
+           <a class="image" href="/qb64wiki/index.php/File:Qbpe.png" title="v3.7.0">
+            <img alt="v3.7.0" decoding="async" height="48" src="/qb64wiki/images/0/07/Qbpe.png" width="48"/>
+           </a>
+          </div>
+         </div>
+         <div class="gallerytext">
+          <p>
+           <b>
+            v3.7.0
+           </b>
+          </p>
+         </div>
+        </div>
+       </li>
+       <li class="gallerybox" style="width: 53px">
+        <div style="width: 53px">
+         <div class="thumb" style="width: 48px;">
+          <div style="margin:0px auto;">
+           <a class="image" href="/qb64wiki/index.php/File:Apix.png">
+            <img alt="Apix.png" decoding="async" height="48" src="/qb64wiki/images/5/5f/Apix.png" width="48"/>
+           </a>
+          </div>
+         </div>
+         <div class="gallerytext">
+         </div>
+        </div>
+       </li>
+       <li class="gallerybox" style="width: 53px">
+        <div style="width: 53px">
+         <div class="thumb" style="width: 48px;">
+          <div style="margin:0px auto;">
+           <a class="image" href="/qb64wiki/index.php/File:Win.png" title="yes">
+            <img alt="yes" decoding="async" height="48" src="/qb64wiki/images/2/29/Win.png" width="48"/>
+           </a>
+          </div>
+         </div>
+         <div class="gallerytext">
+          <p>
+           <b>
+            yes
+           </b>
+          </p>
+         </div>
+        </div>
+       </li>
+       <li class="gallerybox" style="width: 53px">
+        <div style="width: 53px">
+         <div class="thumb" style="width: 48px;">
+          <div style="margin:0px auto;">
+           <a class="image" href="/qb64wiki/index.php/File:Lnx.png" title="yes">
+            <img alt="yes" decoding="async" height="48" src="/qb64wiki/images/7/7a/Lnx.png" width="48"/>
+           </a>
+          </div>
+         </div>
+         <div class="gallerytext">
+          <p>
+           <b>
+            yes
+           </b>
+          </p>
+         </div>
+        </div>
+       </li>
+       <li class="gallerybox" style="width: 53px">
+        <div style="width: 53px">
+         <div class="thumb" style="width: 48px;">
+          <div style="margin:0px auto;">
+           <a class="image" href="/qb64wiki/index.php/File:Osx.png" title="yes">
+            <img alt="yes" decoding="async" height="48" src="/qb64wiki/images/2/22/Osx.png" width="48"/>
+           </a>
+          </div>
+         </div>
+         <div class="gallerytext">
+          <p>
+           <b>
+            yes
+           </b>
+          </p>
+         </div>
+        </div>
+       </li>
+      </ul>
+      <p>
+       <br/>
+      </p>
+      <h2>
+       <span class="mw-headline" id="Examples">
+        Examples
+       </span>
+      </h2>
+      <dl>
+       <dt>
+        Example 1
+       </dt>
+       <dd>
+        Centers and prints a Russian text on a graphics screen.
+       </dd>
+      </dl>
+      <table cellpadding="15px" width="100%">
+       <tbody>
+        <tr>
+         <td>
+          <pre class="codeide"><a href="/qb64wiki/index.php/OPTION" title="OPTION"><span style="color:#4593D8;">OPTION</span></a> <a class="mw-redirect" href="/qb64wiki/index.php/EXPLICIT" title="EXPLICIT"><span style="color:#4593D8;">_EXPLICIT</span></a>
+
+<a href="/qb64wiki/index.php/SCREEN" title="SCREEN"><span style="color:#4593D8;">SCREEN</span></a> <a href="/qb64wiki/index.php/NEWIMAGE" title="NEWIMAGE"><span style="color:#4593D8;">_NEWIMAGE</span></a>(<span style="color:#F580B1;">800</span>, <span style="color:#F580B1;">600</span>, <span style="color:#F580B1;">32</span>)
+
+<a href="/qb64wiki/index.php/DIM" title="DIM"><span style="color:#4593D8;">DIM</span></a> fh <a href="/qb64wiki/index.php/AS" title="AS"><span style="color:#4593D8;">AS</span></a> <a href="/qb64wiki/index.php/LONG" title="LONG"><span style="color:#4593D8;">LONG</span></a>: fh = <a href="/qb64wiki/index.php/LOADFONT" title="LOADFONT"><span style="color:#4593D8;">_LOADFONT</span></a>(<span style="color:#FFB100;">"cyberbit.ttf"</span>, <span style="color:#F580B1;">21</span>)
+<a class="mw-redirect" href="/qb64wiki/index.php/IF" title="IF"><span style="color:#4593D8;">IF</span></a> fh &lt;= <span style="color:#F580B1;">0</span> <a href="/qb64wiki/index.php/THEN" title="THEN"><span style="color:#4593D8;">THEN</span></a>
+    <a href="/qb64wiki/index.php/PRINT" title="PRINT"><span style="color:#4593D8;">PRINT</span></a> <span style="color:#FFB100;">"Failed to load font file!"</span>
+    <a href="/qb64wiki/index.php/END" title="END"><span style="color:#4593D8;">END</span></a>
+<a class="mw-redirect" href="/qb64wiki/index.php/END_IF" title="END IF"><span style="color:#4593D8;">END IF</span></a>
+
+<a href="/qb64wiki/index.php/FONT" title="FONT"><span style="color:#4593D8;">_FONT</span></a> fh
+
+<a href="/qb64wiki/index.php/RESTORE" title="RESTORE"><span style="color:#4593D8;">RESTORE</span></a> text_data
+<a href="/qb64wiki/index.php/DIM" title="DIM"><span style="color:#4593D8;">DIM</span></a> myString <a href="/qb64wiki/index.php/AS" title="AS"><span style="color:#4593D8;">AS</span></a> <a href="/qb64wiki/index.php/STRING" title="STRING"><span style="color:#4593D8;">STRING</span></a>: myString = <span style="color:#55FF55;">LoadUData$</span>
+
+<a class="mw-selflink selflink"><span style="color:#4593D8;">_UPRINTSTRING</span></a> (<a href="/qb64wiki/index.php/WIDTH_(function)" title="WIDTH (function)"><span style="color:#4593D8;">_WIDTH</span></a> \ <span style="color:#F580B1;">2</span> - <a href="/qb64wiki/index.php/UPRINTWIDTH" title="UPRINTWIDTH"><span style="color:#4593D8;">_UPRINTWIDTH</span></a>(myString, <span style="color:#F580B1;">8</span>, fh) \ <span style="color:#F580B1;">2</span>, <a href="/qb64wiki/index.php/HEIGHT" title="HEIGHT"><span style="color:#4593D8;">_HEIGHT</span></a> \ <span style="color:#F580B1;">2</span> - <a href="/qb64wiki/index.php/UFONTHEIGHT" title="UFONTHEIGHT"><span style="color:#4593D8;">_UFONTHEIGHT</span></a> \ <span style="color:#F580B1;">2</span>), myString, <a href="/qb64wiki/index.php/WIDTH_(function)" title="WIDTH (function)"><span style="color:#4593D8;">_WIDTH</span></a>, <span style="color:#F580B1;">8</span>
+
+<a href="/qb64wiki/index.php/END" title="END"><span style="color:#4593D8;">END</span></a>
+
+text_data:
+<a href="/qb64wiki/index.php/DATA" title="DATA"><span style="color:#4593D8;">DATA</span></a> <span style="color:#F580B1;">6F</span>,D0,<span style="color:#F580B1;">91</span>,D1,<span style="color:#F580B1;">8B</span>,D1,<span style="color:#F580B1;">81</span>,D1,<span style="color:#F580B1;">82</span>,D1,<span style="color:#F580B1;">80</span>,D0,B0,D1,<span style="color:#F580B1;">8F</span>,<span style="color:#F580B1;">20</span>,D0,BA,D0,BE,D1,<span style="color:#F580B1;">80</span>,D0,B8,D1
+<a href="/qb64wiki/index.php/DATA" title="DATA"><span style="color:#4593D8;">DATA</span></a> <span style="color:#F580B1;">87</span>,D0,BD,D0,B5,D0,B2,D0,B0,D1,<span style="color:#F580B1;">8F</span>,<span style="color:#F580B1;">20</span>,D0,BB,D0,B8,D1,<span style="color:#F580B1;">81</span>,D0,B0,<span style="color:#F580B1;">20</span>,D0,BF,D0,B5
+<a href="/qb64wiki/index.php/DATA" title="DATA"><span style="color:#4593D8;">DATA</span></a> D1,<span style="color:#F580B1;">80</span>,D0,B5,D0,BF,D1,<span style="color:#F580B1;">80</span>,D1,<span style="color:#F580B1;">8B</span>,D0,B3,D0,B8,D0,B2,D0,B0,D0,B5,D1,<span style="color:#F580B1;">82</span>,<span style="color:#F580B1;">20</span>,D1,<span style="color:#F580B1;">87</span>
+<a href="/qb64wiki/index.php/DATA" title="DATA"><span style="color:#4593D8;">DATA</span></a> D0,B5,D1,<span style="color:#F580B1;">80</span>,D0,B5,D0,B7,<span style="color:#F580B1;">20</span>,D0,BB,D0,B5,D0,BD,D0,B8,D0,B2,D1,<span style="color:#F580B1;">83</span>,D1,<span style="color:#F580B1;">8E</span>,<span style="color:#F580B1;">20</span>,D1
+<a href="/qb64wiki/index.php/DATA" title="DATA"><span style="color:#4593D8;">DATA</span></a> <span style="color:#F580B1;">81</span>,D0,BE,D0,B1,D0,B0,D0,BA,D1,<span style="color:#F580B1;">83</span>,<span style="color:#F580B1;">2E</span>
+
+<a href="/qb64wiki/index.php/FUNCTION" title="FUNCTION"><span style="color:#4593D8;">FUNCTION</span></a> <span style="color:#55FF55;">LoadUData$</span>
+    <a href="/qb64wiki/index.php/DIM" title="DIM"><span style="color:#4593D8;">DIM</span></a> <a href="/qb64wiki/index.php/AS" title="AS"><span style="color:#4593D8;">AS</span></a> <a href="/qb64wiki/index.php/UNSIGNED" title="UNSIGNED"><span style="color:#4593D8;">_UNSIGNED</span></a> <a href="/qb64wiki/index.php/LONG" title="LONG"><span style="color:#4593D8;">LONG</span></a> i, s
+    <a href="/qb64wiki/index.php/DIM" title="DIM"><span style="color:#4593D8;">DIM</span></a> d <a href="/qb64wiki/index.php/AS" title="AS"><span style="color:#4593D8;">AS</span></a> <a href="/qb64wiki/index.php/STRING" title="STRING"><span style="color:#4593D8;">STRING</span></a>
+    <a href="/qb64wiki/index.php/DIM" title="DIM"><span style="color:#4593D8;">DIM</span></a> buffer <a href="/qb64wiki/index.php/AS" title="AS"><span style="color:#4593D8;">AS</span></a> <a href="/qb64wiki/index.php/STRING" title="STRING"><span style="color:#4593D8;">STRING</span></a>
+
+    <a href="/qb64wiki/index.php/READ" title="READ"><span style="color:#4593D8;">READ</span></a> d
+    s = <a href="/qb64wiki/index.php/VAL" title="VAL"><span style="color:#4593D8;">VAL</span></a>(<span style="color:#FFB100;">"&amp;h"</span> + d)
+    buffer = <a href="/qb64wiki/index.php/SPACE$" title="SPACE$"><span style="color:#4593D8;">SPACE$</span></a>(s)
+
+    <a href="/qb64wiki/index.php/FOR" title="FOR"><span style="color:#4593D8;">FOR</span></a> i = <span style="color:#F580B1;">1</span> <a href="/qb64wiki/index.php/TO" title="TO"><span style="color:#4593D8;">TO</span></a> s
+        <a href="/qb64wiki/index.php/READ" title="READ"><span style="color:#4593D8;">READ</span></a> d
+        <a href="/qb64wiki/index.php/ASC" title="ASC"><span style="color:#4593D8;">ASC</span></a>(buffer, i) = <a href="/qb64wiki/index.php/VAL" title="VAL"><span style="color:#4593D8;">VAL</span></a>(<span style="color:#FFB100;">"&amp;h"</span> + d)
+    <a href="/qb64wiki/index.php/NEXT" title="NEXT"><span style="color:#4593D8;">NEXT</span></a>
+
+    <span style="color:#55FF55;">LoadUData</span> = buffer
+<a class="mw-redirect" href="/qb64wiki/index.php/END_FUNCTION" title="END FUNCTION"><span style="color:#4593D8;">END FUNCTION</span></a>
+</pre>
+         </td>
+        </tr>
+       </tbody>
+      </table>
+      <hr/>
+      <dl>
+       <dt>
+        Example 2
+       </dt>
+       <dd>
+        Prints multiple lines of text using a recommended line gap.
+       </dd>
+      </dl>
+      <table cellpadding="15px" width="100%">
+       <tbody>
+        <tr>
+         <td>
+          <pre class="codeide"><a href="/qb64wiki/index.php/OPTION" title="OPTION"><span style="color:#4593D8;">OPTION</span></a> <a class="mw-redirect" href="/qb64wiki/index.php/EXPLICIT" title="EXPLICIT"><span style="color:#4593D8;">_EXPLICIT</span></a>
+
+<a href="/qb64wiki/index.php/SCREEN" title="SCREEN"><span style="color:#4593D8;">SCREEN</span></a> <a href="/qb64wiki/index.php/NEWIMAGE" title="NEWIMAGE"><span style="color:#4593D8;">_NEWIMAGE</span></a>(<span style="color:#F580B1;">800</span>, <span style="color:#F580B1;">600</span>, <span style="color:#F580B1;">32</span>)
+
+<a href="/qb64wiki/index.php/DIM" title="DIM"><span style="color:#4593D8;">DIM</span></a> fh <a href="/qb64wiki/index.php/AS" title="AS"><span style="color:#4593D8;">AS</span></a> <a href="/qb64wiki/index.php/LONG" title="LONG"><span style="color:#4593D8;">LONG</span></a>: fh = <a href="/qb64wiki/index.php/LOADFONT" title="LOADFONT"><span style="color:#4593D8;">_LOADFONT</span></a>(<span style="color:#FFB100;">"LHANDW.TTF"</span>, <span style="color:#F580B1;">23</span>)
+<a class="mw-redirect" href="/qb64wiki/index.php/IF" title="IF"><span style="color:#4593D8;">IF</span></a> fh &lt;= <span style="color:#F580B1;">0</span> <a href="/qb64wiki/index.php/THEN" title="THEN"><span style="color:#4593D8;">THEN</span></a>
+    <a href="/qb64wiki/index.php/PRINT" title="PRINT"><span style="color:#4593D8;">PRINT</span></a> <span style="color:#FFB100;">"Failed to load font file!"</span>
+    <a href="/qb64wiki/index.php/END" title="END"><span style="color:#4593D8;">END</span></a>
+<a class="mw-redirect" href="/qb64wiki/index.php/END_IF" title="END IF"><span style="color:#4593D8;">END IF</span></a>
+
+<a href="/qb64wiki/index.php/FONT" title="FONT"><span style="color:#4593D8;">_FONT</span></a> fh
+
+<a href="/qb64wiki/index.php/CLS" title="CLS"><span style="color:#4593D8;">CLS</span></a> , <a href="/qb64wiki/index.php/RGB32" title="RGB32"><span style="color:#4593D8;">_RGB32</span></a>(<span style="color:#F580B1;">200</span>, <span style="color:#F580B1;">200</span>, <span style="color:#F580B1;">200</span>)
+<a href="/qb64wiki/index.php/COLOR" title="COLOR"><span style="color:#4593D8;">COLOR</span></a> <a href="/qb64wiki/index.php/RGB32" title="RGB32"><span style="color:#4593D8;">_RGB32</span></a>(<span style="color:#F580B1;">0</span>, <span style="color:#F580B1;">0</span>, <span style="color:#F580B1;">0</span>)
+<a href="/qb64wiki/index.php/PRINTMODE" title="PRINTMODE"><span style="color:#4593D8;">_PRINTMODE</span></a> <a class="mw-redirect" href="/qb64wiki/index.php/KEEPBACKGROUND" title="KEEPBACKGROUND"><span style="color:#4593D8;">_KEEPBACKGROUND</span></a>
+
+<a href="/qb64wiki/index.php/DIM" title="DIM"><span style="color:#4593D8;">DIM</span></a> l <a href="/qb64wiki/index.php/AS" title="AS"><span style="color:#4593D8;">AS</span></a> <a href="/qb64wiki/index.php/STRING" title="STRING"><span style="color:#4593D8;">STRING</span></a>, i <a href="/qb64wiki/index.php/AS" title="AS"><span style="color:#4593D8;">AS</span></a> <a href="/qb64wiki/index.php/LONG" title="LONG"><span style="color:#4593D8;">LONG</span></a>
+<a href="/qb64wiki/index.php/FOR" title="FOR"><span style="color:#4593D8;">FOR</span></a> i = <span style="color:#F580B1;">0</span> <a href="/qb64wiki/index.php/TO" title="TO"><span style="color:#4593D8;">TO</span></a> <span style="color:#F580B1;">4</span>
+    <a href="/qb64wiki/index.php/READ" title="READ"><span style="color:#4593D8;">READ</span></a> l
+    <a class="mw-selflink selflink"><span style="color:#4593D8;">_UPRINTSTRING</span></a> (<span style="color:#F580B1;">0</span>, <a href="/qb64wiki/index.php/ULINESPACING" title="ULINESPACING"><span style="color:#4593D8;">_ULINESPACING</span></a> * i), l
+<a href="/qb64wiki/index.php/NEXT" title="NEXT"><span style="color:#4593D8;">NEXT</span></a>
+
+<a href="/qb64wiki/index.php/END" title="END"><span style="color:#4593D8;">END</span></a>
+
+<a href="/qb64wiki/index.php/DATA" title="DATA"><span style="color:#4593D8;">DATA</span></a> <span style="color:#FFB100;">"We are not now that strength which in old days"</span>
+<a href="/qb64wiki/index.php/DATA" title="DATA"><span style="color:#4593D8;">DATA</span></a> <span style="color:#FFB100;">"Moved earth and heaven; that which we are,we are;"</span>
+<a href="/qb64wiki/index.php/DATA" title="DATA"><span style="color:#4593D8;">DATA</span></a> <span style="color:#FFB100;">"One equal temper of heroic hearts,"</span>
+<a href="/qb64wiki/index.php/DATA" title="DATA"><span style="color:#4593D8;">DATA</span></a> <span style="color:#FFB100;">"Made weak by time and fate,but strong in will"</span>
+<a href="/qb64wiki/index.php/DATA" title="DATA"><span style="color:#4593D8;">DATA</span></a> <span style="color:#FFB100;">"To strive,to seek,to find,and not to yield."</span>
+</pre>
+         </td>
+        </tr>
+       </tbody>
+      </table>
+      <p>
+       <br/>
+      </p>
+      <h2>
+       <span class="mw-headline" id="See_also">
+        See also
+       </span>
+      </h2>
+      <ul>
+       <li>
+        <a class="external text" href="https://qb64phoenix.com/forum/showthread.php?tid=2765" rel="nofollow">
+         Featured in our "Keyword of the Day" series (Part 1)
+        </a>
+       </li>
+       <li>
+        <a class="external text" href="https://qb64phoenix.com/forum/showthread.php?tid=2778" rel="nofollow">
+         Featured in our "Keyword of the Day" series (Part 2)
+        </a>
+       </li>
+       <li>
+        <a href="/qb64wiki/index.php/UPRINTWIDTH" title="UPRINTWIDTH">
+         _UPRINTWIDTH
+        </a>
+        ,
+        <a href="/qb64wiki/index.php/UFONTHEIGHT" title="UFONTHEIGHT">
+         _UFONTHEIGHT
+        </a>
+        ,
+        <a href="/qb64wiki/index.php/ULINESPACING" title="ULINESPACING">
+         _ULINESPACING
+        </a>
+        ,
+        <a href="/qb64wiki/index.php/UCHARPOS" title="UCHARPOS">
+         _UCHARPOS
+        </a>
+       </li>
+       <li>
+        <a href="/qb64wiki/index.php/NEWIMAGE" title="NEWIMAGE">
+         _NEWIMAGE
+        </a>
+        ,
+        <a href="/qb64wiki/index.php/PRINTWIDTH" title="PRINTWIDTH">
+         _PRINTWIDTH
+        </a>
+        ,
+        <a href="/qb64wiki/index.php/PRINTMODE" title="PRINTMODE">
+         _PRINTMODE
+        </a>
+       </li>
+       <li>
+        <a href="/qb64wiki/index.php/CONTROLCHR" title="CONTROLCHR">
+         _CONTROLCHR
+        </a>
+       </li>
+       <li>
+        <a href="/qb64wiki/index.php/FONT" title="FONT">
+         _FONT
+        </a>
+        ,
+        <a href="/qb64wiki/index.php/LOADFONT" title="LOADFONT">
+         _LOADFONT
+        </a>
+        ,
+        <a href="/qb64wiki/index.php/FONTHEIGHT" title="FONTHEIGHT">
+         _FONTHEIGHT
+        </a>
+        ,
+        <a href="/qb64wiki/index.php/FONTWIDTH" title="FONTWIDTH">
+         _FONTWIDTH
+        </a>
+       </li>
+       <li>
+        <a href="/qb64wiki/index.php/SCREENIMAGE" title="SCREENIMAGE">
+         _SCREENIMAGE
+        </a>
+        ,
+        <a href="/qb64wiki/index.php/SCREENPRINT" title="SCREENPRINT">
+         _SCREENPRINT
+        </a>
+       </li>
+       <li>
+        <a href="/qb64wiki/index.php/Text_Using_Graphics" title="Text Using Graphics">
+         Text Using Graphics
+        </a>
+       </li>
+      </ul>
+      <p>
+       <br/>
+      </p>
+      <hr/>
+      <center>
+       <b>
+        Navigation:
+       </b>
+      </center>
+      <center>
+       <a href="/qb64wiki/index.php/Main_Page" title="Main Page">
+        Main Page with Articles and Tutorials
+       </a>
+      </center>
+      <center>
+       <a href="/qb64wiki/index.php/Keyword_Reference_-_Alphabetical" title="Keyword Reference - Alphabetical">
+        Keyword Reference - Alphabetical
+       </a>
+      </center>
+      <center>
+       <a href="/qb64wiki/index.php/Keyword_Reference_-_By_usage" title="Keyword Reference - By usage">
+        Keyword Reference - By usage
+       </a>
+      </center>
+      <center>
+       <b>
+        <a class="external text" href="https://qb64phoenix.com/forum/showthread.php?tid=2800" rel="nofollow">
+         Report a broken link
+        </a>
+       </b>
+       <br/>
+      </center>
+      <!-- 
+NewPP limit report
+Cached time: 20240719141602
+Cache expiry: 86400
+Reduced expiry: false
+Complications: [show‐toc]
+CPU time usage: 0.076 seconds
+Real time usage: 0.104 seconds
+Preprocessor visited node count: 1247/1000000
+Post‐expand include size: 8600/2097152 bytes
+Template argument size: 2138/2097152 bytes
+Highest expansion depth: 4/100
+Expensive parser function count: 0/100
+Unstrip recursion depth: 0/20
+Unstrip post‐expand size: 2683/5000000 bytes
+-->
+      <!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%   68.605      1 -total
+ 21.34%   14.641     88 Template:Cl
+  7.61%    5.223      2 Template:CodeEnd
+  5.91%    4.056     68 Template:Text
+  5.60%    3.841      1 Template:PageSeeAlso
+  4.35%    2.982     21 Template:Parameter
+  3.25%    2.227      1 Template:PageExamples
+  3.24%    2.220      1 Template:PageSyntax
+  3.09%    2.117      1 Template:PageDescription
+  3.05%    2.090      1 Template:PageAvailability
+-->
+      <!-- Saved in parser cache with key qb64pnix_mw19894-mwmb_:pcache:idhash:1218-0!canonical and timestamp 20240719141602 and revision id 8970.
+ -->
+     </div>
+     <div class="printfooter" data-nosnippet="">
+      Retrieved from "
+      <a dir="ltr" href="https://qb64phoenix.com/qb64wiki/index.php?title=UPRINTSTRING&amp;oldid=8970">
+       https://qb64phoenix.com/qb64wiki/index.php?title=UPRINTSTRING&amp;oldid=8970
+      </a>
+      "
+     </div>
+    </div>
+    <div class="catlinks catlinks-allhidden" data-mw="interface" id="catlinks">
+    </div>
+   </div>
+  </div>
+  <div id="mw-navigation">
+   <h2>
+    Navigation menu
+   </h2>
+   <div id="mw-head">
+    <nav aria-labelledby="p-personal-label" class="vector-menu mw-portlet mw-portlet-personal vector-user-menu-legacy" id="p-personal" role="navigation">
+     <h3 class="vector-menu-heading" id="p-personal-label">
+      <span class="vector-menu-heading-label">
+       Personal tools
+      </span>
+     </h3>
+     <div class="vector-menu-content">
+      <ul class="vector-menu-content-list">
+       <li class="mw-list-item" id="pt-login">
+        <a accesskey="o" href="/qb64wiki/index.php?title=Special:UserLogin&amp;returnto=UPRINTSTRING" title="You are encouraged to log in; however, it is not mandatory [o]">
+         <span>
+          Log in
+         </span>
+        </a>
+       </li>
+      </ul>
+     </div>
+    </nav>
+    <div id="left-navigation">
+     <nav aria-labelledby="p-namespaces-label" class="vector-menu mw-portlet mw-portlet-namespaces vector-menu-tabs vector-menu-tabs-legacy" id="p-namespaces" role="navigation">
+      <h3 class="vector-menu-heading" id="p-namespaces-label">
+       <span class="vector-menu-heading-label">
+        Namespaces
+       </span>
+      </h3>
+      <div class="vector-menu-content">
+       <ul class="vector-menu-content-list">
+        <li class="selected mw-list-item" id="ca-nstab-main">
+         <a accesskey="c" href="/qb64wiki/index.php/UPRINTSTRING" title="View the content page [c]">
+          <span>
+           Page
+          </span>
+         </a>
+        </li>
+        <li class="new mw-list-item" id="ca-talk">
+         <a accesskey="t" href="/qb64wiki/index.php?title=Talk:UPRINTSTRING&amp;action=edit&amp;redlink=1" rel="discussion" title="Discussion about the content page (page does not exist) [t]">
+          <span>
+           Discussion
+          </span>
+         </a>
+        </li>
+       </ul>
+      </div>
+     </nav>
+     <nav aria-labelledby="p-variants-label" class="vector-menu mw-portlet mw-portlet-variants emptyPortlet vector-menu-dropdown" id="p-variants" role="navigation">
+      <input aria-haspopup="true" aria-labelledby="p-variants-label" class="vector-menu-checkbox" data-event-name="ui.dropdown-p-variants" id="p-variants-checkbox" role="button" type="checkbox"/>
+      <label aria-label="Change language variant" class="vector-menu-heading" id="p-variants-label">
+       <span class="vector-menu-heading-label">
+        English
+       </span>
+      </label>
+      <div class="vector-menu-content">
+       <ul class="vector-menu-content-list">
+       </ul>
+      </div>
+     </nav>
+    </div>
+    <div id="right-navigation">
+     <nav aria-labelledby="p-views-label" class="vector-menu mw-portlet mw-portlet-views vector-menu-tabs vector-menu-tabs-legacy" id="p-views" role="navigation">
+      <h3 class="vector-menu-heading" id="p-views-label">
+       <span class="vector-menu-heading-label">
+        Views
+       </span>
+      </h3>
+      <div class="vector-menu-content">
+       <ul class="vector-menu-content-list">
+        <li class="selected mw-list-item" id="ca-view">
+         <a href="/qb64wiki/index.php/UPRINTSTRING">
+          <span>
+           Read
+          </span>
+         </a>
+        </li>
+        <li class="mw-list-item" id="ca-viewsource">
+         <a accesskey="e" href="/qb64wiki/index.php?title=UPRINTSTRING&amp;action=edit" title="This page is protected.
+You can view its source [e]">
+          <span>
+           View source
+          </span>
+         </a>
+        </li>
+        <li class="mw-list-item" id="ca-history">
+         <a accesskey="h" href="/qb64wiki/index.php?title=UPRINTSTRING&amp;action=history" title="Past revisions of this page [h]">
+          <span>
+           View history
+          </span>
+         </a>
+        </li>
+       </ul>
+      </div>
+     </nav>
+     <nav aria-labelledby="p-cactions-label" class="vector-menu mw-portlet mw-portlet-cactions emptyPortlet vector-menu-dropdown" id="p-cactions" role="navigation" title="More options">
+      <input aria-haspopup="true" aria-labelledby="p-cactions-label" class="vector-menu-checkbox" data-event-name="ui.dropdown-p-cactions" id="p-cactions-checkbox" role="button" type="checkbox"/>
+      <label class="vector-menu-heading" id="p-cactions-label">
+       <span class="vector-menu-heading-label">
+        More
+       </span>
+      </label>
+      <div class="vector-menu-content">
+       <ul class="vector-menu-content-list">
+       </ul>
+      </div>
+     </nav>
+     <div class="vector-search-box-vue vector-search-box-show-thumbnail vector-search-box-auto-expand-width vector-search-box" id="p-search" role="search">
+      <div>
+       <h3>
+        <label for="searchInput">
+         Search
+        </label>
+       </h3>
+       <form action="/qb64wiki/index.php" class="vector-search-box-form" id="searchform">
+        <div class="vector-search-box-inner" data-search-loc="header-navigation" id="simpleSearch">
+         <input accesskey="f" aria-label="Search QB64 Phoenix Edition Wiki" autocapitalize="sentences" class="vector-search-box-input" id="searchInput" name="search" placeholder="Search QB64 Phoenix Edition Wiki" title="Search QB64 Phoenix Edition Wiki [f]" type="search"/>
+         <input name="title" type="hidden" value="Special:Search"/>
+         <input class="searchButton mw-fallbackSearchButton" id="mw-searchButton" name="fulltext" title="Search the pages for this text" type="submit" value="Search"/>
+         <input class="searchButton" id="searchButton" name="go" title="Go to a page with this exact name if it exists" type="submit" value="Go"/>
+        </div>
+       </form>
+      </div>
+     </div>
+    </div>
+   </div>
+   <div id="mw-panel">
+    <div id="p-logo" role="banner">
+     <a class="mw-wiki-logo" href="/qb64wiki/index.php/Main_Page" title="Visit the main page">
+     </a>
+    </div>
+    <nav aria-labelledby="p-navigation-label" class="vector-menu mw-portlet mw-portlet-navigation vector-menu-portal portal" id="p-navigation" role="navigation">
+     <h3 class="vector-menu-heading" id="p-navigation-label">
+      <span class="vector-menu-heading-label">
+       Navigation
+      </span>
+     </h3>
+     <div class="vector-menu-content">
+      <ul class="vector-menu-content-list">
+       <li class="mw-list-item" id="n-mainpage-description">
+        <a accesskey="z" href="/qb64wiki/index.php/Main_Page" title="Visit the main page [z]">
+         <span>
+          Main page
+         </span>
+        </a>
+       </li>
+       <li class="mw-list-item" id="n-recentchanges">
+        <a accesskey="r" href="/qb64wiki/index.php/Special:RecentChanges" title="A list of recent changes in the wiki [r]">
+         <span>
+          Recent changes
+         </span>
+        </a>
+       </li>
+       <li class="mw-list-item" id="n-randompage">
+        <a accesskey="x" href="/qb64wiki/index.php/Special:Random" title="Load a random page [x]">
+         <span>
+          Random page
+         </span>
+        </a>
+       </li>
+       <li class="mw-list-item" id="n-help-mediawiki">
+        <a href="https://www.mediawiki.org/wiki/Special:MyLanguage/Help:Contents">
+         <span>
+          Help about MediaWiki
+         </span>
+        </a>
+       </li>
+      </ul>
+     </div>
+    </nav>
+    <nav aria-labelledby="p-tb-label" class="vector-menu mw-portlet mw-portlet-tb vector-menu-portal portal" id="p-tb" role="navigation">
+     <h3 class="vector-menu-heading" id="p-tb-label">
+      <span class="vector-menu-heading-label">
+       Tools
+      </span>
+     </h3>
+     <div class="vector-menu-content">
+      <ul class="vector-menu-content-list">
+       <li class="mw-list-item" id="t-whatlinkshere">
+        <a accesskey="j" href="/qb64wiki/index.php/Special:WhatLinksHere/UPRINTSTRING" title="A list of all wiki pages that link here [j]">
+         <span>
+          What links here
+         </span>
+        </a>
+       </li>
+       <li class="mw-list-item" id="t-recentchangeslinked">
+        <a accesskey="k" href="/qb64wiki/index.php/Special:RecentChangesLinked/UPRINTSTRING" rel="nofollow" title="Recent changes in pages linked from this page [k]">
+         <span>
+          Related changes
+         </span>
+        </a>
+       </li>
+       <li class="mw-list-item" id="t-specialpages">
+        <a accesskey="q" href="/qb64wiki/index.php/Special:SpecialPages" title="A list of all special pages [q]">
+         <span>
+          Special pages
+         </span>
+        </a>
+       </li>
+       <li class="mw-list-item" id="t-print">
+        <a accesskey="p" href="javascript:print();" rel="alternate" title="Printable version of this page [p]">
+         <span>
+          Printable version
+         </span>
+        </a>
+       </li>
+       <li class="mw-list-item" id="t-permalink">
+        <a href="/qb64wiki/index.php?title=UPRINTSTRING&amp;oldid=8970" title="Permanent link to this revision of this page">
+         <span>
+          Permanent link
+         </span>
+        </a>
+       </li>
+       <li class="mw-list-item" id="t-info">
+        <a href="/qb64wiki/index.php?title=UPRINTSTRING&amp;action=info" title="More information about this page">
+         <span>
+          Page information
+         </span>
+        </a>
+       </li>
+      </ul>
+     </div>
+    </nav>
+   </div>
+  </div>
+  <footer class="mw-footer" id="footer" role="contentinfo">
+   <ul id="footer-info">
+    <li id="footer-info-lastmod">
+     This page was last edited on 6 June 2024, at 21:45.
+    </li>
+   </ul>
+   <ul id="footer-places">
+    <li id="footer-places-privacy">
+     <a href="/qb64wiki/index.php/QB64_Phoenix_Edition_Wiki:Privacy_policy">
+      Privacy policy
+     </a>
+    </li>
+    <li id="footer-places-about">
+     <a href="/qb64wiki/index.php/QB64_Phoenix_Edition_Wiki:About">
+      About QB64 Phoenix Edition Wiki
+     </a>
+    </li>
+    <li id="footer-places-disclaimer">
+     <a href="/qb64wiki/index.php/QB64_Phoenix_Edition_Wiki:General_disclaimer">
+      Disclaimers
+     </a>
+    </li>
+   </ul>
+   <ul class="noprint" id="footer-icons">
+    <li id="footer-poweredbyico">
+     <a href="https://www.mediawiki.org/">
+      <img alt="Powered by MediaWiki" height="31" loading="lazy" src="/qb64wiki/resources/assets/poweredby_mediawiki_88x31.png" srcset="/qb64wiki/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /qb64wiki/resources/assets/poweredby_mediawiki_176x62.png 2x" width="88"/>
+     </a>
+    </li>
+   </ul>
+  </footer>
+  <script>
+   (RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgPageParseReport":{"limitreport":{"cputime":"0.076","walltime":"0.104","ppvisitednodes":{"value":1247,"limit":1000000},"postexpandincludesize":{"value":8600,"limit":2097152},"templateargumentsize":{"value":2138,"limit":2097152},"expansiondepth":{"value":4,"limit":100},"expensivefunctioncount":{"value":0,"limit":100},"unstrip-depth":{"value":0,"limit":20},"unstrip-size":{"value":2683,"limit":5000000},"timingprofile":["100.00%   68.605      1 -total"," 21.34%   14.641     88 Template:Cl","  7.61%    5.223      2 Template:CodeEnd","  5.91%    4.056     68 Template:Text","  5.60%    3.841      1 Template:PageSeeAlso","  4.35%    2.982     21 Template:Parameter","  3.25%    2.227      1 Template:PageExamples","  3.24%    2.220      1 Template:PageSyntax","  3.09%    2.117      1 Template:PageDescription","  3.05%    2.090      1 Template:PageAvailability"]},"cachereport":{"timestamp":"20240719141602","ttl":86400,"transientcontent":false}}});mw.config.set({"wgBackendResponseTime":139});});
+  </script>
+ </body>
+</html>

@@ -1,0 +1,727 @@
+<!DOCTYPE html>
+<html class="client-nojs" dir="ltr" lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <title>
+   GET (HTTP statement) - QB64 Phoenix Edition Wiki
+  </title>
+  <script>
+   document.documentElement.className="client-js";RLCONF={"wgBreakFrames":false,"wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgRequestId":"Zpp7TJ35EcyPqcm4ZfYt4wAAAEA","wgCSPNonce":false,"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"GET_(HTTP_statement)","wgTitle":"GET (HTTP statement)","wgCurRevisionId":5492,"wgRevisionId":5492,"wgArticleId":1178,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":[],"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgRelevantPageName":"GET_(HTTP_statement)","wgRelevantArticleId":1178,"wgIsProbablyEditable":false,"wgRelevantPageIsProbablyEditable":false,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgVector2022PreviewPages":[]};RLSTATE={"site.styles":
+"ready","user.styles":"ready","user":"ready","user.options":"loading","skins.vector.styles.legacy":"ready"};RLPAGEMODULES=["site","mediawiki.page.ready","mediawiki.toc","skins.vector.legacy.js"];
+  </script>
+  <script>
+   (RLQ=window.RLQ||[]).push(function(){mw.loader.implement("user.options@12s5i",function($,jQuery,require,module){mw.user.tokens.set({"patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});});});
+  </script>
+  <link href="/qb64wiki/load.php?lang=en&amp;modules=skins.vector.styles.legacy&amp;only=styles&amp;skin=vector" rel="stylesheet"/>
+  <script async="" src="/qb64wiki/load.php?lang=en&amp;modules=startup&amp;only=scripts&amp;raw=1&amp;skin=vector">
+  </script>
+  <meta content="" name="ResourceLoaderDynamicStyles"/>
+  <link href="/qb64wiki/load.php?lang=en&amp;modules=site.styles&amp;only=styles&amp;skin=vector" rel="stylesheet"/>
+  <meta content="MediaWiki 1.39.3" name="generator"/>
+  <meta content="telephone=no" name="format-detection"/>
+  <meta content="width=1000" name="viewport"/>
+  <link href="/favicon.ico" rel="icon"/>
+  <link href="/qb64wiki/opensearch_desc.php" rel="search" title="QB64 Phoenix Edition Wiki (en)" type="application/opensearchdescription+xml"/>
+  <link href="https://qb64phoenix.com/qb64wiki/api.php?action=rsd" rel="EditURI" type="application/rsd+xml"/>
+  <link href="/qb64wiki/index.php?title=Special:RecentChanges&amp;feed=atom" rel="alternate" title="QB64 Phoenix Edition Wiki Atom feed" type="application/atom+xml"/>
+ </head>
+ <body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject page-GET_HTTP_statement rootpage-GET_HTTP_statement skin-vector action-view skin-vector-legacy vector-feature-language-in-header-enabled vector-feature-language-in-main-page-header-disabled vector-feature-language-alert-in-sidebar-disabled vector-feature-sticky-header-disabled vector-feature-sticky-header-edit-disabled vector-feature-table-of-contents-disabled vector-feature-visual-enhancement-next-disabled">
+  <div class="noprint" id="mw-page-base">
+  </div>
+  <div class="noprint" id="mw-head-base">
+  </div>
+  <div class="mw-body" id="content" role="main">
+   <a id="top">
+   </a>
+   <div id="siteNotice">
+   </div>
+   <div class="mw-indicators">
+   </div>
+   <h1 class="firstHeading mw-first-heading" id="firstHeading">
+    <span class="mw-page-title-main">
+     GET (HTTP statement)
+    </span>
+   </h1>
+   <div class="vector-body" id="bodyContent">
+    <div class="noprint" id="siteSub">
+     From QB64 Phoenix Edition Wiki
+    </div>
+    <div id="contentSub">
+    </div>
+    <div id="contentSub2">
+    </div>
+    <div id="jump-to-nav">
+    </div>
+    <a class="mw-jump-link" href="#mw-head">
+     Jump to navigation
+    </a>
+    <a class="mw-jump-link" href="#searchInput">
+     Jump to search
+    </a>
+    <div class="mw-body-content mw-content-ltr" dir="ltr" id="mw-content-text" lang="en">
+     <div class="mw-parser-output">
+      <p>
+       <b>
+        GET
+       </b>
+       reads the response of an HTTP request that was opened using
+       <a href="/qb64wiki/index.php/OPENCLIENT" title="OPENCLIENT">
+        _OPENCLIENT
+       </a>
+       .
+      </p>
+      <p>
+       <span style="color:red;">
+        <b>
+         HTTP functionality is current unstable, and requires
+         <a href="/qb64wiki/index.php/$UNSTABLE" title="$UNSTABLE">
+          $UNSTABLE
+         </a>
+         :HTTP to be able to use.
+        </b>
+       </span>
+      </p>
+      <p>
+       <br/>
+      </p>
+      <table align="right" style="max-width:25%;">
+       <tbody>
+        <tr>
+         <td>
+          <div aria-labelledby="mw-toc-heading" class="toc" id="toc" role="navigation">
+           <input class="toctogglecheckbox" id="toctogglecheckbox" role="button" style="display:none" type="checkbox"/>
+           <div class="toctitle" dir="ltr" lang="en">
+            <h2 id="mw-toc-heading">
+             Contents
+            </h2>
+            <span class="toctogglespan">
+             <label class="toctogglelabel" for="toctogglecheckbox">
+             </label>
+            </span>
+           </div>
+           <ul>
+            <li class="toclevel-1">
+             <a href="#Syntax">
+              <span class="tocnumber">
+               1
+              </span>
+              <span class="toctext">
+               Syntax
+              </span>
+             </a>
+            </li>
+            <li class="toclevel-1">
+             <a href="#Parameters">
+              <span class="tocnumber">
+               2
+              </span>
+              <span class="toctext">
+               Parameters
+              </span>
+             </a>
+            </li>
+            <li class="toclevel-1">
+             <a href="#Description">
+              <span class="tocnumber">
+               3
+              </span>
+              <span class="toctext">
+               Description
+              </span>
+             </a>
+            </li>
+            <li class="toclevel-1">
+             <a href="#Availability">
+              <span class="tocnumber">
+               4
+              </span>
+              <span class="toctext">
+               Availability
+              </span>
+             </a>
+            </li>
+            <li class="toclevel-1">
+             <a href="#Examples">
+              <span class="tocnumber">
+               5
+              </span>
+              <span class="toctext">
+               Examples
+              </span>
+             </a>
+            </li>
+           </ul>
+          </div>
+         </td>
+        </tr>
+       </tbody>
+      </table>
+      <h2>
+       <span class="mw-headline" id="Syntax">
+        Syntax
+       </span>
+      </h2>
+      <dl>
+       <dd>
+        <a class="mw-selflink selflink">
+         GET
+        </a>
+        #
+        <i>
+         Handle
+        </i>
+        , ,
+        <i>
+         String
+        </i>
+       </dd>
+       <dd>
+        <a class="mw-selflink selflink">
+         GET
+        </a>
+        #
+        <i>
+         Handle
+        </i>
+        , ,
+        <i>
+         Fixed-Length-Variable
+        </i>
+       </dd>
+      </dl>
+      <p>
+       <br/>
+      </p>
+      <h2>
+       <span class="mw-headline" id="Parameters">
+        Parameters
+       </span>
+      </h2>
+      <ul>
+       <li>
+        <i>
+         Handle
+        </i>
+        is the handle returned from
+        <a href="/qb64wiki/index.php/OPENCLIENT" title="OPENCLIENT">
+         _OPENCLIENT
+        </a>
+        when making an HTTP request.
+       </li>
+       <li>
+        <i>
+         String
+        </i>
+        is a regular
+        <a href="/qb64wiki/index.php/STRING" title="STRING">
+         STRING
+        </a>
+        variable.
+       </li>
+       <li>
+        <i>
+         Fixed-Length-Variable
+        </i>
+        is any variable with a type that has a fixed size.
+       </li>
+      </ul>
+      <p>
+       <br/>
+      </p>
+      <h2>
+       <span class="mw-headline" id="Description">
+        Description
+       </span>
+      </h2>
+      <p>
+       <b>
+        GET
+       </b>
+       is used to read the HTTP response data from an HTTP request opened using
+       <a href="/qb64wiki/index.php/OPENCLIENT" title="OPENCLIENT">
+        _OPENCLIENT
+       </a>
+       . The preferred way to use this is by passing
+       <b>
+        GET
+       </b>
+       a variable-length
+       <a href="/qb64wiki/index.php/STRING" title="STRING">
+        STRING
+       </a>
+       variable. The
+       <a href="/qb64wiki/index.php/STRING" title="STRING">
+        STRING
+       </a>
+       variable will be resized to fit all the data currently available from the HTTP connection.
+       <b>
+        GET
+       </b>
+       should be called multiple times to receive all the data from the HTTP request.
+       <a href="/qb64wiki/index.php/EOF" title="EOF">
+        EOF
+       </a>
+       should be used to check if there is more data left to
+       <b>
+        GET
+       </b>
+       , when
+       <a href="/qb64wiki/index.php/EOF" title="EOF">
+        EOF
+       </a>
+       returns true then the request is complete and all the data in the request response has been read via
+       <b>
+        GET
+       </b>
+       .
+      </p>
+      <p>
+       Another option is to use fixed-length variables with
+       <b>
+        GET
+       </b>
+       . This is not recommended as the behavior becomes more complex due to QB64-PE being unable to resize the provided variable to match the amount of data currently available from the connection. When using this version, the behavior of
+       <a href="/qb64wiki/index.php/EOF" title="EOF">
+        EOF
+       </a>
+       will change to report an
+       <a href="/qb64wiki/index.php/EOF" title="EOF">
+        EOF
+       </a>
+       if there is not enough data available from the connection to completely fill the variable provided to
+       <b>
+        GET
+       </b>
+       . You should make use of
+       <a href="/qb64wiki/index.php/CONNECTED" title="CONNECTED">
+        _CONNECTED
+       </a>
+       to determine whether the
+       <a href="/qb64wiki/index.php/EOF" title="EOF">
+        EOF
+       </a>
+       indicates the actual end of the HTTP response, as if the connection is no longer up then you can be sure no new data may be coming.
+      </p>
+      <p>
+       <br/>
+      </p>
+      <h2>
+       <span class="mw-headline" id="Availability">
+        Availability
+       </span>
+      </h2>
+      <ul>
+       <li>
+        <b>
+         QB64-PE v3.5.0 and up
+        </b>
+       </li>
+      </ul>
+      <p>
+       <br/>
+      </p>
+      <h2>
+       <span class="mw-headline" id="Examples">
+        Examples
+       </span>
+      </h2>
+      <table cellpadding="15px" width="100%">
+       <tbody>
+        <tr>
+         <td>
+          <pre class="codeide"><a href="/qb64wiki/index.php/$UNSTABLE" title="$UNSTABLE"><span style="color:#4593D8;">$UNSTABLE</span></a>:HTTP
+
+' This URL simply returns a fake JSON response
+h&amp; = <a href="/qb64wiki/index.php/OPENCLIENT" title="OPENCLIENT"><span style="color:#4593D8;">_OPENCLIENT</span></a>("HTTP:https://httpbin.org/json")
+
+<a class="mw-redirect" href="/qb64wiki/index.php/WHILE" title="WHILE"><span style="color:#4593D8;">WHILE</span></a> <a href="/qb64wiki/index.php/NOT" title="NOT"><span style="color:#4593D8;">NOT</span></a> <a href="/qb64wiki/index.php/EOF" title="EOF"><span style="color:#4593D8;">EOF</span></a>(h&amp;)
+    <a href="/qb64wiki/index.php/LIMIT" title="LIMIT"><span style="color:#4593D8;">_LIMIT</span></a> 100 ' Hitting GET too fast will simply slow down the download
+
+    <a class="mw-selflink selflink"><span style="color:#4593D8;">GET</span></a> #h&amp;, , s$
+
+    ' Combine all the data we get from 'GET' into a single string containing the full response
+    Content$ = Content$ + s$
+<a class="mw-redirect" href="/qb64wiki/index.php/WEND" title="WEND"><span style="color:#4593D8;">WEND</span></a>
+
+<a href="/qb64wiki/index.php/CLOSE" title="CLOSE"><span style="color:#4593D8;">CLOSE</span></a> h&amp;
+
+' Prints out the full response from that HTTP request
+<a href="/qb64wiki/index.php/PRINT" title="PRINT"><span style="color:#4593D8;">PRINT</span></a> Content$
+</pre>
+         </td>
+        </tr>
+       </tbody>
+      </table>
+      <center>
+       <span style="font-family: Courier New, Courier, monospace; font-size: 0.80em; line-height: 50%;">
+        Code by Matthew Kilgore
+       </span>
+      </center>
+      <table cellpadding="15px" width="100%">
+       <tbody>
+        <tr>
+         <td>
+          <pre class="outputcrt0">{
+  "slideshow": {
+    "author": "Yours Truly",
+    "date": "date of publication",
+    "slides": [
+      {
+        "title": "Wake up to WonderWidgets!",
+        "type": "all"
+      },
+      {
+        "items": [
+          "Why WonderWidgets are great",
+          "Who buys WonderWidgets"
+        ],
+        "title": "Overview",
+        "type": "all"
+      }
+    ],
+    "title": "Sample Slide Show"
+  }
+}
+</pre>
+         </td>
+        </tr>
+       </tbody>
+      </table>
+      <p>
+       <br/>
+      </p>
+      <hr/>
+      <center>
+       <b>
+        Navigation:
+       </b>
+      </center>
+      <center>
+       <a href="/qb64wiki/index.php/Main_Page" title="Main Page">
+        Main Page with Articles and Tutorials
+       </a>
+      </center>
+      <center>
+       <a href="/qb64wiki/index.php/Keyword_Reference_-_Alphabetical" title="Keyword Reference - Alphabetical">
+        Keyword Reference - Alphabetical
+       </a>
+      </center>
+      <center>
+       <a href="/qb64wiki/index.php/Keyword_Reference_-_By_usage" title="Keyword Reference - By usage">
+        Keyword Reference - By usage
+       </a>
+      </center>
+      <center>
+       <b>
+        <a class="external text" href="https://qb64phoenix.com/forum/showthread.php?tid=2800" rel="nofollow">
+         Report a broken link
+        </a>
+       </b>
+       <br/>
+      </center>
+      <!-- 
+NewPP limit report
+Cached time: 20240719142851
+Cache expiry: 86400
+Reduced expiry: false
+Complications: [show‐toc]
+CPU time usage: 0.035 seconds
+Real time usage: 0.051 seconds
+Preprocessor visited node count: 141/1000000
+Post‐expand include size: 1671/2097152 bytes
+Template argument size: 319/2097152 bytes
+Highest expansion depth: 3/100
+Expensive parser function count: 0/100
+Unstrip recursion depth: 0/20
+Unstrip post‐expand size: 24/5000000 bytes
+-->
+      <!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%   33.676      1 -total
+  8.83%    2.975      1 Template:OutputStartBG0
+  8.80%    2.964     10 Template:Cl
+  7.47%    2.515      1 Template:Text
+  7.01%    2.361      1 Template:PageNavigation
+  6.98%    2.352      1 Template:CodeEnd
+  6.43%    2.167      1 Template:Small
+  6.28%    2.114      1 Template:OutputEnd
+  6.27%    2.113      1 Template:PageAvailability
+  6.12%    2.061      1 Template:CodeStart
+-->
+      <!-- Saved in parser cache with key qb64pnix_mw19894-mwmb_:pcache:idhash:1178-0!canonical and timestamp 20240719142851 and revision id 5492.
+ -->
+     </div>
+     <div class="printfooter" data-nosnippet="">
+      Retrieved from "
+      <a dir="ltr" href="https://qb64phoenix.com/qb64wiki/index.php?title=GET_(HTTP_statement)&amp;oldid=5492">
+       https://qb64phoenix.com/qb64wiki/index.php?title=GET_(HTTP_statement)&amp;oldid=5492
+      </a>
+      "
+     </div>
+    </div>
+    <div class="catlinks catlinks-allhidden" data-mw="interface" id="catlinks">
+    </div>
+   </div>
+  </div>
+  <div id="mw-navigation">
+   <h2>
+    Navigation menu
+   </h2>
+   <div id="mw-head">
+    <nav aria-labelledby="p-personal-label" class="vector-menu mw-portlet mw-portlet-personal vector-user-menu-legacy" id="p-personal" role="navigation">
+     <h3 class="vector-menu-heading" id="p-personal-label">
+      <span class="vector-menu-heading-label">
+       Personal tools
+      </span>
+     </h3>
+     <div class="vector-menu-content">
+      <ul class="vector-menu-content-list">
+       <li class="mw-list-item" id="pt-login">
+        <a accesskey="o" href="/qb64wiki/index.php?title=Special:UserLogin&amp;returnto=GET+%28HTTP+statement%29" title="You are encouraged to log in; however, it is not mandatory [o]">
+         <span>
+          Log in
+         </span>
+        </a>
+       </li>
+      </ul>
+     </div>
+    </nav>
+    <div id="left-navigation">
+     <nav aria-labelledby="p-namespaces-label" class="vector-menu mw-portlet mw-portlet-namespaces vector-menu-tabs vector-menu-tabs-legacy" id="p-namespaces" role="navigation">
+      <h3 class="vector-menu-heading" id="p-namespaces-label">
+       <span class="vector-menu-heading-label">
+        Namespaces
+       </span>
+      </h3>
+      <div class="vector-menu-content">
+       <ul class="vector-menu-content-list">
+        <li class="selected mw-list-item" id="ca-nstab-main">
+         <a accesskey="c" href="/qb64wiki/index.php/GET_(HTTP_statement)" title="View the content page [c]">
+          <span>
+           Page
+          </span>
+         </a>
+        </li>
+        <li class="new mw-list-item" id="ca-talk">
+         <a accesskey="t" href="/qb64wiki/index.php?title=Talk:GET_(HTTP_statement)&amp;action=edit&amp;redlink=1" rel="discussion" title="Discussion about the content page (page does not exist) [t]">
+          <span>
+           Discussion
+          </span>
+         </a>
+        </li>
+       </ul>
+      </div>
+     </nav>
+     <nav aria-labelledby="p-variants-label" class="vector-menu mw-portlet mw-portlet-variants emptyPortlet vector-menu-dropdown" id="p-variants" role="navigation">
+      <input aria-haspopup="true" aria-labelledby="p-variants-label" class="vector-menu-checkbox" data-event-name="ui.dropdown-p-variants" id="p-variants-checkbox" role="button" type="checkbox"/>
+      <label aria-label="Change language variant" class="vector-menu-heading" id="p-variants-label">
+       <span class="vector-menu-heading-label">
+        English
+       </span>
+      </label>
+      <div class="vector-menu-content">
+       <ul class="vector-menu-content-list">
+       </ul>
+      </div>
+     </nav>
+    </div>
+    <div id="right-navigation">
+     <nav aria-labelledby="p-views-label" class="vector-menu mw-portlet mw-portlet-views vector-menu-tabs vector-menu-tabs-legacy" id="p-views" role="navigation">
+      <h3 class="vector-menu-heading" id="p-views-label">
+       <span class="vector-menu-heading-label">
+        Views
+       </span>
+      </h3>
+      <div class="vector-menu-content">
+       <ul class="vector-menu-content-list">
+        <li class="selected mw-list-item" id="ca-view">
+         <a href="/qb64wiki/index.php/GET_(HTTP_statement)">
+          <span>
+           Read
+          </span>
+         </a>
+        </li>
+        <li class="mw-list-item" id="ca-viewsource">
+         <a accesskey="e" href="/qb64wiki/index.php?title=GET_(HTTP_statement)&amp;action=edit" title="This page is protected.
+You can view its source [e]">
+          <span>
+           View source
+          </span>
+         </a>
+        </li>
+        <li class="mw-list-item" id="ca-history">
+         <a accesskey="h" href="/qb64wiki/index.php?title=GET_(HTTP_statement)&amp;action=history" title="Past revisions of this page [h]">
+          <span>
+           View history
+          </span>
+         </a>
+        </li>
+       </ul>
+      </div>
+     </nav>
+     <nav aria-labelledby="p-cactions-label" class="vector-menu mw-portlet mw-portlet-cactions emptyPortlet vector-menu-dropdown" id="p-cactions" role="navigation" title="More options">
+      <input aria-haspopup="true" aria-labelledby="p-cactions-label" class="vector-menu-checkbox" data-event-name="ui.dropdown-p-cactions" id="p-cactions-checkbox" role="button" type="checkbox"/>
+      <label class="vector-menu-heading" id="p-cactions-label">
+       <span class="vector-menu-heading-label">
+        More
+       </span>
+      </label>
+      <div class="vector-menu-content">
+       <ul class="vector-menu-content-list">
+       </ul>
+      </div>
+     </nav>
+     <div class="vector-search-box-vue vector-search-box-show-thumbnail vector-search-box-auto-expand-width vector-search-box" id="p-search" role="search">
+      <div>
+       <h3>
+        <label for="searchInput">
+         Search
+        </label>
+       </h3>
+       <form action="/qb64wiki/index.php" class="vector-search-box-form" id="searchform">
+        <div class="vector-search-box-inner" data-search-loc="header-navigation" id="simpleSearch">
+         <input accesskey="f" aria-label="Search QB64 Phoenix Edition Wiki" autocapitalize="sentences" class="vector-search-box-input" id="searchInput" name="search" placeholder="Search QB64 Phoenix Edition Wiki" title="Search QB64 Phoenix Edition Wiki [f]" type="search"/>
+         <input name="title" type="hidden" value="Special:Search"/>
+         <input class="searchButton mw-fallbackSearchButton" id="mw-searchButton" name="fulltext" title="Search the pages for this text" type="submit" value="Search"/>
+         <input class="searchButton" id="searchButton" name="go" title="Go to a page with this exact name if it exists" type="submit" value="Go"/>
+        </div>
+       </form>
+      </div>
+     </div>
+    </div>
+   </div>
+   <div id="mw-panel">
+    <div id="p-logo" role="banner">
+     <a class="mw-wiki-logo" href="/qb64wiki/index.php/Main_Page" title="Visit the main page">
+     </a>
+    </div>
+    <nav aria-labelledby="p-navigation-label" class="vector-menu mw-portlet mw-portlet-navigation vector-menu-portal portal" id="p-navigation" role="navigation">
+     <h3 class="vector-menu-heading" id="p-navigation-label">
+      <span class="vector-menu-heading-label">
+       Navigation
+      </span>
+     </h3>
+     <div class="vector-menu-content">
+      <ul class="vector-menu-content-list">
+       <li class="mw-list-item" id="n-mainpage-description">
+        <a accesskey="z" href="/qb64wiki/index.php/Main_Page" title="Visit the main page [z]">
+         <span>
+          Main page
+         </span>
+        </a>
+       </li>
+       <li class="mw-list-item" id="n-recentchanges">
+        <a accesskey="r" href="/qb64wiki/index.php/Special:RecentChanges" title="A list of recent changes in the wiki [r]">
+         <span>
+          Recent changes
+         </span>
+        </a>
+       </li>
+       <li class="mw-list-item" id="n-randompage">
+        <a accesskey="x" href="/qb64wiki/index.php/Special:Random" title="Load a random page [x]">
+         <span>
+          Random page
+         </span>
+        </a>
+       </li>
+       <li class="mw-list-item" id="n-help-mediawiki">
+        <a href="https://www.mediawiki.org/wiki/Special:MyLanguage/Help:Contents">
+         <span>
+          Help about MediaWiki
+         </span>
+        </a>
+       </li>
+      </ul>
+     </div>
+    </nav>
+    <nav aria-labelledby="p-tb-label" class="vector-menu mw-portlet mw-portlet-tb vector-menu-portal portal" id="p-tb" role="navigation">
+     <h3 class="vector-menu-heading" id="p-tb-label">
+      <span class="vector-menu-heading-label">
+       Tools
+      </span>
+     </h3>
+     <div class="vector-menu-content">
+      <ul class="vector-menu-content-list">
+       <li class="mw-list-item" id="t-whatlinkshere">
+        <a accesskey="j" href="/qb64wiki/index.php/Special:WhatLinksHere/GET_(HTTP_statement)" title="A list of all wiki pages that link here [j]">
+         <span>
+          What links here
+         </span>
+        </a>
+       </li>
+       <li class="mw-list-item" id="t-recentchangeslinked">
+        <a accesskey="k" href="/qb64wiki/index.php/Special:RecentChangesLinked/GET_(HTTP_statement)" rel="nofollow" title="Recent changes in pages linked from this page [k]">
+         <span>
+          Related changes
+         </span>
+        </a>
+       </li>
+       <li class="mw-list-item" id="t-specialpages">
+        <a accesskey="q" href="/qb64wiki/index.php/Special:SpecialPages" title="A list of all special pages [q]">
+         <span>
+          Special pages
+         </span>
+        </a>
+       </li>
+       <li class="mw-list-item" id="t-print">
+        <a accesskey="p" href="javascript:print();" rel="alternate" title="Printable version of this page [p]">
+         <span>
+          Printable version
+         </span>
+        </a>
+       </li>
+       <li class="mw-list-item" id="t-permalink">
+        <a href="/qb64wiki/index.php?title=GET_(HTTP_statement)&amp;oldid=5492" title="Permanent link to this revision of this page">
+         <span>
+          Permanent link
+         </span>
+        </a>
+       </li>
+       <li class="mw-list-item" id="t-info">
+        <a href="/qb64wiki/index.php?title=GET_(HTTP_statement)&amp;action=info" title="More information about this page">
+         <span>
+          Page information
+         </span>
+        </a>
+       </li>
+      </ul>
+     </div>
+    </nav>
+   </div>
+  </div>
+  <footer class="mw-footer" id="footer" role="contentinfo">
+   <ul id="footer-info">
+    <li id="footer-info-lastmod">
+     This page was last edited on 7 January 2023, at 00:42.
+    </li>
+   </ul>
+   <ul id="footer-places">
+    <li id="footer-places-privacy">
+     <a href="/qb64wiki/index.php/QB64_Phoenix_Edition_Wiki:Privacy_policy">
+      Privacy policy
+     </a>
+    </li>
+    <li id="footer-places-about">
+     <a href="/qb64wiki/index.php/QB64_Phoenix_Edition_Wiki:About">
+      About QB64 Phoenix Edition Wiki
+     </a>
+    </li>
+    <li id="footer-places-disclaimer">
+     <a href="/qb64wiki/index.php/QB64_Phoenix_Edition_Wiki:General_disclaimer">
+      Disclaimers
+     </a>
+    </li>
+   </ul>
+   <ul class="noprint" id="footer-icons">
+    <li id="footer-poweredbyico">
+     <a href="https://www.mediawiki.org/">
+      <img alt="Powered by MediaWiki" height="31" loading="lazy" src="/qb64wiki/resources/assets/poweredby_mediawiki_88x31.png" srcset="/qb64wiki/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /qb64wiki/resources/assets/poweredby_mediawiki_176x62.png 2x" width="88"/>
+     </a>
+    </li>
+   </ul>
+  </footer>
+  <script>
+   (RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgPageParseReport":{"limitreport":{"cputime":"0.035","walltime":"0.051","ppvisitednodes":{"value":141,"limit":1000000},"postexpandincludesize":{"value":1671,"limit":2097152},"templateargumentsize":{"value":319,"limit":2097152},"expansiondepth":{"value":3,"limit":100},"expensivefunctioncount":{"value":0,"limit":100},"unstrip-depth":{"value":0,"limit":20},"unstrip-size":{"value":24,"limit":5000000},"timingprofile":["100.00%   33.676      1 -total","  8.83%    2.975      1 Template:OutputStartBG0","  8.80%    2.964     10 Template:Cl","  7.47%    2.515      1 Template:Text","  7.01%    2.361      1 Template:PageNavigation","  6.98%    2.352      1 Template:CodeEnd","  6.43%    2.167      1 Template:Small","  6.28%    2.114      1 Template:OutputEnd","  6.27%    2.113      1 Template:PageAvailability","  6.12%    2.061      1 Template:CodeStart"]},"cachereport":{"timestamp":"20240719142851","ttl":86400,"transientcontent":false}}});mw.config.set({"wgBackendResponseTime":71});});
+  </script>
+ </body>
+</html>

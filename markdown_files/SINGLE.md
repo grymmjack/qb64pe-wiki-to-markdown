@@ -1,23 +1,25 @@
-# SINGLE
-> SINGLE variables are 4 byte floating decimal point numerical values up to seven digits in length.
+## SINGLE
+---
 
-## SYNTAX
+### SINGLE variables are 4 byte floating decimal point numerical values up to seven digits in length.
+
+#### SYNTAX
+
 `DIM variable AS SINGLE`
 
-## DESCRIPTION
+#### DESCRIPTION
 * Values can range up to 7 digits. Decimal point accuracy depends on whole value places taken.
 * Single is the default variable type assigned to undefined variables without a type suffix.
 * Variable suffix type designation is ! . Suffix can also be placed after a literal numerical value by user or automatically by the IDE.
-* Values returned may be expressed using exponential or scientific notation using E for [SINGLE](SINGLE.md) or D for [DOUBLE](DOUBLE.md) precision.
-* Floating decimal point numerical values cannot be [_UNSIGNED](_UNSIGNED.md) !
+* Values returned may be expressed using exponential or scientific notation using E for [SINGLE](./SINGLE.md) or D for [DOUBLE](./DOUBLE.md) precision.
+* Floating decimal point numerical values cannot be [_UNSIGNED](./_UNSIGNED.md) !
 * Values can be converted to 4 byte ASCII string values using _MKS$ and back with _CVS .
 * Warning: QBasic keyword names cannot be used as numerical variable names with or without the type suffix!
 
 
-# SEE ALSO
-* [DIM](DIM.md) , [DEFSNG](DEFSNG.md)
-* MKS$ , [CVS](CVS.md)
-* [DOUBLE](DOUBLE.md) , [_FLOAT](_FLOAT.md)
-* [LEN](LEN.md)
+#### SEE ALSO
+* [DIM](./DIM.md) , [DEFSNG](./DEFSNG.md)
+* MKS$ , [CVS](./CVS.md)
+* [DOUBLE](./DOUBLE.md) , [_FLOAT](./_FLOAT.md)
+* [LEN](./LEN.md)
 * Variable Types
-

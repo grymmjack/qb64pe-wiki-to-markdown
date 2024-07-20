@@ -1,0 +1,1162 @@
+<!DOCTYPE html>
+<html class="client-nojs" dir="ltr" lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <title>
+   Using OFFSET - QB64 Phoenix Edition Wiki
+  </title>
+  <script>
+   document.documentElement.className="client-js";RLCONF={"wgBreakFrames":false,"wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgRequestId":"Zpp9IAEfJaEdFRpaWXtUPAAAAac","wgCSPNonce":false,"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"Using_OFFSET","wgTitle":"Using OFFSET","wgCurRevisionId":8805,"wgRevisionId":8805,"wgArticleId":613,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":[],"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgRelevantPageName":"Using_OFFSET","wgRelevantArticleId":613,"wgIsProbablyEditable":false,"wgRelevantPageIsProbablyEditable":false,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgVector2022PreviewPages":[]};RLSTATE={"site.styles":"ready","user.styles":"ready"
+,"user":"ready","user.options":"loading","skins.vector.styles.legacy":"ready"};RLPAGEMODULES=["site","mediawiki.page.ready","skins.vector.legacy.js"];
+  </script>
+  <script>
+   (RLQ=window.RLQ||[]).push(function(){mw.loader.implement("user.options@12s5i",function($,jQuery,require,module){mw.user.tokens.set({"patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});});});
+  </script>
+  <link href="/qb64wiki/load.php?lang=en&amp;modules=skins.vector.styles.legacy&amp;only=styles&amp;skin=vector" rel="stylesheet"/>
+  <script async="" src="/qb64wiki/load.php?lang=en&amp;modules=startup&amp;only=scripts&amp;raw=1&amp;skin=vector">
+  </script>
+  <meta content="" name="ResourceLoaderDynamicStyles"/>
+  <link href="/qb64wiki/load.php?lang=en&amp;modules=site.styles&amp;only=styles&amp;skin=vector" rel="stylesheet"/>
+  <meta content="MediaWiki 1.39.3" name="generator"/>
+  <meta content="telephone=no" name="format-detection"/>
+  <meta content="width=1000" name="viewport"/>
+  <link href="/favicon.ico" rel="icon"/>
+  <link href="/qb64wiki/opensearch_desc.php" rel="search" title="QB64 Phoenix Edition Wiki (en)" type="application/opensearchdescription+xml"/>
+  <link href="https://qb64phoenix.com/qb64wiki/api.php?action=rsd" rel="EditURI" type="application/rsd+xml"/>
+  <link href="/qb64wiki/index.php?title=Special:RecentChanges&amp;feed=atom" rel="alternate" title="QB64 Phoenix Edition Wiki Atom feed" type="application/atom+xml"/>
+ </head>
+ <body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject page-Using_OFFSET rootpage-Using_OFFSET skin-vector action-view skin-vector-legacy vector-feature-language-in-header-enabled vector-feature-language-in-main-page-header-disabled vector-feature-language-alert-in-sidebar-disabled vector-feature-sticky-header-disabled vector-feature-sticky-header-edit-disabled vector-feature-table-of-contents-disabled vector-feature-visual-enhancement-next-disabled">
+  <div class="noprint" id="mw-page-base">
+  </div>
+  <div class="noprint" id="mw-head-base">
+  </div>
+  <div class="mw-body" id="content" role="main">
+   <a id="top">
+   </a>
+   <div id="siteNotice">
+   </div>
+   <div class="mw-indicators">
+   </div>
+   <h1 class="firstHeading mw-first-heading" id="firstHeading">
+    <span class="mw-page-title-main">
+     Using OFFSET
+    </span>
+   </h1>
+   <div class="vector-body" id="bodyContent">
+    <div class="noprint" id="siteSub">
+     From QB64 Phoenix Edition Wiki
+    </div>
+    <div id="contentSub">
+    </div>
+    <div id="contentSub2">
+    </div>
+    <div id="jump-to-nav">
+    </div>
+    <a class="mw-jump-link" href="#mw-head">
+     Jump to navigation
+    </a>
+    <a class="mw-jump-link" href="#searchInput">
+     Jump to search
+    </a>
+    <div class="mw-body-content mw-content-ltr" dir="ltr" id="mw-content-text" lang="en">
+     <div class="mw-parser-output">
+      <center>
+       <b>
+        _OFFSET Explanation By Michael Calkins
+       </b>
+      </center>
+      <p>
+       An
+       <b>
+        _OFFSET
+       </b>
+       means a pointer. Use it any time that you need to pass or receive a pointer. With the API, types that start with P or LP, and parameters that start with p or lp are generally pointers.
+      </p>
+      <p>
+       <br/>
+       As for when to use the
+       <a href="/qb64wiki/index.php/OFFSET" title="OFFSET">
+        _OFFSET
+       </a>
+       data type, it is basically any time that you need to pass a pointer to a function as a parameter, or have a pointer returned from a function as a return value. The _OFFSET type is basically the same as a void pointer in C. A pointer is a variable that holds a memory address. (I sometimes refer to the memory address itself as being a pointer, but usually, "pointer" means a variable that holds a memory address.) The symbol for a pointer in C is the asterisk, *, following some other type name.
+      </p>
+      <p>
+       <br/>
+       So for example in C:
+       <b>
+        void *
+       </b>
+       means a void pointer, that is, a pointer to a variable of any type.
+      </p>
+      <p>
+       Also, for example:
+       <b>
+        CHAR *
+       </b>
+       means a pointer to a CHAR.
+      </p>
+      <p>
+       <br/>
+      </p>
+      <center>
+       <b>
+        Example using QueryDosDeviceA to enumerate COM ports
+       </b>
+      </center>
+      <table cellpadding="15px" width="100%">
+       <tbody>
+        <tr>
+         <td>
+          <pre class="codeide">'public domain by Michael Calkins, sept 2011,
+
+
+<a href="/qb64wiki/index.php/DECLARE_LIBRARY" title="DECLARE LIBRARY"><span style="color:#4593D8;">DECLARE DYNAMIC LIBRARY</span></a> "kernel32"
+ <a href="/qb64wiki/index.php/FUNCTION" title="FUNCTION"><span style="color:#4593D8;">FUNCTION</span></a> QueryDosDeviceA~&amp; (<a class="mw-redirect" href="/qb64wiki/index.php/BYVAL" title="BYVAL"><span style="color:#4593D8;">BYVAL</span></a> lpDeviceName <a href="/qb64wiki/index.php/AS" title="AS"><span style="color:#4593D8;">AS</span></a> <a href="/qb64wiki/index.php/UNSIGNED" title="UNSIGNED"><span style="color:#4593D8;">_UNSIGNED</span></a> <a href="/qb64wiki/index.php/OFFSET" title="OFFSET"><span style="color:#4593D8;">_OFFSET</span></a>, <a class="mw-redirect" href="/qb64wiki/index.php/BYVAL" title="BYVAL"><span style="color:#4593D8;">BYVAL</span></a> lpTargetPath <a href="/qb64wiki/index.php/AS" title="AS"><span style="color:#4593D8;">AS</span></a> <a href="/qb64wiki/index.php/UNSIGNED" title="UNSIGNED"><span style="color:#4593D8;">_UNSIGNED</span></a> <a href="/qb64wiki/index.php/OFFSET" title="OFFSET"><span style="color:#4593D8;">_OFFSET</span></a>, <a class="mw-redirect" href="/qb64wiki/index.php/BYVAL" title="BYVAL"><span style="color:#4593D8;">BYVAL</span></a> ucchMax <a href="/qb64wiki/index.php/AS" title="AS"><span style="color:#4593D8;">AS</span></a> <a href="/qb64wiki/index.php/UNSIGNED" title="UNSIGNED"><span style="color:#4593D8;">_UNSIGNED</span></a> <a href="/qb64wiki/index.php/LONG" title="LONG"><span style="color:#4593D8;">LONG</span></a>)
+ <a href="/qb64wiki/index.php/FUNCTION" title="FUNCTION"><span style="color:#4593D8;">FUNCTION</span></a> GetLastError~&amp; ()
+<a href="/qb64wiki/index.php/DECLARE_LIBRARY" title="DECLARE LIBRARY"><span style="color:#4593D8;">END DECLARE</span></a>
+
+<a href="/qb64wiki/index.php/DIM" title="DIM"><span style="color:#4593D8;">DIM</span></a> sizeofbuffer <a href="/qb64wiki/index.php/AS" title="AS"><span style="color:#4593D8;">AS</span></a> <a href="/qb64wiki/index.php/UNSIGNED" title="UNSIGNED"><span style="color:#4593D8;">_UNSIGNED</span></a> <a href="/qb64wiki/index.php/LONG" title="LONG"><span style="color:#4593D8;">LONG</span></a>
+<a href="/qb64wiki/index.php/DIM" title="DIM"><span style="color:#4593D8;">DIM</span></a> buffer <a href="/qb64wiki/index.php/AS" title="AS"><span style="color:#4593D8;">AS</span></a> <a href="/qb64wiki/index.php/STRING" title="STRING"><span style="color:#4593D8;">STRING</span></a>
+<a href="/qb64wiki/index.php/DIM" title="DIM"><span style="color:#4593D8;">DIM</span></a> i <a href="/qb64wiki/index.php/AS" title="AS"><span style="color:#4593D8;">AS</span></a> <a href="/qb64wiki/index.php/UNSIGNED" title="UNSIGNED"><span style="color:#4593D8;">_UNSIGNED</span></a> <a href="/qb64wiki/index.php/LONG" title="LONG"><span style="color:#4593D8;">LONG</span></a>
+<a href="/qb64wiki/index.php/DIM" title="DIM"><span style="color:#4593D8;">DIM</span></a> x <a href="/qb64wiki/index.php/AS" title="AS"><span style="color:#4593D8;">AS</span></a> <a href="/qb64wiki/index.php/UNSIGNED" title="UNSIGNED"><span style="color:#4593D8;">_UNSIGNED</span></a> <a href="/qb64wiki/index.php/LONG" title="LONG"><span style="color:#4593D8;">LONG</span></a>
+<a href="/qb64wiki/index.php/DIM" title="DIM"><span style="color:#4593D8;">DIM</span></a> n <a href="/qb64wiki/index.php/AS" title="AS"><span style="color:#4593D8;">AS</span></a> <a href="/qb64wiki/index.php/UNSIGNED" title="UNSIGNED"><span style="color:#4593D8;">_UNSIGNED</span></a> <a href="/qb64wiki/index.php/LONG" title="LONG"><span style="color:#4593D8;">LONG</span></a>
+sizeofbuffer = 1024
+buffer = <a href="/qb64wiki/index.php/SPACE$" title="SPACE$"><span style="color:#4593D8;">SPACE$</span></a>(sizeofbuffer)
+
+DO
+ x = 0
+ <a href="/qb64wiki/index.php/IF...THEN" title="IF...THEN"><span style="color:#4593D8;">IF</span></a> QueryDosDeviceA~&amp;(0, <a href="/qb64wiki/index.php/OFFSET_(function)" title="OFFSET (function)"><span style="color:#4593D8;">_OFFSET</span></a>(buffer), sizeofbuffer) = 0 <a href="/qb64wiki/index.php/THEN" title="THEN"><span style="color:#4593D8;">THEN</span></a>
+  x = GetLastError~&amp;
+  <a href="/qb64wiki/index.php/IF...THEN" title="IF...THEN"><span style="color:#4593D8;">IF</span></a> x = <a href="/qb64wiki/index.php/%26H" title="&amp;H"><span style="color:#4593D8;">&amp;H</span></a>7A <a href="/qb64wiki/index.php/THEN" title="THEN"><span style="color:#4593D8;">THEN</span></a>
+   sizeofbuffer = sizeofbuffer + 1024
+   buffer = <a href="/qb64wiki/index.php/SPACE$" title="SPACE$"><span style="color:#4593D8;">SPACE$</span></a>(sizeofbuffer)
+  <a href="/qb64wiki/index.php/ELSE" title="ELSE"><span style="color:#4593D8;">ELSE</span></a>
+   <a href="/qb64wiki/index.php/PRINT" title="PRINT"><span style="color:#4593D8;">PRINT</span></a> "Error: 0x"; <a href="/qb64wiki/index.php/HEX$" title="HEX$"><span style="color:#4593D8;">HEX$</span></a>(x)
+   <a href="/qb64wiki/index.php/END" title="END"><span style="color:#4593D8;">END</span></a>
+  <a class="mw-redirect" href="/qb64wiki/index.php/END_IF" title="END IF"><span style="color:#4593D8;">END IF</span></a>
+ <a class="mw-redirect" href="/qb64wiki/index.php/END_IF" title="END IF"><span style="color:#4593D8;">END IF</span></a>
+<a href="/qb64wiki/index.php/LOOP" title="LOOP"><span style="color:#4593D8;">LOOP</span></a> <a class="mw-redirect" href="/qb64wiki/index.php/WHILE" title="WHILE"><span style="color:#4593D8;">WHILE</span></a> x = <a href="/qb64wiki/index.php/%26H" title="&amp;H"><span style="color:#4593D8;">&amp;H</span></a>7A
+
+i = 1
+n = 0
+<a href="/qb64wiki/index.php/DO...LOOP" title="DO...LOOP"><span style="color:#4593D8;">DO</span></a> <a class="mw-redirect" href="/qb64wiki/index.php/WHILE" title="WHILE"><span style="color:#4593D8;">WHILE</span></a> <a href="/qb64wiki/index.php/ASC_(function)" title="ASC (function)"><span style="color:#4593D8;">ASC</span></a>(<a href="/qb64wiki/index.php/MID$_(function)" title="MID$ (function)"><span style="color:#4593D8;">MID$</span></a>(buffer, i, 1))
+ x = <a href="/qb64wiki/index.php/INSTR" title="INSTR"><span style="color:#4593D8;">INSTR</span></a>(i, buffer, <a href="/qb64wiki/index.php/CHR$" title="CHR$"><span style="color:#4593D8;">CHR$</span></a>(0))
+ <a href="/qb64wiki/index.php/PRINT" title="PRINT"><span style="color:#4593D8;">PRINT</span></a> <a href="/qb64wiki/index.php/MID$_(function)" title="MID$ (function)"><span style="color:#4593D8;">MID$</span></a>(buffer, i, x - i)
+ <a href="/qb64wiki/index.php/IF...THEN" title="IF...THEN"><span style="color:#4593D8;">IF</span></a> <a href="/qb64wiki/index.php/MID$_(function)" title="MID$ (function)"><span style="color:#4593D8;">MID$</span></a>(buffer, i, 3) = "COM" <a href="/qb64wiki/index.php/THEN" title="THEN"><span style="color:#4593D8;">THEN</span></a>
+  <a href="/qb64wiki/index.php/REDIM" title="REDIM"><span style="color:#4593D8;">REDIM</span></a> <a href="/qb64wiki/index.php/PRESERVE" title="PRESERVE"><span style="color:#4593D8;">_PRESERVE</span></a> comports(0 <a href="/qb64wiki/index.php/TO" title="TO"><span style="color:#4593D8;">TO</span></a> (n * 2) + 1) <a href="/qb64wiki/index.php/AS" title="AS"><span style="color:#4593D8;">AS</span></a> <a href="/qb64wiki/index.php/STRING" title="STRING"><span style="color:#4593D8;">STRING</span></a>
+  comports(n * 2) = <a href="/qb64wiki/index.php/MID$_(function)" title="MID$ (function)"><span style="color:#4593D8;">MID$</span></a>(buffer, i, (x - i) + 1)
+  n = n + 1
+ <a class="mw-redirect" href="/qb64wiki/index.php/END_IF" title="END IF"><span style="color:#4593D8;">END IF</span></a>
+ i = x + 1
+<a href="/qb64wiki/index.php/LOOP" title="LOOP"><span style="color:#4593D8;">LOOP</span></a>
+
+<a href="/qb64wiki/index.php/PRINT" title="PRINT"><span style="color:#4593D8;">PRINT</span></a>
+<a href="/qb64wiki/index.php/PRINT" title="PRINT"><span style="color:#4593D8;">PRINT</span></a> n; "COM ports:"
+<a href="/qb64wiki/index.php/IF...THEN" title="IF...THEN"><span style="color:#4593D8;">IF</span></a> n <a href="/qb64wiki/index.php/THEN" title="THEN"><span style="color:#4593D8;">THEN</span></a>
+ <a href="/qb64wiki/index.php/FOR...NEXT" title="FOR...NEXT"><span style="color:#4593D8;">FOR</span></a> i = 0 <a href="/qb64wiki/index.php/TO" title="TO"><span style="color:#4593D8;">TO</span></a> n - 1
+  DO
+   x = 0
+   <a href="/qb64wiki/index.php/IF...THEN" title="IF...THEN"><span style="color:#4593D8;">IF</span></a> QueryDosDeviceA~&amp;(<a href="/qb64wiki/index.php/OFFSET_(function)" title="OFFSET (function)"><span style="color:#4593D8;">_OFFSET</span></a>(comports(i * 2)), <a href="/qb64wiki/index.php/OFFSET_(function)" title="OFFSET (function)"><span style="color:#4593D8;">_OFFSET</span></a>(buffer), sizeofbuffer) = 0 <a href="/qb64wiki/index.php/THEN" title="THEN"><span style="color:#4593D8;">THEN</span></a>
+    x = GetLastError~&amp;
+    <a href="/qb64wiki/index.php/IF...THEN" title="IF...THEN"><span style="color:#4593D8;">IF</span></a> x = <a href="/qb64wiki/index.php/%26H" title="&amp;H"><span style="color:#4593D8;">&amp;H</span></a>7A <a href="/qb64wiki/index.php/THEN" title="THEN"><span style="color:#4593D8;">THEN</span></a>
+     sizeofbuffer = sizeofbuffer + 1024
+     buffer = <a href="/qb64wiki/index.php/SPACE$" title="SPACE$"><span style="color:#4593D8;">SPACE$</span></a>(sizeofbuffer)
+    <a href="/qb64wiki/index.php/ELSE" title="ELSE"><span style="color:#4593D8;">ELSE</span></a>
+     <a href="/qb64wiki/index.php/PRINT" title="PRINT"><span style="color:#4593D8;">PRINT</span></a> "Error: 0x"; <a href="/qb64wiki/index.php/HEX$" title="HEX$"><span style="color:#4593D8;">HEX$</span></a>(x)
+     <a href="/qb64wiki/index.php/END" title="END"><span style="color:#4593D8;">END</span></a>
+    <a class="mw-redirect" href="/qb64wiki/index.php/END_IF" title="END IF"><span style="color:#4593D8;">END IF</span></a>
+   <a class="mw-redirect" href="/qb64wiki/index.php/END_IF" title="END IF"><span style="color:#4593D8;">END IF</span></a>
+  <a href="/qb64wiki/index.php/LOOP" title="LOOP"><span style="color:#4593D8;">LOOP</span></a> <a class="mw-redirect" href="/qb64wiki/index.php/WHILE" title="WHILE"><span style="color:#4593D8;">WHILE</span></a> x = <a href="/qb64wiki/index.php/%26H" title="&amp;H"><span style="color:#4593D8;">&amp;H</span></a>7A
+  comports((i * 2) + 1) = <a href="/qb64wiki/index.php/LEFT$" title="LEFT$"><span style="color:#4593D8;">LEFT$</span></a>(buffer, <a href="/qb64wiki/index.php/INSTR" title="INSTR"><span style="color:#4593D8;">INSTR</span></a>(buffer, <a href="/qb64wiki/index.php/CHR$" title="CHR$"><span style="color:#4593D8;">CHR$</span></a>(0)) - 1)
+  comports(i * 2) = <a href="/qb64wiki/index.php/LEFT$" title="LEFT$"><span style="color:#4593D8;">LEFT$</span></a>(comports(i * 2), <a href="/qb64wiki/index.php/LEN" title="LEN"><span style="color:#4593D8;">LEN</span></a>(comports(i * 2)) - 1)
+  <a href="/qb64wiki/index.php/PRINT" title="PRINT"><span style="color:#4593D8;">PRINT</span></a> <a href="/qb64wiki/index.php/CHR$" title="CHR$"><span style="color:#4593D8;">CHR$</span></a>(<a href="/qb64wiki/index.php/%26H" title="&amp;H"><span style="color:#4593D8;">&amp;H</span></a>22); comports(i * 2); <a href="/qb64wiki/index.php/CHR$" title="CHR$"><span style="color:#4593D8;">CHR$</span></a>(<a href="/qb64wiki/index.php/%26H" title="&amp;H"><span style="color:#4593D8;">&amp;H</span></a>22); " is mapped to: "; <a href="/qb64wiki/index.php/CHR$" title="CHR$"><span style="color:#4593D8;">CHR$</span></a>(<a href="/qb64wiki/index.php/%26H" title="&amp;H"><span style="color:#4593D8;">&amp;H</span></a>22); comports((i * 2) + 1); <a href="/qb64wiki/index.php/CHR$" title="CHR$"><span style="color:#4593D8;">CHR$</span></a>(<a href="/qb64wiki/index.php/%26H" title="&amp;H"><span style="color:#4593D8;">&amp;H</span></a>22)
+ <a href="/qb64wiki/index.php/NEXT" title="NEXT"><span style="color:#4593D8;">NEXT</span></a>
+<a class="mw-redirect" href="/qb64wiki/index.php/END_IF" title="END IF"><span style="color:#4593D8;">END IF</span></a>
+
+buffer = ""
+<a href="/qb64wiki/index.php/END" title="END"><span style="color:#4593D8;">END</span></a>
+</pre>
+         </td>
+        </tr>
+       </tbody>
+      </table>
+      <p>
+       <br/>
+       So, you would look at the function prototype in the MSDN article, and match the data types of all of the parameters and the return value to QB64 data types. _OFFSET is the type to use for any kind of pointer. MSDN has a list of data types:
+      </p>
+      <center>
+       <a class="external text" href="http://msdn.microsoft.com/en-us/library/aa383751%28v=vs.85%29.aspx" rel="nofollow">
+        MSDN list of Data types
+       </a>
+      </center>
+      <p>
+       You can look up the types in that article. Note that many types are derived from other types, so you may have to follow the chain back, looking up each type that the other type was derived from, until you get back to a standard type like int or void*. Deriving types in C is accomplished with typedef. (Just as a note: the current version of that article on the web seems to have a problem, where the #ifdef UNICODE blocks aren't displaying properly, at least in my browser. I am going by an older version of that article that I saved.)
+      </p>
+      <p>
+       For example, let's look at the
+       <b>
+        QueryDosDevice
+       </b>
+       function that is used above:
+      </p>
+      <table cellpadding="5px" width="100%">
+       <tbody>
+        <tr>
+         <td>
+          <pre class="outputtext">DWORD WINAPI QueryDosDevice(
+  __in_opt  LPCTSTR lpDeviceName,
+  __out     LPTSTR lpTargetPath,
+  __in      DWORD ucchMax
+);
+</pre>
+         </td>
+        </tr>
+       </tbody>
+      </table>
+      <center>
+       <a class="external free" href="http://msdn.microsoft.com/en-us/library/aa365461%28v=VS.85%29.aspx" rel="nofollow">
+        http://msdn.microsoft.com/en-us/library/aa365461%28v=VS.85%29.aspx
+       </a>
+      </center>
+      <p>
+       So, the function returns a DWORD, and accepts 3 parameters: an LPCTSTR, an LPTSTR, and a DWORD.
+      </p>
+      <p>
+       <br/>
+      </p>
+      <ul>
+       <li>
+        <b>
+         For the return type:
+        </b>
+       </li>
+      </ul>
+      <p>
+       If the return type were void, it would be a
+       <a href="/qb64wiki/index.php/SUB" title="SUB">
+        SUB
+       </a>
+       . Any return type other than void means a
+       <a href="/qb64wiki/index.php/FUNCTION" title="FUNCTION">
+        FUNCTION
+       </a>
+       . Look up "DWORD" in the data type list. (The URL is given above.)
+      </p>
+      <table cellpadding="5px" width="100%">
+       <tbody>
+        <tr>
+         <td>
+          <pre class="outputtext">A 32-bit unsigned integer. The range is 0 through 4294967295 decimal
+
+This type is declared in WinDef.h as follows:
+
+typedef unsigned long DWORD;
+</pre>
+         </td>
+        </tr>
+       </tbody>
+      </table>
+      <dl>
+       <dd>
+        Obviously, the QB64 type that corresponds to this is
+        <a href="/qb64wiki/index.php/UNSIGNED" title="UNSIGNED">
+         _UNSIGNED
+        </a>
+        <a href="/qb64wiki/index.php/LONG" title="LONG">
+         LONG
+        </a>
+        .
+       </dd>
+      </dl>
+      <table cellpadding="5px" width="100%">
+       <tbody>
+        <tr>
+         <td>
+          <pre class="outputfixed">QueryDosDeviceW (Unicode) and QueryDosDeviceA (ANSI)
+</pre>
+         </td>
+        </tr>
+       </tbody>
+      </table>
+      <dl>
+       <dd>
+        In this instance, I chose to use the
+        <a href="/qb64wiki/index.php/ASCII" title="ASCII">
+         ASCII
+        </a>
+        version of the function
+        <b>
+         QueryDosDeviceA
+        </b>
+        instead of the
+        <a href="/qb64wiki/index.php/Unicode" title="Unicode">
+         Unicode
+        </a>
+        version (
+        <b>
+         QueryDosDeviceW
+        </b>
+        ) for simplicity. (A stands for ANSI, W stands for wide, as in wide char.)
+       </dd>
+      </dl>
+      <p>
+       So, we have:
+      </p>
+      <table cellpadding="5px" width="100%">
+       <tbody>
+        <tr>
+         <td>
+          <pre class="outputfixed">   <b>FUNCTION QueryDosDeviceA~&amp; (</b>
+</pre>
+         </td>
+        </tr>
+       </tbody>
+      </table>
+      <ul>
+       <li>
+        <b>
+         First parameter:
+        </b>
+       </li>
+      </ul>
+      <p>
+       Look up LPCTSTR in the data type list:
+      </p>
+      <table cellpadding="5px" width="100%">
+       <tbody>
+        <tr>
+         <td>
+          <pre class="outputtext">An LPCWSTR if UNICODE is defined, an LPCSTR otherwise.
+For more information, see Windows Data Types for Strings.
+
+This type is declared in WinNT.h as follows:
+
+#ifdef UNICODE
+ typedef LPCWSTR LPCTSTR;
+#else
+ typedef LPCSTR LPCTSTR;
+#endif
+
+</pre>
+         </td>
+        </tr>
+       </tbody>
+      </table>
+      <dl>
+       <dd>
+        As noted above, I have chosen to use the ASCII version of the function, so it corresponds to LPCSTR. Look that up:
+       </dd>
+      </dl>
+      <table cellpadding="5px" width="100%">
+       <tbody>
+        <tr>
+         <td>
+          <pre class="outputtext">A pointer to a constant null-terminated string of 8-bit Windows (ANSI) characters.
+For more information, see Character Sets Used By Fonts.
+
+This type is declared in WinNT.h as follows:
+
+    typedef __nullterminated CONST CHAR *LPCSTR;
+</pre>
+         </td>
+        </tr>
+       </tbody>
+      </table>
+      <dl>
+       <dd>
+        This tells us that it is a pointer to a string. Since it is a pointer, the QB64 type it corresponds to is
+        <a href="/qb64wiki/index.php/OFFSET" title="OFFSET">
+         _OFFSET
+        </a>
+        .
+       </dd>
+      </dl>
+      <p>
+       By the way, all parameters, including pointers, will be passed
+       <a class="mw-redirect" href="/qb64wiki/index.php/BYVAL" title="BYVAL">
+        BYVAL
+       </a>
+       . So, we have:
+      </p>
+      <table cellpadding="5px" width="100%">
+       <tbody>
+        <tr>
+         <td>
+          <pre class="outputfixed"> <b>FUNCTION QueryDosDeviceA~&amp; (BYVAL lpDeviceName AS _UNSIGNED _OFFSET,</b>
+</pre>
+         </td>
+        </tr>
+       </tbody>
+      </table>
+      <ul>
+       <li>
+        <b>
+         Second parameter:
+        </b>
+       </li>
+      </ul>
+      <p>
+       Look up LPTSTR in the data type list:
+      </p>
+      <table cellpadding="5px" width="100%">
+       <tbody>
+        <tr>
+         <td>
+          <pre class="outputtext">LPTSTR
+
+An LPWSTR if UNICODE is defined, an LPSTR otherwise.
+For more information, see Windows Data Types for Strings.
+
+This type is declared in WinNT.h as follows:
+
+#ifdef UNICODE
+ typedef LPWSTR LPTSTR;
+#else
+ typedef LPSTR LPTSTR;
+#endif 
+</pre>
+         </td>
+        </tr>
+       </tbody>
+      </table>
+      <dl>
+       <dd>
+        Again, I decided not to use Unicode this time, so look up LPSTR:
+       </dd>
+      </dl>
+      <table cellpadding="5px" width="100%">
+       <tbody>
+        <tr>
+         <td>
+          <pre class="outputtext">A pointer to a null-terminated string of 8-bit Windows (ANSI) characters.
+For more information, see Character Sets Used By Fonts.
+
+This type is declared in WinNT.h as follows:
+
+typedef CHAR *LPSTR;
+</pre>
+         </td>
+        </tr>
+       </tbody>
+      </table>
+      <dl>
+       <dd>
+        Again, it is a pointer to a string. Again, pointers correspond to
+        <a href="/qb64wiki/index.php/OFFSET" title="OFFSET">
+         _OFFSET
+        </a>
+        .
+       </dd>
+      </dl>
+      <table cellpadding="5px" width="100%">
+       <tbody>
+        <tr>
+         <td>
+          <pre class="outputfixed"><b>FUNCTION QueryDosDeviceA~&amp; (BYVAL lpDeviceName AS _UNSIGNED _OFFSET, BYVAL lpTargetPath AS _UNSIGNED _OFFSET,</b>
+</pre>
+         </td>
+        </tr>
+       </tbody>
+      </table>
+      <ul>
+       <li>
+        <b>
+         Third parameter:
+        </b>
+       </li>
+      </ul>
+      <p>
+       This is a DWORD. We have already looked up DWORD, and we know it is an
+       <a href="/qb64wiki/index.php/UNSIGNED" title="UNSIGNED">
+        _UNSIGNED
+       </a>
+       <a href="/qb64wiki/index.php/LONG" title="LONG">
+        LONG
+       </a>
+       . We have finished our function declaration:
+      </p>
+      <table cellpadding="5px" width="100%">
+       <tbody>
+        <tr>
+         <td>
+          <pre class="outputfixed"><b> FUNCTION QueryDosDeviceA~&amp; (BYVAL lpDeviceName AS _UNSIGNED _OFFSET, BYVAL lpTargetPath AS _UNSIGNED _OFFSET, BYVAL ucchMax AS _UNSIGNED LONG)</b>
+</pre>
+         </td>
+        </tr>
+       </tbody>
+      </table>
+      <p>
+       <br/>
+      </p>
+      <ul>
+       <li>
+        Based on the above example, it should be trivial to figure out the declaration for GetLastError:
+       </li>
+      </ul>
+      <p>
+       <a class="external free" href="http://msdn.microsoft.com/en-us/library/windows/desktop/ms679360%28v=vs.85%29.aspx" rel="nofollow">
+        http://msdn.microsoft.com/en-us/library/windows/desktop/ms679360%28v=vs.85%29.aspx
+       </a>
+      </p>
+      <table cellpadding="5px" width="100%">
+       <tbody>
+        <tr>
+         <td>
+          <pre class="outputtext">DWORD WINAPI GetLastError(void);
+</pre>
+         </td>
+        </tr>
+       </tbody>
+      </table>
+      <dl>
+       <dd>
+        The void in the parameter list means that it accepts no parameters. For the return value, we already know that a DWORD is an
+        <a href="/qb64wiki/index.php/UNSIGNED" title="UNSIGNED">
+         _UNSIGNED
+        </a>
+        <a href="/qb64wiki/index.php/LONG" title="LONG">
+         LONG
+        </a>
+        :
+       </dd>
+      </dl>
+      <table cellpadding="5px" width="100%">
+       <tbody>
+        <tr>
+         <td>
+          <pre class="outputfixed"> <b>FUNCTION GetLastError~&amp; ()</b>
+</pre>
+         </td>
+        </tr>
+       </tbody>
+      </table>
+      <p>
+       <br/>
+      </p>
+      <center>
+       <b>
+        QueryDosDeviceA Function Usage
+       </b>
+      </center>
+      <p>
+       Now that I have declared the function, notice how I use it.
+      </p>
+      <p>
+       <b>
+        The first usage of the QueryDosDevice Function:
+       </b>
+      </p>
+      <table cellpadding="15px" width="100%">
+       <tbody>
+        <tr>
+         <td>
+          <pre class="codeide"> IF QueryDosDeviceA~&amp;(0, _OFFSET(buffer), sizeofbuffer) = 0 THEN
+</pre>
+         </td>
+        </tr>
+       </tbody>
+      </table>
+      <ul>
+       <li>
+        <b>
+         The first parameter:
+        </b>
+       </li>
+      </ul>
+      <table cellpadding="5px" width="100%">
+       <tbody>
+        <tr>
+         <td>
+          <pre class="outputtext">lpDeviceName [in, optional]
+
+ An MS-DOS device name string specifying the target of the query. The device name cannot
+ have a trailing backslash; for example, use "C:", not "C:\".
+
+ This parameter can be NULL. In that case, the QueryDosDevice function will store a list of
+ all existing MS-DOS device names into the buffer pointed to by lpTargetPath.
+</pre>
+         </td>
+        </tr>
+       </tbody>
+      </table>
+      <dl>
+       <dd>
+        lpDeviceName is an optional pointer to a null terminated ASCII string holding the device name. In this case, I want a list of all of the DOS device names, so I give it a null pointer, 0. This is in harmony with: "If lpDeviceName is NULL, the function retrieves a list of all existing MS-DOS device names." This is why it is referred to as optional, because the pointer can be left null, 0.
+       </dd>
+      </dl>
+      <ul>
+       <li>
+        <b>
+         The second parameter:
+        </b>
+       </li>
+      </ul>
+      <table cellpadding="5px" width="100%">
+       <tbody>
+        <tr>
+         <td>
+          <pre class="outputtext">lpTargetPath [out]
+
+    A pointer to a buffer that will receive the result of the query. The function fills this
+buffer with one or more null-terminated strings. The final null-terminated string is followed
+by an additional NULL.
+
+    If lpDeviceName is non-NULL, the function retrieves information about the particular MS-
+DOS device specified by lpDeviceName. The first null-terminated string stored into the buffer is the current mapping for the device. The other null-terminated strings represent undeleted
+prior mappings for the device.
+
+    If lpDeviceName is NULL, the function retrieves a list of all existing MS-DOS device
+names. Each null-terminated string stored into the buffer is the name of an existing MS-DOS
+device, for example, \Device\HarddiskVolume1 or \Device\Floppy0.
+</pre>
+         </td>
+        </tr>
+       </tbody>
+      </table>
+      <dl>
+       <dd>
+        lpTargetPath is a pointer to a buffer to receive the data as null terminated ASCII strings. I give it a pointer to
+        <a href="/qb64wiki/index.php/OFFSET" title="OFFSET">
+         _OFFSET
+        </a>
+        (buffer).
+       </dd>
+      </dl>
+      <ul>
+       <li>
+        <b>
+         The third parameter:
+        </b>
+       </li>
+      </ul>
+      <table cellpadding="5px" width="100%">
+       <tbody>
+        <tr>
+         <td>
+          <pre class="outputtext">ucchMax [in]
+
+The maximum number of TCHARs that can be stored into the buffer pointed to by lpTargetPath.
+</pre>
+         </td>
+        </tr>
+       </tbody>
+      </table>
+      <dl>
+       <dd>
+        We need to know what a TCHAR is, since it is involved both in ucchMax and in the return value. Look up TCHAR in the data type list:
+       </dd>
+      </dl>
+      <table cellpadding="5px" width="100%">
+       <tbody>
+        <tr>
+         <td>
+          <pre class="outputtext">A WCHAR if UNICODE is defined, a CHAR otherwise.
+
+This type is declared in WinNT.h as follows:
+
+#ifdef UNICODE
+ typedef WCHAR TCHAR;
+#else
+ typedef char TCHAR;
+#endif 
+</pre>
+         </td>
+        </tr>
+       </tbody>
+      </table>
+      <dl>
+       <dd>
+        Since we are not using
+        <a href="/qb64wiki/index.php/Unicode" title="Unicode">
+         Unicode
+        </a>
+        this time, it is a char, a byte of an ASCII string. (Note that if we were using Unicode, a TCHAR would be two bytes, as you would find out by looking up WCHAR. Keep this in mind if you ever use
+        <a href="/qb64wiki/index.php/Unicode" title="Unicode">
+         Unicode
+        </a>
+        functions, as buffers will need two bytes per character in that instance.)
+       </dd>
+      </dl>
+      <dl>
+       <dd>
+        <b>
+         ucchMax
+        </b>
+        is an unsigned long specifying how large the buffer is. I give it an
+        <a href="/qb64wiki/index.php/UNSIGNED" title="UNSIGNED">
+         _UNSIGNED
+        </a>
+        <a href="/qb64wiki/index.php/LONG" title="LONG">
+         LONG
+        </a>
+        , sizeofbuffer, containing the size of buffer in TCHARs.
+       </dd>
+      </dl>
+      <dl>
+       <dd>
+        <b>
+         It is very important that you don't report a size larger than the buffer actually is. The function has no other way of knowing how large the buffer is, and could overwrite other data if you specify a size that is too large. (Again, if you ever use a Unicode function, you will need 2 bytes per character, so the number of TCHARs would be LEN(buffer)\2.)
+        </b>
+       </dd>
+      </dl>
+      <p>
+       <br/>
+      </p>
+      <ul>
+       <li>
+        <b>
+         First Return value:
+        </b>
+       </li>
+      </ul>
+      <p>
+       The function returns an
+       <a href="/qb64wiki/index.php/UNSIGNED" title="UNSIGNED">
+        _UNSIGNED
+       </a>
+       <a href="/qb64wiki/index.php/LONG" title="LONG">
+        LONG
+       </a>
+       .
+      </p>
+      <table cellpadding="5px" width="100%">
+       <tbody>
+        <tr>
+         <td>
+          <pre class="outputtext">If the function succeeds, the return value is the number of TCHARs stored into the buffer
+pointed to by lpTargetPath.
+
+If the function fails, the return value is zero. To get extended error information, call
+GetLastError.
+
+If the buffer is too small, the function fails and the last error code is ERROR_INSUFFICIENT_BUFFER.
+</pre>
+         </td>
+        </tr>
+       </tbody>
+      </table>
+      <dl>
+       <dd>
+        So, that is what I test for. If the return value is 0, then I check the error code using GetLastError~&amp;. If the error code is ERROR_INSUFFICIENT_BUFFER, 0x7a, then I try again with a larger buffer.
+       </dd>
+      </dl>
+      <p>
+       After a successful call, buffer, the buffer pointed to by lpTargetPath, will contain a list of all of the DOS device names, each null terminated, with an extra null at the end of the list.
+      </p>
+      <ul>
+       <li>
+        <b>
+         Second Return value:
+        </b>
+       </li>
+      </ul>
+      <table cellpadding="15px" width="100%">
+       <tbody>
+        <tr>
+         <td>
+          <pre class="codeide">IF QueryDosDeviceA~&amp;(_OFFSET(comports(i * 2)), _OFFSET(buffer), sizeofbuffer) = 0 THEN
+</pre>
+         </td>
+        </tr>
+       </tbody>
+      </table>
+      <dl>
+       <dd>
+        The difference this time is in the first parameter. By now I have gone through the list of all device names, and have picked out the ones that start with "COM". I now want to find the current mapping for each of them. lpDeviceName is a pointer to a null terminated ASCII string containing the device name. So I give it _OFFSET(comports(i * 2)), which is exactly that. (As I said in the original post, I leave a terminating null until after this call.)
+       </dd>
+      </dl>
+      <p>
+       After a successful call, buffer, the buffer pointed to by lpTargetPath, will contain one or more null terminated strings, with an extra null after the last. I am only interested in the first of these, which is the current mapping.
+      </p>
+      <p>
+       I hope that this answers the question, and adequately demonstrates how to use the Windows API from QB64. If not, inquire further, and I or someone else will try to answer it. Please point out any mistakes.
+      </p>
+      <p>
+       Regards,
+      </p>
+      <p>
+       Michael
+      </p>
+      <p>
+       <br/>
+      </p>
+      <ul>
+       <li>
+        <b>
+         <span style="color:red;">
+          Warning: QB64 variable length strings can move about in memory AT ANY TIME. If you get the _OFFSET of a variable length sting on one line and use it on the next it may not be there anymore. To be safe, move variable length strings into fixed length strings first.
+         </span>
+        </b>
+       </li>
+      </ul>
+      <p>
+       <br/>
+      </p>
+      <h2>
+       <span class="mw-headline" id="See_also">
+        See also
+       </span>
+      </h2>
+      <ul>
+       <li>
+        <a href="/qb64wiki/index.php/OFFSET" title="OFFSET">
+         _OFFSET
+        </a>
+        ,
+        <a href="/qb64wiki/index.php/OFFSET_(function)" title="OFFSET (function)">
+         _OFFSET (function)
+        </a>
+       </li>
+       <li>
+        <a class="mw-redirect" href="/qb64wiki/index.php/BYVAL" title="BYVAL">
+         BYVAL
+        </a>
+        ,
+        <a href="/qb64wiki/index.php/UNSIGNED" title="UNSIGNED">
+         _UNSIGNED
+        </a>
+       </li>
+       <li>
+        <a href="/qb64wiki/index.php/DECLARE_LIBRARY" title="DECLARE LIBRARY">
+         DECLARE LIBRARY
+        </a>
+       </li>
+      </ul>
+      <p>
+       <br/>
+      </p>
+      <hr/>
+      <center>
+       <b>
+        Navigation:
+       </b>
+      </center>
+      <center>
+       <a href="/qb64wiki/index.php/Main_Page" title="Main Page">
+        Main Page with Articles and Tutorials
+       </a>
+      </center>
+      <center>
+       <a href="/qb64wiki/index.php/Keyword_Reference_-_Alphabetical" title="Keyword Reference - Alphabetical">
+        Keyword Reference - Alphabetical
+       </a>
+      </center>
+      <center>
+       <a href="/qb64wiki/index.php/Keyword_Reference_-_By_usage" title="Keyword Reference - By usage">
+        Keyword Reference - By usage
+       </a>
+      </center>
+      <center>
+       <b>
+        <a class="external text" href="https://qb64phoenix.com/forum/showthread.php?tid=2800" rel="nofollow">
+         Report a broken link
+        </a>
+       </b>
+       <br/>
+      </center>
+      <!-- 
+NewPP limit report
+Cached time: 20240719061922
+Cache expiry: 86400
+Reduced expiry: false
+Complications: []
+CPU time usage: 0.091 seconds
+Real time usage: 0.115 seconds
+Preprocessor visited node count: 868/1000000
+Post‐expand include size: 7890/2097152 bytes
+Template argument size: 1424/2097152 bytes
+Highest expansion depth: 3/100
+Expensive parser function count: 0/100
+Unstrip recursion depth: 0/20
+Unstrip post‐expand size: 227/5000000 bytes
+-->
+      <!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%   57.396      1 -total
+ 20.81%   11.946    111 Template:Cl
+  8.18%    4.693      3 Template:CodeStart
+  8.06%    4.625      1 Template:PageSeeAlso
+  7.33%    4.204     12 Template:TextStart
+  6.96%    3.997      1 Template:PageNavigation
+  6.87%    3.943      1 Template:Text
+  6.77%    3.884      3 Template:CodeEnd
+  6.39%    3.670      6 Template:FixedEnd
+  5.79%    3.325     12 Template:TextEnd
+-->
+      <!-- Saved in parser cache with key qb64pnix_mw19894-mwmb_:pcache:idhash:613-0!canonical and timestamp 20240719061921 and revision id 8805.
+ -->
+     </div>
+     <div class="printfooter" data-nosnippet="">
+      Retrieved from "
+      <a dir="ltr" href="https://qb64phoenix.com/qb64wiki/index.php?title=Using_OFFSET&amp;oldid=8805">
+       https://qb64phoenix.com/qb64wiki/index.php?title=Using_OFFSET&amp;oldid=8805
+      </a>
+      "
+     </div>
+    </div>
+    <div class="catlinks catlinks-allhidden" data-mw="interface" id="catlinks">
+    </div>
+   </div>
+  </div>
+  <div id="mw-navigation">
+   <h2>
+    Navigation menu
+   </h2>
+   <div id="mw-head">
+    <nav aria-labelledby="p-personal-label" class="vector-menu mw-portlet mw-portlet-personal vector-user-menu-legacy" id="p-personal" role="navigation">
+     <h3 class="vector-menu-heading" id="p-personal-label">
+      <span class="vector-menu-heading-label">
+       Personal tools
+      </span>
+     </h3>
+     <div class="vector-menu-content">
+      <ul class="vector-menu-content-list">
+       <li class="mw-list-item" id="pt-login">
+        <a accesskey="o" href="/qb64wiki/index.php?title=Special:UserLogin&amp;returnto=Using+OFFSET" title="You are encouraged to log in; however, it is not mandatory [o]">
+         <span>
+          Log in
+         </span>
+        </a>
+       </li>
+      </ul>
+     </div>
+    </nav>
+    <div id="left-navigation">
+     <nav aria-labelledby="p-namespaces-label" class="vector-menu mw-portlet mw-portlet-namespaces vector-menu-tabs vector-menu-tabs-legacy" id="p-namespaces" role="navigation">
+      <h3 class="vector-menu-heading" id="p-namespaces-label">
+       <span class="vector-menu-heading-label">
+        Namespaces
+       </span>
+      </h3>
+      <div class="vector-menu-content">
+       <ul class="vector-menu-content-list">
+        <li class="selected mw-list-item" id="ca-nstab-main">
+         <a accesskey="c" href="/qb64wiki/index.php/Using_OFFSET" title="View the content page [c]">
+          <span>
+           Page
+          </span>
+         </a>
+        </li>
+        <li class="new mw-list-item" id="ca-talk">
+         <a accesskey="t" href="/qb64wiki/index.php?title=Talk:Using_OFFSET&amp;action=edit&amp;redlink=1" rel="discussion" title="Discussion about the content page (page does not exist) [t]">
+          <span>
+           Discussion
+          </span>
+         </a>
+        </li>
+       </ul>
+      </div>
+     </nav>
+     <nav aria-labelledby="p-variants-label" class="vector-menu mw-portlet mw-portlet-variants emptyPortlet vector-menu-dropdown" id="p-variants" role="navigation">
+      <input aria-haspopup="true" aria-labelledby="p-variants-label" class="vector-menu-checkbox" data-event-name="ui.dropdown-p-variants" id="p-variants-checkbox" role="button" type="checkbox"/>
+      <label aria-label="Change language variant" class="vector-menu-heading" id="p-variants-label">
+       <span class="vector-menu-heading-label">
+        English
+       </span>
+      </label>
+      <div class="vector-menu-content">
+       <ul class="vector-menu-content-list">
+       </ul>
+      </div>
+     </nav>
+    </div>
+    <div id="right-navigation">
+     <nav aria-labelledby="p-views-label" class="vector-menu mw-portlet mw-portlet-views vector-menu-tabs vector-menu-tabs-legacy" id="p-views" role="navigation">
+      <h3 class="vector-menu-heading" id="p-views-label">
+       <span class="vector-menu-heading-label">
+        Views
+       </span>
+      </h3>
+      <div class="vector-menu-content">
+       <ul class="vector-menu-content-list">
+        <li class="selected mw-list-item" id="ca-view">
+         <a href="/qb64wiki/index.php/Using_OFFSET">
+          <span>
+           Read
+          </span>
+         </a>
+        </li>
+        <li class="mw-list-item" id="ca-viewsource">
+         <a accesskey="e" href="/qb64wiki/index.php?title=Using_OFFSET&amp;action=edit" title="This page is protected.
+You can view its source [e]">
+          <span>
+           View source
+          </span>
+         </a>
+        </li>
+        <li class="mw-list-item" id="ca-history">
+         <a accesskey="h" href="/qb64wiki/index.php?title=Using_OFFSET&amp;action=history" title="Past revisions of this page [h]">
+          <span>
+           View history
+          </span>
+         </a>
+        </li>
+       </ul>
+      </div>
+     </nav>
+     <nav aria-labelledby="p-cactions-label" class="vector-menu mw-portlet mw-portlet-cactions emptyPortlet vector-menu-dropdown" id="p-cactions" role="navigation" title="More options">
+      <input aria-haspopup="true" aria-labelledby="p-cactions-label" class="vector-menu-checkbox" data-event-name="ui.dropdown-p-cactions" id="p-cactions-checkbox" role="button" type="checkbox"/>
+      <label class="vector-menu-heading" id="p-cactions-label">
+       <span class="vector-menu-heading-label">
+        More
+       </span>
+      </label>
+      <div class="vector-menu-content">
+       <ul class="vector-menu-content-list">
+       </ul>
+      </div>
+     </nav>
+     <div class="vector-search-box-vue vector-search-box-show-thumbnail vector-search-box-auto-expand-width vector-search-box" id="p-search" role="search">
+      <div>
+       <h3>
+        <label for="searchInput">
+         Search
+        </label>
+       </h3>
+       <form action="/qb64wiki/index.php" class="vector-search-box-form" id="searchform">
+        <div class="vector-search-box-inner" data-search-loc="header-navigation" id="simpleSearch">
+         <input accesskey="f" aria-label="Search QB64 Phoenix Edition Wiki" autocapitalize="sentences" class="vector-search-box-input" id="searchInput" name="search" placeholder="Search QB64 Phoenix Edition Wiki" title="Search QB64 Phoenix Edition Wiki [f]" type="search"/>
+         <input name="title" type="hidden" value="Special:Search"/>
+         <input class="searchButton mw-fallbackSearchButton" id="mw-searchButton" name="fulltext" title="Search the pages for this text" type="submit" value="Search"/>
+         <input class="searchButton" id="searchButton" name="go" title="Go to a page with this exact name if it exists" type="submit" value="Go"/>
+        </div>
+       </form>
+      </div>
+     </div>
+    </div>
+   </div>
+   <div id="mw-panel">
+    <div id="p-logo" role="banner">
+     <a class="mw-wiki-logo" href="/qb64wiki/index.php/Main_Page" title="Visit the main page">
+     </a>
+    </div>
+    <nav aria-labelledby="p-navigation-label" class="vector-menu mw-portlet mw-portlet-navigation vector-menu-portal portal" id="p-navigation" role="navigation">
+     <h3 class="vector-menu-heading" id="p-navigation-label">
+      <span class="vector-menu-heading-label">
+       Navigation
+      </span>
+     </h3>
+     <div class="vector-menu-content">
+      <ul class="vector-menu-content-list">
+       <li class="mw-list-item" id="n-mainpage-description">
+        <a accesskey="z" href="/qb64wiki/index.php/Main_Page" title="Visit the main page [z]">
+         <span>
+          Main page
+         </span>
+        </a>
+       </li>
+       <li class="mw-list-item" id="n-recentchanges">
+        <a accesskey="r" href="/qb64wiki/index.php/Special:RecentChanges" title="A list of recent changes in the wiki [r]">
+         <span>
+          Recent changes
+         </span>
+        </a>
+       </li>
+       <li class="mw-list-item" id="n-randompage">
+        <a accesskey="x" href="/qb64wiki/index.php/Special:Random" title="Load a random page [x]">
+         <span>
+          Random page
+         </span>
+        </a>
+       </li>
+       <li class="mw-list-item" id="n-help-mediawiki">
+        <a href="https://www.mediawiki.org/wiki/Special:MyLanguage/Help:Contents">
+         <span>
+          Help about MediaWiki
+         </span>
+        </a>
+       </li>
+      </ul>
+     </div>
+    </nav>
+    <nav aria-labelledby="p-tb-label" class="vector-menu mw-portlet mw-portlet-tb vector-menu-portal portal" id="p-tb" role="navigation">
+     <h3 class="vector-menu-heading" id="p-tb-label">
+      <span class="vector-menu-heading-label">
+       Tools
+      </span>
+     </h3>
+     <div class="vector-menu-content">
+      <ul class="vector-menu-content-list">
+       <li class="mw-list-item" id="t-whatlinkshere">
+        <a accesskey="j" href="/qb64wiki/index.php/Special:WhatLinksHere/Using_OFFSET" title="A list of all wiki pages that link here [j]">
+         <span>
+          What links here
+         </span>
+        </a>
+       </li>
+       <li class="mw-list-item" id="t-recentchangeslinked">
+        <a accesskey="k" href="/qb64wiki/index.php/Special:RecentChangesLinked/Using_OFFSET" rel="nofollow" title="Recent changes in pages linked from this page [k]">
+         <span>
+          Related changes
+         </span>
+        </a>
+       </li>
+       <li class="mw-list-item" id="t-specialpages">
+        <a accesskey="q" href="/qb64wiki/index.php/Special:SpecialPages" title="A list of all special pages [q]">
+         <span>
+          Special pages
+         </span>
+        </a>
+       </li>
+       <li class="mw-list-item" id="t-print">
+        <a accesskey="p" href="javascript:print();" rel="alternate" title="Printable version of this page [p]">
+         <span>
+          Printable version
+         </span>
+        </a>
+       </li>
+       <li class="mw-list-item" id="t-permalink">
+        <a href="/qb64wiki/index.php?title=Using_OFFSET&amp;oldid=8805" title="Permanent link to this revision of this page">
+         <span>
+          Permanent link
+         </span>
+        </a>
+       </li>
+       <li class="mw-list-item" id="t-info">
+        <a href="/qb64wiki/index.php?title=Using_OFFSET&amp;action=info" title="More information about this page">
+         <span>
+          Page information
+         </span>
+        </a>
+       </li>
+      </ul>
+     </div>
+    </nav>
+   </div>
+  </div>
+  <footer class="mw-footer" id="footer" role="contentinfo">
+   <ul id="footer-info">
+    <li id="footer-info-lastmod">
+     This page was last edited on 27 February 2024, at 23:02.
+    </li>
+   </ul>
+   <ul id="footer-places">
+    <li id="footer-places-privacy">
+     <a href="/qb64wiki/index.php/QB64_Phoenix_Edition_Wiki:Privacy_policy">
+      Privacy policy
+     </a>
+    </li>
+    <li id="footer-places-about">
+     <a href="/qb64wiki/index.php/QB64_Phoenix_Edition_Wiki:About">
+      About QB64 Phoenix Edition Wiki
+     </a>
+    </li>
+    <li id="footer-places-disclaimer">
+     <a href="/qb64wiki/index.php/QB64_Phoenix_Edition_Wiki:General_disclaimer">
+      Disclaimers
+     </a>
+    </li>
+   </ul>
+   <ul class="noprint" id="footer-icons">
+    <li id="footer-poweredbyico">
+     <a href="https://www.mediawiki.org/">
+      <img alt="Powered by MediaWiki" height="31" loading="lazy" src="/qb64wiki/resources/assets/poweredby_mediawiki_88x31.png" srcset="/qb64wiki/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /qb64wiki/resources/assets/poweredby_mediawiki_176x62.png 2x" width="88"/>
+     </a>
+    </li>
+   </ul>
+  </footer>
+  <script>
+   (RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgPageParseReport":{"limitreport":{"cputime":"0.091","walltime":"0.115","ppvisitednodes":{"value":868,"limit":1000000},"postexpandincludesize":{"value":7890,"limit":2097152},"templateargumentsize":{"value":1424,"limit":2097152},"expansiondepth":{"value":3,"limit":100},"expensivefunctioncount":{"value":0,"limit":100},"unstrip-depth":{"value":0,"limit":20},"unstrip-size":{"value":227,"limit":5000000},"timingprofile":["100.00%   57.396      1 -total"," 20.81%   11.946    111 Template:Cl","  8.18%    4.693      3 Template:CodeStart","  8.06%    4.625      1 Template:PageSeeAlso","  7.33%    4.204     12 Template:TextStart","  6.96%    3.997      1 Template:PageNavigation","  6.87%    3.943      1 Template:Text","  6.77%    3.884      3 Template:CodeEnd","  6.39%    3.670      6 Template:FixedEnd","  5.79%    3.325     12 Template:TextEnd"]},"cachereport":{"timestamp":"20240719061922","ttl":86400,"transientcontent":false}}});mw.config.set({"wgBackendResponseTime":87});});
+  </script>
+ </body>
+</html>

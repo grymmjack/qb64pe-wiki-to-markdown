@@ -1,0 +1,756 @@
+<!DOCTYPE html>
+<html class="client-nojs" dir="ltr" lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <title>
+   Download - QB64 Phoenix Edition Wiki
+  </title>
+  <script>
+   document.documentElement.className="client-js";RLCONF={"wgBreakFrames":false,"wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgRequestId":"Zpp7HI_rYEQRpdCCob5aTwAAAWk","wgCSPNonce":false,"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"Download","wgTitle":"Download","wgCurRevisionId":8850,"wgRevisionId":8850,"wgArticleId":1234,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":[],"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgRelevantPageName":"Download","wgRelevantArticleId":1234,"wgIsProbablyEditable":false,"wgRelevantPageIsProbablyEditable":false,"wgRestrictionEdit":["sysop"],"wgRestrictionMove":["sysop"],"wgVector2022PreviewPages":[]};RLSTATE={"site.styles":"ready","user.styles":
+"ready","user":"ready","user.options":"loading","skins.vector.styles.legacy":"ready"};RLPAGEMODULES=["site","mediawiki.page.ready","skins.vector.legacy.js"];
+  </script>
+  <script>
+   (RLQ=window.RLQ||[]).push(function(){mw.loader.implement("user.options@12s5i",function($,jQuery,require,module){mw.user.tokens.set({"patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});});});
+  </script>
+  <link href="/qb64wiki/load.php?lang=en&amp;modules=skins.vector.styles.legacy&amp;only=styles&amp;skin=vector" rel="stylesheet"/>
+  <script async="" src="/qb64wiki/load.php?lang=en&amp;modules=startup&amp;only=scripts&amp;raw=1&amp;skin=vector">
+  </script>
+  <meta content="" name="ResourceLoaderDynamicStyles"/>
+  <link href="/qb64wiki/load.php?lang=en&amp;modules=site.styles&amp;only=styles&amp;skin=vector" rel="stylesheet"/>
+  <meta content="MediaWiki 1.39.3" name="generator"/>
+  <meta content="telephone=no" name="format-detection"/>
+  <meta content="width=1000" name="viewport"/>
+  <link href="/favicon.ico" rel="icon"/>
+  <link href="/qb64wiki/opensearch_desc.php" rel="search" title="QB64 Phoenix Edition Wiki (en)" type="application/opensearchdescription+xml"/>
+  <link href="https://qb64phoenix.com/qb64wiki/api.php?action=rsd" rel="EditURI" type="application/rsd+xml"/>
+  <link href="/qb64wiki/index.php?title=Special:RecentChanges&amp;feed=atom" rel="alternate" title="QB64 Phoenix Edition Wiki Atom feed" type="application/atom+xml"/>
+ </head>
+ <body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject page-Download rootpage-Download skin-vector action-view skin-vector-legacy vector-feature-language-in-header-enabled vector-feature-language-in-main-page-header-disabled vector-feature-language-alert-in-sidebar-disabled vector-feature-sticky-header-disabled vector-feature-sticky-header-edit-disabled vector-feature-table-of-contents-disabled vector-feature-visual-enhancement-next-disabled">
+  <div class="noprint" id="mw-page-base">
+  </div>
+  <div class="noprint" id="mw-head-base">
+  </div>
+  <div class="mw-body" id="content" role="main">
+   <a id="top">
+   </a>
+   <div id="siteNotice">
+   </div>
+   <div class="mw-indicators">
+   </div>
+   <h1 class="firstHeading mw-first-heading" id="firstHeading">
+    <span class="mw-page-title-main">
+     Download
+    </span>
+   </h1>
+   <div class="vector-body" id="bodyContent">
+    <div class="noprint" id="siteSub">
+     From QB64 Phoenix Edition Wiki
+    </div>
+    <div id="contentSub">
+    </div>
+    <div id="contentSub2">
+    </div>
+    <div id="jump-to-nav">
+    </div>
+    <a class="mw-jump-link" href="#mw-head">
+     Jump to navigation
+    </a>
+    <a class="mw-jump-link" href="#searchInput">
+     Jump to search
+    </a>
+    <div class="mw-body-content mw-content-ltr" dir="ltr" id="mw-content-text" lang="en">
+     <div class="mw-parser-output">
+      <hr/>
+      <hr/>
+      <center>
+       <b>
+        <span style="color:red;">
+         Attention!! - This page is outdated and provided for reference and/or education only.
+        </span>
+       </b>
+      </center>
+      <center>
+       (
+       <a href="/qb64wiki/index.php/Historic_Pages" title="Historic Pages">
+        Return to historic Table of Contents
+       </a>
+       )
+      </center>
+      <hr/>
+      <center>
+       Starting with
+       <b>
+        QB64-PE v3.5.0
+       </b>
+       the functionality to make HTTP requests is built-in (
+       <a href="/qb64wiki/index.php/Downloading_Files" title="Downloading Files">
+        see here
+       </a>
+       ).
+      </center>
+      <hr/>
+      <hr/>
+      <p>
+       <br/>
+      </p>
+      <dl>
+       <dd>
+        <b>
+         HTTP/1.1
+        </b>
+        protocol downloads can be done using a
+        <b>
+         GET
+        </b>
+        request using the following format without HTTP:// in the url:
+       </dd>
+      </dl>
+      <table cellpadding="5px" width="100%">
+       <tbody>
+        <tr>
+         <td>
+          <pre class="outputtext">CRLF$ = CHR$(13) + CHR$(10)
+Request$ = "GET " + File_Path + " HTTP/1.1" + CRLF$ + "Host:" + Web_Address + CRLF$ + CRLF$
+</pre>
+         </td>
+        </tr>
+       </tbody>
+      </table>
+      <dl>
+       <dd>
+        Two carriage returns end the request to the
+        <a href="/qb64wiki/index.php/OPENCLIENT" title="OPENCLIENT">
+         client
+        </a>
+        URL. The header that is returned from the site also ends with two carriage returns when there are no errors. The header will also include the requested file's byte size after "content-length:" as below:
+       </dd>
+      </dl>
+      <table cellpadding="5px" width="100%">
+       <tbody>
+        <tr>
+         <td>
+          <pre class="outputtext">HTTP/1.1 200 OK
+Server: dbws
+Date: Tue, 25 Oct 2011 04:41:03 GMT
+Content-Type: text/plain; charset=ascii
+Connection: keep-alive
+<span style="color:blue;">content-length: 4087</span>
+x-robots-tag: noindex,nofollow
+accept-ranges: bytes
+etag: 365n
+pragma: public
+cache-control: max-age=0 <i> </i>
+</pre>
+         </td>
+        </tr>
+       </tbody>
+      </table>
+      <dl>
+       <dd>
+        Each row of text response sent is ended with a carriage return with the end of header having two. After that comes the file data.
+       </dd>
+       <dd>
+        It is recommended that data be loaded immediately by using a
+        <a href="/qb64wiki/index.php/GET_(TCP/IP_statement)" title="GET (TCP/IP statement)">
+         GET
+        </a>
+        loop so that connections are not dropped during a
+        <a href="/qb64wiki/index.php/DELAY" title="DELAY">
+         delay
+        </a>
+        .
+       </dd>
+      </dl>
+      <p>
+       <br/>
+      </p>
+      <dl>
+       <dd>
+        <b>
+         A "raw" Download function that downloads an image directly off of a web page using the image name on that page.
+        </b>
+       </dd>
+      </dl>
+      <table cellpadding="15px" width="100%">
+       <tbody>
+        <tr>
+         <td>
+          <pre class="codeide"><a href="/qb64wiki/index.php/IF...THEN" title="IF...THEN"><span style="color:#4593D8;">IF</span></a> Download("www.qb64.net/qb64.png", "qb64logo.png", 10) <a href="/qb64wiki/index.php/THEN" title="THEN"><span style="color:#4593D8;">THEN</span></a> ' timelimit = 10 seconds
+ <a href="/qb64wiki/index.php/SCREEN" title="SCREEN"><span style="color:#4593D8;">SCREEN</span></a> <a href="/qb64wiki/index.php/LOADIMAGE" title="LOADIMAGE"><span style="color:#4593D8;">_LOADIMAGE</span></a>("qb64logo.png",32)
+<a href="/qb64wiki/index.php/ELSE" title="ELSE"><span style="color:#4593D8;">ELSE</span></a>: <a href="/qb64wiki/index.php/PRINT" title="PRINT"><span style="color:#4593D8;">PRINT</span></a> "Couldn't download QB64 logo."
+<a class="mw-redirect" href="/qb64wiki/index.php/END_IF" title="END IF"><span style="color:#4593D8;">END IF</span></a>
+<a href="/qb64wiki/index.php/SLEEP" title="SLEEP"><span style="color:#4593D8;">SLEEP</span></a>
+<a href="/qb64wiki/index.php/SYSTEM" title="SYSTEM"><span style="color:#4593D8;">SYSTEM</span></a>
+' ---------- program end -----------
+
+<a href="/qb64wiki/index.php/FUNCTION" title="FUNCTION"><span style="color:#4593D8;">FUNCTION</span></a> Download (url$, file$, timelimit) ' returns -1 if successful, 0 if not
+url2$ = url$
+x = <a href="/qb64wiki/index.php/INSTR" title="INSTR"><span style="color:#4593D8;">INSTR</span></a>(url2$, "/")
+<a href="/qb64wiki/index.php/IF...THEN" title="IF...THEN"><span style="color:#4593D8;">IF</span></a> x <a href="/qb64wiki/index.php/THEN" title="THEN"><span style="color:#4593D8;">THEN</span></a> url2$ = <a href="/qb64wiki/index.php/LEFT$" title="LEFT$"><span style="color:#4593D8;">LEFT$</span></a>(url$, x - 1)
+client = <a href="/qb64wiki/index.php/OPENCLIENT" title="OPENCLIENT"><span style="color:#4593D8;">_OPENCLIENT</span></a>("TCP/IP:80:" + url2$)
+<a href="/qb64wiki/index.php/IF...THEN" title="IF...THEN"><span style="color:#4593D8;">IF</span></a> client = 0 <a href="/qb64wiki/index.php/THEN" title="THEN"><span style="color:#4593D8;">THEN</span></a> <a href="/qb64wiki/index.php/EXIT_FUNCTION" title="EXIT FUNCTION"><span style="color:#4593D8;">EXIT FUNCTION</span></a>
+e$ = <a href="/qb64wiki/index.php/CHR$" title="CHR$"><span style="color:#4593D8;">CHR$</span></a>(13) + <a href="/qb64wiki/index.php/CHR$" title="CHR$"><span style="color:#4593D8;">CHR$</span></a>(10) ' end of line characters
+url3$ = <a href="/qb64wiki/index.php/RIGHT$" title="RIGHT$"><span style="color:#4593D8;">RIGHT$</span></a>(url$, <a href="/qb64wiki/index.php/LEN" title="LEN"><span style="color:#4593D8;">LEN</span></a>(url$) - x + 1)
+x$ = "GET " + url3$ + " HTTP/1.1" + e$
+x$ = x$ + "Host: " + url2$ + e$ + e$
+<a href="/qb64wiki/index.php/PUT_(TCP/IP_statement)" title="PUT (TCP/IP statement)"><span style="color:#4593D8;">PUT</span></a> #client, , x$
+t! = <a href="/qb64wiki/index.php/TIMER" title="TIMER"><span style="color:#4593D8;">TIMER</span></a> ' start time
+<a class="mw-redirect" href="/qb64wiki/index.php/DO" title="DO"><span style="color:#4593D8;">DO</span></a>
+    <a href="/qb64wiki/index.php/DELAY" title="DELAY"><span style="color:#4593D8;">_DELAY</span></a> 0.05 ' 50ms delay (20 checks per second)
+    <a href="/qb64wiki/index.php/GET_(TCP/IP_statement)" title="GET (TCP/IP statement)"><span style="color:#4593D8;">GET</span></a> #client, , a2$
+    a$ = a$ + a2$
+    i = <a href="/qb64wiki/index.php/INSTR" title="INSTR"><span style="color:#4593D8;">INSTR</span></a>(a$, "Content-Length:")
+    <a href="/qb64wiki/index.php/IF...THEN" title="IF...THEN"><span style="color:#4593D8;">IF</span></a> i <a href="/qb64wiki/index.php/THEN" title="THEN"><span style="color:#4593D8;">THEN</span></a>
+      i2 = <a href="/qb64wiki/index.php/INSTR" title="INSTR"><span style="color:#4593D8;">INSTR</span></a>(i, a$, e$)
+      <a href="/qb64wiki/index.php/IF...THEN" title="IF...THEN"><span style="color:#4593D8;">IF</span></a> i2 <a href="/qb64wiki/index.php/THEN" title="THEN"><span style="color:#4593D8;">THEN</span></a>
+      l = <a href="/qb64wiki/index.php/VAL" title="VAL"><span style="color:#4593D8;">VAL</span></a>(<a href="/qb64wiki/index.php/MID$" title="MID$"><span style="color:#4593D8;">MID$</span></a>(a$, i + 15, i2 - i -14))
+      i3 = <a href="/qb64wiki/index.php/INSTR" title="INSTR"><span style="color:#4593D8;">INSTR</span></a>(i2, a$, e$ + e$)
+        <a href="/qb64wiki/index.php/IF...THEN" title="IF...THEN"><span style="color:#4593D8;">IF</span></a> i3 <a href="/qb64wiki/index.php/THEN" title="THEN"><span style="color:#4593D8;">THEN</span></a>
+          i3 = i3 + 4 'move i3 to start of data
+          <a href="/qb64wiki/index.php/IF...THEN" title="IF...THEN"><span style="color:#4593D8;">IF</span></a> (<a href="/qb64wiki/index.php/LEN" title="LEN"><span style="color:#4593D8;">LEN</span></a>(a$) - i3 + 1) = l <a href="/qb64wiki/index.php/THEN" title="THEN"><span style="color:#4593D8;">THEN</span></a>
+            <a href="/qb64wiki/index.php/CLOSE" title="CLOSE"><span style="color:#4593D8;">CLOSE</span></a> client ' CLOSE CLIENT
+            d$ = <a href="/qb64wiki/index.php/MID$" title="MID$"><span style="color:#4593D8;">MID$</span></a>(a$, i3, l)
+            fh = <a href="/qb64wiki/index.php/FREEFILE" title="FREEFILE"><span style="color:#4593D8;">FREEFILE</span></a>
+            <a href="/qb64wiki/index.php/OPEN" title="OPEN"><span style="color:#4593D8;">OPEN</span></a> file$ <a href="/qb64wiki/index.php/FOR" title="FOR"><span style="color:#4593D8;">FOR</span></a> <a class="mw-redirect" href="/qb64wiki/index.php/OUTPUT" title="OUTPUT"><span style="color:#4593D8;">OUTPUT</span></a> <a href="/qb64wiki/index.php/AS" title="AS"><span style="color:#4593D8;">AS</span></a> #fh: <a href="/qb64wiki/index.php/CLOSE" title="CLOSE"><span style="color:#4593D8;">CLOSE</span></a> #fh 'Warning! Clears data from existing file
+            <a href="/qb64wiki/index.php/OPEN" title="OPEN"><span style="color:#4593D8;">OPEN</span></a> file$ <a href="/qb64wiki/index.php/FOR" title="FOR"><span style="color:#4593D8;">FOR</span></a> <a class="mw-redirect" href="/qb64wiki/index.php/BINARY" title="BINARY"><span style="color:#4593D8;">BINARY</span></a> <a href="/qb64wiki/index.php/AS" title="AS"><span style="color:#4593D8;">AS</span></a> #fh
+            <a href="/qb64wiki/index.php/PUT" title="PUT"><span style="color:#4593D8;">PUT</span></a> #fh, , d$
+            <a href="/qb64wiki/index.php/CLOSE" title="CLOSE"><span style="color:#4593D8;">CLOSE</span></a> #fh
+            Download = -1 'indicates download was successfull
+            <a href="/qb64wiki/index.php/EXIT_FUNCTION" title="EXIT FUNCTION"><span style="color:#4593D8;">EXIT FUNCTION</span></a>
+          <a class="mw-redirect" href="/qb64wiki/index.php/END_IF" title="END IF"><span style="color:#4593D8;">END IF</span></a> ' availabledata = l
+        <a class="mw-redirect" href="/qb64wiki/index.php/END_IF" title="END IF"><span style="color:#4593D8;">END IF</span></a> ' i3
+      <a class="mw-redirect" href="/qb64wiki/index.php/END_IF" title="END IF"><span style="color:#4593D8;">END IF</span></a> ' i2
+    <a class="mw-redirect" href="/qb64wiki/index.php/END_IF" title="END IF"><span style="color:#4593D8;">END IF</span></a> ' i
+<a href="/qb64wiki/index.php/LOOP" title="LOOP"><span style="color:#4593D8;">LOOP</span></a> <a href="/qb64wiki/index.php/UNTIL" title="UNTIL"><span style="color:#4593D8;">UNTIL</span></a> <a href="/qb64wiki/index.php/TIMER" title="TIMER"><span style="color:#4593D8;">TIMER</span></a> &gt; t! + timelimit ' (in seconds)
+<a href="/qb64wiki/index.php/CLOSE" title="CLOSE"><span style="color:#4593D8;">CLOSE</span></a> client
+<a class="mw-redirect" href="/qb64wiki/index.php/END_FUNCTION" title="END FUNCTION"><span style="color:#4593D8;">END FUNCTION</span></a>
+</pre>
+         </td>
+        </tr>
+       </tbody>
+      </table>
+      <center>
+       <span style="font-family: Courier New, Courier, monospace; font-size: 0.80em; line-height: 50%;">
+        Code by Galleon
+       </span>
+      </center>
+      <p>
+       <br/>
+      </p>
+      <dl>
+       <dd>
+        <b>
+         Downloading a
+         <a class="mw-redirect" href="/qb64wiki/index.php/BINARY" title="BINARY">
+          BINARY
+         </a>
+         image file from a download link using
+         <a href="/qb64wiki/index.php/GET" title="GET">
+          GET #
+         </a>
+         which requires the "content-length" in header.
+        </b>
+       </dd>
+      </dl>
+      <table cellpadding="15px" width="100%">
+       <tbody>
+        <tr>
+         <td>
+          <pre class="codeide"><a href="/qb64wiki/index.php/DEFINT" title="DEFINT"><span style="color:#4593D8;">DEFINT</span></a> A-Z
+
+CR$ = <a href="/qb64wiki/index.php/CHR$" title="CHR$"><span style="color:#4593D8;">CHR$</span></a>(13) + <a href="/qb64wiki/index.php/CHR$" title="CHR$"><span style="color:#4593D8;">CHR$</span></a>(10) 'crlf carriage return line feed characters
+' Change this to the file's public link
+DownFile$ = "http://a5.sphotos.ak.fbcdn.net/hphotos-ak-snc7/293944_10150358253659788_151813304787_8043392_486717139_n.jpg?dl=1"
+
+' Get base URL
+BaseURL$ = DownFile$
+<a href="/qb64wiki/index.php/IF...THEN" title="IF...THEN"><span style="color:#4593D8;">IF</span></a> <a href="/qb64wiki/index.php/INSTR" title="INSTR"><span style="color:#4593D8;">INSTR</span></a>(BaseURL$, "http://") <a href="/qb64wiki/index.php/THEN" title="THEN"><span style="color:#4593D8;">THEN</span></a> BaseURL$ = <a href="/qb64wiki/index.php/RIGHT$" title="RIGHT$"><span style="color:#4593D8;">RIGHT$</span></a>(BaseURL$, <a href="/qb64wiki/index.php/LEN" title="LEN"><span style="color:#4593D8;">LEN</span></a>(BaseURL$) - 7) 'trim http://
+Path$ = <a href="/qb64wiki/index.php/MID$" title="MID$"><span style="color:#4593D8;">MID$</span></a>(BaseURL$, <a href="/qb64wiki/index.php/INSTR" title="INSTR"><span style="color:#4593D8;">INSTR</span></a>(BaseURL$, "/")) 'path to file
+BaseURL$ = <a href="/qb64wiki/index.php/LEFT$" title="LEFT$"><span style="color:#4593D8;">LEFT$</span></a>(BaseURL$, <a href="/qb64wiki/index.php/INSTR" title="INSTR"><span style="color:#4593D8;">INSTR</span></a>(BaseURL$, "/") - 1) 'site URL
+
+
+' Connect to base URL
+<a href="/qb64wiki/index.php/PRINT" title="PRINT"><span style="color:#4593D8;">PRINT</span></a> "Connecting to "; BaseURL$; "...";
+Client&amp; = <a href="/qb64wiki/index.php/OPENCLIENT" title="OPENCLIENT"><span style="color:#4593D8;">_OPENCLIENT</span></a>("TCP/IP:80:" + BaseURL$)
+<a href="/qb64wiki/index.php/IF...THEN" title="IF...THEN"><span style="color:#4593D8;">IF</span></a> Client&amp; = 0 <a href="/qb64wiki/index.php/THEN" title="THEN"><span style="color:#4593D8;">THEN</span></a> <a href="/qb64wiki/index.php/PRINT" title="PRINT"><span style="color:#4593D8;">PRINT</span></a> "Failed to connect...": <a href="/qb64wiki/index.php/END" title="END"><span style="color:#4593D8;">END</span></a>
+<a href="/qb64wiki/index.php/PRINT" title="PRINT"><span style="color:#4593D8;">PRINT</span></a> "Done."
+
+' Send download request
+<a href="/qb64wiki/index.php/PRINT" title="PRINT"><span style="color:#4593D8;">PRINT</span></a> "Sending download request...";
+Request$ = "GET " + Path$ + " HTTP/1.1" + CR$ + "Host:" + BaseURL$ + CR$ + CR$
+<a href="/qb64wiki/index.php/PUT" title="PUT"><span style="color:#4593D8;">PUT</span></a> #Client&amp;, , Request$
+<a href="/qb64wiki/index.php/PRINT" title="PRINT"><span style="color:#4593D8;">PRINT</span></a> "Done."
+
+' Download the header
+<a href="/qb64wiki/index.php/PRINT" title="PRINT"><span style="color:#4593D8;">PRINT</span></a> "Getting HTML header...";
+Dat$ = ""
+DO
+   <a href="/qb64wiki/index.php/LIMIT" title="LIMIT"><span style="color:#4593D8;">_LIMIT</span></a> 20
+   <a href="/qb64wiki/index.php/GET" title="GET"><span style="color:#4593D8;">GET</span></a> #Client&amp;, , gDat$
+   Dat$ = Dat$ + gDat$
+<a href="/qb64wiki/index.php/LOOP" title="LOOP"><span style="color:#4593D8;">LOOP</span></a> <a href="/qb64wiki/index.php/UNTIL" title="UNTIL"><span style="color:#4593D8;">UNTIL</span></a> <a href="/qb64wiki/index.php/INSTR" title="INSTR"><span style="color:#4593D8;">INSTR</span></a>(Dat$, CR$ + CR$) ' Loop until 2 CRLFs (end of HTML header) are found
+<a href="/qb64wiki/index.php/PRINT" title="PRINT"><span style="color:#4593D8;">PRINT</span></a> "Done."
+
+' Get file size
+FileSizePos = <a href="/qb64wiki/index.php/INSTR" title="INSTR"><span style="color:#4593D8;">INSTR</span></a>(<a href="/qb64wiki/index.php/UCASE$" title="UCASE$"><span style="color:#4593D8;">UCASE$</span></a>(Dat$), "CONTENT-LENGTH: ") + 16
+FileSizeEnd = <a href="/qb64wiki/index.php/INSTR" title="INSTR"><span style="color:#4593D8;">INSTR</span></a>(FileSizePos, Dat$, CR$)
+FileSize&amp; = <a href="/qb64wiki/index.php/VAL" title="VAL"><span style="color:#4593D8;">VAL</span></a>(<a href="/qb64wiki/index.php/MID$" title="MID$"><span style="color:#4593D8;">MID$</span></a>(Dat$, FileSizePos, (FileSizeEnd - FileSizePos) + 1))
+
+<a href="/qb64wiki/index.php/PRINT" title="PRINT"><span style="color:#4593D8;">PRINT</span></a> "File size:"; FileSize&amp;
+<a href="/qb64wiki/index.php/PRINT" title="PRINT"><span style="color:#4593D8;">PRINT</span></a> "Downloading file...";
+
+' Trim off HTML header
+EndHeaderPos = <a href="/qb64wiki/index.php/INSTR" title="INSTR"><span style="color:#4593D8;">INSTR</span></a>(Dat$, CR$ + CR$) + 4
+Dat$ = <a href="/qb64wiki/index.php/RIGHT$" title="RIGHT$"><span style="color:#4593D8;">RIGHT$</span></a>(Dat$, (<a href="/qb64wiki/index.php/LEN" title="LEN"><span style="color:#4593D8;">LEN</span></a>(Dat$) - EndHeaderPos) + 1)
+
+' Get the file name tucked at the end of the URL if necessary
+<a href="/qb64wiki/index.php/FOR...NEXT" title="FOR...NEXT"><span style="color:#4593D8;">FOR</span></a> S = <a href="/qb64wiki/index.php/LEN" title="LEN"><span style="color:#4593D8;">LEN</span></a>(DownFile$) <a href="/qb64wiki/index.php/TO" title="TO"><span style="color:#4593D8;">TO</span></a> 1 <a href="/qb64wiki/index.php/STEP" title="STEP"><span style="color:#4593D8;">STEP</span></a> -1
+   <a href="/qb64wiki/index.php/IF...THEN" title="IF...THEN"><span style="color:#4593D8;">IF</span></a> <a href="/qb64wiki/index.php/MID$" title="MID$"><span style="color:#4593D8;">MID$</span></a>(DownFile$, S, 1) = "/" <a href="/qb64wiki/index.php/THEN" title="THEN"><span style="color:#4593D8;">THEN</span></a>
+      OutFile$ = <a href="/qb64wiki/index.php/RIGHT$" title="RIGHT$"><span style="color:#4593D8;">RIGHT$</span></a>(DownFile$, (<a href="/qb64wiki/index.php/LEN" title="LEN"><span style="color:#4593D8;">LEN</span></a>(DownFile$) - S))
+      <a href="/qb64wiki/index.php/EXIT" title="EXIT"><span style="color:#4593D8;">EXIT</span></a> <a href="/qb64wiki/index.php/FOR...NEXT" title="FOR...NEXT"><span style="color:#4593D8;">FOR</span></a>
+   <a class="mw-redirect" href="/qb64wiki/index.php/END_IF" title="END IF"><span style="color:#4593D8;">END IF</span></a>
+<a href="/qb64wiki/index.php/NEXT" title="NEXT"><span style="color:#4593D8;">NEXT</span></a> S
+' Remove some kind of tag at the end of the file name in some URLs
+<a href="/qb64wiki/index.php/IF...THEN" title="IF...THEN"><span style="color:#4593D8;">IF</span></a> <a href="/qb64wiki/index.php/INSTR" title="INSTR"><span style="color:#4593D8;">INSTR</span></a>(OutFile$, "?") <a href="/qb64wiki/index.php/THEN" title="THEN"><span style="color:#4593D8;">THEN</span></a> OutFile$ = <a href="/qb64wiki/index.php/LEFT$" title="LEFT$"><span style="color:#4593D8;">LEFT$</span></a>(OutFile$, <a href="/qb64wiki/index.php/INSTR" title="INSTR"><span style="color:#4593D8;">INSTR</span></a>(OutFile$, "?") - 1)
+
+' Download the rest of the data
+<a href="/qb64wiki/index.php/OPEN" title="OPEN"><span style="color:#4593D8;">OPEN</span></a> OutFile$ <a href="/qb64wiki/index.php/FOR" title="FOR"><span style="color:#4593D8;">FOR</span></a> <a class="mw-redirect" href="/qb64wiki/index.php/OUTPUT" title="OUTPUT"><span style="color:#4593D8;">OUTPUT</span></a> <a href="/qb64wiki/index.php/AS" title="AS"><span style="color:#4593D8;">AS</span></a> #1: <a href="/qb64wiki/index.php/CLOSE" title="CLOSE"><span style="color:#4593D8;">CLOSE</span></a> #1 'Warning! Clears data from an existing file
+<a href="/qb64wiki/index.php/OPEN" title="OPEN"><span style="color:#4593D8;">OPEN</span></a> OutFile$ <a href="/qb64wiki/index.php/FOR" title="FOR"><span style="color:#4593D8;">FOR</span></a> <a class="mw-redirect" href="/qb64wiki/index.php/BINARY" title="BINARY"><span style="color:#4593D8;">BINARY</span></a> <a href="/qb64wiki/index.php/AS" title="AS"><span style="color:#4593D8;">AS</span></a> #1 'write data to binary image file
+DO
+   <a href="/qb64wiki/index.php/LIMIT" title="LIMIT"><span style="color:#4593D8;">_LIMIT</span></a> 20
+   <a href="/qb64wiki/index.php/PUT" title="PUT"><span style="color:#4593D8;">PUT</span></a> #1, , Dat$
+   <a href="/qb64wiki/index.php/GET" title="GET"><span style="color:#4593D8;">GET</span></a> #Client&amp;, , Dat$
+<a href="/qb64wiki/index.php/LOOP" title="LOOP"><span style="color:#4593D8;">LOOP</span></a> <a href="/qb64wiki/index.php/UNTIL" title="UNTIL"><span style="color:#4593D8;">UNTIL</span></a> <a href="/qb64wiki/index.php/LOF" title="LOF"><span style="color:#4593D8;">LOF</span></a>(1) &gt;= FileSize&amp;
+<a href="/qb64wiki/index.php/CLOSE" title="CLOSE"><span style="color:#4593D8;">CLOSE</span></a> #1, #Client&amp;
+<a href="/qb64wiki/index.php/PRINT" title="PRINT"><span style="color:#4593D8;">PRINT</span></a> "Done!"
+</pre>
+         </td>
+        </tr>
+       </tbody>
+      </table>
+      <center>
+       <span style="font-family: Courier New, Courier, monospace; font-size: 0.80em; line-height: 50%;">
+        Adapted from code by Jobert14
+       </span>
+      </center>
+      <dl>
+       <dd>
+        <b>
+         Note:
+        </b>
+        Some download links require that a
+        <b>
+         tag
+        </b>
+        be added after the file name. Remove that tag if it will be used as the file name.
+       </dd>
+      </dl>
+      <p>
+       <br/>
+      </p>
+      <dl>
+       <dd>
+        <b>
+         Downloading a sequencial text file from a Drop Box download link using HTTP GET and the
+         <a href="/qb64wiki/index.php/GET_(TCP/IP_statement)" title="GET (TCP/IP statement)">
+          TCP/IP GET
+         </a>
+         statement.
+        </b>
+       </dd>
+      </dl>
+      <table cellpadding="15px" width="100%">
+       <tbody>
+        <tr>
+         <td>
+          <pre class="codeide">CrLf$ = <a href="/qb64wiki/index.php/CHR$" title="CHR$"><span style="color:#4593D8;">CHR$</span></a>(13) + <a href="/qb64wiki/index.php/CHR$" title="CHR$"><span style="color:#4593D8;">CHR$</span></a>(10) ' carriage return + line feed ASCII characters
+
+Host = <a href="/qb64wiki/index.php/OPENHOST" title="OPENHOST"><span style="color:#4593D8;">_OPENHOST</span></a>("TCP/IP:319")
+<a href="/qb64wiki/index.php/IF...THEN" title="IF...THEN"><span style="color:#4593D8;">IF</span></a> Host <a href="/qb64wiki/index.php/THEN" title="THEN"><span style="color:#4593D8;">THEN</span></a>
+  <a href="/qb64wiki/index.php/PRINT" title="PRINT"><span style="color:#4593D8;">PRINT</span></a> "&gt; Server started succesfully."
+
+  '// Change this to the file's public link
+  IP_File$ = "dl.dropbox.com/u/8440706/QB64.INI" 'a Drop Box link
+  URL$ = <a href="/qb64wiki/index.php/LEFT$" title="LEFT$"><span style="color:#4593D8;">LEFT$</span></a>(IP_File$, <a href="/qb64wiki/index.php/INSTR" title="INSTR"><span style="color:#4593D8;">INSTR</span></a>(IP_File$, "/") - 1)
+  Path$ = <a href="/qb64wiki/index.php/MID$" title="MID$"><span style="color:#4593D8;">MID$</span></a>(IP_File$, <a href="/qb64wiki/index.php/INSTR" title="INSTR"><span style="color:#4593D8;">INSTR</span></a>(IP_File$, "/"))
+  Client&amp; = <a href="/qb64wiki/index.php/OPENCLIENT" title="OPENCLIENT"><span style="color:#4593D8;">_OPENCLIENT</span></a>("TCP/IP:80:" + URL$)
+  <a href="/qb64wiki/index.php/IF...THEN" title="IF...THEN"><span style="color:#4593D8;">IF</span></a> Client&amp; <a href="/qb64wiki/index.php/THEN" title="THEN"><span style="color:#4593D8;">THEN</span></a>
+    Request$ = "GET " + Path$ + " HTTP/1.1" + CrLf$ + "Host:" + URL$ + CrLf$ + CrLf$
+    <a href="/qb64wiki/index.php/PUT" title="PUT"><span style="color:#4593D8;">PUT</span></a> #Client&amp;, , Request$
+    DO: <a href="/qb64wiki/index.php/LIMIT" title="LIMIT"><span style="color:#4593D8;">_LIMIT</span></a> 20 '              load response header
+      <a href="/qb64wiki/index.php/GET" title="GET"><span style="color:#4593D8;">GET</span></a> #Client&amp;, , Dat$
+      Header$ = Header$ + Dat$
+    <a href="/qb64wiki/index.php/LOOP" title="LOOP"><span style="color:#4593D8;">LOOP</span></a> <a href="/qb64wiki/index.php/UNTIL" title="UNTIL"><span style="color:#4593D8;">UNTIL</span></a> <a href="/qb64wiki/index.php/INSTR" title="INSTR"><span style="color:#4593D8;">INSTR</span></a>(Header$, CrLf$ + CrLf$) ' Loop until 2 CRLFs (end of HTML header) are found
+    <a href="/qb64wiki/index.php/PRINT" title="PRINT"><span style="color:#4593D8;">PRINT</span></a> "Header Done."
+
+    ' Get file size from header
+    SizePos = <a href="/qb64wiki/index.php/INSTR" title="INSTR"><span style="color:#4593D8;">INSTR</span></a>(<a href="/qb64wiki/index.php/UCASE$" title="UCASE$"><span style="color:#4593D8;">UCASE$</span></a>(Header$), "CONTENT-LENGTH:") + 16
+    SizeEnd = <a href="/qb64wiki/index.php/INSTR" title="INSTR"><span style="color:#4593D8;">INSTR</span></a>(SizePos, Header$, CrLf$)
+    FileSize&amp; = <a href="/qb64wiki/index.php/VAL" title="VAL"><span style="color:#4593D8;">VAL</span></a>(<a href="/qb64wiki/index.php/MID$" title="MID$"><span style="color:#4593D8;">MID$</span></a>(Header$, SizePos, (SizeEnd - SizePos) + 1))
+    <a href="/qb64wiki/index.php/PRINT" title="PRINT"><span style="color:#4593D8;">PRINT</span></a> "File size is"; FileSize&amp;; "bytes"
+    EndPos = <a href="/qb64wiki/index.php/INSTR" title="INSTR"><span style="color:#4593D8;">INSTR</span></a>(Header$, CrLf$ + CrLf$) + 4
+    Response$ = <a href="/qb64wiki/index.php/MID$" title="MID$"><span style="color:#4593D8;">MID$</span></a>(Header$, EndPos) ' get data after header already downloaded
+
+    start = 1  '// Get file name from original URL path if necessary
+    <a href="/qb64wiki/index.php/DO...LOOP" title="DO...LOOP"><span style="color:#4593D8;">DO</span></a> '// Change this to destination local file name and path...
+      posit = <a href="/qb64wiki/index.php/INSTR" title="INSTR"><span style="color:#4593D8;">INSTR</span></a>(start, IP_File$, "/")
+      <a href="/qb64wiki/index.php/IF...THEN" title="IF...THEN"><span style="color:#4593D8;">IF</span></a> posit <a href="/qb64wiki/index.php/THEN" title="THEN"><span style="color:#4593D8;">THEN</span></a> lastpos = posit: start = posit + 1
+    <a href="/qb64wiki/index.php/LOOP" title="LOOP"><span style="color:#4593D8;">LOOP</span></a> <a href="/qb64wiki/index.php/UNTIL" title="UNTIL"><span style="color:#4593D8;">UNTIL</span></a> posit = 0
+    File$ = <a href="/qb64wiki/index.php/MID$" title="MID$"><span style="color:#4593D8;">MID$</span></a>(IP_File$, lastpos + 1) 'beware of tag suffixes
+    <a href="/qb64wiki/index.php/OPEN" title="OPEN"><span style="color:#4593D8;">OPEN</span></a> File$ <a href="/qb64wiki/index.php/FOR...NEXT" title="FOR...NEXT"><span style="color:#4593D8;">FOR</span></a> <a class="mw-redirect" href="/qb64wiki/index.php/BINARY" title="BINARY"><span style="color:#4593D8;">BINARY</span></a> <a href="/qb64wiki/index.php/AS" title="AS"><span style="color:#4593D8;">AS</span></a> #1
+    DO: <a href="/qb64wiki/index.php/LIMIT" title="LIMIT"><span style="color:#4593D8;">_LIMIT</span></a> 20
+      <a href="/qb64wiki/index.php/PUT" title="PUT"><span style="color:#4593D8;">PUT</span></a> #1, , Response$
+      <a href="/qb64wiki/index.php/GET" title="GET"><span style="color:#4593D8;">GET</span></a> #Client&amp;, , Response$
+    <a href="/qb64wiki/index.php/LOOP" title="LOOP"><span style="color:#4593D8;">LOOP</span></a> <a href="/qb64wiki/index.php/UNTIL" title="UNTIL"><span style="color:#4593D8;">UNTIL</span></a> <a href="/qb64wiki/index.php/LOF" title="LOF"><span style="color:#4593D8;">LOF</span></a>(1) &gt;= FileSize&amp;
+    <a href="/qb64wiki/index.php/PRINT" title="PRINT"><span style="color:#4593D8;">PRINT</span></a> "File download completed!"
+    <a href="/qb64wiki/index.php/CLOSE" title="CLOSE"><span style="color:#4593D8;">CLOSE</span></a> #1
+  <a href="/qb64wiki/index.php/ELSE" title="ELSE"><span style="color:#4593D8;">ELSE</span></a>
+    <a href="/qb64wiki/index.php/PRINT" title="PRINT"><span style="color:#4593D8;">PRINT</span></a> "Failed to connect."
+  <a class="mw-redirect" href="/qb64wiki/index.php/END_IF" title="END IF"><span style="color:#4593D8;">END IF</span></a>
+<a href="/qb64wiki/index.php/ELSE" title="ELSE"><span style="color:#4593D8;">ELSE</span></a>
+  <a href="/qb64wiki/index.php/PRINT" title="PRINT"><span style="color:#4593D8;">PRINT</span></a> "Failed to create server connection..."
+<a class="mw-redirect" href="/qb64wiki/index.php/END_IF" title="END IF"><span style="color:#4593D8;">END IF</span></a>
+</pre>
+         </td>
+        </tr>
+       </tbody>
+      </table>
+      <center>
+       <span style="font-family: Courier New, Courier, monospace; font-size: 0.80em; line-height: 50%;">
+        Code suggested by Matt Kilgore
+       </span>
+      </center>
+      <hr/>
+      <center>
+       <b>
+        Navigation:
+       </b>
+      </center>
+      <center>
+       <a href="/qb64wiki/index.php/Main_Page" title="Main Page">
+        Main Page with Articles and Tutorials
+       </a>
+      </center>
+      <center>
+       <a href="/qb64wiki/index.php/Keyword_Reference_-_Alphabetical" title="Keyword Reference - Alphabetical">
+        Keyword Reference - Alphabetical
+       </a>
+      </center>
+      <center>
+       <a href="/qb64wiki/index.php/Keyword_Reference_-_By_usage" title="Keyword Reference - By usage">
+        Keyword Reference - By usage
+       </a>
+      </center>
+      <center>
+       <b>
+        <a class="external text" href="https://qb64phoenix.com/forum/showthread.php?tid=2800" rel="nofollow">
+         Report a broken link
+        </a>
+       </b>
+       <br/>
+      </center>
+      <!-- 
+NewPP limit report
+Cached time: 20240718220909
+Cache expiry: 86400
+Reduced expiry: false
+Complications: []
+CPU time usage: 0.056 seconds
+Real time usage: 0.064 seconds
+Preprocessor visited node count: 1398/1000000
+Post‐expand include size: 11108/2097152 bytes
+Template argument size: 2092/2097152 bytes
+Highest expansion depth: 3/100
+Expensive parser function count: 0/100
+Unstrip recursion depth: 0/20
+Unstrip post‐expand size: 127/5000000 bytes
+-->
+      <!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%   29.339      1 -total
+ 27.20%    7.979    192 Template:Cl
+  9.42%    2.765      1 Template:PageNavigation
+  7.07%    2.074      2 Template:Text
+  6.06%    1.778      3 Template:CodeEnd
+  6.00%    1.760      2 Template:TextStart
+  5.50%    1.613      3 Template:Small
+  5.11%    1.498      3 Template:CodeStart
+  5.10%    1.497      2 Template:TextEnd
+-->
+      <!-- Saved in parser cache with key qb64pnix_mw19894-mwmb_:pcache:idhash:1234-0!canonical and timestamp 20240718220909 and revision id 8850.
+ -->
+     </div>
+     <div class="printfooter" data-nosnippet="">
+      Retrieved from "
+      <a dir="ltr" href="https://qb64phoenix.com/qb64wiki/index.php?title=Download&amp;oldid=8850">
+       https://qb64phoenix.com/qb64wiki/index.php?title=Download&amp;oldid=8850
+      </a>
+      "
+     </div>
+    </div>
+    <div class="catlinks catlinks-allhidden" data-mw="interface" id="catlinks">
+    </div>
+   </div>
+  </div>
+  <div id="mw-navigation">
+   <h2>
+    Navigation menu
+   </h2>
+   <div id="mw-head">
+    <nav aria-labelledby="p-personal-label" class="vector-menu mw-portlet mw-portlet-personal vector-user-menu-legacy" id="p-personal" role="navigation">
+     <h3 class="vector-menu-heading" id="p-personal-label">
+      <span class="vector-menu-heading-label">
+       Personal tools
+      </span>
+     </h3>
+     <div class="vector-menu-content">
+      <ul class="vector-menu-content-list">
+       <li class="mw-list-item" id="pt-login">
+        <a accesskey="o" href="/qb64wiki/index.php?title=Special:UserLogin&amp;returnto=Download" title="You are encouraged to log in; however, it is not mandatory [o]">
+         <span>
+          Log in
+         </span>
+        </a>
+       </li>
+      </ul>
+     </div>
+    </nav>
+    <div id="left-navigation">
+     <nav aria-labelledby="p-namespaces-label" class="vector-menu mw-portlet mw-portlet-namespaces vector-menu-tabs vector-menu-tabs-legacy" id="p-namespaces" role="navigation">
+      <h3 class="vector-menu-heading" id="p-namespaces-label">
+       <span class="vector-menu-heading-label">
+        Namespaces
+       </span>
+      </h3>
+      <div class="vector-menu-content">
+       <ul class="vector-menu-content-list">
+        <li class="selected mw-list-item" id="ca-nstab-main">
+         <a accesskey="c" href="/qb64wiki/index.php/Download" title="View the content page [c]">
+          <span>
+           Page
+          </span>
+         </a>
+        </li>
+        <li class="new mw-list-item" id="ca-talk">
+         <a accesskey="t" href="/qb64wiki/index.php?title=Talk:Download&amp;action=edit&amp;redlink=1" rel="discussion" title="Discussion about the content page (page does not exist) [t]">
+          <span>
+           Discussion
+          </span>
+         </a>
+        </li>
+       </ul>
+      </div>
+     </nav>
+     <nav aria-labelledby="p-variants-label" class="vector-menu mw-portlet mw-portlet-variants emptyPortlet vector-menu-dropdown" id="p-variants" role="navigation">
+      <input aria-haspopup="true" aria-labelledby="p-variants-label" class="vector-menu-checkbox" data-event-name="ui.dropdown-p-variants" id="p-variants-checkbox" role="button" type="checkbox"/>
+      <label aria-label="Change language variant" class="vector-menu-heading" id="p-variants-label">
+       <span class="vector-menu-heading-label">
+        English
+       </span>
+      </label>
+      <div class="vector-menu-content">
+       <ul class="vector-menu-content-list">
+       </ul>
+      </div>
+     </nav>
+    </div>
+    <div id="right-navigation">
+     <nav aria-labelledby="p-views-label" class="vector-menu mw-portlet mw-portlet-views vector-menu-tabs vector-menu-tabs-legacy" id="p-views" role="navigation">
+      <h3 class="vector-menu-heading" id="p-views-label">
+       <span class="vector-menu-heading-label">
+        Views
+       </span>
+      </h3>
+      <div class="vector-menu-content">
+       <ul class="vector-menu-content-list">
+        <li class="selected mw-list-item" id="ca-view">
+         <a href="/qb64wiki/index.php/Download">
+          <span>
+           Read
+          </span>
+         </a>
+        </li>
+        <li class="mw-list-item" id="ca-viewsource">
+         <a accesskey="e" href="/qb64wiki/index.php?title=Download&amp;action=edit" title="This page is protected.
+You can view its source [e]">
+          <span>
+           View source
+          </span>
+         </a>
+        </li>
+        <li class="mw-list-item" id="ca-history">
+         <a accesskey="h" href="/qb64wiki/index.php?title=Download&amp;action=history" title="Past revisions of this page [h]">
+          <span>
+           View history
+          </span>
+         </a>
+        </li>
+       </ul>
+      </div>
+     </nav>
+     <nav aria-labelledby="p-cactions-label" class="vector-menu mw-portlet mw-portlet-cactions emptyPortlet vector-menu-dropdown" id="p-cactions" role="navigation" title="More options">
+      <input aria-haspopup="true" aria-labelledby="p-cactions-label" class="vector-menu-checkbox" data-event-name="ui.dropdown-p-cactions" id="p-cactions-checkbox" role="button" type="checkbox"/>
+      <label class="vector-menu-heading" id="p-cactions-label">
+       <span class="vector-menu-heading-label">
+        More
+       </span>
+      </label>
+      <div class="vector-menu-content">
+       <ul class="vector-menu-content-list">
+       </ul>
+      </div>
+     </nav>
+     <div class="vector-search-box-vue vector-search-box-show-thumbnail vector-search-box-auto-expand-width vector-search-box" id="p-search" role="search">
+      <div>
+       <h3>
+        <label for="searchInput">
+         Search
+        </label>
+       </h3>
+       <form action="/qb64wiki/index.php" class="vector-search-box-form" id="searchform">
+        <div class="vector-search-box-inner" data-search-loc="header-navigation" id="simpleSearch">
+         <input accesskey="f" aria-label="Search QB64 Phoenix Edition Wiki" autocapitalize="sentences" class="vector-search-box-input" id="searchInput" name="search" placeholder="Search QB64 Phoenix Edition Wiki" title="Search QB64 Phoenix Edition Wiki [f]" type="search"/>
+         <input name="title" type="hidden" value="Special:Search"/>
+         <input class="searchButton mw-fallbackSearchButton" id="mw-searchButton" name="fulltext" title="Search the pages for this text" type="submit" value="Search"/>
+         <input class="searchButton" id="searchButton" name="go" title="Go to a page with this exact name if it exists" type="submit" value="Go"/>
+        </div>
+       </form>
+      </div>
+     </div>
+    </div>
+   </div>
+   <div id="mw-panel">
+    <div id="p-logo" role="banner">
+     <a class="mw-wiki-logo" href="/qb64wiki/index.php/Main_Page" title="Visit the main page">
+     </a>
+    </div>
+    <nav aria-labelledby="p-navigation-label" class="vector-menu mw-portlet mw-portlet-navigation vector-menu-portal portal" id="p-navigation" role="navigation">
+     <h3 class="vector-menu-heading" id="p-navigation-label">
+      <span class="vector-menu-heading-label">
+       Navigation
+      </span>
+     </h3>
+     <div class="vector-menu-content">
+      <ul class="vector-menu-content-list">
+       <li class="mw-list-item" id="n-mainpage-description">
+        <a accesskey="z" href="/qb64wiki/index.php/Main_Page" title="Visit the main page [z]">
+         <span>
+          Main page
+         </span>
+        </a>
+       </li>
+       <li class="mw-list-item" id="n-recentchanges">
+        <a accesskey="r" href="/qb64wiki/index.php/Special:RecentChanges" title="A list of recent changes in the wiki [r]">
+         <span>
+          Recent changes
+         </span>
+        </a>
+       </li>
+       <li class="mw-list-item" id="n-randompage">
+        <a accesskey="x" href="/qb64wiki/index.php/Special:Random" title="Load a random page [x]">
+         <span>
+          Random page
+         </span>
+        </a>
+       </li>
+       <li class="mw-list-item" id="n-help-mediawiki">
+        <a href="https://www.mediawiki.org/wiki/Special:MyLanguage/Help:Contents">
+         <span>
+          Help about MediaWiki
+         </span>
+        </a>
+       </li>
+      </ul>
+     </div>
+    </nav>
+    <nav aria-labelledby="p-tb-label" class="vector-menu mw-portlet mw-portlet-tb vector-menu-portal portal" id="p-tb" role="navigation">
+     <h3 class="vector-menu-heading" id="p-tb-label">
+      <span class="vector-menu-heading-label">
+       Tools
+      </span>
+     </h3>
+     <div class="vector-menu-content">
+      <ul class="vector-menu-content-list">
+       <li class="mw-list-item" id="t-whatlinkshere">
+        <a accesskey="j" href="/qb64wiki/index.php/Special:WhatLinksHere/Download" title="A list of all wiki pages that link here [j]">
+         <span>
+          What links here
+         </span>
+        </a>
+       </li>
+       <li class="mw-list-item" id="t-recentchangeslinked">
+        <a accesskey="k" href="/qb64wiki/index.php/Special:RecentChangesLinked/Download" rel="nofollow" title="Recent changes in pages linked from this page [k]">
+         <span>
+          Related changes
+         </span>
+        </a>
+       </li>
+       <li class="mw-list-item" id="t-specialpages">
+        <a accesskey="q" href="/qb64wiki/index.php/Special:SpecialPages" title="A list of all special pages [q]">
+         <span>
+          Special pages
+         </span>
+        </a>
+       </li>
+       <li class="mw-list-item" id="t-print">
+        <a accesskey="p" href="javascript:print();" rel="alternate" title="Printable version of this page [p]">
+         <span>
+          Printable version
+         </span>
+        </a>
+       </li>
+       <li class="mw-list-item" id="t-permalink">
+        <a href="/qb64wiki/index.php?title=Download&amp;oldid=8850" title="Permanent link to this revision of this page">
+         <span>
+          Permanent link
+         </span>
+        </a>
+       </li>
+       <li class="mw-list-item" id="t-info">
+        <a href="/qb64wiki/index.php?title=Download&amp;action=info" title="More information about this page">
+         <span>
+          Page information
+         </span>
+        </a>
+       </li>
+      </ul>
+     </div>
+    </nav>
+   </div>
+  </div>
+  <footer class="mw-footer" id="footer" role="contentinfo">
+   <ul id="footer-info">
+    <li id="footer-info-lastmod">
+     This page was last edited on 6 April 2024, at 19:37.
+    </li>
+   </ul>
+   <ul id="footer-places">
+    <li id="footer-places-privacy">
+     <a href="/qb64wiki/index.php/QB64_Phoenix_Edition_Wiki:Privacy_policy">
+      Privacy policy
+     </a>
+    </li>
+    <li id="footer-places-about">
+     <a href="/qb64wiki/index.php/QB64_Phoenix_Edition_Wiki:About">
+      About QB64 Phoenix Edition Wiki
+     </a>
+    </li>
+    <li id="footer-places-disclaimer">
+     <a href="/qb64wiki/index.php/QB64_Phoenix_Edition_Wiki:General_disclaimer">
+      Disclaimers
+     </a>
+    </li>
+   </ul>
+   <ul class="noprint" id="footer-icons">
+    <li id="footer-poweredbyico">
+     <a href="https://www.mediawiki.org/">
+      <img alt="Powered by MediaWiki" height="31" loading="lazy" src="/qb64wiki/resources/assets/poweredby_mediawiki_88x31.png" srcset="/qb64wiki/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /qb64wiki/resources/assets/poweredby_mediawiki_176x62.png 2x" width="88"/>
+     </a>
+    </li>
+   </ul>
+  </footer>
+  <script>
+   (RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgPageParseReport":{"limitreport":{"cputime":"0.056","walltime":"0.064","ppvisitednodes":{"value":1398,"limit":1000000},"postexpandincludesize":{"value":11108,"limit":2097152},"templateargumentsize":{"value":2092,"limit":2097152},"expansiondepth":{"value":3,"limit":100},"expensivefunctioncount":{"value":0,"limit":100},"unstrip-depth":{"value":0,"limit":20},"unstrip-size":{"value":127,"limit":5000000},"timingprofile":["100.00%   29.339      1 -total"," 27.20%    7.979    192 Template:Cl","  9.42%    2.765      1 Template:PageNavigation","  7.07%    2.074      2 Template:Text","  6.06%    1.778      3 Template:CodeEnd","  6.00%    1.760      2 Template:TextStart","  5.50%    1.613      3 Template:Small","  5.11%    1.498      3 Template:CodeStart","  5.10%    1.497      2 Template:TextEnd"]},"cachereport":{"timestamp":"20240718220909","ttl":86400,"transientcontent":false}}});mw.config.set({"wgBackendResponseTime":109});});
+  </script>
+ </body>
+</html>

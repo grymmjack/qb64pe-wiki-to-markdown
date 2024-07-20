@@ -1,0 +1,922 @@
+<!DOCTYPE html>
+<html class="client-nojs" dir="ltr" lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <title>
+   GIF Images - QB64 Phoenix Edition Wiki
+  </title>
+  <script>
+   document.documentElement.className="client-js";RLCONF={"wgBreakFrames":false,"wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgRequestId":"Zpp7T4_rYEQRpdCCob5dcwAAAVk","wgCSPNonce":false,"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"GIF_Images","wgTitle":"GIF Images","wgCurRevisionId":8131,"wgRevisionId":8131,"wgArticleId":611,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":[],"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgRelevantPageName":"GIF_Images","wgRelevantArticleId":611,"wgIsProbablyEditable":false,"wgRelevantPageIsProbablyEditable":false,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgVector2022PreviewPages":[]};RLSTATE={"site.styles":"ready","user.styles":"ready",
+"user":"ready","user.options":"loading","skins.vector.styles.legacy":"ready"};RLPAGEMODULES=["site","mediawiki.page.ready","skins.vector.legacy.js"];
+  </script>
+  <script>
+   (RLQ=window.RLQ||[]).push(function(){mw.loader.implement("user.options@12s5i",function($,jQuery,require,module){mw.user.tokens.set({"patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});});});
+  </script>
+  <link href="/qb64wiki/load.php?lang=en&amp;modules=skins.vector.styles.legacy&amp;only=styles&amp;skin=vector" rel="stylesheet"/>
+  <script async="" src="/qb64wiki/load.php?lang=en&amp;modules=startup&amp;only=scripts&amp;raw=1&amp;skin=vector">
+  </script>
+  <meta content="" name="ResourceLoaderDynamicStyles"/>
+  <link href="/qb64wiki/load.php?lang=en&amp;modules=site.styles&amp;only=styles&amp;skin=vector" rel="stylesheet"/>
+  <meta content="MediaWiki 1.39.3" name="generator"/>
+  <meta content="telephone=no" name="format-detection"/>
+  <meta content="width=1000" name="viewport"/>
+  <link href="/favicon.ico" rel="icon"/>
+  <link href="/qb64wiki/opensearch_desc.php" rel="search" title="QB64 Phoenix Edition Wiki (en)" type="application/opensearchdescription+xml"/>
+  <link href="https://qb64phoenix.com/qb64wiki/api.php?action=rsd" rel="EditURI" type="application/rsd+xml"/>
+  <link href="/qb64wiki/index.php?title=Special:RecentChanges&amp;feed=atom" rel="alternate" title="QB64 Phoenix Edition Wiki Atom feed" type="application/atom+xml"/>
+ </head>
+ <body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject page-GIF_Images rootpage-GIF_Images skin-vector action-view skin-vector-legacy vector-feature-language-in-header-enabled vector-feature-language-in-main-page-header-disabled vector-feature-language-alert-in-sidebar-disabled vector-feature-sticky-header-disabled vector-feature-sticky-header-edit-disabled vector-feature-table-of-contents-disabled vector-feature-visual-enhancement-next-disabled">
+  <div class="noprint" id="mw-page-base">
+  </div>
+  <div class="noprint" id="mw-head-base">
+  </div>
+  <div class="mw-body" id="content" role="main">
+   <a id="top">
+   </a>
+   <div id="siteNotice">
+   </div>
+   <div class="mw-indicators">
+   </div>
+   <h1 class="firstHeading mw-first-heading" id="firstHeading">
+    <span class="mw-page-title-main">
+     GIF Images
+    </span>
+   </h1>
+   <div class="vector-body" id="bodyContent">
+    <div class="noprint" id="siteSub">
+     From QB64 Phoenix Edition Wiki
+    </div>
+    <div id="contentSub">
+    </div>
+    <div id="contentSub2">
+    </div>
+    <div id="jump-to-nav">
+    </div>
+    <a class="mw-jump-link" href="#mw-head">
+     Jump to navigation
+    </a>
+    <a class="mw-jump-link" href="#searchInput">
+     Jump to search
+    </a>
+    <div class="mw-body-content mw-content-ltr" dir="ltr" id="mw-content-text" lang="en">
+     <div class="mw-parser-output">
+      <center>
+       <b>
+        Animated GIF File Decoder
+       </b>
+      </center>
+      <p>
+       GIF files can be one frame or animated images made up of many frames that are displayed at a set frame rate. The following program allows you to view either kind of image or use them in a program.
+       <a href="/qb64wiki/index.php/LOADIMAGE" title="LOADIMAGE">
+        _LOADIMAGE
+       </a>
+       can only return one frame of an animated image.
+      </p>
+      <center>
+       <b>
+        NOTE: Include the
+        <a href="/qb64wiki/index.php/FILELIST$_(function)" title="FILELIST$ (function)">
+         FILELIST$ (function)
+        </a>
+        or create your own File INPUT routine!
+       </b>
+      </center>
+      <table cellpadding="15px" width="100%">
+       <tbody>
+        <tr>
+         <td>
+          <pre class="codeide">
+
+'#######################################################################################
+'# Animated GIF decoder v1.0                                                           #
+'# By Zom-B                                                                            #
+'#######################################################################################
+
+<a href="/qb64wiki/index.php/DEFINT" title="DEFINT"><span style="color:#4593D8;">DEFINT</span></a> A-Z
+'<a href="/qb64wiki/index.php/$DYNAMIC" title="$DYNAMIC"><span style="color:#4593D8;">$DYNAMIC</span></a>
+
+<a href="/qb64wiki/index.php/DIM" title="DIM"><span style="color:#4593D8;">DIM</span></a> <a href="/qb64wiki/index.php/SHARED" title="SHARED"><span style="color:#4593D8;">SHARED</span></a> Dbg: Dbg = 0
+<a href="/qb64wiki/index.php/DIM" title="DIM"><span style="color:#4593D8;">DIM</span></a> <a href="/qb64wiki/index.php/SHARED" title="SHARED"><span style="color:#4593D8;">SHARED</span></a> powerOf2&amp;(11)
+<a href="/qb64wiki/index.php/FOR...NEXT" title="FOR...NEXT"><span style="color:#4593D8;">FOR</span></a> a = 0 <a href="/qb64wiki/index.php/TO" title="TO"><span style="color:#4593D8;">TO</span></a> 11: powerOf2&amp;(a) = 2 ^ a: <a href="/qb64wiki/index.php/NEXT" title="NEXT"><span style="color:#4593D8;">NEXT</span></a> a
+
+<a href="/qb64wiki/index.php/TYPE" title="TYPE"><span style="color:#4593D8;">TYPE</span></a> GIFDATA
+  file <a href="/qb64wiki/index.php/AS" title="AS"><span style="color:#4593D8;">AS</span></a> <a href="/qb64wiki/index.php/INTEGER" title="INTEGER"><span style="color:#4593D8;">INTEGER</span></a>
+  sigver <a href="/qb64wiki/index.php/AS" title="AS"><span style="color:#4593D8;">AS</span></a> <a href="/qb64wiki/index.php/STRING" title="STRING"><span style="color:#4593D8;">STRING</span></a> * 6
+  width <a href="/qb64wiki/index.php/AS" title="AS"><span style="color:#4593D8;">AS</span></a> <a href="/qb64wiki/index.php/UNSIGNED" title="UNSIGNED"><span style="color:#4593D8;">_UNSIGNED</span></a> <a href="/qb64wiki/index.php/INTEGER" title="INTEGER"><span style="color:#4593D8;">INTEGER</span></a>
+  height <a href="/qb64wiki/index.php/AS" title="AS"><span style="color:#4593D8;">AS</span></a> <a href="/qb64wiki/index.php/UNSIGNED" title="UNSIGNED"><span style="color:#4593D8;">_UNSIGNED</span></a> <a href="/qb64wiki/index.php/INTEGER" title="INTEGER"><span style="color:#4593D8;">INTEGER</span></a>
+  bpp <a href="/qb64wiki/index.php/AS" title="AS"><span style="color:#4593D8;">AS</span></a> <a href="/qb64wiki/index.php/UNSIGNED" title="UNSIGNED"><span style="color:#4593D8;">_UNSIGNED</span></a> <a href="/qb64wiki/index.php/BYTE" title="BYTE"><span style="color:#4593D8;">_BYTE</span></a>
+  sortFlag <a href="/qb64wiki/index.php/AS" title="AS"><span style="color:#4593D8;">AS</span></a> <a href="/qb64wiki/index.php/BYTE" title="BYTE"><span style="color:#4593D8;">_BYTE</span></a> ' Unused
+  colorRes <a href="/qb64wiki/index.php/AS" title="AS"><span style="color:#4593D8;">AS</span></a> <a href="/qb64wiki/index.php/UNSIGNED" title="UNSIGNED"><span style="color:#4593D8;">_UNSIGNED</span></a> <a href="/qb64wiki/index.php/BYTE" title="BYTE"><span style="color:#4593D8;">_BYTE</span></a>
+  colorTableFlag <a href="/qb64wiki/index.php/AS" title="AS"><span style="color:#4593D8;">AS</span></a> <a href="/qb64wiki/index.php/BYTE" title="BYTE"><span style="color:#4593D8;">_BYTE</span></a>
+  bgColor <a href="/qb64wiki/index.php/AS" title="AS"><span style="color:#4593D8;">AS</span></a> <a href="/qb64wiki/index.php/UNSIGNED" title="UNSIGNED"><span style="color:#4593D8;">_UNSIGNED</span></a> <a href="/qb64wiki/index.php/BYTE" title="BYTE"><span style="color:#4593D8;">_BYTE</span></a>
+  aspect <a href="/qb64wiki/index.php/AS" title="AS"><span style="color:#4593D8;">AS</span></a> <a href="/qb64wiki/index.php/SINGLE" title="SINGLE"><span style="color:#4593D8;">SINGLE</span></a> ' Unused
+  numColors <a href="/qb64wiki/index.php/AS" title="AS"><span style="color:#4593D8;">AS</span></a> <a href="/qb64wiki/index.php/UNSIGNED" title="UNSIGNED"><span style="color:#4593D8;">_UNSIGNED</span></a> <a href="/qb64wiki/index.php/INTEGER" title="INTEGER"><span style="color:#4593D8;">INTEGER</span></a>
+  palette <a href="/qb64wiki/index.php/AS" title="AS"><span style="color:#4593D8;">AS</span></a> <a href="/qb64wiki/index.php/STRING" title="STRING"><span style="color:#4593D8;">STRING</span></a> * 768
+<a href="/qb64wiki/index.php/END" title="END"><span style="color:#4593D8;">END</span></a> <a href="/qb64wiki/index.php/TYPE" title="TYPE"><span style="color:#4593D8;">TYPE</span></a>
+
+<a href="/qb64wiki/index.php/TYPE" title="TYPE"><span style="color:#4593D8;">TYPE</span></a> FRAMEDATA
+  addr <a href="/qb64wiki/index.php/AS" title="AS"><span style="color:#4593D8;">AS</span></a> <a href="/qb64wiki/index.php/LONG" title="LONG"><span style="color:#4593D8;">LONG</span></a>
+  left <a href="/qb64wiki/index.php/AS" title="AS"><span style="color:#4593D8;">AS</span></a> <a href="/qb64wiki/index.php/UNSIGNED" title="UNSIGNED"><span style="color:#4593D8;">_UNSIGNED</span></a> <a href="/qb64wiki/index.php/INTEGER" title="INTEGER"><span style="color:#4593D8;">INTEGER</span></a>
+  top <a href="/qb64wiki/index.php/AS" title="AS"><span style="color:#4593D8;">AS</span></a> <a href="/qb64wiki/index.php/UNSIGNED" title="UNSIGNED"><span style="color:#4593D8;">_UNSIGNED</span></a> <a href="/qb64wiki/index.php/INTEGER" title="INTEGER"><span style="color:#4593D8;">INTEGER</span></a>
+  width <a href="/qb64wiki/index.php/AS" title="AS"><span style="color:#4593D8;">AS</span></a> <a href="/qb64wiki/index.php/UNSIGNED" title="UNSIGNED"><span style="color:#4593D8;">_UNSIGNED</span></a> <a href="/qb64wiki/index.php/INTEGER" title="INTEGER"><span style="color:#4593D8;">INTEGER</span></a>
+  height <a href="/qb64wiki/index.php/AS" title="AS"><span style="color:#4593D8;">AS</span></a> <a href="/qb64wiki/index.php/UNSIGNED" title="UNSIGNED"><span style="color:#4593D8;">_UNSIGNED</span></a> <a href="/qb64wiki/index.php/INTEGER" title="INTEGER"><span style="color:#4593D8;">INTEGER</span></a>
+  localColorTableFlag <a href="/qb64wiki/index.php/AS" title="AS"><span style="color:#4593D8;">AS</span></a> <a href="/qb64wiki/index.php/BYTE" title="BYTE"><span style="color:#4593D8;">_BYTE</span></a>
+  interlacedFlag <a href="/qb64wiki/index.php/AS" title="AS"><span style="color:#4593D8;">AS</span></a> <a href="/qb64wiki/index.php/BYTE" title="BYTE"><span style="color:#4593D8;">_BYTE</span></a>
+  sortFlag <a href="/qb64wiki/index.php/AS" title="AS"><span style="color:#4593D8;">AS</span></a> <a href="/qb64wiki/index.php/BYTE" title="BYTE"><span style="color:#4593D8;">_BYTE</span></a> ' Unused
+  palBPP <a href="/qb64wiki/index.php/AS" title="AS"><span style="color:#4593D8;">AS</span></a> <a href="/qb64wiki/index.php/UNSIGNED" title="UNSIGNED"><span style="color:#4593D8;">_UNSIGNED</span></a> <a href="/qb64wiki/index.php/BYTE" title="BYTE"><span style="color:#4593D8;">_BYTE</span></a>
+  minimumCodeSize <a href="/qb64wiki/index.php/AS" title="AS"><span style="color:#4593D8;">AS</span></a> <a href="/qb64wiki/index.php/UNSIGNED" title="UNSIGNED"><span style="color:#4593D8;">_UNSIGNED</span></a> <a href="/qb64wiki/index.php/BYTE" title="BYTE"><span style="color:#4593D8;">_BYTE</span></a>
+  transparentFlag <a href="/qb64wiki/index.php/AS" title="AS"><span style="color:#4593D8;">AS</span></a> <a href="/qb64wiki/index.php/BYTE" title="BYTE"><span style="color:#4593D8;">_BYTE</span></a> 'GIF89a-specific (animation) values
+  userInput <a href="/qb64wiki/index.php/AS" title="AS"><span style="color:#4593D8;">AS</span></a> <a href="/qb64wiki/index.php/BYTE" title="BYTE"><span style="color:#4593D8;">_BYTE</span></a> ' Unused
+  disposalMethod <a href="/qb64wiki/index.php/AS" title="AS"><span style="color:#4593D8;">AS</span></a> <a href="/qb64wiki/index.php/UNSIGNED" title="UNSIGNED"><span style="color:#4593D8;">_UNSIGNED</span></a> <a href="/qb64wiki/index.php/BYTE" title="BYTE"><span style="color:#4593D8;">_BYTE</span></a>
+  delay <a href="/qb64wiki/index.php/AS" title="AS"><span style="color:#4593D8;">AS</span></a> <a href="/qb64wiki/index.php/SINGLE" title="SINGLE"><span style="color:#4593D8;">SINGLE</span></a>
+  transColor <a href="/qb64wiki/index.php/AS" title="AS"><span style="color:#4593D8;">AS</span></a> <a href="/qb64wiki/index.php/UNSIGNED" title="UNSIGNED"><span style="color:#4593D8;">_UNSIGNED</span></a> <a href="/qb64wiki/index.php/BYTE" title="BYTE"><span style="color:#4593D8;">_BYTE</span></a>
+<a href="/qb64wiki/index.php/END" title="END"><span style="color:#4593D8;">END</span></a> <a href="/qb64wiki/index.php/TYPE" title="TYPE"><span style="color:#4593D8;">TYPE</span></a>
+
+<a href="/qb64wiki/index.php/SCREEN" title="SCREEN"><span style="color:#4593D8;">SCREEN</span></a> <a href="/qb64wiki/index.php/NEWIMAGE" title="NEWIMAGE"><span style="color:#4593D8;">_NEWIMAGE</span></a>(640, 480, 32)
+
+' Open gif file. This reads the headers and palette but not the image data.
+' The array will be redimentioned to fit the exact number of frames in the file.
+
+<a href="/qb64wiki/index.php/DIM" title="DIM"><span style="color:#4593D8;">DIM</span></a> gifData <a href="/qb64wiki/index.php/AS" title="AS"><span style="color:#4593D8;">AS</span></a> GIFDATA, frameData(0 <a href="/qb64wiki/index.php/TO" title="TO"><span style="color:#4593D8;">TO</span></a> 0) <a href="/qb64wiki/index.php/AS" title="AS"><span style="color:#4593D8;">AS</span></a> FRAMEDATA
+
+filename$ = "mygif.gif"  '&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt; Enter a file name here!!!
+
+<a class="mw-redirect" href="/qb64wiki/index.php/IF" title="IF"><span style="color:#4593D8;">IF</span></a> <a href="/qb64wiki/index.php/LEN" title="LEN"><span style="color:#4593D8;">LEN</span></a>(filename$) = 0 <a href="/qb64wiki/index.php/THEN" title="THEN"><span style="color:#4593D8;">THEN</span></a> <a href="/qb64wiki/index.php/END" title="END"><span style="color:#4593D8;">END</span></a>
+openGif filename$, gifData, frameData()
+
+' Loop away.
+frame = 0
+<a class="mw-redirect" href="/qb64wiki/index.php/DO" title="DO"><span style="color:#4593D8;">DO</span></a>
+  ' Request a frame. If it has been requested before, it is re-used,
+  ' otherwise it is read and decoded from the file.
+  <a href="/qb64wiki/index.php/PUTIMAGE" title="PUTIMAGE"><span style="color:#4593D8;">_PUTIMAGE</span></a> (0, 0), getGifFrame&amp;(gifData, frameData(), frame)
+  <a href="/qb64wiki/index.php/DELAY" title="DELAY"><span style="color:#4593D8;">_DELAY</span></a> frameData(frame).delay
+  frame = (frame + 1) <a href="/qb64wiki/index.php/MOD" title="MOD"><span style="color:#4593D8;">MOD</span></a> (<a href="/qb64wiki/index.php/UBOUND" title="UBOUND"><span style="color:#4593D8;">UBOUND</span></a>(framedata) + 1)
+<a href="/qb64wiki/index.php/LOOP" title="LOOP"><span style="color:#4593D8;">LOOP</span></a> <a href="/qb64wiki/index.php/UNTIL" title="UNTIL"><span style="color:#4593D8;">UNTIL</span></a> <a href="/qb64wiki/index.php/LEN" title="LEN"><span style="color:#4593D8;">LEN</span></a>(<a href="/qb64wiki/index.php/INKEY$" title="INKEY$"><span style="color:#4593D8;">INKEY$</span></a>)
+
+'Close the file and free the allocated frames.
+codeGif gifData, frameData()
+<a href="/qb64wiki/index.php/END" title="END"><span style="color:#4593D8;">END</span></a>
+
+'########################################################################################
+
+<a href="/qb64wiki/index.php/SUB" title="SUB"><span style="color:#4593D8;">SUB</span></a> openGif (filename$, gifData <a href="/qb64wiki/index.php/AS" title="AS"><span style="color:#4593D8;">AS</span></a> GIFDATA, frameData() <a href="/qb64wiki/index.php/AS" title="AS"><span style="color:#4593D8;">AS</span></a> FRAMEDATA) <a href="/qb64wiki/index.php/STATIC" title="STATIC"><span style="color:#4593D8;">STATIC</span></a>
+file = <a href="/qb64wiki/index.php/FREEFILE" title="FREEFILE"><span style="color:#4593D8;">FREEFILE</span></a>: gifData.file = file
+<a href="/qb64wiki/index.php/OPEN" title="OPEN"><span style="color:#4593D8;">OPEN</span></a> "B", gifData.file, filename$
+
+<a href="/qb64wiki/index.php/GET_(graphics_statement)" title="GET (graphics statement)"><span style="color:#4593D8;">GET</span></a> file, , gifData.sigver
+<a href="/qb64wiki/index.php/GET_(graphics_statement)" title="GET (graphics statement)"><span style="color:#4593D8;">GET</span></a> file, , gifData.width
+<a href="/qb64wiki/index.php/GET_(graphics_statement)" title="GET (graphics statement)"><span style="color:#4593D8;">GET</span></a> file, , gifData.height
+<a href="/qb64wiki/index.php/GET_(graphics_statement)" title="GET (graphics statement)"><span style="color:#4593D8;">GET</span></a> file, , byte~%%
+gifData.bpp = (byte~%% <a href="/qb64wiki/index.php/AND" title="AND"><span style="color:#4593D8;">AND</span></a> 7) + 1
+gifData.sortFlag = (byte~%% <a href="/qb64wiki/index.php/AND" title="AND"><span style="color:#4593D8;">AND</span></a> 8) &gt; 0
+gifData.colorRes = (byte~%% \ 16 <a href="/qb64wiki/index.php/AND" title="AND"><span style="color:#4593D8;">AND</span></a> 7) + 1
+gifData.colorTableFlag = (byte~%% <a href="/qb64wiki/index.php/AND" title="AND"><span style="color:#4593D8;">AND</span></a> 128) &gt; 0
+gifData.numColors = 2 ^ gifData.bpp
+<a href="/qb64wiki/index.php/GET_(graphics_statement)" title="GET (graphics statement)"><span style="color:#4593D8;">GET</span></a> file, , gifData.bgColor
+<a href="/qb64wiki/index.php/GET_(graphics_statement)" title="GET (graphics statement)"><span style="color:#4593D8;">GET</span></a> file, , byte~%%
+<a class="mw-redirect" href="/qb64wiki/index.php/IF" title="IF"><span style="color:#4593D8;">IF</span></a> byte~%% = 0 <a href="/qb64wiki/index.php/THEN" title="THEN"><span style="color:#4593D8;">THEN</span></a> gifData.aspect = 0 <a href="/qb64wiki/index.php/ELSE" title="ELSE"><span style="color:#4593D8;">ELSE</span></a> gifData.aspect = (byte~%% + 15) / 64
+
+<a class="mw-redirect" href="/qb64wiki/index.php/IF" title="IF"><span style="color:#4593D8;">IF</span></a> gifData.sigver &lt;&gt; "GIF87a" <a href="/qb64wiki/index.php/AND_(boolean)" title="AND (boolean)"><span style="color:#4593D8;">AND</span></a> gifData.sigver &lt;&gt; "GIF89a" <a href="/qb64wiki/index.php/THEN" title="THEN"><span style="color:#4593D8;">THEN</span></a> <a href="/qb64wiki/index.php/DEST" title="DEST"><span style="color:#4593D8;">_DEST</span></a> 0: <a href="/qb64wiki/index.php/PRINT" title="PRINT"><span style="color:#4593D8;">PRINT</span></a> "Invalid version": <a href="/qb64wiki/index.php/END" title="END"><span style="color:#4593D8;">END</span></a>
+<a class="mw-redirect" href="/qb64wiki/index.php/IF" title="IF"><span style="color:#4593D8;">IF</span></a> <a href="/qb64wiki/index.php/NOT" title="NOT"><span style="color:#4593D8;">NOT</span></a> gifData.colorTableFlag <a href="/qb64wiki/index.php/THEN" title="THEN"><span style="color:#4593D8;">THEN</span></a> <a href="/qb64wiki/index.php/DEST" title="DEST"><span style="color:#4593D8;">_DEST</span></a> 0: <a href="/qb64wiki/index.php/PRINT" title="PRINT"><span style="color:#4593D8;">PRINT</span></a> "No Color Table": <a href="/qb64wiki/index.php/END" title="END"><span style="color:#4593D8;">END</span></a>
+
+palette$ = <a href="/qb64wiki/index.php/SPACE$" title="SPACE$"><span style="color:#4593D8;">SPACE$</span></a>(3 * gifData.numColors)
+<a href="/qb64wiki/index.php/GET_(graphics_statement)" title="GET (graphics statement)"><span style="color:#4593D8;">GET</span></a> file, , palette$
+gifData.palette = palette$
+<a class="mw-redirect" href="/qb64wiki/index.php/IF" title="IF"><span style="color:#4593D8;">IF</span></a> Dbg <a href="/qb64wiki/index.php/AND" title="AND"><span style="color:#4593D8;">AND</span></a> 1 <a href="/qb64wiki/index.php/THEN" title="THEN"><span style="color:#4593D8;">THEN</span></a>
+  <a href="/qb64wiki/index.php/PRINT" title="PRINT"><span style="color:#4593D8;">PRINT</span></a> "sigver         ="; gifData.sigver
+  <a href="/qb64wiki/index.php/PRINT" title="PRINT"><span style="color:#4593D8;">PRINT</span></a> "width          ="; gifData.width
+  <a href="/qb64wiki/index.php/PRINT" title="PRINT"><span style="color:#4593D8;">PRINT</span></a> "height         ="; gifData.height
+  <a href="/qb64wiki/index.php/PRINT" title="PRINT"><span style="color:#4593D8;">PRINT</span></a> "bpp            ="; gifData.bpp
+  <a href="/qb64wiki/index.php/PRINT" title="PRINT"><span style="color:#4593D8;">PRINT</span></a> "sortFlag       ="; gifData.sortFlag
+  <a href="/qb64wiki/index.php/PRINT" title="PRINT"><span style="color:#4593D8;">PRINT</span></a> "colorRes       ="; gifData.colorRes
+  <a href="/qb64wiki/index.php/PRINT" title="PRINT"><span style="color:#4593D8;">PRINT</span></a> "colorTableFlag ="; gifData.colorTableFlag
+  <a href="/qb64wiki/index.php/PRINT" title="PRINT"><span style="color:#4593D8;">PRINT</span></a> "bgColor        ="; gifData.bgColor
+  <a href="/qb64wiki/index.php/PRINT" title="PRINT"><span style="color:#4593D8;">PRINT</span></a> "aspect         ="; gifData.aspect
+  <a href="/qb64wiki/index.php/PRINT" title="PRINT"><span style="color:#4593D8;">PRINT</span></a> "numColors      ="; gifData.numColors
+  <a href="/qb64wiki/index.php/FOR...NEXT" title="FOR...NEXT"><span style="color:#4593D8;">FOR</span></a> i = 0 <a href="/qb64wiki/index.php/TO" title="TO"><span style="color:#4593D8;">TO</span></a> gifData.numColors - 1
+    <a href="/qb64wiki/index.php/PRINT_USING" title="PRINT USING"><span style="color:#4593D8;">PRINT USING</span></a> "pal(###) = "; i;
+    <a href="/qb64wiki/index.php/PRINT" title="PRINT"><span style="color:#4593D8;">PRINT</span></a> <a href="/qb64wiki/index.php/HEX$" title="HEX$"><span style="color:#4593D8;">HEX$</span></a>(<a href="/qb64wiki/index.php/RGB32" title="RGB32"><span style="color:#4593D8;">_RGB32</span></a>(<a href="/qb64wiki/index.php/ASC_(function)" title="ASC (function)"><span style="color:#4593D8;">ASC</span></a>(gifData.palette, i * 3 + 1), <a href="/qb64wiki/index.php/ASC_(function)" title="ASC (function)"><span style="color:#4593D8;">ASC</span></a>(gifData.palette, i * 3 + 2), <a href="/qb64wiki/index.php/ASC_(function)" title="ASC (function)"><span style="color:#4593D8;">ASC</span></a>(gifData.palette, i * 3 + 3)))
+  <a href="/qb64wiki/index.php/NEXT" title="NEXT"><span style="color:#4593D8;">NEXT</span></a>
+<a class="mw-redirect" href="/qb64wiki/index.php/END_IF" title="END IF"><span style="color:#4593D8;">END IF</span></a>
+<a class="mw-redirect" href="/qb64wiki/index.php/DO" title="DO"><span style="color:#4593D8;">DO</span></a>
+  <a href="/qb64wiki/index.php/GET_(graphics_statement)" title="GET (graphics statement)"><span style="color:#4593D8;">GET</span></a> file, , byte~%%
+  <a class="mw-redirect" href="/qb64wiki/index.php/IF" title="IF"><span style="color:#4593D8;">IF</span></a> Dbg <a href="/qb64wiki/index.php/AND_(boolean)" title="AND (boolean)"><span style="color:#4593D8;">AND</span></a> 2 <a href="/qb64wiki/index.php/THEN" title="THEN"><span style="color:#4593D8;">THEN</span></a> <a href="/qb64wiki/index.php/PRINT" title="PRINT"><span style="color:#4593D8;">PRINT</span></a> "Chunk: "; <a href="/qb64wiki/index.php/HEX$" title="HEX$"><span style="color:#4593D8;">HEX$</span></a>(byte~%%)
+  <a href="/qb64wiki/index.php/SELECT_CASE" title="SELECT CASE"><span style="color:#4593D8;">SELECT CASE</span></a> byte~%%
+    <a class="mw-redirect" href="/qb64wiki/index.php/CASE" title="CASE"><span style="color:#4593D8;">CASE</span></a> <a href="/qb64wiki/index.php/%26H" title="&amp;H"><span style="color:#4593D8;">&amp;H</span></a>2C ' Image Descriptor
+      <a class="mw-redirect" href="/qb64wiki/index.php/IF" title="IF"><span style="color:#4593D8;">IF</span></a> frame &gt; <a href="/qb64wiki/index.php/UBOUND" title="UBOUND"><span style="color:#4593D8;">UBOUND</span></a>(frameData) <a href="/qb64wiki/index.php/THEN" title="THEN"><span style="color:#4593D8;">THEN</span></a>
+        <a href="/qb64wiki/index.php/REDIM" title="REDIM"><span style="color:#4593D8;">REDIM</span></a> <a href="/qb64wiki/index.php/PRESERVE" title="PRESERVE"><span style="color:#4593D8;">_PRESERVE</span></a> frameData(0 <a href="/qb64wiki/index.php/TO" title="TO"><span style="color:#4593D8;">TO</span></a> frame * 2 - 1) <a href="/qb64wiki/index.php/AS" title="AS"><span style="color:#4593D8;">AS</span></a> FRAMEDATA
+      <a class="mw-redirect" href="/qb64wiki/index.php/END_IF" title="END IF"><span style="color:#4593D8;">END IF</span></a>
+
+      <a href="/qb64wiki/index.php/GET_(graphics_statement)" title="GET (graphics statement)"><span style="color:#4593D8;">GET</span></a> file, , frameData(frame).left
+      <a href="/qb64wiki/index.php/GET_(graphics_statement)" title="GET (graphics statement)"><span style="color:#4593D8;">GET</span></a> file, , frameData(frame).top
+      <a href="/qb64wiki/index.php/GET_(graphics_statement)" title="GET (graphics statement)"><span style="color:#4593D8;">GET</span></a> file, , frameData(frame).width
+      <a href="/qb64wiki/index.php/GET_(graphics_statement)" title="GET (graphics statement)"><span style="color:#4593D8;">GET</span></a> file, , frameData(frame).height
+      <a href="/qb64wiki/index.php/GET_(graphics_statement)" title="GET (graphics statement)"><span style="color:#4593D8;">GET</span></a> file, , byte~%%
+      frameData(frame).localColorTableFlag = (byte~%% <a href="/qb64wiki/index.php/AND_(boolean)" title="AND (boolean)"><span style="color:#4593D8;">AND</span></a> 128) &gt; 0
+      frameData(frame).interlacedFlag = (byte~%% <a href="/qb64wiki/index.php/AND_(boolean)" title="AND (boolean)"><span style="color:#4593D8;">AND</span></a> 64) &gt; 0
+      frameData(frame).sortFlag = (byte~%% <a href="/qb64wiki/index.php/AND_(boolean)" title="AND (boolean)"><span style="color:#4593D8;">AND</span></a> 32) &gt; 0
+      frameData(frame).palBPP = (byte~%% <a href="/qb64wiki/index.php/AND_(boolean)" title="AND (boolean)"><span style="color:#4593D8;">AND</span></a> 7) + 1
+      frameData(frame).addr = <a href="/qb64wiki/index.php/LOC" title="LOC"><span style="color:#4593D8;">LOC</span></a>(file) + 1
+
+      <a class="mw-redirect" href="/qb64wiki/index.php/IF" title="IF"><span style="color:#4593D8;">IF</span></a> frameData(frame).localColorTableFlag <a href="/qb64wiki/index.php/THEN" title="THEN"><span style="color:#4593D8;">THEN</span></a>
+        <a href="/qb64wiki/index.php/SEEK" title="SEEK"><span style="color:#4593D8;">SEEK</span></a> file, <a href="/qb64wiki/index.php/LOC" title="LOC"><span style="color:#4593D8;">LOC</span></a>(file) + 3 * 2 ^ frameData(frame).palBPP + 1
+      <a class="mw-redirect" href="/qb64wiki/index.php/END_IF" title="END IF"><span style="color:#4593D8;">END IF</span></a>
+      <a href="/qb64wiki/index.php/GET_(graphics_statement)" title="GET (graphics statement)"><span style="color:#4593D8;">GET</span></a> file, , frameData(frame).minimumCodeSize
+      <a class="mw-redirect" href="/qb64wiki/index.php/IF" title="IF"><span style="color:#4593D8;">IF</span></a> Dbg <a href="/qb64wiki/index.php/AND" title="AND"><span style="color:#4593D8;">AND</span></a> 2 <a href="/qb64wiki/index.php/THEN" title="THEN"><span style="color:#4593D8;">THEN</span></a>
+        <a href="/qb64wiki/index.php/PRINT" title="PRINT"><span style="color:#4593D8;">PRINT</span></a> "addr                ="; <a href="/qb64wiki/index.php/HEX$" title="HEX$"><span style="color:#4593D8;">HEX$</span></a>(frameData(frame).addr - 1)
+        <a href="/qb64wiki/index.php/PRINT" title="PRINT"><span style="color:#4593D8;">PRINT</span></a> "left                ="; frameData(frame).left
+        <a href="/qb64wiki/index.php/PRINT" title="PRINT"><span style="color:#4593D8;">PRINT</span></a> "top                 ="; frameData(frame).top
+        <a href="/qb64wiki/index.php/PRINT" title="PRINT"><span style="color:#4593D8;">PRINT</span></a> "width               ="; frameData(frame).width
+        <a href="/qb64wiki/index.php/PRINT" title="PRINT"><span style="color:#4593D8;">PRINT</span></a> "height              ="; frameData(frame).height
+        <a href="/qb64wiki/index.php/PRINT" title="PRINT"><span style="color:#4593D8;">PRINT</span></a> "localColorTableFlag ="; frameData(frame).localColorTableFlag
+        <a href="/qb64wiki/index.php/PRINT" title="PRINT"><span style="color:#4593D8;">PRINT</span></a> "interlacedFlag      ="; frameData(frame).interlacedFlag
+        <a href="/qb64wiki/index.php/PRINT" title="PRINT"><span style="color:#4593D8;">PRINT</span></a> "sortFlag            ="; frameData(frame).sortFlag
+        <a href="/qb64wiki/index.php/PRINT" title="PRINT"><span style="color:#4593D8;">PRINT</span></a> "palBPP              ="; frameData(frame).palBPP
+        <a href="/qb64wiki/index.php/PRINT" title="PRINT"><span style="color:#4593D8;">PRINT</span></a> "minimumCodeSize     ="; frameData(frame).minimumCodeSize
+      <a class="mw-redirect" href="/qb64wiki/index.php/END_IF" title="END IF"><span style="color:#4593D8;">END IF</span></a>
+      <a class="mw-redirect" href="/qb64wiki/index.php/IF" title="IF"><span style="color:#4593D8;">IF</span></a> localColors <a href="/qb64wiki/index.php/THEN" title="THEN"><span style="color:#4593D8;">THEN</span></a> <a href="/qb64wiki/index.php/DEST" title="DEST"><span style="color:#4593D8;">_DEST</span></a> 0: <a href="/qb64wiki/index.php/PRINT" title="PRINT"><span style="color:#4593D8;">PRINT</span></a> "Local color table": <a href="/qb64wiki/index.php/END" title="END"><span style="color:#4593D8;">END</span></a>
+      <a class="mw-redirect" href="/qb64wiki/index.php/IF" title="IF"><span style="color:#4593D8;">IF</span></a> frameData(frame).disposalMethod &gt; 2 <a href="/qb64wiki/index.php/THEN" title="THEN"><span style="color:#4593D8;">THEN</span></a> <a href="/qb64wiki/index.php/PRINT" title="PRINT"><span style="color:#4593D8;">PRINT</span></a> "Unsupported disposalMethod: "; frameData(frame).disposalMethod: <a href="/qb64wiki/index.php/END" title="END"><span style="color:#4593D8;">END</span></a>
+      skipBlocks file
+
+      frame = frame + 1
+    <a class="mw-redirect" href="/qb64wiki/index.php/CASE" title="CASE"><span style="color:#4593D8;">CASE</span></a> <a href="/qb64wiki/index.php/%26H" title="&amp;H"><span style="color:#4593D8;">&amp;H</span></a>3B ' Trailer
+      <a href="/qb64wiki/index.php/EXIT_DO" title="EXIT DO"><span style="color:#4593D8;">EXIT DO</span></a>
+    <a class="mw-redirect" href="/qb64wiki/index.php/CASE" title="CASE"><span style="color:#4593D8;">CASE</span></a> <a href="/qb64wiki/index.php/%26H" title="&amp;H"><span style="color:#4593D8;">&amp;H</span></a>21 ' Extension Introducer
+      <a href="/qb64wiki/index.php/GET_(graphics_statement)" title="GET (graphics statement)"><span style="color:#4593D8;">GET</span></a> file, , byte~%% ' Extension Label
+      <a class="mw-redirect" href="/qb64wiki/index.php/IF" title="IF"><span style="color:#4593D8;">IF</span></a> Dbg <a href="/qb64wiki/index.php/AND_(boolean)" title="AND (boolean)"><span style="color:#4593D8;">AND</span></a> 2 <a href="/qb64wiki/index.php/THEN" title="THEN"><span style="color:#4593D8;">THEN</span></a> <a href="/qb64wiki/index.php/PRINT" title="PRINT"><span style="color:#4593D8;">PRINT</span></a> "Extension Introducer: "; <a href="/qb64wiki/index.php/HEX$" title="HEX$"><span style="color:#4593D8;">HEX$</span></a>(byte~%%)
+      <a href="/qb64wiki/index.php/SELECT_CASE" title="SELECT CASE"><span style="color:#4593D8;">SELECT CASE</span></a> byte~%%
+        <a class="mw-redirect" href="/qb64wiki/index.php/CASE" title="CASE"><span style="color:#4593D8;">CASE</span></a> <a href="/qb64wiki/index.php/%26H" title="&amp;H"><span style="color:#4593D8;">&amp;H</span></a>FF, <a href="/qb64wiki/index.php/%26H" title="&amp;H"><span style="color:#4593D8;">&amp;H</span></a>FE ' Application Extension, Comment Extension
+          skipBlocks file
+        <a class="mw-redirect" href="/qb64wiki/index.php/CASE" title="CASE"><span style="color:#4593D8;">CASE</span></a> <a href="/qb64wiki/index.php/%26H" title="&amp;H"><span style="color:#4593D8;">&amp;H</span></a>F9
+          <a class="mw-redirect" href="/qb64wiki/index.php/IF" title="IF"><span style="color:#4593D8;">IF</span></a> frame &gt; <a href="/qb64wiki/index.php/UBOUND" title="UBOUND"><span style="color:#4593D8;">UBOUND</span></a>(frameData) <a href="/qb64wiki/index.php/THEN" title="THEN"><span style="color:#4593D8;">THEN</span></a>
+            <a href="/qb64wiki/index.php/REDIM" title="REDIM"><span style="color:#4593D8;">REDIM</span></a> <a href="/qb64wiki/index.php/PRESERVE" title="PRESERVE"><span style="color:#4593D8;">_PRESERVE</span></a> frameData(0 <a href="/qb64wiki/index.php/TO" title="TO"><span style="color:#4593D8;">TO</span></a> frame * 2 - 1) <a href="/qb64wiki/index.php/AS" title="AS"><span style="color:#4593D8;">AS</span></a> FRAMEDATA
+          <a class="mw-redirect" href="/qb64wiki/index.php/END_IF" title="END IF"><span style="color:#4593D8;">END IF</span></a>
+
+          <a href="/qb64wiki/index.php/GET_(graphics_statement)" title="GET (graphics statement)"><span style="color:#4593D8;">GET</span></a> 1, , byte~%% ' Block Size (always 4)
+          <a href="/qb64wiki/index.php/GET_(graphics_statement)" title="GET (graphics statement)"><span style="color:#4593D8;">GET</span></a> 1, , byte~%%
+          frameData(frame).transparentFlag = (byte~%% <a href="/qb64wiki/index.php/AND_(boolean)" title="AND (boolean)"><span style="color:#4593D8;">AND</span></a> 1) &gt; 0
+          frameData(frame).userInput = (byte~%% <a href="/qb64wiki/index.php/AND_(boolean)" title="AND (boolean)"><span style="color:#4593D8;">AND</span></a> 2) &gt; 0
+          frameData(frame).disposalMethod = byte~%% \ 4 <a href="/qb64wiki/index.php/AND_(boolean)" title="AND (boolean)"><span style="color:#4593D8;">AND</span></a> 7
+          <a href="/qb64wiki/index.php/GET_(graphics_statement)" title="GET (graphics statement)"><span style="color:#4593D8;">GET</span></a> 1, , delay~%
+          <a class="mw-redirect" href="/qb64wiki/index.php/IF" title="IF"><span style="color:#4593D8;">IF</span></a> delay~% = 0 <a href="/qb64wiki/index.php/THEN" title="THEN"><span style="color:#4593D8;">THEN</span></a> frameData(frame).delay = 0.1 <a href="/qb64wiki/index.php/ELSE" title="ELSE"><span style="color:#4593D8;">ELSE</span></a> frameData(frame).delay = delay~% / 100
+          <a href="/qb64wiki/index.php/GET_(graphics_statement)" title="GET (graphics statement)"><span style="color:#4593D8;">GET</span></a> 1, , frameData(frame).transColor
+          <a class="mw-redirect" href="/qb64wiki/index.php/IF" title="IF"><span style="color:#4593D8;">IF</span></a> Dbg <a href="/qb64wiki/index.php/AND" title="AND"><span style="color:#4593D8;">AND</span></a> 2 <a href="/qb64wiki/index.php/THEN" title="THEN"><span style="color:#4593D8;">THEN</span></a>
+            <a href="/qb64wiki/index.php/PRINT" title="PRINT"><span style="color:#4593D8;">PRINT</span></a> "frame           ="; frame
+            <a href="/qb64wiki/index.php/PRINT" title="PRINT"><span style="color:#4593D8;">PRINT</span></a> "transparentFlag ="; frameData(frame).transparentFlag
+            <a href="/qb64wiki/index.php/PRINT" title="PRINT"><span style="color:#4593D8;">PRINT</span></a> "userInput       ="; frameData(frame).userInput
+            <a href="/qb64wiki/index.php/PRINT" title="PRINT"><span style="color:#4593D8;">PRINT</span></a> "disposalMethod  ="; frameData(frame).disposalMethod
+            <a href="/qb64wiki/index.php/PRINT" title="PRINT"><span style="color:#4593D8;">PRINT</span></a> "delay           ="; frameData(frame).delay
+            <a href="/qb64wiki/index.php/PRINT" title="PRINT"><span style="color:#4593D8;">PRINT</span></a> "transColor      ="; frameData(frame).transColor
+          <a class="mw-redirect" href="/qb64wiki/index.php/END_IF" title="END IF"><span style="color:#4593D8;">END IF</span></a>
+          skipBlocks file
+        <a class="mw-redirect" href="/qb64wiki/index.php/CASE_ELSE" title="CASE ELSE"><span style="color:#4593D8;">CASE ELSE</span></a>
+          <a href="/qb64wiki/index.php/PRINT" title="PRINT"><span style="color:#4593D8;">PRINT</span></a> "Unsupported extension Label: "; <a href="/qb64wiki/index.php/HEX$" title="HEX$"><span style="color:#4593D8;">HEX$</span></a>(byte~%%): <a href="/qb64wiki/index.php/END" title="END"><span style="color:#4593D8;">END</span></a>
+      <a href="/qb64wiki/index.php/END_SELECT" title="END SELECT"><span style="color:#4593D8;">END SELECT</span></a>
+    <a class="mw-redirect" href="/qb64wiki/index.php/CASE_ELSE" title="CASE ELSE"><span style="color:#4593D8;">CASE ELSE</span></a>
+      <a href="/qb64wiki/index.php/PRINT" title="PRINT"><span style="color:#4593D8;">PRINT</span></a> "Unsupported chunk: "; <a href="/qb64wiki/index.php/HEX$" title="HEX$"><span style="color:#4593D8;">HEX$</span></a>(byte~%%): <a href="/qb64wiki/index.php/END" title="END"><span style="color:#4593D8;">END</span></a>
+  <a href="/qb64wiki/index.php/END_SELECT" title="END SELECT"><span style="color:#4593D8;">END SELECT</span></a>
+<a href="/qb64wiki/index.php/LOOP" title="LOOP"><span style="color:#4593D8;">LOOP</span></a>
+
+<a href="/qb64wiki/index.php/REDIM" title="REDIM"><span style="color:#4593D8;">REDIM</span></a> <a href="/qb64wiki/index.php/PRESERVE" title="PRESERVE"><span style="color:#4593D8;">_PRESERVE</span></a> frameData(0 <a href="/qb64wiki/index.php/TO" title="TO"><span style="color:#4593D8;">TO</span></a> frame - 1) <a href="/qb64wiki/index.php/AS" title="AS"><span style="color:#4593D8;">AS</span></a> FRAMEDATA
+<a class="mw-redirect" href="/qb64wiki/index.php/END_FUNCTION" title="END FUNCTION"><span style="color:#4593D8;">END FUNCTION</span></a>
+
+<a href="/qb64wiki/index.php/SUB" title="SUB"><span style="color:#4593D8;">SUB</span></a> skipBlocks (file)
+<a class="mw-redirect" href="/qb64wiki/index.php/DO" title="DO"><span style="color:#4593D8;">DO</span></a>
+  <a href="/qb64wiki/index.php/GET_(graphics_statement)" title="GET (graphics statement)"><span style="color:#4593D8;">GET</span></a> file, , byte~%% ' Block Size
+  <a class="mw-redirect" href="/qb64wiki/index.php/IF" title="IF"><span style="color:#4593D8;">IF</span></a> Dbg <a href="/qb64wiki/index.php/AND_(boolean)" title="AND (boolean)"><span style="color:#4593D8;">AND</span></a> 2 <a href="/qb64wiki/index.php/THEN" title="THEN"><span style="color:#4593D8;">THEN</span></a> <a href="/qb64wiki/index.php/PRINT" title="PRINT"><span style="color:#4593D8;">PRINT</span></a> "block size ="; byte~%%
+  <a href="/qb64wiki/index.php/SEEK" title="SEEK"><span style="color:#4593D8;">SEEK</span></a> file, <a href="/qb64wiki/index.php/LOC" title="LOC"><span style="color:#4593D8;">LOC</span></a>(file) + byte~%% + 1
+<a href="/qb64wiki/index.php/LOOP" title="LOOP"><span style="color:#4593D8;">LOOP</span></a> <a class="mw-redirect" href="/qb64wiki/index.php/WHILE" title="WHILE"><span style="color:#4593D8;">WHILE</span></a> byte~%%
+<a href="/qb64wiki/index.php/END_SUB" title="END SUB"><span style="color:#4593D8;">END SUB</span></a>
+
+<a href="/qb64wiki/index.php/FUNCTION" title="FUNCTION"><span style="color:#4593D8;">FUNCTION</span></a> getGifFrame&amp; (gifData <a href="/qb64wiki/index.php/AS" title="AS"><span style="color:#4593D8;">AS</span></a> GIFDATA, frameData() <a href="/qb64wiki/index.php/AS" title="AS"><span style="color:#4593D8;">AS</span></a> FRAMEDATA, frame)
+<a class="mw-redirect" href="/qb64wiki/index.php/IF" title="IF"><span style="color:#4593D8;">IF</span></a> frameData(frame).addr &gt; 0 <a href="/qb64wiki/index.php/THEN" title="THEN"><span style="color:#4593D8;">THEN</span></a>
+  <a class="mw-redirect" href="/qb64wiki/index.php/IF" title="IF"><span style="color:#4593D8;">IF</span></a> Dbg <a href="/qb64wiki/index.php/AND" title="AND"><span style="color:#4593D8;">AND</span></a> 4 <a href="/qb64wiki/index.php/THEN" title="THEN"><span style="color:#4593D8;">THEN</span></a>
+    <a href="/qb64wiki/index.php/PRINT" title="PRINT"><span style="color:#4593D8;">PRINT</span></a> "addr                ="; <a href="/qb64wiki/index.php/HEX$" title="HEX$"><span style="color:#4593D8;">HEX$</span></a>(frameData(frame).addr - 1)
+    <a href="/qb64wiki/index.php/PRINT" title="PRINT"><span style="color:#4593D8;">PRINT</span></a> "left                ="; frameData(frame).left
+    <a href="/qb64wiki/index.php/PRINT" title="PRINT"><span style="color:#4593D8;">PRINT</span></a> "top                 ="; frameData(frame).top
+    <a href="/qb64wiki/index.php/PRINT" title="PRINT"><span style="color:#4593D8;">PRINT</span></a> "width               ="; frameData(frame).width
+    <a href="/qb64wiki/index.php/PRINT" title="PRINT"><span style="color:#4593D8;">PRINT</span></a> "height              ="; frameData(frame).height
+    <a href="/qb64wiki/index.php/PRINT" title="PRINT"><span style="color:#4593D8;">PRINT</span></a> "localColorTableFlag ="; frameData(frame).localColorTableFlag
+    <a href="/qb64wiki/index.php/PRINT" title="PRINT"><span style="color:#4593D8;">PRINT</span></a> "interlacedFlag      ="; frameData(frame).interlacedFlag
+    <a href="/qb64wiki/index.php/PRINT" title="PRINT"><span style="color:#4593D8;">PRINT</span></a> "sortFlag            ="; frameData(frame).sortFlag
+    <a href="/qb64wiki/index.php/PRINT" title="PRINT"><span style="color:#4593D8;">PRINT</span></a> "palBPP              ="; frameData(frame).palBPP
+    <a href="/qb64wiki/index.php/PRINT" title="PRINT"><span style="color:#4593D8;">PRINT</span></a> "minimumCodeSize     ="; frameData(frame).minimumCodeSize
+    <a href="/qb64wiki/index.php/PRINT" title="PRINT"><span style="color:#4593D8;">PRINT</span></a> "transparentFlag     ="; frameData(frame).transparentFlag
+    <a href="/qb64wiki/index.php/PRINT" title="PRINT"><span style="color:#4593D8;">PRINT</span></a> "userInput           ="; frameData(frame).userInput
+    <a href="/qb64wiki/index.php/PRINT" title="PRINT"><span style="color:#4593D8;">PRINT</span></a> "disposalMethod      ="; frameData(frame).disposalMethod
+    <a href="/qb64wiki/index.php/PRINT" title="PRINT"><span style="color:#4593D8;">PRINT</span></a> "delay               ="; frameData(frame).delay
+    <a href="/qb64wiki/index.php/PRINT" title="PRINT"><span style="color:#4593D8;">PRINT</span></a> "transColor          ="; frameData(frame).transColor
+  <a class="mw-redirect" href="/qb64wiki/index.php/END_IF" title="END IF"><span style="color:#4593D8;">END IF</span></a>
+  w = frameData(frame).width
+  h = frameData(frame).height
+  img&amp; = <a href="/qb64wiki/index.php/NEWIMAGE" title="NEWIMAGE"><span style="color:#4593D8;">_NEWIMAGE</span></a>(w, h, 256)
+  frame&amp; = <a href="/qb64wiki/index.php/NEWIMAGE" title="NEWIMAGE"><span style="color:#4593D8;">_NEWIMAGE</span></a>(gifData.width, gifData.height, 256)
+
+  <a href="/qb64wiki/index.php/DEST" title="DEST"><span style="color:#4593D8;">_DEST</span></a> img&amp;
+  decodeFrame gifData, frameData(frame)
+
+  <a href="/qb64wiki/index.php/DEST" title="DEST"><span style="color:#4593D8;">_DEST</span></a> frame&amp;
+  <a class="mw-redirect" href="/qb64wiki/index.php/IF" title="IF"><span style="color:#4593D8;">IF</span></a> frameData(frame).localColorTableFlag <a href="/qb64wiki/index.php/THEN" title="THEN"><span style="color:#4593D8;">THEN</span></a>
+    <a href="/qb64wiki/index.php/COPYPALETTE" title="COPYPALETTE"><span style="color:#4593D8;">_COPYPALETTE</span></a> img&amp;
+  <a href="/qb64wiki/index.php/ELSE" title="ELSE"><span style="color:#4593D8;">ELSE</span></a>
+    <a href="/qb64wiki/index.php/FOR...NEXT" title="FOR...NEXT"><span style="color:#4593D8;">FOR</span></a> i = 0 <a href="/qb64wiki/index.php/TO" title="TO"><span style="color:#4593D8;">TO</span></a> gifData.numColors - 1
+      <a href="/qb64wiki/index.php/PALETTECOLOR" title="PALETTECOLOR"><span style="color:#4593D8;">_PALETTECOLOR</span></a> i, <a href="/qb64wiki/index.php/RGB32" title="RGB32"><span style="color:#4593D8;">_RGB32</span></a>(<a href="/qb64wiki/index.php/ASC_(function)" title="ASC (function)"><span style="color:#4593D8;">ASC</span></a>(gifData.palette, i * 3 + 1), <a href="/qb64wiki/index.php/ASC_(function)" title="ASC (function)"><span style="color:#4593D8;">ASC</span></a>(gifData.palette, i * 3 + 2), <a href="/qb64wiki/index.php/ASC_(function)" title="ASC (function)"><span style="color:#4593D8;">ASC</span></a>(gifData.palette, i * 3 + 3))
+    <a href="/qb64wiki/index.php/NEXT" title="NEXT"><span style="color:#4593D8;">NEXT</span></a>
+  <a class="mw-redirect" href="/qb64wiki/index.php/END_IF" title="END IF"><span style="color:#4593D8;">END IF</span></a>
+
+  <a class="mw-redirect" href="/qb64wiki/index.php/IF" title="IF"><span style="color:#4593D8;">IF</span></a> frame <a href="/qb64wiki/index.php/THEN" title="THEN"><span style="color:#4593D8;">THEN</span></a>
+    <a href="/qb64wiki/index.php/SELECT_CASE" title="SELECT CASE"><span style="color:#4593D8;">SELECT CASE</span></a> frameData(frame - 1).disposalMethod
+      <a class="mw-redirect" href="/qb64wiki/index.php/CASE" title="CASE"><span style="color:#4593D8;">CASE</span></a> 0, 1
+        <a href="/qb64wiki/index.php/PUTIMAGE" title="PUTIMAGE"><span style="color:#4593D8;">_PUTIMAGE</span></a> , frameData(frame - 1).addr
+      <a class="mw-redirect" href="/qb64wiki/index.php/CASE" title="CASE"><span style="color:#4593D8;">CASE</span></a> 2
+        <a href="/qb64wiki/index.php/CLS" title="CLS"><span style="color:#4593D8;">CLS</span></a> , gifData.bgColor
+        <a href="/qb64wiki/index.php/CLEARCOLOR" title="CLEARCOLOR"><span style="color:#4593D8;">_CLEARCOLOR</span></a> gifData.bgColor
+    <a href="/qb64wiki/index.php/END_SELECT" title="END SELECT"><span style="color:#4593D8;">END SELECT</span></a>
+  <a href="/qb64wiki/index.php/ELSE" title="ELSE"><span style="color:#4593D8;">ELSE</span></a>
+    <a href="/qb64wiki/index.php/CLS" title="CLS"><span style="color:#4593D8;">CLS</span></a> , gifData.bgColor
+  <a class="mw-redirect" href="/qb64wiki/index.php/END_IF" title="END IF"><span style="color:#4593D8;">END IF</span></a>
+
+  <a class="mw-redirect" href="/qb64wiki/index.php/IF" title="IF"><span style="color:#4593D8;">IF</span></a> frameData(frame).transparentFlag <a href="/qb64wiki/index.php/THEN" title="THEN"><span style="color:#4593D8;">THEN</span></a>
+    <a href="/qb64wiki/index.php/CLEARCOLOR" title="CLEARCOLOR"><span style="color:#4593D8;">_CLEARCOLOR</span></a> frameData(frame).transColor, img&amp;
+  <a class="mw-redirect" href="/qb64wiki/index.php/END_IF" title="END IF"><span style="color:#4593D8;">END IF</span></a>
+  <a href="/qb64wiki/index.php/PUTIMAGE" title="PUTIMAGE"><span style="color:#4593D8;">_PUTIMAGE</span></a> (frameData(frame).left, frameData(frame).top), img&amp;
+  <a href="/qb64wiki/index.php/FREEIMAGE" title="FREEIMAGE"><span style="color:#4593D8;">_FREEIMAGE</span></a> img&amp;
+
+  frameData(frame).addr = frame&amp;
+  <a href="/qb64wiki/index.php/DEST" title="DEST"><span style="color:#4593D8;">_DEST</span></a> 0
+<a class="mw-redirect" href="/qb64wiki/index.php/END_IF" title="END IF"><span style="color:#4593D8;">END IF</span></a>
+
+getGifFrame&amp; = frameData(frame).addr
+<a class="mw-redirect" href="/qb64wiki/index.php/END_FUNCTION" title="END FUNCTION"><span style="color:#4593D8;">END FUNCTION</span></a>
+
+
+'############################################################################################
+
+<a href="/qb64wiki/index.php/SUB" title="SUB"><span style="color:#4593D8;">SUB</span></a> decodeFrame (gifdata <a href="/qb64wiki/index.php/AS" title="AS"><span style="color:#4593D8;">AS</span></a> GIFDATA, framedata <a href="/qb64wiki/index.php/AS" title="AS"><span style="color:#4593D8;">AS</span></a> FRAMEDATA)
+<a href="/qb64wiki/index.php/DIM" title="DIM"><span style="color:#4593D8;">DIM</span></a> byte <a href="/qb64wiki/index.php/AS" title="AS"><span style="color:#4593D8;">AS</span></a> <a href="/qb64wiki/index.php/UNSIGNED" title="UNSIGNED"><span style="color:#4593D8;">_UNSIGNED</span></a> <a href="/qb64wiki/index.php/BYTE" title="BYTE"><span style="color:#4593D8;">_BYTE</span></a>
+<a href="/qb64wiki/index.php/DIM" title="DIM"><span style="color:#4593D8;">DIM</span></a> prefix(4095), suffix(4095), colorStack(4095)
+
+startCodeSize = gifdata.bpp + 1
+clearCode = 2 ^ gifdata.bpp
+endCode = clearCode + 1
+minCode = endCode + 1
+startMaxCode = clearCode * 2 - 1
+nvc = minCode
+codeSize = startCodeSize
+maxCode = startMaxCode
+
+<a class="mw-redirect" href="/qb64wiki/index.php/IF" title="IF"><span style="color:#4593D8;">IF</span></a> framedata.interlacedFlag <a href="/qb64wiki/index.php/THEN" title="THEN"><span style="color:#4593D8;">THEN</span></a> interlacedPass = 0: interlacedStep = 8
+bitPointer = 0
+blockSize = 0
+blockPointer = 0
+x = 0
+y = 0
+
+file = gifdata.file
+<a href="/qb64wiki/index.php/SEEK" title="SEEK"><span style="color:#4593D8;">SEEK</span></a> file, framedata.addr
+
+<a class="mw-redirect" href="/qb64wiki/index.php/IF" title="IF"><span style="color:#4593D8;">IF</span></a> framedata.localColorTableFlag <a href="/qb64wiki/index.php/THEN" title="THEN"><span style="color:#4593D8;">THEN</span></a>
+  palette$ = <a href="/qb64wiki/index.php/SPACE$" title="SPACE$"><span style="color:#4593D8;">SPACE$</span></a>(3 * 2 ^ framedata.palBPP)
+  <a href="/qb64wiki/index.php/GET_(graphics_statement)" title="GET (graphics statement)"><span style="color:#4593D8;">GET</span></a> 1, , palette$
+
+  <a href="/qb64wiki/index.php/FOR...NEXT" title="FOR...NEXT"><span style="color:#4593D8;">FOR</span></a> i = 0 <a href="/qb64wiki/index.php/TO" title="TO"><span style="color:#4593D8;">TO</span></a> gifdata.numColors - 1
+    c&amp; = <a href="/qb64wiki/index.php/RGB32" title="RGB32"><span style="color:#4593D8;">_RGB32</span></a>(<a href="/qb64wiki/index.php/ASC_(function)" title="ASC (function)"><span style="color:#4593D8;">ASC</span></a>(palette$, i * 3 + 1), <a href="/qb64wiki/index.php/ASC_(function)" title="ASC (function)"><span style="color:#4593D8;">ASC</span></a>(palette$, i * 3 + 2), <a href="/qb64wiki/index.php/ASC_(function)" title="ASC (function)"><span style="color:#4593D8;">ASC</span></a>(palette$, i * 3 + 3))
+    <a href="/qb64wiki/index.php/PALETTECOLOR" title="PALETTECOLOR"><span style="color:#4593D8;">_PALETTECOLOR</span></a> i, c&amp;
+  <a href="/qb64wiki/index.php/NEXT" title="NEXT"><span style="color:#4593D8;">NEXT</span></a>
+<a class="mw-redirect" href="/qb64wiki/index.php/END_IF" title="END IF"><span style="color:#4593D8;">END IF</span></a>
+
+<a href="/qb64wiki/index.php/GET_(graphics_statement)" title="GET (graphics statement)"><span style="color:#4593D8;">GET</span></a> file, , byte ' minimumCodeSize
+
+<a class="mw-redirect" href="/qb64wiki/index.php/DO" title="DO"><span style="color:#4593D8;">DO</span></a>
+  <a href="/qb64wiki/index.php/GOSUB" title="GOSUB"><span style="color:#4593D8;">GOSUB</span></a> GetCode
+  stackPointer = 0
+  <a class="mw-redirect" href="/qb64wiki/index.php/IF" title="IF"><span style="color:#4593D8;">IF</span></a> code = clearCode <a href="/qb64wiki/index.php/THEN" title="THEN"><span style="color:#4593D8;">THEN</span></a> 'Reset &amp; Draw next color direct
+    nvc = minCode '           \
+    codeSize = startCodeSize ' Preset default codes
+    maxCode = startMaxCode '  /
+
+    <a href="/qb64wiki/index.php/GOSUB" title="GOSUB"><span style="color:#4593D8;">GOSUB</span></a> GetCode
+    currentCode = code
+
+    lastColor = code
+    colorStack(stackPointer) = lastColor
+    stackPointer = 1
+  <a href="/qb64wiki/index.php/ELSEIF" title="ELSEIF"><span style="color:#4593D8;">ELSEIF</span></a> code &lt;&gt; endCode <a href="/qb64wiki/index.php/THEN" title="THEN"><span style="color:#4593D8;">THEN</span></a> 'Draw direct color or colors from suffix
+    currentCode = code
+    <a class="mw-redirect" href="/qb64wiki/index.php/IF" title="IF"><span style="color:#4593D8;">IF</span></a> currentCode = nvc <a href="/qb64wiki/index.php/THEN" title="THEN"><span style="color:#4593D8;">THEN</span></a> 'Take last color too
+      currentCode = oldCode
+      colorStack(stackPointer) = lastColor
+      stackPointer = stackPointer + 1
+    <a class="mw-redirect" href="/qb64wiki/index.php/END_IF" title="END IF"><span style="color:#4593D8;">END IF</span></a>
+
+    <a class="mw-redirect" href="/qb64wiki/index.php/WHILE" title="WHILE"><span style="color:#4593D8;">WHILE</span></a> currentCode &gt;= minCode 'Extract colors from suffix
+      colorStack(stackPointer) = suffix(currentCode)
+      stackPointer = stackPointer + 1
+      currentCode = prefix(currentCode) 'Next color from suffix is described in
+    <a class="mw-redirect" href="/qb64wiki/index.php/WEND" title="WEND"><span style="color:#4593D8;">WEND</span></a> '                                 the prefix, else prefix is the last col.
+
+    lastColor = currentCode '              Last color is equal to the
+    colorStack(stackPointer) = lastColor ' last known code (direct, or from
+    stackPointer = stackPointer + 1 '      Prefix)
+    suffix(nvc) = lastColor 'Automatically, update suffix
+    prefix(nvc) = oldCode 'Code from the session before (for extracting from suffix)
+    nvc = nvc + 1
+
+    <a class="mw-redirect" href="/qb64wiki/index.php/IF" title="IF"><span style="color:#4593D8;">IF</span></a> nvc &gt; maxCode <a href="/qb64wiki/index.php/AND_(boolean)" title="AND (boolean)"><span style="color:#4593D8;">AND</span></a> codeSize &lt; 12 <a href="/qb64wiki/index.php/THEN" title="THEN"><span style="color:#4593D8;">THEN</span></a>
+      codeSize = codeSize + 1
+      maxCode = maxCode * 2 + 1
+    <a class="mw-redirect" href="/qb64wiki/index.php/END_IF" title="END IF"><span style="color:#4593D8;">END IF</span></a>
+  <a class="mw-redirect" href="/qb64wiki/index.php/END_IF" title="END IF"><span style="color:#4593D8;">END IF</span></a>
+
+  <a href="/qb64wiki/index.php/FOR...NEXT" title="FOR...NEXT"><span style="color:#4593D8;">FOR</span></a> i = stackPointer - 1 <a href="/qb64wiki/index.php/TO" title="TO"><span style="color:#4593D8;">TO</span></a> 0 <a href="/qb64wiki/index.php/STEP" title="STEP"><span style="color:#4593D8;">STEP</span></a> -1
+    <a href="/qb64wiki/index.php/PSET" title="PSET"><span style="color:#4593D8;">PSET</span></a> (x, y), colorStack(i)
+    x = x + 1
+    <a class="mw-redirect" href="/qb64wiki/index.php/IF" title="IF"><span style="color:#4593D8;">IF</span></a> x = framedata.width <a href="/qb64wiki/index.php/THEN" title="THEN"><span style="color:#4593D8;">THEN</span></a>
+      x = 0
+      <a class="mw-redirect" href="/qb64wiki/index.php/IF" title="IF"><span style="color:#4593D8;">IF</span></a> framedata.interlacedFlag <a href="/qb64wiki/index.php/THEN" title="THEN"><span style="color:#4593D8;">THEN</span></a>
+        y = y + interlacedStep
+        <a class="mw-redirect" href="/qb64wiki/index.php/IF" title="IF"><span style="color:#4593D8;">IF</span></a> y &gt;= framedata.height <a href="/qb64wiki/index.php/THEN" title="THEN"><span style="color:#4593D8;">THEN</span></a>
+          <a href="/qb64wiki/index.php/SELECT_CASE" title="SELECT CASE"><span style="color:#4593D8;">SELECT CASE</span></a> interlacedPass
+            <a class="mw-redirect" href="/qb64wiki/index.php/CASE" title="CASE"><span style="color:#4593D8;">CASE</span></a> 0: interlacedPass = 1: y = 4
+            <a class="mw-redirect" href="/qb64wiki/index.php/CASE" title="CASE"><span style="color:#4593D8;">CASE</span></a> 1: interlacedPass = 2: y = 2
+            <a class="mw-redirect" href="/qb64wiki/index.php/CASE" title="CASE"><span style="color:#4593D8;">CASE</span></a> 2: interlacedPass = 3: y = 1
+          <a href="/qb64wiki/index.php/END_SELECT" title="END SELECT"><span style="color:#4593D8;">END SELECT</span></a>
+          interlacedStep = 2 * y
+        <a class="mw-redirect" href="/qb64wiki/index.php/END_IF" title="END IF"><span style="color:#4593D8;">END IF</span></a>
+      <a href="/qb64wiki/index.php/ELSE" title="ELSE"><span style="color:#4593D8;">ELSE</span></a>
+        y = y + 1
+      <a class="mw-redirect" href="/qb64wiki/index.php/END_IF" title="END IF"><span style="color:#4593D8;">END IF</span></a>
+    <a class="mw-redirect" href="/qb64wiki/index.php/END_IF" title="END IF"><span style="color:#4593D8;">END IF</span></a>
+  <a href="/qb64wiki/index.php/NEXT" title="NEXT"><span style="color:#4593D8;">NEXT</span></a>
+
+  oldCode = code
+<a href="/qb64wiki/index.php/LOOP" title="LOOP"><span style="color:#4593D8;">LOOP</span></a> <a href="/qb64wiki/index.php/UNTIL" title="UNTIL"><span style="color:#4593D8;">UNTIL</span></a> code = endCode
+
+<a href="/qb64wiki/index.php/GET_(graphics_statement)" title="GET (graphics statement)"><span style="color:#4593D8;">GET</span></a> file, , byte
+<a href="/qb64wiki/index.php/EXIT_SUB" title="EXIT SUB"><span style="color:#4593D8;">EXIT SUB</span></a>
+
+GetCode:
+<a class="mw-redirect" href="/qb64wiki/index.php/IF" title="IF"><span style="color:#4593D8;">IF</span></a> bitPointer = 0 <a href="/qb64wiki/index.php/THEN" title="THEN"><span style="color:#4593D8;">THEN</span></a> <a href="/qb64wiki/index.php/GOSUB" title="GOSUB"><span style="color:#4593D8;">GOSUB</span></a> ReadByteFromBlock: bitPointer = 8
+WorkCode&amp; = LastChar \ powerOf2&amp;(8 - bitPointer)
+<a class="mw-redirect" href="/qb64wiki/index.php/WHILE" title="WHILE"><span style="color:#4593D8;">WHILE</span></a> codeSize &gt; bitPointer
+  <a href="/qb64wiki/index.php/GOSUB" title="GOSUB"><span style="color:#4593D8;">GOSUB</span></a> ReadByteFromBlock
+
+  WorkCode&amp; = WorkCode&amp; <a href="/qb64wiki/index.php/OR" title="OR"><span style="color:#4593D8;">OR</span></a> LastChar * powerOf2&amp;(bitPointer)
+  bitPointer = bitPointer + 8
+<a class="mw-redirect" href="/qb64wiki/index.php/WEND" title="WEND"><span style="color:#4593D8;">WEND</span></a>
+bitPointer = bitPointer - codeSize
+code = WorkCode&amp; <a href="/qb64wiki/index.php/AND" title="AND"><span style="color:#4593D8;">AND</span></a> maxCode
+<a href="/qb64wiki/index.php/RETURN" title="RETURN"><span style="color:#4593D8;">RETURN</span></a>
+
+ReadByteFromBlock:
+<a class="mw-redirect" href="/qb64wiki/index.php/IF" title="IF"><span style="color:#4593D8;">IF</span></a> blockPointer = blockSize <a href="/qb64wiki/index.php/THEN" title="THEN"><span style="color:#4593D8;">THEN</span></a>
+  <a href="/qb64wiki/index.php/GET_(graphics_statement)" title="GET (graphics statement)"><span style="color:#4593D8;">GET</span></a> file, , byte: blockSize = byte
+  a$ = <a href="/qb64wiki/index.php/SPACE$" title="SPACE$"><span style="color:#4593D8;">SPACE$</span></a>(blockSize): <a href="/qb64wiki/index.php/GET_(graphics_statement)" title="GET (graphics statement)"><span style="color:#4593D8;">GET</span></a> file, , a$
+  blockPointer = 0
+<a class="mw-redirect" href="/qb64wiki/index.php/END_IF" title="END IF"><span style="color:#4593D8;">END IF</span></a>
+blockPointer = blockPointer + 1
+LastChar = <a href="/qb64wiki/index.php/ASC_(function)" title="ASC (function)"><span style="color:#4593D8;">ASC</span></a>(<a href="/qb64wiki/index.php/MID$_(function)" title="MID$ (function)"><span style="color:#4593D8;">MID$</span></a>(a$, blockPointer, 1))
+<a href="/qb64wiki/index.php/RETURN" title="RETURN"><span style="color:#4593D8;">RETURN</span></a>
+<a href="/qb64wiki/index.php/END_SUB" title="END SUB"><span style="color:#4593D8;">END SUB</span></a>
+
+
+<a href="/qb64wiki/index.php/SUB" title="SUB"><span style="color:#4593D8;">SUB</span></a> codeGif (gifData <a href="/qb64wiki/index.php/AS" title="AS"><span style="color:#4593D8;">AS</span></a> GIFDATA, frameData() <a href="/qb64wiki/index.php/AS" title="AS"><span style="color:#4593D8;">AS</span></a> FRAMEDATA)
+<a href="/qb64wiki/index.php/FOR...NEXT" title="FOR...NEXT"><span style="color:#4593D8;">FOR</span></a> i = 0 <a href="/qb64wiki/index.php/TO" title="TO"><span style="color:#4593D8;">TO</span></a> <a href="/qb64wiki/index.php/UBOUND" title="UBOUND"><span style="color:#4593D8;">UBOUND</span></a>(FRAMEDATA)
+  <a class="mw-redirect" href="/qb64wiki/index.php/IF" title="IF"><span style="color:#4593D8;">IF</span></a> frameData(i).addr &lt; 0 <a href="/qb64wiki/index.php/THEN" title="THEN"><span style="color:#4593D8;">THEN</span></a> <a href="/qb64wiki/index.php/FREEIMAGE" title="FREEIMAGE"><span style="color:#4593D8;">_FREEIMAGE</span></a> frameData(i).addr
+<a href="/qb64wiki/index.php/NEXT" title="NEXT"><span style="color:#4593D8;">NEXT</span></a>
+
+<a href="/qb64wiki/index.php/CLOSE" title="CLOSE"><span style="color:#4593D8;">CLOSE</span></a> gifData.file
+<a href="/qb64wiki/index.php/END_SUB" title="END SUB"><span style="color:#4593D8;">END SUB</span></a>
+
+</pre>
+         </td>
+        </tr>
+       </tbody>
+      </table>
+      <center>
+       <b>
+        NOTE: If full code is not displayed then refresh browser.
+       </b>
+      </center>
+      <p>
+       <br/>
+      </p>
+      <center>
+       <b>
+        Using with $INCLUDE: 'FILELIST$.BM' File
+       </b>
+      </center>
+      <dl>
+       <dd>
+        Copy the code from the
+        <a href="/qb64wiki/index.php/FILELIST$_(function)" title="FILELIST$ (function)">
+         FILELIST$ (function)
+        </a>
+        or
+        <a href="/qb64wiki/index.php/FILELIST$" title="FILELIST$">
+         FILELIST$
+        </a>
+        page to a text file named
+        <i>
+         _FILE$.BM
+        </i>
+        and use when compiling. Just save with .BM extension (
+        <i>
+         Save As ALL files
+        </i>
+        ) in Notepad or other text editor. The file is not necessary after the program is compiled.
+       </dd>
+      </dl>
+      <p>
+       <br/>
+      </p>
+      <h2>
+       <span class="mw-headline" id="See_also">
+        See also
+       </span>
+      </h2>
+      <ul>
+       <li>
+        <a href="/qb64wiki/index.php/GIF_Creation" title="GIF Creation">
+         GIF Creation
+        </a>
+        ,
+        <a href="/qb64wiki/index.php/Bitmaps" title="Bitmaps">
+         Bitmaps
+        </a>
+       </li>
+       <li>
+        <a href="/qb64wiki/index.php/Icons_and_Cursors" title="Icons and Cursors">
+         Icons and Cursors
+        </a>
+       </li>
+       <li>
+        <a href="/qb64wiki/index.php/LOADIMAGE" title="LOADIMAGE">
+         _LOADIMAGE
+        </a>
+        ,
+        <a href="/qb64wiki/index.php/PUTIMAGE" title="PUTIMAGE">
+         _PUTIMAGE
+        </a>
+       </li>
+       <li>
+        <a href="/qb64wiki/index.php/FILELIST$_(function)" title="FILELIST$ (function)">
+         FILELIST$ (function)
+        </a>
+        <span style="color:#777777;">
+         (member file search routine)
+        </span>
+       </li>
+       <li>
+        <a href="/qb64wiki/index.php/SaveIcon32" title="SaveIcon32">
+         SaveIcon32
+        </a>
+        <span style="color:#777777;">
+         (create icons from any image)
+        </span>
+       </li>
+       <li>
+        <a href="/qb64wiki/index.php/$EXEICON" title="$EXEICON">
+         $EXEICON
+        </a>
+        <span style="color:#777777;">
+         (Icon visible in Windows Explorer)
+        </span>
+       </li>
+      </ul>
+      <p>
+       <br/>
+      </p>
+      <hr/>
+      <center>
+       <b>
+        Navigation:
+       </b>
+      </center>
+      <center>
+       <a href="/qb64wiki/index.php/Main_Page" title="Main Page">
+        Main Page with Articles and Tutorials
+       </a>
+      </center>
+      <center>
+       <a href="/qb64wiki/index.php/Keyword_Reference_-_Alphabetical" title="Keyword Reference - Alphabetical">
+        Keyword Reference - Alphabetical
+       </a>
+      </center>
+      <center>
+       <a href="/qb64wiki/index.php/Keyword_Reference_-_By_usage" title="Keyword Reference - By usage">
+        Keyword Reference - By usage
+       </a>
+      </center>
+      <center>
+       <b>
+        <a class="external text" href="https://qb64phoenix.com/forum/showthread.php?tid=2800" rel="nofollow">
+         Report a broken link
+        </a>
+       </b>
+       <br/>
+      </center>
+      <!-- 
+NewPP limit report
+Cached time: 20240718172305
+Cache expiry: 86400
+Reduced expiry: false
+Complications: []
+CPU time usage: 0.115 seconds
+Real time usage: 0.123 seconds
+Preprocessor visited node count: 3186/1000000
+Post‐expand include size: 23994/2097152 bytes
+Template argument size: 4911/2097152 bytes
+Highest expansion depth: 3/100
+Expensive parser function count: 0/100
+Unstrip recursion depth: 0/20
+Unstrip post‐expand size: 0/5000000 bytes
+-->
+      <!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%   45.332      1 -total
+ 38.03%   17.239    451 Template:Cl
+  5.54%    2.511      1 Template:CodeEnd
+  4.97%    2.251      1 Template:CodeStart
+  4.28%    1.939      1 Template:PageSeeAlso
+  4.20%    1.903      3 Template:Text
+  3.90%    1.768      1 Template:PageNavigation
+-->
+      <!-- Saved in parser cache with key qb64pnix_mw19894-mwmb_:pcache:idhash:611-0!canonical and timestamp 20240718172305 and revision id 8131.
+ -->
+     </div>
+     <div class="printfooter" data-nosnippet="">
+      Retrieved from "
+      <a dir="ltr" href="https://qb64phoenix.com/qb64wiki/index.php?title=GIF_Images&amp;oldid=8131">
+       https://qb64phoenix.com/qb64wiki/index.php?title=GIF_Images&amp;oldid=8131
+      </a>
+      "
+     </div>
+    </div>
+    <div class="catlinks catlinks-allhidden" data-mw="interface" id="catlinks">
+    </div>
+   </div>
+  </div>
+  <div id="mw-navigation">
+   <h2>
+    Navigation menu
+   </h2>
+   <div id="mw-head">
+    <nav aria-labelledby="p-personal-label" class="vector-menu mw-portlet mw-portlet-personal vector-user-menu-legacy" id="p-personal" role="navigation">
+     <h3 class="vector-menu-heading" id="p-personal-label">
+      <span class="vector-menu-heading-label">
+       Personal tools
+      </span>
+     </h3>
+     <div class="vector-menu-content">
+      <ul class="vector-menu-content-list">
+       <li class="mw-list-item" id="pt-login">
+        <a accesskey="o" href="/qb64wiki/index.php?title=Special:UserLogin&amp;returnto=GIF+Images" title="You are encouraged to log in; however, it is not mandatory [o]">
+         <span>
+          Log in
+         </span>
+        </a>
+       </li>
+      </ul>
+     </div>
+    </nav>
+    <div id="left-navigation">
+     <nav aria-labelledby="p-namespaces-label" class="vector-menu mw-portlet mw-portlet-namespaces vector-menu-tabs vector-menu-tabs-legacy" id="p-namespaces" role="navigation">
+      <h3 class="vector-menu-heading" id="p-namespaces-label">
+       <span class="vector-menu-heading-label">
+        Namespaces
+       </span>
+      </h3>
+      <div class="vector-menu-content">
+       <ul class="vector-menu-content-list">
+        <li class="selected mw-list-item" id="ca-nstab-main">
+         <a accesskey="c" href="/qb64wiki/index.php/GIF_Images" title="View the content page [c]">
+          <span>
+           Page
+          </span>
+         </a>
+        </li>
+        <li class="new mw-list-item" id="ca-talk">
+         <a accesskey="t" href="/qb64wiki/index.php?title=Talk:GIF_Images&amp;action=edit&amp;redlink=1" rel="discussion" title="Discussion about the content page (page does not exist) [t]">
+          <span>
+           Discussion
+          </span>
+         </a>
+        </li>
+       </ul>
+      </div>
+     </nav>
+     <nav aria-labelledby="p-variants-label" class="vector-menu mw-portlet mw-portlet-variants emptyPortlet vector-menu-dropdown" id="p-variants" role="navigation">
+      <input aria-haspopup="true" aria-labelledby="p-variants-label" class="vector-menu-checkbox" data-event-name="ui.dropdown-p-variants" id="p-variants-checkbox" role="button" type="checkbox"/>
+      <label aria-label="Change language variant" class="vector-menu-heading" id="p-variants-label">
+       <span class="vector-menu-heading-label">
+        English
+       </span>
+      </label>
+      <div class="vector-menu-content">
+       <ul class="vector-menu-content-list">
+       </ul>
+      </div>
+     </nav>
+    </div>
+    <div id="right-navigation">
+     <nav aria-labelledby="p-views-label" class="vector-menu mw-portlet mw-portlet-views vector-menu-tabs vector-menu-tabs-legacy" id="p-views" role="navigation">
+      <h3 class="vector-menu-heading" id="p-views-label">
+       <span class="vector-menu-heading-label">
+        Views
+       </span>
+      </h3>
+      <div class="vector-menu-content">
+       <ul class="vector-menu-content-list">
+        <li class="selected mw-list-item" id="ca-view">
+         <a href="/qb64wiki/index.php/GIF_Images">
+          <span>
+           Read
+          </span>
+         </a>
+        </li>
+        <li class="mw-list-item" id="ca-viewsource">
+         <a accesskey="e" href="/qb64wiki/index.php?title=GIF_Images&amp;action=edit" title="This page is protected.
+You can view its source [e]">
+          <span>
+           View source
+          </span>
+         </a>
+        </li>
+        <li class="mw-list-item" id="ca-history">
+         <a accesskey="h" href="/qb64wiki/index.php?title=GIF_Images&amp;action=history" title="Past revisions of this page [h]">
+          <span>
+           View history
+          </span>
+         </a>
+        </li>
+       </ul>
+      </div>
+     </nav>
+     <nav aria-labelledby="p-cactions-label" class="vector-menu mw-portlet mw-portlet-cactions emptyPortlet vector-menu-dropdown" id="p-cactions" role="navigation" title="More options">
+      <input aria-haspopup="true" aria-labelledby="p-cactions-label" class="vector-menu-checkbox" data-event-name="ui.dropdown-p-cactions" id="p-cactions-checkbox" role="button" type="checkbox"/>
+      <label class="vector-menu-heading" id="p-cactions-label">
+       <span class="vector-menu-heading-label">
+        More
+       </span>
+      </label>
+      <div class="vector-menu-content">
+       <ul class="vector-menu-content-list">
+       </ul>
+      </div>
+     </nav>
+     <div class="vector-search-box-vue vector-search-box-show-thumbnail vector-search-box-auto-expand-width vector-search-box" id="p-search" role="search">
+      <div>
+       <h3>
+        <label for="searchInput">
+         Search
+        </label>
+       </h3>
+       <form action="/qb64wiki/index.php" class="vector-search-box-form" id="searchform">
+        <div class="vector-search-box-inner" data-search-loc="header-navigation" id="simpleSearch">
+         <input accesskey="f" aria-label="Search QB64 Phoenix Edition Wiki" autocapitalize="sentences" class="vector-search-box-input" id="searchInput" name="search" placeholder="Search QB64 Phoenix Edition Wiki" title="Search QB64 Phoenix Edition Wiki [f]" type="search"/>
+         <input name="title" type="hidden" value="Special:Search"/>
+         <input class="searchButton mw-fallbackSearchButton" id="mw-searchButton" name="fulltext" title="Search the pages for this text" type="submit" value="Search"/>
+         <input class="searchButton" id="searchButton" name="go" title="Go to a page with this exact name if it exists" type="submit" value="Go"/>
+        </div>
+       </form>
+      </div>
+     </div>
+    </div>
+   </div>
+   <div id="mw-panel">
+    <div id="p-logo" role="banner">
+     <a class="mw-wiki-logo" href="/qb64wiki/index.php/Main_Page" title="Visit the main page">
+     </a>
+    </div>
+    <nav aria-labelledby="p-navigation-label" class="vector-menu mw-portlet mw-portlet-navigation vector-menu-portal portal" id="p-navigation" role="navigation">
+     <h3 class="vector-menu-heading" id="p-navigation-label">
+      <span class="vector-menu-heading-label">
+       Navigation
+      </span>
+     </h3>
+     <div class="vector-menu-content">
+      <ul class="vector-menu-content-list">
+       <li class="mw-list-item" id="n-mainpage-description">
+        <a accesskey="z" href="/qb64wiki/index.php/Main_Page" title="Visit the main page [z]">
+         <span>
+          Main page
+         </span>
+        </a>
+       </li>
+       <li class="mw-list-item" id="n-recentchanges">
+        <a accesskey="r" href="/qb64wiki/index.php/Special:RecentChanges" title="A list of recent changes in the wiki [r]">
+         <span>
+          Recent changes
+         </span>
+        </a>
+       </li>
+       <li class="mw-list-item" id="n-randompage">
+        <a accesskey="x" href="/qb64wiki/index.php/Special:Random" title="Load a random page [x]">
+         <span>
+          Random page
+         </span>
+        </a>
+       </li>
+       <li class="mw-list-item" id="n-help-mediawiki">
+        <a href="https://www.mediawiki.org/wiki/Special:MyLanguage/Help:Contents">
+         <span>
+          Help about MediaWiki
+         </span>
+        </a>
+       </li>
+      </ul>
+     </div>
+    </nav>
+    <nav aria-labelledby="p-tb-label" class="vector-menu mw-portlet mw-portlet-tb vector-menu-portal portal" id="p-tb" role="navigation">
+     <h3 class="vector-menu-heading" id="p-tb-label">
+      <span class="vector-menu-heading-label">
+       Tools
+      </span>
+     </h3>
+     <div class="vector-menu-content">
+      <ul class="vector-menu-content-list">
+       <li class="mw-list-item" id="t-whatlinkshere">
+        <a accesskey="j" href="/qb64wiki/index.php/Special:WhatLinksHere/GIF_Images" title="A list of all wiki pages that link here [j]">
+         <span>
+          What links here
+         </span>
+        </a>
+       </li>
+       <li class="mw-list-item" id="t-recentchangeslinked">
+        <a accesskey="k" href="/qb64wiki/index.php/Special:RecentChangesLinked/GIF_Images" rel="nofollow" title="Recent changes in pages linked from this page [k]">
+         <span>
+          Related changes
+         </span>
+        </a>
+       </li>
+       <li class="mw-list-item" id="t-specialpages">
+        <a accesskey="q" href="/qb64wiki/index.php/Special:SpecialPages" title="A list of all special pages [q]">
+         <span>
+          Special pages
+         </span>
+        </a>
+       </li>
+       <li class="mw-list-item" id="t-print">
+        <a accesskey="p" href="javascript:print();" rel="alternate" title="Printable version of this page [p]">
+         <span>
+          Printable version
+         </span>
+        </a>
+       </li>
+       <li class="mw-list-item" id="t-permalink">
+        <a href="/qb64wiki/index.php?title=GIF_Images&amp;oldid=8131" title="Permanent link to this revision of this page">
+         <span>
+          Permanent link
+         </span>
+        </a>
+       </li>
+       <li class="mw-list-item" id="t-info">
+        <a href="/qb64wiki/index.php?title=GIF_Images&amp;action=info" title="More information about this page">
+         <span>
+          Page information
+         </span>
+        </a>
+       </li>
+      </ul>
+     </div>
+    </nav>
+   </div>
+  </div>
+  <footer class="mw-footer" id="footer" role="contentinfo">
+   <ul id="footer-info">
+    <li id="footer-info-lastmod">
+     This page was last edited on 26 February 2023, at 00:35.
+    </li>
+   </ul>
+   <ul id="footer-places">
+    <li id="footer-places-privacy">
+     <a href="/qb64wiki/index.php/QB64_Phoenix_Edition_Wiki:Privacy_policy">
+      Privacy policy
+     </a>
+    </li>
+    <li id="footer-places-about">
+     <a href="/qb64wiki/index.php/QB64_Phoenix_Edition_Wiki:About">
+      About QB64 Phoenix Edition Wiki
+     </a>
+    </li>
+    <li id="footer-places-disclaimer">
+     <a href="/qb64wiki/index.php/QB64_Phoenix_Edition_Wiki:General_disclaimer">
+      Disclaimers
+     </a>
+    </li>
+   </ul>
+   <ul class="noprint" id="footer-icons">
+    <li id="footer-poweredbyico">
+     <a href="https://www.mediawiki.org/">
+      <img alt="Powered by MediaWiki" height="31" loading="lazy" src="/qb64wiki/resources/assets/poweredby_mediawiki_88x31.png" srcset="/qb64wiki/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /qb64wiki/resources/assets/poweredby_mediawiki_176x62.png 2x" width="88"/>
+     </a>
+    </li>
+   </ul>
+  </footer>
+  <script>
+   (RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgPageParseReport":{"limitreport":{"cputime":"0.115","walltime":"0.123","ppvisitednodes":{"value":3186,"limit":1000000},"postexpandincludesize":{"value":23994,"limit":2097152},"templateargumentsize":{"value":4911,"limit":2097152},"expansiondepth":{"value":3,"limit":100},"expensivefunctioncount":{"value":0,"limit":100},"unstrip-depth":{"value":0,"limit":20},"unstrip-size":{"value":0,"limit":5000000},"timingprofile":["100.00%   45.332      1 -total"," 38.03%   17.239    451 Template:Cl","  5.54%    2.511      1 Template:CodeEnd","  4.97%    2.251      1 Template:CodeStart","  4.28%    1.939      1 Template:PageSeeAlso","  4.20%    1.903      3 Template:Text","  3.90%    1.768      1 Template:PageNavigation"]},"cachereport":{"timestamp":"20240718172305","ttl":86400,"transientcontent":false}}});mw.config.set({"wgBackendResponseTime":70});});
+  </script>
+ </body>
+</html>

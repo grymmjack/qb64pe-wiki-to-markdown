@@ -1,0 +1,1695 @@
+<!DOCTYPE html>
+<html class="client-nojs" dir="ltr" lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <title>
+   _MAPTRIANGLE - QB64 Phoenix Edition Wiki
+  </title>
+  <script>
+   document.documentElement.className="client-js";RLCONF={"wgBreakFrames":false,"wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgRequestId":"Zpp8Xp35EcyPqcm4ZfY_bAAAAHg","wgCSPNonce":false,"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"MAPTRIANGLE","wgTitle":"MAPTRIANGLE","wgCurRevisionId":8868,"wgRevisionId":8868,"wgArticleId":171,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":[],"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgRelevantPageName":"MAPTRIANGLE","wgRelevantArticleId":171,"wgIsProbablyEditable":false,"wgRelevantPageIsProbablyEditable":false,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgVector2022PreviewPages":[]};RLSTATE={"site.styles":"ready","user.styles":"ready",
+"user":"ready","user.options":"loading","skins.vector.styles.legacy":"ready"};RLPAGEMODULES=["site","mediawiki.page.ready","mediawiki.toc","skins.vector.legacy.js"];
+  </script>
+  <script>
+   (RLQ=window.RLQ||[]).push(function(){mw.loader.implement("user.options@12s5i",function($,jQuery,require,module){mw.user.tokens.set({"patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});});});
+  </script>
+  <link href="/qb64wiki/load.php?lang=en&amp;modules=skins.vector.styles.legacy&amp;only=styles&amp;skin=vector" rel="stylesheet"/>
+  <script async="" src="/qb64wiki/load.php?lang=en&amp;modules=startup&amp;only=scripts&amp;raw=1&amp;skin=vector">
+  </script>
+  <meta content="" name="ResourceLoaderDynamicStyles"/>
+  <link href="/qb64wiki/load.php?lang=en&amp;modules=site.styles&amp;only=styles&amp;skin=vector" rel="stylesheet"/>
+  <meta content="MediaWiki 1.39.3" name="generator"/>
+  <meta content="telephone=no" name="format-detection"/>
+  <meta content="width=1000" name="viewport"/>
+  <link href="/favicon.ico" rel="icon"/>
+  <link href="/qb64wiki/opensearch_desc.php" rel="search" title="QB64 Phoenix Edition Wiki (en)" type="application/opensearchdescription+xml"/>
+  <link href="https://qb64phoenix.com/qb64wiki/api.php?action=rsd" rel="EditURI" type="application/rsd+xml"/>
+  <link href="/qb64wiki/index.php?title=Special:RecentChanges&amp;feed=atom" rel="alternate" title="QB64 Phoenix Edition Wiki Atom feed" type="application/atom+xml"/>
+ </head>
+ <body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject page-MAPTRIANGLE rootpage-MAPTRIANGLE skin-vector action-view skin-vector-legacy vector-feature-language-in-header-enabled vector-feature-language-in-main-page-header-disabled vector-feature-language-alert-in-sidebar-disabled vector-feature-sticky-header-disabled vector-feature-sticky-header-edit-disabled vector-feature-table-of-contents-disabled vector-feature-visual-enhancement-next-disabled">
+  <div class="noprint" id="mw-page-base">
+  </div>
+  <div class="noprint" id="mw-head-base">
+  </div>
+  <div class="mw-body" id="content" role="main">
+   <a id="top">
+   </a>
+   <div id="siteNotice">
+   </div>
+   <div class="mw-indicators">
+   </div>
+   <h1 class="firstHeading mw-first-heading" id="firstHeading">
+    _MAPTRIANGLE
+   </h1>
+   <div class="vector-body" id="bodyContent">
+    <div class="noprint" id="siteSub">
+     From QB64 Phoenix Edition Wiki
+    </div>
+    <div id="contentSub">
+    </div>
+    <div id="contentSub2">
+    </div>
+    <div id="jump-to-nav">
+    </div>
+    <a class="mw-jump-link" href="#mw-head">
+     Jump to navigation
+    </a>
+    <a class="mw-jump-link" href="#searchInput">
+     Jump to search
+    </a>
+    <div class="mw-body-content mw-content-ltr" dir="ltr" id="mw-content-text" lang="en">
+     <div class="mw-parser-output">
+      <p>
+       The
+       <a class="mw-selflink selflink">
+        _MAPTRIANGLE
+       </a>
+       statement maps a triangular portion of an image onto a destination image or screen page.
+      </p>
+      <p>
+       <br/>
+      </p>
+      <table align="right" style="max-width:25%;">
+       <tbody>
+        <tr>
+         <td>
+          <div aria-labelledby="mw-toc-heading" class="toc" id="toc" role="navigation">
+           <input class="toctogglecheckbox" id="toctogglecheckbox" role="button" style="display:none" type="checkbox"/>
+           <div class="toctitle" dir="ltr" lang="en">
+            <h2 id="mw-toc-heading">
+             Contents
+            </h2>
+            <span class="toctogglespan">
+             <label class="toctogglelabel" for="toctogglecheckbox">
+             </label>
+            </span>
+           </div>
+           <ul>
+            <li class="toclevel-1">
+             <a href="#Syntax">
+              <span class="tocnumber">
+               1
+              </span>
+              <span class="toctext">
+               Syntax
+              </span>
+             </a>
+             <ul>
+              <li class="toclevel-2 tocsection-1">
+               <a href="#2D_drawing">
+                <span class="tocnumber">
+                 1.1
+                </span>
+                <span class="toctext">
+                 2D drawing
+                </span>
+               </a>
+              </li>
+              <li class="toclevel-2 tocsection-2">
+               <a href="#3D_drawing_(hardware_images_only)">
+                <span class="tocnumber">
+                 1.2
+                </span>
+                <span class="toctext">
+                 3D drawing (hardware images only)
+                </span>
+               </a>
+              </li>
+             </ul>
+            </li>
+            <li class="toclevel-1">
+             <a href="#Parameters">
+              <span class="tocnumber">
+               2
+              </span>
+              <span class="toctext">
+               Parameters
+              </span>
+             </a>
+            </li>
+            <li class="toclevel-1">
+             <a href="#Description">
+              <span class="tocnumber">
+               3
+              </span>
+              <span class="toctext">
+               Description
+              </span>
+             </a>
+            </li>
+            <li class="toclevel-1">
+             <a href="#Examples">
+              <span class="tocnumber">
+               4
+              </span>
+              <span class="toctext">
+               Examples
+              </span>
+             </a>
+            </li>
+            <li class="toclevel-1">
+             <a href="#See_also">
+              <span class="tocnumber">
+               5
+              </span>
+              <span class="toctext">
+               See also
+              </span>
+             </a>
+            </li>
+           </ul>
+          </div>
+         </td>
+        </tr>
+       </tbody>
+      </table>
+      <h2>
+       <span class="mw-headline" id="Syntax">
+        Syntax
+       </span>
+      </h2>
+      <h3>
+       <span class="mw-headline" id="2D_drawing">
+        2D drawing
+       </span>
+      </h3>
+      <dl>
+       <dd>
+        <a class="mw-selflink selflink">
+         _MAPTRIANGLE
+        </a>
+        [{_SEAMLESS}]
+        <b>
+         (
+        </b>
+        <i>
+         sx1
+        </i>
+        <b>
+         ,
+        </b>
+        <i>
+         sy1
+        </i>
+        <b>
+         )-(
+        </b>
+        <i>
+         sx2
+        </i>
+        <b>
+         ,
+        </b>
+        <i>
+         sy2
+        </i>
+        <b>
+         )-(
+        </b>
+        <i>
+         sx3
+        </i>
+        <b>
+         ,
+        </b>
+        <i>
+         sy3
+        </i>
+        <b>
+         ),
+        </b>
+        <i>
+         source&amp;
+        </i>
+        <b>
+         TO (
+        </b>
+        <i>
+         dx1
+        </i>
+        <b>
+         ,
+        </b>
+        <i>
+         dy1
+        </i>
+        <b>
+         )-(
+        </b>
+        <i>
+         dx2
+        </i>
+        <b>
+         ,
+        </b>
+        <i>
+         dy2
+        </i>
+        <b>
+         )-(
+        </b>
+        <i>
+         dx3
+        </i>
+        <b>
+         ,
+        </b>
+        <i>
+         dy3
+        </i>
+        <b>
+         )
+        </b>
+        [,
+        <i>
+         destination&amp;
+        </i>
+        ][,{_SMOOTH|_SMOOTHSHRUNK|_SMOOTHSTRETCHED}]]
+       </dd>
+      </dl>
+      <h3>
+       <span id="3D_drawing_.28hardware_images_only.29">
+       </span>
+       <span class="mw-headline" id="3D_drawing_(hardware_images_only)">
+        3D drawing (hardware images only)
+       </span>
+      </h3>
+      <dl>
+       <dd>
+        <a class="mw-selflink selflink">
+         _MAPTRIANGLE
+        </a>
+        [{_CLOCKWISE|_ANTICLOCKWISE}] [{_SEAMLESS}]
+        <b>
+         (
+        </b>
+        <i>
+         sx1
+        </i>
+        <b>
+         ,
+        </b>
+        <i>
+         sy1
+        </i>
+        <b>
+         )-(
+        </b>
+        <i>
+         sx2
+        </i>
+        <b>
+         ,
+        </b>
+        <i>
+         sy2
+        </i>
+        <b>
+         )-(
+        </b>
+        <i>
+         sx3
+        </i>
+        <b>
+         ,
+        </b>
+        <i>
+         sy3
+        </i>
+        <b>
+         ),
+        </b>
+        <i>
+         source&amp;
+        </i>
+        <b>
+         TO (
+        </b>
+        <i>
+         dx1
+        </i>
+        <b>
+         ,
+        </b>
+        <i>
+         dy1
+        </i>
+        <b>
+         ,
+        </b>
+        <i>
+         dz1
+        </i>
+        <b>
+         )-(
+        </b>
+        <i>
+         dx2
+        </i>
+        <b>
+         ,
+        </b>
+        <i>
+         dy2
+        </i>
+        <b>
+         ,
+        </b>
+        <i>
+         dz2
+        </i>
+        <b>
+         )-(
+        </b>
+        <i>
+         dx3
+        </i>
+        <b>
+         ,
+        </b>
+        <i>
+         dy3
+        </i>
+        <b>
+         ,
+        </b>
+        <i>
+         dz3
+        </i>
+        <b>
+         )
+        </b>
+        [,
+        <i>
+         destination&amp;
+        </i>
+        ][,{_SMOOTH|_SMOOTHSHRUNK|_SMOOTHSTRETCHED}]]
+       </dd>
+      </dl>
+      <p>
+       <br/>
+      </p>
+      <h2>
+       <span class="mw-headline" id="Parameters">
+        Parameters
+       </span>
+      </h2>
+      <ul>
+       <li>
+        The
+        <b>
+         _SEAMLESS
+        </b>
+        option makes the triangle skip the right-most and bottom-most pixels of the triangle. When you make larger objects using several triangles, there can be a "seam" where they overlap when using alpha transparency and the seam would be twice as bright.
+        <b>
+         _SEAMLESS
+        </b>
+        is ignored when rendering 3D content and is not yet supported when drawing 2D hardware images.
+        <b>
+        </b>
+       </li>
+       <li>
+        For 3D drawing use the
+        <b>
+         _CLOCKWISE
+        </b>
+        and
+        <b>
+         _ANTICLOCKWISE
+        </b>
+        arguments to only draw triangles in the correct direction. See
+        <i>
+         Example 4
+        </i>
+        .
+       </li>
+       <li>
+        Coordinates are
+        <a href="/qb64wiki/index.php/SINGLE" title="SINGLE">
+         SINGLE
+        </a>
+        values where whole numbers represent the exact center of a pixel of the source texture.
+       </li>
+       <li>
+        <i>
+         source&amp;
+        </i>
+        and optional
+        <i>
+         destination&amp;
+        </i>
+        are
+        <a href="/qb64wiki/index.php/LONG" title="LONG">
+         LONG
+        </a>
+        image or screen page handles.
+       </li>
+       <li>
+        Supports an optional final argument
+        <b>
+         _SMOOTH
+        </b>
+        which applies linear filtering. See
+        <i>
+         Example 3
+        </i>
+        .
+       </li>
+       <li>
+        Use
+        <b>
+         _SMOOTHSTRETCHED
+        </b>
+        or
+        <b>
+         _SMOOTHSHRUNK
+        </b>
+        for when a pixelated/smooth effect is desirable but not both.
+       </li>
+      </ul>
+      <p>
+       <br/>
+      </p>
+      <h2>
+       <span class="mw-headline" id="Description">
+        Description
+       </span>
+      </h2>
+      <ul>
+       <li>
+        This statement is used similar to
+        <a href="/qb64wiki/index.php/PUTIMAGE" title="PUTIMAGE">
+         _PUTIMAGE
+        </a>
+        to place triangular sections of an image, but is more flexible.
+       </li>
+       <li>
+        The
+        <a href="/qb64wiki/index.php/STEP" title="STEP">
+         STEP
+        </a>
+        keyword can be used to for coordinates relative to the last graphic coordinates used.
+       </li>
+       <li>
+        For 2D drawing, the destination coordinates are pixel coordinates either on-screen or on the destination image.
+       </li>
+       <li>
+        For 3D drawing, the destination coordinates represent left (-x) to right (+x), bottom (-y) to top (+y) &amp; furthest (-z) to nearest (z=-1). The center of the screen is therefore (0,0,-1). Note that a z value of 0 will result in off-screen content. The furthest visible z value is -10,000.
+       </li>
+       <li>
+        When drawing
+        <b>
+         software images
+        </b>
+        coordinate positions are
+        <b>
+         limited from -16383 to 16383
+        </b>
+       </li>
+       <li>
+        The source coordinates can be positioned outside the boundary of the
+        <i>
+         source
+        </i>
+        image to achieve a tiled effect.
+       </li>
+       <li>
+        If the
+        <i>
+         destination&amp;
+        </i>
+        image handle is the current
+        <a href="/qb64wiki/index.php/SCREEN" title="SCREEN">
+         SCREEN
+        </a>
+        page,
+        <a href="/qb64wiki/index.php/DEST" title="DEST">
+         _DEST
+        </a>
+        or hardware layer, then it can be omitted.
+       </li>
+       <li>
+        <b>
+         Hardware images
+        </b>
+        (created using mode 33 via
+        <a href="/qb64wiki/index.php/LOADIMAGE" title="LOADIMAGE">
+         _LOADIMAGE
+        </a>
+        or
+        <a href="/qb64wiki/index.php/COPYIMAGE" title="COPYIMAGE">
+         _COPYIMAGE
+        </a>
+        ) can be used as the source or destination.
+       </li>
+      </ul>
+      <p>
+       <br/>
+      </p>
+      <h2>
+       <span class="mw-headline" id="Examples">
+        Examples
+       </span>
+      </h2>
+      <p>
+       <i>
+        Example 1:
+       </i>
+       Rotating the an image using a rotation and zoom SUB with _MAPTRIANGLE.
+      </p>
+      <table cellpadding="15px" width="100%">
+       <tbody>
+        <tr>
+         <td>
+          <pre class="codeide"><a href="/qb64wiki/index.php/SCREEN" title="SCREEN"><span style="color:#4593D8;">SCREEN</span></a> <a href="/qb64wiki/index.php/NEWIMAGE" title="NEWIMAGE"><span style="color:#4593D8;">_NEWIMAGE</span></a>(800, 600, 32)
+
+Image&amp; = <a href="/qb64wiki/index.php/LOADIMAGE" title="LOADIMAGE"><span style="color:#4593D8;">_LOADIMAGE</span></a>("qb64_trans.png")   'any 24/32 bit image
+
+<a class="mw-redirect" href="/qb64wiki/index.php/DO" title="DO"><span style="color:#4593D8;">DO</span></a>
+  <a href="/qb64wiki/index.php/CLS" title="CLS"><span style="color:#4593D8;">CLS</span></a>
+  RotoZoom 400, 300, Image&amp;, 1.5 + <a href="/qb64wiki/index.php/SIN" title="SIN"><span style="color:#4593D8;">SIN</span></a>(zoom), angle
+  <a href="/qb64wiki/index.php/LOCATE" title="LOCATE"><span style="color:#4593D8;">LOCATE</span></a> 1, 1: <a href="/qb64wiki/index.php/PRINT" title="PRINT"><span style="color:#4593D8;">PRINT</span></a> "Angle:"; <a href="/qb64wiki/index.php/CINT" title="CINT"><span style="color:#4593D8;">CINT</span></a>(angle)
+  <a href="/qb64wiki/index.php/PRINT_USING" title="PRINT USING"><span style="color:#4593D8;">PRINT</span></a> "Zoom"; <a href="/qb64wiki/index.php/PRINT_USING" title="PRINT USING"><span style="color:#4593D8;">USING</span></a> "##.###"; 1.5 + <a href="/qb64wiki/index.php/SIN" title="SIN"><span style="color:#4593D8;">SIN</span></a>(zoom)
+  <a href="/qb64wiki/index.php/DISPLAY" title="DISPLAY"><span style="color:#4593D8;">_DISPLAY</span></a>
+  angle = angle + .5: <a href="/qb64wiki/index.php/IF...THEN" title="IF...THEN"><span style="color:#4593D8;">IF</span></a> angle &gt;= 360 <a href="/qb64wiki/index.php/THEN" title="THEN"><span style="color:#4593D8;">THEN</span></a> angle = angle - 360
+  zoom = zoom + .01
+<a href="/qb64wiki/index.php/LOOP" title="LOOP"><span style="color:#4593D8;">LOOP</span></a> <a href="/qb64wiki/index.php/UNTIL" title="UNTIL"><span style="color:#4593D8;">UNTIL</span></a> <a href="/qb64wiki/index.php/INKEY$" title="INKEY$"><span style="color:#4593D8;">INKEY$</span></a> &lt;&gt; ""
+<a href="/qb64wiki/index.php/END" title="END"><span style="color:#4593D8;">END</span></a>
+
+<a href="/qb64wiki/index.php/SUB" title="SUB"><span style="color:#4593D8;">SUB</span></a> RotoZoom (X <a href="/qb64wiki/index.php/AS" title="AS"><span style="color:#4593D8;">AS</span></a> <a href="/qb64wiki/index.php/LONG" title="LONG"><span style="color:#4593D8;">LONG</span></a>, Y <a href="/qb64wiki/index.php/AS" title="AS"><span style="color:#4593D8;">AS</span></a> <a href="/qb64wiki/index.php/LONG" title="LONG"><span style="color:#4593D8;">LONG</span></a>, Image <a href="/qb64wiki/index.php/AS" title="AS"><span style="color:#4593D8;">AS</span></a> <a href="/qb64wiki/index.php/LONG" title="LONG"><span style="color:#4593D8;">LONG</span></a>, Scale <a href="/qb64wiki/index.php/AS" title="AS"><span style="color:#4593D8;">AS</span></a> <a href="/qb64wiki/index.php/SINGLE" title="SINGLE"><span style="color:#4593D8;">SINGLE</span></a>, Rotation <a href="/qb64wiki/index.php/AS" title="AS"><span style="color:#4593D8;">AS</span></a> <a href="/qb64wiki/index.php/SINGLE" title="SINGLE"><span style="color:#4593D8;">SINGLE</span></a>)
+<a href="/qb64wiki/index.php/DIM" title="DIM"><span style="color:#4593D8;">DIM</span></a> px(3) <a href="/qb64wiki/index.php/AS" title="AS"><span style="color:#4593D8;">AS</span></a> <a href="/qb64wiki/index.php/SINGLE" title="SINGLE"><span style="color:#4593D8;">SINGLE</span></a>: <a href="/qb64wiki/index.php/DIM" title="DIM"><span style="color:#4593D8;">DIM</span></a> py(3) <a href="/qb64wiki/index.php/AS" title="AS"><span style="color:#4593D8;">AS</span></a> <a href="/qb64wiki/index.php/SINGLE" title="SINGLE"><span style="color:#4593D8;">SINGLE</span></a>
+W&amp; = <a href="/qb64wiki/index.php/WIDTH_(function)" title="WIDTH (function)"><span style="color:#4593D8;">_WIDTH</span></a>(Image&amp;): H&amp; = <a href="/qb64wiki/index.php/HEIGHT" title="HEIGHT"><span style="color:#4593D8;">_HEIGHT</span></a>(Image&amp;)
+px(0) = -W&amp; / 2: py(0) = -H&amp; / 2: px(1) = -W&amp; / 2:py(1) = H&amp; / 2
+px(2) = W&amp; / 2: py(2) = H&amp; / 2: px(3) = W&amp; / 2: py(3) = -H&amp; / 2
+sinr! = <a href="/qb64wiki/index.php/SIN" title="SIN"><span style="color:#4593D8;">SIN</span></a>(-Rotation / 57.2957795131): cosr! = <a href="/qb64wiki/index.php/COS" title="COS"><span style="color:#4593D8;">COS</span></a>(-Rotation / 57.2957795131)
+<a href="/qb64wiki/index.php/FOR...NEXT" title="FOR...NEXT"><span style="color:#4593D8;">FOR</span></a> i&amp; = 0 <a href="/qb64wiki/index.php/TO" title="TO"><span style="color:#4593D8;">TO</span></a> 3
+  x2&amp; = (px(i&amp;) * cosr! + sinr! * py(i&amp;)) * Scale + X: y2&amp; = (py(i&amp;) * cosr! - px(i&amp;) * sinr!) * Scale + Y
+  px(i&amp;) = x2&amp;: py(i&amp;) = y2&amp;
+<a href="/qb64wiki/index.php/NEXT" title="NEXT"><span style="color:#4593D8;">NEXT</span></a>
+<a class="mw-selflink selflink"><span style="color:#4593D8;">_MAPTRIANGLE</span></a> (0, 0)-(0, H&amp; - 1)-(W&amp; - 1, H&amp; - 1), Image&amp; TO(px(0), py(0))-(px(1), py(1))-(px(2), py(2))
+<a class="mw-selflink selflink"><span style="color:#4593D8;">_MAPTRIANGLE</span></a> (0, 0)-(W&amp; - 1, 0)-(W&amp; - 1, H&amp; - 1), Image&amp; TO(px(0), py(0))-(px(3), py(3))-(px(2), py(2))
+<a href="/qb64wiki/index.php/END_SUB" title="END SUB"><span style="color:#4593D8;">END SUB</span></a>
+</pre>
+         </td>
+        </tr>
+       </tbody>
+      </table>
+      <center>
+       <span style="font-family: Courier New, Courier, monospace; font-size: 0.80em; line-height: 50%;">
+        Code by Galleon
+       </span>
+      </center>
+      <table cellpadding="5px" width="100%">
+       <tbody>
+        <tr>
+         <td>
+          <pre class="outputfixed">        <b>Triangle sections of image in code above     __ </b>
+                                                    <b>|\2|</b>
+                                                 <b> 1→|_\|</b>
+</pre>
+         </td>
+        </tr>
+       </tbody>
+      </table>
+      <p>
+       <br/>
+       <i>
+        Example 2:
+       </i>
+       A 3D Spinning Cube demo using a software image and
+       <a class="mw-selflink selflink">
+        _MAPTRIANGLE
+       </a>
+       :
+      </p>
+      <table cellpadding="15px" width="100%">
+       <tbody>
+        <tr>
+         <td>
+          <pre class="codeide">' Copyright (C) 2011 by Andrew L. Ayers
+
+<a href="/qb64wiki/index.php/DIM" title="DIM"><span style="color:#4593D8;">DIM</span></a> OBJECT(9, 9, 4, 2) <a href="/qb64wiki/index.php/AS" title="AS"><span style="color:#4593D8;">AS</span></a> <a href="/qb64wiki/index.php/LONG" title="LONG"><span style="color:#4593D8;">LONG</span></a>
+
+' OBJECTS DEFINED <a href="/qb64wiki/index.php/AS" title="AS"><span style="color:#4593D8;">AS</span></a> FOLLOWS:
+'   (#OBJECTS,#PLANES PER OBJECT,#<a href="/qb64wiki/index.php/POINT" title="POINT"><span style="color:#4593D8;">POINT</span></a>S PER PLANE, XYZ TRIPLE)
+
+<a href="/qb64wiki/index.php/DIM" title="DIM"><span style="color:#4593D8;">DIM</span></a> DPLANE2D(4, 1) <a href="/qb64wiki/index.php/AS" title="AS"><span style="color:#4593D8;">AS</span></a> <a href="/qb64wiki/index.php/LONG" title="LONG"><span style="color:#4593D8;">LONG</span></a> ' <a href="/qb64wiki/index.php/SCREEN" title="SCREEN"><span style="color:#4593D8;">SCREEN</span></a> PLANE COORDINATES
+
+' DPLANE2D DEFINED <a href="/qb64wiki/index.php/AS" title="AS"><span style="color:#4593D8;">AS</span></a> FOLLOWS:
+'   (#<a href="/qb64wiki/index.php/POINT" title="POINT"><span style="color:#4593D8;">POINT</span></a>S PER PLANE, XY <a href="/qb64wiki/index.php/DOUBLE" title="DOUBLE"><span style="color:#4593D8;">DOUBLE</span></a>)
+
+<a href="/qb64wiki/index.php/DIM" title="DIM"><span style="color:#4593D8;">DIM</span></a> DPLANE3D(4, 2) <a href="/qb64wiki/index.php/AS" title="AS"><span style="color:#4593D8;">AS</span></a> <a href="/qb64wiki/index.php/LONG" title="LONG"><span style="color:#4593D8;">LONG</span></a> ' 3D PLANE COORDINATES
+
+' DPLANE3D DEFINED <a href="/qb64wiki/index.php/AS" title="AS"><span style="color:#4593D8;">AS</span></a> FOLLOWS:
+'   (#<a href="/qb64wiki/index.php/POINT" title="POINT"><span style="color:#4593D8;">POINT</span></a>S PER PLANE, XYZ TRIPLE)
+
+<a href="/qb64wiki/index.php/DIM" title="DIM"><span style="color:#4593D8;">DIM</span></a> PLANECOL(9) <a href="/qb64wiki/index.php/AS" title="AS"><span style="color:#4593D8;">AS</span></a> <a href="/qb64wiki/index.php/INTEGER" title="INTEGER"><span style="color:#4593D8;">INTEGER</span></a>
+<a href="/qb64wiki/index.php/DIM" title="DIM"><span style="color:#4593D8;">DIM</span></a> STAB(359), CTAB(359) ' SINE/COSINE TABLES
+D&amp; = 400: MX&amp; = 0: MY&amp; = 0: MZ&amp; = -100
+'
+' COMPUTE SINE/COSINE TABLES
+<a href="/qb64wiki/index.php/FOR...NEXT" title="FOR...NEXT"><span style="color:#4593D8;">FOR</span></a> t&amp; = 0 <a href="/qb64wiki/index.php/TO" title="TO"><span style="color:#4593D8;">TO</span></a> 359
+  STAB(t&amp;) = <a href="/qb64wiki/index.php/SIN" title="SIN"><span style="color:#4593D8;">SIN</span></a>((6.282 / 360) * t&amp;)
+  CTAB(t&amp;) = <a href="/qb64wiki/index.php/COS" title="COS"><span style="color:#4593D8;">COS</span></a>((6.282 / 360) * t&amp;)
+<a href="/qb64wiki/index.php/NEXT" title="NEXT"><span style="color:#4593D8;">NEXT</span></a>
+'
+' BUILD CUBE IN OBJECT ARRAY
+' PLANE 0
+OBJECT(0, 0, 0, 0) = -30: OBJECT(0, 0, 0, 1) = 30: OBJECT(0, 0, 0, 2) = -30
+OBJECT(0, 0, 1, 0) = -30: OBJECT(0, 0, 1, 1) = -30: OBJECT(0, 0, 1, 2) = -30
+OBJECT(0, 0, 2, 0) = 30: OBJECT(0, 0, 2, 1) = -30: OBJECT(0, 0, 2, 2) = -30
+OBJECT(0, 0, 3, 0) = 30: OBJECT(0, 0, 3, 1) = 30: OBJECT(0, 0, 3, 2) = -30
+OBJECT(0, 0, 4, 0) = 0: OBJECT(0, 0, 4, 1) = 0: OBJECT(0, 0, 4, 2) = -30
+' PLANE 1
+OBJECT(0, 1, 0, 0) = 30: OBJECT(0, 1, 0, 1) = 30: OBJECT(0, 1, 0, 2) = -30
+OBJECT(0, 1, 1, 0) = 30: OBJECT(0, 1, 1, 1) = -30: OBJECT(0, 1, 1, 2) = -30
+OBJECT(0, 1, 2, 0) = 30: OBJECT(0, 1, 2, 1) = -30: OBJECT(0, 1, 2, 2) = 30
+OBJECT(0, 1, 3, 0) = 30: OBJECT(0, 1, 3, 1) = 30: OBJECT(0, 1, 3, 2) = 30
+OBJECT(0, 1, 4, 0) = 30: OBJECT(0, 1, 4, 1) = 0: OBJECT(0, 1, 4, 2) = 0
+' PLANE 2
+OBJECT(0, 2, 0, 0) = 30: OBJECT(0, 2, 0, 1) = 30: OBJECT(0, 2, 0, 2) = 30
+OBJECT(0, 2, 1, 0) = 30: OBJECT(0, 2, 1, 1) = -30: OBJECT(0, 2, 1, 2) = 30
+OBJECT(0, 2, 2, 0) = -30: OBJECT(0, 2, 2, 1) = -30: OBJECT(0, 2, 2, 2) = 30
+OBJECT(0, 2, 3, 0) = -30: OBJECT(0, 2, 3, 1) = 30: OBJECT(0, 2, 3, 2) = 30
+OBJECT(0, 2, 4, 0) = 0: OBJECT(0, 2, 4, 1) = 0: OBJECT(0, 2, 4, 2) = 30
+' PLANE 3
+OBJECT(0, 3, 0, 0) = -30: OBJECT(0, 3, 0, 1) = 30: OBJECT(0, 3, 0, 2) = 30
+OBJECT(0, 3, 1, 0) = -30: OBJECT(0, 3, 1, 1) = -30: OBJECT(0, 3, 1, 2) = 30
+OBJECT(0, 3, 2, 0) = -30: OBJECT(0, 3, 2, 1) = -30: OBJECT(0, 3, 2, 2) = -30
+OBJECT(0, 3, 3, 0) = -30: OBJECT(0, 3, 3, 1) = 30: OBJECT(0, 3, 3, 2) = -30
+OBJECT(0, 3, 4, 0) = -30: OBJECT(0, 3, 4, 1) = 0: OBJECT(0, 3, 4, 2) = 0
+' PLANE 4
+OBJECT(0, 4, 0, 0) = -30: OBJECT(0, 4, 0, 1) = -30: OBJECT(0, 4, 0, 2) = -30
+OBJECT(0, 4, 1, 0) = -30: OBJECT(0, 4, 1, 1) = -30: OBJECT(0, 4, 1, 2) = 30
+OBJECT(0, 4, 2, 0) = 30: OBJECT(0, 4, 2, 1) = -30: OBJECT(0, 4, 2, 2) = 30
+OBJECT(0, 4, 3, 0) = 30: OBJECT(0, 4, 3, 1) = -30: OBJECT(0, 4, 3, 2) = -30
+OBJECT(0, 4, 4, 0) = 0: OBJECT(0, 4, 4, 1) = -30: OBJECT(0, 4, 4, 2) = 0
+' PLANE 5
+OBJECT(0, 5, 0, 0) = -30: OBJECT(0, 5, 0, 1) = 30: OBJECT(0, 5, 0, 2) = -30
+OBJECT(0, 5, 1, 0) = 30: OBJECT(0, 5, 1, 1) = 30: OBJECT(0, 5, 1, 2) = -30
+OBJECT(0, 5, 2, 0) = 30: OBJECT(0, 5, 2, 1) = 30: OBJECT(0, 5, 2, 2) = 30
+OBJECT(0, 5, 3, 0) = -30: OBJECT(0, 5, 3, 1) = 30: OBJECT(0, 5, 3, 2) = 30
+OBJECT(0, 5, 4, 0) = 0: OBJECT(0, 5, 4, 1) = 30: OBJECT(0, 5, 4, 2) = 0
+' SET UP PLANE <a href="/qb64wiki/index.php/COLOR" title="COLOR"><span style="color:#4593D8;">COLOR</span></a>S ON CUBE
+'
+PLANECOL(0) = 3
+PLANECOL(1) = 4
+PLANECOL(2) = 5
+PLANECOL(3) = 6
+PLANECOL(4) = 7
+PLANECOL(5) = 8
+'
+<a href="/qb64wiki/index.php/TITLE" title="TITLE"><span style="color:#4593D8;">_TITLE</span></a> "QB64 _MAPTRIANGLE CUBE DEMO"
+<a href="/qb64wiki/index.php/SCREEN" title="SCREEN"><span style="color:#4593D8;">SCREEN</span></a> <a href="/qb64wiki/index.php/NEWIMAGE" title="NEWIMAGE"><span style="color:#4593D8;">_NEWIMAGE</span></a>(800, 600, 32)
+TextureImage&amp; = <a href="/qb64wiki/index.php/LOADIMAGE" title="LOADIMAGE"><span style="color:#4593D8;">_LOADIMAGE</span></a>("qb64_trans.png") 'any 24/32 bit image
+'<a href="/qb64wiki/index.php/PUTIMAGE" title="PUTIMAGE"><span style="color:#4593D8;">_PUTIMAGE</span></a> , Image&amp;
+
+DO
+  ' LIMIT <a href="/qb64wiki/index.php/TO" title="TO"><span style="color:#4593D8;">TO</span></a> 25 FPS
+  <a href="/qb64wiki/index.php/LIMIT" title="LIMIT"><span style="color:#4593D8;">_LIMIT</span></a> 25
+  ' ERASE LAST IMAGE
+  <a href="/qb64wiki/index.php/CLS" title="CLS"><span style="color:#4593D8;">CLS</span></a>
+
+  ' CALCULATE POSITION OF NEW IMAGE
+  <a href="/qb64wiki/index.php/FOR...NEXT" title="FOR...NEXT"><span style="color:#4593D8;">FOR</span></a> OB&amp; = 0 <a href="/qb64wiki/index.php/TO" title="TO"><span style="color:#4593D8;">TO</span></a> 0 ' UP <a href="/qb64wiki/index.php/TO" title="TO"><span style="color:#4593D8;">TO</span></a> 9 OBJECTS
+    SP = STAB(PIT(OB&amp;)): CP = CTAB(PIT(OB&amp;))
+    SY = STAB(YAW(OB&amp;)): CY = CTAB(YAW(OB&amp;))
+    SR = STAB(ROL(OB&amp;)): CR = CTAB(ROL(OB&amp;))
+    <a href="/qb64wiki/index.php/FOR...NEXT" title="FOR...NEXT"><span style="color:#4593D8;">FOR</span></a> PL&amp; = 0 <a href="/qb64wiki/index.php/TO" title="TO"><span style="color:#4593D8;">TO</span></a> 5 ' CONSISTING OF UP <a href="/qb64wiki/index.php/TO" title="TO"><span style="color:#4593D8;">TO</span></a> 9 PLANES
+      '
+      <a href="/qb64wiki/index.php/FOR...NEXT" title="FOR...NEXT"><span style="color:#4593D8;">FOR</span></a> PN&amp; = 0 <a href="/qb64wiki/index.php/TO" title="TO"><span style="color:#4593D8;">TO</span></a> 3 ' EACH PLANE WITH UP <a href="/qb64wiki/index.php/TO" title="TO"><span style="color:#4593D8;">TO</span></a> 4 <a href="/qb64wiki/index.php/POINT" title="POINT"><span style="color:#4593D8;">POINT</span></a>S (#5 <a href="/qb64wiki/index.php/TO" title="TO"><span style="color:#4593D8;">TO</span></a> <a href="/qb64wiki/index.php/PAINT" title="PAINT"><span style="color:#4593D8;">PAINT</span></a>)
+        '
+        ' TRANSLATE, <a href="/qb64wiki/index.php/THEN" title="THEN"><span style="color:#4593D8;">THEN</span></a> ROTATE
+        TX&amp; = OBJECT(OB&amp;, PL&amp;, PN&amp;, 0)
+        TY&amp; = OBJECT(OB&amp;, PL&amp;, PN&amp;, 1)
+        TZ&amp; = OBJECT(OB&amp;, PL&amp;, PN&amp;, 2)
+        RX&amp; = (TZ&amp; * CP - TY&amp; * SP) * SY - ((TZ&amp; * SP + TY&amp; * CP) * SR + TX&amp; * CR) * CY
+        RY&amp; = (TZ&amp; * SP + TY&amp; * CP) * CR - TX&amp; * SR
+        RZ&amp; = (TZ&amp; * CP - TY&amp; * SP) * CY + ((TZ&amp; * SP + TY&amp; * CP) * SR + TX&amp; * CR) * SY
+        '
+        ' ROTATE, <a href="/qb64wiki/index.php/THEN" title="THEN"><span style="color:#4593D8;">THEN</span></a> TRANSLATE
+        RX&amp; = RX&amp; + MX&amp;
+        RY&amp; = RY&amp; + MY&amp;
+        RZ&amp; = RZ&amp; + MZ&amp;
+        '
+        DPLANE3D(PN&amp;, 0) = RX&amp;: DPLANE3D(PN&amp;, 1) = RY&amp;: DPLANE3D(PN&amp;, 2) = RZ&amp;
+        DPLANE2D(PN&amp;, 0) = 399 + (D&amp; * RX&amp; / RZ&amp;)
+        DPLANE2D(PN&amp;, 1) = 299 + (D&amp; * RY&amp; / RZ&amp;)
+      <a href="/qb64wiki/index.php/NEXT" title="NEXT"><span style="color:#4593D8;">NEXT</span></a>
+      '
+      ' CHECK <a href="/qb64wiki/index.php/TO" title="TO"><span style="color:#4593D8;">TO</span></a> SEE <a href="/qb64wiki/index.php/IF...THEN" title="IF...THEN"><span style="color:#4593D8;">IF</span></a> PLANE IS VISIBLE
+      x1&amp; = DPLANE3D(0, 0): y1&amp; = DPLANE3D(0, 1): Z1&amp; = DPLANE3D(0, 2)
+      x2&amp; = DPLANE3D(1, 0): y2&amp; = DPLANE3D(1, 1): Z2&amp; = DPLANE3D(1, 2)
+      x3&amp; = DPLANE3D(2, 0): y3&amp; = DPLANE3D(2, 1): Z3&amp; = DPLANE3D(2, 2)
+      T1&amp; = -x1&amp; * (y2&amp; * Z3&amp; - y3&amp; * Z2&amp;)
+      T2&amp; = x2&amp; * (y3&amp; * Z1&amp; - y1&amp; * Z3&amp;)
+      T3&amp; = x3&amp; * (y1&amp; * Z2&amp; - y2&amp; * Z1&amp;)
+      '
+      VISIBLE&amp; = T1&amp; - T2&amp; - T3&amp;
+      <a href="/qb64wiki/index.php/IF...THEN" title="IF...THEN"><span style="color:#4593D8;">IF</span></a> VISIBLE&amp; &gt; 0 <a href="/qb64wiki/index.php/THEN" title="THEN"><span style="color:#4593D8;">THEN</span></a>
+        ' DRAW PLANE
+        xx1% = DPLANE2D(0, 0): yy1% = DPLANE2D(0, 1)
+        xx2% = DPLANE2D(1, 0): yy2% = DPLANE2D(1, 1)
+        xx3% = DPLANE2D(2, 0): yy3% = DPLANE2D(2, 1)
+        col% = PLANECOL(PL&amp;)
+
+        <a class="mw-selflink selflink"><span style="color:#4593D8;">_MAPTRIANGLE</span></a> (0, 0)-(0, 255)-(255, 255), TextureImage&amp; TO(xx3%, yy3%)-(xx2%, yy2%)-(xx1%, yy1%)
+        ' CALL DrawTriangle(xx1%, yy1%, xx2%, yy2%, xx3%, yy3%, col%)
+        xx1% = DPLANE2D(0, 0): yy1% = DPLANE2D(0, 1)
+        xx3% = DPLANE2D(2, 0): yy3% = DPLANE2D(2, 1)
+        xx4% = DPLANE2D(3, 0): yy4% = DPLANE2D(3, 1)
+        <a class="mw-selflink selflink"><span style="color:#4593D8;">_MAPTRIANGLE</span></a> (0, 0)-(255, 255)-(255, 0), TextureImage&amp; TO(xx3%, yy3%)-(xx1%, yy1%)-(xx4%, yy4%)
+        'CALL DrawTriangle(xx1%, yy1%, xx3%, yy3%, xx4%, yy4%, col%)
+      <a class="mw-redirect" href="/qb64wiki/index.php/END_IF" title="END IF"><span style="color:#4593D8;">END IF</span></a>
+    <a href="/qb64wiki/index.php/NEXT" title="NEXT"><span style="color:#4593D8;">NEXT</span></a>
+    '
+    ' ROTATE OBJECT
+    PIT(OB&amp;) = PIT(OB&amp;) + 5
+    <a href="/qb64wiki/index.php/IF...THEN" title="IF...THEN"><span style="color:#4593D8;">IF</span></a> PIT(OB&amp;) &gt; 359 <a href="/qb64wiki/index.php/THEN" title="THEN"><span style="color:#4593D8;">THEN</span></a> PIT(OB&amp;) = 0
+    YAW(OB&amp;) = YAW(OB&amp;) + 7
+    <a href="/qb64wiki/index.php/IF...THEN" title="IF...THEN"><span style="color:#4593D8;">IF</span></a> YAW(OB&amp;) &gt; 359 <a href="/qb64wiki/index.php/THEN" title="THEN"><span style="color:#4593D8;">THEN</span></a> YAW(OB&amp;) = 0
+    ROL(OB&amp;) = ROL(OB&amp;) + 9
+    <a href="/qb64wiki/index.php/IF...THEN" title="IF...THEN"><span style="color:#4593D8;">IF</span></a> ROL(OB&amp;) &gt; 359 <a href="/qb64wiki/index.php/THEN" title="THEN"><span style="color:#4593D8;">THEN</span></a> ROL(OB&amp;) = 0
+  <a href="/qb64wiki/index.php/NEXT" title="NEXT"><span style="color:#4593D8;">NEXT</span></a>
+  '
+  ' Calculate Frames per Second
+  frames% = frames% + 1
+  <a href="/qb64wiki/index.php/IF...THEN" title="IF...THEN"><span style="color:#4593D8;">IF</span></a> oldtime$ &lt;&gt; <a href="/qb64wiki/index.php/TIME$" title="TIME$"><span style="color:#4593D8;">TIME$</span></a> <a href="/qb64wiki/index.php/THEN" title="THEN"><span style="color:#4593D8;">THEN</span></a>
+    fps% = frames%
+    frames% = 1
+    oldtime$ = <a href="/qb64wiki/index.php/TIME$" title="TIME$"><span style="color:#4593D8;">TIME$</span></a>
+  <a class="mw-redirect" href="/qb64wiki/index.php/END_IF" title="END IF"><span style="color:#4593D8;">END IF</span></a>
+  <a href="/qb64wiki/index.php/COLOR" title="COLOR"><span style="color:#4593D8;">COLOR</span></a> <a href="/qb64wiki/index.php/RGB" title="RGB"><span style="color:#4593D8;">_RGB</span></a>(255, 255, 255): <a href="/qb64wiki/index.php/LOCATE" title="LOCATE"><span style="color:#4593D8;">LOCATE</span></a> 1, 1: <a href="/qb64wiki/index.php/PRINT" title="PRINT"><span style="color:#4593D8;">PRINT</span></a> "FPS :"; fps%
+  '
+  ' Show Image on Screen
+  <a href="/qb64wiki/index.php/DISPLAY" title="DISPLAY"><span style="color:#4593D8;">_DISPLAY</span></a>
+<a href="/qb64wiki/index.php/LOOP" title="LOOP"><span style="color:#4593D8;">LOOP</span></a> <a href="/qb64wiki/index.php/UNTIL" title="UNTIL"><span style="color:#4593D8;">UNTIL</span></a> <a href="/qb64wiki/index.php/INKEY$" title="INKEY$"><span style="color:#4593D8;">INKEY$</span></a> &lt;&gt; ""
+<a href="/qb64wiki/index.php/WIDTH" title="WIDTH"><span style="color:#4593D8;">WIDTH</span></a> 80: <a href="/qb64wiki/index.php/SCREEN" title="SCREEN"><span style="color:#4593D8;">SCREEN</span></a> 0: <a href="/qb64wiki/index.php/CLS" title="CLS"><span style="color:#4593D8;">CLS</span></a>
+
+
+<a href="/qb64wiki/index.php/SUB" title="SUB"><span style="color:#4593D8;">SUB</span></a> DrawHline (fromx%, tox%, yy%, col%)
+  '<a href="/qb64wiki/index.php/DEF_SEG" title="DEF SEG"><span style="color:#4593D8;">DEF SEG</span></a> = <a href="/qb64wiki/index.php/%26H" title="&amp;H"><span style="color:#4593D8;">&amp;H</span></a>A000
+  '<a href="/qb64wiki/index.php/IF...THEN" title="IF...THEN"><span style="color:#4593D8;">IF</span></a> fromx% &gt; tox% <a href="/qb64wiki/index.php/THEN" title="THEN"><span style="color:#4593D8;">THEN</span></a> <a href="/qb64wiki/index.php/SWAP" title="SWAP"><span style="color:#4593D8;">SWAP</span></a> fromx%, tox%
+  'yyy&amp; = yy%
+  'sloc&amp; = yyy&amp; * 320 + fromx%
+  'eloc&amp; = sloc&amp; + (tox% - fromx%)
+  '<a href="/qb64wiki/index.php/FOR...NEXT" title="FOR...NEXT"><span style="color:#4593D8;">FOR</span></a> t&amp; = sloc&amp; <a href="/qb64wiki/index.php/TO" title="TO"><span style="color:#4593D8;">TO</span></a> eloc&amp;
+  '  <a href="/qb64wiki/index.php/POKE" title="POKE"><span style="color:#4593D8;">POKE</span></a> t&amp;, col%
+  '<a href="/qb64wiki/index.php/NEXT" title="NEXT"><span style="color:#4593D8;">NEXT</span></a>
+  '<a href="/qb64wiki/index.php/DEF_SEG" title="DEF SEG"><span style="color:#4593D8;">DEF SEG</span></a>
+  <a href="/qb64wiki/index.php/LINE" title="LINE"><span style="color:#4593D8;">LINE</span></a> (fromx%, yy%)-(tox%, yy%), <a href="/qb64wiki/index.php/RGB" title="RGB"><span style="color:#4593D8;">_RGB</span></a>(255, 255, 255) 'col%
+<a href="/qb64wiki/index.php/END_SUB" title="END SUB"><span style="color:#4593D8;">END SUB</span></a>
+
+<a href="/qb64wiki/index.php/SUB" title="SUB"><span style="color:#4593D8;">SUB</span></a> DrawTriangle (x1%, y1%, x2%, y2%, x3%, y3%, col%)
+  DO
+    sflag% = 0
+    <a href="/qb64wiki/index.php/IF...THEN" title="IF...THEN"><span style="color:#4593D8;">IF</span></a> y1% &gt; y2% <a href="/qb64wiki/index.php/THEN" title="THEN"><span style="color:#4593D8;">THEN</span></a>
+      sflag% = 1
+      <a href="/qb64wiki/index.php/SWAP" title="SWAP"><span style="color:#4593D8;">SWAP</span></a> y1%, y2%
+      <a href="/qb64wiki/index.php/SWAP" title="SWAP"><span style="color:#4593D8;">SWAP</span></a> x1%, x2%
+    <a class="mw-redirect" href="/qb64wiki/index.php/END_IF" title="END IF"><span style="color:#4593D8;">END IF</span></a>
+    <a href="/qb64wiki/index.php/IF...THEN" title="IF...THEN"><span style="color:#4593D8;">IF</span></a> y2% &gt; y3% <a href="/qb64wiki/index.php/THEN" title="THEN"><span style="color:#4593D8;">THEN</span></a>
+      sflag% = 1
+      <a href="/qb64wiki/index.php/SWAP" title="SWAP"><span style="color:#4593D8;">SWAP</span></a> y2%, y3%
+      <a href="/qb64wiki/index.php/SWAP" title="SWAP"><span style="color:#4593D8;">SWAP</span></a> x2%, x3%
+    <a class="mw-redirect" href="/qb64wiki/index.php/END_IF" title="END IF"><span style="color:#4593D8;">END IF</span></a>
+  <a href="/qb64wiki/index.php/LOOP" title="LOOP"><span style="color:#4593D8;">LOOP</span></a> <a href="/qb64wiki/index.php/UNTIL" title="UNTIL"><span style="color:#4593D8;">UNTIL</span></a> sflag% = 0
+  '
+  <a href="/qb64wiki/index.php/IF...THEN" title="IF...THEN"><span style="color:#4593D8;">IF</span></a> y2% = y3% <a href="/qb64wiki/index.php/THEN" title="THEN"><span style="color:#4593D8;">THEN</span></a>
+    ' Draw a flat bottomed triangle
+    ydiff1% = y2% - y1%
+    ydiff2% = y3% - y1%
+    <a href="/qb64wiki/index.php/IF...THEN" title="IF...THEN"><span style="color:#4593D8;">IF</span></a> ydiff1% &lt;&gt; 0 <a href="/qb64wiki/index.php/THEN" title="THEN"><span style="color:#4593D8;">THEN</span></a>
+      slope1! = (x2% - x1%) / ydiff1%
+    <a href="/qb64wiki/index.php/ELSE" title="ELSE"><span style="color:#4593D8;">ELSE</span></a>
+      slope1! = 0
+    <a class="mw-redirect" href="/qb64wiki/index.php/END_IF" title="END IF"><span style="color:#4593D8;">END IF</span></a>
+    <a href="/qb64wiki/index.php/IF...THEN" title="IF...THEN"><span style="color:#4593D8;">IF</span></a> ydiff2% &lt;&gt; 0 <a href="/qb64wiki/index.php/THEN" title="THEN"><span style="color:#4593D8;">THEN</span></a>
+      slope2! = (x3% - x1%) / ydiff2%
+    <a href="/qb64wiki/index.php/ELSE" title="ELSE"><span style="color:#4593D8;">ELSE</span></a>
+      slope2! = 0
+    <a class="mw-redirect" href="/qb64wiki/index.php/END_IF" title="END IF"><span style="color:#4593D8;">END IF</span></a>
+    sx! = x1%: ex! = x1%
+    <a href="/qb64wiki/index.php/FOR...NEXT" title="FOR...NEXT"><span style="color:#4593D8;">FOR</span></a> y% = y1% <a href="/qb64wiki/index.php/TO" title="TO"><span style="color:#4593D8;">TO</span></a> y2%
+      <a href="/qb64wiki/index.php/CALL" title="CALL"><span style="color:#4593D8;">CALL</span></a> DrawHline(<a href="/qb64wiki/index.php/CINT" title="CINT"><span style="color:#4593D8;">CINT</span></a>(sx!), <a href="/qb64wiki/index.php/CINT" title="CINT"><span style="color:#4593D8;">CINT</span></a>(ex!), y%, col%)
+      sx! = sx! + slope1!
+      ex! = ex! + slope2!
+    <a href="/qb64wiki/index.php/NEXT" title="NEXT"><span style="color:#4593D8;">NEXT</span></a>
+    <a href="/qb64wiki/index.php/EXIT_SUB" title="EXIT SUB"><span style="color:#4593D8;">EXIT SUB</span></a>
+  <a href="/qb64wiki/index.php/ELSE" title="ELSE"><span style="color:#4593D8;">ELSE</span></a>
+    <a href="/qb64wiki/index.php/IF...THEN" title="IF...THEN"><span style="color:#4593D8;">IF</span></a> y1% = y2% <a href="/qb64wiki/index.php/THEN" title="THEN"><span style="color:#4593D8;">THEN</span></a>
+      '
+      ' Draw a flat topped triangle
+      ydiff1% = y3% - y1%
+      ydiff2% = y3% - y2%
+      <a href="/qb64wiki/index.php/IF...THEN" title="IF...THEN"><span style="color:#4593D8;">IF</span></a> ydiff1% &lt;&gt; 0 <a href="/qb64wiki/index.php/THEN" title="THEN"><span style="color:#4593D8;">THEN</span></a>
+        slope1! = (x3% - x1%) / ydiff1%
+      <a href="/qb64wiki/index.php/ELSE" title="ELSE"><span style="color:#4593D8;">ELSE</span></a>
+        slope1! = 0
+      <a class="mw-redirect" href="/qb64wiki/index.php/END_IF" title="END IF"><span style="color:#4593D8;">END IF</span></a>
+      <a href="/qb64wiki/index.php/IF...THEN" title="IF...THEN"><span style="color:#4593D8;">IF</span></a> ydiff2% &lt;&gt; 0 <a href="/qb64wiki/index.php/THEN" title="THEN"><span style="color:#4593D8;">THEN</span></a>
+        slope2! = (x3% - x2%) / ydiff2%
+      <a href="/qb64wiki/index.php/ELSE" title="ELSE"><span style="color:#4593D8;">ELSE</span></a>
+        slope2! = 0
+      <a class="mw-redirect" href="/qb64wiki/index.php/END_IF" title="END IF"><span style="color:#4593D8;">END IF</span></a>
+      sx! = x1%: ex! = x2%
+      <a href="/qb64wiki/index.php/FOR...NEXT" title="FOR...NEXT"><span style="color:#4593D8;">FOR</span></a> y% = y1% <a href="/qb64wiki/index.php/TO" title="TO"><span style="color:#4593D8;">TO</span></a> y3%
+        <a href="/qb64wiki/index.php/CALL" title="CALL"><span style="color:#4593D8;">CALL</span></a> DrawHline(<a href="/qb64wiki/index.php/CINT" title="CINT"><span style="color:#4593D8;">CINT</span></a>(sx!), <a href="/qb64wiki/index.php/CINT" title="CINT"><span style="color:#4593D8;">CINT</span></a>(ex!), y%, col%)
+        sx! = sx! + slope1!
+        ex! = ex! + slope2!
+      <a href="/qb64wiki/index.php/NEXT" title="NEXT"><span style="color:#4593D8;">NEXT</span></a>
+      x1% = sx!: x2% = ex!
+      <a href="/qb64wiki/index.php/EXIT_SUB" title="EXIT SUB"><span style="color:#4593D8;">EXIT SUB</span></a>
+    <a href="/qb64wiki/index.php/ELSE" title="ELSE"><span style="color:#4593D8;">ELSE</span></a>
+      ' Draw a general purpose triangle
+      ' First draw the flat bottom portion (top half)
+      ydiff1% = y2% - y1%
+      ydiff2% = y3% - y1%
+      <a href="/qb64wiki/index.php/IF...THEN" title="IF...THEN"><span style="color:#4593D8;">IF</span></a> ydiff1% &lt;&gt; 0 <a href="/qb64wiki/index.php/THEN" title="THEN"><span style="color:#4593D8;">THEN</span></a>
+        slope1! = (x2% - x1%) / ydiff1%
+      <a href="/qb64wiki/index.php/ELSE" title="ELSE"><span style="color:#4593D8;">ELSE</span></a>
+        slope1! = 0
+      <a class="mw-redirect" href="/qb64wiki/index.php/END_IF" title="END IF"><span style="color:#4593D8;">END IF</span></a>
+      <a href="/qb64wiki/index.php/IF...THEN" title="IF...THEN"><span style="color:#4593D8;">IF</span></a> ydiff2% &lt;&gt; 0 <a href="/qb64wiki/index.php/THEN" title="THEN"><span style="color:#4593D8;">THEN</span></a>
+        slope2! = (x3% - x1%) / ydiff2%
+      <a href="/qb64wiki/index.php/ELSE" title="ELSE"><span style="color:#4593D8;">ELSE</span></a>
+        slope2! = 0
+      <a class="mw-redirect" href="/qb64wiki/index.php/END_IF" title="END IF"><span style="color:#4593D8;">END IF</span></a>
+      sx! = x1%: ex! = x1%
+      <a href="/qb64wiki/index.php/FOR...NEXT" title="FOR...NEXT"><span style="color:#4593D8;">FOR</span></a> y% = y1% <a href="/qb64wiki/index.php/TO" title="TO"><span style="color:#4593D8;">TO</span></a> y2%
+        <a href="/qb64wiki/index.php/CALL" title="CALL"><span style="color:#4593D8;">CALL</span></a> DrawHline(<a href="/qb64wiki/index.php/CINT" title="CINT"><span style="color:#4593D8;">CINT</span></a>(sx!), <a href="/qb64wiki/index.php/CINT" title="CINT"><span style="color:#4593D8;">CINT</span></a>(ex!), y%, col%)
+        sx! = sx! + slope1!
+        ex! = ex! + slope2!
+      <a href="/qb64wiki/index.php/NEXT" title="NEXT"><span style="color:#4593D8;">NEXT</span></a>
+      ' Then draw the flat topped portion (bottom half)
+      x1% = x2%
+      x2% = ex!
+      y1% = y2%
+      ydiff1% = y3% - y1%
+      ydiff2% = y3% - y2%
+      <a href="/qb64wiki/index.php/IF...THEN" title="IF...THEN"><span style="color:#4593D8;">IF</span></a> ydiff1% &lt;&gt; 0 <a href="/qb64wiki/index.php/THEN" title="THEN"><span style="color:#4593D8;">THEN</span></a>
+        slope1! = (x3% - x1%) / ydiff1%
+      <a href="/qb64wiki/index.php/ELSE" title="ELSE"><span style="color:#4593D8;">ELSE</span></a>
+        slope1! = 0
+      <a class="mw-redirect" href="/qb64wiki/index.php/END_IF" title="END IF"><span style="color:#4593D8;">END IF</span></a>
+      <a href="/qb64wiki/index.php/IF...THEN" title="IF...THEN"><span style="color:#4593D8;">IF</span></a> ydiff2% &lt;&gt; 0 <a href="/qb64wiki/index.php/THEN" title="THEN"><span style="color:#4593D8;">THEN</span></a>
+        slope2! = (x3% - x2%) / ydiff2%
+      <a href="/qb64wiki/index.php/ELSE" title="ELSE"><span style="color:#4593D8;">ELSE</span></a>
+        slope2! = 0
+      <a class="mw-redirect" href="/qb64wiki/index.php/END_IF" title="END IF"><span style="color:#4593D8;">END IF</span></a>
+      sx! = x1%: ex! = x2%
+      <a href="/qb64wiki/index.php/FOR...NEXT" title="FOR...NEXT"><span style="color:#4593D8;">FOR</span></a> y% = y1% <a href="/qb64wiki/index.php/TO" title="TO"><span style="color:#4593D8;">TO</span></a> y3%
+        <a href="/qb64wiki/index.php/CALL" title="CALL"><span style="color:#4593D8;">CALL</span></a> DrawHline(<a href="/qb64wiki/index.php/CINT" title="CINT"><span style="color:#4593D8;">CINT</span></a>(sx!), <a href="/qb64wiki/index.php/CINT" title="CINT"><span style="color:#4593D8;">CINT</span></a>(ex!), y%, col%)
+        sx! = sx! + slope1!
+        ex! = ex! + slope2!
+      <a href="/qb64wiki/index.php/NEXT" title="NEXT"><span style="color:#4593D8;">NEXT</span></a>
+      x1% = sx!: x2% = ex!
+    <a class="mw-redirect" href="/qb64wiki/index.php/END_IF" title="END IF"><span style="color:#4593D8;">END IF</span></a>
+  <a class="mw-redirect" href="/qb64wiki/index.php/END_IF" title="END IF"><span style="color:#4593D8;">END IF</span></a>
+  '
+<a href="/qb64wiki/index.php/END_SUB" title="END SUB"><span style="color:#4593D8;">END SUB</span></a>
+</pre>
+         </td>
+        </tr>
+       </tbody>
+      </table>
+      <center>
+       <span style="font-family: Courier New, Courier, monospace; font-size: 0.80em; line-height: 50%;">
+        Demo by Andrew L. Ayers
+       </span>
+      </center>
+      <p>
+       <br/>
+       <i>
+        Example 3:
+       </i>
+       A 3D Spinning Cube demo using a hardware image and
+       <b>
+        QB64GL
+       </b>
+       hardware acceleration with
+       <a class="mw-selflink selflink">
+        _MAPTRIANGLE
+       </a>
+       :
+      </p>
+      <table cellpadding="15px" width="100%">
+       <tbody>
+        <tr>
+         <td>
+          <pre class="codeide">' Copyright (C) 2011 by Andrew L. Ayers
+
+<a href="/qb64wiki/index.php/DIM" title="DIM"><span style="color:#4593D8;">DIM</span></a> OBJECT(9, 9, 4, 2) <a href="/qb64wiki/index.php/AS" title="AS"><span style="color:#4593D8;">AS</span></a> <a href="/qb64wiki/index.php/LONG" title="LONG"><span style="color:#4593D8;">LONG</span></a>
+
+' OBJECTS DEFINED <a href="/qb64wiki/index.php/AS" title="AS"><span style="color:#4593D8;">AS</span></a> FOLLOWS:
+'   (#OBJECTS,#PLANES PER OBJECT,#<a href="/qb64wiki/index.php/POINT" title="POINT"><span style="color:#4593D8;">POINT</span></a>S PER PLANE, XYZ TRIPLE)
+
+<a href="/qb64wiki/index.php/DIM" title="DIM"><span style="color:#4593D8;">DIM</span></a> DPLANE2D(4, 1) <a href="/qb64wiki/index.php/AS" title="AS"><span style="color:#4593D8;">AS</span></a> <a href="/qb64wiki/index.php/LONG" title="LONG"><span style="color:#4593D8;">LONG</span></a> ' <a href="/qb64wiki/index.php/SCREEN" title="SCREEN"><span style="color:#4593D8;">SCREEN</span></a> PLANE COORDINATES
+
+' DPLANE2D DEFINED <a href="/qb64wiki/index.php/AS" title="AS"><span style="color:#4593D8;">AS</span></a> FOLLOWS:
+'   (#<a href="/qb64wiki/index.php/POINT" title="POINT"><span style="color:#4593D8;">POINT</span></a>S PER PLANE, XY <a href="/qb64wiki/index.php/DOUBLE" title="DOUBLE"><span style="color:#4593D8;">DOUBLE</span></a>)
+
+<a href="/qb64wiki/index.php/DIM" title="DIM"><span style="color:#4593D8;">DIM</span></a> DPLANE3D(4, 2) <a href="/qb64wiki/index.php/AS" title="AS"><span style="color:#4593D8;">AS</span></a> <a href="/qb64wiki/index.php/LONG" title="LONG"><span style="color:#4593D8;">LONG</span></a> ' 3D PLANE COORDINATES
+
+' DPLANE3D DEFINED <a href="/qb64wiki/index.php/AS" title="AS"><span style="color:#4593D8;">AS</span></a> FOLLOWS:
+'   (#<a href="/qb64wiki/index.php/POINT" title="POINT"><span style="color:#4593D8;">POINT</span></a>S PER PLANE, XYZ TRIPLE)
+
+<a href="/qb64wiki/index.php/DIM" title="DIM"><span style="color:#4593D8;">DIM</span></a> PLANECOL(9) <a href="/qb64wiki/index.php/AS" title="AS"><span style="color:#4593D8;">AS</span></a> <a href="/qb64wiki/index.php/INTEGER" title="INTEGER"><span style="color:#4593D8;">INTEGER</span></a>
+<a href="/qb64wiki/index.php/DIM" title="DIM"><span style="color:#4593D8;">DIM</span></a> STAB(359), CTAB(359) ' SINE/COSINE TABLES
+D&amp; = 400: MX&amp; = 0: MY&amp; = 0: MZ&amp; = -100
+'
+' COMPUTE SINE/COSINE TABLES
+<a href="/qb64wiki/index.php/FOR...NEXT" title="FOR...NEXT"><span style="color:#4593D8;">FOR</span></a> t&amp; = 0 <a href="/qb64wiki/index.php/TO" title="TO"><span style="color:#4593D8;">TO</span></a> 359
+    STAB(t&amp;) = <a href="/qb64wiki/index.php/SIN" title="SIN"><span style="color:#4593D8;">SIN</span></a>((6.282 / 360) * t&amp;)
+    CTAB(t&amp;) = <a href="/qb64wiki/index.php/COS" title="COS"><span style="color:#4593D8;">COS</span></a>((6.282 / 360) * t&amp;)
+<a href="/qb64wiki/index.php/NEXT" title="NEXT"><span style="color:#4593D8;">NEXT</span></a>
+'
+' BUILD CUBE IN OBJECT ARRAY
+' PLANE 0
+OBJECT(0, 0, 0, 0) = -30: OBJECT(0, 0, 0, 1) = 30: OBJECT(0, 0, 0, 2) = -30
+OBJECT(0, 0, 1, 0) = -30: OBJECT(0, 0, 1, 1) = -30: OBJECT(0, 0, 1, 2) = -30
+OBJECT(0, 0, 2, 0) = 30: OBJECT(0, 0, 2, 1) = -30: OBJECT(0, 0, 2, 2) = -30
+OBJECT(0, 0, 3, 0) = 30: OBJECT(0, 0, 3, 1) = 30: OBJECT(0, 0, 3, 2) = -30
+OBJECT(0, 0, 4, 0) = 0: OBJECT(0, 0, 4, 1) = 0: OBJECT(0, 0, 4, 2) = -30
+' PLANE 1
+OBJECT(0, 1, 0, 0) = 30: OBJECT(0, 1, 0, 1) = 30: OBJECT(0, 1, 0, 2) = -30
+OBJECT(0, 1, 1, 0) = 30: OBJECT(0, 1, 1, 1) = -30: OBJECT(0, 1, 1, 2) = -30
+OBJECT(0, 1, 2, 0) = 30: OBJECT(0, 1, 2, 1) = -30: OBJECT(0, 1, 2, 2) = 30
+OBJECT(0, 1, 3, 0) = 30: OBJECT(0, 1, 3, 1) = 30: OBJECT(0, 1, 3, 2) = 30
+OBJECT(0, 1, 4, 0) = 30: OBJECT(0, 1, 4, 1) = 0: OBJECT(0, 1, 4, 2) = 0
+' PLANE 2
+OBJECT(0, 2, 0, 0) = 30: OBJECT(0, 2, 0, 1) = 30: OBJECT(0, 2, 0, 2) = 30
+OBJECT(0, 2, 1, 0) = 30: OBJECT(0, 2, 1, 1) = -30: OBJECT(0, 2, 1, 2) = 30
+OBJECT(0, 2, 2, 0) = -30: OBJECT(0, 2, 2, 1) = -30: OBJECT(0, 2, 2, 2) = 30
+OBJECT(0, 2, 3, 0) = -30: OBJECT(0, 2, 3, 1) = 30: OBJECT(0, 2, 3, 2) = 30
+OBJECT(0, 2, 4, 0) = 0: OBJECT(0, 2, 4, 1) = 0: OBJECT(0, 2, 4, 2) = 30
+' PLANE 3
+OBJECT(0, 3, 0, 0) = -30: OBJECT(0, 3, 0, 1) = 30: OBJECT(0, 3, 0, 2) = 30
+OBJECT(0, 3, 1, 0) = -30: OBJECT(0, 3, 1, 1) = -30: OBJECT(0, 3, 1, 2) = 30
+OBJECT(0, 3, 2, 0) = -30: OBJECT(0, 3, 2, 1) = -30: OBJECT(0, 3, 2, 2) = -30
+OBJECT(0, 3, 3, 0) = -30: OBJECT(0, 3, 3, 1) = 30: OBJECT(0, 3, 3, 2) = -30
+OBJECT(0, 3, 4, 0) = -30: OBJECT(0, 3, 4, 1) = 0: OBJECT(0, 3, 4, 2) = 0
+' PLANE 4
+OBJECT(0, 4, 0, 0) = -30: OBJECT(0, 4, 0, 1) = -30: OBJECT(0, 4, 0, 2) = -30
+OBJECT(0, 4, 1, 0) = -30: OBJECT(0, 4, 1, 1) = -30: OBJECT(0, 4, 1, 2) = 30
+OBJECT(0, 4, 2, 0) = 30: OBJECT(0, 4, 2, 1) = -30: OBJECT(0, 4, 2, 2) = 30
+OBJECT(0, 4, 3, 0) = 30: OBJECT(0, 4, 3, 1) = -30: OBJECT(0, 4, 3, 2) = -30
+OBJECT(0, 4, 4, 0) = 0: OBJECT(0, 4, 4, 1) = -30: OBJECT(0, 4, 4, 2) = 0
+' PLANE 5
+OBJECT(0, 5, 0, 0) = -30: OBJECT(0, 5, 0, 1) = 30: OBJECT(0, 5, 0, 2) = -30
+OBJECT(0, 5, 1, 0) = 30: OBJECT(0, 5, 1, 1) = 30: OBJECT(0, 5, 1, 2) = -30
+OBJECT(0, 5, 2, 0) = 30: OBJECT(0, 5, 2, 1) = 30: OBJECT(0, 5, 2, 2) = 30
+OBJECT(0, 5, 3, 0) = -30: OBJECT(0, 5, 3, 1) = 30: OBJECT(0, 5, 3, 2) = 30
+OBJECT(0, 5, 4, 0) = 0: OBJECT(0, 5, 4, 1) = 30: OBJECT(0, 5, 4, 2) = 0
+' SET UP PLANE <a href="/qb64wiki/index.php/COLOR" title="COLOR"><span style="color:#4593D8;">COLOR</span></a>S ON CUBE
+'
+PLANECOL(0) = 3
+PLANECOL(1) = 4
+PLANECOL(2) = 5
+PLANECOL(3) = 6
+PLANECOL(4) = 7
+PLANECOL(5) = 8
+'
+<a href="/qb64wiki/index.php/TITLE" title="TITLE"><span style="color:#4593D8;">_TITLE</span></a> "QB64 <a class="mw-selflink selflink"><span style="color:#4593D8;">_MAPTRIANGLE</span></a> CUBE DEMO"
+<a href="/qb64wiki/index.php/SCREEN" title="SCREEN"><span style="color:#4593D8;">SCREEN</span></a> <a href="/qb64wiki/index.php/NEWIMAGE" title="NEWIMAGE"><span style="color:#4593D8;">_NEWIMAGE</span></a>(800, 600, 32)
+
+TextureImage&amp; = <a href="/qb64wiki/index.php/LOADIMAGE" title="LOADIMAGE"><span style="color:#4593D8;">_LOADIMAGE</span></a>("qb64_trans.png", 32) 'any 24/32 bit image
+<a href="/qb64wiki/index.php/SETALPHA" title="SETALPHA"><span style="color:#4593D8;">_SETALPHA</span></a> 128, , TextureImage&amp;
+TextureImage&amp; = <a href="/qb64wiki/index.php/COPYIMAGE" title="COPYIMAGE"><span style="color:#4593D8;">_COPYIMAGE</span></a>(TextureImage&amp;, 33)'copy of hardware image
+
+'<a href="/qb64wiki/index.php/PUTIMAGE" title="PUTIMAGE"><span style="color:#4593D8;">_PUTIMAGE</span></a> , Image&amp;
+
+DO
+
+    ' LIMIT <a href="/qb64wiki/index.php/TO" title="TO"><span style="color:#4593D8;">TO</span></a> 25 FPS
+    '<a href="/qb64wiki/index.php/LIMIT" title="LIMIT"><span style="color:#4593D8;">_LIMIT</span></a> 25
+    ' <a href="/qb64wiki/index.php/ERASE" title="ERASE"><span style="color:#4593D8;">ERASE</span></a> LAST IMAGE
+    '<a href="/qb64wiki/index.php/CLS" title="CLS"><span style="color:#4593D8;">CLS</span></a> , <a href="/qb64wiki/index.php/RGB" title="RGB"><span style="color:#4593D8;">_RGB</span></a>(0, 0, 160)
+
+    ' CALCULATE POSITION OF NEW IMAGE
+    <a href="/qb64wiki/index.php/FOR...NEXT" title="FOR...NEXT"><span style="color:#4593D8;">FOR</span></a> OB&amp; = 0 <a href="/qb64wiki/index.php/TO" title="TO"><span style="color:#4593D8;">TO</span></a> 0 ' UP <a href="/qb64wiki/index.php/TO" title="TO"><span style="color:#4593D8;">TO</span></a> 9 OBJECTS
+        SP = STAB(PIT(OB&amp;)): CP = CTAB(PIT(OB&amp;))
+        SY = STAB(YAW(OB&amp;)): CY = CTAB(YAW(OB&amp;))
+        SR = STAB(ROL(OB&amp;)): CR = CTAB(ROL(OB&amp;))
+        <a href="/qb64wiki/index.php/FOR...NEXT" title="FOR...NEXT"><span style="color:#4593D8;">FOR</span></a> PL&amp; = 0 <a href="/qb64wiki/index.php/TO" title="TO"><span style="color:#4593D8;">TO</span></a> 5 ' CONSISTING OF UP <a href="/qb64wiki/index.php/TO" title="TO"><span style="color:#4593D8;">TO</span></a> 9 PLANES
+            '
+            <a href="/qb64wiki/index.php/FOR...NEXT" title="FOR...NEXT"><span style="color:#4593D8;">FOR</span></a> PN&amp; = 0 <a href="/qb64wiki/index.php/TO" title="TO"><span style="color:#4593D8;">TO</span></a> 3 ' EACH PLANE WITH UP <a href="/qb64wiki/index.php/TO" title="TO"><span style="color:#4593D8;">TO</span></a> 4 <a href="/qb64wiki/index.php/POINT" title="POINT"><span style="color:#4593D8;">POINT</span></a>S (#5 <a href="/qb64wiki/index.php/TO" title="TO"><span style="color:#4593D8;">TO</span></a> <a href="/qb64wiki/index.php/PAINT" title="PAINT"><span style="color:#4593D8;">PAINT</span></a>)
+                '
+                ' TRANSLATE, <a href="/qb64wiki/index.php/THEN" title="THEN"><span style="color:#4593D8;">THEN</span></a> ROTATE
+                TX&amp; = OBJECT(OB&amp;, PL&amp;, PN&amp;, 0)
+                TY&amp; = OBJECT(OB&amp;, PL&amp;, PN&amp;, 1)
+                TZ&amp; = OBJECT(OB&amp;, PL&amp;, PN&amp;, 2)
+                RX&amp; = (TZ&amp; * CP - TY&amp; * SP) * SY - ((TZ&amp; * SP + TY&amp; * CP) * SR + TX&amp; * CR) * CY
+                RY&amp; = (TZ&amp; * SP + TY&amp; * CP) * CR - TX&amp; * SR
+                RZ&amp; = (TZ&amp; * CP - TY&amp; * SP) * CY + ((TZ&amp; * SP + TY&amp; * CP) * SR + TX&amp; * CR) * SY
+                '
+                ' ROTATE, <a href="/qb64wiki/index.php/THEN" title="THEN"><span style="color:#4593D8;">THEN</span></a> TRANSLATE
+                RX&amp; = RX&amp; + MX&amp;
+                RY&amp; = RY&amp; + MY&amp;
+                RZ&amp; = RZ&amp; + MZ&amp;
+                '
+                DPLANE3D(PN&amp;, 0) = RX&amp;: DPLANE3D(PN&amp;, 1) = RY&amp;: DPLANE3D(PN&amp;, 2) = RZ&amp;
+                DPLANE2D(PN&amp;, 0) = 399 + (D&amp; * RX&amp; / RZ&amp;)
+                DPLANE2D(PN&amp;, 1) = 299 + (D&amp; * RY&amp; / RZ&amp;)
+            <a href="/qb64wiki/index.php/NEXT" title="NEXT"><span style="color:#4593D8;">NEXT</span></a>
+            '
+            ' CHECK <a href="/qb64wiki/index.php/TO" title="TO"><span style="color:#4593D8;">TO</span></a> SEE <a href="/qb64wiki/index.php/IF...THEN" title="IF...THEN"><span style="color:#4593D8;">IF</span></a> PLANE <a class="mw-redirect" href="/qb64wiki/index.php/IS" title="IS"><span style="color:#4593D8;">IS</span></a> VISIBLE
+            x1&amp; = DPLANE3D(0, 0): y1&amp; = DPLANE3D(0, 1): Z1&amp; = DPLANE3D(0, 2)
+            x2&amp; = DPLANE3D(1, 0): y2&amp; = DPLANE3D(1, 1): Z2&amp; = DPLANE3D(1, 2)
+            x3&amp; = DPLANE3D(2, 0): y3&amp; = DPLANE3D(2, 1): Z3&amp; = DPLANE3D(2, 2)
+            T1&amp; = -x1&amp; * (y2&amp; * Z3&amp; - y3&amp; * Z2&amp;)
+            T2&amp; = x2&amp; * (y3&amp; * Z1&amp; - y1&amp; * Z3&amp;)
+            T3&amp; = x3&amp; * (y1&amp; * Z2&amp; - y2&amp; * Z1&amp;)
+            '
+            VISIBLE&amp; = T1&amp; - T2&amp; - T3&amp;
+            <a href="/qb64wiki/index.php/IF...THEN" title="IF...THEN"><span style="color:#4593D8;">IF</span></a> VISIBLE&amp; &gt; 0 <a href="/qb64wiki/index.php/THEN" title="THEN"><span style="color:#4593D8;">THEN</span></a>
+                ' <a href="/qb64wiki/index.php/DRAW" title="DRAW"><span style="color:#4593D8;">DRAW</span></a> PLANE
+                xx1% = DPLANE2D(0, 0): yy1% = DPLANE2D(0, 1)
+                xx2% = DPLANE2D(1, 0): yy2% = DPLANE2D(1, 1)
+                xx3% = DPLANE2D(2, 0): yy3% = DPLANE2D(2, 1)
+                col% = PLANECOL(PL&amp;)
+
+                <a href="/qb64wiki/index.php/BLEND" title="BLEND"><span style="color:#4593D8;">_BLEND</span></a> TextureImage&amp;
+                <a class="mw-selflink selflink"><span style="color:#4593D8;">_MAPTRIANGLE</span></a> (0, 0)-(0, 255)-(255, 255), TextureImage&amp; TO(xx1%, yy1%)-(xx2%, yy2%)-(xx3%, yy3%)
+
+                ' <a href="/qb64wiki/index.php/CALL" title="CALL"><span style="color:#4593D8;">CALL</span></a> DrawTriangle(xx1%, yy1%, xx2%, yy2%, xx3%, yy3%, col%)
+                xx1% = DPLANE2D(0, 0): yy1% = DPLANE2D(0, 1)
+                xx3% = DPLANE2D(2, 0): yy3% = DPLANE2D(2, 1)
+                xx4% = DPLANE2D(3, 0): yy4% = DPLANE2D(3, 1)
+
+                <a href="/qb64wiki/index.php/DONTBLEND" title="DONTBLEND"><span style="color:#4593D8;">_DONTBLEND</span></a> TextureImage&amp;
+                <a class="mw-selflink selflink"><span style="color:#4593D8;">_MAPTRIANGLE</span></a> (0, 0)-(255, 255)-(255, 0), TextureImage&amp; TO(xx3%, yy3%)-(xx1%, yy1%)-(xx4%, yy4%), , _SMOOTH
+                '<a href="/qb64wiki/index.php/CALL" title="CALL"><span style="color:#4593D8;">CALL</span></a> DrawTriangle(xx1%, yy1%, xx3%, yy3%, xx4%, yy4%, col%)
+            <a class="mw-redirect" href="/qb64wiki/index.php/END_IF" title="END IF"><span style="color:#4593D8;">END IF</span></a>
+        <a href="/qb64wiki/index.php/NEXT" title="NEXT"><span style="color:#4593D8;">NEXT</span></a>
+        '
+        ' ROTATE OBJECT
+        PIT(OB&amp;) = PIT(OB&amp;) + 5
+        <a href="/qb64wiki/index.php/IF...THEN" title="IF...THEN"><span style="color:#4593D8;">IF</span></a> PIT(OB&amp;) &gt; 359 <a href="/qb64wiki/index.php/THEN" title="THEN"><span style="color:#4593D8;">THEN</span></a> PIT(OB&amp;) = 0
+        YAW(OB&amp;) = YAW(OB&amp;) + 7
+        <a href="/qb64wiki/index.php/IF...THEN" title="IF...THEN"><span style="color:#4593D8;">IF</span></a> YAW(OB&amp;) &gt; 359 <a href="/qb64wiki/index.php/THEN" title="THEN"><span style="color:#4593D8;">THEN</span></a> YAW(OB&amp;) = 0
+        ROL(OB&amp;) = ROL(OB&amp;) + 9
+        <a href="/qb64wiki/index.php/IF...THEN" title="IF...THEN"><span style="color:#4593D8;">IF</span></a> ROL(OB&amp;) &gt; 359 <a href="/qb64wiki/index.php/THEN" title="THEN"><span style="color:#4593D8;">THEN</span></a> ROL(OB&amp;) = 0
+    <a href="/qb64wiki/index.php/NEXT" title="NEXT"><span style="color:#4593D8;">NEXT</span></a>
+    '
+    ' Calculate Frames per Second
+    frames% = frames% + 1
+    <a href="/qb64wiki/index.php/IF...THEN" title="IF...THEN"><span style="color:#4593D8;">IF</span></a> oldtime$ &lt;&gt; <a href="/qb64wiki/index.php/TIME$" title="TIME$"><span style="color:#4593D8;">TIME$</span></a> <a href="/qb64wiki/index.php/THEN" title="THEN"><span style="color:#4593D8;">THEN</span></a>
+        fps% = frames%
+        frames% = 1
+        oldtime$ = <a href="/qb64wiki/index.php/TIME$" title="TIME$"><span style="color:#4593D8;">TIME$</span></a>
+    <a class="mw-redirect" href="/qb64wiki/index.php/END_IF" title="END IF"><span style="color:#4593D8;">END IF</span></a>
+    <a href="/qb64wiki/index.php/COLOR" title="COLOR"><span style="color:#4593D8;">COLOR</span></a> <a href="/qb64wiki/index.php/RGB" title="RGB"><span style="color:#4593D8;">_RGB</span></a>(255, 255, 255): <a href="/qb64wiki/index.php/LOCATE" title="LOCATE"><span style="color:#4593D8;">LOCATE</span></a> 1, 1: <a href="/qb64wiki/index.php/PRINT" title="PRINT"><span style="color:#4593D8;">PRINT</span></a> "FPS :"; fps%
+    '
+    ' Show Image on Screen
+    <a href="/qb64wiki/index.php/DISPLAY" title="DISPLAY"><span style="color:#4593D8;">_DISPLAY</span></a>
+<a href="/qb64wiki/index.php/LOOP" title="LOOP"><span style="color:#4593D8;">LOOP</span></a> <a href="/qb64wiki/index.php/UNTIL" title="UNTIL"><span style="color:#4593D8;">UNTIL</span></a> <a href="/qb64wiki/index.php/INKEY$" title="INKEY$"><span style="color:#4593D8;">INKEY$</span></a> &lt;&gt; ""
+<a href="/qb64wiki/index.php/WIDTH" title="WIDTH"><span style="color:#4593D8;">WIDTH</span></a> 80: <a href="/qb64wiki/index.php/SCREEN" title="SCREEN"><span style="color:#4593D8;">SCREEN</span></a> 0: <a href="/qb64wiki/index.php/CLS" title="CLS"><span style="color:#4593D8;">CLS</span></a>
+
+<a href="/qb64wiki/index.php/SUB" title="SUB"><span style="color:#4593D8;">SUB</span></a> DrawHline (fromx%, tox%, yy%, col%)
+'<a href="/qb64wiki/index.php/DEF_SEG" title="DEF SEG"><span style="color:#4593D8;">DEF SEG</span></a> = <a href="/qb64wiki/index.php/%26H" title="&amp;H"><span style="color:#4593D8;">&amp;H</span></a>A000
+'<a href="/qb64wiki/index.php/IF...THEN" title="IF...THEN"><span style="color:#4593D8;">IF</span></a> fromx% &gt; tox% <a href="/qb64wiki/index.php/THEN" title="THEN"><span style="color:#4593D8;">THEN</span></a> <a href="/qb64wiki/index.php/SWAP" title="SWAP"><span style="color:#4593D8;">SWAP</span></a> fromx%, tox%
+'yyy&amp; = yy%
+'sloc&amp; = yyy&amp; * 320 + fromx%
+'eloc&amp; = sloc&amp; + (tox% - fromx%)
+'<a href="/qb64wiki/index.php/FOR...NEXT" title="FOR...NEXT"><span style="color:#4593D8;">FOR</span></a> t&amp; = sloc&amp; <a href="/qb64wiki/index.php/TO" title="TO"><span style="color:#4593D8;">TO</span></a> eloc&amp;
+'  <a href="/qb64wiki/index.php/POKE" title="POKE"><span style="color:#4593D8;">POKE</span></a> t&amp;, col%
+'<a href="/qb64wiki/index.php/NEXT" title="NEXT"><span style="color:#4593D8;">NEXT</span></a>
+'<a href="/qb64wiki/index.php/DEF_SEG" title="DEF SEG"><span style="color:#4593D8;">DEF SEG</span></a>
+<a href="/qb64wiki/index.php/LINE" title="LINE"><span style="color:#4593D8;">LINE</span></a> (fromx%, yy%)-(tox%, yy%), <a href="/qb64wiki/index.php/RGB" title="RGB"><span style="color:#4593D8;">_RGB</span></a>(255, 255, 255) 'col%
+<a href="/qb64wiki/index.php/END_SUB" title="END SUB"><span style="color:#4593D8;">END SUB</span></a>
+
+<a href="/qb64wiki/index.php/SUB" title="SUB"><span style="color:#4593D8;">SUB</span></a> DrawTriangle (x1%, y1%, x2%, y2%, x3%, y3%, col%)
+DO
+    sflag% = 0
+    <a href="/qb64wiki/index.php/IF...THEN" title="IF...THEN"><span style="color:#4593D8;">IF</span></a> y1% &gt; y2% <a href="/qb64wiki/index.php/THEN" title="THEN"><span style="color:#4593D8;">THEN</span></a>
+        sflag% = 1
+        <a href="/qb64wiki/index.php/SWAP" title="SWAP"><span style="color:#4593D8;">SWAP</span></a> y1%, y2%
+        <a href="/qb64wiki/index.php/SWAP" title="SWAP"><span style="color:#4593D8;">SWAP</span></a> x1%, x2%
+    <a class="mw-redirect" href="/qb64wiki/index.php/END_IF" title="END IF"><span style="color:#4593D8;">END IF</span></a>
+    <a href="/qb64wiki/index.php/IF...THEN" title="IF...THEN"><span style="color:#4593D8;">IF</span></a> y2% &gt; y3% <a href="/qb64wiki/index.php/THEN" title="THEN"><span style="color:#4593D8;">THEN</span></a>
+        sflag% = 1
+        <a href="/qb64wiki/index.php/SWAP" title="SWAP"><span style="color:#4593D8;">SWAP</span></a> y2%, y3%
+        <a href="/qb64wiki/index.php/SWAP" title="SWAP"><span style="color:#4593D8;">SWAP</span></a> x2%, x3%
+    <a class="mw-redirect" href="/qb64wiki/index.php/END_IF" title="END IF"><span style="color:#4593D8;">END IF</span></a>
+<a href="/qb64wiki/index.php/LOOP" title="LOOP"><span style="color:#4593D8;">LOOP</span></a> <a href="/qb64wiki/index.php/UNTIL" title="UNTIL"><span style="color:#4593D8;">UNTIL</span></a> sflag% = 0
+'
+<a href="/qb64wiki/index.php/IF...THEN" title="IF...THEN"><span style="color:#4593D8;">IF</span></a> y2% = y3% <a href="/qb64wiki/index.php/THEN" title="THEN"><span style="color:#4593D8;">THEN</span></a>
+    ' Draw a flat bottomed triangle
+    ydiff1% = y2% - y1%
+    ydiff2% = y3% - y1%
+    <a href="/qb64wiki/index.php/IF...THEN" title="IF...THEN"><span style="color:#4593D8;">IF</span></a> ydiff1% &lt;&gt; 0 <a href="/qb64wiki/index.php/THEN" title="THEN"><span style="color:#4593D8;">THEN</span></a>
+        slope1! = (x2% - x1%) / ydiff1%
+    <a href="/qb64wiki/index.php/ELSE" title="ELSE"><span style="color:#4593D8;">ELSE</span></a>
+        slope1! = 0
+    <a class="mw-redirect" href="/qb64wiki/index.php/END_IF" title="END IF"><span style="color:#4593D8;">END IF</span></a>
+    <a href="/qb64wiki/index.php/IF...THEN" title="IF...THEN"><span style="color:#4593D8;">IF</span></a> ydiff2% &lt;&gt; 0 <a href="/qb64wiki/index.php/THEN" title="THEN"><span style="color:#4593D8;">THEN</span></a>
+        slope2! = (x3% - x1%) / ydiff2%
+    <a href="/qb64wiki/index.php/ELSE" title="ELSE"><span style="color:#4593D8;">ELSE</span></a>
+        slope2! = 0
+    <a class="mw-redirect" href="/qb64wiki/index.php/END_IF" title="END IF"><span style="color:#4593D8;">END IF</span></a>
+    sx! = x1%: ex! = x1%
+    <a href="/qb64wiki/index.php/FOR...NEXT" title="FOR...NEXT"><span style="color:#4593D8;">FOR</span></a> y% = y1% <a href="/qb64wiki/index.php/TO" title="TO"><span style="color:#4593D8;">TO</span></a> y2%
+        <a href="/qb64wiki/index.php/CALL" title="CALL"><span style="color:#4593D8;">CALL</span></a> DrawHline(<a href="/qb64wiki/index.php/CINT" title="CINT"><span style="color:#4593D8;">CINT</span></a>(sx!), <a href="/qb64wiki/index.php/CINT" title="CINT"><span style="color:#4593D8;">CINT</span></a>(ex!), y%, col%)
+        sx! = sx! + slope1!
+        ex! = ex! + slope2!
+    <a href="/qb64wiki/index.php/NEXT" title="NEXT"><span style="color:#4593D8;">NEXT</span></a>
+    <a href="/qb64wiki/index.php/EXIT_SUB" title="EXIT SUB"><span style="color:#4593D8;">EXIT SUB</span></a>
+<a href="/qb64wiki/index.php/ELSE" title="ELSE"><span style="color:#4593D8;">ELSE</span></a>
+    <a href="/qb64wiki/index.php/IF...THEN" title="IF...THEN"><span style="color:#4593D8;">IF</span></a> y1% = y2% <a href="/qb64wiki/index.php/THEN" title="THEN"><span style="color:#4593D8;">THEN</span></a>
+        '
+        ' Draw a flat topped triangle
+        ydiff1% = y3% - y1%
+        ydiff2% = y3% - y2%
+        <a href="/qb64wiki/index.php/IF...THEN" title="IF...THEN"><span style="color:#4593D8;">IF</span></a> ydiff1% &lt;&gt; 0 <a href="/qb64wiki/index.php/THEN" title="THEN"><span style="color:#4593D8;">THEN</span></a>
+            slope1! = (x3% - x1%) / ydiff1%
+        <a href="/qb64wiki/index.php/ELSE" title="ELSE"><span style="color:#4593D8;">ELSE</span></a>
+            slope1! = 0
+        <a class="mw-redirect" href="/qb64wiki/index.php/END_IF" title="END IF"><span style="color:#4593D8;">END IF</span></a>
+        <a href="/qb64wiki/index.php/IF...THEN" title="IF...THEN"><span style="color:#4593D8;">IF</span></a> ydiff2% &lt;&gt; 0 <a href="/qb64wiki/index.php/THEN" title="THEN"><span style="color:#4593D8;">THEN</span></a>
+            slope2! = (x3% - x2%) / ydiff2%
+        <a href="/qb64wiki/index.php/ELSE" title="ELSE"><span style="color:#4593D8;">ELSE</span></a>
+            slope2! = 0
+        <a class="mw-redirect" href="/qb64wiki/index.php/END_IF" title="END IF"><span style="color:#4593D8;">END IF</span></a>
+        sx! = x1%: ex! = x2%
+        <a href="/qb64wiki/index.php/FOR...NEXT" title="FOR...NEXT"><span style="color:#4593D8;">FOR</span></a> y% = y1% <a href="/qb64wiki/index.php/TO" title="TO"><span style="color:#4593D8;">TO</span></a> y3%
+            <a href="/qb64wiki/index.php/CALL" title="CALL"><span style="color:#4593D8;">CALL</span></a> DrawHline(<a href="/qb64wiki/index.php/CINT" title="CINT"><span style="color:#4593D8;">CINT</span></a>(sx!), <a href="/qb64wiki/index.php/CINT" title="CINT"><span style="color:#4593D8;">CINT</span></a>(ex!), y%, col%)
+            sx! = sx! + slope1!
+            ex! = ex! + slope2!
+        <a href="/qb64wiki/index.php/NEXT" title="NEXT"><span style="color:#4593D8;">NEXT</span></a>
+        x1% = sx!: x2% = ex!
+        <a href="/qb64wiki/index.php/EXIT_SUB" title="EXIT SUB"><span style="color:#4593D8;">EXIT SUB</span></a>
+    <a href="/qb64wiki/index.php/ELSE" title="ELSE"><span style="color:#4593D8;">ELSE</span></a>
+        ' Draw a general purpose triangle
+        ' First draw the flat bottom portion (top half)
+        ydiff1% = y2% - y1%
+        ydiff2% = y3% - y1%
+        <a href="/qb64wiki/index.php/IF...THEN" title="IF...THEN"><span style="color:#4593D8;">IF</span></a> ydiff1% &lt;&gt; 0 <a href="/qb64wiki/index.php/THEN" title="THEN"><span style="color:#4593D8;">THEN</span></a>
+            slope1! = (x2% - x1%) / ydiff1%
+        <a href="/qb64wiki/index.php/ELSE" title="ELSE"><span style="color:#4593D8;">ELSE</span></a>
+            slope1! = 0
+        <a class="mw-redirect" href="/qb64wiki/index.php/END_IF" title="END IF"><span style="color:#4593D8;">END IF</span></a>
+        <a href="/qb64wiki/index.php/IF...THEN" title="IF...THEN"><span style="color:#4593D8;">IF</span></a> ydiff2% &lt;&gt; 0 <a href="/qb64wiki/index.php/THEN" title="THEN"><span style="color:#4593D8;">THEN</span></a>
+            slope2! = (x3% - x1%) / ydiff2%
+        <a href="/qb64wiki/index.php/ELSE" title="ELSE"><span style="color:#4593D8;">ELSE</span></a>
+            slope2! = 0
+        <a class="mw-redirect" href="/qb64wiki/index.php/END_IF" title="END IF"><span style="color:#4593D8;">END IF</span></a>
+        sx! = x1%: ex! = x1%
+        <a href="/qb64wiki/index.php/FOR...NEXT" title="FOR...NEXT"><span style="color:#4593D8;">FOR</span></a> y% = y1% <a href="/qb64wiki/index.php/TO" title="TO"><span style="color:#4593D8;">TO</span></a> y2%
+            <a href="/qb64wiki/index.php/CALL" title="CALL"><span style="color:#4593D8;">CALL</span></a> DrawHline(<a href="/qb64wiki/index.php/CINT" title="CINT"><span style="color:#4593D8;">CINT</span></a>(sx!), <a href="/qb64wiki/index.php/CINT" title="CINT"><span style="color:#4593D8;">CINT</span></a>(ex!), y%, col%)
+            sx! = sx! + slope1!
+            ex! = ex! + slope2!
+        <a href="/qb64wiki/index.php/NEXT" title="NEXT"><span style="color:#4593D8;">NEXT</span></a>
+        ' Then draw the flat topped portion (bottom half)
+        x1% = x2%
+        x2% = ex!
+        y1% = y2%
+        ydiff1% = y3% - y1%
+        ydiff2% = y3% - y2%
+        <a href="/qb64wiki/index.php/IF...THEN" title="IF...THEN"><span style="color:#4593D8;">IF</span></a> ydiff1% &lt;&gt; 0 <a href="/qb64wiki/index.php/THEN" title="THEN"><span style="color:#4593D8;">THEN</span></a>
+            slope1! = (x3% - x1%) / ydiff1%
+        <a href="/qb64wiki/index.php/ELSE" title="ELSE"><span style="color:#4593D8;">ELSE</span></a>
+            slope1! = 0
+        <a class="mw-redirect" href="/qb64wiki/index.php/END_IF" title="END IF"><span style="color:#4593D8;">END IF</span></a>
+        <a href="/qb64wiki/index.php/IF...THEN" title="IF...THEN"><span style="color:#4593D8;">IF</span></a> ydiff2% &lt;&gt; 0 <a href="/qb64wiki/index.php/THEN" title="THEN"><span style="color:#4593D8;">THEN</span></a>
+            slope2! = (x3% - x2%) / ydiff2%
+        <a href="/qb64wiki/index.php/ELSE" title="ELSE"><span style="color:#4593D8;">ELSE</span></a>
+            slope2! = 0
+        <a class="mw-redirect" href="/qb64wiki/index.php/END_IF" title="END IF"><span style="color:#4593D8;">END IF</span></a>
+        sx! = x1%: ex! = x2%
+        <a href="/qb64wiki/index.php/FOR...NEXT" title="FOR...NEXT"><span style="color:#4593D8;">FOR</span></a> y% = y1% <a href="/qb64wiki/index.php/TO" title="TO"><span style="color:#4593D8;">TO</span></a> y3%
+            <a href="/qb64wiki/index.php/CALL" title="CALL"><span style="color:#4593D8;">CALL</span></a> DrawHline(<a href="/qb64wiki/index.php/CINT" title="CINT"><span style="color:#4593D8;">CINT</span></a>(sx!), <a href="/qb64wiki/index.php/CINT" title="CINT"><span style="color:#4593D8;">CINT</span></a>(ex!), y%, col%)
+            sx! = sx! + slope1!
+            ex! = ex! + slope2!
+        <a href="/qb64wiki/index.php/NEXT" title="NEXT"><span style="color:#4593D8;">NEXT</span></a>
+        x1% = sx!: x2% = ex!
+    <a class="mw-redirect" href="/qb64wiki/index.php/END_IF" title="END IF"><span style="color:#4593D8;">END IF</span></a>
+<a class="mw-redirect" href="/qb64wiki/index.php/END_IF" title="END IF"><span style="color:#4593D8;">END IF</span></a>
+'
+<a href="/qb64wiki/index.php/END_SUB" title="END SUB"><span style="color:#4593D8;">END SUB</span></a>
+</pre>
+         </td>
+        </tr>
+       </tbody>
+      </table>
+      <center>
+       <span style="font-family: Courier New, Courier, monospace; font-size: 0.80em; line-height: 50%;">
+        Adapted from a demo by Andrew L. Ayers
+       </span>
+      </center>
+      <p>
+       <br/>
+       <i>
+        Example 4:
+       </i>
+       Using a desktop image with _MAPTRIANGLE _ANTICLOCKWISE rendering.
+      </p>
+      <table cellpadding="15px" width="100%">
+       <tbody>
+        <tr>
+         <td>
+          <pre class="codeide"><a href="/qb64wiki/index.php/SCREEN" title="SCREEN"><span style="color:#4593D8;">SCREEN</span></a> <a href="/qb64wiki/index.php/NEWIMAGE" title="NEWIMAGE"><span style="color:#4593D8;">_NEWIMAGE</span></a>(800, 600, 32)
+
+ss32 = <a href="/qb64wiki/index.php/SCREENIMAGE" title="SCREENIMAGE"><span style="color:#4593D8;">_SCREENIMAGE</span></a> 'take a 32bit software screenshot
+<a href="/qb64wiki/index.php/SETALPHA" title="SETALPHA"><span style="color:#4593D8;">_SETALPHA</span></a> 128, , ss32 'make it a bit transparent
+ss33 = <a href="/qb64wiki/index.php/COPYIMAGE" title="COPYIMAGE"><span style="color:#4593D8;">_COPYIMAGE</span></a>(ss32, 33) 'convert it to a hardware image (mode 33)
+<a href="/qb64wiki/index.php/FREEIMAGE" title="FREEIMAGE"><span style="color:#4593D8;">_FREEIMAGE</span></a> ss32 'we don't need this anymore
+
+DO
+    <a href="/qb64wiki/index.php/CLS" title="CLS"><span style="color:#4593D8;">CLS</span></a> , <a href="/qb64wiki/index.php/RGB" title="RGB"><span style="color:#4593D8;">_RGB</span></a>(0, 128, 255) 'use our software screen as a blue backdrop
+
+    'rotate our destination points
+    'the QB64 3D co-ordinate system is the same as  OpenGL's:
+    '    negative z is in front of you, if it doesn't have a negative z value you won't see it!
+    '    x goes from left to right, 0 is the middle of the screen
+    '    y goes from bottom to top, 0 is the middle of the screen
+    scale = 10
+    dist = -10
+    angle = angle + 0.1
+    x1 = <a href="/qb64wiki/index.php/SIN" title="SIN"><span style="color:#4593D8;">SIN</span></a>(angle) * scale
+    z1 = <a href="/qb64wiki/index.php/COS" title="COS"><span style="color:#4593D8;">COS</span></a>(angle) * scale
+    x2 = <a href="/qb64wiki/index.php/SIN" title="SIN"><span style="color:#4593D8;">SIN</span></a>(angle + 3.14) * scale 'adding 3.14 adds 180 degrees
+    z2 = <a href="/qb64wiki/index.php/COS" title="COS"><span style="color:#4593D8;">COS</span></a>(angle + 3.14) * scale
+    'what we performed above is a 2D/horizontal rotation of points
+    '(3D rotations are beyond the scope of this example)
+
+    'draw the triangle
+    '_ANTICLOCKWISE makes it only draw when our triangle is facing the correct direction
+    '_SMOOTH applies linear filtering to avoid a pixelated look
+
+    <a class="mw-selflink selflink"><span style="color:#4593D8;">_MAPTRIANGLE</span></a> <b>_ANTICLOCKWISE</b> (<a href="/qb64wiki/index.php/WIDTH_(function)" title="WIDTH (function)"><span style="color:#4593D8;">_WIDTH</span></a>(ss33) / 2, 0)-(0, <a href="/qb64wiki/index.php/HEIGHT" title="HEIGHT"><span style="color:#4593D8;">_HEIGHT</span></a>(ss33))-(<a href="/qb64wiki/index.php/WIDTH_(function)" title="WIDTH (function)"><span style="color:#4593D8;">_WIDTH</span></a>(ss33),_
+    <a href="/qb64wiki/index.php/HEIGHT" title="HEIGHT"><span style="color:#4593D8;">_HEIGHT</span></a>(ss33)), ss33 TO(0, scale, dist)-(x1, -scale, z1 + dist)-(x2, -scale, z2 + dist), , <b>_SMOOTH</b>
+
+    <a href="/qb64wiki/index.php/LIMIT" title="LIMIT"><span style="color:#4593D8;">_LIMIT</span></a> 30
+    <a href="/qb64wiki/index.php/DISPLAY" title="DISPLAY"><span style="color:#4593D8;">_DISPLAY</span></a>
+<a href="/qb64wiki/index.php/LOOP" title="LOOP"><span style="color:#4593D8;">LOOP</span></a>
+</pre>
+         </td>
+        </tr>
+       </tbody>
+      </table>
+      <dl>
+       <dd>
+        <b>
+         Tip:
+        </b>
+        If you are using Linux you might want to replace "
+        <a href="/qb64wiki/index.php/SCREENIMAGE" title="SCREENIMAGE">
+         _SCREENIMAGE
+        </a>
+        " with a
+        <a href="/qb64wiki/index.php/LOADIMAGE" title="LOADIMAGE">
+         _LOADIMAGE
+        </a>
+        command if you don't see anything.
+       </dd>
+      </dl>
+      <p>
+       <br/>
+      </p>
+      <h2>
+       <span class="mw-headline" id="See_also">
+        See also
+       </span>
+      </h2>
+      <ul>
+       <li>
+        <a href="/qb64wiki/index.php/PUTIMAGE" title="PUTIMAGE">
+         _PUTIMAGE
+        </a>
+       </li>
+       <li>
+        <a href="/qb64wiki/index.php/LOADIMAGE" title="LOADIMAGE">
+         _LOADIMAGE
+        </a>
+       </li>
+       <li>
+        <a href="/qb64wiki/index.php/COPYIMAGE" title="COPYIMAGE">
+         _COPYIMAGE
+        </a>
+       </li>
+       <li>
+        <a href="/qb64wiki/index.php/GET_(graphics_statement)" title="GET (graphics statement)">
+         GET (graphics statement)
+        </a>
+        ,
+        <a href="/qb64wiki/index.php/PUT_(graphics_statement)" title="PUT (graphics statement)">
+         PUT (graphics statement)
+        </a>
+       </li>
+       <li>
+        <a href="/qb64wiki/index.php/STEP" title="STEP">
+         STEP
+        </a>
+        ,
+        <a href="/qb64wiki/index.php/SIN" title="SIN">
+         SIN
+        </a>
+        ,
+        <a href="/qb64wiki/index.php/COS" title="COS">
+         COS
+        </a>
+       </li>
+       <li>
+        <a href="/qb64wiki/index.php/Hardware_images" title="Hardware images">
+         Hardware images
+        </a>
+       </li>
+      </ul>
+      <p>
+       <br/>
+      </p>
+      <hr/>
+      <center>
+       <b>
+        Navigation:
+       </b>
+      </center>
+      <center>
+       <a href="/qb64wiki/index.php/Main_Page" title="Main Page">
+        Main Page with Articles and Tutorials
+       </a>
+      </center>
+      <center>
+       <a href="/qb64wiki/index.php/Keyword_Reference_-_Alphabetical" title="Keyword Reference - Alphabetical">
+        Keyword Reference - Alphabetical
+       </a>
+      </center>
+      <center>
+       <a href="/qb64wiki/index.php/Keyword_Reference_-_By_usage" title="Keyword Reference - By usage">
+        Keyword Reference - By usage
+       </a>
+      </center>
+      <center>
+       <b>
+        <a class="external text" href="https://qb64phoenix.com/forum/showthread.php?tid=2800" rel="nofollow">
+         Report a broken link
+        </a>
+       </b>
+       <br/>
+      </center>
+      <!-- 
+NewPP limit report
+Cached time: 20240719054348
+Cache expiry: 86400
+Reduced expiry: false
+Complications: [show‐toc]
+CPU time usage: 0.179 seconds
+Real time usage: 0.204 seconds
+Preprocessor visited node count: 3216/1000000
+Post‐expand include size: 23319/2097152 bytes
+Template argument size: 4349/2097152 bytes
+Highest expansion depth: 3/100
+Expensive parser function count: 0/100
+Unstrip recursion depth: 0/20
+Unstrip post‐expand size: 0/5000000 bytes
+-->
+      <!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%   83.729      1 -total
+ 24.76%   20.730    427 Template:Cl
+ 10.18%    8.521      3 Template:Small
+  4.58%    3.836     34 Template:Parameter
+  4.22%    3.530      1 Template:PageSyntax
+  3.45%    2.891      4 Template:CodeEnd
+  3.07%    2.568      1 Template:PageParameters
+  3.01%    2.520      1 Template:PageExamples
+  2.98%    2.499      4 Template:CodeStart
+  2.83%    2.373      1 Template:PageDescription
+-->
+      <!-- Saved in parser cache with key qb64pnix_mw19894-mwmb_:pcache:idhash:171-0!canonical and timestamp 20240719054348 and revision id 8868.
+ -->
+     </div>
+     <div class="printfooter" data-nosnippet="">
+      Retrieved from "
+      <a dir="ltr" href="https://qb64phoenix.com/qb64wiki/index.php?title=MAPTRIANGLE&amp;oldid=8868">
+       https://qb64phoenix.com/qb64wiki/index.php?title=MAPTRIANGLE&amp;oldid=8868
+      </a>
+      "
+     </div>
+    </div>
+    <div class="catlinks catlinks-allhidden" data-mw="interface" id="catlinks">
+    </div>
+   </div>
+  </div>
+  <div id="mw-navigation">
+   <h2>
+    Navigation menu
+   </h2>
+   <div id="mw-head">
+    <nav aria-labelledby="p-personal-label" class="vector-menu mw-portlet mw-portlet-personal vector-user-menu-legacy" id="p-personal" role="navigation">
+     <h3 class="vector-menu-heading" id="p-personal-label">
+      <span class="vector-menu-heading-label">
+       Personal tools
+      </span>
+     </h3>
+     <div class="vector-menu-content">
+      <ul class="vector-menu-content-list">
+       <li class="mw-list-item" id="pt-login">
+        <a accesskey="o" href="/qb64wiki/index.php?title=Special:UserLogin&amp;returnto=MAPTRIANGLE" title="You are encouraged to log in; however, it is not mandatory [o]">
+         <span>
+          Log in
+         </span>
+        </a>
+       </li>
+      </ul>
+     </div>
+    </nav>
+    <div id="left-navigation">
+     <nav aria-labelledby="p-namespaces-label" class="vector-menu mw-portlet mw-portlet-namespaces vector-menu-tabs vector-menu-tabs-legacy" id="p-namespaces" role="navigation">
+      <h3 class="vector-menu-heading" id="p-namespaces-label">
+       <span class="vector-menu-heading-label">
+        Namespaces
+       </span>
+      </h3>
+      <div class="vector-menu-content">
+       <ul class="vector-menu-content-list">
+        <li class="selected mw-list-item" id="ca-nstab-main">
+         <a accesskey="c" href="/qb64wiki/index.php/MAPTRIANGLE" title="View the content page [c]">
+          <span>
+           Page
+          </span>
+         </a>
+        </li>
+        <li class="new mw-list-item" id="ca-talk">
+         <a accesskey="t" href="/qb64wiki/index.php?title=Talk:MAPTRIANGLE&amp;action=edit&amp;redlink=1" rel="discussion" title="Discussion about the content page (page does not exist) [t]">
+          <span>
+           Discussion
+          </span>
+         </a>
+        </li>
+       </ul>
+      </div>
+     </nav>
+     <nav aria-labelledby="p-variants-label" class="vector-menu mw-portlet mw-portlet-variants emptyPortlet vector-menu-dropdown" id="p-variants" role="navigation">
+      <input aria-haspopup="true" aria-labelledby="p-variants-label" class="vector-menu-checkbox" data-event-name="ui.dropdown-p-variants" id="p-variants-checkbox" role="button" type="checkbox"/>
+      <label aria-label="Change language variant" class="vector-menu-heading" id="p-variants-label">
+       <span class="vector-menu-heading-label">
+        English
+       </span>
+      </label>
+      <div class="vector-menu-content">
+       <ul class="vector-menu-content-list">
+       </ul>
+      </div>
+     </nav>
+    </div>
+    <div id="right-navigation">
+     <nav aria-labelledby="p-views-label" class="vector-menu mw-portlet mw-portlet-views vector-menu-tabs vector-menu-tabs-legacy" id="p-views" role="navigation">
+      <h3 class="vector-menu-heading" id="p-views-label">
+       <span class="vector-menu-heading-label">
+        Views
+       </span>
+      </h3>
+      <div class="vector-menu-content">
+       <ul class="vector-menu-content-list">
+        <li class="selected mw-list-item" id="ca-view">
+         <a href="/qb64wiki/index.php/MAPTRIANGLE">
+          <span>
+           Read
+          </span>
+         </a>
+        </li>
+        <li class="mw-list-item" id="ca-viewsource">
+         <a accesskey="e" href="/qb64wiki/index.php?title=MAPTRIANGLE&amp;action=edit" title="This page is protected.
+You can view its source [e]">
+          <span>
+           View source
+          </span>
+         </a>
+        </li>
+        <li class="mw-list-item" id="ca-history">
+         <a accesskey="h" href="/qb64wiki/index.php?title=MAPTRIANGLE&amp;action=history" title="Past revisions of this page [h]">
+          <span>
+           View history
+          </span>
+         </a>
+        </li>
+       </ul>
+      </div>
+     </nav>
+     <nav aria-labelledby="p-cactions-label" class="vector-menu mw-portlet mw-portlet-cactions emptyPortlet vector-menu-dropdown" id="p-cactions" role="navigation" title="More options">
+      <input aria-haspopup="true" aria-labelledby="p-cactions-label" class="vector-menu-checkbox" data-event-name="ui.dropdown-p-cactions" id="p-cactions-checkbox" role="button" type="checkbox"/>
+      <label class="vector-menu-heading" id="p-cactions-label">
+       <span class="vector-menu-heading-label">
+        More
+       </span>
+      </label>
+      <div class="vector-menu-content">
+       <ul class="vector-menu-content-list">
+       </ul>
+      </div>
+     </nav>
+     <div class="vector-search-box-vue vector-search-box-show-thumbnail vector-search-box-auto-expand-width vector-search-box" id="p-search" role="search">
+      <div>
+       <h3>
+        <label for="searchInput">
+         Search
+        </label>
+       </h3>
+       <form action="/qb64wiki/index.php" class="vector-search-box-form" id="searchform">
+        <div class="vector-search-box-inner" data-search-loc="header-navigation" id="simpleSearch">
+         <input accesskey="f" aria-label="Search QB64 Phoenix Edition Wiki" autocapitalize="sentences" class="vector-search-box-input" id="searchInput" name="search" placeholder="Search QB64 Phoenix Edition Wiki" title="Search QB64 Phoenix Edition Wiki [f]" type="search"/>
+         <input name="title" type="hidden" value="Special:Search"/>
+         <input class="searchButton mw-fallbackSearchButton" id="mw-searchButton" name="fulltext" title="Search the pages for this text" type="submit" value="Search"/>
+         <input class="searchButton" id="searchButton" name="go" title="Go to a page with this exact name if it exists" type="submit" value="Go"/>
+        </div>
+       </form>
+      </div>
+     </div>
+    </div>
+   </div>
+   <div id="mw-panel">
+    <div id="p-logo" role="banner">
+     <a class="mw-wiki-logo" href="/qb64wiki/index.php/Main_Page" title="Visit the main page">
+     </a>
+    </div>
+    <nav aria-labelledby="p-navigation-label" class="vector-menu mw-portlet mw-portlet-navigation vector-menu-portal portal" id="p-navigation" role="navigation">
+     <h3 class="vector-menu-heading" id="p-navigation-label">
+      <span class="vector-menu-heading-label">
+       Navigation
+      </span>
+     </h3>
+     <div class="vector-menu-content">
+      <ul class="vector-menu-content-list">
+       <li class="mw-list-item" id="n-mainpage-description">
+        <a accesskey="z" href="/qb64wiki/index.php/Main_Page" title="Visit the main page [z]">
+         <span>
+          Main page
+         </span>
+        </a>
+       </li>
+       <li class="mw-list-item" id="n-recentchanges">
+        <a accesskey="r" href="/qb64wiki/index.php/Special:RecentChanges" title="A list of recent changes in the wiki [r]">
+         <span>
+          Recent changes
+         </span>
+        </a>
+       </li>
+       <li class="mw-list-item" id="n-randompage">
+        <a accesskey="x" href="/qb64wiki/index.php/Special:Random" title="Load a random page [x]">
+         <span>
+          Random page
+         </span>
+        </a>
+       </li>
+       <li class="mw-list-item" id="n-help-mediawiki">
+        <a href="https://www.mediawiki.org/wiki/Special:MyLanguage/Help:Contents">
+         <span>
+          Help about MediaWiki
+         </span>
+        </a>
+       </li>
+      </ul>
+     </div>
+    </nav>
+    <nav aria-labelledby="p-tb-label" class="vector-menu mw-portlet mw-portlet-tb vector-menu-portal portal" id="p-tb" role="navigation">
+     <h3 class="vector-menu-heading" id="p-tb-label">
+      <span class="vector-menu-heading-label">
+       Tools
+      </span>
+     </h3>
+     <div class="vector-menu-content">
+      <ul class="vector-menu-content-list">
+       <li class="mw-list-item" id="t-whatlinkshere">
+        <a accesskey="j" href="/qb64wiki/index.php/Special:WhatLinksHere/MAPTRIANGLE" title="A list of all wiki pages that link here [j]">
+         <span>
+          What links here
+         </span>
+        </a>
+       </li>
+       <li class="mw-list-item" id="t-recentchangeslinked">
+        <a accesskey="k" href="/qb64wiki/index.php/Special:RecentChangesLinked/MAPTRIANGLE" rel="nofollow" title="Recent changes in pages linked from this page [k]">
+         <span>
+          Related changes
+         </span>
+        </a>
+       </li>
+       <li class="mw-list-item" id="t-specialpages">
+        <a accesskey="q" href="/qb64wiki/index.php/Special:SpecialPages" title="A list of all special pages [q]">
+         <span>
+          Special pages
+         </span>
+        </a>
+       </li>
+       <li class="mw-list-item" id="t-print">
+        <a accesskey="p" href="javascript:print();" rel="alternate" title="Printable version of this page [p]">
+         <span>
+          Printable version
+         </span>
+        </a>
+       </li>
+       <li class="mw-list-item" id="t-permalink">
+        <a href="/qb64wiki/index.php?title=MAPTRIANGLE&amp;oldid=8868" title="Permanent link to this revision of this page">
+         <span>
+          Permanent link
+         </span>
+        </a>
+       </li>
+       <li class="mw-list-item" id="t-info">
+        <a href="/qb64wiki/index.php?title=MAPTRIANGLE&amp;action=info" title="More information about this page">
+         <span>
+          Page information
+         </span>
+        </a>
+       </li>
+      </ul>
+     </div>
+    </nav>
+   </div>
+  </div>
+  <footer class="mw-footer" id="footer" role="contentinfo">
+   <ul id="footer-info">
+    <li id="footer-info-lastmod">
+     This page was last edited on 16 May 2024, at 06:50.
+    </li>
+   </ul>
+   <ul id="footer-places">
+    <li id="footer-places-privacy">
+     <a href="/qb64wiki/index.php/QB64_Phoenix_Edition_Wiki:Privacy_policy">
+      Privacy policy
+     </a>
+    </li>
+    <li id="footer-places-about">
+     <a href="/qb64wiki/index.php/QB64_Phoenix_Edition_Wiki:About">
+      About QB64 Phoenix Edition Wiki
+     </a>
+    </li>
+    <li id="footer-places-disclaimer">
+     <a href="/qb64wiki/index.php/QB64_Phoenix_Edition_Wiki:General_disclaimer">
+      Disclaimers
+     </a>
+    </li>
+   </ul>
+   <ul class="noprint" id="footer-icons">
+    <li id="footer-poweredbyico">
+     <a href="https://www.mediawiki.org/">
+      <img alt="Powered by MediaWiki" height="31" loading="lazy" src="/qb64wiki/resources/assets/poweredby_mediawiki_88x31.png" srcset="/qb64wiki/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /qb64wiki/resources/assets/poweredby_mediawiki_176x62.png 2x" width="88"/>
+     </a>
+    </li>
+   </ul>
+  </footer>
+  <script>
+   (RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgPageParseReport":{"limitreport":{"cputime":"0.179","walltime":"0.204","ppvisitednodes":{"value":3216,"limit":1000000},"postexpandincludesize":{"value":23319,"limit":2097152},"templateargumentsize":{"value":4349,"limit":2097152},"expansiondepth":{"value":3,"limit":100},"expensivefunctioncount":{"value":0,"limit":100},"unstrip-depth":{"value":0,"limit":20},"unstrip-size":{"value":0,"limit":5000000},"timingprofile":["100.00%   83.729      1 -total"," 24.76%   20.730    427 Template:Cl"," 10.18%    8.521      3 Template:Small","  4.58%    3.836     34 Template:Parameter","  4.22%    3.530      1 Template:PageSyntax","  3.45%    2.891      4 Template:CodeEnd","  3.07%    2.568      1 Template:PageParameters","  3.01%    2.520      1 Template:PageExamples","  2.98%    2.499      4 Template:CodeStart","  2.83%    2.373      1 Template:PageDescription"]},"cachereport":{"timestamp":"20240719054348","ttl":86400,"transientcontent":false}}});mw.config.set({"wgBackendResponseTime":88});});
+  </script>
+ </body>
+</html>

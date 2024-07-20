@@ -1,0 +1,1159 @@
+<!DOCTYPE html>
+<html class="client-nojs" dir="ltr" lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <title>
+   Images - QB64 Phoenix Edition Wiki
+  </title>
+  <script>
+   document.documentElement.className="client-js";RLCONF={"wgBreakFrames":false,"wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgRequestId":"Zpp8PeZL16Jh9AOFAcZ-1wAAANs","wgCSPNonce":false,"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"Images","wgTitle":"Images","wgCurRevisionId":8681,"wgRevisionId":8681,"wgArticleId":21,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":[],"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgRelevantPageName":"Images","wgRelevantArticleId":21,"wgIsProbablyEditable":false,"wgRelevantPageIsProbablyEditable":false,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgVector2022PreviewPages":[]};RLSTATE={"site.styles":"ready","user.styles":"ready","user":"ready",
+"user.options":"loading","skins.vector.styles.legacy":"ready"};RLPAGEMODULES=["site","mediawiki.page.ready","mediawiki.toc","skins.vector.legacy.js"];
+  </script>
+  <script>
+   (RLQ=window.RLQ||[]).push(function(){mw.loader.implement("user.options@12s5i",function($,jQuery,require,module){mw.user.tokens.set({"patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});});});
+  </script>
+  <link href="/qb64wiki/load.php?lang=en&amp;modules=skins.vector.styles.legacy&amp;only=styles&amp;skin=vector" rel="stylesheet"/>
+  <script async="" src="/qb64wiki/load.php?lang=en&amp;modules=startup&amp;only=scripts&amp;raw=1&amp;skin=vector">
+  </script>
+  <meta content="" name="ResourceLoaderDynamicStyles"/>
+  <link href="/qb64wiki/load.php?lang=en&amp;modules=site.styles&amp;only=styles&amp;skin=vector" rel="stylesheet"/>
+  <meta content="MediaWiki 1.39.3" name="generator"/>
+  <meta content="telephone=no" name="format-detection"/>
+  <meta content="width=1000" name="viewport"/>
+  <link href="/favicon.ico" rel="icon"/>
+  <link href="/qb64wiki/opensearch_desc.php" rel="search" title="QB64 Phoenix Edition Wiki (en)" type="application/opensearchdescription+xml"/>
+  <link href="https://qb64phoenix.com/qb64wiki/api.php?action=rsd" rel="EditURI" type="application/rsd+xml"/>
+  <link href="/qb64wiki/index.php?title=Special:RecentChanges&amp;feed=atom" rel="alternate" title="QB64 Phoenix Edition Wiki Atom feed" type="application/atom+xml"/>
+ </head>
+ <body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject page-Images rootpage-Images skin-vector action-view skin-vector-legacy vector-feature-language-in-header-enabled vector-feature-language-in-main-page-header-disabled vector-feature-language-alert-in-sidebar-disabled vector-feature-sticky-header-disabled vector-feature-sticky-header-edit-disabled vector-feature-table-of-contents-disabled vector-feature-visual-enhancement-next-disabled">
+  <div class="noprint" id="mw-page-base">
+  </div>
+  <div class="noprint" id="mw-head-base">
+  </div>
+  <div class="mw-body" id="content" role="main">
+   <a id="top">
+   </a>
+   <div id="siteNotice">
+   </div>
+   <div class="mw-indicators">
+   </div>
+   <h1 class="firstHeading mw-first-heading" id="firstHeading">
+    <span class="mw-page-title-main">
+     Images
+    </span>
+   </h1>
+   <div class="vector-body" id="bodyContent">
+    <div class="noprint" id="siteSub">
+     From QB64 Phoenix Edition Wiki
+    </div>
+    <div id="contentSub">
+    </div>
+    <div id="contentSub2">
+    </div>
+    <div id="jump-to-nav">
+    </div>
+    <a class="mw-jump-link" href="#mw-head">
+     Jump to navigation
+    </a>
+    <a class="mw-jump-link" href="#searchInput">
+     Jump to search
+    </a>
+    <div class="mw-body-content mw-content-ltr" dir="ltr" id="mw-content-text" lang="en">
+     <div class="mw-parser-output">
+      <p>
+       Images are areas of graphics stored in memory, the most common image is the program screen itself, where graphics are displayed. This image is designated as image handle 0 or
+       <a href="/qb64wiki/index.php/DEST" title="DEST">
+        _DEST
+       </a>
+       0. QB64 refers to the image memory by using negative
+       <a href="/qb64wiki/index.php/LONG" title="LONG">
+        LONG
+       </a>
+       handle values. Those values can then be referred to using other functions such as
+       <a href="/qb64wiki/index.php/WIDTH" title="WIDTH">
+        _WIDTH
+       </a>
+       and
+       <a href="/qb64wiki/index.php/HEIGHT" title="HEIGHT">
+        _HEIGHT
+       </a>
+       to find the image properties. Statements like
+       <a href="/qb64wiki/index.php/SCREEN" title="SCREEN">
+        SCREEN
+       </a>
+       or
+       <a href="/qb64wiki/index.php/PUTIMAGE" title="PUTIMAGE">
+        _PUTIMAGE
+       </a>
+       can use the image handle to display the image when necessary. QBasic functions like
+       <a href="/qb64wiki/index.php/POINT" title="POINT">
+        POINT
+       </a>
+       can read the colors, even 32 bit
+       <a href="/qb64wiki/index.php/ALPHA" title="ALPHA">
+        _ALPHA
+       </a>
+       colors.
+      </p>
+      <p>
+       <br/>
+       Images are called by other names in other programming languages or in different situations, examples of other names can be "surfaces", "pages" or "layers".
+      </p>
+      <p>
+       <br/>
+      </p>
+      <div aria-labelledby="mw-toc-heading" class="toc" id="toc" role="navigation">
+       <input class="toctogglecheckbox" id="toctogglecheckbox" role="button" style="display:none" type="checkbox"/>
+       <div class="toctitle" dir="ltr" lang="en">
+        <h2 id="mw-toc-heading">
+         Contents
+        </h2>
+        <span class="toctogglespan">
+         <label class="toctogglelabel" for="toctogglecheckbox">
+         </label>
+        </span>
+       </div>
+       <ul>
+        <li class="toclevel-1 tocsection-1">
+         <a href="#QB64_Images">
+          <span class="tocnumber">
+           1
+          </span>
+          <span class="toctext">
+           QB64 Images
+          </span>
+         </a>
+        </li>
+        <li class="toclevel-1 tocsection-2">
+         <a href="#PUTIMAGE">
+          <span class="tocnumber">
+           2
+          </span>
+          <span class="toctext">
+           _PUTIMAGE
+          </span>
+         </a>
+        </li>
+        <li class="toclevel-1 tocsection-3">
+         <a href="#ALPHA">
+          <span class="tocnumber">
+           3
+          </span>
+          <span class="toctext">
+           _ALPHA
+          </span>
+         </a>
+        </li>
+        <li class="toclevel-1 tocsection-4">
+         <a href="#Image_file_types">
+          <span class="tocnumber">
+           4
+          </span>
+          <span class="toctext">
+           Image file types
+          </span>
+         </a>
+        </li>
+        <li class="toclevel-1 tocsection-5">
+         <a href="#QB64_statements_and_functions">
+          <span class="tocnumber">
+           5
+          </span>
+          <span class="toctext">
+           QB64 statements and functions
+          </span>
+         </a>
+        </li>
+       </ul>
+      </div>
+      <h2>
+       <span class="mw-headline" id="QB64_Images">
+        QB64 Images
+       </span>
+      </h2>
+      <p>
+       You can create a program screen image by using the
+       <a href="/qb64wiki/index.php/NEWIMAGE" title="NEWIMAGE">
+        _NEWIMAGE
+       </a>
+       function. _NEWIMAGE returns a handle for you to use as a reference to that image. The handle is a negative number below -1 where -1 indicates a failure to load an image.
+      </p>
+      <p>
+       <br/>
+       For the image handle parameter in a statement you can also use any positive number and this handle will not need to be defined by
+       <a href="/qb64wiki/index.php/NEWIMAGE" title="NEWIMAGE">
+        _NEWIMAGE
+       </a>
+       or anything else. In this case the image referred to is the screen page of that value. This is why image handle 0 refers to the screen, specifically screen page 0.
+      </p>
+      <p>
+       You can also load an image from a file using the
+       <a href="/qb64wiki/index.php/LOADIMAGE" title="LOADIMAGE">
+        _LOADIMAGE
+       </a>
+       function (click the link for further information), or retrieve the handle to a copy of a image by using the
+       <a href="/qb64wiki/index.php/COPYIMAGE" title="COPYIMAGE">
+        _COPYIMAGE
+       </a>
+       function. Images may also be saved in various formats using the
+       <a href="/qb64wiki/index.php/SAVEIMAGE" title="SAVEIMAGE">
+        _SAVEIMAGE
+       </a>
+       statement.
+      </p>
+      <p>
+       <br/>
+       All images except for the screen are hidden from view unless drawn onto the screen, this enables you to draw multiple things on an image and then display all of it at once, enabling smooth animation (amongst many other things), you can also put multiple images ontop of one image and then display that image to the screen to enable all sorts of effects, like parallax scrolling and objects moving in front of as well as behind each other.
+      </p>
+      <p>
+       <br/>
+      </p>
+      <p style="text-align: center">
+       (
+       <a href="#toc">
+        Return to Table of Contents
+       </a>
+       )
+      </p>
+      <p>
+       <br/>
+      </p>
+      <h2>
+       <span class="mw-headline" id="PUTIMAGE">
+        _PUTIMAGE
+       </span>
+      </h2>
+      <p>
+       To set which image you want to draw graphics on, use
+       <a href="/qb64wiki/index.php/DEST" title="DEST">
+        _DEST
+       </a>
+       , all drawing will now go to the desired image instead of the screen (to enable drawing to the screen set _DEST 0), if you want to retrieve information about a image you use
+       <a href="/qb64wiki/index.php/SOURCE" title="SOURCE">
+        _SOURCE
+       </a>
+       instead, as when you want to know the color a pixel has at a certain coordinate you would use
+       <a href="/qb64wiki/index.php/SOURCE" title="SOURCE">
+        _SOURCE
+       </a>
+       along with
+       <a href="/qb64wiki/index.php/POINT" title="POINT">
+        POINT
+       </a>
+       (see the
+       <a href="/qb64wiki/index.php/SOURCE" title="SOURCE">
+        _SOURCE
+       </a>
+       example for more information about this). If you have drawn graphics on one image you can display it to the screen using
+       <a href="/qb64wiki/index.php/PUTIMAGE" title="PUTIMAGE">
+        _PUTIMAGE
+       </a>
+       , like this;
+      </p>
+      <p>
+       <br/>
+       _PUTIMAGE imagehandle, 0
+      </p>
+      <p>
+       <br/>
+       Where imagehandle is the handle you have drawn, or if you don't know the image handle you can use
+       <a href="/qb64wiki/index.php/DEST_(function)" title="DEST (function)">
+        _DEST
+       </a>
+       as a function like this;
+      </p>
+      <p>
+       <br/>
+       _PUTIMAGE _DEST, 0
+      </p>
+      <p>
+       <br/>
+       You could also use the
+       <a href="/qb64wiki/index.php/SCREEN" title="SCREEN">
+        SCREEN
+       </a>
+       statement to display the image to the screen like this;
+      </p>
+      <p>
+       <br/>
+       SCREEN imagehandle
+      </p>
+      <p>
+       <br/>
+       or;
+      </p>
+      <p>
+       <br/>
+       SCREEN _DEST
+      </p>
+      <p>
+       <br/>
+       Just be careful so that
+       <a href="/qb64wiki/index.php/DEST" title="DEST">
+        _DEST
+       </a>
+       is indeed a negative number other than -1.
+      </p>
+      <p>
+       <br/>
+      </p>
+      <p style="text-align: center">
+       (
+       <a href="#toc">
+        Return to Table of Contents
+       </a>
+       )
+      </p>
+      <p>
+       <br/>
+      </p>
+      <h2>
+       <span class="mw-headline" id="ALPHA">
+        _ALPHA
+       </span>
+      </h2>
+      <p>
+       If you want a color to be transparent you would use the
+       <a href="/qb64wiki/index.php/CLEARCOLOR" title="CLEARCOLOR">
+        _CLEARCOLOR
+       </a>
+       statement, the _CLEARCOLOR statement also has a optional argument as to which image you want the color to be transparent on, if this argument is set then the color will only be transparent on that particular image. If you want the color to be solid again you would use _NONE as the color argument (see
+       <a href="/qb64wiki/index.php/CLEARCOLOR" title="CLEARCOLOR">
+        _CLEARCOLOR
+       </a>
+       statement for further details).
+      </p>
+      <p>
+       <br/>
+       The
+       <a href="/qb64wiki/index.php/SETALPHA" title="SETALPHA">
+        _SETALPHA
+       </a>
+       statement also enables transparency (_CLEARCOLOR just sets the transparency level to full (which is 0) on images that have an alpha channel), to enable partial transparency you need a 32-bit image which has an alpha channel (a PNG image may already contain alpha information), the alpha level is between
+       <b>
+        0
+       </b>
+       (transparent) and
+       <b>
+        255
+       </b>
+       (opaque). If you have a 32-bit image but don't want to alpha blend it you have to turn it off using
+       <a href="/qb64wiki/index.php/DONTBLEND" title="DONTBLEND">
+        _DONTBLEND
+       </a>
+       . To turn it on again you can use the
+       <a href="/qb64wiki/index.php/BLEND" title="BLEND">
+        _BLEND
+       </a>
+       statement (which is on by default).
+      </p>
+      <p>
+       <br/>
+       To put an image on top of another image you would use
+       <a href="/qb64wiki/index.php/PUTIMAGE" title="PUTIMAGE">
+        _PUTIMAGE
+       </a>
+       , if you want to put/stretch the whole image on top of another you would just omit the range arguments and if you only want to put part of the image on top of another image you would use the range arguments as necessary. Keep in mind that _PUTIMAGE will stretch the image to fit the destination range. If the coordinates are inverted then the image will be inverted accordingly (enables flipping).
+      </p>
+      <p>
+       <br/>
+       The
+       <a href="/qb64wiki/index.php/ALPHA" title="ALPHA">
+        _ALPHA
+       </a>
+       function returns the alpha channel level of a color value.
+      </p>
+      <p>
+       <br/>
+      </p>
+      <dl>
+       <dd>
+        <i>
+         result&amp;
+        </i>
+        =
+        <a href="/qb64wiki/index.php/ALPHA" title="ALPHA">
+         _ALPHA
+        </a>
+        (
+        <i>
+         c&amp;
+        </i>
+        [,
+        <i>
+         imageHandle&amp;
+        </i>
+        ])
+       </dd>
+      </dl>
+      <p>
+       <br/>
+       <a href="/qb64wiki/index.php/RED32" title="RED32">
+        _RED32
+       </a>
+       ,
+       <a href="/qb64wiki/index.php/GREEN32" title="GREEN32">
+        _GREEN32
+       </a>
+       ,
+       <a href="/qb64wiki/index.php/BLUE32" title="BLUE32">
+        _BLUE32
+       </a>
+       and
+       <a href="/qb64wiki/index.php/ALPHA32" title="ALPHA32">
+        _ALPHA32
+       </a>
+       are all equivalent to
+       <a href="/qb64wiki/index.php/RED" title="RED">
+        _RED
+       </a>
+       ,
+       <a href="/qb64wiki/index.php/GREEN" title="GREEN">
+        _GREEN
+       </a>
+       ,
+       <a href="/qb64wiki/index.php/BLUE" title="BLUE">
+        _BLUE
+       </a>
+       and
+       <a href="/qb64wiki/index.php/ALPHA" title="ALPHA">
+        _ALPHA
+       </a>
+       but they are highly optimized and only accept a 32-bit color (B8:G8:R8:A8). Using these in your code (as appose to dividing then ANDing 32-bit color values manually) makes your code easy to read too.
+      </p>
+      <p>
+       <br/>
+      </p>
+      <p style="text-align: center">
+       (
+       <a href="#toc">
+        Return to Table of Contents
+       </a>
+       )
+      </p>
+      <p>
+       <br/>
+      </p>
+      <h2>
+       <span class="mw-headline" id="Image_file_types">
+        Image file types
+       </span>
+      </h2>
+      <ul>
+       <li>
+        <a href="/qb64wiki/index.php/Bitmaps" title="Bitmaps">
+         Bitmaps
+        </a>
+       </li>
+       <li>
+        <a href="/qb64wiki/index.php/Creating_Icon_Bitmaps" title="Creating Icon Bitmaps">
+         Creating Icon Bitmaps
+        </a>
+       </li>
+       <li>
+        <a href="/qb64wiki/index.php/Icons_and_Cursors" title="Icons and Cursors">
+         Icons and Cursors
+        </a>
+       </li>
+       <li>
+        <a href="/qb64wiki/index.php/GIF_Images" title="GIF Images">
+         GIF Images
+        </a>
+       </li>
+       <li>
+        <a href="/qb64wiki/index.php/Creating_Icons_from_Bitmaps" title="Creating Icons from Bitmaps">
+         Creating Icons from Bitmaps
+        </a>
+       </li>
+       <li>
+        <a href="/qb64wiki/index.php/SaveIcon32" title="SaveIcon32">
+         SaveIcon32
+        </a>
+        <span style="color:#777777;">
+         (convert any image to icon)
+        </span>
+       </li>
+       <li>
+        <a href="/qb64wiki/index.php/SaveImage_SUB" title="SaveImage SUB">
+         SaveImage SUB
+        </a>
+        <span style="color:#777777;">
+         (convert any image to bitmap)
+        </span>
+       </li>
+       <li>
+        <a href="/qb64wiki/index.php/Text_Using_Graphics" title="Text Using Graphics">
+         Text Using Graphics
+        </a>
+       </li>
+       <li>
+        <a href="/qb64wiki/index.php/$EXEICON" title="$EXEICON">
+         $EXEICON
+        </a>
+       </li>
+      </ul>
+      <p>
+       <br/>
+      </p>
+      <p style="text-align: center">
+       (
+       <a href="#toc">
+        Return to Table of Contents
+       </a>
+       )
+      </p>
+      <p>
+       <br/>
+      </p>
+      <h2>
+       <span class="mw-headline" id="QB64_statements_and_functions">
+        QB64 statements and functions
+       </span>
+      </h2>
+      <ul>
+       <li>
+        <a href="/qb64wiki/index.php/ALPHA" title="ALPHA">
+         _ALPHA
+        </a>
+        (function)
+       </li>
+       <li>
+        <a href="/qb64wiki/index.php/ALPHA32" title="ALPHA32">
+         _ALPHA32
+        </a>
+        (function)
+       </li>
+       <li>
+        <a href="/qb64wiki/index.php/BACKGROUNDCOLOR" title="BACKGROUNDCOLOR">
+         _BACKGROUNDCOLOR
+        </a>
+        (function)
+       </li>
+       <li>
+        <a href="/qb64wiki/index.php/BLEND" title="BLEND">
+         _BLEND
+        </a>
+        (sub)
+       </li>
+       <li>
+        <a href="/qb64wiki/index.php/BLEND_(function)" title="BLEND (function)">
+         _BLEND (function)
+        </a>
+       </li>
+       <li>
+        <a href="/qb64wiki/index.php/BLUE" title="BLUE">
+         _BLUE
+        </a>
+        (function)
+       </li>
+       <li>
+        <a href="/qb64wiki/index.php/BLUE32" title="BLUE32">
+         _BLUE32
+        </a>
+        (function)
+       </li>
+       <li>
+        <a href="/qb64wiki/index.php/CLEARCOLOR" title="CLEARCOLOR">
+         _CLEARCOLOR
+        </a>
+        (sub)
+       </li>
+       <li>
+        <a href="/qb64wiki/index.php/CLEARCOLOR_(function)" title="CLEARCOLOR (function)">
+         _CLEARCOLOR (function)
+        </a>
+       </li>
+       <li>
+        <a href="/qb64wiki/index.php/COPYIMAGE" title="COPYIMAGE">
+         _COPYIMAGE
+        </a>
+        (function)
+       </li>
+       <li>
+        <a href="/qb64wiki/index.php/COPYPALETTE" title="COPYPALETTE">
+         _COPYPALETTE
+        </a>
+        (sub)
+       </li>
+       <li>
+        <a href="/qb64wiki/index.php/DEFAULTCOLOR" title="DEFAULTCOLOR">
+         _DEFAULTCOLOR
+        </a>
+        (function)
+       </li>
+       <li>
+        <a href="/qb64wiki/index.php/DEST" title="DEST">
+         _DEST
+        </a>
+        (sub)
+       </li>
+       <li>
+        <a href="/qb64wiki/index.php/DEST_(function)" title="DEST (function)">
+         _DEST (function)
+        </a>
+       </li>
+       <li>
+        <a href="/qb64wiki/index.php/DISPLAY_(function)" title="DISPLAY (function)">
+         _DISPLAY (function)
+        </a>
+       </li>
+       <li>
+        <a href="/qb64wiki/index.php/DONTBLEND" title="DONTBLEND">
+         _DONTBLEND
+        </a>
+        (sub)
+       </li>
+       <li>
+        <a href="/qb64wiki/index.php/FONT" title="FONT">
+         _FONT
+        </a>
+        (sub)
+       </li>
+       <li>
+        <a href="/qb64wiki/index.php/FONT_(function)" title="FONT (function)">
+         _FONT (function)
+        </a>
+       </li>
+       <li>
+        <a href="/qb64wiki/index.php/FONTHEIGHT_(function)" title="FONTHEIGHT (function)">
+         _FONTHEIGHT (function)
+        </a>
+       </li>
+       <li>
+        <a href="/qb64wiki/index.php/FONTWIDTH_(function)" title="FONTWIDTH (function)">
+         _FONTWIDTH (function)
+        </a>
+       </li>
+       <li>
+        <a href="/qb64wiki/index.php/FREEFONT" title="FREEFONT">
+         _FREEFONT
+        </a>
+        (sub)
+       </li>
+       <li>
+        <a href="/qb64wiki/index.php/FREEIMAGE" title="FREEIMAGE">
+         _FREEIMAGE
+        </a>
+        (sub)
+       </li>
+       <li>
+        <a href="/qb64wiki/index.php/GREEN" title="GREEN">
+         _GREEN
+        </a>
+        (function)
+       </li>
+       <li>
+        <a href="/qb64wiki/index.php/GREEN32" title="GREEN32">
+         _GREEN32
+        </a>
+        (function)
+       </li>
+       <li>
+        <a href="/qb64wiki/index.php/HEIGHT" title="HEIGHT">
+         _HEIGHT
+        </a>
+        (function)
+       </li>
+       <li>
+        <a href="/qb64wiki/index.php/ICON" title="ICON">
+         _ICON
+        </a>
+       </li>
+       <li>
+        <a href="/qb64wiki/index.php/LOADFONT" title="LOADFONT">
+         _LOADFONT
+        </a>
+        (function)
+       </li>
+       <li>
+        <a href="/qb64wiki/index.php/LOADIMAGE" title="LOADIMAGE">
+         _LOADIMAGE
+        </a>
+        (function)
+        <span style="color:#777777;">
+         (cannot use Icons)
+        </span>
+       </li>
+       <li>
+        <a href="/qb64wiki/index.php/NEWIMAGE" title="NEWIMAGE">
+         _NEWIMAGE
+        </a>
+        (function)
+       </li>
+       <li>
+        <a href="/qb64wiki/index.php/PALETTECOLOR" title="PALETTECOLOR">
+         _PALETTECOLOR
+        </a>
+        (sub)
+       </li>
+       <li>
+        <a href="/qb64wiki/index.php/PALETTECOLOR_(function)" title="PALETTECOLOR (function)">
+         _PALETTECOLOR (function)
+        </a>
+       </li>
+       <li>
+        <a href="/qb64wiki/index.php/PIXELSIZE" title="PIXELSIZE">
+         _PIXELSIZE
+        </a>
+        (function)
+       </li>
+       <li>
+        <a href="/qb64wiki/index.php/PRINTIMAGE" title="PRINTIMAGE">
+         _PRINTIMAGE
+        </a>
+        (sub)
+        <span style="color:#777777;">
+         (printer)
+        </span>
+       </li>
+       <li>
+        <a href="/qb64wiki/index.php/PRINTMODE" title="PRINTMODE">
+         _PRINTMODE
+        </a>
+        (sub)
+       </li>
+       <li>
+        <a href="/qb64wiki/index.php/PRINTMODE_(function)" title="PRINTMODE (function)">
+         _PRINTMODE (function)
+        </a>
+       </li>
+       <li>
+        <a href="/qb64wiki/index.php/PRINTSTRING" title="PRINTSTRING">
+         _PRINTSTRING
+        </a>
+        (sub)
+       </li>
+       <li>
+        <a href="/qb64wiki/index.php/PRINTWIDTH" title="PRINTWIDTH">
+         _PRINTWIDTH
+        </a>
+        (sub)
+       </li>
+       <li>
+        <a href="/qb64wiki/index.php/PUTIMAGE" title="PUTIMAGE">
+         _PUTIMAGE
+        </a>
+        (sub)
+       </li>
+       <li>
+        <a href="/qb64wiki/index.php/RED" title="RED">
+         _RED
+        </a>
+        (function)
+       </li>
+       <li>
+        <a href="/qb64wiki/index.php/RED32" title="RED32">
+         _RED32
+        </a>
+        (function)
+       </li>
+       <li>
+        <a href="/qb64wiki/index.php/RGB" title="RGB">
+         _RGB
+        </a>
+        (function)
+       </li>
+       <li>
+        <a href="/qb64wiki/index.php/RGB32" title="RGB32">
+         _RGB32
+        </a>
+        (function)
+       </li>
+       <li>
+        <a href="/qb64wiki/index.php/RGBA" title="RGBA">
+         _RGBA
+        </a>
+        (function)
+       </li>
+       <li>
+        <a href="/qb64wiki/index.php/RGBA32" title="RGBA32">
+         _RGBA32
+        </a>
+        (function)
+       </li>
+       <li>
+        <a href="/qb64wiki/index.php/SAVEIMAGE" title="SAVEIMAGE">
+         _SAVEIMAGE
+        </a>
+       </li>
+       <li>
+        <a href="/qb64wiki/index.php/SCREEN" title="SCREEN">
+         SCREEN
+        </a>
+        (sub)
+       </li>
+       <li>
+        <a href="/qb64wiki/index.php/SCREENIMAGE" title="SCREENIMAGE">
+         _SCREENIMAGE
+        </a>
+        (function)
+        <span style="color:#777777;">
+         (desktop)
+        </span>
+       </li>
+       <li>
+        <a href="/qb64wiki/index.php/SETALPHA" title="SETALPHA">
+         _SETALPHA
+        </a>
+        (sub)
+       </li>
+       <li>
+        <a href="/qb64wiki/index.php/SOURCE" title="SOURCE">
+         _SOURCE
+        </a>
+        (sub)
+       </li>
+       <li>
+        <a href="/qb64wiki/index.php/SOURCE_(function)" title="SOURCE (function)">
+         _SOURCE (function)
+        </a>
+       </li>
+       <li>
+        <a href="/qb64wiki/index.php/WIDTH" title="WIDTH">
+         _WIDTH
+        </a>
+        (function)
+       </li>
+      </ul>
+      <p>
+       <br/>
+      </p>
+      <p style="text-align: center">
+       (
+       <a href="#toc">
+        Return to Table of Contents
+       </a>
+       )
+      </p>
+      <p>
+       <br/>
+      </p>
+      <hr/>
+      <center>
+       <b>
+        Navigation:
+       </b>
+      </center>
+      <center>
+       <a href="/qb64wiki/index.php/Main_Page" title="Main Page">
+        Main Page with Articles and Tutorials
+       </a>
+      </center>
+      <center>
+       <a href="/qb64wiki/index.php/Keyword_Reference_-_Alphabetical" title="Keyword Reference - Alphabetical">
+        Keyword Reference - Alphabetical
+       </a>
+      </center>
+      <center>
+       <a href="/qb64wiki/index.php/Keyword_Reference_-_By_usage" title="Keyword Reference - By usage">
+        Keyword Reference - By usage
+       </a>
+      </center>
+      <center>
+       <b>
+        <a class="external text" href="https://qb64phoenix.com/forum/showthread.php?tid=2800" rel="nofollow">
+         Report a broken link
+        </a>
+       </b>
+       <br/>
+      </center>
+      <!-- 
+NewPP limit report
+Cached time: 20240718172148
+Cache expiry: 86400
+Reduced expiry: false
+Complications: [show‐toc]
+CPU time usage: 0.028 seconds
+Real time usage: 0.036 seconds
+Preprocessor visited node count: 125/1000000
+Post‐expand include size: 684/2097152 bytes
+Template argument size: 113/2097152 bytes
+Highest expansion depth: 3/100
+Expensive parser function count: 0/100
+Unstrip recursion depth: 0/20
+Unstrip post‐expand size: 0/5000000 bytes
+-->
+      <!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%   11.011      1 -total
+ 42.42%    4.671      5 Template:Text
+ 31.79%    3.500      3 Template:Parameter
+ 21.12%    2.325      1 Template:PageNavigation
+-->
+      <!-- Saved in parser cache with key qb64pnix_mw19894-mwmb_:pcache:idhash:21-0!canonical and timestamp 20240718172148 and revision id 8681.
+ -->
+     </div>
+     <div class="printfooter" data-nosnippet="">
+      Retrieved from "
+      <a dir="ltr" href="https://qb64phoenix.com/qb64wiki/index.php?title=Images&amp;oldid=8681">
+       https://qb64phoenix.com/qb64wiki/index.php?title=Images&amp;oldid=8681
+      </a>
+      "
+     </div>
+    </div>
+    <div class="catlinks catlinks-allhidden" data-mw="interface" id="catlinks">
+    </div>
+   </div>
+  </div>
+  <div id="mw-navigation">
+   <h2>
+    Navigation menu
+   </h2>
+   <div id="mw-head">
+    <nav aria-labelledby="p-personal-label" class="vector-menu mw-portlet mw-portlet-personal vector-user-menu-legacy" id="p-personal" role="navigation">
+     <h3 class="vector-menu-heading" id="p-personal-label">
+      <span class="vector-menu-heading-label">
+       Personal tools
+      </span>
+     </h3>
+     <div class="vector-menu-content">
+      <ul class="vector-menu-content-list">
+       <li class="mw-list-item" id="pt-login">
+        <a accesskey="o" href="/qb64wiki/index.php?title=Special:UserLogin&amp;returnto=Images" title="You are encouraged to log in; however, it is not mandatory [o]">
+         <span>
+          Log in
+         </span>
+        </a>
+       </li>
+      </ul>
+     </div>
+    </nav>
+    <div id="left-navigation">
+     <nav aria-labelledby="p-namespaces-label" class="vector-menu mw-portlet mw-portlet-namespaces vector-menu-tabs vector-menu-tabs-legacy" id="p-namespaces" role="navigation">
+      <h3 class="vector-menu-heading" id="p-namespaces-label">
+       <span class="vector-menu-heading-label">
+        Namespaces
+       </span>
+      </h3>
+      <div class="vector-menu-content">
+       <ul class="vector-menu-content-list">
+        <li class="selected mw-list-item" id="ca-nstab-main">
+         <a accesskey="c" href="/qb64wiki/index.php/Images" title="View the content page [c]">
+          <span>
+           Page
+          </span>
+         </a>
+        </li>
+        <li class="new mw-list-item" id="ca-talk">
+         <a accesskey="t" href="/qb64wiki/index.php?title=Talk:Images&amp;action=edit&amp;redlink=1" rel="discussion" title="Discussion about the content page (page does not exist) [t]">
+          <span>
+           Discussion
+          </span>
+         </a>
+        </li>
+       </ul>
+      </div>
+     </nav>
+     <nav aria-labelledby="p-variants-label" class="vector-menu mw-portlet mw-portlet-variants emptyPortlet vector-menu-dropdown" id="p-variants" role="navigation">
+      <input aria-haspopup="true" aria-labelledby="p-variants-label" class="vector-menu-checkbox" data-event-name="ui.dropdown-p-variants" id="p-variants-checkbox" role="button" type="checkbox"/>
+      <label aria-label="Change language variant" class="vector-menu-heading" id="p-variants-label">
+       <span class="vector-menu-heading-label">
+        English
+       </span>
+      </label>
+      <div class="vector-menu-content">
+       <ul class="vector-menu-content-list">
+       </ul>
+      </div>
+     </nav>
+    </div>
+    <div id="right-navigation">
+     <nav aria-labelledby="p-views-label" class="vector-menu mw-portlet mw-portlet-views vector-menu-tabs vector-menu-tabs-legacy" id="p-views" role="navigation">
+      <h3 class="vector-menu-heading" id="p-views-label">
+       <span class="vector-menu-heading-label">
+        Views
+       </span>
+      </h3>
+      <div class="vector-menu-content">
+       <ul class="vector-menu-content-list">
+        <li class="selected mw-list-item" id="ca-view">
+         <a href="/qb64wiki/index.php/Images">
+          <span>
+           Read
+          </span>
+         </a>
+        </li>
+        <li class="mw-list-item" id="ca-viewsource">
+         <a accesskey="e" href="/qb64wiki/index.php?title=Images&amp;action=edit" title="This page is protected.
+You can view its source [e]">
+          <span>
+           View source
+          </span>
+         </a>
+        </li>
+        <li class="mw-list-item" id="ca-history">
+         <a accesskey="h" href="/qb64wiki/index.php?title=Images&amp;action=history" title="Past revisions of this page [h]">
+          <span>
+           View history
+          </span>
+         </a>
+        </li>
+       </ul>
+      </div>
+     </nav>
+     <nav aria-labelledby="p-cactions-label" class="vector-menu mw-portlet mw-portlet-cactions emptyPortlet vector-menu-dropdown" id="p-cactions" role="navigation" title="More options">
+      <input aria-haspopup="true" aria-labelledby="p-cactions-label" class="vector-menu-checkbox" data-event-name="ui.dropdown-p-cactions" id="p-cactions-checkbox" role="button" type="checkbox"/>
+      <label class="vector-menu-heading" id="p-cactions-label">
+       <span class="vector-menu-heading-label">
+        More
+       </span>
+      </label>
+      <div class="vector-menu-content">
+       <ul class="vector-menu-content-list">
+       </ul>
+      </div>
+     </nav>
+     <div class="vector-search-box-vue vector-search-box-show-thumbnail vector-search-box-auto-expand-width vector-search-box" id="p-search" role="search">
+      <div>
+       <h3>
+        <label for="searchInput">
+         Search
+        </label>
+       </h3>
+       <form action="/qb64wiki/index.php" class="vector-search-box-form" id="searchform">
+        <div class="vector-search-box-inner" data-search-loc="header-navigation" id="simpleSearch">
+         <input accesskey="f" aria-label="Search QB64 Phoenix Edition Wiki" autocapitalize="sentences" class="vector-search-box-input" id="searchInput" name="search" placeholder="Search QB64 Phoenix Edition Wiki" title="Search QB64 Phoenix Edition Wiki [f]" type="search"/>
+         <input name="title" type="hidden" value="Special:Search"/>
+         <input class="searchButton mw-fallbackSearchButton" id="mw-searchButton" name="fulltext" title="Search the pages for this text" type="submit" value="Search"/>
+         <input class="searchButton" id="searchButton" name="go" title="Go to a page with this exact name if it exists" type="submit" value="Go"/>
+        </div>
+       </form>
+      </div>
+     </div>
+    </div>
+   </div>
+   <div id="mw-panel">
+    <div id="p-logo" role="banner">
+     <a class="mw-wiki-logo" href="/qb64wiki/index.php/Main_Page" title="Visit the main page">
+     </a>
+    </div>
+    <nav aria-labelledby="p-navigation-label" class="vector-menu mw-portlet mw-portlet-navigation vector-menu-portal portal" id="p-navigation" role="navigation">
+     <h3 class="vector-menu-heading" id="p-navigation-label">
+      <span class="vector-menu-heading-label">
+       Navigation
+      </span>
+     </h3>
+     <div class="vector-menu-content">
+      <ul class="vector-menu-content-list">
+       <li class="mw-list-item" id="n-mainpage-description">
+        <a accesskey="z" href="/qb64wiki/index.php/Main_Page" title="Visit the main page [z]">
+         <span>
+          Main page
+         </span>
+        </a>
+       </li>
+       <li class="mw-list-item" id="n-recentchanges">
+        <a accesskey="r" href="/qb64wiki/index.php/Special:RecentChanges" title="A list of recent changes in the wiki [r]">
+         <span>
+          Recent changes
+         </span>
+        </a>
+       </li>
+       <li class="mw-list-item" id="n-randompage">
+        <a accesskey="x" href="/qb64wiki/index.php/Special:Random" title="Load a random page [x]">
+         <span>
+          Random page
+         </span>
+        </a>
+       </li>
+       <li class="mw-list-item" id="n-help-mediawiki">
+        <a href="https://www.mediawiki.org/wiki/Special:MyLanguage/Help:Contents">
+         <span>
+          Help about MediaWiki
+         </span>
+        </a>
+       </li>
+      </ul>
+     </div>
+    </nav>
+    <nav aria-labelledby="p-tb-label" class="vector-menu mw-portlet mw-portlet-tb vector-menu-portal portal" id="p-tb" role="navigation">
+     <h3 class="vector-menu-heading" id="p-tb-label">
+      <span class="vector-menu-heading-label">
+       Tools
+      </span>
+     </h3>
+     <div class="vector-menu-content">
+      <ul class="vector-menu-content-list">
+       <li class="mw-list-item" id="t-whatlinkshere">
+        <a accesskey="j" href="/qb64wiki/index.php/Special:WhatLinksHere/Images" title="A list of all wiki pages that link here [j]">
+         <span>
+          What links here
+         </span>
+        </a>
+       </li>
+       <li class="mw-list-item" id="t-recentchangeslinked">
+        <a accesskey="k" href="/qb64wiki/index.php/Special:RecentChangesLinked/Images" rel="nofollow" title="Recent changes in pages linked from this page [k]">
+         <span>
+          Related changes
+         </span>
+        </a>
+       </li>
+       <li class="mw-list-item" id="t-specialpages">
+        <a accesskey="q" href="/qb64wiki/index.php/Special:SpecialPages" title="A list of all special pages [q]">
+         <span>
+          Special pages
+         </span>
+        </a>
+       </li>
+       <li class="mw-list-item" id="t-print">
+        <a accesskey="p" href="javascript:print();" rel="alternate" title="Printable version of this page [p]">
+         <span>
+          Printable version
+         </span>
+        </a>
+       </li>
+       <li class="mw-list-item" id="t-permalink">
+        <a href="/qb64wiki/index.php?title=Images&amp;oldid=8681" title="Permanent link to this revision of this page">
+         <span>
+          Permanent link
+         </span>
+        </a>
+       </li>
+       <li class="mw-list-item" id="t-info">
+        <a href="/qb64wiki/index.php?title=Images&amp;action=info" title="More information about this page">
+         <span>
+          Page information
+         </span>
+        </a>
+       </li>
+      </ul>
+     </div>
+    </nav>
+   </div>
+  </div>
+  <footer class="mw-footer" id="footer" role="contentinfo">
+   <ul id="footer-info">
+    <li id="footer-info-lastmod">
+     This page was last edited on 10 January 2024, at 08:18.
+    </li>
+   </ul>
+   <ul id="footer-places">
+    <li id="footer-places-privacy">
+     <a href="/qb64wiki/index.php/QB64_Phoenix_Edition_Wiki:Privacy_policy">
+      Privacy policy
+     </a>
+    </li>
+    <li id="footer-places-about">
+     <a href="/qb64wiki/index.php/QB64_Phoenix_Edition_Wiki:About">
+      About QB64 Phoenix Edition Wiki
+     </a>
+    </li>
+    <li id="footer-places-disclaimer">
+     <a href="/qb64wiki/index.php/QB64_Phoenix_Edition_Wiki:General_disclaimer">
+      Disclaimers
+     </a>
+    </li>
+   </ul>
+   <ul class="noprint" id="footer-icons">
+    <li id="footer-poweredbyico">
+     <a href="https://www.mediawiki.org/">
+      <img alt="Powered by MediaWiki" height="31" loading="lazy" src="/qb64wiki/resources/assets/poweredby_mediawiki_88x31.png" srcset="/qb64wiki/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /qb64wiki/resources/assets/poweredby_mediawiki_176x62.png 2x" width="88"/>
+     </a>
+    </li>
+   </ul>
+  </footer>
+  <script>
+   (RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgPageParseReport":{"limitreport":{"cputime":"0.028","walltime":"0.036","ppvisitednodes":{"value":125,"limit":1000000},"postexpandincludesize":{"value":684,"limit":2097152},"templateargumentsize":{"value":113,"limit":2097152},"expansiondepth":{"value":3,"limit":100},"expensivefunctioncount":{"value":0,"limit":100},"unstrip-depth":{"value":0,"limit":20},"unstrip-size":{"value":0,"limit":5000000},"timingprofile":["100.00%   11.011      1 -total"," 42.42%    4.671      5 Template:Text"," 31.79%    3.500      3 Template:Parameter"," 21.12%    2.325      1 Template:PageNavigation"]},"cachereport":{"timestamp":"20240718172148","ttl":86400,"transientcontent":false}}});mw.config.set({"wgBackendResponseTime":73});});
+  </script>
+ </body>
+</html>

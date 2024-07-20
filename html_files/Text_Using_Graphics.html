@@ -1,0 +1,1494 @@
+<!DOCTYPE html>
+<html class="client-nojs" dir="ltr" lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <title>
+   Text Using Graphics - QB64 Phoenix Edition Wiki
+  </title>
+  <script>
+   document.documentElement.className="client-js";RLCONF={"wgBreakFrames":false,"wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgRequestId":"Zpp9FgEfJaEdFRpaWXtToAAAAec","wgCSPNonce":false,"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"Text_Using_Graphics","wgTitle":"Text Using Graphics","wgCurRevisionId":8178,"wgRevisionId":8178,"wgArticleId":35,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":[],"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgRelevantPageName":"Text_Using_Graphics","wgRelevantArticleId":35,"wgIsProbablyEditable":false,"wgRelevantPageIsProbablyEditable":false,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgVector2022PreviewPages":[]};RLSTATE={"site.styles":"ready",
+"user.styles":"ready","user":"ready","user.options":"loading","skins.vector.styles.legacy":"ready"};RLPAGEMODULES=["site","mediawiki.page.ready","mediawiki.toc","skins.vector.legacy.js"];
+  </script>
+  <script>
+   (RLQ=window.RLQ||[]).push(function(){mw.loader.implement("user.options@12s5i",function($,jQuery,require,module){mw.user.tokens.set({"patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});});});
+  </script>
+  <link href="/qb64wiki/load.php?lang=en&amp;modules=skins.vector.styles.legacy&amp;only=styles&amp;skin=vector" rel="stylesheet"/>
+  <script async="" src="/qb64wiki/load.php?lang=en&amp;modules=startup&amp;only=scripts&amp;raw=1&amp;skin=vector">
+  </script>
+  <meta content="" name="ResourceLoaderDynamicStyles"/>
+  <link href="/qb64wiki/load.php?lang=en&amp;modules=site.styles&amp;only=styles&amp;skin=vector" rel="stylesheet"/>
+  <meta content="MediaWiki 1.39.3" name="generator"/>
+  <meta content="telephone=no" name="format-detection"/>
+  <meta content="width=1000" name="viewport"/>
+  <link href="/favicon.ico" rel="icon"/>
+  <link href="/qb64wiki/opensearch_desc.php" rel="search" title="QB64 Phoenix Edition Wiki (en)" type="application/opensearchdescription+xml"/>
+  <link href="https://qb64phoenix.com/qb64wiki/api.php?action=rsd" rel="EditURI" type="application/rsd+xml"/>
+  <link href="/qb64wiki/index.php?title=Special:RecentChanges&amp;feed=atom" rel="alternate" title="QB64 Phoenix Edition Wiki Atom feed" type="application/atom+xml"/>
+ </head>
+ <body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject page-Text_Using_Graphics rootpage-Text_Using_Graphics skin-vector action-view skin-vector-legacy vector-feature-language-in-header-enabled vector-feature-language-in-main-page-header-disabled vector-feature-language-alert-in-sidebar-disabled vector-feature-sticky-header-disabled vector-feature-sticky-header-edit-disabled vector-feature-table-of-contents-disabled vector-feature-visual-enhancement-next-disabled">
+  <div class="noprint" id="mw-page-base">
+  </div>
+  <div class="noprint" id="mw-head-base">
+  </div>
+  <div class="mw-body" id="content" role="main">
+   <a id="top">
+   </a>
+   <div id="siteNotice">
+   </div>
+   <div class="mw-indicators">
+   </div>
+   <h1 class="firstHeading mw-first-heading" id="firstHeading">
+    <span class="mw-page-title-main">
+     Text Using Graphics
+    </span>
+   </h1>
+   <div class="vector-body" id="bodyContent">
+    <div class="noprint" id="siteSub">
+     From QB64 Phoenix Edition Wiki
+    </div>
+    <div id="contentSub">
+    </div>
+    <div id="contentSub2">
+    </div>
+    <div id="jump-to-nav">
+    </div>
+    <a class="mw-jump-link" href="#mw-head">
+     Jump to navigation
+    </a>
+    <a class="mw-jump-link" href="#searchInput">
+     Jump to search
+    </a>
+    <div class="mw-body-content mw-content-ltr" dir="ltr" id="mw-content-text" lang="en">
+     <div class="mw-parser-output">
+      <p>
+       While QB64 offers
+       <a href="/qb64wiki/index.php/FONT" title="FONT">
+        _FONT
+       </a>
+       and
+       <a href="/qb64wiki/index.php/Unicode" title="Unicode">
+        Unicode
+       </a>
+       text options, QBasic was limited in what it could offer. This shortfall could be overcome in various ways including using sprite pictures. Thanks to QB64, we can have the best in both worlds without creating them yourself!
+      </p>
+      <dl>
+       <dd>
+        <dl>
+         <dd>
+          <dl>
+           <dd>
+            <dl>
+             <dd>
+              <dl>
+               <dd>
+                <dl>
+                 <dd>
+                  <dl>
+                   <dd>
+                    <dl>
+                     <dd>
+                      <dl>
+                       <dd>
+                        1) The characters can be loaded in a file for QBasic.
+                       </dd>
+                       <dd>
+                        2) Text fonts can be sized without re-loading them.
+                       </dd>
+                       <dd>
+                        3) Data files are smaller than
+                        <a href="/qb64wiki/index.php/BSAVE" title="BSAVE">
+                         BSAVE
+                        </a>
+                        image files.
+                       </dd>
+                       <dd>
+                        4} Proper character spacing is already done for you.
+                       </dd>
+                      </dl>
+                     </dd>
+                    </dl>
+                   </dd>
+                  </dl>
+                 </dd>
+                </dl>
+               </dd>
+              </dl>
+             </dd>
+            </dl>
+           </dd>
+          </dl>
+         </dd>
+        </dl>
+       </dd>
+      </dl>
+      <p>
+       <br/>
+      </p>
+      <div aria-labelledby="mw-toc-heading" class="toc" id="toc" role="navigation">
+       <input class="toctogglecheckbox" id="toctogglecheckbox" role="button" style="display:none" type="checkbox"/>
+       <div class="toctitle" dir="ltr" lang="en">
+        <h2 id="mw-toc-heading">
+         Contents
+        </h2>
+        <span class="toctogglespan">
+         <label class="toctogglelabel" for="toctogglecheckbox">
+         </label>
+        </span>
+       </div>
+       <ul>
+        <li class="toclevel-1 tocsection-1">
+         <a href="#Bit_Packing_Pixel_Data">
+          <span class="tocnumber">
+           1
+          </span>
+          <span class="toctext">
+           Bit Packing Pixel Data
+          </span>
+         </a>
+        </li>
+        <li class="toclevel-1 tocsection-2">
+         <a href="#Displaying_Text_Characters">
+          <span class="tocnumber">
+           2
+          </span>
+          <span class="toctext">
+           Displaying Text Characters
+          </span>
+         </a>
+        </li>
+        <li class="toclevel-1 tocsection-3">
+         <a href="#Font_and_Unicode_Conversion">
+          <span class="tocnumber">
+           3
+          </span>
+          <span class="toctext">
+           Font and Unicode Conversion
+          </span>
+         </a>
+        </li>
+        <li class="toclevel-1 tocsection-4">
+         <a href="#Reading_the_Data_File">
+          <span class="tocnumber">
+           4
+          </span>
+          <span class="toctext">
+           Reading the Data File
+          </span>
+         </a>
+        </li>
+        <li class="toclevel-1">
+         <a href="#See_also">
+          <span class="tocnumber">
+           5
+          </span>
+          <span class="toctext">
+           See also
+          </span>
+         </a>
+        </li>
+       </ul>
+      </div>
+      <h2>
+       <span class="mw-headline" id="Bit_Packing_Pixel_Data">
+        Bit Packing Pixel Data
+       </span>
+      </h2>
+      <p>
+       In QBasic, text blocks were always 8 pixels wide no matter what screen mode was used. This allowed the total data value of a row to be set by reading 8 pixels using
+       <a href="/qb64wiki/index.php/POINT" title="POINT">
+        POINT
+       </a>
+       . The value can be stored in one
+       <a href="/qb64wiki/index.php/BYTE" title="BYTE">
+        _BYTE
+       </a>
+       (8 bits) of data using
+       <a href="/qb64wiki/index.php/ASCII" title="ASCII">
+        ASCII
+       </a>
+       string characters.
+      </p>
+      <table cellpadding="5px" width="100%">
+       <tbody>
+        <tr>
+         <td>
+          <pre class="outputtext"><a href="/qb64wiki/index.php/SCREEN" title="SCREEN"><span style="color:blue;">SCREEN</span></a> 12             'text characters are 8 X 16 pixel blocks
+<a href="/qb64wiki/index.php/DIM" title="DIM"><span style="color:blue;">DIM</span></a> <a href="/qb64wiki/index.php/SHARED" title="SHARED"><span style="color:blue;">SHARED</span></a> Char(0 <a href="/qb64wiki/index.php/TO" title="TO"><span style="color:blue;">TO</span></a> 255, 0 <a href="/qb64wiki/index.php/TO" title="TO"><span style="color:blue;">TO</span></a> 15) <a href="/qb64wiki/index.php/AS" title="AS"><span style="color:blue;">AS</span></a> <a href="/qb64wiki/index.php/STRING" title="STRING"><span style="color:blue;">STRING</span></a> * 1  'store data by character row byte values
+TextSave                     'call to SUB at start of program
+
+<a href="/qb64wiki/index.php/SUB" title="SUB"><span style="color:blue;">SUB</span></a> TextSave
+<a href="/qb64wiki/index.php/OUT" title="OUT"><span style="color:blue;">OUT</span></a> <a href="/qb64wiki/index.php/%26H" title="&amp;H"><span style="color:blue;">&amp;H</span></a>3C8, 1: <a href="/qb64wiki/index.php/OUT" title="OUT"><span style="color:blue;">OUT</span></a> <a href="/qb64wiki/index.php/%26H" title="&amp;H"><span style="color:blue;">&amp;H</span></a>3C9, 0: <a href="/qb64wiki/index.php/OUT" title="OUT"><span style="color:blue;">OUT</span></a> <a href="/qb64wiki/index.php/%26H" title="&amp;H"><span style="color:blue;">&amp;H</span></a>3C9, 0: <a href="/qb64wiki/index.php/OUT" title="OUT"><span style="color:blue;">OUT</span></a> <a href="/qb64wiki/index.php/%26H" title="&amp;H"><span style="color:blue;">&amp;H</span></a>3C9, 0 'print text as background color
+<a href="/qb64wiki/index.php/COLOR" title="COLOR"><span style="color:blue;">COLOR</span></a> 1 'hide the character printing
+<a href="/qb64wiki/index.php/FOR...NEXT" title="FOR...NEXT"><span style="color:blue;">FOR</span></a> ascii% = 0 <a href="/qb64wiki/index.php/TO" title="TO"><span style="color:blue;">TO</span></a> 255 'Draw map of each character
+   <a href="/qb64wiki/index.php/IF...THEN" title="IF...THEN"><span style="color:blue;">IF</span></a> ascii% = 7 <a href="/qb64wiki/index.php/THEN" title="THEN"><span style="color:blue;">THEN</span></a> ascii% = 8              'eliminate beep character sound when printed
+   <a href="/qb64wiki/index.php/LOCATE" title="LOCATE"><span style="color:blue;">LOCATE</span></a> 1, 1: <a href="/qb64wiki/index.php/PRINT" title="PRINT"><span style="color:blue;">PRINT</span></a> <a href="/qb64wiki/index.php/CHR$" title="CHR$"><span style="color:blue;">CHR$</span></a>(ascii%)            'PRINT ASCII characters to top left corner
+   <a href="/qb64wiki/index.php/FOR...NEXT" title="FOR...NEXT"><span style="color:blue;">FOR</span></a> row% = 0 <a href="/qb64wiki/index.php/TO" title="TO"><span style="color:blue;">TO</span></a> 15                         'read 16 row byte values
+      byte = 0                                'reset value every row
+      <a href="/qb64wiki/index.php/FOR...NEXT" title="FOR...NEXT"><span style="color:blue;">FOR</span></a> col% = 7 <a href="/qb64wiki/index.php/TO" title="TO"><span style="color:blue;">TO</span></a> 0 <a href="/qb64wiki/index.php/STEP" title="STEP"><span style="color:blue;">STEP</span></a> -1               'read 8 pixels from right to left
+         byte = byte * 2 - (<a href="/qb64wiki/index.php/POINT" title="POINT"><span style="color:blue;">POINT</span></a>(col%, row%) &gt; 0)  'bit-packing with 2 ^ bit
+      <a href="/qb64wiki/index.php/NEXT" title="NEXT"><span style="color:blue;">NEXT</span></a>
+      Char(ascii%, row%) = <a href="/qb64wiki/index.php/CHR$" title="CHR$"><span style="color:blue;">CHR$</span></a>(byte)         'convert row byte value to ASCII character
+   <a href="/qb64wiki/index.php/NEXT" title="NEXT"><span style="color:blue;">NEXT</span></a>
+   <a href="/qb64wiki/index.php/LOCATE" title="LOCATE"><span style="color:blue;">LOCATE</span></a> <a href="/qb64wiki/index.php/CSRLIN" title="CSRLIN"><span style="color:blue;">CSRLIN</span></a>, <a href="/qb64wiki/index.php/POS" title="POS"><span style="color:blue;">POS</span></a>(0) - 1: <a href="/qb64wiki/index.php/PRINT" title="PRINT"><span style="color:blue;">PRINT</span></a> <a href="/qb64wiki/index.php/SPACE$" title="SPACE$"><span style="color:blue;">SPACE$</span></a>(1) 'erase previous character anywhere
+<a href="/qb64wiki/index.php/NEXT" title="NEXT"><span style="color:blue;">NEXT</span></a>
+<a href="/qb64wiki/index.php/PALETTE" title="PALETTE"><span style="color:blue;">PALETTE</span></a>  'restore all palette colors
+<a href="/qb64wiki/index.php/END_SUB" title="END SUB"><span style="color:blue;">END SUB</span></a>
+</pre>
+         </td>
+        </tr>
+       </tbody>
+      </table>
+      <center>
+       <span style="font-family: Courier New, Courier, monospace; font-size: 0.80em; line-height: 50%;">
+        QBasic concept by Artelius
+       </span>
+      </center>
+      <dl>
+       <dd>
+        Above
+        <a href="/qb64wiki/index.php/ASCII" title="ASCII">
+         ASCII
+        </a>
+        Characters 7, 9, 10, 11, 12, 13, 28, 29, 30, and 31 won't print in QBasic!
+        <b>
+         QB64
+        </b>
+        can print them with
+        <a href="/qb64wiki/index.php/PRINTSTRING" title="PRINTSTRING">
+         _PRINTSTRING
+        </a>
+        or by using
+        <a href="/qb64wiki/index.php/PRINT" title="PRINT">
+         PRINT
+        </a>
+        after
+        <a href="/qb64wiki/index.php/CONTROLCHR" title="CONTROLCHR">
+         _CONTROLCHR
+        </a>
+        OFF is set.
+       </dd>
+      </dl>
+      <p>
+       <br/>
+      </p>
+      <center>
+       <b>
+        Bit Packing
+       </b>
+      </center>
+      <table cellpadding="5px" width="100%">
+       <tbody>
+        <tr>
+         <td>
+          <pre class="outputfixed">      <a href="/qb64wiki/index.php/FOR...NEXT" title="FOR...NEXT"><span style="color:blue;">FOR</span></a> col% = 7 <a href="/qb64wiki/index.php/TO" title="TO"><span style="color:blue;">TO</span></a> 0 <a href="/qb64wiki/index.php/STEP" title="STEP"><span style="color:blue;">STEP</span></a> -1                     'read pixels from right to left
+         byte = byte * 2 - (<a href="/qb64wiki/index.php/POINT" title="POINT"><span style="color:blue;">POINT</span></a>(col%, row%) &gt; 0)  'bit-packing with 2 ^ bit
+      <a href="/qb64wiki/index.php/NEXT" title="NEXT"><span style="color:blue;">NEXT</span></a>
+</pre>
+         </td>
+        </tr>
+       </tbody>
+      </table>
+      <dl>
+       <dd>
+        Bit packing is done by doubling the current byte value and adding one for each bit where a pixel is not colored black.
+       </dd>
+      </dl>
+      <dl>
+       <dd>
+        The
+        <a href="/qb64wiki/index.php/Boolean" title="Boolean">
+         boolean
+        </a>
+        statement
+        <span style="border: 2px solid #87cefa; border-radius: 4px; padding: 4px; font-family: Courier New, monospace, Courier; font-size: 16px; white-space: nowrap; background: #082080; color: #e2e2e2;">
+         (POINT(col%, row%) &gt; 0)
+        </span>
+        evaluates to -1(true) when a pixel is on or 0(false) when a pixel is off. This effectively adds 1 to the byte value. Each loop that byte value is doubled as
+        <a href="/qb64wiki/index.php/POINT" title="POINT">
+         POINT
+        </a>
+        goes from right to left. If the left-most pixel is on, it will only add one to the byte value as expected. This makes the total sum of the bit values or the byte value equal to 255 if all of the pixels are on as shown below:
+       </dd>
+      </dl>
+      <table cellpadding="5px" width="100%">
+       <tbody>
+        <tr>
+         <td>
+          <pre class="outputfixed"> <b>               Bit\Column #:  0   1   2   3   4   5   6   7   TOTAL </b>
+                Exponent 2 ^:  0   1   2   3   4   5   6   7
+                Bit Value On:  1   2   4   8  16  32  64  128   255
+</pre>
+         </td>
+        </tr>
+       </tbody>
+      </table>
+      <dl>
+       <dd>
+        Alpha-numeric text byte values will never be close to 255 because the first and last columns will normally be 0 as they are used to space text characters. Some characters, such as
+        <a href="/qb64wiki/index.php/CHR$" title="CHR$">
+         CHR$
+        </a>
+        (219) can have byte totals of 255 and have a value every row however.
+       </dd>
+      </dl>
+      <p>
+       <br/>
+       <i>
+        Example Code:
+       </i>
+       Displays the 16 one byte row values saved as
+       <a href="/qb64wiki/index.php/ASCII" title="ASCII">
+        ASCII
+       </a>
+       characters in the
+       <a href="/qb64wiki/index.php/STRING" title="STRING">
+        STRING
+       </a>
+       array using
+       <a href="/qb64wiki/index.php/PRINTSTRING" title="PRINTSTRING">
+        _PRINTSTRING
+       </a>
+       .
+      </p>
+      <table cellpadding="15px" width="100%">
+       <tbody>
+        <tr>
+         <td>
+          <pre class="codeide"><a href="/qb64wiki/index.php/SCREEN" title="SCREEN"><span style="color:#4593D8;">SCREEN</span></a> 12 'text characters are 8 X 16 pixel blocks
+<a href="/qb64wiki/index.php/DIM" title="DIM"><span style="color:#4593D8;">DIM</span></a> <a href="/qb64wiki/index.php/SHARED" title="SHARED"><span style="color:#4593D8;">SHARED</span></a> Char(0 <a href="/qb64wiki/index.php/TO" title="TO"><span style="color:#4593D8;">TO</span></a> 255, 0 <a href="/qb64wiki/index.php/TO" title="TO"><span style="color:#4593D8;">TO</span></a> 15) <a href="/qb64wiki/index.php/AS" title="AS"><span style="color:#4593D8;">AS</span></a> <a href="/qb64wiki/index.php/STRING" title="STRING"><span style="color:#4593D8;">STRING</span></a> * 1 'store data by character row byte values
+TextSave 'call to <a href="/qb64wiki/index.php/SUB" title="SUB"><span style="color:#4593D8;">SUB</span></a> at start of program
+
+<a href="/qb64wiki/index.php/DO...LOOP" title="DO...LOOP"><span style="color:#4593D8;">DO</span></a>
+  <a href="/qb64wiki/index.php/COLOR" title="COLOR"><span style="color:#4593D8;">COLOR</span></a> 11: <a href="/qb64wiki/index.php/LOCATE" title="LOCATE"><span style="color:#4593D8;">LOCATE</span></a> 10, 10: <a href="/qb64wiki/index.php/INPUT" title="INPUT"><span style="color:#4593D8;">INPUT</span></a> "Enter keypress or an ASCII code 1 to 255: ", cod$
+  <a href="/qb64wiki/index.php/CLS" title="CLS"><span style="color:#4593D8;">CLS</span></a>: code = <a href="/qb64wiki/index.php/VAL" title="VAL"><span style="color:#4593D8;">VAL</span></a>(cod$)
+  <a href="/qb64wiki/index.php/IF...THEN" title="IF...THEN"><span style="color:#4593D8;">IF</span></a> (code &lt;= 0 <a href="/qb64wiki/index.php/AND_(boolean)" title="AND (boolean)"><span style="color:#4593D8;">AND</span></a> <a href="/qb64wiki/index.php/LEN" title="LEN"><span style="color:#4593D8;">LEN</span></a>(cod$) &gt; 0) <a href="/qb64wiki/index.php/OR_(boolean)" title="OR (boolean)"><span style="color:#4593D8;">OR</span></a> code &gt; 255 <a href="/qb64wiki/index.php/THEN" title="THEN"><span style="color:#4593D8;">THEN</span></a> code = <a href="/qb64wiki/index.php/ASC_(function)" title="ASC (function)"><span style="color:#4593D8;">ASC</span></a>(cod$)
+  <a href="/qb64wiki/index.php/COLOR" title="COLOR"><span style="color:#4593D8;">COLOR</span></a> 14: <a href="/qb64wiki/index.php/PRINTSTRING" title="PRINTSTRING"><span style="color:#4593D8;">_PRINTSTRING</span></a> (0, 50), <a href="/qb64wiki/index.php/LTRIM$" title="LTRIM$"><span style="color:#4593D8;">LTRIM$</span></a>(<a href="/qb64wiki/index.php/STR$" title="STR$"><span style="color:#4593D8;">STR$</span></a>(code))
+  <a href="/qb64wiki/index.php/FOR...NEXT" title="FOR...NEXT"><span style="color:#4593D8;">FOR</span></a> n = 0 <a href="/qb64wiki/index.php/TO" title="TO"><span style="color:#4593D8;">TO</span></a> 15
+    ch$ = Char(code, n)
+    <a href="/qb64wiki/index.php/PRINTSTRING" title="PRINTSTRING"><span style="color:#4593D8;">_PRINTSTRING</span></a> (n * 30 + 40, 50), ch$ + ","
+  <a href="/qb64wiki/index.php/NEXT" title="NEXT"><span style="color:#4593D8;">NEXT</span></a>
+  <a href="/qb64wiki/index.php/PRINTSTRING" title="PRINTSTRING"><span style="color:#4593D8;">_PRINTSTRING</span></a> (600, 50), <a href="/qb64wiki/index.php/CHR$" title="CHR$"><span style="color:#4593D8;">CHR$</span></a>(code)
+<a href="/qb64wiki/index.php/LOOP" title="LOOP"><span style="color:#4593D8;">LOOP</span></a> <a href="/qb64wiki/index.php/UNTIL" title="UNTIL"><span style="color:#4593D8;">UNTIL</span></a> <a href="/qb64wiki/index.php/LEN" title="LEN"><span style="color:#4593D8;">LEN</span></a>(cod$) = 0
+<a href="/qb64wiki/index.php/END" title="END"><span style="color:#4593D8;">END</span></a>
+
+<a href="/qb64wiki/index.php/SUB" title="SUB"><span style="color:#4593D8;">SUB</span></a> TextSave
+<a href="/qb64wiki/index.php/OUT" title="OUT"><span style="color:#4593D8;">OUT</span></a> <a href="/qb64wiki/index.php/%26H" title="&amp;H"><span style="color:#4593D8;">&amp;H</span></a>3C8, 1: <a href="/qb64wiki/index.php/OUT" title="OUT"><span style="color:#4593D8;">OUT</span></a> <a href="/qb64wiki/index.php/%26H" title="&amp;H"><span style="color:#4593D8;">&amp;H</span></a>3C9, 0: <a href="/qb64wiki/index.php/OUT" title="OUT"><span style="color:#4593D8;">OUT</span></a> <a href="/qb64wiki/index.php/%26H" title="&amp;H"><span style="color:#4593D8;">&amp;H</span></a>3C9, 0: <a href="/qb64wiki/index.php/OUT" title="OUT"><span style="color:#4593D8;">OUT</span></a> <a href="/qb64wiki/index.php/%26H" title="&amp;H"><span style="color:#4593D8;">&amp;H</span></a>3C9, 0 'print text as background color
+<a href="/qb64wiki/index.php/COLOR" title="COLOR"><span style="color:#4593D8;">COLOR</span></a> 1 'hide the character printing
+<a href="/qb64wiki/index.php/FOR...NEXT" title="FOR...NEXT"><span style="color:#4593D8;">FOR</span></a> ascii% = 0 <a href="/qb64wiki/index.php/TO" title="TO"><span style="color:#4593D8;">TO</span></a> 255 'Draw map of each character
+  <a href="/qb64wiki/index.php/PRINTSTRING" title="PRINTSTRING"><span style="color:#4593D8;">_PRINTSTRING</span></a> (0, 0), <a href="/qb64wiki/index.php/CHR$" title="CHR$"><span style="color:#4593D8;">CHR$</span></a>(ascii%) '<a href="/qb64wiki/index.php/PRINT" title="PRINT"><span style="color:#4593D8;">PRINT</span></a> ASCII characters to top left corner
+  <a href="/qb64wiki/index.php/FOR...NEXT" title="FOR...NEXT"><span style="color:#4593D8;">FOR</span></a> row% = 0 <a href="/qb64wiki/index.php/TO" title="TO"><span style="color:#4593D8;">TO</span></a> 15 'read 16 row byte values
+    byte = 0 'reset value every row
+    <a href="/qb64wiki/index.php/FOR...NEXT" title="FOR...NEXT"><span style="color:#4593D8;">FOR</span></a> col% = 7 <a href="/qb64wiki/index.php/TO" title="TO"><span style="color:#4593D8;">TO</span></a> 0 <a href="/qb64wiki/index.php/STEP" title="STEP"><span style="color:#4593D8;">STEP</span></a> -1 'read 8 pixels from right to left
+      byte = byte * 2 - (<a href="/qb64wiki/index.php/POINT" title="POINT"><span style="color:#4593D8;">POINT</span></a>(col%, row%) &gt; 0) 'bit-packing with 2 ^ bit
+    <a href="/qb64wiki/index.php/NEXT" title="NEXT"><span style="color:#4593D8;">NEXT</span></a>
+    Char(ascii%, row%) = <a href="/qb64wiki/index.php/CHR$" title="CHR$"><span style="color:#4593D8;">CHR$</span></a>(byte) 'convert row byte value to ASCII character
+  <a href="/qb64wiki/index.php/NEXT" title="NEXT"><span style="color:#4593D8;">NEXT</span></a>
+<a href="/qb64wiki/index.php/NEXT" title="NEXT"><span style="color:#4593D8;">NEXT</span></a>
+<a href="/qb64wiki/index.php/PALETTE" title="PALETTE"><span style="color:#4593D8;">PALETTE</span></a> 'restore all palette colors
+<a href="/qb64wiki/index.php/END_SUB" title="END SUB"><span style="color:#4593D8;">END SUB</span></a>
+</pre>
+         </td>
+        </tr>
+       </tbody>
+      </table>
+      <dl>
+       <dd>
+        <dl>
+         <dd>
+          <dl>
+           <dd>
+            <dl>
+             <dd>
+              <i>
+               Note:
+              </i>
+              <a href="/qb64wiki/index.php/ASCII" title="ASCII">
+               ASCII
+              </a>
+              character values of
+              <a href="/qb64wiki/index.php/CHR$" title="CHR$">
+               CHR$
+              </a>
+              (0),
+              <a href="/qb64wiki/index.php/CHR$" title="CHR$">
+               CHR$
+              </a>
+              (32) and
+              <a href="/qb64wiki/index.php/CHR$" title="CHR$">
+               CHR$
+              </a>
+              (255) will only display an empty space!
+             </dd>
+            </dl>
+           </dd>
+          </dl>
+         </dd>
+        </dl>
+       </dd>
+      </dl>
+      <p>
+       <br/>
+      </p>
+      <dl>
+       <dd>
+        The
+        <a href="/qb64wiki/index.php/ASCII" title="ASCII">
+         ASCII
+        </a>
+        character data in the array can also be saved to a comma separated file with
+        <a href="/qb64wiki/index.php/WRITE" title="WRITE">
+         WRITE
+        </a>
+        for later use. In fact, the data can be read and displayed by QBasic programs later using special
+        <a href="/qb64wiki/index.php/LOADFONT" title="LOADFONT">
+         fonts
+        </a>
+        or
+        <a href="/qb64wiki/index.php/Unicode" title="Unicode">
+         Unicode
+        </a>
+        ! Wider characters will require larger values than
+        <a href="/qb64wiki/index.php/BYTE" title="BYTE">
+         _BYTE
+        </a>
+        .
+       </dd>
+      </dl>
+      <p style="text-align: center">
+       (
+       <a href="#toc">
+        Return to Top
+       </a>
+       )
+      </p>
+      <p>
+       <br/>
+      </p>
+      <h2>
+       <span class="mw-headline" id="Displaying_Text_Characters">
+        Displaying Text Characters
+       </span>
+      </h2>
+      <p>
+       Once the data is saved, we need something to convert the data back into text characters. There are several ways to do this simply by using
+       <a href="/qb64wiki/index.php/PSET" title="PSET">
+        PSET
+       </a>
+       for normal sizes or
+       <a href="/qb64wiki/index.php/CIRCLE" title="CIRCLE">
+        CIRCLE
+       </a>
+       or
+       <a href="/qb64wiki/index.php/LINE" title="LINE">
+        LINE
+       </a>
+       to amplify the displayed character sizes. Use a normal
+       <a href="/qb64wiki/index.php/FOR...NEXT" title="FOR...NEXT">
+        FOR
+       </a>
+       0 TO 7 loop to read:
+      </p>
+      <p>
+       <br/>
+      </p>
+      <center>
+       <b>
+        <a href="/qb64wiki/index.php/ASCII" title="ASCII">
+         ASCII
+        </a>
+        8 X 16 Text character size increased using
+        <a href="/qb64wiki/index.php/CIRCLE" title="CIRCLE">
+         CIRCLE
+        </a>
+       </b>
+      </center>
+      <table cellpadding="15px" width="100%">
+       <tbody>
+        <tr>
+         <td>
+          <pre class="codeide"><a href="/qb64wiki/index.php/SCREEN" title="SCREEN"><span style="color:#4593D8;">SCREEN</span></a> 12 'text characters are 8 X 16 pixel blocks
+<a href="/qb64wiki/index.php/DIM" title="DIM"><span style="color:#4593D8;">DIM</span></a> <a href="/qb64wiki/index.php/SHARED" title="SHARED"><span style="color:#4593D8;">SHARED</span></a> Char(0 <a href="/qb64wiki/index.php/TO" title="TO"><span style="color:#4593D8;">TO</span></a> 255, 0 <a href="/qb64wiki/index.php/TO" title="TO"><span style="color:#4593D8;">TO</span></a> 15) <a href="/qb64wiki/index.php/AS" title="AS"><span style="color:#4593D8;">AS</span></a> <a href="/qb64wiki/index.php/STRING" title="STRING"><span style="color:#4593D8;">STRING</span></a> * 1 'store data by character row byte values
+TextSave 'call to <a href="/qb64wiki/index.php/SUB" title="SUB"><span style="color:#4593D8;">SUB</span></a> at start of program
+
+ch = 1 'character 1
+DO: rowy = 0
+  <a href="/qb64wiki/index.php/COLOR" title="COLOR"><span style="color:#4593D8;">COLOR</span></a> 14: <a href="/qb64wiki/index.php/LOCATE" title="LOCATE"><span style="color:#4593D8;">LOCATE</span></a> 26, 5
+  <a href="/qb64wiki/index.php/FOR...NEXT" title="FOR...NEXT"><span style="color:#4593D8;">FOR</span></a> yy = 100 <a href="/qb64wiki/index.php/TO" title="TO"><span style="color:#4593D8;">TO</span></a> 220 <a href="/qb64wiki/index.php/STEP" title="STEP"><span style="color:#4593D8;">STEP</span></a> 8
+    rowval = <a href="/qb64wiki/index.php/ASC_(function)" title="ASC (function)"><span style="color:#4593D8;">ASC</span></a>(Char$(ch, rowy)) 'pixel row value
+    <a href="/qb64wiki/index.php/SELECT_CASE" title="SELECT CASE"><span style="color:#4593D8;">SELECT CASE</span></a> ch
+      <a class="mw-redirect" href="/qb64wiki/index.php/CASE" title="CASE"><span style="color:#4593D8;">CASE</span></a> 8, 10, 178, 182, 185, 186, 199, 204, 206, 215, 219, 222
+        <a href="/qb64wiki/index.php/PRINT" title="PRINT"><span style="color:#4593D8;">PRINT</span></a> <a href="/qb64wiki/index.php/STR$" title="STR$"><span style="color:#4593D8;">STR$</span></a>(rowval); 'compact the values
+      <a class="mw-redirect" href="/qb64wiki/index.php/CASE_ELSE" title="CASE ELSE"><span style="color:#4593D8;">CASE ELSE</span></a>: <a href="/qb64wiki/index.php/PRINT" title="PRINT"><span style="color:#4593D8;">PRINT</span></a> rowval;
+    <a href="/qb64wiki/index.php/END_SELECT" title="END SELECT"><span style="color:#4593D8;">END SELECT</span></a>
+    SetCHR 25, <a href="/qb64wiki/index.php/POS" title="POS"><span style="color:#4593D8;">POS</span></a>(0) - 2, 11, rowval
+    colx = 0
+    <a href="/qb64wiki/index.php/FOR...NEXT" title="FOR...NEXT"><span style="color:#4593D8;">FOR</span></a> xx = 300 <a href="/qb64wiki/index.php/TO" title="TO"><span style="color:#4593D8;">TO</span></a> 356 <a href="/qb64wiki/index.php/STEP" title="STEP"><span style="color:#4593D8;">STEP</span></a> 8
+      <a href="/qb64wiki/index.php/IF...THEN" title="IF...THEN"><span style="color:#4593D8;">IF</span></a> (rowval <a href="/qb64wiki/index.php/AND_(boolean)" title="AND (boolean)"><span style="color:#4593D8;">AND</span></a> 2 ^ colx) &gt; 0 <a href="/qb64wiki/index.php/THEN" title="THEN"><span style="color:#4593D8;">THEN</span></a>
+        <a href="/qb64wiki/index.php/CIRCLE" title="CIRCLE"><span style="color:#4593D8;">CIRCLE</span></a> (xx, yy), 4, 7   'display text character as full white circles
+        <a href="/qb64wiki/index.php/PAINT" title="PAINT"><span style="color:#4593D8;">PAINT</span></a> <a href="/qb64wiki/index.php/STEP" title="STEP"><span style="color:#4593D8;">STEP</span></a>(0, 0), 15, 7
+        ' <a href="/qb64wiki/index.php/LINE" title="LINE"><span style="color:#4593D8;">LINE</span></a> (xx - 4, yy - 4)-(xx + 3, yy + 3), 15, BF
+      <a href="/qb64wiki/index.php/ELSE" title="ELSE"><span style="color:#4593D8;">ELSE</span></a>:
+        <a href="/qb64wiki/index.php/CIRCLE" title="CIRCLE"><span style="color:#4593D8;">CIRCLE</span></a> (xx, yy), 4, 1   'display background as full blue circles
+        <a href="/qb64wiki/index.php/PAINT" title="PAINT"><span style="color:#4593D8;">PAINT</span></a> <a href="/qb64wiki/index.php/STEP" title="STEP"><span style="color:#4593D8;">STEP</span></a>(0, 0), 1
+        '  <a href="/qb64wiki/index.php/LINE" title="LINE"><span style="color:#4593D8;">LINE</span></a> (xx - 4, yy - 4)-(xx + 3, yy + 3), 1, BF
+      <a class="mw-redirect" href="/qb64wiki/index.php/END_IF" title="END IF"><span style="color:#4593D8;">END IF</span></a>
+      colx = colx + 1
+    <a href="/qb64wiki/index.php/NEXT" title="NEXT"><span style="color:#4593D8;">NEXT</span></a>
+    <a href="/qb64wiki/index.php/DELAY" title="DELAY"><span style="color:#4593D8;">_DELAY</span></a> .2
+    rowy = rowy + 1
+  <a href="/qb64wiki/index.php/NEXT" title="NEXT"><span style="color:#4593D8;">NEXT</span></a>
+  <a href="/qb64wiki/index.php/LOCATE" title="LOCATE"><span style="color:#4593D8;">LOCATE</span></a> 22, 40: <a href="/qb64wiki/index.php/PRINT" title="PRINT"><span style="color:#4593D8;">PRINT</span></a> <a href="/qb64wiki/index.php/SPACE$" title="SPACE$"><span style="color:#4593D8;">SPACE$</span></a>(39)
+  <a href="/qb64wiki/index.php/LOCATE" title="LOCATE"><span style="color:#4593D8;">LOCATE</span></a> 22, 5: <a href="/qb64wiki/index.php/COLOR" title="COLOR"><span style="color:#4593D8;">COLOR</span></a> 13: <a href="/qb64wiki/index.php/LINE_INPUT" title="LINE INPUT"><span style="color:#4593D8;">LINE INPUT</span></a> "Enter ASCII code(1 to 255) or press key character (Enter quits): ", ch$
+  <a href="/qb64wiki/index.php/LOCATE" title="LOCATE"><span style="color:#4593D8;">LOCATE</span></a> 23, 2: <a href="/qb64wiki/index.php/PRINT" title="PRINT"><span style="color:#4593D8;">PRINT</span></a> <a href="/qb64wiki/index.php/SPACE$" title="SPACE$"><span style="color:#4593D8;">SPACE$</span></a>(78)
+  <a href="/qb64wiki/index.php/LOCATE" title="LOCATE"><span style="color:#4593D8;">LOCATE</span></a> 25, 4: <a href="/qb64wiki/index.php/PRINT" title="PRINT"><span style="color:#4593D8;">PRINT</span></a> <a href="/qb64wiki/index.php/SPACE$" title="SPACE$"><span style="color:#4593D8;">SPACE$</span></a>(75)
+  <a href="/qb64wiki/index.php/LOCATE" title="LOCATE"><span style="color:#4593D8;">LOCATE</span></a> 26, 4: <a href="/qb64wiki/index.php/PRINT" title="PRINT"><span style="color:#4593D8;">PRINT</span></a> <a href="/qb64wiki/index.php/SPACE$" title="SPACE$"><span style="color:#4593D8;">SPACE$</span></a>(75)
+  ch = <a href="/qb64wiki/index.php/VAL" title="VAL"><span style="color:#4593D8;">VAL</span></a>(ch$)
+  <a href="/qb64wiki/index.php/IF...THEN" title="IF...THEN"><span style="color:#4593D8;">IF</span></a> ch = 0 <a href="/qb64wiki/index.php/AND_(boolean)" title="AND (boolean)"><span style="color:#4593D8;">AND</span></a> <a href="/qb64wiki/index.php/LEN" title="LEN"><span style="color:#4593D8;">LEN</span></a>(ch$) <a href="/qb64wiki/index.php/THEN" title="THEN"><span style="color:#4593D8;">THEN</span></a> ch = <a href="/qb64wiki/index.php/ASC_(function)" title="ASC (function)"><span style="color:#4593D8;">ASC</span></a>(ch$)
+<a href="/qb64wiki/index.php/LOOP" title="LOOP"><span style="color:#4593D8;">LOOP</span></a> <a href="/qb64wiki/index.php/UNTIL" title="UNTIL"><span style="color:#4593D8;">UNTIL</span></a> ch = 0 <a href="/qb64wiki/index.php/OR_(boolean)" title="OR (boolean)"><span style="color:#4593D8;">OR</span></a> ch &gt; 255
+<a href="/qb64wiki/index.php/END" title="END"><span style="color:#4593D8;">END</span></a>
+
+<a href="/qb64wiki/index.php/SUB" title="SUB"><span style="color:#4593D8;">SUB</span></a> SetCHR (Trow, Tcol, FG, ASCode)    'displays ASCII character value from array
+Srow = 16 * (Trow - 1): Scol = 8 * (Tcol - 1) 'convert text to graphic coordinates
+<a href="/qb64wiki/index.php/FOR...NEXT" title="FOR...NEXT"><span style="color:#4593D8;">FOR</span></a> y = 0 <a href="/qb64wiki/index.php/TO" title="TO"><span style="color:#4593D8;">TO</span></a> 15
+  ybyte$ = Char$(ASCode, y): yval = <a href="/qb64wiki/index.php/ASC_(function)" title="ASC (function)"><span style="color:#4593D8;">ASC</span></a>(ybyte$)
+  <a href="/qb64wiki/index.php/FOR...NEXT" title="FOR...NEXT"><span style="color:#4593D8;">FOR</span></a> x = 0 <a href="/qb64wiki/index.php/TO" title="TO"><span style="color:#4593D8;">TO</span></a> 7
+    <a href="/qb64wiki/index.php/IF...THEN" title="IF...THEN"><span style="color:#4593D8;">IF</span></a> (yval <a href="/qb64wiki/index.php/AND" title="AND"><span style="color:#4593D8;">AND</span></a> 2 ^ x) &gt; 0 <a href="/qb64wiki/index.php/THEN" title="THEN"><span style="color:#4593D8;">THEN</span></a> <a href="/qb64wiki/index.php/PSET" title="PSET"><span style="color:#4593D8;">PSET</span></a> (Scol + x, Srow + y), FG
+  <a href="/qb64wiki/index.php/NEXT" title="NEXT"><span style="color:#4593D8;">NEXT</span></a>
+<a href="/qb64wiki/index.php/NEXT" title="NEXT"><span style="color:#4593D8;">NEXT</span></a>
+<a href="/qb64wiki/index.php/END_SUB" title="END SUB"><span style="color:#4593D8;">END SUB</span></a>
+
+<a href="/qb64wiki/index.php/SUB" title="SUB"><span style="color:#4593D8;">SUB</span></a> TextSave
+<a href="/qb64wiki/index.php/OUT" title="OUT"><span style="color:#4593D8;">OUT</span></a> <a href="/qb64wiki/index.php/%26H" title="&amp;H"><span style="color:#4593D8;">&amp;H</span></a>3C8, 1: <a href="/qb64wiki/index.php/OUT" title="OUT"><span style="color:#4593D8;">OUT</span></a> <a href="/qb64wiki/index.php/%26H" title="&amp;H"><span style="color:#4593D8;">&amp;H</span></a>3C9, 0: <a href="/qb64wiki/index.php/OUT" title="OUT"><span style="color:#4593D8;">OUT</span></a> <a href="/qb64wiki/index.php/%26H" title="&amp;H"><span style="color:#4593D8;">&amp;H</span></a>3C9, 0: <a href="/qb64wiki/index.php/OUT" title="OUT"><span style="color:#4593D8;">OUT</span></a> <a href="/qb64wiki/index.php/%26H" title="&amp;H"><span style="color:#4593D8;">&amp;H</span></a>3C9, 0 'print text as background color
+<a href="/qb64wiki/index.php/COLOR" title="COLOR"><span style="color:#4593D8;">COLOR</span></a> 1 'hide the character printing
+<a href="/qb64wiki/index.php/FOR...NEXT" title="FOR...NEXT"><span style="color:#4593D8;">FOR</span></a> ascii% = 0 <a href="/qb64wiki/index.php/TO" title="TO"><span style="color:#4593D8;">TO</span></a> 255 'Draw map of each character
+  <a href="/qb64wiki/index.php/PRINTSTRING" title="PRINTSTRING"><span style="color:#4593D8;">_PRINTSTRING</span></a> (0, 0), <a href="/qb64wiki/index.php/CHR$" title="CHR$"><span style="color:#4593D8;">CHR$</span></a>(ascii%) '<a href="/qb64wiki/index.php/PRINT" title="PRINT"><span style="color:#4593D8;">PRINT</span></a> ASCII characters to top left corner
+  <a href="/qb64wiki/index.php/FOR...NEXT" title="FOR...NEXT"><span style="color:#4593D8;">FOR</span></a> row% = 0 <a href="/qb64wiki/index.php/TO" title="TO"><span style="color:#4593D8;">TO</span></a> 15 'read 16 row byte values
+    byte = 0 'reset value every row
+    <a href="/qb64wiki/index.php/FOR...NEXT" title="FOR...NEXT"><span style="color:#4593D8;">FOR</span></a> col% = 7 <a href="/qb64wiki/index.php/TO" title="TO"><span style="color:#4593D8;">TO</span></a> 0 <a href="/qb64wiki/index.php/STEP" title="STEP"><span style="color:#4593D8;">STEP</span></a> -1 'read 8 pixels from right to left
+      byte = byte * 2 - (<a href="/qb64wiki/index.php/POINT" title="POINT"><span style="color:#4593D8;">POINT</span></a>(col%, row%) &gt; 0) 'bit-packing with 2 ^ bit
+    <a href="/qb64wiki/index.php/NEXT" title="NEXT"><span style="color:#4593D8;">NEXT</span></a>
+    Char(ascii%, row%) = <a href="/qb64wiki/index.php/CHR$" title="CHR$"><span style="color:#4593D8;">CHR$</span></a>(byte) 'convert row byte value to ASCII character
+  <a href="/qb64wiki/index.php/NEXT" title="NEXT"><span style="color:#4593D8;">NEXT</span></a>
+<a href="/qb64wiki/index.php/NEXT" title="NEXT"><span style="color:#4593D8;">NEXT</span></a>
+<a href="/qb64wiki/index.php/PALETTE" title="PALETTE"><span style="color:#4593D8;">PALETTE</span></a> 'restore all palette colors
+<a href="/qb64wiki/index.php/END_SUB" title="END SUB"><span style="color:#4593D8;">END SUB</span></a>
+</pre>
+         </td>
+        </tr>
+       </tbody>
+      </table>
+      <center>
+       <span style="font-family: Courier New, Courier, monospace; font-size: 0.80em; line-height: 50%;">
+        Code by Ted Weissgerber
+       </span>
+      </center>
+      <dl>
+       <dd>
+        The program above shows each array
+        <a href="/qb64wiki/index.php/BYTE" title="BYTE">
+         byte
+        </a>
+        character value and character.
+        <a href="/qb64wiki/index.php/PRINT" title="PRINT">
+         PRINT
+        </a>
+        will not print some characters in QB64 or QB.
+       </dd>
+      </dl>
+      <center>
+       Use
+       <b>
+        <a href="/qb64wiki/index.php/CONTROLCHR" title="CONTROLCHR">
+         _CONTROLCHR
+        </a>
+        OFF
+       </b>
+       to
+       <a href="/qb64wiki/index.php/PRINT" title="PRINT">
+        PRINT
+       </a>
+       control characters in QB64!
+      </center>
+      <p>
+       <br/>
+      </p>
+      <center>
+       <b>
+        <a href="/qb64wiki/index.php/ASCII" title="ASCII">
+         ASCII
+        </a>
+        8 X 16 Text Character size increased using
+        <a href="/qb64wiki/index.php/LINE" title="LINE">
+         LINE
+        </a>
+       </b>
+      </center>
+      <table cellpadding="15px" width="100%">
+       <tbody>
+        <tr>
+         <td>
+          <pre class="codeide"><a href="/qb64wiki/index.php/SUB" title="SUB"><span style="color:#4593D8;">SUB</span></a> DisplayText (Xpos, Ypos, FG, BG, Xsize, Ysize, text$)
+x = Xpos: y = Ypos: Xoff = (8 * Xsize): L = <a href="/qb64wiki/index.php/LEN" title="LEN"><span style="color:#4593D8;">LEN</span></a>(text$)
+<a href="/qb64wiki/index.php/IF...THEN" title="IF...THEN"><span style="color:#4593D8;">IF</span></a> BG <a href="/qb64wiki/index.php/THEN" title="THEN"><span style="color:#4593D8;">THEN</span></a>                                 'set BackGround if not 0
+<a href="/qb64wiki/index.php/LINE" title="LINE"><span style="color:#4593D8;">LINE</span></a> (x - (2 * Xsize), y - Ysize)-(x + (L * Xoff), y + (16 * Ysize)), BG, BF
+<a class="mw-redirect" href="/qb64wiki/index.php/END_IF" title="END IF"><span style="color:#4593D8;">END IF</span></a>
+<a href="/qb64wiki/index.php/FOR...NEXT" title="FOR...NEXT"><span style="color:#4593D8;">FOR</span></a> character = 1 <a href="/qb64wiki/index.php/TO" title="TO"><span style="color:#4593D8;">TO</span></a> L                     'go through text chars
+  tx = <a href="/qb64wiki/index.php/ASC_(function)" title="ASC (function)"><span style="color:#4593D8;">ASC</span></a>(<a href="/qb64wiki/index.php/MID$_(function)" title="MID$ (function)"><span style="color:#4593D8;">MID$</span></a>(text$, character, 1))      'get ASCII value
+  <a href="/qb64wiki/index.php/FOR...NEXT" title="FOR...NEXT"><span style="color:#4593D8;">FOR</span></a> r = 0 <a href="/qb64wiki/index.php/TO" title="TO"><span style="color:#4593D8;">TO</span></a> 15                          'current row of 16
+    <a href="/qb64wiki/index.php/FOR...NEXT" title="FOR...NEXT"><span style="color:#4593D8;">FOR</span></a> c = 0 <a href="/qb64wiki/index.php/TO" title="TO"><span style="color:#4593D8;">TO</span></a> 7 '                       'cycle through 8 bit values
+      <a href="/qb64wiki/index.php/IF...THEN" title="IF...THEN"><span style="color:#4593D8;">IF</span></a> <a href="/qb64wiki/index.php/ASC_(function)" title="ASC (function)"><span style="color:#4593D8;">ASC</span></a>(Char(tx, r)) <a href="/qb64wiki/index.php/AND" title="AND"><span style="color:#4593D8;">AND</span></a> 2 ^ c <a href="/qb64wiki/index.php/THEN" title="THEN"><span style="color:#4593D8;">THEN</span></a>      'if bit is on
+        <a href="/qb64wiki/index.php/LINE" title="LINE"><span style="color:#4593D8;">LINE</span></a> (x, y)-(x + Xsize - 1, y + Ysize - 1), FG, BF
+      <a class="mw-redirect" href="/qb64wiki/index.php/END_IF" title="END IF"><span style="color:#4593D8;">END IF</span></a>  'adapted from code by TerryRitchie @ www.QB64.net
+      x = x + Xsize                        'move x position
+    <a href="/qb64wiki/index.php/NEXT" title="NEXT"><span style="color:#4593D8;">NEXT</span></a> c                                 'next bit
+    y = y + Ysize                          'move y position
+    x = Xpos                               'reset column position
+  <a href="/qb64wiki/index.php/NEXT" title="NEXT"><span style="color:#4593D8;">NEXT</span></a> r
+  y = Ypos                                 'reset y position
+  Xpos = Xpos + Xoff                       'set to next character column
+<a href="/qb64wiki/index.php/NEXT" title="NEXT"><span style="color:#4593D8;">NEXT</span></a> character                             'next character
+<a href="/qb64wiki/index.php/END_SUB" title="END SUB"><span style="color:#4593D8;">END SUB</span></a>
+</pre>
+         </td>
+        </tr>
+       </tbody>
+      </table>
+      <center>
+       <span style="font-family: Courier New, Courier, monospace; font-size: 0.80em; line-height: 50%;">
+        Adapted from code by Terry Ritchie
+       </span>
+      </center>
+      <dl>
+       <dd>
+        <b>
+         NOTE: This procedure requires Char
+         <a href="/qb64wiki/index.php/STRING" title="STRING">
+          STRING
+         </a>
+         array data created by the TextSave
+         <a href="/qb64wiki/index.php/SUB" title="SUB">
+          SUB
+         </a>
+         from above to be run first!
+        </b>
+        <ul>
+         <li>
+          <i>
+           Xpos
+          </i>
+          and
+          <i>
+           Ypos
+          </i>
+          parameters set the top left graphic start position coordinate of the text string.
+          <a href="/qb64wiki/index.php/LOCATE" title="LOCATE">
+           LOCATE
+          </a>
+          cannot be used.
+         </li>
+         <li>
+          <i>
+           FG
+          </i>
+          and
+          <i>
+           BG
+          </i>
+          determine the text foreground and background colors respectively. If BG is 0, then no background color is used.
+         </li>
+         <li>
+          <i>
+           Xsize
+          </i>
+          and
+          <i>
+           Ysize
+          </i>
+          determines the size multiple increase of the letters. One is normal size, two is double size etc.
+         </li>
+         <li>
+          <i>
+           text$
+          </i>
+          is the text
+          <a href="/qb64wiki/index.php/STRING" title="STRING">
+           STRING
+          </a>
+          that is to be printed. There will not be an error or screen roll if text goes out of the screen area!
+         </li>
+        </ul>
+       </dd>
+      </dl>
+      <p>
+       <br/>
+      </p>
+      <p style="text-align: center">
+       (
+       <a href="#toc">
+        Return to Top
+       </a>
+       )
+      </p>
+      <p>
+       <br/>
+      </p>
+      <h2>
+       <span class="mw-headline" id="Font_and_Unicode_Conversion">
+        Font and Unicode Conversion
+       </span>
+      </h2>
+      <p>
+       To convert different sized
+       <a href="/qb64wiki/index.php/FONT" title="FONT">
+        fonts
+       </a>
+       or
+       <a href="/qb64wiki/index.php/Unicode" title="Unicode">
+        Unicode
+       </a>
+       characters, first determine the text block size to find how much data is required:
+      </p>
+      <table cellpadding="15px" width="100%">
+       <tbody>
+        <tr>
+         <td>
+          <pre class="codeide">                           'Code must be run in QB64 ONLY!
+<a href="/qb64wiki/index.php/DEFINT" title="DEFINT"><span style="color:#4593D8;">DEFINT</span></a> A-Z
+<a href="/qb64wiki/index.php/DIM" title="DIM"><span style="color:#4593D8;">DIM</span></a> <a href="/qb64wiki/index.php/SHARED" title="SHARED"><span style="color:#4593D8;">SHARED</span></a> high%  'value is shared with both SUB procedures!
+DO
+  <a href="/qb64wiki/index.php/INPUT" title="INPUT"><span style="color:#4593D8;">INPUT</span></a> "Enter Screen mode 1, 2 or 7 to 13 or 256 for <a href="/qb64wiki/index.php/NEWIMAGE" title="NEWIMAGE"><span style="color:#4593D8;">_NEWIMAGE</span></a>: ", scr$
+  mode% = <a href="/qb64wiki/index.php/VAL" title="VAL"><span style="color:#4593D8;">VAL</span></a>(scr$)
+<a href="/qb64wiki/index.php/LOOP" title="LOOP"><span style="color:#4593D8;">LOOP</span></a> <a href="/qb64wiki/index.php/UNTIL" title="UNTIL"><span style="color:#4593D8;">UNTIL</span></a> mode% &gt; 0
+<a href="/qb64wiki/index.php/SELECT_CASE" title="SELECT CASE"><span style="color:#4593D8;">SELECT CASE</span></a> mode%
+  <a class="mw-redirect" href="/qb64wiki/index.php/CASE" title="CASE"><span style="color:#4593D8;">CASE</span></a> 1, 2, 7 <a href="/qb64wiki/index.php/TO" title="TO"><span style="color:#4593D8;">TO</span></a> 13: <a href="/qb64wiki/index.php/SCREEN" title="SCREEN"><span style="color:#4593D8;">SCREEN</span></a> mode%
+  <a class="mw-redirect" href="/qb64wiki/index.php/CASE" title="CASE"><span style="color:#4593D8;">CASE</span></a> 256: <a href="/qb64wiki/index.php/SCREEN" title="SCREEN"><span style="color:#4593D8;">SCREEN</span></a> <a href="/qb64wiki/index.php/NEWIMAGE" title="NEWIMAGE"><span style="color:#4593D8;">_NEWIMAGE</span></a>(800, 600, mode%)
+  <a class="mw-redirect" href="/qb64wiki/index.php/CASE_ELSE" title="CASE ELSE"><span style="color:#4593D8;">CASE ELSE</span></a>: <a href="/qb64wiki/index.php/PRINT" title="PRINT"><span style="color:#4593D8;">PRINT</span></a> "Invalid screen mode selected!": <a href="/qb64wiki/index.php/END" title="END"><span style="color:#4593D8;">END</span></a>
+<a href="/qb64wiki/index.php/END_SELECT" title="END SELECT"><span style="color:#4593D8;">END SELECT</span></a>
+
+<a href="/qb64wiki/index.php/INPUT" title="INPUT"><span style="color:#4593D8;">INPUT</span></a> "Enter first name of TTF font to use or hit Enter for block size: ", TTFont$
+<a href="/qb64wiki/index.php/IF...THEN" title="IF...THEN"><span style="color:#4593D8;">IF</span></a> <a href="/qb64wiki/index.php/LEN" title="LEN"><span style="color:#4593D8;">LEN</span></a>(TTFont$) <a href="/qb64wiki/index.php/THEN" title="THEN"><span style="color:#4593D8;">THEN</span></a> <a href="/qb64wiki/index.php/INPUT" title="INPUT"><span style="color:#4593D8;">INPUT</span></a> "Enter font height: ", hi$
+height% = <a href="/qb64wiki/index.php/VAL" title="VAL"><span style="color:#4593D8;">VAL</span></a>(hi$)
+<a href="/qb64wiki/index.php/IF...THEN" title="IF...THEN"><span style="color:#4593D8;">IF</span></a> height% &gt; 0 <a href="/qb64wiki/index.php/THEN" title="THEN"><span style="color:#4593D8;">THEN</span></a>
+  fnt&amp; = <a href="/qb64wiki/index.php/LOADFONT" title="LOADFONT"><span style="color:#4593D8;">_LOADFONT</span></a>("C:\Windows\Fonts\" + TTFont$ + ".ttf", height%, style$)
+  <a href="/qb64wiki/index.php/IF...THEN" title="IF...THEN"><span style="color:#4593D8;">IF</span></a> fnt&amp; &lt;= 0 <a href="/qb64wiki/index.php/THEN" title="THEN"><span style="color:#4593D8;">THEN</span></a> <a href="/qb64wiki/index.php/PRINT" title="PRINT"><span style="color:#4593D8;">PRINT</span></a> "Invalid Font handle!": <a href="/qb64wiki/index.php/END" title="END"><span style="color:#4593D8;">END</span></a>
+  <a href="/qb64wiki/index.php/FONT" title="FONT"><span style="color:#4593D8;">_FONT</span></a> fnt&amp;
+<a class="mw-redirect" href="/qb64wiki/index.php/END_IF" title="END IF"><span style="color:#4593D8;">END IF</span></a>
+
+  'add <a href="/qb64wiki/index.php/Unicode" title="Unicode"><span style="color:#4593D8;">Unicode</span></a> <a href="/qb64wiki/index.php/Code_Pages" title="Code Pages"><span style="color:#4593D8;">Code Page</span></a> data using <a href="/qb64wiki/index.php/MAPUNICODE" title="MAPUNICODE"><span style="color:#4593D8;">_MAPUNICODE</span></a> here:
+
+high% = <a href="/qb64wiki/index.php/FONTHEIGHT" title="FONTHEIGHT"><span style="color:#4593D8;">_FONTHEIGHT</span></a>: wid% = <a href="/qb64wiki/index.php/PRINTWIDTH" title="PRINTWIDTH"><span style="color:#4593D8;">_PRINTWIDTH</span></a>("W")
+<a href="/qb64wiki/index.php/DIM" title="DIM"><span style="color:#4593D8;">DIM</span></a> <a href="/qb64wiki/index.php/SHARED" title="SHARED"><span style="color:#4593D8;">SHARED</span></a> Char(0 <a href="/qb64wiki/index.php/TO" title="TO"><span style="color:#4593D8;">TO</span></a> 255, 0 <a href="/qb64wiki/index.php/TO" title="TO"><span style="color:#4593D8;">TO</span></a> high%) <a href="/qb64wiki/index.php/AS" title="AS"><span style="color:#4593D8;">AS</span></a> <a href="/qb64wiki/index.php/INTEGER" title="INTEGER"><span style="color:#4593D8;">INTEGER</span></a> 'size for integer <a href="/qb64wiki/index.php/MKI$" title="MKI$"><span style="color:#4593D8;">MKI$</span></a> strings up to 16 wide
+TextSave 'create character pixel data
+
+DisplayText 10, 20, 15, 2, 2, "This is a graphic test of font!"
+
+<a href="/qb64wiki/index.php/PRINTSTRING" title="PRINTSTRING"><span style="color:#4593D8;">_PRINTSTRING</span></a> (10, 120), "Actual text or font size =" + <a href="/qb64wiki/index.php/STR$" title="STR$"><span style="color:#4593D8;">STR$</span></a>(wid%) + " X" + <a href="/qb64wiki/index.php/STR$" title="STR$"><span style="color:#4593D8;">STR$</span></a>(high%)
+
+Char(0, 0) = high%  'place font height at start of array and file. Other dimension always 255
+ff = <a href="/qb64wiki/index.php/FREEFILE" title="FREEFILE"><span style="color:#4593D8;">FREEFILE</span></a>
+<a href="/qb64wiki/index.php/OPEN" title="OPEN"><span style="color:#4593D8;">OPEN</span></a> "FontText.bin" <a href="/qb64wiki/index.php/FOR" title="FOR"><span style="color:#4593D8;">FOR</span></a> <a class="mw-redirect" href="/qb64wiki/index.php/OUTPUT" title="OUTPUT"><span style="color:#4593D8;">OUTPUT</span></a> <a href="/qb64wiki/index.php/AS" title="AS"><span style="color:#4593D8;">AS</span></a> #ff 'erase previous data
+<a href="/qb64wiki/index.php/CLOSE" title="CLOSE"><span style="color:#4593D8;">CLOSE</span></a> #ff
+<a href="/qb64wiki/index.php/OPEN" title="OPEN"><span style="color:#4593D8;">OPEN</span></a> "FontText.bin" <a href="/qb64wiki/index.php/FOR" title="FOR"><span style="color:#4593D8;">FOR</span></a> <a class="mw-redirect" href="/qb64wiki/index.php/BINARY" title="BINARY"><span style="color:#4593D8;">BINARY</span></a> <a href="/qb64wiki/index.php/AS" title="AS"><span style="color:#4593D8;">AS</span></a> #ff
+<a href="/qb64wiki/index.php/PUT" title="PUT"><span style="color:#4593D8;">PUT</span></a> #ff, , Char()                'PUT the entire array into a BINARY file
+<a href="/qb64wiki/index.php/CLOSE" title="CLOSE"><span style="color:#4593D8;">CLOSE</span></a> #ff
+
+<a href="/qb64wiki/index.php/END" title="END"><span style="color:#4593D8;">END</span></a>
+
+<a href="/qb64wiki/index.php/SUB" title="SUB"><span style="color:#4593D8;">SUB</span></a> DisplayText (Xpos, Ypos, FG, Xsize, Ysize, text$)
+x = Xpos: y = Ypos: L = <a href="/qb64wiki/index.php/LEN" title="LEN"><span style="color:#4593D8;">LEN</span></a>(text$)
+<a href="/qb64wiki/index.php/FOR...NEXT" title="FOR...NEXT"><span style="color:#4593D8;">FOR</span></a> character = 1 <a href="/qb64wiki/index.php/TO" title="TO"><span style="color:#4593D8;">TO</span></a> L 'go through text chars
+  tx = <a href="/qb64wiki/index.php/ASC_(function)" title="ASC (function)"><span style="color:#4593D8;">ASC</span></a>(<a href="/qb64wiki/index.php/MID$_(function)" title="MID$ (function)"><span style="color:#4593D8;">MID$</span></a>(text$, character, 1))               'get each letter's ASCII value
+  wide% = Char(tx, high%): Xoff = wide% * Xsize     'get font width from high row
+  <a href="/qb64wiki/index.php/FOR...NEXT" title="FOR...NEXT"><span style="color:#4593D8;">FOR</span></a> r% = 0 <a href="/qb64wiki/index.php/TO" title="TO"><span style="color:#4593D8;">TO</span></a> high% - 1                           'current row value
+    value% = Char(tx, r%)                           'row byte value
+    <a href="/qb64wiki/index.php/FOR...NEXT" title="FOR...NEXT"><span style="color:#4593D8;">FOR</span></a> c% = 0 <a href="/qb64wiki/index.php/TO" title="TO"><span style="color:#4593D8;">TO</span></a> wide% - 1                         'cycle through bit values
+      <a href="/qb64wiki/index.php/IF...THEN" title="IF...THEN"><span style="color:#4593D8;">IF</span></a> value% <a href="/qb64wiki/index.php/AND" title="AND"><span style="color:#4593D8;">AND</span></a> 2 ^ c% <a href="/qb64wiki/index.php/THEN" title="THEN"><span style="color:#4593D8;">THEN</span></a> 'if bit is on
+        <a href="/qb64wiki/index.php/LINE" title="LINE"><span style="color:#4593D8;">LINE</span></a> (x, y)-(x + Xsize - 1, y + Ysize - 1), FG, BF
+      <a class="mw-redirect" href="/qb64wiki/index.php/END_IF" title="END IF"><span style="color:#4593D8;">END IF</span></a>               'adapted from code by TerryRitchie @ www.QB64.net
+      x = x + Xsize                      'move x position
+    <a href="/qb64wiki/index.php/NEXT" title="NEXT"><span style="color:#4593D8;">NEXT</span></a> c%                              'next column bit
+    y = y + Ysize                        'move y position
+    x = Xpos                             'reset column position
+  <a href="/qb64wiki/index.php/NEXT" title="NEXT"><span style="color:#4593D8;">NEXT</span></a> r%
+  y = Ypos                               'reset y position
+  Xpos = Xpos + Xoff                     'set to next character column
+<a href="/qb64wiki/index.php/NEXT" title="NEXT"><span style="color:#4593D8;">NEXT</span></a> character
+<a href="/qb64wiki/index.php/END_SUB" title="END SUB"><span style="color:#4593D8;">END SUB</span></a>
+
+<a href="/qb64wiki/index.php/SUB" title="SUB"><span style="color:#4593D8;">SUB</span></a> TextSave
+<a href="/qb64wiki/index.php/OUT" title="OUT"><span style="color:#4593D8;">OUT</span></a> <a href="/qb64wiki/index.php/%26H" title="&amp;H"><span style="color:#4593D8;">&amp;H</span></a>3C8, 15: <a href="/qb64wiki/index.php/OUT" title="OUT"><span style="color:#4593D8;">OUT</span></a> <a href="/qb64wiki/index.php/%26H" title="&amp;H"><span style="color:#4593D8;">&amp;H</span></a>3C9, 0: <a href="/qb64wiki/index.php/OUT" title="OUT"><span style="color:#4593D8;">OUT</span></a> <a href="/qb64wiki/index.php/%26H" title="&amp;H"><span style="color:#4593D8;">&amp;H</span></a>3C9, 0: <a href="/qb64wiki/index.php/OUT" title="OUT"><span style="color:#4593D8;">OUT</span></a> <a href="/qb64wiki/index.php/%26H" title="&amp;H"><span style="color:#4593D8;">&amp;H</span></a>3C9, 0 'print text as background color
+<a href="/qb64wiki/index.php/FOR...NEXT" title="FOR...NEXT"><span style="color:#4593D8;">FOR</span></a> ascii% = 0 <a href="/qb64wiki/index.php/TO" title="TO"><span style="color:#4593D8;">TO</span></a> 255 'Draw map of each character
+  <a href="/qb64wiki/index.php/CLS" title="CLS"><span style="color:#4593D8;">CLS</span></a>
+  <a href="/qb64wiki/index.php/PRINTSTRING" title="PRINTSTRING"><span style="color:#4593D8;">_PRINTSTRING</span></a> (0, 0), <a href="/qb64wiki/index.php/CHR$" title="CHR$"><span style="color:#4593D8;">CHR$</span></a>(ascii%) '<a href="/qb64wiki/index.php/PRINT" title="PRINT"><span style="color:#4593D8;">PRINT</span></a> ASCII characters to top left corner
+  wide% = <a href="/qb64wiki/index.php/PRINTWIDTH" title="PRINTWIDTH"><span style="color:#4593D8;">_PRINTWIDTH</span></a>(<a href="/qb64wiki/index.php/CHR$" title="CHR$"><span style="color:#4593D8;">CHR$</span></a>(ascii%))
+  <a href="/qb64wiki/index.php/FOR...NEXT" title="FOR...NEXT"><span style="color:#4593D8;">FOR</span></a> row% = 0 <a href="/qb64wiki/index.php/TO" title="TO"><span style="color:#4593D8;">TO</span></a> high% - 1 'read row byte values
+    byte% = 0 'reset value every row
+    <a href="/qb64wiki/index.php/FOR...NEXT" title="FOR...NEXT"><span style="color:#4593D8;">FOR</span></a> col% = wide% - 1 <a href="/qb64wiki/index.php/TO" title="TO"><span style="color:#4593D8;">TO</span></a> 0 <a href="/qb64wiki/index.php/STEP" title="STEP"><span style="color:#4593D8;">STEP</span></a> -1 'read pixels from right to left
+      byte% = byte% * 2 - (<a href="/qb64wiki/index.php/POINT" title="POINT"><span style="color:#4593D8;">POINT</span></a>(col%, row%) &gt; 0) 'bit-packing with 2 ^ bit
+    <a href="/qb64wiki/index.php/NEXT" title="NEXT"><span style="color:#4593D8;">NEXT</span></a>
+    Char(ascii%, row%) = byte% 'convert row byte value to 2 byte <a href="/qb64wiki/index.php/MKI$" title="MKI$"><span style="color:#4593D8;">MKI$</span></a> character
+  <a href="/qb64wiki/index.php/NEXT" title="NEXT"><span style="color:#4593D8;">NEXT</span></a>
+  Char(ascii%, high%) = wide%  'place individual font widths into array high row
+<a href="/qb64wiki/index.php/NEXT" title="NEXT"><span style="color:#4593D8;">NEXT</span></a>
+<a href="/qb64wiki/index.php/PALETTE" title="PALETTE"><span style="color:#4593D8;">PALETTE</span></a> 'restore all palette colors
+<a href="/qb64wiki/index.php/END_SUB" title="END SUB"><span style="color:#4593D8;">END SUB</span></a>
+</pre>
+         </td>
+        </tr>
+       </tbody>
+      </table>
+      <center>
+       <span style="font-family: Courier New, Courier, monospace; font-size: 0.80em; line-height: 50%;">
+        Code by Ted Weissgerber
+       </span>
+      </center>
+      <dl>
+       <dd>
+        <i>
+         Explanation:
+        </i>
+        <a href="/qb64wiki/index.php/PRINTWIDTH" title="PRINTWIDTH">
+         _PRINTWIDTH
+        </a>
+        can read the pixel width of one character and can be used to measure non-monospace fonts.
+       </dd>
+       <dd>
+        If the character width is wider than 8 pixels, we can no longer store the exponent of two values in one
+        <a href="/qb64wiki/index.php/BYTE" title="BYTE">
+         byte
+        </a>
+        or represent that byte as an
+        <a href="/qb64wiki/index.php/ASCII" title="ASCII">
+         ASCII
+        </a>
+        character so we can use an
+        <a href="/qb64wiki/index.php/INTEGER" title="INTEGER">
+         INTEGER
+        </a>
+        or
+        <a href="/qb64wiki/index.php/LONG" title="LONG">
+         LONG
+        </a>
+        array to hold the values, which can be saved to file with
+        <a href="/qb64wiki/index.php/PUT" title="PUT">
+         PUT
+        </a>
+        .
+       </dd>
+      </dl>
+      <center>
+       <b>
+        Variable font widths
+       </b>
+      </center>
+      <dl>
+       <dd>
+        Some fonts vary in width for every character so we can store
+        <i>
+         wide&amp;
+        </i>
+        as a
+        <a href="/qb64wiki/index.php/HEX$" title="HEX$">
+         HEX$
+        </a>
+        value in the
+        <i>
+         high&amp;
+        </i>
+        array row value as we use 0 through
+        <i>
+         high&amp;
+        </i>
+        - 1 to store the bit totals. Save the
+        <i>
+         high&amp;
+        </i>
+        <a href="/qb64wiki/index.php/FONTHEIGHT" title="FONTHEIGHT">
+         _FONTHEIGHT
+        </a>
+        value for the sub-procedures and to dimension an array!
+       </dd>
+       <dd>
+        <b>
+         This allows the use of DisplayText
+         <a href="/qb64wiki/index.php/SUB" title="SUB">
+          SUB
+         </a>
+         in a QBasic program to read the data when you save the array data to a file.
+        </b>
+       </dd>
+      </dl>
+      <p style="text-align: center">
+       (
+       <a href="#toc">
+        Return to Top
+       </a>
+       )
+      </p>
+      <p>
+       <br/>
+      </p>
+      <h2>
+       <span class="mw-headline" id="Reading_the_Data_File">
+        Reading the Data File
+       </span>
+      </h2>
+      <center>
+       <b>
+        Reading the file data in a QB64 program only
+       </b>
+      </center>
+      <table cellpadding="15px" width="100%">
+       <tbody>
+        <tr>
+         <td>
+          <pre class="codeide"><a href="/qb64wiki/index.php/DEFINT" title="DEFINT"><span style="color:#4593D8;">DEFINT</span></a> A-Z
+<a href="/qb64wiki/index.php/DIM" title="DIM"><span style="color:#4593D8;">DIM</span></a> <a href="/qb64wiki/index.php/SHARED" title="SHARED"><span style="color:#4593D8;">SHARED</span></a> high% 'must share with DisplayText SUB!
+<a href="/qb64wiki/index.php/SCREEN" title="SCREEN"><span style="color:#4593D8;">SCREEN</span></a> <a href="/qb64wiki/index.php/NEWIMAGE" title="NEWIMAGE"><span style="color:#4593D8;">_NEWIMAGE</span></a>(800, 600, 256)
+
+f = <a href="/qb64wiki/index.php/FREEFILE" title="FREEFILE"><span style="color:#4593D8;">FREEFILE</span></a>
+<a href="/qb64wiki/index.php/OPEN" title="OPEN"><span style="color:#4593D8;">OPEN</span></a> "FontText.bin" <a href="/qb64wiki/index.php/FOR...NEXT" title="FOR...NEXT"><span style="color:#4593D8;">FOR</span></a> <a class="mw-redirect" href="/qb64wiki/index.php/BINARY" title="BINARY"><span style="color:#4593D8;">BINARY</span></a> <a href="/qb64wiki/index.php/AS" title="AS"><span style="color:#4593D8;">AS</span></a> #f
+<a href="/qb64wiki/index.php/GET" title="GET"><span style="color:#4593D8;">GET</span></a> #f, , high%   'GET the first integer value as the second array dimension
+<a href="/qb64wiki/index.php/SEEK" title="SEEK"><span style="color:#4593D8;">SEEK</span></a> #f, 1        'SEEK moves back to the beginning of the file
+<a href="/qb64wiki/index.php/PRINT" title="PRINT"><span style="color:#4593D8;">PRINT</span></a> high%
+<a href="/qb64wiki/index.php/REDIM" title="REDIM"><span style="color:#4593D8;">REDIM</span></a> <a href="/qb64wiki/index.php/SHARED" title="SHARED"><span style="color:#4593D8;">SHARED</span></a> Char(0 <a href="/qb64wiki/index.php/TO" title="TO"><span style="color:#4593D8;">TO</span></a> 255, 0 <a href="/qb64wiki/index.php/TO" title="TO"><span style="color:#4593D8;">TO</span></a> high%) <a href="/qb64wiki/index.php/AS" title="AS"><span style="color:#4593D8;">AS</span></a> <a href="/qb64wiki/index.php/INTEGER" title="INTEGER"><span style="color:#4593D8;">INTEGER</span></a>  'Dynamic array
+<a href="/qb64wiki/index.php/GET" title="GET"><span style="color:#4593D8;">GET</span></a> #f, , Char()  'one GET moves all of the data back to the array once it is sized correctly
+<a href="/qb64wiki/index.php/CLOSE" title="CLOSE"><span style="color:#4593D8;">CLOSE</span></a> #f
+Char(0, 0) = 0
+
+DisplayText 10, 100, 12, 4, 4, "This is the font from the BIN file!"
+
+<a href="/qb64wiki/index.php/END" title="END"><span style="color:#4593D8;">END</span></a>
+
+<a href="/qb64wiki/index.php/SUB" title="SUB"><span style="color:#4593D8;">SUB</span></a> DisplayText (Xpos, Ypos, FG, Xsize, Ysize, text$)
+x = Xpos: y = Ypos: L = <a href="/qb64wiki/index.php/LEN" title="LEN"><span style="color:#4593D8;">LEN</span></a>(text$)
+<a href="/qb64wiki/index.php/FOR...NEXT" title="FOR...NEXT"><span style="color:#4593D8;">FOR</span></a> character = 1 <a href="/qb64wiki/index.php/TO" title="TO"><span style="color:#4593D8;">TO</span></a> L                              'go through text chars
+  tx = <a href="/qb64wiki/index.php/ASC_(function)" title="ASC (function)"><span style="color:#4593D8;">ASC</span></a>(<a href="/qb64wiki/index.php/MID$_(function)" title="MID$ (function)"><span style="color:#4593D8;">MID$</span></a>(text$, character, 1))               'get ASCII value
+  wide% = Char(tx, high%): Xoff = wide% * Xsize     'read variable font widths
+  <a href="/qb64wiki/index.php/FOR...NEXT" title="FOR...NEXT"><span style="color:#4593D8;">FOR</span></a> r% = 0 <a href="/qb64wiki/index.php/TO" title="TO"><span style="color:#4593D8;">TO</span></a> high% - 1           'current row value
+    value% = Char(tx, r%)
+    <a href="/qb64wiki/index.php/FOR...NEXT" title="FOR...NEXT"><span style="color:#4593D8;">FOR</span></a> c% = 0 <a href="/qb64wiki/index.php/TO" title="TO"><span style="color:#4593D8;">TO</span></a> wide% - 1        'cycle through bit values
+      <a href="/qb64wiki/index.php/IF...THEN" title="IF...THEN"><span style="color:#4593D8;">IF</span></a> value% <a href="/qb64wiki/index.php/AND" title="AND"><span style="color:#4593D8;">AND</span></a> 2 ^ c% <a href="/qb64wiki/index.php/THEN" title="THEN"><span style="color:#4593D8;">THEN</span></a> 'if bit is on
+        <a href="/qb64wiki/index.php/LINE" title="LINE"><span style="color:#4593D8;">LINE</span></a> (x, y)-(x + Xsize - 1, y + Ysize - 1), FG, BF
+      <a class="mw-redirect" href="/qb64wiki/index.php/END_IF" title="END IF"><span style="color:#4593D8;">END IF</span></a>                'adapted from code by TerryRitchie @ www.QB64.net
+      x = x + Xsize                'move x position
+    <a href="/qb64wiki/index.php/NEXT" title="NEXT"><span style="color:#4593D8;">NEXT</span></a> c%                        'next bit
+    y = y + Ysize                  'move y position
+    x = Xpos                       'reset column position
+  <a href="/qb64wiki/index.php/NEXT" title="NEXT"><span style="color:#4593D8;">NEXT</span></a> r%
+  y = Ypos                         'reset y position
+  Xpos = Xpos + Xoff               'set to next character column
+<a href="/qb64wiki/index.php/NEXT" title="NEXT"><span style="color:#4593D8;">NEXT</span></a> character
+<a href="/qb64wiki/index.php/END_SUB" title="END SUB"><span style="color:#4593D8;">END SUB</span></a>
+</pre>
+         </td>
+        </tr>
+       </tbody>
+      </table>
+      <center>
+       <i>
+        Note:
+       </i>
+       Use empty parenthesis after the
+       <a href="/qb64wiki/index.php/Arrays" title="Arrays">
+        array
+       </a>
+       name to
+       <a href="/qb64wiki/index.php/PUT" title="PUT">
+        PUT
+       </a>
+       # or
+       <a href="/qb64wiki/index.php/GET" title="GET">
+        GET
+       </a>
+       # the entire array, even multi-dimensional ones.
+      </center>
+      <p>
+       <br/>
+      </p>
+      <center>
+       <b>
+        Reading the file data in a QBasic or QB64 program
+       </b>
+      </center>
+      <table cellpadding="15px" width="100%">
+       <tbody>
+        <tr>
+         <td>
+          <pre class="codeide"><a href="/qb64wiki/index.php/DEFINT" title="DEFINT"><span style="color:#4593D8;">DEFINT</span></a> A-Z
+<a href="/qb64wiki/index.php/SCREEN" title="SCREEN"><span style="color:#4593D8;">SCREEN</span></a> 12
+<a href="/qb64wiki/index.php/DIM" title="DIM"><span style="color:#4593D8;">DIM</span></a> <a href="/qb64wiki/index.php/SHARED" title="SHARED"><span style="color:#4593D8;">SHARED</span></a> high% 'must share with DisplayText SUB!
+
+f = <a href="/qb64wiki/index.php/FREEFILE" title="FREEFILE"><span style="color:#4593D8;">FREEFILE</span></a>
+<a href="/qb64wiki/index.php/OPEN" title="OPEN"><span style="color:#4593D8;">OPEN</span></a> "FontText.bin" <a href="/qb64wiki/index.php/FOR...NEXT" title="FOR...NEXT"><span style="color:#4593D8;">FOR</span></a> <a class="mw-redirect" href="/qb64wiki/index.php/BINARY" title="BINARY"><span style="color:#4593D8;">BINARY</span></a> <a href="/qb64wiki/index.php/AS" title="AS"><span style="color:#4593D8;">AS</span></a> #f
+<a href="/qb64wiki/index.php/GET" title="GET"><span style="color:#4593D8;">GET</span></a> #f, , high% '<a href="/qb64wiki/index.php/GET_(graphics_statement)" title="GET (graphics statement)"><span style="color:#4593D8;">GET</span></a> the first integer value as the second array dimension
+
+<a href="/qb64wiki/index.php/REDIM" title="REDIM"><span style="color:#4593D8;">REDIM</span></a> <a href="/qb64wiki/index.php/SHARED" title="SHARED"><span style="color:#4593D8;">SHARED</span></a> Char(0 <a href="/qb64wiki/index.php/TO" title="TO"><span style="color:#4593D8;">TO</span></a> 255, 0 <a href="/qb64wiki/index.php/TO" title="TO"><span style="color:#4593D8;">TO</span></a> high%) <a href="/qb64wiki/index.php/AS" title="AS"><span style="color:#4593D8;">AS</span></a> <a href="/qb64wiki/index.php/INTEGER" title="INTEGER"><span style="color:#4593D8;">INTEGER</span></a>  'Dynamic array
+ReadData (f)
+
+DisplayText 10, 100, 12, 4, 4, "This is the font from the BIN file!"
+
+<a href="/qb64wiki/index.php/END" title="END"><span style="color:#4593D8;">END</span></a>
+
+<a href="/qb64wiki/index.php/SUB" title="SUB"><span style="color:#4593D8;">SUB</span></a> ReadData (f)
+<a href="/qb64wiki/index.php/SEEK" title="SEEK"><span style="color:#4593D8;">SEEK</span></a> #f, 1                'SEEK moves back to the beginning of the file
+<a href="/qb64wiki/index.php/PRINT" title="PRINT"><span style="color:#4593D8;">PRINT</span></a> high%
+DO
+  <a href="/qb64wiki/index.php/FOR...NEXT" title="FOR...NEXT"><span style="color:#4593D8;">FOR</span></a> row = 0 <a href="/qb64wiki/index.php/TO" title="TO"><span style="color:#4593D8;">TO</span></a> high%    'read each row as a group of 256 values
+    <a href="/qb64wiki/index.php/FOR...NEXT" title="FOR...NEXT"><span style="color:#4593D8;">FOR</span></a> code = 0 <a href="/qb64wiki/index.php/TO" title="TO"><span style="color:#4593D8;">TO</span></a> 255   'read the row value for each character
+      <a href="/qb64wiki/index.php/GET" title="GET"><span style="color:#4593D8;">GET</span></a> #f, , valu%
+      <a href="/qb64wiki/index.php/IF...THEN" title="IF...THEN"><span style="color:#4593D8;">IF</span></a> <a href="/qb64wiki/index.php/EOF" title="EOF"><span style="color:#4593D8;">EOF</span></a>(f) <a href="/qb64wiki/index.php/THEN" title="THEN"><span style="color:#4593D8;">THEN</span></a> <a href="/qb64wiki/index.php/EXIT_DO" title="EXIT DO"><span style="color:#4593D8;">EXIT DO</span></a> 'prevents bad data
+      Char(code, row) = valu%
+  <a href="/qb64wiki/index.php/NEXT" title="NEXT"><span style="color:#4593D8;">NEXT</span></a>: <a href="/qb64wiki/index.php/NEXT" title="NEXT"><span style="color:#4593D8;">NEXT</span></a>
+<a href="/qb64wiki/index.php/LOOP" title="LOOP"><span style="color:#4593D8;">LOOP</span></a> <a href="/qb64wiki/index.php/UNTIL" title="UNTIL"><span style="color:#4593D8;">UNTIL</span></a> 1 = 1 'one time <a href="/qb64wiki/index.php/DO...LOOP" title="DO...LOOP"><span style="color:#4593D8;">DO</span></a> loop if End Of File
+<a href="/qb64wiki/index.php/CLOSE" title="CLOSE"><span style="color:#4593D8;">CLOSE</span></a> #f
+Char(0, 0) = 0          'remove the high% value from CHR$(0) array data
+<a href="/qb64wiki/index.php/END_SUB" title="END SUB"><span style="color:#4593D8;">END SUB</span></a>
+
+<a href="/qb64wiki/index.php/SUB" title="SUB"><span style="color:#4593D8;">SUB</span></a> DisplayText (Xpos, Ypos, FG, Xsize, Ysize, text$)
+x = Xpos: y = Ypos: L = <a href="/qb64wiki/index.php/LEN" title="LEN"><span style="color:#4593D8;">LEN</span></a>(text$)
+<a href="/qb64wiki/index.php/FOR...NEXT" title="FOR...NEXT"><span style="color:#4593D8;">FOR</span></a> character = 1 <a href="/qb64wiki/index.php/TO" title="TO"><span style="color:#4593D8;">TO</span></a> L                                    'go through text chars
+  tx = <a href="/qb64wiki/index.php/ASC_(function)" title="ASC (function)"><span style="color:#4593D8;">ASC</span></a>(<a href="/qb64wiki/index.php/MID$_(function)" title="MID$ (function)"><span style="color:#4593D8;">MID$</span></a>(text$, character, 1))                     'get ASCII value
+  wide% = Char(tx, high%): Xoff = wide% * Xsize           'read variable font widths
+  <a href="/qb64wiki/index.php/FOR...NEXT" title="FOR...NEXT"><span style="color:#4593D8;">FOR</span></a> r% = 0 <a href="/qb64wiki/index.php/TO" title="TO"><span style="color:#4593D8;">TO</span></a> high% - 1                                 'current row value
+    value% = Char(tx, r%)
+    <a href="/qb64wiki/index.php/FOR...NEXT" title="FOR...NEXT"><span style="color:#4593D8;">FOR</span></a> c% = 0 <a href="/qb64wiki/index.php/TO" title="TO"><span style="color:#4593D8;">TO</span></a> wide% - 1 'cycle through bit values
+      <a href="/qb64wiki/index.php/IF...THEN" title="IF...THEN"><span style="color:#4593D8;">IF</span></a> value% <a href="/qb64wiki/index.php/AND_(boolean)" title="AND (boolean)"><span style="color:#4593D8;">AND</span></a> 2 ^ c% <a href="/qb64wiki/index.php/THEN" title="THEN"><span style="color:#4593D8;">THEN</span></a> 'if bit is on
+        <a href="/qb64wiki/index.php/LINE" title="LINE"><span style="color:#4593D8;">LINE</span></a> (x, y)-(x + Xsize - 1, y + Ysize - 1), FG, BF
+      <a class="mw-redirect" href="/qb64wiki/index.php/END_IF" title="END IF"><span style="color:#4593D8;">END IF</span></a>               'adapted from code by TerryRitchie @ www.QB64.net
+      x = x + Xsize               'move x position
+    <a href="/qb64wiki/index.php/NEXT" title="NEXT"><span style="color:#4593D8;">NEXT</span></a> 'next bit
+    y = y + Ysize 'move y position
+    x = Xpos 'reset column position
+  <a href="/qb64wiki/index.php/NEXT" title="NEXT"><span style="color:#4593D8;">NEXT</span></a> r%
+  y = Ypos 'reset y position
+  Xpos = Xpos + Xoff              'set to next character column
+<a href="/qb64wiki/index.php/NEXT" title="NEXT"><span style="color:#4593D8;">NEXT</span></a> character
+<a href="/qb64wiki/index.php/END_SUB" title="END SUB"><span style="color:#4593D8;">END SUB</span></a>
+</pre>
+         </td>
+        </tr>
+       </tbody>
+      </table>
+      <center>
+       The QB64
+       <a href="/qb64wiki/index.php/PUT" title="PUT">
+        PUT
+       </a>
+       <a class="mw-redirect" href="/qb64wiki/index.php/BINARY" title="BINARY">
+        BINARY
+       </a>
+       file can be read to the array by reading the row values for all of the characters as above.
+      </center>
+      <center>
+       <b>
+        The average font file with 256 characters is less than 20 KB in size!
+       </b>
+      </center>
+      <p>
+       <br/>
+      </p>
+      <p style="text-align: center">
+       (
+       <a href="#toc">
+        Return to Top
+       </a>
+       )
+      </p>
+      <p>
+       <br/>
+      </p>
+      <h2>
+       <span class="mw-headline" id="See_also">
+        See also
+       </span>
+      </h2>
+      <ul>
+       <li>
+        <a href="/qb64wiki/index.php/PRINTSTRING" title="PRINTSTRING">
+         _PRINTSTRING
+        </a>
+        ,
+        <a href="/qb64wiki/index.php/PRINTWIDTH" title="PRINTWIDTH">
+         _PRINTWIDTH
+        </a>
+       </li>
+       <li>
+        <a href="/qb64wiki/index.php/LOADFONT" title="LOADFONT">
+         _LOADFONT
+        </a>
+        ,
+        <a href="/qb64wiki/index.php/FONTHEIGHT" title="FONTHEIGHT">
+         _FONTHEIGHT
+        </a>
+       </li>
+       <li>
+        <a href="/qb64wiki/index.php/MAPUNICODE" title="MAPUNICODE">
+         _MAPUNICODE
+        </a>
+        ,
+        <a href="/qb64wiki/index.php/CONTROLCHR" title="CONTROLCHR">
+         _CONTROLCHR
+        </a>
+       </li>
+       <li>
+        <a href="/qb64wiki/index.php/Boolean" title="Boolean">
+         Boolean
+        </a>
+        ,
+        <a href="/qb64wiki/index.php/AND" title="AND">
+         AND
+        </a>
+       </li>
+       <li>
+        <a href="/qb64wiki/index.php/ASCII" title="ASCII">
+         ASCII
+        </a>
+        ,
+        <a href="/qb64wiki/index.php/Unicode" title="Unicode">
+         Unicode
+        </a>
+        ,
+        <a href="/qb64wiki/index.php/Code_Pages" title="Code Pages">
+         Code Pages
+        </a>
+       </li>
+      </ul>
+      <p>
+       <br/>
+      </p>
+      <hr/>
+      <center>
+       <b>
+        Navigation:
+       </b>
+      </center>
+      <center>
+       <a href="/qb64wiki/index.php/Main_Page" title="Main Page">
+        Main Page with Articles and Tutorials
+       </a>
+      </center>
+      <center>
+       <a href="/qb64wiki/index.php/Keyword_Reference_-_Alphabetical" title="Keyword Reference - Alphabetical">
+        Keyword Reference - Alphabetical
+       </a>
+      </center>
+      <center>
+       <a href="/qb64wiki/index.php/Keyword_Reference_-_By_usage" title="Keyword Reference - By usage">
+        Keyword Reference - By usage
+       </a>
+      </center>
+      <center>
+       <b>
+        <a class="external text" href="https://qb64phoenix.com/forum/showthread.php?tid=2800" rel="nofollow">
+         Report a broken link
+        </a>
+       </b>
+       <br/>
+      </center>
+      <!-- 
+NewPP limit report
+Cached time: 20240719143710
+Cache expiry: 86400
+Reduced expiry: false
+Complications: [show‐toc]
+CPU time usage: 0.155 seconds
+Real time usage: 0.171 seconds
+Preprocessor visited node count: 3976/1000000
+Post‐expand include size: 24166/2097152 bytes
+Template argument size: 4377/2097152 bytes
+Highest expansion depth: 3/100
+Expensive parser function count: 0/100
+Unstrip recursion depth: 0/20
+Unstrip post‐expand size: 0/5000000 bytes
+-->
+      <!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%   68.590      1 -total
+ 27.90%   19.135    398 Template:Cl
+  4.75%    3.256     46 Template:Cb
+  4.11%    2.817      1 Template:InlineCodeEnd
+  3.52%    2.417      1 Template:PageSeeAlso
+  3.41%    2.337      1 Template:TextStart
+  3.18%    2.180      6 Template:CodeEnd
+  2.81%    1.928      1 Template:InlineCode
+  2.72%    1.868      6 Template:CodeStart
+  2.72%    1.866      1 Template:TextEnd
+-->
+      <!-- Saved in parser cache with key qb64pnix_mw19894-mwmb_:pcache:idhash:35-0!canonical and timestamp 20240719143710 and revision id 8178.
+ -->
+     </div>
+     <div class="printfooter" data-nosnippet="">
+      Retrieved from "
+      <a dir="ltr" href="https://qb64phoenix.com/qb64wiki/index.php?title=Text_Using_Graphics&amp;oldid=8178">
+       https://qb64phoenix.com/qb64wiki/index.php?title=Text_Using_Graphics&amp;oldid=8178
+      </a>
+      "
+     </div>
+    </div>
+    <div class="catlinks catlinks-allhidden" data-mw="interface" id="catlinks">
+    </div>
+   </div>
+  </div>
+  <div id="mw-navigation">
+   <h2>
+    Navigation menu
+   </h2>
+   <div id="mw-head">
+    <nav aria-labelledby="p-personal-label" class="vector-menu mw-portlet mw-portlet-personal vector-user-menu-legacy" id="p-personal" role="navigation">
+     <h3 class="vector-menu-heading" id="p-personal-label">
+      <span class="vector-menu-heading-label">
+       Personal tools
+      </span>
+     </h3>
+     <div class="vector-menu-content">
+      <ul class="vector-menu-content-list">
+       <li class="mw-list-item" id="pt-login">
+        <a accesskey="o" href="/qb64wiki/index.php?title=Special:UserLogin&amp;returnto=Text+Using+Graphics" title="You are encouraged to log in; however, it is not mandatory [o]">
+         <span>
+          Log in
+         </span>
+        </a>
+       </li>
+      </ul>
+     </div>
+    </nav>
+    <div id="left-navigation">
+     <nav aria-labelledby="p-namespaces-label" class="vector-menu mw-portlet mw-portlet-namespaces vector-menu-tabs vector-menu-tabs-legacy" id="p-namespaces" role="navigation">
+      <h3 class="vector-menu-heading" id="p-namespaces-label">
+       <span class="vector-menu-heading-label">
+        Namespaces
+       </span>
+      </h3>
+      <div class="vector-menu-content">
+       <ul class="vector-menu-content-list">
+        <li class="selected mw-list-item" id="ca-nstab-main">
+         <a accesskey="c" href="/qb64wiki/index.php/Text_Using_Graphics" title="View the content page [c]">
+          <span>
+           Page
+          </span>
+         </a>
+        </li>
+        <li class="new mw-list-item" id="ca-talk">
+         <a accesskey="t" href="/qb64wiki/index.php?title=Talk:Text_Using_Graphics&amp;action=edit&amp;redlink=1" rel="discussion" title="Discussion about the content page (page does not exist) [t]">
+          <span>
+           Discussion
+          </span>
+         </a>
+        </li>
+       </ul>
+      </div>
+     </nav>
+     <nav aria-labelledby="p-variants-label" class="vector-menu mw-portlet mw-portlet-variants emptyPortlet vector-menu-dropdown" id="p-variants" role="navigation">
+      <input aria-haspopup="true" aria-labelledby="p-variants-label" class="vector-menu-checkbox" data-event-name="ui.dropdown-p-variants" id="p-variants-checkbox" role="button" type="checkbox"/>
+      <label aria-label="Change language variant" class="vector-menu-heading" id="p-variants-label">
+       <span class="vector-menu-heading-label">
+        English
+       </span>
+      </label>
+      <div class="vector-menu-content">
+       <ul class="vector-menu-content-list">
+       </ul>
+      </div>
+     </nav>
+    </div>
+    <div id="right-navigation">
+     <nav aria-labelledby="p-views-label" class="vector-menu mw-portlet mw-portlet-views vector-menu-tabs vector-menu-tabs-legacy" id="p-views" role="navigation">
+      <h3 class="vector-menu-heading" id="p-views-label">
+       <span class="vector-menu-heading-label">
+        Views
+       </span>
+      </h3>
+      <div class="vector-menu-content">
+       <ul class="vector-menu-content-list">
+        <li class="selected mw-list-item" id="ca-view">
+         <a href="/qb64wiki/index.php/Text_Using_Graphics">
+          <span>
+           Read
+          </span>
+         </a>
+        </li>
+        <li class="mw-list-item" id="ca-viewsource">
+         <a accesskey="e" href="/qb64wiki/index.php?title=Text_Using_Graphics&amp;action=edit" title="This page is protected.
+You can view its source [e]">
+          <span>
+           View source
+          </span>
+         </a>
+        </li>
+        <li class="mw-list-item" id="ca-history">
+         <a accesskey="h" href="/qb64wiki/index.php?title=Text_Using_Graphics&amp;action=history" title="Past revisions of this page [h]">
+          <span>
+           View history
+          </span>
+         </a>
+        </li>
+       </ul>
+      </div>
+     </nav>
+     <nav aria-labelledby="p-cactions-label" class="vector-menu mw-portlet mw-portlet-cactions emptyPortlet vector-menu-dropdown" id="p-cactions" role="navigation" title="More options">
+      <input aria-haspopup="true" aria-labelledby="p-cactions-label" class="vector-menu-checkbox" data-event-name="ui.dropdown-p-cactions" id="p-cactions-checkbox" role="button" type="checkbox"/>
+      <label class="vector-menu-heading" id="p-cactions-label">
+       <span class="vector-menu-heading-label">
+        More
+       </span>
+      </label>
+      <div class="vector-menu-content">
+       <ul class="vector-menu-content-list">
+       </ul>
+      </div>
+     </nav>
+     <div class="vector-search-box-vue vector-search-box-show-thumbnail vector-search-box-auto-expand-width vector-search-box" id="p-search" role="search">
+      <div>
+       <h3>
+        <label for="searchInput">
+         Search
+        </label>
+       </h3>
+       <form action="/qb64wiki/index.php" class="vector-search-box-form" id="searchform">
+        <div class="vector-search-box-inner" data-search-loc="header-navigation" id="simpleSearch">
+         <input accesskey="f" aria-label="Search QB64 Phoenix Edition Wiki" autocapitalize="sentences" class="vector-search-box-input" id="searchInput" name="search" placeholder="Search QB64 Phoenix Edition Wiki" title="Search QB64 Phoenix Edition Wiki [f]" type="search"/>
+         <input name="title" type="hidden" value="Special:Search"/>
+         <input class="searchButton mw-fallbackSearchButton" id="mw-searchButton" name="fulltext" title="Search the pages for this text" type="submit" value="Search"/>
+         <input class="searchButton" id="searchButton" name="go" title="Go to a page with this exact name if it exists" type="submit" value="Go"/>
+        </div>
+       </form>
+      </div>
+     </div>
+    </div>
+   </div>
+   <div id="mw-panel">
+    <div id="p-logo" role="banner">
+     <a class="mw-wiki-logo" href="/qb64wiki/index.php/Main_Page" title="Visit the main page">
+     </a>
+    </div>
+    <nav aria-labelledby="p-navigation-label" class="vector-menu mw-portlet mw-portlet-navigation vector-menu-portal portal" id="p-navigation" role="navigation">
+     <h3 class="vector-menu-heading" id="p-navigation-label">
+      <span class="vector-menu-heading-label">
+       Navigation
+      </span>
+     </h3>
+     <div class="vector-menu-content">
+      <ul class="vector-menu-content-list">
+       <li class="mw-list-item" id="n-mainpage-description">
+        <a accesskey="z" href="/qb64wiki/index.php/Main_Page" title="Visit the main page [z]">
+         <span>
+          Main page
+         </span>
+        </a>
+       </li>
+       <li class="mw-list-item" id="n-recentchanges">
+        <a accesskey="r" href="/qb64wiki/index.php/Special:RecentChanges" title="A list of recent changes in the wiki [r]">
+         <span>
+          Recent changes
+         </span>
+        </a>
+       </li>
+       <li class="mw-list-item" id="n-randompage">
+        <a accesskey="x" href="/qb64wiki/index.php/Special:Random" title="Load a random page [x]">
+         <span>
+          Random page
+         </span>
+        </a>
+       </li>
+       <li class="mw-list-item" id="n-help-mediawiki">
+        <a href="https://www.mediawiki.org/wiki/Special:MyLanguage/Help:Contents">
+         <span>
+          Help about MediaWiki
+         </span>
+        </a>
+       </li>
+      </ul>
+     </div>
+    </nav>
+    <nav aria-labelledby="p-tb-label" class="vector-menu mw-portlet mw-portlet-tb vector-menu-portal portal" id="p-tb" role="navigation">
+     <h3 class="vector-menu-heading" id="p-tb-label">
+      <span class="vector-menu-heading-label">
+       Tools
+      </span>
+     </h3>
+     <div class="vector-menu-content">
+      <ul class="vector-menu-content-list">
+       <li class="mw-list-item" id="t-whatlinkshere">
+        <a accesskey="j" href="/qb64wiki/index.php/Special:WhatLinksHere/Text_Using_Graphics" title="A list of all wiki pages that link here [j]">
+         <span>
+          What links here
+         </span>
+        </a>
+       </li>
+       <li class="mw-list-item" id="t-recentchangeslinked">
+        <a accesskey="k" href="/qb64wiki/index.php/Special:RecentChangesLinked/Text_Using_Graphics" rel="nofollow" title="Recent changes in pages linked from this page [k]">
+         <span>
+          Related changes
+         </span>
+        </a>
+       </li>
+       <li class="mw-list-item" id="t-specialpages">
+        <a accesskey="q" href="/qb64wiki/index.php/Special:SpecialPages" title="A list of all special pages [q]">
+         <span>
+          Special pages
+         </span>
+        </a>
+       </li>
+       <li class="mw-list-item" id="t-print">
+        <a accesskey="p" href="javascript:print();" rel="alternate" title="Printable version of this page [p]">
+         <span>
+          Printable version
+         </span>
+        </a>
+       </li>
+       <li class="mw-list-item" id="t-permalink">
+        <a href="/qb64wiki/index.php?title=Text_Using_Graphics&amp;oldid=8178" title="Permanent link to this revision of this page">
+         <span>
+          Permanent link
+         </span>
+        </a>
+       </li>
+       <li class="mw-list-item" id="t-info">
+        <a href="/qb64wiki/index.php?title=Text_Using_Graphics&amp;action=info" title="More information about this page">
+         <span>
+          Page information
+         </span>
+        </a>
+       </li>
+      </ul>
+     </div>
+    </nav>
+   </div>
+  </div>
+  <footer class="mw-footer" id="footer" role="contentinfo">
+   <ul id="footer-info">
+    <li id="footer-info-lastmod">
+     This page was last edited on 26 February 2023, at 00:47.
+    </li>
+   </ul>
+   <ul id="footer-places">
+    <li id="footer-places-privacy">
+     <a href="/qb64wiki/index.php/QB64_Phoenix_Edition_Wiki:Privacy_policy">
+      Privacy policy
+     </a>
+    </li>
+    <li id="footer-places-about">
+     <a href="/qb64wiki/index.php/QB64_Phoenix_Edition_Wiki:About">
+      About QB64 Phoenix Edition Wiki
+     </a>
+    </li>
+    <li id="footer-places-disclaimer">
+     <a href="/qb64wiki/index.php/QB64_Phoenix_Edition_Wiki:General_disclaimer">
+      Disclaimers
+     </a>
+    </li>
+   </ul>
+   <ul class="noprint" id="footer-icons">
+    <li id="footer-poweredbyico">
+     <a href="https://www.mediawiki.org/">
+      <img alt="Powered by MediaWiki" height="31" loading="lazy" src="/qb64wiki/resources/assets/poweredby_mediawiki_88x31.png" srcset="/qb64wiki/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /qb64wiki/resources/assets/poweredby_mediawiki_176x62.png 2x" width="88"/>
+     </a>
+    </li>
+   </ul>
+  </footer>
+  <script>
+   (RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgPageParseReport":{"limitreport":{"cputime":"0.155","walltime":"0.171","ppvisitednodes":{"value":3976,"limit":1000000},"postexpandincludesize":{"value":24166,"limit":2097152},"templateargumentsize":{"value":4377,"limit":2097152},"expansiondepth":{"value":3,"limit":100},"expensivefunctioncount":{"value":0,"limit":100},"unstrip-depth":{"value":0,"limit":20},"unstrip-size":{"value":0,"limit":5000000},"timingprofile":["100.00%   68.590      1 -total"," 27.90%   19.135    398 Template:Cl","  4.75%    3.256     46 Template:Cb","  4.11%    2.817      1 Template:InlineCodeEnd","  3.52%    2.417      1 Template:PageSeeAlso","  3.41%    2.337      1 Template:TextStart","  3.18%    2.180      6 Template:CodeEnd","  2.81%    1.928      1 Template:InlineCode","  2.72%    1.868      6 Template:CodeStart","  2.72%    1.866      1 Template:TextEnd"]},"cachereport":{"timestamp":"20240719143710","ttl":86400,"transientcontent":false}}});mw.config.set({"wgBackendResponseTime":107});});
+  </script>
+ </body>
+</html>

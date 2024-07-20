@@ -1,0 +1,888 @@
+<!DOCTYPE html>
+<html class="client-nojs" dir="ltr" lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <title>
+   Relational Operations - QB64 Phoenix Edition Wiki
+  </title>
+  <script>
+   document.documentElement.className="client-js";RLCONF={"wgBreakFrames":false,"wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgRequestId":"Zpp8w-ZL16Jh9AOFAcaKPwAAANY","wgCSPNonce":false,"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"Relational_Operations","wgTitle":"Relational Operations","wgCurRevisionId":7774,"wgRevisionId":7774,"wgArticleId":12,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":[],"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgRelevantPageName":"Relational_Operations","wgRelevantArticleId":12,"wgIsProbablyEditable":false,"wgRelevantPageIsProbablyEditable":false,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgVector2022PreviewPages":[]};RLSTATE={"site.styles":
+"ready","user.styles":"ready","user":"ready","user.options":"loading","skins.vector.styles.legacy":"ready"};RLPAGEMODULES=["site","mediawiki.page.ready","skins.vector.legacy.js"];
+  </script>
+  <script>
+   (RLQ=window.RLQ||[]).push(function(){mw.loader.implement("user.options@12s5i",function($,jQuery,require,module){mw.user.tokens.set({"patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});});});
+  </script>
+  <link href="/qb64wiki/load.php?lang=en&amp;modules=skins.vector.styles.legacy&amp;only=styles&amp;skin=vector" rel="stylesheet"/>
+  <script async="" src="/qb64wiki/load.php?lang=en&amp;modules=startup&amp;only=scripts&amp;raw=1&amp;skin=vector">
+  </script>
+  <meta content="" name="ResourceLoaderDynamicStyles"/>
+  <link href="/qb64wiki/load.php?lang=en&amp;modules=site.styles&amp;only=styles&amp;skin=vector" rel="stylesheet"/>
+  <meta content="MediaWiki 1.39.3" name="generator"/>
+  <meta content="telephone=no" name="format-detection"/>
+  <meta content="width=1000" name="viewport"/>
+  <link href="/favicon.ico" rel="icon"/>
+  <link href="/qb64wiki/opensearch_desc.php" rel="search" title="QB64 Phoenix Edition Wiki (en)" type="application/opensearchdescription+xml"/>
+  <link href="https://qb64phoenix.com/qb64wiki/api.php?action=rsd" rel="EditURI" type="application/rsd+xml"/>
+  <link href="/qb64wiki/index.php?title=Special:RecentChanges&amp;feed=atom" rel="alternate" title="QB64 Phoenix Edition Wiki Atom feed" type="application/atom+xml"/>
+ </head>
+ <body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject page-Relational_Operations rootpage-Relational_Operations skin-vector action-view skin-vector-legacy vector-feature-language-in-header-enabled vector-feature-language-in-main-page-header-disabled vector-feature-language-alert-in-sidebar-disabled vector-feature-sticky-header-disabled vector-feature-sticky-header-edit-disabled vector-feature-table-of-contents-disabled vector-feature-visual-enhancement-next-disabled">
+  <div class="noprint" id="mw-page-base">
+  </div>
+  <div class="noprint" id="mw-head-base">
+  </div>
+  <div class="mw-body" id="content" role="main">
+   <a id="top">
+   </a>
+   <div id="siteNotice">
+   </div>
+   <div class="mw-indicators">
+   </div>
+   <h1 class="firstHeading mw-first-heading" id="firstHeading">
+    <span class="mw-page-title-main">
+     Relational Operations
+    </span>
+   </h1>
+   <div class="vector-body" id="bodyContent">
+    <div class="noprint" id="siteSub">
+     From QB64 Phoenix Edition Wiki
+    </div>
+    <div id="contentSub">
+    </div>
+    <div id="contentSub2">
+    </div>
+    <div id="jump-to-nav">
+    </div>
+    <a class="mw-jump-link" href="#mw-head">
+     Jump to navigation
+    </a>
+    <a class="mw-jump-link" href="#searchInput">
+     Jump to search
+    </a>
+    <div class="mw-body-content mw-content-ltr" dir="ltr" id="mw-content-text" lang="en">
+     <div class="mw-parser-output">
+      <p>
+       QB64 supports several relational operations, which are binary operations that test numeric or string values and return an
+       <a href="/qb64wiki/index.php/INTEGER" title="INTEGER">
+        INTEGER
+       </a>
+       value representing a boolean
+       <i>
+        true
+       </i>
+       (-1) or
+       <i>
+        false
+       </i>
+       (0) result. These operations are primarily used in expressions where a condition is required, such as the
+       <a href="/qb64wiki/index.php/IF...THEN" title="IF...THEN">
+        IF...THEN
+       </a>
+       statement.
+      </p>
+      <p>
+       <br/>
+      </p>
+      <h2>
+       <span class="mw-headline" id="List_of_relational_operations">
+        List of relational operations
+       </span>
+      </h2>
+      <table cellpadding="5px" width="100%">
+       <tbody>
+        <tr>
+         <td>
+          <pre class="outputfixed">         Table 3: The relational operations for condition checking.
+
+ In this table, <b>A</b> and <b>B</b> are the <a href="/qb64wiki/index.php/Expression" title="Expression">Expressions</a> to compare. Both must represent
+ the same general type, i.e. they must result into either numerical values
+ or <a href="/qb64wiki/index.php/STRING" title="STRING">STRING</a> values. If a test succeeds, then <b>true</b> (-1) is returned, <b>false</b> (0)
+     if it fails, which both can be used in further <a href="/qb64wiki/index.php/Boolean" title="Boolean">Boolean</a> evaluations.
+ ┌─────────────────────────────────────────────────────────────────────────┐
+ │                          <b><a class="mw-selflink selflink">Relational Operations</a></b>                          │
+ ├────────────┬───────────────────────────────────────────┬────────────────┤
+ │ <b>Operation</b>  │                <b>Description</b>                │ <b>Example usage</b>  │
+ ├────────────┼───────────────────────────────────────────┼────────────────┤
+ │   A <a href="/qb64wiki/index.php/Equal" title="Equal">=</a> B    │ Tests if A is <b>equal</b> to B.                 │ <a class="mw-redirect" href="/qb64wiki/index.php/IF" title="IF">IF</a> A <a href="/qb64wiki/index.php/Equal" title="Equal">=</a> B <a href="/qb64wiki/index.php/THEN" title="THEN">THEN</a>  │
+ ├────────────┼───────────────────────────────────────────┼────────────────┤
+ │   A <a href="/qb64wiki/index.php/Not_Equal" title="Not Equal">&lt;&gt;</a> B   │ Tests if A is <b>not equal</b> to B.             │ <a class="mw-redirect" href="/qb64wiki/index.php/IF" title="IF">IF</a> A <a href="/qb64wiki/index.php/Not_Equal" title="Not Equal">&lt;&gt;</a> B <a href="/qb64wiki/index.php/THEN" title="THEN">THEN</a> │
+ ├────────────┼───────────────────────────────────────────┼────────────────┤
+ │   A <a href="/qb64wiki/index.php/Less_Than" title="Less Than">&lt;</a> B    │ Tests if A is <b>less than</b> B.                │ <a class="mw-redirect" href="/qb64wiki/index.php/IF" title="IF">IF</a> A <a href="/qb64wiki/index.php/Less_Than" title="Less Than">&lt;</a> B <a href="/qb64wiki/index.php/THEN" title="THEN">THEN</a>  │
+ ├────────────┼───────────────────────────────────────────┼────────────────┤
+ │   A <a href="/qb64wiki/index.php/Greater_Than" title="Greater Than">&gt;</a> B    │ Tests if A is <b>greater than</b> B.             │ <a class="mw-redirect" href="/qb64wiki/index.php/IF" title="IF">IF</a> A <a href="/qb64wiki/index.php/Greater_Than" title="Greater Than">&gt;</a> B <a href="/qb64wiki/index.php/THEN" title="THEN">THEN</a>  │
+ ├────────────┼───────────────────────────────────────────┼────────────────┤
+ │   A <a href="/qb64wiki/index.php/Less_Than_Or_Equal" title="Less Than Or Equal">&lt;=</a> B   │ Tests if A is <b>less than or equal</b> to B.    │ <a class="mw-redirect" href="/qb64wiki/index.php/IF" title="IF">IF</a> A <a href="/qb64wiki/index.php/Less_Than_Or_Equal" title="Less Than Or Equal">&lt;=</a> B <a href="/qb64wiki/index.php/THEN" title="THEN">THEN</a> │
+ ├────────────┼───────────────────────────────────────────┼────────────────┤
+ │   A <a href="/qb64wiki/index.php/Greater_Than_Or_Equal" title="Greater Than Or Equal">&gt;=</a> B   │ Tests if A is <b>greater than or equal</b> to B. │ <a class="mw-redirect" href="/qb64wiki/index.php/IF" title="IF">IF</a> A <a href="/qb64wiki/index.php/Greater_Than_Or_Equal" title="Greater Than Or Equal">&gt;=</a> B <a href="/qb64wiki/index.php/THEN" title="THEN">THEN</a> │
+ └────────────┴───────────────────────────────────────────┴────────────────┘
+   The operations should be very obvious for numerical values. For strings
+   be aware that all checks are done <b>case sensitive</b> (i.e. "Foo" &lt;&gt; "foo").
+   The <b>equal</b>/<b>not equal</b> check is pretty much straight forward, but for the
+   <b>less</b>/<b>greater</b> checks the <a href="/qb64wiki/index.php/ASCII" title="ASCII">ASCII</a> value of the first different character is
+                          used for decision making:
+
+   <b>E.g.</b> "abc" is <b>less</b> than "abd", because in the first difference (the 3rd
+        character) the "c" has a lower <a href="/qb64wiki/index.php/ASCII" title="ASCII">ASCII</a> value than the "d".
+
+   This behavior may give you some subtle results, if you are not aware of
+                   the <a href="/qb64wiki/index.php/ASCII" title="ASCII">ASCII</a> values and the written case:
+
+   <b>E.g.</b> "abc" is <b>greater</b> than "abD", because the small letters have higher
+        <a href="/qb64wiki/index.php/ASCII" title="ASCII">ASCII</a> values than the capital letters, hence "c" &gt; "D". You may use
+        <a href="/qb64wiki/index.php/LCASE$" title="LCASE$">LCASE$</a> or <a href="/qb64wiki/index.php/UCASE$" title="UCASE$">UCASE$</a> to make sure both strings have the same case.
+</pre>
+         </td>
+        </tr>
+       </tbody>
+      </table>
+      <p>
+       <br/>
+      </p>
+      <h2>
+       <span class="mw-headline" id="Comparing_numerical_values_and_variables">
+        Comparing numerical values and variables
+       </span>
+      </h2>
+      <p>
+       For numeric operands, such as
+       <a href="/qb64wiki/index.php/INTEGER" title="INTEGER">
+        INTEGER
+       </a>
+       or
+       <a href="/qb64wiki/index.php/DOUBLE" title="DOUBLE">
+        DOUBLE
+       </a>
+       values, the relational operations behave as one would expect. For example, the expression (-3.4
+       <a href="/qb64wiki/index.php/Less_Than" title="Less Than">
+        &lt;
+       </a>
+       1.2) evaluates to
+       <i>
+        true
+       </i>
+       , and the expression (50
+       <a href="/qb64wiki/index.php/Equal" title="Equal">
+        =
+       </a>
+       100) evaluates to
+       <i>
+        false
+       </i>
+       .
+      </p>
+      <p>
+       <i>
+        Example:
+       </i>
+       When a user enters a value greater than or equal to 5, the boolean statement returns -1 . Zero is printed otherwise.
+      </p>
+      <table cellpadding="15px" width="100%">
+       <tbody>
+        <tr>
+         <td>
+          <pre class="codeide"><a href="/qb64wiki/index.php/INPUT" title="INPUT"><span style="color:#4593D8;">INPUT</span></a> "Enter a value from 1 to 10: ", number
+<a href="/qb64wiki/index.php/PRINT" title="PRINT"><span style="color:#4593D8;">PRINT</span></a> number &gt;= 5
+</pre>
+         </td>
+        </tr>
+       </tbody>
+      </table>
+      <p>
+       <br/>
+      </p>
+      <h2>
+       <span class="mw-headline" id="Comparing_string_values_and_variables">
+        Comparing string values and variables
+       </span>
+      </h2>
+      <p>
+       For string operands, the
+       <a href="/qb64wiki/index.php/Equal" title="Equal">
+        =
+       </a>
+       and
+       <a href="/qb64wiki/index.php/Not_Equal" title="Not Equal">
+        &lt;&gt;
+       </a>
+       operators test, respectively, if the operands are of the same or differing length, and that each of the corresponding characters match or don't match. For example, the three expressions ("abc"
+       <a href="/qb64wiki/index.php/Equal" title="Equal">
+        =
+       </a>
+       "abc"), ("abc"
+       <a href="/qb64wiki/index.php/Not_Equal" title="Not Equal">
+        &lt;&gt;
+       </a>
+       "abd") and ("abc"
+       <a href="/qb64wiki/index.php/Not_Equal" title="Not Equal">
+        &lt;&gt;
+       </a>
+       "abcdef") all evaluate to
+       <i>
+        true
+       </i>
+       .
+      </p>
+      <p>
+       When two strings are compared, the left string sets the number of characters to evaluate when not checking for equality. The
+       <a href="/qb64wiki/index.php/Less_Than" title="Less Than">
+        &lt;
+       </a>
+       and
+       <a href="/qb64wiki/index.php/Greater_Than" title="Greater Than">
+        &gt;
+       </a>
+       operators find the first set of non-matching characters and test if the
+       <a href="/qb64wiki/index.php/ASCII" title="ASCII">
+        ASCII
+       </a>
+       code values of those characters are less than or greater than each other, respectively.
+       <b>
+        Equal strings MUST be of the same length with identical
+        <a href="/qb64wiki/index.php/UCASE$" title="UCASE$">
+         cased
+        </a>
+        letters or
+        <a href="/qb64wiki/index.php/ASCII" title="ASCII">
+         ASCII
+        </a>
+        characters!
+       </b>
+      </p>
+      <p>
+       If one string is identical to part of the other,
+       <a href="/qb64wiki/index.php/Less_Than" title="Less Than">
+        &lt;
+       </a>
+       returns
+       <i>
+        false
+       </i>
+       if the left-hand side string is shorter than the right-hand side string, while
+       <a href="/qb64wiki/index.php/Greater_Than" title="Greater Than">
+        &gt;
+       </a>
+       returns
+       <i>
+        true
+       </i>
+       if the left-hand side string is longer than the right-hand side string. For example, the expressions ("abc"
+       <a href="/qb64wiki/index.php/Less_Than" title="Less Than">
+        &lt;
+       </a>
+       "abd") and ("abcdef"
+       <a href="/qb64wiki/index.php/Greater_Than" title="Greater Than">
+        &gt;
+       </a>
+       "abc") both evaluate to
+       <i>
+        true
+       </i>
+       . Even
+       <a href="/qb64wiki/index.php/SPACE$" title="SPACE$">
+        space
+       </a>
+       <a href="/qb64wiki/index.php/ASCII" title="ASCII">
+        ASCII
+       </a>
+       character values are evaluated!
+      </p>
+      <p>
+       <br/>
+       <i>
+        Example:
+       </i>
+       Shows that the left hand string sets the number of characters to evaluate when using &gt; or &lt; and are not equal when longer.
+      </p>
+      <table cellpadding="15px" width="100%">
+       <tbody>
+        <tr>
+         <td>
+          <pre class="codeide">PRINT "abc" &lt; "abcd"
+PRINT "abc" = "abc"
+PRINT "abc" = "abcd"
+PRINT "abcd" &gt; "abc"
+</pre>
+         </td>
+        </tr>
+       </tbody>
+      </table>
+      <table cellpadding="15px" width="100%">
+       <tbody>
+        <tr>
+         <td>
+          <pre class="outputcrt0"> 0
+-1
+ 0
+-1
+</pre>
+         </td>
+        </tr>
+       </tbody>
+      </table>
+      <p>
+       <br/>
+      </p>
+      <h2>
+       <span class="mw-headline" id="Comparing_user-defined_type_variables">
+        Comparing user-defined type variables
+       </span>
+      </h2>
+      <p>
+       Variables of a
+       <a href="/qb64wiki/index.php/TYPE" title="TYPE">
+        user-defined type
+       </a>
+       (UDT) cannot be used as operands to the relational operators, but numeric or string type fields can be used as described above. For example:
+      </p>
+      <dl>
+       <dd>
+        <dl>
+         <dd>
+          TYPE T
+          <dl>
+           <dd>
+            a AS INTEGER
+           </dd>
+          </dl>
+         </dd>
+         <dd>
+          END TYPE
+         </dd>
+        </dl>
+       </dd>
+      </dl>
+      <dl>
+       <dd>
+        <dl>
+         <dd>
+          TYPE U
+          <dl>
+           <dd>
+            b AS INTEGER
+           </dd>
+          </dl>
+         </dd>
+         <dd>
+          END TYPE
+         </dd>
+        </dl>
+       </dd>
+      </dl>
+      <dl>
+       <dd>
+        <dl>
+         <dd>
+          DIM x AS T : x.a = 10
+         </dd>
+         <dd>
+          DIM y AS U : y.b = 20
+         </dd>
+        </dl>
+       </dd>
+      </dl>
+      <dl>
+       <dd>
+        <dl>
+         <dd>
+          PRINT x &lt; y         ' &lt;- error: type mismatch
+         </dd>
+         <dd>
+          PRINT x.a &lt; y.b     ' &lt;- outputs "-1"
+         </dd>
+        </dl>
+       </dd>
+      </dl>
+      <p>
+       <br/>
+      </p>
+      <h2>
+       <span class="mw-headline" id="Boolean_values">
+        Boolean values
+       </span>
+      </h2>
+      <p>
+       The
+       <a href="/qb64wiki/index.php/INTEGER" title="INTEGER">
+        INTEGER
+       </a>
+       values for
+       <i>
+        true
+       </i>
+       and
+       <i>
+        false
+       </i>
+       are such that the bitwise Logical Operators, such as
+       <a href="/qb64wiki/index.php/NOT" title="NOT">
+        NOT
+       </a>
+       ,
+       <a href="/qb64wiki/index.php/AND" title="AND">
+        AND
+       </a>
+       and
+       <a href="/qb64wiki/index.php/OR" title="OR">
+        OR
+       </a>
+       can be used to invert and combine test results. For example, the expression (
+       <a href="/qb64wiki/index.php/NOT" title="NOT">
+        NOT
+       </a>
+       (10
+       <a href="/qb64wiki/index.php/Greater_Than_Or_Equal" title="Greater Than Or Equal">
+        &gt;=
+       </a>
+       20)) evaluates to
+       <i>
+        true
+       </i>
+       , while the expression ((2
+       <a href="/qb64wiki/index.php/Less_Than" title="Less Than">
+        &lt;
+       </a>
+       1)
+       <a href="/qb64wiki/index.php/AND" title="AND">
+        AND
+       </a>
+       ("three"
+       <a href="/qb64wiki/index.php/Equal" title="Equal">
+        =
+       </a>
+       "four")) evaluates to
+       <i>
+        false
+       </i>
+       .
+      </p>
+      <p>
+       <br/>
+      </p>
+      <table cellpadding="5px" width="100%">
+       <tbody>
+        <tr>
+         <td>
+          <pre class="outputfixed">               Table 4: The logical operations and its results.
+
+       In this table, <b>A</b> and <b>B</b> are the <a href="/qb64wiki/index.php/Expression" title="Expression">Expressions</a> to invert or combine.
+              Both may be results of former <a href="/qb64wiki/index.php/Boolean" title="Boolean">Boolean</a> evaluations.
+  ┌────────────────────────────────────────────────────────────────────────┐
+  │                           <b>Logical Operations</b>                           │
+  ├───────┬───────┬───────┬─────────┬────────┬─────────┬─────────┬─────────┤
+  │   <b>A</b>   │   <b>B</b>   │ <a href="/qb64wiki/index.php/NOT" title="NOT">NOT</a> <b>B</b> │ <b>A</b> <a href="/qb64wiki/index.php/AND" title="AND">AND</a> <b>B</b> │ <b>A</b> <a href="/qb64wiki/index.php/OR" title="OR">OR</a> <b>B</b> │ <b>A</b> <a class="mw-redirect" href="/qb64wiki/index.php/XOR" title="XOR">XOR</a> <b>B</b> │ <b>A</b> <a href="/qb64wiki/index.php/EQV" title="EQV">EQV</a> <b>B</b> │ <b>A</b> <a href="/qb64wiki/index.php/IMP" title="IMP">IMP</a> <b>B</b> │
+  ├───────┼───────┼───────┼─────────┼────────┼─────────┼─────────┼─────────┤
+  │ <b>true</b>  │ <b>true</b>  │ false │  true   │ true   │  false  │  true   │  true   │
+  ├───────┼───────┼───────┼─────────┼────────┼─────────┼─────────┼─────────┤
+  │ <b>true</b>  │ <b>false</b> │ true  │  false  │ true   │  true   │  false  │  false  │
+  ├───────┼───────┼───────┼─────────┼────────┼─────────┼─────────┼─────────┤
+  │ <b>false</b> │ <b>true</b>  │ false │  false  │ true   │  true   │  false  │  true   │
+  ├───────┼───────┼───────┼─────────┼────────┼─────────┼─────────┼─────────┤
+  │ <b>false</b> │ <b>false</b> │ true  │  false  │ false  │  false  │  true   │  true   │
+  └───────┴───────┴───────┴─────────┴────────┴─────────┴─────────┴─────────┘
+   <b>Note:</b> In most BASIC languages incl. QB64 these are <b>bitwise</b> operations,
+         hence the logic is performed for each corresponding bit in both
+         operators, where <b>true</b> or <b>false</b> indicates whether a bit is <b>set</b> or
+         <b>not set</b>. The outcome of each bit is then placed into the respective
+         position to build the bit pattern of the final result value.
+
+   As all <a class="mw-selflink selflink">Relational Operations</a> return negative one (-1, <b>all bits set</b>) for
+    <b>true</b> and zero (0, <b>no bits set</b>) for <b>false</b>, this allows us to use these
+    bitwise logical operations to invert or combine any relational checks,
+    as the outcome is the same for each bit and so always results into a
+            <b>true</b> (-1) or <b>false</b> (0) again for further evaluations.
+</pre>
+         </td>
+        </tr>
+       </tbody>
+      </table>
+      <p>
+       <br/>
+      </p>
+      <h2>
+       <span class="mw-headline" id="See_also">
+        See also
+       </span>
+      </h2>
+      <ul>
+       <li>
+        <a href="/qb64wiki/index.php/IF...THEN" title="IF...THEN">
+         IF...THEN
+        </a>
+       </li>
+       <li>
+        <a href="/qb64wiki/index.php/DO...LOOP" title="DO...LOOP">
+         DO...LOOP
+        </a>
+        ,
+        <a href="/qb64wiki/index.php/WHILE...WEND" title="WHILE...WEND">
+         WHILE...WEND
+        </a>
+       </li>
+       <li>
+        <a class="mw-redirect" href="/qb64wiki/index.php/IS" title="IS">
+         CASE IS
+        </a>
+        ,
+        <a href="/qb64wiki/index.php/NOT" title="NOT">
+         NOT
+        </a>
+       </li>
+       <li>
+        <a href="/qb64wiki/index.php/AND" title="AND">
+         AND
+        </a>
+        ,
+        <a href="/qb64wiki/index.php/OR" title="OR">
+         OR
+        </a>
+        ,
+        <a class="mw-redirect" href="/qb64wiki/index.php/XOR" title="XOR">
+         XOR
+        </a>
+        ,
+        <a href="/qb64wiki/index.php/EQV" title="EQV">
+         EQV
+        </a>
+        ,
+        <a href="/qb64wiki/index.php/IMP" title="IMP">
+         IMP
+        </a>
+       </li>
+      </ul>
+      <p>
+       <br/>
+      </p>
+      <hr/>
+      <center>
+       <b>
+        Navigation:
+       </b>
+      </center>
+      <center>
+       <a href="/qb64wiki/index.php/Main_Page" title="Main Page">
+        Main Page with Articles and Tutorials
+       </a>
+      </center>
+      <center>
+       <a href="/qb64wiki/index.php/Keyword_Reference_-_Alphabetical" title="Keyword Reference - Alphabetical">
+        Keyword Reference - Alphabetical
+       </a>
+      </center>
+      <center>
+       <a href="/qb64wiki/index.php/Keyword_Reference_-_By_usage" title="Keyword Reference - By usage">
+        Keyword Reference - By usage
+       </a>
+      </center>
+      <center>
+       <b>
+        <a class="external text" href="https://qb64phoenix.com/forum/showthread.php?tid=2800" rel="nofollow">
+         Report a broken link
+        </a>
+       </b>
+       <br/>
+      </center>
+      <!-- 
+NewPP limit report
+Cached time: 20240719143545
+Cache expiry: 86400
+Reduced expiry: false
+Complications: []
+CPU time usage: 0.041 seconds
+Real time usage: 0.051 seconds
+Preprocessor visited node count: 102/1000000
+Post‐expand include size: 8726/2097152 bytes
+Template argument size: 20/2097152 bytes
+Highest expansion depth: 3/100
+Expensive parser function count: 0/100
+Unstrip recursion depth: 0/20
+Unstrip post‐expand size: 0/5000000 bytes
+-->
+      <!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%   22.057      1 -total
+ 29.64%    6.538      1 Template:RelationalOperationsPlugin
+  8.81%    1.944      1 Template:LogicalTruthPlugin
+  8.78%    1.936      1 Template:PageSeeAlso
+  8.70%    1.920      2 Template:FixedStart
+  8.66%    1.910      2 Template:Cl
+  8.14%    1.795      1 Template:OutputEnd
+  7.93%    1.749      1 Template:PageNavigation
+  7.91%    1.744      1 Template:OutputStart
+  7.88%    1.739      2 Template:CodeStart
+-->
+      <!-- Saved in parser cache with key qb64pnix_mw19894-mwmb_:pcache:idhash:12-0!canonical and timestamp 20240719143545 and revision id 7774.
+ -->
+     </div>
+     <div class="printfooter" data-nosnippet="">
+      Retrieved from "
+      <a dir="ltr" href="https://qb64phoenix.com/qb64wiki/index.php?title=Relational_Operations&amp;oldid=7774">
+       https://qb64phoenix.com/qb64wiki/index.php?title=Relational_Operations&amp;oldid=7774
+      </a>
+      "
+     </div>
+    </div>
+    <div class="catlinks catlinks-allhidden" data-mw="interface" id="catlinks">
+    </div>
+   </div>
+  </div>
+  <div id="mw-navigation">
+   <h2>
+    Navigation menu
+   </h2>
+   <div id="mw-head">
+    <nav aria-labelledby="p-personal-label" class="vector-menu mw-portlet mw-portlet-personal vector-user-menu-legacy" id="p-personal" role="navigation">
+     <h3 class="vector-menu-heading" id="p-personal-label">
+      <span class="vector-menu-heading-label">
+       Personal tools
+      </span>
+     </h3>
+     <div class="vector-menu-content">
+      <ul class="vector-menu-content-list">
+       <li class="mw-list-item" id="pt-login">
+        <a accesskey="o" href="/qb64wiki/index.php?title=Special:UserLogin&amp;returnto=Relational+Operations" title="You are encouraged to log in; however, it is not mandatory [o]">
+         <span>
+          Log in
+         </span>
+        </a>
+       </li>
+      </ul>
+     </div>
+    </nav>
+    <div id="left-navigation">
+     <nav aria-labelledby="p-namespaces-label" class="vector-menu mw-portlet mw-portlet-namespaces vector-menu-tabs vector-menu-tabs-legacy" id="p-namespaces" role="navigation">
+      <h3 class="vector-menu-heading" id="p-namespaces-label">
+       <span class="vector-menu-heading-label">
+        Namespaces
+       </span>
+      </h3>
+      <div class="vector-menu-content">
+       <ul class="vector-menu-content-list">
+        <li class="selected mw-list-item" id="ca-nstab-main">
+         <a accesskey="c" href="/qb64wiki/index.php/Relational_Operations" title="View the content page [c]">
+          <span>
+           Page
+          </span>
+         </a>
+        </li>
+        <li class="new mw-list-item" id="ca-talk">
+         <a accesskey="t" href="/qb64wiki/index.php?title=Talk:Relational_Operations&amp;action=edit&amp;redlink=1" rel="discussion" title="Discussion about the content page (page does not exist) [t]">
+          <span>
+           Discussion
+          </span>
+         </a>
+        </li>
+       </ul>
+      </div>
+     </nav>
+     <nav aria-labelledby="p-variants-label" class="vector-menu mw-portlet mw-portlet-variants emptyPortlet vector-menu-dropdown" id="p-variants" role="navigation">
+      <input aria-haspopup="true" aria-labelledby="p-variants-label" class="vector-menu-checkbox" data-event-name="ui.dropdown-p-variants" id="p-variants-checkbox" role="button" type="checkbox"/>
+      <label aria-label="Change language variant" class="vector-menu-heading" id="p-variants-label">
+       <span class="vector-menu-heading-label">
+        English
+       </span>
+      </label>
+      <div class="vector-menu-content">
+       <ul class="vector-menu-content-list">
+       </ul>
+      </div>
+     </nav>
+    </div>
+    <div id="right-navigation">
+     <nav aria-labelledby="p-views-label" class="vector-menu mw-portlet mw-portlet-views vector-menu-tabs vector-menu-tabs-legacy" id="p-views" role="navigation">
+      <h3 class="vector-menu-heading" id="p-views-label">
+       <span class="vector-menu-heading-label">
+        Views
+       </span>
+      </h3>
+      <div class="vector-menu-content">
+       <ul class="vector-menu-content-list">
+        <li class="selected mw-list-item" id="ca-view">
+         <a href="/qb64wiki/index.php/Relational_Operations">
+          <span>
+           Read
+          </span>
+         </a>
+        </li>
+        <li class="mw-list-item" id="ca-viewsource">
+         <a accesskey="e" href="/qb64wiki/index.php?title=Relational_Operations&amp;action=edit" title="This page is protected.
+You can view its source [e]">
+          <span>
+           View source
+          </span>
+         </a>
+        </li>
+        <li class="mw-list-item" id="ca-history">
+         <a accesskey="h" href="/qb64wiki/index.php?title=Relational_Operations&amp;action=history" title="Past revisions of this page [h]">
+          <span>
+           View history
+          </span>
+         </a>
+        </li>
+       </ul>
+      </div>
+     </nav>
+     <nav aria-labelledby="p-cactions-label" class="vector-menu mw-portlet mw-portlet-cactions emptyPortlet vector-menu-dropdown" id="p-cactions" role="navigation" title="More options">
+      <input aria-haspopup="true" aria-labelledby="p-cactions-label" class="vector-menu-checkbox" data-event-name="ui.dropdown-p-cactions" id="p-cactions-checkbox" role="button" type="checkbox"/>
+      <label class="vector-menu-heading" id="p-cactions-label">
+       <span class="vector-menu-heading-label">
+        More
+       </span>
+      </label>
+      <div class="vector-menu-content">
+       <ul class="vector-menu-content-list">
+       </ul>
+      </div>
+     </nav>
+     <div class="vector-search-box-vue vector-search-box-show-thumbnail vector-search-box-auto-expand-width vector-search-box" id="p-search" role="search">
+      <div>
+       <h3>
+        <label for="searchInput">
+         Search
+        </label>
+       </h3>
+       <form action="/qb64wiki/index.php" class="vector-search-box-form" id="searchform">
+        <div class="vector-search-box-inner" data-search-loc="header-navigation" id="simpleSearch">
+         <input accesskey="f" aria-label="Search QB64 Phoenix Edition Wiki" autocapitalize="sentences" class="vector-search-box-input" id="searchInput" name="search" placeholder="Search QB64 Phoenix Edition Wiki" title="Search QB64 Phoenix Edition Wiki [f]" type="search"/>
+         <input name="title" type="hidden" value="Special:Search"/>
+         <input class="searchButton mw-fallbackSearchButton" id="mw-searchButton" name="fulltext" title="Search the pages for this text" type="submit" value="Search"/>
+         <input class="searchButton" id="searchButton" name="go" title="Go to a page with this exact name if it exists" type="submit" value="Go"/>
+        </div>
+       </form>
+      </div>
+     </div>
+    </div>
+   </div>
+   <div id="mw-panel">
+    <div id="p-logo" role="banner">
+     <a class="mw-wiki-logo" href="/qb64wiki/index.php/Main_Page" title="Visit the main page">
+     </a>
+    </div>
+    <nav aria-labelledby="p-navigation-label" class="vector-menu mw-portlet mw-portlet-navigation vector-menu-portal portal" id="p-navigation" role="navigation">
+     <h3 class="vector-menu-heading" id="p-navigation-label">
+      <span class="vector-menu-heading-label">
+       Navigation
+      </span>
+     </h3>
+     <div class="vector-menu-content">
+      <ul class="vector-menu-content-list">
+       <li class="mw-list-item" id="n-mainpage-description">
+        <a accesskey="z" href="/qb64wiki/index.php/Main_Page" title="Visit the main page [z]">
+         <span>
+          Main page
+         </span>
+        </a>
+       </li>
+       <li class="mw-list-item" id="n-recentchanges">
+        <a accesskey="r" href="/qb64wiki/index.php/Special:RecentChanges" title="A list of recent changes in the wiki [r]">
+         <span>
+          Recent changes
+         </span>
+        </a>
+       </li>
+       <li class="mw-list-item" id="n-randompage">
+        <a accesskey="x" href="/qb64wiki/index.php/Special:Random" title="Load a random page [x]">
+         <span>
+          Random page
+         </span>
+        </a>
+       </li>
+       <li class="mw-list-item" id="n-help-mediawiki">
+        <a href="https://www.mediawiki.org/wiki/Special:MyLanguage/Help:Contents">
+         <span>
+          Help about MediaWiki
+         </span>
+        </a>
+       </li>
+      </ul>
+     </div>
+    </nav>
+    <nav aria-labelledby="p-tb-label" class="vector-menu mw-portlet mw-portlet-tb vector-menu-portal portal" id="p-tb" role="navigation">
+     <h3 class="vector-menu-heading" id="p-tb-label">
+      <span class="vector-menu-heading-label">
+       Tools
+      </span>
+     </h3>
+     <div class="vector-menu-content">
+      <ul class="vector-menu-content-list">
+       <li class="mw-list-item" id="t-whatlinkshere">
+        <a accesskey="j" href="/qb64wiki/index.php/Special:WhatLinksHere/Relational_Operations" title="A list of all wiki pages that link here [j]">
+         <span>
+          What links here
+         </span>
+        </a>
+       </li>
+       <li class="mw-list-item" id="t-recentchangeslinked">
+        <a accesskey="k" href="/qb64wiki/index.php/Special:RecentChangesLinked/Relational_Operations" rel="nofollow" title="Recent changes in pages linked from this page [k]">
+         <span>
+          Related changes
+         </span>
+        </a>
+       </li>
+       <li class="mw-list-item" id="t-specialpages">
+        <a accesskey="q" href="/qb64wiki/index.php/Special:SpecialPages" title="A list of all special pages [q]">
+         <span>
+          Special pages
+         </span>
+        </a>
+       </li>
+       <li class="mw-list-item" id="t-print">
+        <a accesskey="p" href="javascript:print();" rel="alternate" title="Printable version of this page [p]">
+         <span>
+          Printable version
+         </span>
+        </a>
+       </li>
+       <li class="mw-list-item" id="t-permalink">
+        <a href="/qb64wiki/index.php?title=Relational_Operations&amp;oldid=7774" title="Permanent link to this revision of this page">
+         <span>
+          Permanent link
+         </span>
+        </a>
+       </li>
+       <li class="mw-list-item" id="t-info">
+        <a href="/qb64wiki/index.php?title=Relational_Operations&amp;action=info" title="More information about this page">
+         <span>
+          Page information
+         </span>
+        </a>
+       </li>
+      </ul>
+     </div>
+    </nav>
+   </div>
+  </div>
+  <footer class="mw-footer" id="footer" role="contentinfo">
+   <ul id="footer-info">
+    <li id="footer-info-lastmod">
+     This page was last edited on 6 February 2023, at 22:11.
+    </li>
+   </ul>
+   <ul id="footer-places">
+    <li id="footer-places-privacy">
+     <a href="/qb64wiki/index.php/QB64_Phoenix_Edition_Wiki:Privacy_policy">
+      Privacy policy
+     </a>
+    </li>
+    <li id="footer-places-about">
+     <a href="/qb64wiki/index.php/QB64_Phoenix_Edition_Wiki:About">
+      About QB64 Phoenix Edition Wiki
+     </a>
+    </li>
+    <li id="footer-places-disclaimer">
+     <a href="/qb64wiki/index.php/QB64_Phoenix_Edition_Wiki:General_disclaimer">
+      Disclaimers
+     </a>
+    </li>
+   </ul>
+   <ul class="noprint" id="footer-icons">
+    <li id="footer-poweredbyico">
+     <a href="https://www.mediawiki.org/">
+      <img alt="Powered by MediaWiki" height="31" loading="lazy" src="/qb64wiki/resources/assets/poweredby_mediawiki_88x31.png" srcset="/qb64wiki/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /qb64wiki/resources/assets/poweredby_mediawiki_176x62.png 2x" width="88"/>
+     </a>
+    </li>
+   </ul>
+  </footer>
+  <script>
+   (RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgPageParseReport":{"limitreport":{"cputime":"0.041","walltime":"0.051","ppvisitednodes":{"value":102,"limit":1000000},"postexpandincludesize":{"value":8726,"limit":2097152},"templateargumentsize":{"value":20,"limit":2097152},"expansiondepth":{"value":3,"limit":100},"expensivefunctioncount":{"value":0,"limit":100},"unstrip-depth":{"value":0,"limit":20},"unstrip-size":{"value":0,"limit":5000000},"timingprofile":["100.00%   22.057      1 -total"," 29.64%    6.538      1 Template:RelationalOperationsPlugin","  8.81%    1.944      1 Template:LogicalTruthPlugin","  8.78%    1.936      1 Template:PageSeeAlso","  8.70%    1.920      2 Template:FixedStart","  8.66%    1.910      2 Template:Cl","  8.14%    1.795      1 Template:OutputEnd","  7.93%    1.749      1 Template:PageNavigation","  7.91%    1.744      1 Template:OutputStart","  7.88%    1.739      2 Template:CodeStart"]},"cachereport":{"timestamp":"20240719143545","ttl":86400,"transientcontent":false}}});mw.config.set({"wgBackendResponseTime":77});});
+  </script>
+ </body>
+</html>

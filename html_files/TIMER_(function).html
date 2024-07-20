@@ -1,0 +1,820 @@
+<!DOCTYPE html>
+<html class="client-nojs" dir="ltr" lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <title>
+   TIMER (function) - QB64 Phoenix Edition Wiki
+  </title>
+  <script>
+   document.documentElement.className="client-js";RLCONF={"wgBreakFrames":false,"wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgRequestId":"Zpp9DwEfJaEdFRpaWXtTVwAAAZI","wgCSPNonce":false,"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"TIMER_(function)","wgTitle":"TIMER (function)","wgCurRevisionId":8081,"wgRevisionId":8081,"wgArticleId":1186,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":[],"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgRelevantPageName":"TIMER_(function)","wgRelevantArticleId":1186,"wgIsProbablyEditable":false,"wgRelevantPageIsProbablyEditable":false,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgVector2022PreviewPages":[]};RLSTATE={"site.styles":"ready",
+"user.styles":"ready","user":"ready","user.options":"loading","skins.vector.styles.legacy":"ready"};RLPAGEMODULES=["site","mediawiki.page.ready","mediawiki.toc","skins.vector.legacy.js"];
+  </script>
+  <script>
+   (RLQ=window.RLQ||[]).push(function(){mw.loader.implement("user.options@12s5i",function($,jQuery,require,module){mw.user.tokens.set({"patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});});});
+  </script>
+  <link href="/qb64wiki/load.php?lang=en&amp;modules=skins.vector.styles.legacy&amp;only=styles&amp;skin=vector" rel="stylesheet"/>
+  <script async="" src="/qb64wiki/load.php?lang=en&amp;modules=startup&amp;only=scripts&amp;raw=1&amp;skin=vector">
+  </script>
+  <meta content="" name="ResourceLoaderDynamicStyles"/>
+  <link href="/qb64wiki/load.php?lang=en&amp;modules=site.styles&amp;only=styles&amp;skin=vector" rel="stylesheet"/>
+  <meta content="MediaWiki 1.39.3" name="generator"/>
+  <meta content="telephone=no" name="format-detection"/>
+  <meta content="width=1000" name="viewport"/>
+  <link href="/favicon.ico" rel="icon"/>
+  <link href="/qb64wiki/opensearch_desc.php" rel="search" title="QB64 Phoenix Edition Wiki (en)" type="application/opensearchdescription+xml"/>
+  <link href="https://qb64phoenix.com/qb64wiki/api.php?action=rsd" rel="EditURI" type="application/rsd+xml"/>
+  <link href="/qb64wiki/index.php?title=Special:RecentChanges&amp;feed=atom" rel="alternate" title="QB64 Phoenix Edition Wiki Atom feed" type="application/atom+xml"/>
+ </head>
+ <body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject page-TIMER_function rootpage-TIMER_function skin-vector action-view skin-vector-legacy vector-feature-language-in-header-enabled vector-feature-language-in-main-page-header-disabled vector-feature-language-alert-in-sidebar-disabled vector-feature-sticky-header-disabled vector-feature-sticky-header-edit-disabled vector-feature-table-of-contents-disabled vector-feature-visual-enhancement-next-disabled">
+  <div class="noprint" id="mw-page-base">
+  </div>
+  <div class="noprint" id="mw-head-base">
+  </div>
+  <div class="mw-body" id="content" role="main">
+   <a id="top">
+   </a>
+   <div id="siteNotice">
+   </div>
+   <div class="mw-indicators">
+   </div>
+   <h1 class="firstHeading mw-first-heading" id="firstHeading">
+    <span class="mw-page-title-main">
+     TIMER (function)
+    </span>
+   </h1>
+   <div class="vector-body" id="bodyContent">
+    <div class="noprint" id="siteSub">
+     From QB64 Phoenix Edition Wiki
+    </div>
+    <div id="contentSub">
+    </div>
+    <div id="contentSub2">
+    </div>
+    <div id="jump-to-nav">
+    </div>
+    <a class="mw-jump-link" href="#mw-head">
+     Jump to navigation
+    </a>
+    <a class="mw-jump-link" href="#searchInput">
+     Jump to search
+    </a>
+    <div class="mw-body-content mw-content-ltr" dir="ltr" id="mw-content-text" lang="en">
+     <div class="mw-parser-output">
+      <p>
+       The
+       <b>
+        TIMER
+       </b>
+       function returns the number of seconds past the previous midnite down to an accuracy of 1/18th (QuickBASIC) or 1/1000th (QB64) of a second.
+      </p>
+      <p>
+       <br/>
+      </p>
+      <table align="right" style="max-width:25%;">
+       <tbody>
+        <tr>
+         <td>
+          <div aria-labelledby="mw-toc-heading" class="toc" id="toc" role="navigation">
+           <input class="toctogglecheckbox" id="toctogglecheckbox" role="button" style="display:none" type="checkbox"/>
+           <div class="toctitle" dir="ltr" lang="en">
+            <h2 id="mw-toc-heading">
+             Contents
+            </h2>
+            <span class="toctogglespan">
+             <label class="toctogglelabel" for="toctogglecheckbox">
+             </label>
+            </span>
+           </div>
+           <ul>
+            <li class="toclevel-1">
+             <a href="#Syntax">
+              <span class="tocnumber">
+               1
+              </span>
+              <span class="toctext">
+               Syntax
+              </span>
+             </a>
+            </li>
+            <li class="toclevel-1">
+             <a href="#Description">
+              <span class="tocnumber">
+               2
+              </span>
+              <span class="toctext">
+               Description
+              </span>
+             </a>
+            </li>
+            <li class="toclevel-1">
+             <a href="#Examples">
+              <span class="tocnumber">
+               3
+              </span>
+              <span class="toctext">
+               Examples
+              </span>
+             </a>
+            </li>
+            <li class="toclevel-1">
+             <a href="#See_also">
+              <span class="tocnumber">
+               4
+              </span>
+              <span class="toctext">
+               See also
+              </span>
+             </a>
+            </li>
+           </ul>
+          </div>
+         </td>
+        </tr>
+       </tbody>
+      </table>
+      <h2>
+       <span class="mw-headline" id="Syntax">
+        Syntax
+       </span>
+      </h2>
+      <dl>
+       <dt>
+        QuickBASIC
+       </dt>
+       <dd>
+        <i>
+         seconds!
+        </i>
+        =
+        <a class="mw-selflink selflink">
+         TIMER
+        </a>
+       </dd>
+       <dt>
+        QB64
+       </dt>
+       <dd>
+        <i>
+         seconds#
+        </i>
+        =
+        <a class="mw-selflink selflink">
+         TIMER
+        </a>
+        [(
+        <i>
+         accuracy!
+        </i>
+        )]
+       </dd>
+      </dl>
+      <p>
+       <br/>
+      </p>
+      <h2>
+       <span class="mw-headline" id="Description">
+        Description
+       </span>
+      </h2>
+      <ul>
+       <li>
+        TIMER return values range from 0 at midnight to 86399! A comparison value must stay within that range!
+       </li>
+       <li>
+        <a href="/qb64wiki/index.php/INTEGER" title="INTEGER">
+         INTEGER
+        </a>
+        or
+        <a href="/qb64wiki/index.php/LONG" title="LONG">
+         LONG
+        </a>
+        second values range from 0 at midnight to 86399 seconds each day.
+       </li>
+       <li>
+        QBasic can return
+        <a href="/qb64wiki/index.php/SINGLE" title="SINGLE">
+         SINGLE
+        </a>
+        values down to about .04 or 1/18th (one tick) of a second accurately.
+       </li>
+       <li>
+        <b>
+         QB64
+        </b>
+        can read
+        <a href="/qb64wiki/index.php/DOUBLE" title="DOUBLE">
+         DOUBLE
+        </a>
+        accuracy down to 1 millisecond. Example:
+        <span style="color:green;">
+         start# = TIMER(.001)
+        </span>
+       </li>
+       <li>
+        Use
+        <a href="/qb64wiki/index.php/DOUBLE" title="DOUBLE">
+         DOUBLE
+        </a>
+        variables for millisecond accuracy as
+        <a href="/qb64wiki/index.php/SINGLE" title="SINGLE">
+         SINGLE
+        </a>
+        values are only accurate to 100ths of a second later in the day!
+       </li>
+       <li>
+        TIMER loops should use a midnight adjustment to avoid non-ending loops in QBasic.
+       </li>
+       <li>
+        TIMER can also be used for timing program Events. See
+        <a href="/qb64wiki/index.php/ON_TIMER(n)" title="ON TIMER(n)">
+         ON TIMER(n)
+        </a>
+        or the
+        <a href="/qb64wiki/index.php/TIMER" title="TIMER">
+         TIMER
+        </a>
+        statement.
+       </li>
+       <li>
+        <b>
+         QB64
+        </b>
+        can use a
+        <a href="/qb64wiki/index.php/DELAY" title="DELAY">
+         _DELAY
+        </a>
+        down to .001(one millisecond) or
+        <a href="/qb64wiki/index.php/LIMIT" title="LIMIT">
+         _LIMIT
+        </a>
+        loops per second. Both help limit program CPU usage.
+       </li>
+      </ul>
+      <p>
+       <br/>
+      </p>
+      <h2>
+       <span class="mw-headline" id="Examples">
+        Examples
+       </span>
+      </h2>
+      <p>
+       <i>
+        Example 1:
+       </i>
+       Delay SUB with a midnight correction for when TIMER returns to 0.
+       <b>
+        QB64
+       </b>
+       can use
+       <a href="/qb64wiki/index.php/DELAY" title="DELAY">
+        _DELAY
+       </a>
+       for delays down to .001.
+      </p>
+      <table cellpadding="15px" width="100%">
+       <tbody>
+        <tr>
+         <td>
+          <pre class="codeide"><a href="/qb64wiki/index.php/DO...LOOP" title="DO...LOOP"><span style="color:#4593D8;">DO</span></a>
+  <a href="/qb64wiki/index.php/PRINT" title="PRINT"><span style="color:#4593D8;">PRINT</span></a> "Hello";
+  Delay .5  'accuracy down to .05 seconds or 1/18th of a second in QBasic
+  <a href="/qb64wiki/index.php/PRINT" title="PRINT"><span style="color:#4593D8;">PRINT</span></a> "World!";
+<a href="/qb64wiki/index.php/LOOP" title="LOOP"><span style="color:#4593D8;">LOOP</span></a> <a href="/qb64wiki/index.php/UNTIL" title="UNTIL"><span style="color:#4593D8;">UNTIL</span></a> <a href="/qb64wiki/index.php/INKEY$" title="INKEY$"><span style="color:#4593D8;">INKEY$</span></a> = <a href="/qb64wiki/index.php/CHR$" title="CHR$"><span style="color:#4593D8;">CHR$</span></a>(27) 'escape key exit
+
+<a href="/qb64wiki/index.php/END" title="END"><span style="color:#4593D8;">END</span></a>
+
+<a href="/qb64wiki/index.php/SUB" title="SUB"><span style="color:#4593D8;">SUB</span></a> Delay (dlay!)
+start! = <a class="mw-selflink selflink"><span style="color:#4593D8;">TIMER</span></a>
+<a href="/qb64wiki/index.php/DO...LOOP" title="DO...LOOP"><span style="color:#4593D8;">DO</span></a> <a class="mw-redirect" href="/qb64wiki/index.php/WHILE" title="WHILE"><span style="color:#4593D8;">WHILE</span></a> start! + dlay! &gt;= <a class="mw-selflink selflink"><span style="color:#4593D8;">TIMER</span></a>
+  <a href="/qb64wiki/index.php/IF...THEN" title="IF...THEN"><span style="color:#4593D8;">IF</span></a> start! &gt; <a class="mw-selflink selflink"><span style="color:#4593D8;">TIMER</span></a> <a href="/qb64wiki/index.php/THEN" title="THEN"><span style="color:#4593D8;">THEN</span></a> start! = start! - 86400
+<a href="/qb64wiki/index.php/LOOP" title="LOOP"><span style="color:#4593D8;">LOOP</span></a>
+<a href="/qb64wiki/index.php/END_SUB" title="END SUB"><span style="color:#4593D8;">END SUB</span></a>
+</pre>
+         </td>
+        </tr>
+       </tbody>
+      </table>
+      <dl>
+       <dd>
+        <i>
+         Explanation:
+        </i>
+        When the delay time is added to the present TIMER value, it could be over the maximum number of 86399 seconds. So when TIMER becomes less than start it has reached midnight. The delay value then must be corrected by subtracting 86400.
+       </dd>
+      </dl>
+      <p>
+       <br/>
+       <i>
+        Example 2:
+       </i>
+       Looping one TIMER tick of 1/18th of a second (ticks per second can be changed)
+      </p>
+      <table cellpadding="15px" width="100%">
+       <tbody>
+        <tr>
+         <td>
+          <pre class="codeide"><a href="/qb64wiki/index.php/DEF_SEG" title="DEF SEG"><span style="color:#4593D8;">DEF SEG</span></a> = 0 ' set to <a href="/qb64wiki/index.php/PEEK" title="PEEK"><span style="color:#4593D8;">PEEK</span></a> and <a href="/qb64wiki/index.php/POKE" title="POKE"><span style="color:#4593D8;">POKE</span></a> <a class="mw-selflink selflink"><span style="color:#4593D8;">TIMER</span></a> Ticks
+<a href="/qb64wiki/index.php/DO...LOOP" title="DO...LOOP"><span style="color:#4593D8;">DO</span></a> ' main program loop
+  ' program code
+  <a href="/qb64wiki/index.php/POKE" title="POKE"><span style="color:#4593D8;">POKE</span></a> 1132, 0 ' zero Timer ticks
+  <a href="/qb64wiki/index.php/DO...LOOP" title="DO...LOOP"><span style="color:#4593D8;">DO</span></a> ' delay loop
+    x% = <a href="/qb64wiki/index.php/PEEK" title="PEEK"><span style="color:#4593D8;">PEEK</span></a>(1132)
+    <a href="/qb64wiki/index.php/IF...THEN" title="IF...THEN"><span style="color:#4593D8;">IF</span></a> x% &lt;&gt; px% <a href="/qb64wiki/index.php/THEN" title="THEN"><span style="color:#4593D8;">THEN</span></a> <a href="/qb64wiki/index.php/PRINT" title="PRINT"><span style="color:#4593D8;">PRINT</span></a> x%;
+    px% = x%
+  <a href="/qb64wiki/index.php/LOOP" title="LOOP"><span style="color:#4593D8;">LOOP</span></a> <a href="/qb64wiki/index.php/UNTIL" title="UNTIL"><span style="color:#4593D8;">UNTIL</span></a> x% &gt;= 18 '18 ticks in one second
+  <a href="/qb64wiki/index.php/PRINT" title="PRINT"><span style="color:#4593D8;">PRINT</span></a> "code " ' program code
+<a href="/qb64wiki/index.php/LOOP" title="LOOP"><span style="color:#4593D8;">LOOP</span></a> <a href="/qb64wiki/index.php/UNTIL" title="UNTIL"><span style="color:#4593D8;">UNTIL</span></a> <a href="/qb64wiki/index.php/INKEY$" title="INKEY$"><span style="color:#4593D8;">INKEY$</span></a> = <a href="/qb64wiki/index.php/CHR$" title="CHR$"><span style="color:#4593D8;">CHR$</span></a>(27)
+<a href="/qb64wiki/index.php/DEF_SEG" title="DEF SEG"><span style="color:#4593D8;">DEF SEG</span></a> ' reset segment to default
+
+<a href="/qb64wiki/index.php/END" title="END"><span style="color:#4593D8;">END</span></a>
+</pre>
+         </td>
+        </tr>
+       </tbody>
+      </table>
+      <table cellpadding="15px" width="100%">
+       <tbody>
+        <tr>
+         <td>
+          <pre class="outputcrt0"> 0  1  2  3  4  5  6  7  8  9  10  11  12  13  14  15  16  17  18 code
+ 0  1  2  3  4  5  6  7  8  9  10  11  12  13  14  15  16  17  18 code
+ 0  1  2  3  4  5  6  7  8  9  10  11  12  13  14  15  16  17  18 code
+</pre>
+         </td>
+        </tr>
+       </tbody>
+      </table>
+      <dl>
+       <dd>
+        <i>
+         Explanation:
+        </i>
+        The
+        <a href="/qb64wiki/index.php/POKE" title="POKE">
+         POKE
+        </a>
+        before the delay loop sets the tick count to 0. The
+        <a href="/qb64wiki/index.php/PEEK" title="PEEK">
+         PEEK
+        </a>
+        count increases until the tick count returns 18 ticks and ends the loop. The same thing could be approximated by using a delay loop with:
+        <span style="color:green;">
+         second! =
+         <b>
+          TIMER
+         </b>
+         + 1
+        </span>
+       </dd>
+      </dl>
+      <p>
+       <br/>
+       <i>
+        Example 3:
+       </i>
+       Using a
+       <a href="/qb64wiki/index.php/DOUBLE" title="DOUBLE">
+        DOUBLE
+       </a>
+       variable for
+       <a class="mw-selflink selflink">
+        TIMER
+       </a>
+       (.001) millisecond accuracy in
+       <b>
+        QB64
+       </b>
+       throughout the day.
+      </p>
+      <table cellpadding="15px" width="100%">
+       <tbody>
+        <tr>
+         <td>
+          <pre class="codeide"> ts! = TIMER(.001)     'single variable
+ td# = TIMER(.001)     'double variable
+
+ PRINT "Single ="; ts!
+ PRINT "Double ="; td#
+</pre>
+         </td>
+        </tr>
+       </tbody>
+      </table>
+      <table cellpadding="15px" width="100%">
+       <tbody>
+        <tr>
+         <td>
+          <pre class="outputcrt0"> Single = 77073.09
+ Double = 77073.094
+</pre>
+         </td>
+        </tr>
+       </tbody>
+      </table>
+      <dl>
+       <dd>
+        <i>
+         Explanation:
+        </i>
+        <a href="/qb64wiki/index.php/SINGLE" title="SINGLE">
+         SINGLE
+        </a>
+        variables will cut off the millisecond accuracy returned so
+        <a href="/qb64wiki/index.php/DOUBLE" title="DOUBLE">
+         DOUBLE
+        </a>
+        variables should be used. TIMER values will also exceed
+        <a href="/qb64wiki/index.php/INTEGER" title="INTEGER">
+         INTEGER
+        </a>
+        limits. When displaying TIMER values, use
+        <a href="/qb64wiki/index.php/LONG" title="LONG">
+         LONG
+        </a>
+        for seconds and
+        <a href="/qb64wiki/index.php/DOUBLE" title="DOUBLE">
+         DOUBLE
+        </a>
+        for milliseconds.
+       </dd>
+      </dl>
+      <p>
+       <br/>
+      </p>
+      <h2>
+       <span class="mw-headline" id="See_also">
+        See also
+       </span>
+      </h2>
+      <ul>
+       <li>
+        <a href="/qb64wiki/index.php/DELAY" title="DELAY">
+         _DELAY
+        </a>
+        ,
+        <a href="/qb64wiki/index.php/LIMIT" title="LIMIT">
+         _LIMIT
+        </a>
+        ,
+        <a href="/qb64wiki/index.php/SLEEP" title="SLEEP">
+         SLEEP
+        </a>
+       </li>
+       <li>
+        <a href="/qb64wiki/index.php/RANDOMIZE" title="RANDOMIZE">
+         RANDOMIZE
+        </a>
+        ,
+        <a href="/qb64wiki/index.php/Scancodes" title="Scancodes">
+         Scancodes
+        </a>
+       </li>
+       <li>
+        <a href="/qb64wiki/index.php/ON_TIMER(n)" title="ON TIMER(n)">
+         ON TIMER(n)
+        </a>
+        ,
+        <a href="/qb64wiki/index.php/TIMER" title="TIMER">
+         TIMER
+        </a>
+       </li>
+      </ul>
+      <p>
+       <br/>
+      </p>
+      <hr/>
+      <center>
+       <b>
+        Navigation:
+       </b>
+      </center>
+      <center>
+       <a href="/qb64wiki/index.php/Main_Page" title="Main Page">
+        Main Page with Articles and Tutorials
+       </a>
+      </center>
+      <center>
+       <a href="/qb64wiki/index.php/Keyword_Reference_-_Alphabetical" title="Keyword Reference - Alphabetical">
+        Keyword Reference - Alphabetical
+       </a>
+      </center>
+      <center>
+       <a href="/qb64wiki/index.php/Keyword_Reference_-_By_usage" title="Keyword Reference - By usage">
+        Keyword Reference - By usage
+       </a>
+      </center>
+      <center>
+       <b>
+        <a class="external text" href="https://qb64phoenix.com/forum/showthread.php?tid=2800" rel="nofollow">
+         Report a broken link
+        </a>
+       </b>
+       <br/>
+      </center>
+      <!-- 
+NewPP limit report
+Cached time: 20240719142259
+Cache expiry: 86400
+Reduced expiry: false
+Complications: [show‐toc]
+CPU time usage: 0.040 seconds
+Real time usage: 0.051 seconds
+Preprocessor visited node count: 332/1000000
+Post‐expand include size: 3112/2097152 bytes
+Template argument size: 556/2097152 bytes
+Highest expansion depth: 4/100
+Expensive parser function count: 0/100
+Unstrip recursion depth: 0/20
+Unstrip post‐expand size: 2/5000000 bytes
+-->
+      <!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%   29.129      1 -total
+ 14.46%    4.211     38 Template:Cl
+  8.11%    2.362      1 Template:PageSyntax
+  7.40%    2.157      1 Template:PageSeeAlso
+  7.28%    2.122      3 Template:Parameter
+  6.95%    2.024      3 Template:CodeStart
+  6.68%    1.947      3 Template:CodeEnd
+  6.61%    1.927      2 Template:Text
+  6.46%    1.881      1 Template:PageDescription
+  6.37%    1.856      2 Template:OutputStart
+-->
+      <!-- Saved in parser cache with key qb64pnix_mw19894-mwmb_:pcache:idhash:1186-0!canonical and timestamp 20240719142259 and revision id 8081.
+ -->
+     </div>
+     <div class="printfooter" data-nosnippet="">
+      Retrieved from "
+      <a dir="ltr" href="https://qb64phoenix.com/qb64wiki/index.php?title=TIMER_(function)&amp;oldid=8081">
+       https://qb64phoenix.com/qb64wiki/index.php?title=TIMER_(function)&amp;oldid=8081
+      </a>
+      "
+     </div>
+    </div>
+    <div class="catlinks catlinks-allhidden" data-mw="interface" id="catlinks">
+    </div>
+   </div>
+  </div>
+  <div id="mw-navigation">
+   <h2>
+    Navigation menu
+   </h2>
+   <div id="mw-head">
+    <nav aria-labelledby="p-personal-label" class="vector-menu mw-portlet mw-portlet-personal vector-user-menu-legacy" id="p-personal" role="navigation">
+     <h3 class="vector-menu-heading" id="p-personal-label">
+      <span class="vector-menu-heading-label">
+       Personal tools
+      </span>
+     </h3>
+     <div class="vector-menu-content">
+      <ul class="vector-menu-content-list">
+       <li class="mw-list-item" id="pt-login">
+        <a accesskey="o" href="/qb64wiki/index.php?title=Special:UserLogin&amp;returnto=TIMER+%28function%29" title="You are encouraged to log in; however, it is not mandatory [o]">
+         <span>
+          Log in
+         </span>
+        </a>
+       </li>
+      </ul>
+     </div>
+    </nav>
+    <div id="left-navigation">
+     <nav aria-labelledby="p-namespaces-label" class="vector-menu mw-portlet mw-portlet-namespaces vector-menu-tabs vector-menu-tabs-legacy" id="p-namespaces" role="navigation">
+      <h3 class="vector-menu-heading" id="p-namespaces-label">
+       <span class="vector-menu-heading-label">
+        Namespaces
+       </span>
+      </h3>
+      <div class="vector-menu-content">
+       <ul class="vector-menu-content-list">
+        <li class="selected mw-list-item" id="ca-nstab-main">
+         <a accesskey="c" href="/qb64wiki/index.php/TIMER_(function)" title="View the content page [c]">
+          <span>
+           Page
+          </span>
+         </a>
+        </li>
+        <li class="new mw-list-item" id="ca-talk">
+         <a accesskey="t" href="/qb64wiki/index.php?title=Talk:TIMER_(function)&amp;action=edit&amp;redlink=1" rel="discussion" title="Discussion about the content page (page does not exist) [t]">
+          <span>
+           Discussion
+          </span>
+         </a>
+        </li>
+       </ul>
+      </div>
+     </nav>
+     <nav aria-labelledby="p-variants-label" class="vector-menu mw-portlet mw-portlet-variants emptyPortlet vector-menu-dropdown" id="p-variants" role="navigation">
+      <input aria-haspopup="true" aria-labelledby="p-variants-label" class="vector-menu-checkbox" data-event-name="ui.dropdown-p-variants" id="p-variants-checkbox" role="button" type="checkbox"/>
+      <label aria-label="Change language variant" class="vector-menu-heading" id="p-variants-label">
+       <span class="vector-menu-heading-label">
+        English
+       </span>
+      </label>
+      <div class="vector-menu-content">
+       <ul class="vector-menu-content-list">
+       </ul>
+      </div>
+     </nav>
+    </div>
+    <div id="right-navigation">
+     <nav aria-labelledby="p-views-label" class="vector-menu mw-portlet mw-portlet-views vector-menu-tabs vector-menu-tabs-legacy" id="p-views" role="navigation">
+      <h3 class="vector-menu-heading" id="p-views-label">
+       <span class="vector-menu-heading-label">
+        Views
+       </span>
+      </h3>
+      <div class="vector-menu-content">
+       <ul class="vector-menu-content-list">
+        <li class="selected mw-list-item" id="ca-view">
+         <a href="/qb64wiki/index.php/TIMER_(function)">
+          <span>
+           Read
+          </span>
+         </a>
+        </li>
+        <li class="mw-list-item" id="ca-viewsource">
+         <a accesskey="e" href="/qb64wiki/index.php?title=TIMER_(function)&amp;action=edit" title="This page is protected.
+You can view its source [e]">
+          <span>
+           View source
+          </span>
+         </a>
+        </li>
+        <li class="mw-list-item" id="ca-history">
+         <a accesskey="h" href="/qb64wiki/index.php?title=TIMER_(function)&amp;action=history" title="Past revisions of this page [h]">
+          <span>
+           View history
+          </span>
+         </a>
+        </li>
+       </ul>
+      </div>
+     </nav>
+     <nav aria-labelledby="p-cactions-label" class="vector-menu mw-portlet mw-portlet-cactions emptyPortlet vector-menu-dropdown" id="p-cactions" role="navigation" title="More options">
+      <input aria-haspopup="true" aria-labelledby="p-cactions-label" class="vector-menu-checkbox" data-event-name="ui.dropdown-p-cactions" id="p-cactions-checkbox" role="button" type="checkbox"/>
+      <label class="vector-menu-heading" id="p-cactions-label">
+       <span class="vector-menu-heading-label">
+        More
+       </span>
+      </label>
+      <div class="vector-menu-content">
+       <ul class="vector-menu-content-list">
+       </ul>
+      </div>
+     </nav>
+     <div class="vector-search-box-vue vector-search-box-show-thumbnail vector-search-box-auto-expand-width vector-search-box" id="p-search" role="search">
+      <div>
+       <h3>
+        <label for="searchInput">
+         Search
+        </label>
+       </h3>
+       <form action="/qb64wiki/index.php" class="vector-search-box-form" id="searchform">
+        <div class="vector-search-box-inner" data-search-loc="header-navigation" id="simpleSearch">
+         <input accesskey="f" aria-label="Search QB64 Phoenix Edition Wiki" autocapitalize="sentences" class="vector-search-box-input" id="searchInput" name="search" placeholder="Search QB64 Phoenix Edition Wiki" title="Search QB64 Phoenix Edition Wiki [f]" type="search"/>
+         <input name="title" type="hidden" value="Special:Search"/>
+         <input class="searchButton mw-fallbackSearchButton" id="mw-searchButton" name="fulltext" title="Search the pages for this text" type="submit" value="Search"/>
+         <input class="searchButton" id="searchButton" name="go" title="Go to a page with this exact name if it exists" type="submit" value="Go"/>
+        </div>
+       </form>
+      </div>
+     </div>
+    </div>
+   </div>
+   <div id="mw-panel">
+    <div id="p-logo" role="banner">
+     <a class="mw-wiki-logo" href="/qb64wiki/index.php/Main_Page" title="Visit the main page">
+     </a>
+    </div>
+    <nav aria-labelledby="p-navigation-label" class="vector-menu mw-portlet mw-portlet-navigation vector-menu-portal portal" id="p-navigation" role="navigation">
+     <h3 class="vector-menu-heading" id="p-navigation-label">
+      <span class="vector-menu-heading-label">
+       Navigation
+      </span>
+     </h3>
+     <div class="vector-menu-content">
+      <ul class="vector-menu-content-list">
+       <li class="mw-list-item" id="n-mainpage-description">
+        <a accesskey="z" href="/qb64wiki/index.php/Main_Page" title="Visit the main page [z]">
+         <span>
+          Main page
+         </span>
+        </a>
+       </li>
+       <li class="mw-list-item" id="n-recentchanges">
+        <a accesskey="r" href="/qb64wiki/index.php/Special:RecentChanges" title="A list of recent changes in the wiki [r]">
+         <span>
+          Recent changes
+         </span>
+        </a>
+       </li>
+       <li class="mw-list-item" id="n-randompage">
+        <a accesskey="x" href="/qb64wiki/index.php/Special:Random" title="Load a random page [x]">
+         <span>
+          Random page
+         </span>
+        </a>
+       </li>
+       <li class="mw-list-item" id="n-help-mediawiki">
+        <a href="https://www.mediawiki.org/wiki/Special:MyLanguage/Help:Contents">
+         <span>
+          Help about MediaWiki
+         </span>
+        </a>
+       </li>
+      </ul>
+     </div>
+    </nav>
+    <nav aria-labelledby="p-tb-label" class="vector-menu mw-portlet mw-portlet-tb vector-menu-portal portal" id="p-tb" role="navigation">
+     <h3 class="vector-menu-heading" id="p-tb-label">
+      <span class="vector-menu-heading-label">
+       Tools
+      </span>
+     </h3>
+     <div class="vector-menu-content">
+      <ul class="vector-menu-content-list">
+       <li class="mw-list-item" id="t-whatlinkshere">
+        <a accesskey="j" href="/qb64wiki/index.php/Special:WhatLinksHere/TIMER_(function)" title="A list of all wiki pages that link here [j]">
+         <span>
+          What links here
+         </span>
+        </a>
+       </li>
+       <li class="mw-list-item" id="t-recentchangeslinked">
+        <a accesskey="k" href="/qb64wiki/index.php/Special:RecentChangesLinked/TIMER_(function)" rel="nofollow" title="Recent changes in pages linked from this page [k]">
+         <span>
+          Related changes
+         </span>
+        </a>
+       </li>
+       <li class="mw-list-item" id="t-specialpages">
+        <a accesskey="q" href="/qb64wiki/index.php/Special:SpecialPages" title="A list of all special pages [q]">
+         <span>
+          Special pages
+         </span>
+        </a>
+       </li>
+       <li class="mw-list-item" id="t-print">
+        <a accesskey="p" href="javascript:print();" rel="alternate" title="Printable version of this page [p]">
+         <span>
+          Printable version
+         </span>
+        </a>
+       </li>
+       <li class="mw-list-item" id="t-permalink">
+        <a href="/qb64wiki/index.php?title=TIMER_(function)&amp;oldid=8081" title="Permanent link to this revision of this page">
+         <span>
+          Permanent link
+         </span>
+        </a>
+       </li>
+       <li class="mw-list-item" id="t-info">
+        <a href="/qb64wiki/index.php?title=TIMER_(function)&amp;action=info" title="More information about this page">
+         <span>
+          Page information
+         </span>
+        </a>
+       </li>
+      </ul>
+     </div>
+    </nav>
+   </div>
+  </div>
+  <footer class="mw-footer" id="footer" role="contentinfo">
+   <ul id="footer-info">
+    <li id="footer-info-lastmod">
+     This page was last edited on 24 February 2023, at 18:16.
+    </li>
+   </ul>
+   <ul id="footer-places">
+    <li id="footer-places-privacy">
+     <a href="/qb64wiki/index.php/QB64_Phoenix_Edition_Wiki:Privacy_policy">
+      Privacy policy
+     </a>
+    </li>
+    <li id="footer-places-about">
+     <a href="/qb64wiki/index.php/QB64_Phoenix_Edition_Wiki:About">
+      About QB64 Phoenix Edition Wiki
+     </a>
+    </li>
+    <li id="footer-places-disclaimer">
+     <a href="/qb64wiki/index.php/QB64_Phoenix_Edition_Wiki:General_disclaimer">
+      Disclaimers
+     </a>
+    </li>
+   </ul>
+   <ul class="noprint" id="footer-icons">
+    <li id="footer-poweredbyico">
+     <a href="https://www.mediawiki.org/">
+      <img alt="Powered by MediaWiki" height="31" loading="lazy" src="/qb64wiki/resources/assets/poweredby_mediawiki_88x31.png" srcset="/qb64wiki/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /qb64wiki/resources/assets/poweredby_mediawiki_176x62.png 2x" width="88"/>
+     </a>
+    </li>
+   </ul>
+  </footer>
+  <script>
+   (RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgPageParseReport":{"limitreport":{"cputime":"0.040","walltime":"0.051","ppvisitednodes":{"value":332,"limit":1000000},"postexpandincludesize":{"value":3112,"limit":2097152},"templateargumentsize":{"value":556,"limit":2097152},"expansiondepth":{"value":4,"limit":100},"expensivefunctioncount":{"value":0,"limit":100},"unstrip-depth":{"value":0,"limit":20},"unstrip-size":{"value":2,"limit":5000000},"timingprofile":["100.00%   29.129      1 -total"," 14.46%    4.211     38 Template:Cl","  8.11%    2.362      1 Template:PageSyntax","  7.40%    2.157      1 Template:PageSeeAlso","  7.28%    2.122      3 Template:Parameter","  6.95%    2.024      3 Template:CodeStart","  6.68%    1.947      3 Template:CodeEnd","  6.61%    1.927      2 Template:Text","  6.46%    1.881      1 Template:PageDescription","  6.37%    1.856      2 Template:OutputStart"]},"cachereport":{"timestamp":"20240719142259","ttl":86400,"transientcontent":false}}});mw.config.set({"wgBackendResponseTime":96});});
+  </script>
+ </body>
+</html>

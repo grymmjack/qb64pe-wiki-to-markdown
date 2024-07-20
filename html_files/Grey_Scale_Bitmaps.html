@@ -1,0 +1,705 @@
+<!DOCTYPE html>
+<html class="client-nojs" dir="ltr" lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <title>
+   Grey Scale Bitmaps - QB64 Phoenix Edition Wiki
+  </title>
+  <script>
+   document.documentElement.className="client-js";RLCONF={"wgBreakFrames":false,"wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgRequestId":"Zpp8KJ35EcyPqcm4ZfY9kQAAABs","wgCSPNonce":false,"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"Grey_Scale_Bitmaps","wgTitle":"Grey Scale Bitmaps","wgCurRevisionId":8132,"wgRevisionId":8132,"wgArticleId":847,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":[],"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgRelevantPageName":"Grey_Scale_Bitmaps","wgRelevantArticleId":847,"wgIsProbablyEditable":false,"wgRelevantPageIsProbablyEditable":false,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgVector2022PreviewPages":[]};RLSTATE={"site.styles":"ready",
+"user.styles":"ready","user":"ready","user.options":"loading","skins.vector.styles.legacy":"ready"};RLPAGEMODULES=["site","mediawiki.page.ready","skins.vector.legacy.js"];
+  </script>
+  <script>
+   (RLQ=window.RLQ||[]).push(function(){mw.loader.implement("user.options@12s5i",function($,jQuery,require,module){mw.user.tokens.set({"patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});});});
+  </script>
+  <link href="/qb64wiki/load.php?lang=en&amp;modules=skins.vector.styles.legacy&amp;only=styles&amp;skin=vector" rel="stylesheet"/>
+  <script async="" src="/qb64wiki/load.php?lang=en&amp;modules=startup&amp;only=scripts&amp;raw=1&amp;skin=vector">
+  </script>
+  <meta content="" name="ResourceLoaderDynamicStyles"/>
+  <link href="/qb64wiki/load.php?lang=en&amp;modules=site.styles&amp;only=styles&amp;skin=vector" rel="stylesheet"/>
+  <meta content="MediaWiki 1.39.3" name="generator"/>
+  <meta content="telephone=no" name="format-detection"/>
+  <meta content="width=1000" name="viewport"/>
+  <link href="/favicon.ico" rel="icon"/>
+  <link href="/qb64wiki/opensearch_desc.php" rel="search" title="QB64 Phoenix Edition Wiki (en)" type="application/opensearchdescription+xml"/>
+  <link href="https://qb64phoenix.com/qb64wiki/api.php?action=rsd" rel="EditURI" type="application/rsd+xml"/>
+  <link href="/qb64wiki/index.php?title=Special:RecentChanges&amp;feed=atom" rel="alternate" title="QB64 Phoenix Edition Wiki Atom feed" type="application/atom+xml"/>
+ </head>
+ <body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject page-Grey_Scale_Bitmaps rootpage-Grey_Scale_Bitmaps skin-vector action-view skin-vector-legacy vector-feature-language-in-header-enabled vector-feature-language-in-main-page-header-disabled vector-feature-language-alert-in-sidebar-disabled vector-feature-sticky-header-disabled vector-feature-sticky-header-edit-disabled vector-feature-table-of-contents-disabled vector-feature-visual-enhancement-next-disabled">
+  <div class="noprint" id="mw-page-base">
+  </div>
+  <div class="noprint" id="mw-head-base">
+  </div>
+  <div class="mw-body" id="content" role="main">
+   <a id="top">
+   </a>
+   <div id="siteNotice">
+   </div>
+   <div class="mw-indicators">
+   </div>
+   <h1 class="firstHeading mw-first-heading" id="firstHeading">
+    <span class="mw-page-title-main">
+     Grey Scale Bitmaps
+    </span>
+   </h1>
+   <div class="vector-body" id="bodyContent">
+    <div class="noprint" id="siteSub">
+     From QB64 Phoenix Edition Wiki
+    </div>
+    <div id="contentSub">
+    </div>
+    <div id="contentSub2">
+    </div>
+    <div id="jump-to-nav">
+    </div>
+    <a class="mw-jump-link" href="#mw-head">
+     Jump to navigation
+    </a>
+    <a class="mw-jump-link" href="#searchInput">
+     Jump to search
+    </a>
+    <div class="mw-body-content mw-content-ltr" dir="ltr" id="mw-content-text" lang="en">
+     <div class="mw-parser-output">
+      <p>
+       Grey scale is necessary for compatibility with QBasic's legacy
+       <a href="/qb64wiki/index.php/SCREEN" title="SCREEN">
+        SCREEN
+       </a>
+       modes when viewing 24/32 bit bitmaps! You may also desire grey scale images for aesthetic or artistic reasons.
+      </p>
+      <ul>
+       <li>
+        Set each color
+        <b>
+         attribute'
+        </b>
+        s RGB
+        <b>
+         intensities
+        </b>
+        to the same value while incrementing the attribute values and intensity levels.
+       </li>
+      </ul>
+      <ul>
+       <li>
+        Don't exceed 63 when using
+        <a href="/qb64wiki/index.php/OUT" title="OUT">
+         OUT
+        </a>
+        in legacy screen modes 12 or 13. Screens 7 and 9 use
+        <a href="/qb64wiki/index.php/DAC" title="DAC">
+         DAC
+        </a>
+        color settings.
+       </li>
+      </ul>
+      <ul>
+       <li>
+        If using a
+        <b>
+         QB64
+        </b>
+        32 bit
+        <a href="/qb64wiki/index.php/NEWIMAGE" title="NEWIMAGE">
+         _NEWIMAGE
+        </a>
+        Screen, use
+        <a href="/qb64wiki/index.php/RGB" title="RGB">
+         _RGB
+        </a>
+        or
+        <a href="/qb64wiki/index.php/RGB32" title="RGB32">
+         RGB32
+        </a>
+        values no higher than 255.
+       </li>
+      </ul>
+      <ul>
+       <li>
+        Then set the color
+        <b>
+         attributes
+        </b>
+        to reflect the number of colors available in that legacy screen mode.
+       </li>
+      </ul>
+      <ul>
+       <li>
+        24/32 bit do not use color attributes, so the
+        <b>
+         intensity levels
+        </b>
+        must be set to an average for all three.
+       </li>
+      </ul>
+      <p>
+       <br/>
+      </p>
+      <center>
+       <b>
+        SCREEN 12 (4 BPP - 16 colors)
+       </b>
+      </center>
+      <table cellpadding="15px" width="100%">
+       <tbody>
+        <tr>
+         <td>
+          <pre class="codeide"><a href="/qb64wiki/index.php/SUB" title="SUB"><span style="color:#4593D8;">SUB</span></a> TrueColor12  'Screen 12 greyscale of 24 bit 'code by Bob Seguin
+<a class="mw-redirect" href="/qb64wiki/index.php/IF" title="IF"><span style="color:#4593D8;">IF</span></a> BMP.PWidth * 3) <a href="/qb64wiki/index.php/MOD" title="MOD"><span style="color:#4593D8;">MOD</span></a> 4) <a href="/qb64wiki/index.php/THEN" title="THEN"><span style="color:#4593D8;">THEN</span></a>
+ZeroPAD$ = <a href="/qb64wiki/index.php/SPACE$" title="SPACE$"><span style="color:#4593D8;">SPACE$</span></a>((4 - ((BMP.PWidth * 3) <a href="/qb64wiki/index.php/MOD" title="MOD"><span style="color:#4593D8;">MOD</span></a> 4)))
+<a class="mw-redirect" href="/qb64wiki/index.php/END_IF" title="END IF"><span style="color:#4593D8;">END IF</span></a>
+n = 3
+<a href="/qb64wiki/index.php/FOR...NEXT" title="FOR...NEXT"><span style="color:#4593D8;">FOR</span></a> Colr = 0 <a href="/qb64wiki/index.php/TO" title="TO"><span style="color:#4593D8;">TO</span></a> 15  '16 colors
+        <a href="/qb64wiki/index.php/OUT" title="OUT"><span style="color:#4593D8;">OUT</span></a> <a href="/qb64wiki/index.php/%26H" title="&amp;H"><span style="color:#4593D8;">&amp;H</span></a>3C8, Colr
+        <a href="/qb64wiki/index.php/OUT" title="OUT"><span style="color:#4593D8;">OUT</span></a> <a href="/qb64wiki/index.php/%26H" title="&amp;H"><span style="color:#4593D8;">&amp;H</span></a>3C9, n        'color intensities are each equal in grey scale
+        <a href="/qb64wiki/index.php/OUT" title="OUT"><span style="color:#4593D8;">OUT</span></a> <a href="/qb64wiki/index.php/%26H" title="&amp;H"><span style="color:#4593D8;">&amp;H</span></a>3C9, n
+        <a href="/qb64wiki/index.php/OUT" title="OUT"><span style="color:#4593D8;">OUT</span></a> <a href="/qb64wiki/index.php/%26H" title="&amp;H"><span style="color:#4593D8;">&amp;H</span></a>3C9, n
+        n = n + 4                     'increment intensities. maximum intensity = 63
+<a href="/qb64wiki/index.php/NEXT" title="NEXT"><span style="color:#4593D8;">NEXT</span></a> Colr
+y = BMP.PDepth - 1: o$ = " "
+<a href="/qb64wiki/index.php/GET" title="GET"><span style="color:#4593D8;">GET</span></a> #1, BMP.Offset, o$
+R$ = " ": G$ = " ": B$ = " "
+<a class="mw-redirect" href="/qb64wiki/index.php/DO" title="DO"><span style="color:#4593D8;">DO</span></a>
+x = 0                               'set image to left of screen
+  <a class="mw-redirect" href="/qb64wiki/index.php/DO" title="DO"><span style="color:#4593D8;">DO</span></a>
+    <a href="/qb64wiki/index.php/GET" title="GET"><span style="color:#4593D8;">GET</span></a> #1, , B$
+    <a href="/qb64wiki/index.php/GET" title="GET"><span style="color:#4593D8;">GET</span></a> #1, , G$
+    <a href="/qb64wiki/index.php/GET" title="GET"><span style="color:#4593D8;">GET</span></a> #1, , R$
+    red = <a href="/qb64wiki/index.php/ASC_(function)" title="ASC (function)"><span style="color:#4593D8;">ASC</span></a>(R$)            'intensities from 0 to 255
+    grn = <a href="/qb64wiki/index.php/ASC_(function)" title="ASC (function)"><span style="color:#4593D8;">ASC</span></a>(G$)
+    blu = <a href="/qb64wiki/index.php/ASC_(function)" title="ASC (function)"><span style="color:#4593D8;">ASC</span></a>(B$)
+    average = (red + grn + blu) \ 48    'divide by 16 colors and divide by 3 for average
+    <a href="/qb64wiki/index.php/PSET" title="PSET"><span style="color:#4593D8;">PSET</span></a> (x, y), average                '255 * 3 divided by 16 = maximum color of 15
+    x = x + 1
+    <a href="/qb64wiki/index.php/LOOP" title="LOOP"><span style="color:#4593D8;">LOOP</span></a> <a class="mw-redirect" href="/qb64wiki/index.php/WHILE" title="WHILE"><span style="color:#4593D8;">WHILE</span></a> x &lt; BMP.Pwidth
+    <a href="/qb64wiki/index.php/GET" title="GET"><span style="color:#4593D8;">GET</span></a> #1, , ZeroPAD$           'move up one row from bottom
+    y = y - 1
+<a href="/qb64wiki/index.php/LOOP" title="LOOP"><span style="color:#4593D8;">LOOP</span></a> <a href="/qb64wiki/index.php/UNTIL" title="UNTIL"><span style="color:#4593D8;">UNTIL</span></a> y = -1
+<a href="/qb64wiki/index.php/END_SUB" title="END SUB"><span style="color:#4593D8;">END SUB</span></a>
+</pre>
+         </td>
+        </tr>
+       </tbody>
+      </table>
+      <p>
+       <br/>
+      </p>
+      <center>
+       <b>
+        SCREEN 13 (4 or 8 BPP - 256 colors)
+       </b>
+      </center>
+      <table cellpadding="15px" width="100%">
+       <tbody>
+        <tr>
+         <td>
+          <pre class="codeide"><a href="/qb64wiki/index.php/SUB" title="SUB"><span style="color:#4593D8;">SUB</span></a> TrueColor13    'Screen 13 greyscale of 24 bit 'code by Bob Seguin
+<a class="mw-redirect" href="/qb64wiki/index.php/IF" title="IF"><span style="color:#4593D8;">IF</span></a> ((BMP.PWidth * 3) <a href="/qb64wiki/index.php/MOD" title="MOD"><span style="color:#4593D8;">MOD</span></a> 4) &lt;&gt; 0 <a href="/qb64wiki/index.php/THEN" title="THEN"><span style="color:#4593D8;">THEN</span></a>
+ZeroPAD$ = <a href="/qb64wiki/index.php/SPACE$" title="SPACE$"><span style="color:#4593D8;">SPACE$</span></a>((4 - ((BMP.PWidth * 3) <a href="/qb64wiki/index.php/MOD" title="MOD"><span style="color:#4593D8;">MOD</span></a> 4)))
+<a class="mw-redirect" href="/qb64wiki/index.php/END_IF" title="END IF"><span style="color:#4593D8;">END IF</span></a>
+<a href="/qb64wiki/index.php/FOR...NEXT" title="FOR...NEXT"><span style="color:#4593D8;">FOR</span></a> Colr = 0 <a href="/qb64wiki/index.php/TO" title="TO"><span style="color:#4593D8;">TO</span></a> 255 <a href="/qb64wiki/index.php/STEP" title="STEP"><span style="color:#4593D8;">STEP</span></a> 4         '63 different intensities
+    <a href="/qb64wiki/index.php/FOR...NEXT" title="FOR...NEXT"><span style="color:#4593D8;">FOR</span></a> Reps = 0 <a href="/qb64wiki/index.php/TO" title="TO"><span style="color:#4593D8;">TO</span></a> 3              'set 3 colors at a time
+        <a href="/qb64wiki/index.php/OUT" title="OUT"><span style="color:#4593D8;">OUT</span></a> <a href="/qb64wiki/index.php/%26H" title="&amp;H"><span style="color:#4593D8;">&amp;H</span></a>3C8, Colr + Reps
+        <a href="/qb64wiki/index.php/OUT" title="OUT"><span style="color:#4593D8;">OUT</span></a> <a href="/qb64wiki/index.php/%26H" title="&amp;H"><span style="color:#4593D8;">&amp;H</span></a>3C9, n     'color intensities are each equal in grey scale
+        <a href="/qb64wiki/index.php/OUT" title="OUT"><span style="color:#4593D8;">OUT</span></a> <a href="/qb64wiki/index.php/%26H" title="&amp;H"><span style="color:#4593D8;">&amp;H</span></a>3C9, n
+        <a href="/qb64wiki/index.php/OUT" title="OUT"><span style="color:#4593D8;">OUT</span></a> <a href="/qb64wiki/index.php/%26H" title="&amp;H"><span style="color:#4593D8;">&amp;H</span></a>3C9, n
+    <a href="/qb64wiki/index.php/NEXT" title="NEXT"><span style="color:#4593D8;">NEXT</span></a> Reps
+    n = n + 1                          'increment intensities. maximum = 63
+<a href="/qb64wiki/index.php/NEXT" title="NEXT"><span style="color:#4593D8;">NEXT</span></a> Colr
+y = BMP.PDepth - 1: o$ = " "
+<a href="/qb64wiki/index.php/GET" title="GET"><span style="color:#4593D8;">GET</span></a> #1, BMP.Offset, o$          'offset + 1 immediately after header
+R$ = " ": G$ = " ": B$ = " "
+<a class="mw-redirect" href="/qb64wiki/index.php/DO" title="DO"><span style="color:#4593D8;">DO</span></a>
+x = 0                                 'set image to left side of screen
+  <a class="mw-redirect" href="/qb64wiki/index.php/DO" title="DO"><span style="color:#4593D8;">DO</span></a>
+    <a href="/qb64wiki/index.php/GET" title="GET"><span style="color:#4593D8;">GET</span></a> #1, , B$
+    <a href="/qb64wiki/index.php/GET" title="GET"><span style="color:#4593D8;">GET</span></a> #1, , G$
+    <a href="/qb64wiki/index.php/GET" title="GET"><span style="color:#4593D8;">GET</span></a> #1, , R$
+    red = <a href="/qb64wiki/index.php/ASC_(function)" title="ASC (function)"><span style="color:#4593D8;">ASC</span></a>(R$)
+    grn = <a href="/qb64wiki/index.php/ASC_(function)" title="ASC (function)"><span style="color:#4593D8;">ASC</span></a>(G$)
+    blu = <a href="/qb64wiki/index.php/ASC_(function)" title="ASC (function)"><span style="color:#4593D8;">ASC</span></a>(B$)
+    average = (red + grn + blu) \ 3 'divide by 3 for average as colors match intensities
+    <a href="/qb64wiki/index.php/PSET" title="PSET"><span style="color:#4593D8;">PSET</span></a> (x, y), average            '3 * 255 divided by 3 = maximum color attribute of 255
+    x = x + 1
+  <a href="/qb64wiki/index.php/LOOP" title="LOOP"><span style="color:#4593D8;">LOOP</span></a> <a class="mw-redirect" href="/qb64wiki/index.php/WHILE" title="WHILE"><span style="color:#4593D8;">WHILE</span></a> x &lt; BMP.PWidth
+  <a href="/qb64wiki/index.php/GET" title="GET"><span style="color:#4593D8;">GET</span></a> #1, , ZeroPAD$                  'skip padder if used
+  y = y - 1                             'move up one row from bottom
+<a href="/qb64wiki/index.php/LOOP" title="LOOP"><span style="color:#4593D8;">LOOP</span></a> <a href="/qb64wiki/index.php/UNTIL" title="UNTIL"><span style="color:#4593D8;">UNTIL</span></a> y = -1
+<a href="/qb64wiki/index.php/END_SUB" title="END SUB"><span style="color:#4593D8;">END SUB</span></a>
+</pre>
+         </td>
+        </tr>
+       </tbody>
+      </table>
+      <p>
+       <br/>
+      </p>
+      <center>
+       <b>
+        SCREEN
+        <a href="/qb64wiki/index.php/NEWIMAGE" title="NEWIMAGE">
+         _NEWIMAGE
+        </a>
+        (BMP.PWidth, BMP.PDepth, 32) (24 BPP - 16 million colors)
+       </b>
+      </center>
+      <table cellpadding="15px" width="100%">
+       <tbody>
+        <tr>
+         <td>
+          <pre class="codeide">
+
+<a href="/qb64wiki/index.php/SUB" title="SUB"><span style="color:#4593D8;">SUB</span></a> TrueGreyScale   'convert a 24 bit bitmap image to grey scale
+<a class="mw-redirect" href="/qb64wiki/index.php/IF" title="IF"><span style="color:#4593D8;">IF</span></a> ((BMP.PWidth * 3) <a href="/qb64wiki/index.php/MOD" title="MOD"><span style="color:#4593D8;">MOD</span></a> 4) &lt;&gt; 0 <a href="/qb64wiki/index.php/THEN" title="THEN"><span style="color:#4593D8;">THEN</span></a>
+ZeroPAD$ = <a href="/qb64wiki/index.php/SPACE$" title="SPACE$"><span style="color:#4593D8;">SPACE$</span></a>((4 - ((BMP.PWidth * 3) <a href="/qb64wiki/index.php/MOD" title="MOD"><span style="color:#4593D8;">MOD</span></a> 4)))
+<a class="mw-redirect" href="/qb64wiki/index.php/END_IF" title="END IF"><span style="color:#4593D8;">END IF</span></a>
+y = BMP.PDepth - 1: o$ = " "
+<a href="/qb64wiki/index.php/GET" title="GET"><span style="color:#4593D8;">GET</span></a> #1, BMP.Offset, o$   'offset + 1 immediately after header
+R$ = " ": G$ = " ": B$ = " "
+<a class="mw-redirect" href="/qb64wiki/index.php/DO" title="DO"><span style="color:#4593D8;">DO</span></a>
+x = 0                                 'set image to left side of screen
+    <a class="mw-redirect" href="/qb64wiki/index.php/DO" title="DO"><span style="color:#4593D8;">DO</span></a>
+    <a href="/qb64wiki/index.php/GET" title="GET"><span style="color:#4593D8;">GET</span></a> #1, , B$
+    <a href="/qb64wiki/index.php/GET" title="GET"><span style="color:#4593D8;">GET</span></a> #1, , G$
+    <a href="/qb64wiki/index.php/GET" title="GET"><span style="color:#4593D8;">GET</span></a> #1, , R$
+    red = <a href="/qb64wiki/index.php/ASC_(function)" title="ASC (function)"><span style="color:#4593D8;">ASC</span></a>(R$)
+    grn = <a href="/qb64wiki/index.php/ASC_(function)" title="ASC (function)"><span style="color:#4593D8;">ASC</span></a>(G$)
+    blu = <a href="/qb64wiki/index.php/ASC_(function)" title="ASC (function)"><span style="color:#4593D8;">ASC</span></a>(B$)
+    average = (red + grn + blu) \ 3   'divide by 3 for average as colors match intensities
+    <a href="/qb64wiki/index.php/PSET" title="PSET"><span style="color:#4593D8;">PSET</span></a> (x, y), <a href="/qb64wiki/index.php/RGB32" title="RGB32"><span style="color:#4593D8;">_RGB32</span></a>(average, average, average)  'maximum color intensity = 255
+    x = x + 1
+    <a href="/qb64wiki/index.php/LOOP" title="LOOP"><span style="color:#4593D8;">LOOP</span></a> <a class="mw-redirect" href="/qb64wiki/index.php/WHILE" title="WHILE"><span style="color:#4593D8;">WHILE</span></a> x &lt; BMP.PWidth
+    <a href="/qb64wiki/index.php/GET" title="GET"><span style="color:#4593D8;">GET</span></a> #1, , ZeroPAD$                  'skip padder if used
+    y = y - 1                           'move up one row from bottom
+<a href="/qb64wiki/index.php/LOOP" title="LOOP"><span style="color:#4593D8;">LOOP</span></a> <a href="/qb64wiki/index.php/UNTIL" title="UNTIL"><span style="color:#4593D8;">UNTIL</span></a> y = -1
+<a href="/qb64wiki/index.php/END_SUB" title="END SUB"><span style="color:#4593D8;">END SUB</span></a>
+</pre>
+         </td>
+        </tr>
+       </tbody>
+      </table>
+      <p>
+       <br/>
+      </p>
+      <center>
+       <b>
+        Tinting Grey Scale Images
+       </b>
+      </center>
+      <dl>
+       <dd>
+        To tint a SCREEN 12 or 13 greyscale image, keep the
+        <b>
+         palette
+        </b>
+        intensity settings of 1 or 2 colors less than the others.
+       </dd>
+      </dl>
+      <table cellpadding="15px" width="100%">
+       <tbody>
+        <tr>
+         <td>
+          <pre class="codeide"><a href="/qb64wiki/index.php/FOR...NEXT" title="FOR...NEXT"><span style="color:#4593D8;">FOR</span></a> Colr = 0 <a href="/qb64wiki/index.php/TO" title="TO"><span style="color:#4593D8;">TO</span></a> 255 <a href="/qb64wiki/index.php/STEP" title="STEP"><span style="color:#4593D8;">STEP</span></a> 4         '63 different intensities
+    <a href="/qb64wiki/index.php/FOR...NEXT" title="FOR...NEXT"><span style="color:#4593D8;">FOR</span></a> Reps = 0 <a href="/qb64wiki/index.php/TO" title="TO"><span style="color:#4593D8;">TO</span></a> 3              'set 3 colors at a time
+        <a href="/qb64wiki/index.php/OUT" title="OUT"><span style="color:#4593D8;">OUT</span></a> <a href="/qb64wiki/index.php/%26H" title="&amp;H"><span style="color:#4593D8;">&amp;H</span></a>3C8, Colr + Reps
+        <a href="/qb64wiki/index.php/OUT" title="OUT"><span style="color:#4593D8;">OUT</span></a> <a href="/qb64wiki/index.php/%26H" title="&amp;H"><span style="color:#4593D8;">&amp;H</span></a>3C9, n - tint    'decrease color intensities of red and green
+        <a href="/qb64wiki/index.php/OUT" title="OUT"><span style="color:#4593D8;">OUT</span></a> <a href="/qb64wiki/index.php/%26H" title="&amp;H"><span style="color:#4593D8;">&amp;H</span></a>3C9, n - tint
+        <a href="/qb64wiki/index.php/OUT" title="OUT"><span style="color:#4593D8;">OUT</span></a> <a href="/qb64wiki/index.php/%26H" title="&amp;H"><span style="color:#4593D8;">&amp;H</span></a>3C9, n           'higher blue intensity will blue the image
+    <a href="/qb64wiki/index.php/NEXT" title="NEXT"><span style="color:#4593D8;">NEXT</span></a> Reps
+    n = n + 1                          'increment intensities. maximum = 63
+    <a class="mw-redirect" href="/qb64wiki/index.php/IF" title="IF"><span style="color:#4593D8;">IF</span></a> n &gt; 5 <a href="/qb64wiki/index.php/THEN" title="THEN"><span style="color:#4593D8;">THEN</span></a> tint = 5          'keep red and green intensity values above 0!
+<a href="/qb64wiki/index.php/NEXT" title="NEXT"><span style="color:#4593D8;">NEXT</span></a> Colr
+</pre>
+         </td>
+        </tr>
+       </tbody>
+      </table>
+      <dl>
+       <dd>
+        In 24/32 bit SCREENs, subtract some intensity from one or two of the 3
+        <b>
+         image pixel
+        </b>
+        settings.
+       </dd>
+      </dl>
+      <table cellpadding="15px" width="100%">
+       <tbody>
+        <tr>
+         <td>
+          <pre class="codeide"><a class="mw-redirect" href="/qb64wiki/index.php/DO" title="DO"><span style="color:#4593D8;">DO</span></a>
+  <a href="/qb64wiki/index.php/GET" title="GET"><span style="color:#4593D8;">GET</span></a> #1, , B$
+  <a href="/qb64wiki/index.php/GET" title="GET"><span style="color:#4593D8;">GET</span></a> #1, , G$
+  <a href="/qb64wiki/index.php/GET" title="GET"><span style="color:#4593D8;">GET</span></a> #1, , R$
+  red = <a href="/qb64wiki/index.php/ASC_(function)" title="ASC (function)"><span style="color:#4593D8;">ASC</span></a>(R$)
+  grn = <a href="/qb64wiki/index.php/ASC_(function)" title="ASC (function)"><span style="color:#4593D8;">ASC</span></a>(G$)
+  blu = <a href="/qb64wiki/index.php/ASC_(function)" title="ASC (function)"><span style="color:#4593D8;">ASC</span></a>(B$)
+  average = (red + grn + blu) \ 3   'divide by 3 for average as colors match intensities
+  IF average &gt; 5 THEN tint = 5 ELSE tint = 0
+  <a href="/qb64wiki/index.php/PSET" title="PSET"><span style="color:#4593D8;">PSET</span></a> (x, y), <a href="/qb64wiki/index.php/RGB32" title="RGB32"><span style="color:#4593D8;">_RGB32</span></a>(average - tint, average - tint, average) 'maximum color intensity = 255
+   x = x + 1
+<a href="/qb64wiki/index.php/LOOP" title="LOOP"><span style="color:#4593D8;">LOOP</span></a> <a class="mw-redirect" href="/qb64wiki/index.php/WHILE" title="WHILE"><span style="color:#4593D8;">WHILE</span></a> x &lt; BMP.PWidth
+</pre>
+         </td>
+        </tr>
+       </tbody>
+      </table>
+      <dl>
+       <dd>
+        You could keep the red and green intensity settings higher than blue to yellow, brown, or antique the image too.
+       </dd>
+      </dl>
+      <p>
+       <br/>
+      </p>
+      <h2>
+       <span class="mw-headline" id="See_also">
+        See also
+       </span>
+      </h2>
+      <ul>
+       <li>
+        <a href="/qb64wiki/index.php/Bitmaps" title="Bitmaps">
+         Bitmaps
+        </a>
+       </li>
+       <li>
+        <a href="/qb64wiki/index.php/Icons_and_Cursors" title="Icons and Cursors">
+         Icons and Cursors
+        </a>
+       </li>
+      </ul>
+      <p>
+       <br/>
+      </p>
+      <hr/>
+      <center>
+       <b>
+        Navigation:
+       </b>
+      </center>
+      <center>
+       <a href="/qb64wiki/index.php/Main_Page" title="Main Page">
+        Main Page with Articles and Tutorials
+       </a>
+      </center>
+      <center>
+       <a href="/qb64wiki/index.php/Keyword_Reference_-_Alphabetical" title="Keyword Reference - Alphabetical">
+        Keyword Reference - Alphabetical
+       </a>
+      </center>
+      <center>
+       <a href="/qb64wiki/index.php/Keyword_Reference_-_By_usage" title="Keyword Reference - By usage">
+        Keyword Reference - By usage
+       </a>
+      </center>
+      <center>
+       <b>
+        <a class="external text" href="https://qb64phoenix.com/forum/showthread.php?tid=2800" rel="nofollow">
+         Report a broken link
+        </a>
+       </b>
+       <br/>
+      </center>
+      <!-- 
+NewPP limit report
+Cached time: 20240719095144
+Cache expiry: 86400
+Reduced expiry: false
+Complications: []
+CPU time usage: 0.046 seconds
+Real time usage: 0.051 seconds
+Preprocessor visited node count: 891/1000000
+Post‐expand include size: 6839/2097152 bytes
+Template argument size: 999/2097152 bytes
+Highest expansion depth: 3/100
+Expensive parser function count: 0/100
+Unstrip recursion depth: 0/20
+Unstrip post‐expand size: 0/5000000 bytes
+-->
+      <!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%   20.073      1 -total
+ 30.44%    6.109    124 Template:Cl
+ 12.09%    2.426      5 Template:CodeStart
+ 11.45%    2.299      1 Template:PageSeeAlso
+  9.45%    1.898      5 Template:CodeEnd
+  8.64%    1.735      1 Template:PageNavigation
+-->
+      <!-- Saved in parser cache with key qb64pnix_mw19894-mwmb_:pcache:idhash:847-0!canonical and timestamp 20240719095144 and revision id 8132.
+ -->
+     </div>
+     <div class="printfooter" data-nosnippet="">
+      Retrieved from "
+      <a dir="ltr" href="https://qb64phoenix.com/qb64wiki/index.php?title=Grey_Scale_Bitmaps&amp;oldid=8132">
+       https://qb64phoenix.com/qb64wiki/index.php?title=Grey_Scale_Bitmaps&amp;oldid=8132
+      </a>
+      "
+     </div>
+    </div>
+    <div class="catlinks catlinks-allhidden" data-mw="interface" id="catlinks">
+    </div>
+   </div>
+  </div>
+  <div id="mw-navigation">
+   <h2>
+    Navigation menu
+   </h2>
+   <div id="mw-head">
+    <nav aria-labelledby="p-personal-label" class="vector-menu mw-portlet mw-portlet-personal vector-user-menu-legacy" id="p-personal" role="navigation">
+     <h3 class="vector-menu-heading" id="p-personal-label">
+      <span class="vector-menu-heading-label">
+       Personal tools
+      </span>
+     </h3>
+     <div class="vector-menu-content">
+      <ul class="vector-menu-content-list">
+       <li class="mw-list-item" id="pt-login">
+        <a accesskey="o" href="/qb64wiki/index.php?title=Special:UserLogin&amp;returnto=Grey+Scale+Bitmaps" title="You are encouraged to log in; however, it is not mandatory [o]">
+         <span>
+          Log in
+         </span>
+        </a>
+       </li>
+      </ul>
+     </div>
+    </nav>
+    <div id="left-navigation">
+     <nav aria-labelledby="p-namespaces-label" class="vector-menu mw-portlet mw-portlet-namespaces vector-menu-tabs vector-menu-tabs-legacy" id="p-namespaces" role="navigation">
+      <h3 class="vector-menu-heading" id="p-namespaces-label">
+       <span class="vector-menu-heading-label">
+        Namespaces
+       </span>
+      </h3>
+      <div class="vector-menu-content">
+       <ul class="vector-menu-content-list">
+        <li class="selected mw-list-item" id="ca-nstab-main">
+         <a accesskey="c" href="/qb64wiki/index.php/Grey_Scale_Bitmaps" title="View the content page [c]">
+          <span>
+           Page
+          </span>
+         </a>
+        </li>
+        <li class="new mw-list-item" id="ca-talk">
+         <a accesskey="t" href="/qb64wiki/index.php?title=Talk:Grey_Scale_Bitmaps&amp;action=edit&amp;redlink=1" rel="discussion" title="Discussion about the content page (page does not exist) [t]">
+          <span>
+           Discussion
+          </span>
+         </a>
+        </li>
+       </ul>
+      </div>
+     </nav>
+     <nav aria-labelledby="p-variants-label" class="vector-menu mw-portlet mw-portlet-variants emptyPortlet vector-menu-dropdown" id="p-variants" role="navigation">
+      <input aria-haspopup="true" aria-labelledby="p-variants-label" class="vector-menu-checkbox" data-event-name="ui.dropdown-p-variants" id="p-variants-checkbox" role="button" type="checkbox"/>
+      <label aria-label="Change language variant" class="vector-menu-heading" id="p-variants-label">
+       <span class="vector-menu-heading-label">
+        English
+       </span>
+      </label>
+      <div class="vector-menu-content">
+       <ul class="vector-menu-content-list">
+       </ul>
+      </div>
+     </nav>
+    </div>
+    <div id="right-navigation">
+     <nav aria-labelledby="p-views-label" class="vector-menu mw-portlet mw-portlet-views vector-menu-tabs vector-menu-tabs-legacy" id="p-views" role="navigation">
+      <h3 class="vector-menu-heading" id="p-views-label">
+       <span class="vector-menu-heading-label">
+        Views
+       </span>
+      </h3>
+      <div class="vector-menu-content">
+       <ul class="vector-menu-content-list">
+        <li class="selected mw-list-item" id="ca-view">
+         <a href="/qb64wiki/index.php/Grey_Scale_Bitmaps">
+          <span>
+           Read
+          </span>
+         </a>
+        </li>
+        <li class="mw-list-item" id="ca-viewsource">
+         <a accesskey="e" href="/qb64wiki/index.php?title=Grey_Scale_Bitmaps&amp;action=edit" title="This page is protected.
+You can view its source [e]">
+          <span>
+           View source
+          </span>
+         </a>
+        </li>
+        <li class="mw-list-item" id="ca-history">
+         <a accesskey="h" href="/qb64wiki/index.php?title=Grey_Scale_Bitmaps&amp;action=history" title="Past revisions of this page [h]">
+          <span>
+           View history
+          </span>
+         </a>
+        </li>
+       </ul>
+      </div>
+     </nav>
+     <nav aria-labelledby="p-cactions-label" class="vector-menu mw-portlet mw-portlet-cactions emptyPortlet vector-menu-dropdown" id="p-cactions" role="navigation" title="More options">
+      <input aria-haspopup="true" aria-labelledby="p-cactions-label" class="vector-menu-checkbox" data-event-name="ui.dropdown-p-cactions" id="p-cactions-checkbox" role="button" type="checkbox"/>
+      <label class="vector-menu-heading" id="p-cactions-label">
+       <span class="vector-menu-heading-label">
+        More
+       </span>
+      </label>
+      <div class="vector-menu-content">
+       <ul class="vector-menu-content-list">
+       </ul>
+      </div>
+     </nav>
+     <div class="vector-search-box-vue vector-search-box-show-thumbnail vector-search-box-auto-expand-width vector-search-box" id="p-search" role="search">
+      <div>
+       <h3>
+        <label for="searchInput">
+         Search
+        </label>
+       </h3>
+       <form action="/qb64wiki/index.php" class="vector-search-box-form" id="searchform">
+        <div class="vector-search-box-inner" data-search-loc="header-navigation" id="simpleSearch">
+         <input accesskey="f" aria-label="Search QB64 Phoenix Edition Wiki" autocapitalize="sentences" class="vector-search-box-input" id="searchInput" name="search" placeholder="Search QB64 Phoenix Edition Wiki" title="Search QB64 Phoenix Edition Wiki [f]" type="search"/>
+         <input name="title" type="hidden" value="Special:Search"/>
+         <input class="searchButton mw-fallbackSearchButton" id="mw-searchButton" name="fulltext" title="Search the pages for this text" type="submit" value="Search"/>
+         <input class="searchButton" id="searchButton" name="go" title="Go to a page with this exact name if it exists" type="submit" value="Go"/>
+        </div>
+       </form>
+      </div>
+     </div>
+    </div>
+   </div>
+   <div id="mw-panel">
+    <div id="p-logo" role="banner">
+     <a class="mw-wiki-logo" href="/qb64wiki/index.php/Main_Page" title="Visit the main page">
+     </a>
+    </div>
+    <nav aria-labelledby="p-navigation-label" class="vector-menu mw-portlet mw-portlet-navigation vector-menu-portal portal" id="p-navigation" role="navigation">
+     <h3 class="vector-menu-heading" id="p-navigation-label">
+      <span class="vector-menu-heading-label">
+       Navigation
+      </span>
+     </h3>
+     <div class="vector-menu-content">
+      <ul class="vector-menu-content-list">
+       <li class="mw-list-item" id="n-mainpage-description">
+        <a accesskey="z" href="/qb64wiki/index.php/Main_Page" title="Visit the main page [z]">
+         <span>
+          Main page
+         </span>
+        </a>
+       </li>
+       <li class="mw-list-item" id="n-recentchanges">
+        <a accesskey="r" href="/qb64wiki/index.php/Special:RecentChanges" title="A list of recent changes in the wiki [r]">
+         <span>
+          Recent changes
+         </span>
+        </a>
+       </li>
+       <li class="mw-list-item" id="n-randompage">
+        <a accesskey="x" href="/qb64wiki/index.php/Special:Random" title="Load a random page [x]">
+         <span>
+          Random page
+         </span>
+        </a>
+       </li>
+       <li class="mw-list-item" id="n-help-mediawiki">
+        <a href="https://www.mediawiki.org/wiki/Special:MyLanguage/Help:Contents">
+         <span>
+          Help about MediaWiki
+         </span>
+        </a>
+       </li>
+      </ul>
+     </div>
+    </nav>
+    <nav aria-labelledby="p-tb-label" class="vector-menu mw-portlet mw-portlet-tb vector-menu-portal portal" id="p-tb" role="navigation">
+     <h3 class="vector-menu-heading" id="p-tb-label">
+      <span class="vector-menu-heading-label">
+       Tools
+      </span>
+     </h3>
+     <div class="vector-menu-content">
+      <ul class="vector-menu-content-list">
+       <li class="mw-list-item" id="t-whatlinkshere">
+        <a accesskey="j" href="/qb64wiki/index.php/Special:WhatLinksHere/Grey_Scale_Bitmaps" title="A list of all wiki pages that link here [j]">
+         <span>
+          What links here
+         </span>
+        </a>
+       </li>
+       <li class="mw-list-item" id="t-recentchangeslinked">
+        <a accesskey="k" href="/qb64wiki/index.php/Special:RecentChangesLinked/Grey_Scale_Bitmaps" rel="nofollow" title="Recent changes in pages linked from this page [k]">
+         <span>
+          Related changes
+         </span>
+        </a>
+       </li>
+       <li class="mw-list-item" id="t-specialpages">
+        <a accesskey="q" href="/qb64wiki/index.php/Special:SpecialPages" title="A list of all special pages [q]">
+         <span>
+          Special pages
+         </span>
+        </a>
+       </li>
+       <li class="mw-list-item" id="t-print">
+        <a accesskey="p" href="javascript:print();" rel="alternate" title="Printable version of this page [p]">
+         <span>
+          Printable version
+         </span>
+        </a>
+       </li>
+       <li class="mw-list-item" id="t-permalink">
+        <a href="/qb64wiki/index.php?title=Grey_Scale_Bitmaps&amp;oldid=8132" title="Permanent link to this revision of this page">
+         <span>
+          Permanent link
+         </span>
+        </a>
+       </li>
+       <li class="mw-list-item" id="t-info">
+        <a href="/qb64wiki/index.php?title=Grey_Scale_Bitmaps&amp;action=info" title="More information about this page">
+         <span>
+          Page information
+         </span>
+        </a>
+       </li>
+      </ul>
+     </div>
+    </nav>
+   </div>
+  </div>
+  <footer class="mw-footer" id="footer" role="contentinfo">
+   <ul id="footer-info">
+    <li id="footer-info-lastmod">
+     This page was last edited on 26 February 2023, at 00:35.
+    </li>
+   </ul>
+   <ul id="footer-places">
+    <li id="footer-places-privacy">
+     <a href="/qb64wiki/index.php/QB64_Phoenix_Edition_Wiki:Privacy_policy">
+      Privacy policy
+     </a>
+    </li>
+    <li id="footer-places-about">
+     <a href="/qb64wiki/index.php/QB64_Phoenix_Edition_Wiki:About">
+      About QB64 Phoenix Edition Wiki
+     </a>
+    </li>
+    <li id="footer-places-disclaimer">
+     <a href="/qb64wiki/index.php/QB64_Phoenix_Edition_Wiki:General_disclaimer">
+      Disclaimers
+     </a>
+    </li>
+   </ul>
+   <ul class="noprint" id="footer-icons">
+    <li id="footer-poweredbyico">
+     <a href="https://www.mediawiki.org/">
+      <img alt="Powered by MediaWiki" height="31" loading="lazy" src="/qb64wiki/resources/assets/poweredby_mediawiki_88x31.png" srcset="/qb64wiki/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /qb64wiki/resources/assets/poweredby_mediawiki_176x62.png 2x" width="88"/>
+     </a>
+    </li>
+   </ul>
+  </footer>
+  <script>
+   (RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgPageParseReport":{"limitreport":{"cputime":"0.046","walltime":"0.051","ppvisitednodes":{"value":891,"limit":1000000},"postexpandincludesize":{"value":6839,"limit":2097152},"templateargumentsize":{"value":999,"limit":2097152},"expansiondepth":{"value":3,"limit":100},"expensivefunctioncount":{"value":0,"limit":100},"unstrip-depth":{"value":0,"limit":20},"unstrip-size":{"value":0,"limit":5000000},"timingprofile":["100.00%   20.073      1 -total"," 30.44%    6.109    124 Template:Cl"," 12.09%    2.426      5 Template:CodeStart"," 11.45%    2.299      1 Template:PageSeeAlso","  9.45%    1.898      5 Template:CodeEnd","  8.64%    1.735      1 Template:PageNavigation"]},"cachereport":{"timestamp":"20240719095144","ttl":86400,"transientcontent":false}}});mw.config.set({"wgBackendResponseTime":88});});
+  </script>
+ </body>
+</html>

@@ -2,7 +2,7 @@
 =====================================================
 mw-to-md.py - MediaWiki(mw) to Markdown(md) Converter
 -----------------------------------------------------
-This script fetches HTML content from the QB64PE wiki
+This script fetches HTML content from the QB64PE wiki 
 using a list of keywords (keywords.txt) and converts
 the content to Markdown format. The Markdown content is
 then saved to individual .md files in a specified directory.
@@ -22,7 +22,8 @@ import requests
 from bs4 import BeautifulSoup
 from bs4 import Tag
 
-HELP_DIR = '/home/grymmjack/git/QB64pe/internal/help'
+# HELP_DIR = '/home/grymmjack/git/QB64pe/internal/help'
+HELP_DIR = '.'
 
 
 def fetch_html(url):
@@ -97,10 +98,12 @@ def link_keywords(line, use_file=True):
     ret = line
     for keyword in keywords_sorted:
         if keyword in line:
+            keyword_esc = re.escape(keyword)
+            # line = escape_dollar_signs(line)
             if use_file:
                 ret = re.sub('\\b' + keyword + '\\b', f'[{keyword}](file:{HELP_DIR}/{keyword}.md)', ret)
             else:
-                ret = re.sub('\\b' + keyword + '\\b', f'[{keyword}]({HELP_DIR}/{keyword}.md)', ret)
+                ret = re.sub('\\b' + keyword  + '\\b', f'[{keyword}]({HELP_DIR}/{keyword}.md)', ret)
     return ret
 
 
@@ -159,19 +162,19 @@ def convert_to_markdown(html, keyword):
         #TITLE
         h1_tag = soup.find('h1', class_="firstHeading mw-first-heading")
         if h1_tag:
-            ret_content += '# ' + h1_tag.text.strip() + '\n'
+            ret_content += '## ' + h1_tag.text.strip() + '\n---\n'
 
         #SUMMARY
         try:
             summary = soup.find('div', class_='mw-parser-output').find('p')
-            ret_content += '> ' + summary.get_text(strip=True, separator=' ') + '\n'
+            ret_content += '\n### ' + summary.get_text(strip=True, separator=' ') + '\n'
         except:
             pass
 
         #SYNTAX
         try:
             syntax = soup.select('h2 + dl dd:first-child')[0]
-            ret_content += '\n## SYNTAX\n'
+            ret_content += '\n#### SYNTAX\n\n'
             ret_content += '`' + syntax.get_text(strip=True, separator=' ') + '`\n'
         except:
             pass
@@ -188,10 +191,10 @@ def convert_to_markdown(html, keyword):
                         break
                     if sibling.name == 'dl':
                         dd = sibling.find('dd')
-                        list_items.append('```vb\n' + dd.get_text(strip=True, separator=' ') + '\n```  \n\n')
+                        list_items.append('  \n  \n---\n```vb\n' + dd.get_text(strip=True, separator=' ') + '\n```\n---\n  \n  \n')
 
             sample_text = ''.join(list_items)
-            ret_content += '\n## SAMPLES\n'
+            ret_content += '  \n#### SAMPLES\n'
             ret_content += sample_text
 
         #PARAMETERS
@@ -212,7 +215,7 @@ def convert_to_markdown(html, keyword):
                         break
 
             parameters_text = ''.join(list_items)
-            ret_content += '\n## PARAMETERS\n'
+            ret_content += '\n#### PARAMETERS\n'
             ret_content += parameters_text + '\n'
 
         #DESCRIPTION
@@ -233,7 +236,7 @@ def convert_to_markdown(html, keyword):
                         break
 
             description_text = ''.join(list_items)
-            ret_content += '\n## DESCRIPTION\n'
+            ret_content += '\n#### DESCRIPTION\n'
             ret_content += description_text + '\n'
 
         #EXAMPLES
@@ -247,14 +250,14 @@ def convert_to_markdown(html, keyword):
                         temp = ' '
                         temp = sibling.get_text(strip=True, separator=' ')
                         if temp:
-                            list_items.append("> " + temp + '\n')
+                            list_items.append("##### " + temp + '\n')
                     codeblock = sibling.find('pre', recursive=True)
                     if codeblock:
                         code = re.sub(r'\n ', '\n', codeblock.text)
-                        list_items.append("\n```vb" + '\n' + code.strip() + "\n```\n\n")
+                        list_items.append("```vb" + '\n' + code.strip() + "\n```\n  \n")
 
             examples_text = ''.join(list_items)
-            ret_content += '\n## EXAMPLES\n'
+            ret_content += '\n#### EXAMPLES\n'
             ret_content += examples_text + '\n'
 
         #MORE EXAMPLES
@@ -275,7 +278,7 @@ def convert_to_markdown(html, keyword):
                         break
 
             more_text = ''.join(list_items)
-            ret_content += '\n## MORE EXAMPLES\n'
+            ret_content += '\n#### MORE EXAMPLES\n'
             ret_content += more_text + '\n'
 
         #SEE ALSO
@@ -296,12 +299,10 @@ def convert_to_markdown(html, keyword):
                         break
 
             see_also_text = ''.join(list_items)
-            ret_content += '\n# SEE ALSO\n'
-            ret_content += see_also_text + '\n'
+            ret_content += '\n#### SEE ALSO\n'
+            ret_content += see_also_text
 
-    ret_content = escape_dollar_signs(ret_content)
-    style = '<style type="text/css">pre { padding: 1em !important; border: 1px solid rgba(255, 255, 255, 0.25) !important; } </style>'
-    return style + '\n' + ret_content
+    return ret_content
 
 
 def save_markdown(markdown, filename):
@@ -354,7 +355,7 @@ def escape_dollar_signs(text: str) -> str:
     Returns:
         str: The text with dollar signs escaped.
     """
-    return text.replace('$', r'\$')
+    return text.replace('$', r'&dollar;')
 
 
 def process_keyword(keyword, output_dir):

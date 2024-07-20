@@ -1,0 +1,1010 @@
+<!DOCTYPE html>
+<html class="client-nojs" dir="ltr" lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <title>
+   SFML Library - QB64 Phoenix Edition Wiki
+  </title>
+  <script>
+   document.documentElement.className="client-js";RLCONF={"wgBreakFrames":false,"wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgRequestId":"Zpp81eZL16Jh9AOFAcaLOwAAAPI","wgCSPNonce":false,"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"SFML_Library","wgTitle":"SFML Library","wgCurRevisionId":8467,"wgRevisionId":8467,"wgArticleId":596,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":[],"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgRelevantPageName":"SFML_Library","wgRelevantArticleId":596,"wgIsProbablyEditable":false,"wgRelevantPageIsProbablyEditable":false,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgVector2022PreviewPages":[]};RLSTATE={"site.styles":"ready","user.styles":"ready"
+,"user":"ready","user.options":"loading","skins.vector.styles.legacy":"ready"};RLPAGEMODULES=["site","mediawiki.page.ready","skins.vector.legacy.js"];
+  </script>
+  <script>
+   (RLQ=window.RLQ||[]).push(function(){mw.loader.implement("user.options@12s5i",function($,jQuery,require,module){mw.user.tokens.set({"patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});});});
+  </script>
+  <link href="/qb64wiki/load.php?lang=en&amp;modules=skins.vector.styles.legacy&amp;only=styles&amp;skin=vector" rel="stylesheet"/>
+  <script async="" src="/qb64wiki/load.php?lang=en&amp;modules=startup&amp;only=scripts&amp;raw=1&amp;skin=vector">
+  </script>
+  <meta content="" name="ResourceLoaderDynamicStyles"/>
+  <link href="/qb64wiki/load.php?lang=en&amp;modules=site.styles&amp;only=styles&amp;skin=vector" rel="stylesheet"/>
+  <meta content="MediaWiki 1.39.3" name="generator"/>
+  <meta content="telephone=no" name="format-detection"/>
+  <meta content="width=1000" name="viewport"/>
+  <link href="/favicon.ico" rel="icon"/>
+  <link href="/qb64wiki/opensearch_desc.php" rel="search" title="QB64 Phoenix Edition Wiki (en)" type="application/opensearchdescription+xml"/>
+  <link href="https://qb64phoenix.com/qb64wiki/api.php?action=rsd" rel="EditURI" type="application/rsd+xml"/>
+  <link href="/qb64wiki/index.php?title=Special:RecentChanges&amp;feed=atom" rel="alternate" title="QB64 Phoenix Edition Wiki Atom feed" type="application/atom+xml"/>
+ </head>
+ <body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject page-SFML_Library rootpage-SFML_Library skin-vector action-view skin-vector-legacy vector-feature-language-in-header-enabled vector-feature-language-in-main-page-header-disabled vector-feature-language-alert-in-sidebar-disabled vector-feature-sticky-header-disabled vector-feature-sticky-header-edit-disabled vector-feature-table-of-contents-disabled vector-feature-visual-enhancement-next-disabled">
+  <div class="noprint" id="mw-page-base">
+  </div>
+  <div class="noprint" id="mw-head-base">
+  </div>
+  <div class="mw-body" id="content" role="main">
+   <a id="top">
+   </a>
+   <div id="siteNotice">
+   </div>
+   <div class="mw-indicators">
+   </div>
+   <h1 class="firstHeading mw-first-heading" id="firstHeading">
+    <span class="mw-page-title-main">
+     SFML Library
+    </span>
+   </h1>
+   <div class="vector-body" id="bodyContent">
+    <div class="noprint" id="siteSub">
+     From QB64 Phoenix Edition Wiki
+    </div>
+    <div id="contentSub">
+    </div>
+    <div id="contentSub2">
+    </div>
+    <div id="jump-to-nav">
+    </div>
+    <a class="mw-jump-link" href="#mw-head">
+     Jump to navigation
+    </a>
+    <a class="mw-jump-link" href="#searchInput">
+     Jump to search
+    </a>
+    <div class="mw-body-content mw-content-ltr" dir="ltr" id="mw-content-text" lang="en">
+     <div class="mw-parser-output">
+      <p>
+       <b>
+        SFML
+       </b>
+       is a sound library that allows users to record and play sounds.
+      </p>
+      <p>
+       <br/>
+      </p>
+      <center>
+       <a class="external text" href="http://dl.dropbox.com/u/8822351/SFML.rar" rel="nofollow">
+        SFML.RAR Download(Includes Library header file)
+       </a>
+      </center>
+      <p>
+       <br/>
+      </p>
+      <table cellpadding="5px" width="100%">
+       <tbody>
+        <tr>
+         <td>
+          <pre class="outputtext">//SFML_Wrapper02.h for QB64 version.02 - By John Onyon a.k.a Unseen Machine
+
+#include &lt;SFML/Graphics.hpp&gt;
+#include &lt;SFML/Window.hpp&gt;
+#include &lt;SFML/Audio.hpp&gt;
+#include &lt;SFML/System.hpp&gt;
+
+sf::RenderWindow App;
+sf::Color BackgroundColor = sf::Color(0,0,0,255);
+sf::Color PaintColor = sf::Color(255,255,255,255);
+sf::SoundBufferRecorder Recorder;
+sf::SoundBuffer SndBuffer;
+sf::Sound Snd;
+sf::Font MyFont;
+sf::String Txt;
+sf::Shape Pixel;
+sf::Image Image;
+
+// SCREEN
+
+void SF_Screen_New(int width, int height, const char* title)
+{
+	App.Create(sf::VideoMode(width, height, 32), title);
+	App.PreserveOpenGLStates(true);
+}
+
+void SF_Screen_Set_XY(int x, int y)
+{
+	App.SetPosition(x,y);
+}
+
+
+int SF_Screen_Exit()
+{
+	sf::Event Event;
+	while (App.GetEvent(Event))
+	{
+		if (Event.Type == sf::Event::Closed)
+		return(-1);
+	}
+}
+
+void SF_Screen_Set_Size(int32 Width, int32 Height)
+{
+	App.SetSize(Width,Height);
+}
+
+
+void SF_Screen_Hide()
+{
+	App.Show(0);
+}
+
+
+void SF_Screen_Show()
+{
+	App.Show(-1);
+}
+
+
+void SF_Screen_Set_Active()
+{
+	App.SetActive();
+}
+
+
+void SF_Screen_CLS()
+{
+	App.Clear(BackgroundColor);
+}
+
+
+void SF_Screen_Set_MAXFPS(int32 fps)
+{
+	App.SetFramerateLimit(fps);
+}
+
+
+void SF_Screen_Close()
+{
+	App.Close();
+}
+
+
+void SF_Screen_Set_Width(int Width)
+{
+	int x = App.GetHeight();
+	App.SetSize(Width,x);
+}
+
+
+int SF_Screen_Get_Width()
+{
+	return(App.GetWidth());
+}
+
+
+void SF_Screen_Set_Height(int Height)
+{
+	int x = App.GetWidth();
+	App.SetSize(x,Height);
+}
+
+
+int SF_Screen_Get_Height()
+{
+	return(App.GetHeight());
+}
+
+
+void SF_Screen_Display()
+{
+	App.Display();
+}
+
+
+void SF_Screen_Set_Color(int r, int g, int b, int a)
+{
+	sf::Color col = sf::Color(r,g,b,a);
+	BackgroundColor = col;
+}
+
+
+// MOUSE
+
+unsigned int SF_Mouse_Get_X()
+{
+	const sf::Input&amp; Input = App.GetInput();
+	return(Input.GetMouseX());
+}
+
+unsigned int SF_Mouse_Get_Y()
+{
+	const sf::Input&amp; Input = App.GetInput();
+	return(Input.GetMouseY());
+}
+
+unsigned int SF_Mouse_Get_LB()
+{
+	const sf::Input&amp; Input = App.GetInput();
+	return(-Input.IsMouseButtonDown(sf::Mouse::Left));
+}
+
+unsigned int SF_Mouse_Get_RB()
+{
+	const sf::Input&amp; Input = App.GetInput();
+	return(-Input.IsMouseButtonDown(sf::Mouse::Right));
+}
+
+void SF_Mouse_Set_XY(int x, int y)
+{
+	App.SetCursorPosition(x,y);
+}
+
+void SF_Mouse_Hide()
+{
+	App.ShowMouseCursor(0);
+}
+
+
+void SF_Mouse_Show()
+{
+	App.ShowMouseCursor(1);
+}
+
+
+//Font and Text
+
+void SF_Font_Load(const char* Filename, int res)
+{
+	MyFont.LoadFromFile(Filename, res);
+}
+
+void SF_Text_Print (int x, int y, const char* Text, int size)
+{
+	Txt.SetText(Text);
+	Txt.SetFont(MyFont);
+	Txt.SetSize(size);
+	Txt.SetX(x);
+	Txt.SetY(y);
+	App.Draw(Txt);
+}
+
+void SF_Text_Set_Color (int r, int g, int b, int a)
+{
+	sf::Color col = sf::Color(r,g,b,a);
+	Txt.SetColor(col);
+}
+
+void SF_Text_Set_Rotation(float Rot)
+{
+	Txt.SetRotation(Rot);
+}
+
+void SF_Text_Set_Center(float x, float y)
+{
+	Txt.SetCenter(x,y);
+}
+
+//Sound
+
+void SF_Mic_Get_Input(int SampleRate)
+{
+	Recorder.Start(SampleRate);
+}
+
+void SF_Mic_Stop_Input()
+{
+	Recorder.Stop();
+}
+
+void SF_Mic_Play()
+{
+	const sf::SoundBuffer&amp; Buffer = Recorder.GetBuffer();
+	sf::Sound Sound(Buffer);
+	Sound.Play();
+	while (Sound.GetStatus() == sf::Sound::Playing){}
+}
+
+void SF_Mic_Save(const char* FileName)
+{
+	const sf::SoundBuffer&amp; Buffer = Recorder.GetBuffer();
+	sf::Sound Sound(Buffer);
+	Buffer.SaveToFile(FileName);
+}
+
+const sf::Int16 SF_Mic_Buffer_Load_SNDRAW(int SampleNum)
+{
+	const sf::SoundBuffer&amp; Buffer = Recorder.GetBuffer();
+	return(Buffer.GetSamples()[SampleNum]);
+}
+
+int SF_Mic_Buffer_Get_SampleRate()
+{
+	return(Recorder.GetSampleRate());
+}
+
+int SF_Mic_Buffer_Get_SampleCount()
+{
+	const sf::SoundBuffer&amp; Buffer = Recorder.GetBuffer();
+	return(Buffer.GetSamplesCount());
+}
+
+int SF_Sound_Buffer_Load_FromFile(const char* FileName1)
+{
+	if (SndBuffer.LoadFromFile(FileName1))
+			return(-1);
+}
+
+
+void SF_Sound_Buffer_Play()
+{
+	Snd.SetBuffer(SndBuffer);
+	Snd.Play();
+}
+
+
+int SF_Sound_Buffer_Get_SampleCount()
+{
+	return(SndBuffer.GetSamplesCount());
+}
+
+
+int SF_Sound_Buffer_Get_SampleRate()
+{
+	return(SndBuffer.GetSampleRate());
+}
+
+bool SF_Sound_Buffer_Save(const char* FileName)
+{
+	return(SndBuffer.SaveToFile(FileName));
+}
+
+const sf::Int16 SF_Sound_Buffer_Load_SNDRAW(int SampleNum)
+{
+	return(SndBuffer.GetSamples()[SampleNum]);
+}
+
+void SF_SNDRAW_Save(const sf::Int16* RawSnd, int Samples, int SampleRate, const char* FileName)
+{
+	sf::SoundBuffer Buffer;
+	Buffer.LoadFromSamples(RawSnd, Samples, 1, SampleRate);
+	Buffer.SaveToFile(FileName);
+}
+
+// 2d drawing functions
+void SF_Paint_Set_Color(int r, int g, int b, int a)
+{
+	PaintColor = sf::Color(r, g, b, a);
+}
+
+void SF_Pixel_Set(int x, int y)
+{
+	Pixel = sf::Shape::Rectangle(x, y, x+1, y+1, PaintColor);
+	App.Draw(Pixel);
+}
+
+void SF_Circle(int x, int y, int Radius)
+{
+	Pixel = sf::Shape::Circle(x, y, Radius, PaintColor);
+	Pixel.EnableFill(true);
+	App.Draw(Pixel);
+}
+
+void SF_Circle_NoFill(int x, int y, int Radius)
+{
+	Pixel = sf::Shape::Circle(x, y, Radius, PaintColor, 1, PaintColor);
+	Pixel.EnableFill(false);
+	Pixel.EnableOutline(true);
+	App.Draw(Pixel);
+}
+
+void SF_Rectangle(int x, int y, int width, int height)
+{
+	Pixel = sf::Shape::Rectangle(x, y, x + width, y + height, PaintColor);
+	Pixel.EnableFill(true);
+	App.Draw(Pixel);
+}
+
+void SF_Rectangle_NoFill(int x, int y, int width, int height)
+{
+	Pixel = sf::Shape::Rectangle(x, y, x + width, y + height, PaintColor, 1, PaintColor);
+	Pixel.EnableFill(false);
+	Pixel.EnableOutline(true);
+	App.Draw(Pixel);
+}
+
+void SF_Line(int x, int y, int xx, int yy, int thick)
+{
+	Pixel = sf::Shape::Line(x, y, xx, yy, thick, PaintColor);
+	Pixel.EnableFill(true);
+	App.Draw(Pixel);
+}
+
+//GamePad input
+
+bool SF_GamePad_Button_Get_State(int GamePad, int Button)
+{
+	const sf::Input&amp; Input = App.GetInput();
+	return(Input.IsJoystickButtonDown(GamePad, Button));
+}
+
+int SF_GamePad_Axis_Get_X (int GamePad)
+{
+	const sf::Input&amp; Input = App.GetInput();
+	return(Input.GetJoystickAxis(GamePad, sf::Joy::AxisX));
+}
+
+int SF_GamePad_Axis_Get_Y (int GamePad)
+{
+	const sf::Input&amp; Input = App.GetInput();
+	return(Input.GetJoystickAxis(GamePad, sf::Joy::AxisY));
+}
+
+int SF_GamePad_Axis_Get_Z (int GamePad)
+{
+	const sf::Input&amp; Input = App.GetInput();
+	return(Input.GetJoystickAxis(GamePad, sf::Joy::AxisZ));
+}
+
+int SF_GamePad_Axis_Get_R (int GamePad)
+{
+	const sf::Input&amp; Input = App.GetInput();
+	return(Input.GetJoystickAxis(GamePad, sf::Joy::AxisR));
+}
+
+int SF_GamePad_Axis_Get_U (int GamePad)
+{
+	const sf::Input&amp; Input = App.GetInput();
+	return(Input.GetJoystickAxis(GamePad, sf::Joy::AxisU));
+}
+
+int SF_GamePad_Axis_Get_V (int GamePad)
+{
+	const sf::Input&amp; Input = App.GetInput();
+	return(Input.GetJoystickAxis(GamePad, sf::Joy::AxisV));
+}
+
+int SF_GamePad_Axis_Get_POV (int GamePad)
+{
+	const sf::Input&amp; Input = App.GetInput();
+	return(Input.GetJoystickAxis(GamePad, sf::Joy::AxisPOV));
+}
+
+
+// Keyboard Input v0.1
+
+int SF_Key_Left()
+{
+	int kval =0;
+	const sf::Input&amp; Input = App.GetInput();
+	if (Input.IsKeyDown(sf::Key::Left))
+		kval = -1;
+	else
+		kval = 0;
+	return(kval);
+}
+
+int SF_Key_Right()
+{
+	int kval =0;
+	const sf::Input&amp; Input = App.GetInput();
+	if (Input.IsKeyDown(sf::Key::Right))
+		kval = -1;
+	else
+		kval = 0;
+	return(kval);
+}
+
+int SF_Key_Up()
+{
+	int kval =0;
+	const sf::Input&amp; Input = App.GetInput();
+	if (Input.IsKeyDown(sf::Key::Up))
+		kval = -1;
+	else
+		kval = 0;
+	return(kval);
+}
+
+int SF_Key_Down()
+{
+	int kval =0;
+	const sf::Input&amp; Input = App.GetInput();
+	if (Input.IsKeyDown(sf::Key::Down))
+		kval = -1;
+	else
+		kval = 0;
+	return(kval);
+}
+
+int SF_Key_A()
+{
+	int kval =0;
+	const sf::Input&amp; Input = App.GetInput();
+	if (Input.IsKeyDown(sf::Key::A))
+		kval = -1;
+	else
+		kval = 0;
+	return(kval);
+}
+
+int SF_Key_B()
+{
+	int kval =0;
+	const sf::Input&amp; Input = App.GetInput();
+	if (Input.IsKeyDown(sf::Key::B))
+		kval = -1;
+	else
+		kval = 0;
+	return(kval);
+}
+
+int SF_Key_C()
+{
+	int kval =0;
+	const sf::Input&amp; Input = App.GetInput();
+	if (Input.IsKeyDown(sf::Key::C))
+		kval = -1;
+	else
+		kval = 0;
+	return(kval);
+}
+
+int SF_Key_D()
+{
+	int kval =0;
+	const sf::Input&amp; Input = App.GetInput();
+	if (Input.IsKeyDown(sf::Key::D))
+		kval = -1;
+	else
+		kval = 0;
+	return(kval);
+}
+
+int SF_Key_E()
+{
+	int kval =0;
+	const sf::Input&amp; Input = App.GetInput();
+	if (Input.IsKeyDown(sf::Key::E))
+		kval = -1;
+	else
+		kval = 0;
+	return(kval);
+}
+
+int SF_Key_F()
+{
+	int kval =0;
+	const sf::Input&amp; Input = App.GetInput();
+	if (Input.IsKeyDown(sf::Key::F))
+		kval = -1;
+	else
+		kval = 0;
+	return(kval);
+}
+
+int SF_Key_G()
+{
+	int kval =0;
+	const sf::Input&amp; Input = App.GetInput();
+	if (Input.IsKeyDown(sf::Key::G))
+		kval = -1;
+	else
+		kval = 0;
+	return(kval);
+}
+
+int SF_Key_H()
+{
+	int kval =0;
+	const sf::Input&amp; Input = App.GetInput();
+	if (Input.IsKeyDown(sf::Key::H))
+		kval = -1;
+	else
+		kval = 0;
+	return(kval);
+}
+
+int SF_Key_I()
+{
+	int kval =0;
+	const sf::Input&amp; Input = App.GetInput();
+	if (Input.IsKeyDown(sf::Key::J))
+		kval = -1;
+	else
+		kval = 0;
+	return(kval);
+}
+
+
+int SF_Key_J()
+{
+	int kval =0;
+	const sf::Input&amp; Input = App.GetInput();
+	if (Input.IsKeyDown(sf::Key::J))
+		kval = -1;
+	else
+		kval = 0;
+	return(kval);
+}
+
+
+int SF_Key_K()
+{
+	int kval =0;
+	const sf::Input&amp; Input = App.GetInput();
+	if (Input.IsKeyDown(sf::Key::K))
+		kval = -1;
+	else
+		kval = 0;
+	return(kval);
+}
+
+
+int SF_Key_L()
+{
+	int kval =0;
+	const sf::Input&amp; Input = App.GetInput();
+	if (Input.IsKeyDown(sf::Key::L))
+		kval = -1;
+	else
+		kval = 0;
+	return(kval);
+}
+
+// Other Stuff
+
+void SF_Push_Events()
+{
+	sf::Event Event;
+	while (App.GetEvent(Event))
+	{	}
+}
+</pre>
+         </td>
+        </tr>
+       </tbody>
+      </table>
+      <p>
+       <br/>
+      </p>
+      <h2>
+       <span class="mw-headline" id="See_also">
+        See also
+       </span>
+      </h2>
+      <ul>
+       <li>
+        <a href="/qb64wiki/index.php/Libraries" title="Libraries">
+         Libraries
+        </a>
+       </li>
+      </ul>
+      <p>
+       <br/>
+      </p>
+      <hr/>
+      <center>
+       <b>
+        Navigation:
+       </b>
+      </center>
+      <center>
+       <a href="/qb64wiki/index.php/Main_Page" title="Main Page">
+        Main Page with Articles and Tutorials
+       </a>
+      </center>
+      <center>
+       <a href="/qb64wiki/index.php/Keyword_Reference_-_Alphabetical" title="Keyword Reference - Alphabetical">
+        Keyword Reference - Alphabetical
+       </a>
+      </center>
+      <center>
+       <a href="/qb64wiki/index.php/Keyword_Reference_-_By_usage" title="Keyword Reference - By usage">
+        Keyword Reference - By usage
+       </a>
+      </center>
+      <center>
+       <b>
+        <a class="external text" href="https://qb64phoenix.com/forum/showthread.php?tid=2800" rel="nofollow">
+         Report a broken link
+        </a>
+       </b>
+       <br/>
+      </center>
+      <!-- 
+NewPP limit report
+Cached time: 20240719143609
+Cache expiry: 86400
+Reduced expiry: false
+Complications: []
+CPU time usage: 0.016 seconds
+Real time usage: 0.019 seconds
+Preprocessor visited node count: 14/1000000
+Post‐expand include size: 486/2097152 bytes
+Template argument size: 0/2097152 bytes
+Highest expansion depth: 3/100
+Expensive parser function count: 0/100
+Unstrip recursion depth: 0/20
+Unstrip post‐expand size: 134/5000000 bytes
+-->
+      <!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%    8.719      1 -total
+ 31.24%    2.724      1 Template:TextStart
+ 23.80%    2.075      1 Template:TextEnd
+ 22.16%    1.932      1 Template:PageSeeAlso
+ 16.95%    1.478      1 Template:PageNavigation
+-->
+      <!-- Saved in parser cache with key qb64pnix_mw19894-mwmb_:pcache:idhash:596-0!canonical and timestamp 20240719143609 and revision id 8467.
+ -->
+     </div>
+     <div class="printfooter" data-nosnippet="">
+      Retrieved from "
+      <a dir="ltr" href="https://qb64phoenix.com/qb64wiki/index.php?title=SFML_Library&amp;oldid=8467">
+       https://qb64phoenix.com/qb64wiki/index.php?title=SFML_Library&amp;oldid=8467
+      </a>
+      "
+     </div>
+    </div>
+    <div class="catlinks catlinks-allhidden" data-mw="interface" id="catlinks">
+    </div>
+   </div>
+  </div>
+  <div id="mw-navigation">
+   <h2>
+    Navigation menu
+   </h2>
+   <div id="mw-head">
+    <nav aria-labelledby="p-personal-label" class="vector-menu mw-portlet mw-portlet-personal vector-user-menu-legacy" id="p-personal" role="navigation">
+     <h3 class="vector-menu-heading" id="p-personal-label">
+      <span class="vector-menu-heading-label">
+       Personal tools
+      </span>
+     </h3>
+     <div class="vector-menu-content">
+      <ul class="vector-menu-content-list">
+       <li class="mw-list-item" id="pt-login">
+        <a accesskey="o" href="/qb64wiki/index.php?title=Special:UserLogin&amp;returnto=SFML+Library" title="You are encouraged to log in; however, it is not mandatory [o]">
+         <span>
+          Log in
+         </span>
+        </a>
+       </li>
+      </ul>
+     </div>
+    </nav>
+    <div id="left-navigation">
+     <nav aria-labelledby="p-namespaces-label" class="vector-menu mw-portlet mw-portlet-namespaces vector-menu-tabs vector-menu-tabs-legacy" id="p-namespaces" role="navigation">
+      <h3 class="vector-menu-heading" id="p-namespaces-label">
+       <span class="vector-menu-heading-label">
+        Namespaces
+       </span>
+      </h3>
+      <div class="vector-menu-content">
+       <ul class="vector-menu-content-list">
+        <li class="selected mw-list-item" id="ca-nstab-main">
+         <a accesskey="c" href="/qb64wiki/index.php/SFML_Library" title="View the content page [c]">
+          <span>
+           Page
+          </span>
+         </a>
+        </li>
+        <li class="new mw-list-item" id="ca-talk">
+         <a accesskey="t" href="/qb64wiki/index.php?title=Talk:SFML_Library&amp;action=edit&amp;redlink=1" rel="discussion" title="Discussion about the content page (page does not exist) [t]">
+          <span>
+           Discussion
+          </span>
+         </a>
+        </li>
+       </ul>
+      </div>
+     </nav>
+     <nav aria-labelledby="p-variants-label" class="vector-menu mw-portlet mw-portlet-variants emptyPortlet vector-menu-dropdown" id="p-variants" role="navigation">
+      <input aria-haspopup="true" aria-labelledby="p-variants-label" class="vector-menu-checkbox" data-event-name="ui.dropdown-p-variants" id="p-variants-checkbox" role="button" type="checkbox"/>
+      <label aria-label="Change language variant" class="vector-menu-heading" id="p-variants-label">
+       <span class="vector-menu-heading-label">
+        English
+       </span>
+      </label>
+      <div class="vector-menu-content">
+       <ul class="vector-menu-content-list">
+       </ul>
+      </div>
+     </nav>
+    </div>
+    <div id="right-navigation">
+     <nav aria-labelledby="p-views-label" class="vector-menu mw-portlet mw-portlet-views vector-menu-tabs vector-menu-tabs-legacy" id="p-views" role="navigation">
+      <h3 class="vector-menu-heading" id="p-views-label">
+       <span class="vector-menu-heading-label">
+        Views
+       </span>
+      </h3>
+      <div class="vector-menu-content">
+       <ul class="vector-menu-content-list">
+        <li class="selected mw-list-item" id="ca-view">
+         <a href="/qb64wiki/index.php/SFML_Library">
+          <span>
+           Read
+          </span>
+         </a>
+        </li>
+        <li class="mw-list-item" id="ca-viewsource">
+         <a accesskey="e" href="/qb64wiki/index.php?title=SFML_Library&amp;action=edit" title="This page is protected.
+You can view its source [e]">
+          <span>
+           View source
+          </span>
+         </a>
+        </li>
+        <li class="mw-list-item" id="ca-history">
+         <a accesskey="h" href="/qb64wiki/index.php?title=SFML_Library&amp;action=history" title="Past revisions of this page [h]">
+          <span>
+           View history
+          </span>
+         </a>
+        </li>
+       </ul>
+      </div>
+     </nav>
+     <nav aria-labelledby="p-cactions-label" class="vector-menu mw-portlet mw-portlet-cactions emptyPortlet vector-menu-dropdown" id="p-cactions" role="navigation" title="More options">
+      <input aria-haspopup="true" aria-labelledby="p-cactions-label" class="vector-menu-checkbox" data-event-name="ui.dropdown-p-cactions" id="p-cactions-checkbox" role="button" type="checkbox"/>
+      <label class="vector-menu-heading" id="p-cactions-label">
+       <span class="vector-menu-heading-label">
+        More
+       </span>
+      </label>
+      <div class="vector-menu-content">
+       <ul class="vector-menu-content-list">
+       </ul>
+      </div>
+     </nav>
+     <div class="vector-search-box-vue vector-search-box-show-thumbnail vector-search-box-auto-expand-width vector-search-box" id="p-search" role="search">
+      <div>
+       <h3>
+        <label for="searchInput">
+         Search
+        </label>
+       </h3>
+       <form action="/qb64wiki/index.php" class="vector-search-box-form" id="searchform">
+        <div class="vector-search-box-inner" data-search-loc="header-navigation" id="simpleSearch">
+         <input accesskey="f" aria-label="Search QB64 Phoenix Edition Wiki" autocapitalize="sentences" class="vector-search-box-input" id="searchInput" name="search" placeholder="Search QB64 Phoenix Edition Wiki" title="Search QB64 Phoenix Edition Wiki [f]" type="search"/>
+         <input name="title" type="hidden" value="Special:Search"/>
+         <input class="searchButton mw-fallbackSearchButton" id="mw-searchButton" name="fulltext" title="Search the pages for this text" type="submit" value="Search"/>
+         <input class="searchButton" id="searchButton" name="go" title="Go to a page with this exact name if it exists" type="submit" value="Go"/>
+        </div>
+       </form>
+      </div>
+     </div>
+    </div>
+   </div>
+   <div id="mw-panel">
+    <div id="p-logo" role="banner">
+     <a class="mw-wiki-logo" href="/qb64wiki/index.php/Main_Page" title="Visit the main page">
+     </a>
+    </div>
+    <nav aria-labelledby="p-navigation-label" class="vector-menu mw-portlet mw-portlet-navigation vector-menu-portal portal" id="p-navigation" role="navigation">
+     <h3 class="vector-menu-heading" id="p-navigation-label">
+      <span class="vector-menu-heading-label">
+       Navigation
+      </span>
+     </h3>
+     <div class="vector-menu-content">
+      <ul class="vector-menu-content-list">
+       <li class="mw-list-item" id="n-mainpage-description">
+        <a accesskey="z" href="/qb64wiki/index.php/Main_Page" title="Visit the main page [z]">
+         <span>
+          Main page
+         </span>
+        </a>
+       </li>
+       <li class="mw-list-item" id="n-recentchanges">
+        <a accesskey="r" href="/qb64wiki/index.php/Special:RecentChanges" title="A list of recent changes in the wiki [r]">
+         <span>
+          Recent changes
+         </span>
+        </a>
+       </li>
+       <li class="mw-list-item" id="n-randompage">
+        <a accesskey="x" href="/qb64wiki/index.php/Special:Random" title="Load a random page [x]">
+         <span>
+          Random page
+         </span>
+        </a>
+       </li>
+       <li class="mw-list-item" id="n-help-mediawiki">
+        <a href="https://www.mediawiki.org/wiki/Special:MyLanguage/Help:Contents">
+         <span>
+          Help about MediaWiki
+         </span>
+        </a>
+       </li>
+      </ul>
+     </div>
+    </nav>
+    <nav aria-labelledby="p-tb-label" class="vector-menu mw-portlet mw-portlet-tb vector-menu-portal portal" id="p-tb" role="navigation">
+     <h3 class="vector-menu-heading" id="p-tb-label">
+      <span class="vector-menu-heading-label">
+       Tools
+      </span>
+     </h3>
+     <div class="vector-menu-content">
+      <ul class="vector-menu-content-list">
+       <li class="mw-list-item" id="t-whatlinkshere">
+        <a accesskey="j" href="/qb64wiki/index.php/Special:WhatLinksHere/SFML_Library" title="A list of all wiki pages that link here [j]">
+         <span>
+          What links here
+         </span>
+        </a>
+       </li>
+       <li class="mw-list-item" id="t-recentchangeslinked">
+        <a accesskey="k" href="/qb64wiki/index.php/Special:RecentChangesLinked/SFML_Library" rel="nofollow" title="Recent changes in pages linked from this page [k]">
+         <span>
+          Related changes
+         </span>
+        </a>
+       </li>
+       <li class="mw-list-item" id="t-specialpages">
+        <a accesskey="q" href="/qb64wiki/index.php/Special:SpecialPages" title="A list of all special pages [q]">
+         <span>
+          Special pages
+         </span>
+        </a>
+       </li>
+       <li class="mw-list-item" id="t-print">
+        <a accesskey="p" href="javascript:print();" rel="alternate" title="Printable version of this page [p]">
+         <span>
+          Printable version
+         </span>
+        </a>
+       </li>
+       <li class="mw-list-item" id="t-permalink">
+        <a href="/qb64wiki/index.php?title=SFML_Library&amp;oldid=8467" title="Permanent link to this revision of this page">
+         <span>
+          Permanent link
+         </span>
+        </a>
+       </li>
+       <li class="mw-list-item" id="t-info">
+        <a href="/qb64wiki/index.php?title=SFML_Library&amp;action=info" title="More information about this page">
+         <span>
+          Page information
+         </span>
+        </a>
+       </li>
+      </ul>
+     </div>
+    </nav>
+   </div>
+  </div>
+  <footer class="mw-footer" id="footer" role="contentinfo">
+   <ul id="footer-info">
+    <li id="footer-info-lastmod">
+     This page was last edited on 13 June 2023, at 12:23.
+    </li>
+   </ul>
+   <ul id="footer-places">
+    <li id="footer-places-privacy">
+     <a href="/qb64wiki/index.php/QB64_Phoenix_Edition_Wiki:Privacy_policy">
+      Privacy policy
+     </a>
+    </li>
+    <li id="footer-places-about">
+     <a href="/qb64wiki/index.php/QB64_Phoenix_Edition_Wiki:About">
+      About QB64 Phoenix Edition Wiki
+     </a>
+    </li>
+    <li id="footer-places-disclaimer">
+     <a href="/qb64wiki/index.php/QB64_Phoenix_Edition_Wiki:General_disclaimer">
+      Disclaimers
+     </a>
+    </li>
+   </ul>
+   <ul class="noprint" id="footer-icons">
+    <li id="footer-poweredbyico">
+     <a href="https://www.mediawiki.org/">
+      <img alt="Powered by MediaWiki" height="31" loading="lazy" src="/qb64wiki/resources/assets/poweredby_mediawiki_88x31.png" srcset="/qb64wiki/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /qb64wiki/resources/assets/poweredby_mediawiki_176x62.png 2x" width="88"/>
+     </a>
+    </li>
+   </ul>
+  </footer>
+  <script>
+   (RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgPageParseReport":{"limitreport":{"cputime":"0.016","walltime":"0.019","ppvisitednodes":{"value":14,"limit":1000000},"postexpandincludesize":{"value":486,"limit":2097152},"templateargumentsize":{"value":0,"limit":2097152},"expansiondepth":{"value":3,"limit":100},"expensivefunctioncount":{"value":0,"limit":100},"unstrip-depth":{"value":0,"limit":20},"unstrip-size":{"value":134,"limit":5000000},"timingprofile":["100.00%    8.719      1 -total"," 31.24%    2.724      1 Template:TextStart"," 23.80%    2.075      1 Template:TextEnd"," 22.16%    1.932      1 Template:PageSeeAlso"," 16.95%    1.478      1 Template:PageNavigation"]},"cachereport":{"timestamp":"20240719143609","ttl":86400,"transientcontent":false}}});mw.config.set({"wgBackendResponseTime":70});});
+  </script>
+ </body>
+</html>

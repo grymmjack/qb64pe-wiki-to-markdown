@@ -1,21 +1,23 @@
-# MKDIR
-> The MKDIR statement creates a new folder ( dir ectory) at a specified path.
+## MKDIR
+---
 
-## SYNTAX
+### The MKDIR statement creates a new folder ( dir ectory) at a specified path.
+
+#### SYNTAX
+
 `MKDIR pathSpec$`
 
-## DESCRIPTION
-* The path specification (pathSpec$) is a literal or variable [STRING](STRING.md) expression that also specifies the new folder's name.
+#### DESCRIPTION
+* The path specification (pathSpec$) is a literal or variable [STRING](./STRING.md) expression that also specifies the new folder's name.
 * If no path is given the directory will become a sub-directory of the present directory where the program is currently running.
 * QB64 can use both long or short path and file names with spaces when required.
 * The new folder will be created without a user prompt or verification.
-* If a path is specified, the path must exist or a "Path not found" error will occur. See [_DIREXISTS](_DIREXISTS.md) .
-* [SHELL](SHELL.md) can use the DOS command "MD " or "[MKDIR](MKDIR.md) " + path$ + newfolder$ to do the same thing.
+* If a path is specified, the path must exist or a "Path not found" error will occur. See [_DIREXISTS](./_DIREXISTS.md) .
+* [SHELL](./SHELL.md) can use the DOS command "MD " or "[MKDIR](./MKDIR.md) " + path$ + newfolder$ to do the same thing.
 
 
-# SEE ALSO
-* [SHELL](SHELL.md) , [CHDIR](CHDIR.md) , [FILES](FILES.md)
-* [NAME](NAME.md) , [KILL](KILL.md) , [RMDIR](RMDIR.md)
-* [_DIREXISTS](_DIREXISTS.md)
+#### SEE ALSO
+* [SHELL](./SHELL.md) , [CHDIR](./CHDIR.md) , [FILES](./FILES.md)
+* [NAME](./NAME.md) , [KILL](./KILL.md) , [RMDIR](./RMDIR.md)
+* [_DIREXISTS](./_DIREXISTS.md)
 * Windows Open and Save Dialog Boxes
-

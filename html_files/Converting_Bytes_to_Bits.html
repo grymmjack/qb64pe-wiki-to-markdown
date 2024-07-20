@@ -1,0 +1,578 @@
+<!DOCTYPE html>
+<html class="client-nojs" dir="ltr" lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <title>
+   Converting Bytes to Bits - QB64 Phoenix Edition Wiki
+  </title>
+  <script>
+   document.documentElement.className="client-js";RLCONF={"wgBreakFrames":false,"wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgRequestId":"Zpp6_J35EcyPqcm4ZfYqdgAAACM","wgCSPNonce":false,"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"Converting_Bytes_to_Bits","wgTitle":"Converting Bytes to Bits","wgCurRevisionId":8364,"wgRevisionId":8364,"wgArticleId":25,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":[],"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgRelevantPageName":"Converting_Bytes_to_Bits","wgRelevantArticleId":25,"wgIsProbablyEditable":false,"wgRelevantPageIsProbablyEditable":false,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgVector2022PreviewPages":[]};RLSTATE={
+"site.styles":"ready","user.styles":"ready","user":"ready","user.options":"loading","skins.vector.styles.legacy":"ready"};RLPAGEMODULES=["site","mediawiki.page.ready","skins.vector.legacy.js"];
+  </script>
+  <script>
+   (RLQ=window.RLQ||[]).push(function(){mw.loader.implement("user.options@12s5i",function($,jQuery,require,module){mw.user.tokens.set({"patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});});});
+  </script>
+  <link href="/qb64wiki/load.php?lang=en&amp;modules=skins.vector.styles.legacy&amp;only=styles&amp;skin=vector" rel="stylesheet"/>
+  <script async="" src="/qb64wiki/load.php?lang=en&amp;modules=startup&amp;only=scripts&amp;raw=1&amp;skin=vector">
+  </script>
+  <meta content="" name="ResourceLoaderDynamicStyles"/>
+  <link href="/qb64wiki/load.php?lang=en&amp;modules=site.styles&amp;only=styles&amp;skin=vector" rel="stylesheet"/>
+  <meta content="MediaWiki 1.39.3" name="generator"/>
+  <meta content="telephone=no" name="format-detection"/>
+  <meta content="width=1000" name="viewport"/>
+  <link href="/favicon.ico" rel="icon"/>
+  <link href="/qb64wiki/opensearch_desc.php" rel="search" title="QB64 Phoenix Edition Wiki (en)" type="application/opensearchdescription+xml"/>
+  <link href="https://qb64phoenix.com/qb64wiki/api.php?action=rsd" rel="EditURI" type="application/rsd+xml"/>
+  <link href="/qb64wiki/index.php?title=Special:RecentChanges&amp;feed=atom" rel="alternate" title="QB64 Phoenix Edition Wiki Atom feed" type="application/atom+xml"/>
+ </head>
+ <body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject page-Converting_Bytes_to_Bits rootpage-Converting_Bytes_to_Bits skin-vector action-view skin-vector-legacy vector-feature-language-in-header-enabled vector-feature-language-in-main-page-header-disabled vector-feature-language-alert-in-sidebar-disabled vector-feature-sticky-header-disabled vector-feature-sticky-header-edit-disabled vector-feature-table-of-contents-disabled vector-feature-visual-enhancement-next-disabled">
+  <div class="noprint" id="mw-page-base">
+  </div>
+  <div class="noprint" id="mw-head-base">
+  </div>
+  <div class="mw-body" id="content" role="main">
+   <a id="top">
+   </a>
+   <div id="siteNotice">
+   </div>
+   <div class="mw-indicators">
+   </div>
+   <h1 class="firstHeading mw-first-heading" id="firstHeading">
+    <span class="mw-page-title-main">
+     Converting Bytes to Bits
+    </span>
+   </h1>
+   <div class="vector-body" id="bodyContent">
+    <div class="noprint" id="siteSub">
+     From QB64 Phoenix Edition Wiki
+    </div>
+    <div id="contentSub">
+    </div>
+    <div id="contentSub2">
+    </div>
+    <div id="jump-to-nav">
+    </div>
+    <a class="mw-jump-link" href="#mw-head">
+     Jump to navigation
+    </a>
+    <a class="mw-jump-link" href="#searchInput">
+     Jump to search
+    </a>
+    <div class="mw-body-content mw-content-ltr" dir="ltr" id="mw-content-text" lang="en">
+     <div class="mw-parser-output">
+      <p>
+       Although QB64 has
+       <a href="/qb64wiki/index.php/BYTE" title="BYTE">
+        _BYTE
+       </a>
+       and
+       <a href="/qb64wiki/index.php/BIT" title="BIT">
+        _BIT
+       </a>
+       variable types, there may be times that you just want to know which bits are on of off in the byte value or convert the value to a
+       <a href="/qb64wiki/index.php/Binary" title="Binary">
+        Binary
+       </a>
+       number.
+      </p>
+      <p>
+       <br/>
+       Bits are numbered from 0 to 7 and normally are read from the most significant bit(MSB = 7) to the least significant bit(LSB = 0).
+      </p>
+      <p>
+       <br/>
+      </p>
+      <dl>
+       <dd>
+        The following example shows how to convert an
+        <a href="/qb64wiki/index.php/UNSIGNED" title="UNSIGNED">
+         _UNSIGNED
+        </a>
+        <a href="/qb64wiki/index.php/BYTE" title="BYTE">
+         _BYTE
+        </a>
+        or
+        <a href="/qb64wiki/index.php/INTEGER" title="INTEGER">
+         INTEGER
+        </a>
+        value(0 to 255) to a
+        <a href="/qb64wiki/index.php/Binary" title="Binary">
+         Binary
+        </a>
+        <a href="/qb64wiki/index.php/STRING" title="STRING">
+         STRING
+        </a>
+        number in QBasic.
+       </dd>
+      </dl>
+      <table cellpadding="15px" width="100%">
+       <tbody>
+        <tr>
+         <td>
+          <pre class="codeide"><a href="/qb64wiki/index.php/DIM" title="DIM"><span style="color:#4593D8;">DIM</span></a> byte as <a href="/qb64wiki/index.php/UNSIGNED" title="UNSIGNED"><span style="color:#4593D8;">_UNSIGNED</span></a> <a href="/qb64wiki/index.php/BYTE" title="BYTE"><span style="color:#4593D8;">_BYTE</span></a>
+
+byte = 222
+
+<a href="/qb64wiki/index.php/FOR...NEXT" title="FOR...NEXT"><span style="color:#4593D8;">FOR</span></a> bit = 7 to 0 <a href="/qb64wiki/index.php/STEP" title="STEP"><span style="color:#4593D8;">STEP</span></a> -1
+  <a href="/qb64wiki/index.php/IF...THEN" title="IF...THEN"><span style="color:#4593D8;">IF</span></a> byte <a href="/qb64wiki/index.php/AND_(boolean)" title="AND (boolean)"><span style="color:#4593D8;">AND</span></a> 2 ^ bit <a href="/qb64wiki/index.php/THEN" title="THEN"><span style="color:#4593D8;">THEN</span></a> <a href="/qb64wiki/index.php/PRINT" title="PRINT"><span style="color:#4593D8;">PRINT</span></a> "1"; <a href="/qb64wiki/index.php/ELSE" title="ELSE"><span style="color:#4593D8;">ELSE</span></a> <a href="/qb64wiki/index.php/PRINT" title="PRINT"><span style="color:#4593D8;">PRINT</span></a> "0";
+<a href="/qb64wiki/index.php/NEXT" title="NEXT"><span style="color:#4593D8;">NEXT</span></a>
+</pre>
+         </td>
+        </tr>
+       </tbody>
+      </table>
+      <dl>
+       <dd>
+        <i>
+         Notes:
+        </i>
+        The above code can be adapted to place a value into a bit
+        <a href="/qb64wiki/index.php/Arrays" title="Arrays">
+         Array
+        </a>
+        for up to 8 flag values in a single Byte.
+       </dd>
+      </dl>
+      <p>
+       <br/>
+      </p>
+      <dl>
+       <dd>
+        How upper and lower
+        <a href="/qb64wiki/index.php/BYTE" title="BYTE">
+         byte
+        </a>
+        bits are read from an
+        <a href="/qb64wiki/index.php/INTEGER" title="INTEGER">
+         INTEGER
+        </a>
+        value using whole decimal or
+        <a href="/qb64wiki/index.php/HEX$" title="HEX$">
+         hexadecimal
+        </a>
+        values.
+       </dd>
+      </dl>
+      <table cellpadding="15px" width="100%">
+       <tbody>
+        <tr>
+         <td>
+          <pre class="codeide"><a href="/qb64wiki/index.php/SCREEN" title="SCREEN"><span style="color:#4593D8;">SCREEN</span></a> 12
+
+<a href="/qb64wiki/index.php/COLOR" title="COLOR"><span style="color:#4593D8;">COLOR</span></a> 11: <a href="/qb64wiki/index.php/LOCATE" title="LOCATE"><span style="color:#4593D8;">LOCATE</span></a> 10, 2: <a href="/qb64wiki/index.php/PRINT" title="PRINT"><span style="color:#4593D8;">PRINT</span></a> "      AH (High Register Byte Bits)           AL (Low Register Byte Bits)"
+<a href="/qb64wiki/index.php/COLOR" title="COLOR"><span style="color:#4593D8;">COLOR</span></a> 14: <a href="/qb64wiki/index.php/LOCATE" title="LOCATE"><span style="color:#4593D8;">LOCATE</span></a> 11, 2: <a href="/qb64wiki/index.php/PRINT" title="PRINT"><span style="color:#4593D8;">PRINT</span></a> "    15   14  13   12   11  10    9   8    7   6    5   4    3    2   1    0"
+<a href="/qb64wiki/index.php/COLOR" title="COLOR"><span style="color:#4593D8;">COLOR</span></a> 13: <a href="/qb64wiki/index.php/LOCATE" title="LOCATE"><span style="color:#4593D8;">LOCATE</span></a> 14, 2: <a href="/qb64wiki/index.php/PRINT" title="PRINT"><span style="color:#4593D8;">PRINT</span></a> " <a href="/qb64wiki/index.php/%26H" title="&amp;H"><span style="color:#4593D8;">&amp;H</span></a>8000 4000 2000 1000 800 400  200 100  80   40  20   10   8    4   2  <a href="/qb64wiki/index.php/%26H" title="&amp;H"><span style="color:#4593D8;">&amp;H</span></a>1"
+<a href="/qb64wiki/index.php/COLOR" title="COLOR"><span style="color:#4593D8;">COLOR</span></a> 11: <a href="/qb64wiki/index.php/LOCATE" title="LOCATE"><span style="color:#4593D8;">LOCATE</span></a> 15, 2: <a href="/qb64wiki/index.php/PRINT" title="PRINT"><span style="color:#4593D8;">PRINT</span></a> "-32768 16384 8192 4096 2048 1024 512 256 128  64  32   16   8    4   2    1"
+<a href="/qb64wiki/index.php/FOR...NEXT" title="FOR...NEXT"><span style="color:#4593D8;">FOR</span></a> i = 1 <a href="/qb64wiki/index.php/TO" title="TO"><span style="color:#4593D8;">TO</span></a> 16
+  <a href="/qb64wiki/index.php/CIRCLE" title="CIRCLE"><span style="color:#4593D8;">CIRCLE</span></a> (640 - (37 * i), 189), 8, 9 'place bit circles
+<a href="/qb64wiki/index.php/NEXT" title="NEXT"><span style="color:#4593D8;">NEXT</span></a>
+<a href="/qb64wiki/index.php/LINE" title="LINE"><span style="color:#4593D8;">LINE</span></a> (324, 160)-(326, 207), 11, BF 'line splits bytes
+DO
+  <a href="/qb64wiki/index.php/IF...THEN" title="IF...THEN"><span style="color:#4593D8;">IF</span></a> Num <a href="/qb64wiki/index.php/THEN" title="THEN"><span style="color:#4593D8;">THEN</span></a>
+    <a href="/qb64wiki/index.php/FOR...NEXT" title="FOR...NEXT"><span style="color:#4593D8;">FOR</span></a> i = 15 <a href="/qb64wiki/index.php/TO" title="TO"><span style="color:#4593D8;">TO</span></a> 0 <a href="/qb64wiki/index.php/STEP" title="STEP"><span style="color:#4593D8;">STEP</span></a> -1
+      <a href="/qb64wiki/index.php/IF...THEN" title="IF...THEN"><span style="color:#4593D8;">IF</span></a> (Num <a href="/qb64wiki/index.php/AND_(boolean)" title="AND (boolean)"><span style="color:#4593D8;">AND</span></a> 2 ^ i) <a href="/qb64wiki/index.php/THEN" title="THEN"><span style="color:#4593D8;">THEN</span></a>
+        <a href="/qb64wiki/index.php/PAINT" title="PAINT"><span style="color:#4593D8;">PAINT</span></a> (640 - (37 * (i + 1)), 189), 12, 9
+        BinStr$ = BinStr$ + "1"
+      <a href="/qb64wiki/index.php/ELSE" title="ELSE"><span style="color:#4593D8;">ELSE</span></a>: <a href="/qb64wiki/index.php/PAINT" title="PAINT"><span style="color:#4593D8;">PAINT</span></a> (640 - (37 * (i + 1)), 189), 0, 9
+        BinStr$ = BinStr$ + "0"
+      <a class="mw-redirect" href="/qb64wiki/index.php/END_IF" title="END IF"><span style="color:#4593D8;">END IF</span></a>
+    <a href="/qb64wiki/index.php/NEXT" title="NEXT"><span style="color:#4593D8;">NEXT</span></a>
+    <a href="/qb64wiki/index.php/COLOR" title="COLOR"><span style="color:#4593D8;">COLOR</span></a> 10: <a href="/qb64wiki/index.php/LOCATE" title="LOCATE"><span style="color:#4593D8;">LOCATE</span></a> 16, 50: <a href="/qb64wiki/index.php/PRINT" title="PRINT"><span style="color:#4593D8;">PRINT</span></a> "Binary ="; <a href="/qb64wiki/index.php/VAL" title="VAL"><span style="color:#4593D8;">VAL</span></a>(BinStr$)
+    <a href="/qb64wiki/index.php/COLOR" title="COLOR"><span style="color:#4593D8;">COLOR</span></a> 9: <a href="/qb64wiki/index.php/LOCATE" title="LOCATE"><span style="color:#4593D8;">LOCATE</span></a> 16, 10: <a href="/qb64wiki/index.php/PRINT" title="PRINT"><span style="color:#4593D8;">PRINT</span></a> "Decimal ="; Num;: <a href="/qb64wiki/index.php/COLOR" title="COLOR"><span style="color:#4593D8;">COLOR</span></a> 13: <a href="/qb64wiki/index.php/PRINT" title="PRINT"><span style="color:#4593D8;">PRINT</span></a> "       Hex = "; Hexa$
+    Hexa$ = "": BinStr$ = ""
+  <a class="mw-redirect" href="/qb64wiki/index.php/END_IF" title="END IF"><span style="color:#4593D8;">END IF</span></a>
+  <a href="/qb64wiki/index.php/COLOR" title="COLOR"><span style="color:#4593D8;">COLOR</span></a> 14: <a href="/qb64wiki/index.php/LOCATE" title="LOCATE"><span style="color:#4593D8;">LOCATE</span></a> 17, 15: <a href="/qb64wiki/index.php/INPUT" title="INPUT"><span style="color:#4593D8;">INPUT</span></a> "Enter a decimal or HEX(<a href="/qb64wiki/index.php/%26H" title="&amp;H"><span style="color:#4593D8;">&amp;H</span></a>) value (0 Quits): ", frst$
+  first = <a href="/qb64wiki/index.php/VAL" title="VAL"><span style="color:#4593D8;">VAL</span></a>(frst$)
+  <a href="/qb64wiki/index.php/LOCATE" title="LOCATE"><span style="color:#4593D8;">LOCATE</span></a> 17, 15: <a href="/qb64wiki/index.php/PRINT" title="PRINT"><span style="color:#4593D8;">PRINT</span></a> <a href="/qb64wiki/index.php/SPACE$" title="SPACE$"><span style="color:#4593D8;">SPACE$</span></a>(55)
+  <a href="/qb64wiki/index.php/IF...THEN" title="IF...THEN"><span style="color:#4593D8;">IF</span></a> first <a href="/qb64wiki/index.php/THEN" title="THEN"><span style="color:#4593D8;">THEN</span></a>
+    <a href="/qb64wiki/index.php/COLOR" title="COLOR"><span style="color:#4593D8;">COLOR</span></a> 13: <a href="/qb64wiki/index.php/LOCATE" title="LOCATE"><span style="color:#4593D8;">LOCATE</span></a> 17, 15: <a href="/qb64wiki/index.php/INPUT" title="INPUT"><span style="color:#4593D8;">INPUT</span></a> "Enter a second value: ", secnd$
+    second = <a href="/qb64wiki/index.php/VAL" title="VAL"><span style="color:#4593D8;">VAL</span></a>(secnd$)
+    <a href="/qb64wiki/index.php/LOCATE" title="LOCATE"><span style="color:#4593D8;">LOCATE</span></a> 16, 10: <a href="/qb64wiki/index.php/PRINT" title="PRINT"><span style="color:#4593D8;">PRINT</span></a> <a href="/qb64wiki/index.php/SPACE$" title="SPACE$"><span style="color:#4593D8;">SPACE$</span></a>(69)
+  <a class="mw-redirect" href="/qb64wiki/index.php/END_IF" title="END IF"><span style="color:#4593D8;">END IF</span></a>
+  Num = first + second
+  Hexa$ = "<a href="/qb64wiki/index.php/%26H" title="&amp;H"><span style="color:#4593D8;">&amp;H</span></a>" + <a href="/qb64wiki/index.php/HEX$" title="HEX$"><span style="color:#4593D8;">HEX$</span></a>(Num)
+<a href="/qb64wiki/index.php/LOOP" title="LOOP"><span style="color:#4593D8;">LOOP</span></a> <a href="/qb64wiki/index.php/UNTIL" title="UNTIL"><span style="color:#4593D8;">UNTIL</span></a> first = 0 <a href="/qb64wiki/index.php/OR_(boolean)" title="OR (boolean)"><span style="color:#4593D8;">OR</span></a> Num &gt; 32767 <a href="/qb64wiki/index.php/OR_(boolean)" title="OR (boolean)"><span style="color:#4593D8;">OR</span></a> Num &lt; -32768 <a href="/qb64wiki/index.php/OR_(boolean)" title="OR (boolean)"><span style="color:#4593D8;">OR</span></a> (Num &lt; -1 <a href="/qb64wiki/index.php/AND_(boolean)" title="AND (boolean)"><span style="color:#4593D8;">AND</span></a> Num &gt; -32768
+<a href="/qb64wiki/index.php/END" title="END"><span style="color:#4593D8;">END</span></a>
+</pre>
+         </td>
+        </tr>
+       </tbody>
+      </table>
+      <center>
+       <span style="font-family: Courier New, Courier, monospace; font-size: 0.80em; line-height: 50%;">
+        Code by Ted Weissgerber
+       </span>
+      </center>
+      <p>
+       <br/>
+      </p>
+      <h2>
+       <span class="mw-headline" id="See_also">
+        See also
+       </span>
+      </h2>
+      <ul>
+       <li>
+        <a href="/qb64wiki/index.php/Binary" title="Binary">
+         Binary
+        </a>
+       </li>
+       <li>
+        <a href="/qb64wiki/index.php/SHL" title="SHL">
+         _SHL
+        </a>
+        ,
+        <a href="/qb64wiki/index.php/SHR" title="SHR">
+         _SHR
+        </a>
+       </li>
+       <li>
+        <a href="/qb64wiki/index.php/BIT" title="BIT">
+         _BIT
+        </a>
+        ,
+        <a href="/qb64wiki/index.php/%26B" title="&amp;B">
+         &amp;B
+        </a>
+       </li>
+       <li>
+        <a href="/qb64wiki/index.php/BYTE" title="BYTE">
+         _BYTE
+        </a>
+       </li>
+      </ul>
+      <p>
+       <br/>
+      </p>
+      <hr/>
+      <center>
+       <b>
+        Navigation:
+       </b>
+      </center>
+      <center>
+       <a href="/qb64wiki/index.php/Main_Page" title="Main Page">
+        Main Page with Articles and Tutorials
+       </a>
+      </center>
+      <center>
+       <a href="/qb64wiki/index.php/Keyword_Reference_-_Alphabetical" title="Keyword Reference - Alphabetical">
+        Keyword Reference - Alphabetical
+       </a>
+      </center>
+      <center>
+       <a href="/qb64wiki/index.php/Keyword_Reference_-_By_usage" title="Keyword Reference - By usage">
+        Keyword Reference - By usage
+       </a>
+      </center>
+      <center>
+       <b>
+        <a class="external text" href="https://qb64phoenix.com/forum/showthread.php?tid=2800" rel="nofollow">
+         Report a broken link
+        </a>
+       </b>
+       <br/>
+      </center>
+      <!-- 
+NewPP limit report
+Cached time: 20240719142721
+Cache expiry: 86400
+Reduced expiry: false
+Complications: []
+CPU time usage: 0.048 seconds
+Real time usage: 0.059 seconds
+Preprocessor visited node count: 593/1000000
+Post‐expand include size: 4879/2097152 bytes
+Template argument size: 844/2097152 bytes
+Highest expansion depth: 3/100
+Expensive parser function count: 0/100
+Unstrip recursion depth: 0/20
+Unstrip post‐expand size: 0/5000000 bytes
+-->
+      <!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%   24.776      1 -total
+ 25.45%    6.305     82 Template:Cl
+ 11.56%    2.863      2 Template:CodeStart
+ 11.51%    2.852      1 Template:PageNavigation
+ 11.49%    2.848      1 Template:PageSeeAlso
+ 10.52%    2.607      1 Template:Small
+  8.68%    2.150      2 Template:CodeEnd
+-->
+      <!-- Saved in parser cache with key qb64pnix_mw19894-mwmb_:pcache:idhash:25-0!canonical and timestamp 20240719142721 and revision id 8364.
+ -->
+     </div>
+     <div class="printfooter" data-nosnippet="">
+      Retrieved from "
+      <a dir="ltr" href="https://qb64phoenix.com/qb64wiki/index.php?title=Converting_Bytes_to_Bits&amp;oldid=8364">
+       https://qb64phoenix.com/qb64wiki/index.php?title=Converting_Bytes_to_Bits&amp;oldid=8364
+      </a>
+      "
+     </div>
+    </div>
+    <div class="catlinks catlinks-allhidden" data-mw="interface" id="catlinks">
+    </div>
+   </div>
+  </div>
+  <div id="mw-navigation">
+   <h2>
+    Navigation menu
+   </h2>
+   <div id="mw-head">
+    <nav aria-labelledby="p-personal-label" class="vector-menu mw-portlet mw-portlet-personal vector-user-menu-legacy" id="p-personal" role="navigation">
+     <h3 class="vector-menu-heading" id="p-personal-label">
+      <span class="vector-menu-heading-label">
+       Personal tools
+      </span>
+     </h3>
+     <div class="vector-menu-content">
+      <ul class="vector-menu-content-list">
+       <li class="mw-list-item" id="pt-login">
+        <a accesskey="o" href="/qb64wiki/index.php?title=Special:UserLogin&amp;returnto=Converting+Bytes+to+Bits" title="You are encouraged to log in; however, it is not mandatory [o]">
+         <span>
+          Log in
+         </span>
+        </a>
+       </li>
+      </ul>
+     </div>
+    </nav>
+    <div id="left-navigation">
+     <nav aria-labelledby="p-namespaces-label" class="vector-menu mw-portlet mw-portlet-namespaces vector-menu-tabs vector-menu-tabs-legacy" id="p-namespaces" role="navigation">
+      <h3 class="vector-menu-heading" id="p-namespaces-label">
+       <span class="vector-menu-heading-label">
+        Namespaces
+       </span>
+      </h3>
+      <div class="vector-menu-content">
+       <ul class="vector-menu-content-list">
+        <li class="selected mw-list-item" id="ca-nstab-main">
+         <a accesskey="c" href="/qb64wiki/index.php/Converting_Bytes_to_Bits" title="View the content page [c]">
+          <span>
+           Page
+          </span>
+         </a>
+        </li>
+        <li class="new mw-list-item" id="ca-talk">
+         <a accesskey="t" href="/qb64wiki/index.php?title=Talk:Converting_Bytes_to_Bits&amp;action=edit&amp;redlink=1" rel="discussion" title="Discussion about the content page (page does not exist) [t]">
+          <span>
+           Discussion
+          </span>
+         </a>
+        </li>
+       </ul>
+      </div>
+     </nav>
+     <nav aria-labelledby="p-variants-label" class="vector-menu mw-portlet mw-portlet-variants emptyPortlet vector-menu-dropdown" id="p-variants" role="navigation">
+      <input aria-haspopup="true" aria-labelledby="p-variants-label" class="vector-menu-checkbox" data-event-name="ui.dropdown-p-variants" id="p-variants-checkbox" role="button" type="checkbox"/>
+      <label aria-label="Change language variant" class="vector-menu-heading" id="p-variants-label">
+       <span class="vector-menu-heading-label">
+        English
+       </span>
+      </label>
+      <div class="vector-menu-content">
+       <ul class="vector-menu-content-list">
+       </ul>
+      </div>
+     </nav>
+    </div>
+    <div id="right-navigation">
+     <nav aria-labelledby="p-views-label" class="vector-menu mw-portlet mw-portlet-views vector-menu-tabs vector-menu-tabs-legacy" id="p-views" role="navigation">
+      <h3 class="vector-menu-heading" id="p-views-label">
+       <span class="vector-menu-heading-label">
+        Views
+       </span>
+      </h3>
+      <div class="vector-menu-content">
+       <ul class="vector-menu-content-list">
+        <li class="selected mw-list-item" id="ca-view">
+         <a href="/qb64wiki/index.php/Converting_Bytes_to_Bits">
+          <span>
+           Read
+          </span>
+         </a>
+        </li>
+        <li class="mw-list-item" id="ca-viewsource">
+         <a accesskey="e" href="/qb64wiki/index.php?title=Converting_Bytes_to_Bits&amp;action=edit" title="This page is protected.
+You can view its source [e]">
+          <span>
+           View source
+          </span>
+         </a>
+        </li>
+        <li class="mw-list-item" id="ca-history">
+         <a accesskey="h" href="/qb64wiki/index.php?title=Converting_Bytes_to_Bits&amp;action=history" title="Past revisions of this page [h]">
+          <span>
+           View history
+          </span>
+         </a>
+        </li>
+       </ul>
+      </div>
+     </nav>
+     <nav aria-labelledby="p-cactions-label" class="vector-menu mw-portlet mw-portlet-cactions emptyPortlet vector-menu-dropdown" id="p-cactions" role="navigation" title="More options">
+      <input aria-haspopup="true" aria-labelledby="p-cactions-label" class="vector-menu-checkbox" data-event-name="ui.dropdown-p-cactions" id="p-cactions-checkbox" role="button" type="checkbox"/>
+      <label class="vector-menu-heading" id="p-cactions-label">
+       <span class="vector-menu-heading-label">
+        More
+       </span>
+      </label>
+      <div class="vector-menu-content">
+       <ul class="vector-menu-content-list">
+       </ul>
+      </div>
+     </nav>
+     <div class="vector-search-box-vue vector-search-box-show-thumbnail vector-search-box-auto-expand-width vector-search-box" id="p-search" role="search">
+      <div>
+       <h3>
+        <label for="searchInput">
+         Search
+        </label>
+       </h3>
+       <form action="/qb64wiki/index.php" class="vector-search-box-form" id="searchform">
+        <div class="vector-search-box-inner" data-search-loc="header-navigation" id="simpleSearch">
+         <input accesskey="f" aria-label="Search QB64 Phoenix Edition Wiki" autocapitalize="sentences" class="vector-search-box-input" id="searchInput" name="search" placeholder="Search QB64 Phoenix Edition Wiki" title="Search QB64 Phoenix Edition Wiki [f]" type="search"/>
+         <input name="title" type="hidden" value="Special:Search"/>
+         <input class="searchButton mw-fallbackSearchButton" id="mw-searchButton" name="fulltext" title="Search the pages for this text" type="submit" value="Search"/>
+         <input class="searchButton" id="searchButton" name="go" title="Go to a page with this exact name if it exists" type="submit" value="Go"/>
+        </div>
+       </form>
+      </div>
+     </div>
+    </div>
+   </div>
+   <div id="mw-panel">
+    <div id="p-logo" role="banner">
+     <a class="mw-wiki-logo" href="/qb64wiki/index.php/Main_Page" title="Visit the main page">
+     </a>
+    </div>
+    <nav aria-labelledby="p-navigation-label" class="vector-menu mw-portlet mw-portlet-navigation vector-menu-portal portal" id="p-navigation" role="navigation">
+     <h3 class="vector-menu-heading" id="p-navigation-label">
+      <span class="vector-menu-heading-label">
+       Navigation
+      </span>
+     </h3>
+     <div class="vector-menu-content">
+      <ul class="vector-menu-content-list">
+       <li class="mw-list-item" id="n-mainpage-description">
+        <a accesskey="z" href="/qb64wiki/index.php/Main_Page" title="Visit the main page [z]">
+         <span>
+          Main page
+         </span>
+        </a>
+       </li>
+       <li class="mw-list-item" id="n-recentchanges">
+        <a accesskey="r" href="/qb64wiki/index.php/Special:RecentChanges" title="A list of recent changes in the wiki [r]">
+         <span>
+          Recent changes
+         </span>
+        </a>
+       </li>
+       <li class="mw-list-item" id="n-randompage">
+        <a accesskey="x" href="/qb64wiki/index.php/Special:Random" title="Load a random page [x]">
+         <span>
+          Random page
+         </span>
+        </a>
+       </li>
+       <li class="mw-list-item" id="n-help-mediawiki">
+        <a href="https://www.mediawiki.org/wiki/Special:MyLanguage/Help:Contents">
+         <span>
+          Help about MediaWiki
+         </span>
+        </a>
+       </li>
+      </ul>
+     </div>
+    </nav>
+    <nav aria-labelledby="p-tb-label" class="vector-menu mw-portlet mw-portlet-tb vector-menu-portal portal" id="p-tb" role="navigation">
+     <h3 class="vector-menu-heading" id="p-tb-label">
+      <span class="vector-menu-heading-label">
+       Tools
+      </span>
+     </h3>
+     <div class="vector-menu-content">
+      <ul class="vector-menu-content-list">
+       <li class="mw-list-item" id="t-whatlinkshere">
+        <a accesskey="j" href="/qb64wiki/index.php/Special:WhatLinksHere/Converting_Bytes_to_Bits" title="A list of all wiki pages that link here [j]">
+         <span>
+          What links here
+         </span>
+        </a>
+       </li>
+       <li class="mw-list-item" id="t-recentchangeslinked">
+        <a accesskey="k" href="/qb64wiki/index.php/Special:RecentChangesLinked/Converting_Bytes_to_Bits" rel="nofollow" title="Recent changes in pages linked from this page [k]">
+         <span>
+          Related changes
+         </span>
+        </a>
+       </li>
+       <li class="mw-list-item" id="t-specialpages">
+        <a accesskey="q" href="/qb64wiki/index.php/Special:SpecialPages" title="A list of all special pages [q]">
+         <span>
+          Special pages
+         </span>
+        </a>
+       </li>
+       <li class="mw-list-item" id="t-print">
+        <a accesskey="p" href="javascript:print();" rel="alternate" title="Printable version of this page [p]">
+         <span>
+          Printable version
+         </span>
+        </a>
+       </li>
+       <li class="mw-list-item" id="t-permalink">
+        <a href="/qb64wiki/index.php?title=Converting_Bytes_to_Bits&amp;oldid=8364" title="Permanent link to this revision of this page">
+         <span>
+          Permanent link
+         </span>
+        </a>
+       </li>
+       <li class="mw-list-item" id="t-info">
+        <a href="/qb64wiki/index.php?title=Converting_Bytes_to_Bits&amp;action=info" title="More information about this page">
+         <span>
+          Page information
+         </span>
+        </a>
+       </li>
+      </ul>
+     </div>
+    </nav>
+   </div>
+  </div>
+  <footer class="mw-footer" id="footer" role="contentinfo">
+   <ul id="footer-info">
+    <li id="footer-info-lastmod">
+     This page was last edited on 5 April 2023, at 21:19.
+    </li>
+   </ul>
+   <ul id="footer-places">
+    <li id="footer-places-privacy">
+     <a href="/qb64wiki/index.php/QB64_Phoenix_Edition_Wiki:Privacy_policy">
+      Privacy policy
+     </a>
+    </li>
+    <li id="footer-places-about">
+     <a href="/qb64wiki/index.php/QB64_Phoenix_Edition_Wiki:About">
+      About QB64 Phoenix Edition Wiki
+     </a>
+    </li>
+    <li id="footer-places-disclaimer">
+     <a href="/qb64wiki/index.php/QB64_Phoenix_Edition_Wiki:General_disclaimer">
+      Disclaimers
+     </a>
+    </li>
+   </ul>
+   <ul class="noprint" id="footer-icons">
+    <li id="footer-poweredbyico">
+     <a href="https://www.mediawiki.org/">
+      <img alt="Powered by MediaWiki" height="31" loading="lazy" src="/qb64wiki/resources/assets/poweredby_mediawiki_88x31.png" srcset="/qb64wiki/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /qb64wiki/resources/assets/poweredby_mediawiki_176x62.png 2x" width="88"/>
+     </a>
+    </li>
+   </ul>
+  </footer>
+  <script>
+   (RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgPageParseReport":{"limitreport":{"cputime":"0.048","walltime":"0.059","ppvisitednodes":{"value":593,"limit":1000000},"postexpandincludesize":{"value":4879,"limit":2097152},"templateargumentsize":{"value":844,"limit":2097152},"expansiondepth":{"value":3,"limit":100},"expensivefunctioncount":{"value":0,"limit":100},"unstrip-depth":{"value":0,"limit":20},"unstrip-size":{"value":0,"limit":5000000},"timingprofile":["100.00%   24.776      1 -total"," 25.45%    6.305     82 Template:Cl"," 11.56%    2.863      2 Template:CodeStart"," 11.51%    2.852      1 Template:PageNavigation"," 11.49%    2.848      1 Template:PageSeeAlso"," 10.52%    2.607      1 Template:Small","  8.68%    2.150      2 Template:CodeEnd"]},"cachereport":{"timestamp":"20240719142721","ttl":86400,"transientcontent":false}}});mw.config.set({"wgBackendResponseTime":114});});
+  </script>
+ </body>
+</html>

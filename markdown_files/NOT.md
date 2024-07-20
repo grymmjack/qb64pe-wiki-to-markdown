@@ -1,239 +1,77 @@
-# NOT
-> NOT is a boolean logical operator that will change a false statement to a true one and vice-versa.
+## NOT
+---
 
-## SYNTAX
+### NOT is a boolean logical operator that will change a false statement to a true one and vice-versa.
+
+#### SYNTAX
+
 `True = -1: False = NOT True`
 
-## DESCRIPTION
+#### DESCRIPTION
 * In QBasic, True = -1 and False = 0 in boolean logic and evaluation statements.
-* [NOT](NOT.md) evaluates a value and returns the bitwise opposite, meaning that [NOT](NOT.md) 0 = -1 .
+* [NOT](./NOT.md) evaluates a value and returns the bitwise opposite, meaning that [NOT](./NOT.md) 0 = -1 .
 * Often called a negative logic operator, it returns the opposite of a value as true or false.
 * Values are changed by their bit values so that each bit is changed to the opposite of on or off. See example 3 below.
 
 
-## EXAMPLES
-> Example 1: Alternating between two conditions in a program loop.
-
+#### EXAMPLES
+##### Example 1: Alternating between two conditions in a program loop.
 ```vb
-Table 3: The relational operations for condition checking.
-
-In this table, A and B are the Expressions to compare. Both must represent
-the same general type, i.e. they must result into either numerical values
-or STRING values. If a test succeeds, then true (-1) is returned, false (0)
-    if it fails, which both can be used in further Boolean evaluations.
-┌─────────────────────────────────────────────────────────────────────────┐
-│                          Relational Operations                          │
-├────────────┬───────────────────────────────────────────┬────────────────┤
-│ Operation  │                Description                │ Example usage  │
-├────────────┼───────────────────────────────────────────┼────────────────┤
-│   A = B    │ Tests if A is equal to B.                 │ IF A = B THEN  │
-├────────────┼───────────────────────────────────────────┼────────────────┤
-│   A <> B   │ Tests if A is not equal to B.             │ IF A <> B THEN │
-├────────────┼───────────────────────────────────────────┼────────────────┤
-│   A < B    │ Tests if A is less than B.                │ IF A < B THEN  │
-├────────────┼───────────────────────────────────────────┼────────────────┤
-│   A > B    │ Tests if A is greater than B.             │ IF A > B THEN  │
-├────────────┼───────────────────────────────────────────┼────────────────┤
-│   A <= B   │ Tests if A is less than or equal to B.    │ IF A <= B THEN │
-├────────────┼───────────────────────────────────────────┼────────────────┤
-│   A >= B   │ Tests if A is greater than or equal to B. │ IF A >= B THEN │
-└────────────┴───────────────────────────────────────────┴────────────────┘
-  The operations should be very obvious for numerical values. For strings
-  be aware that all checks are done case sensitive (i.e. "Foo" <> "foo").
-  The equal/not equal check is pretty much straight forward, but for the
-  less/greater checks the ASCII value of the first different character is
-                         used for decision making:
-
-  E.g. "abc" is less than "abd", because in the first difference (the 3rd
-       character) the "c" has a lower ASCII value than the "d".
-
-  This behavior may give you some subtle results, if you are not aware of
-                  the ASCII values and the written case:
-
-  E.g. "abc" is greater than "abD", because the small letters have higher
-       ASCII values than the capital letters, hence "c" > "D". You may use
-       LCASE$ or UCASE$ to make sure both strings have the same case.
+DO
+switch = NOT switch       'NOT changes value from -1 to 0 and vice-versa
+LOCATE 10, 38
+IF switch THEN PRINT "True!" ELSE PRINT "False"
+SLEEP
+k$ = INKEY$
+LOOP UNTIL k$ = CHR$(27) ' escape key quit
 ```
-
-> Example 2: Reading a file until it reaches the End Of File.
-
+  
+##### Example 2: Reading a file until it reaches the End Of File.
 ```vb
-Table 3: The relational operations for condition checking.
-
-In this table, A and B are the Expressions to compare. Both must represent
-the same general type, i.e. they must result into either numerical values
-or STRING values. If a test succeeds, then true (-1) is returned, false (0)
-    if it fails, which both can be used in further Boolean evaluations.
-┌─────────────────────────────────────────────────────────────────────────┐
-│                          Relational Operations                          │
-├────────────┬───────────────────────────────────────────┬────────────────┤
-│ Operation  │                Description                │ Example usage  │
-├────────────┼───────────────────────────────────────────┼────────────────┤
-│   A = B    │ Tests if A is equal to B.                 │ IF A = B THEN  │
-├────────────┼───────────────────────────────────────────┼────────────────┤
-│   A <> B   │ Tests if A is not equal to B.             │ IF A <> B THEN │
-├────────────┼───────────────────────────────────────────┼────────────────┤
-│   A < B    │ Tests if A is less than B.                │ IF A < B THEN  │
-├────────────┼───────────────────────────────────────────┼────────────────┤
-│   A > B    │ Tests if A is greater than B.             │ IF A > B THEN  │
-├────────────┼───────────────────────────────────────────┼────────────────┤
-│   A <= B   │ Tests if A is less than or equal to B.    │ IF A <= B THEN │
-├────────────┼───────────────────────────────────────────┼────────────────┤
-│   A >= B   │ Tests if A is greater than or equal to B. │ IF A >= B THEN │
-└────────────┴───────────────────────────────────────────┴────────────────┘
-  The operations should be very obvious for numerical values. For strings
-  be aware that all checks are done case sensitive (i.e. "Foo" <> "foo").
-  The equal/not equal check is pretty much straight forward, but for the
-  less/greater checks the ASCII value of the first different character is
-                         used for decision making:
-
-  E.g. "abc" is less than "abd", because in the first difference (the 3rd
-       character) the "c" has a lower ASCII value than the "d".
-
-  This behavior may give you some subtle results, if you are not aware of
-                  the ASCII values and the written case:
-
-  E.g. "abc" is greater than "abD", because the small letters have higher
-       ASCII values than the capital letters, hence "c" > "D". You may use
-       LCASE$ or UCASE$ to make sure both strings have the same case.
+DO WHILE NOT EOF(1)
+ INPUT #1, data1, data2, data3
+LOOP
 ```
-
-> Example 3: So why does NOT 5 = -6 ? Because NOT changes every bit of a value into the opposite:
-
+  
+##### Example 3: So why does NOT 5 = -6 ? Because NOT changes every bit of a value into the opposite:
 ```vb
-Table 3: The relational operations for condition checking.
+PRINT NOT 5
+PRINT
+ReadBits 5
+ReadBits -6
 
-In this table, A and B are the Expressions to compare. Both must represent
-the same general type, i.e. they must result into either numerical values
-or STRING values. If a test succeeds, then true (-1) is returned, false (0)
-    if it fails, which both can be used in further Boolean evaluations.
-┌─────────────────────────────────────────────────────────────────────────┐
-│                          Relational Operations                          │
-├────────────┬───────────────────────────────────────────┬────────────────┤
-│ Operation  │                Description                │ Example usage  │
-├────────────┼───────────────────────────────────────────┼────────────────┤
-│   A = B    │ Tests if A is equal to B.                 │ IF A = B THEN  │
-├────────────┼───────────────────────────────────────────┼────────────────┤
-│   A <> B   │ Tests if A is not equal to B.             │ IF A <> B THEN │
-├────────────┼───────────────────────────────────────────┼────────────────┤
-│   A < B    │ Tests if A is less than B.                │ IF A < B THEN  │
-├────────────┼───────────────────────────────────────────┼────────────────┤
-│   A > B    │ Tests if A is greater than B.             │ IF A > B THEN  │
-├────────────┼───────────────────────────────────────────┼────────────────┤
-│   A <= B   │ Tests if A is less than or equal to B.    │ IF A <= B THEN │
-├────────────┼───────────────────────────────────────────┼────────────────┤
-│   A >= B   │ Tests if A is greater than or equal to B. │ IF A >= B THEN │
-└────────────┴───────────────────────────────────────────┴────────────────┘
-  The operations should be very obvious for numerical values. For strings
-  be aware that all checks are done case sensitive (i.e. "Foo" <> "foo").
-  The equal/not equal check is pretty much straight forward, but for the
-  less/greater checks the ASCII value of the first different character is
-                         used for decision making:
-
-  E.g. "abc" is less than "abd", because in the first difference (the 3rd
-       character) the "c" has a lower ASCII value than the "d".
-
-  This behavior may give you some subtle results, if you are not aware of
-                  the ASCII values and the written case:
-
-  E.g. "abc" is greater than "abD", because the small letters have higher
-       ASCII values than the capital letters, hence "c" > "D". You may use
-       LCASE$ or UCASE$ to make sure both strings have the same case.
+SUB ReadBits (n AS INTEGER) 'change type value and i bit reads for other whole type values
+FOR i = 15 TO 0 STEP -1 'see the 16 bit values
+   IF n AND 2 ^ i THEN PRINT "1"; ELSE PRINT "0";
+NEXT
+PRINT
+END SUB
 ```
-
-
+  
 ```vb
-Table 3: The relational operations for condition checking.
+-6
 
-In this table, A and B are the Expressions to compare. Both must represent
-the same general type, i.e. they must result into either numerical values
-or STRING values. If a test succeeds, then true (-1) is returned, false (0)
-    if it fails, which both can be used in further Boolean evaluations.
-┌─────────────────────────────────────────────────────────────────────────┐
-│                          Relational Operations                          │
-├────────────┬───────────────────────────────────────────┬────────────────┤
-│ Operation  │                Description                │ Example usage  │
-├────────────┼───────────────────────────────────────────┼────────────────┤
-│   A = B    │ Tests if A is equal to B.                 │ IF A = B THEN  │
-├────────────┼───────────────────────────────────────────┼────────────────┤
-│   A <> B   │ Tests if A is not equal to B.             │ IF A <> B THEN │
-├────────────┼───────────────────────────────────────────┼────────────────┤
-│   A < B    │ Tests if A is less than B.                │ IF A < B THEN  │
-├────────────┼───────────────────────────────────────────┼────────────────┤
-│   A > B    │ Tests if A is greater than B.             │ IF A > B THEN  │
-├────────────┼───────────────────────────────────────────┼────────────────┤
-│   A <= B   │ Tests if A is less than or equal to B.    │ IF A <= B THEN │
-├────────────┼───────────────────────────────────────────┼────────────────┤
-│   A >= B   │ Tests if A is greater than or equal to B. │ IF A >= B THEN │
-└────────────┴───────────────────────────────────────────┴────────────────┘
-  The operations should be very obvious for numerical values. For strings
-  be aware that all checks are done case sensitive (i.e. "Foo" <> "foo").
-  The equal/not equal check is pretty much straight forward, but for the
-  less/greater checks the ASCII value of the first different character is
-                         used for decision making:
-
-  E.g. "abc" is less than "abd", because in the first difference (the 3rd
-       character) the "c" has a lower ASCII value than the "d".
-
-  This behavior may give you some subtle results, if you are not aware of
-                  the ASCII values and the written case:
-
-  E.g. "abc" is greater than "abD", because the small letters have higher
-       ASCII values than the capital letters, hence "c" > "D". You may use
-       LCASE$ or UCASE$ to make sure both strings have the same case.
+0000000000000101
+1111111111111010
 ```
+  
+```vb
+'16 bit INTEGER values from -32768 to 32767
+a% = &B0000000000000101
+PRINT a%
+b% = &B1111111111111010
+PRINT b%
+'8 bit BYTE values from -128 to 127
+a%% = &B00000101
+PRINT a%%
+b%% = &B11111010
+PRINT b%%
+```
+  
 
-* [_BIT](_BIT.md) , &B , [_BYTE](_BYTE.md)
-* [AND](AND.md) , [XOR](XOR.md) , [OR](OR.md)
+
+#### SEE ALSO
+* [_BIT](./_BIT.md) , &B , [_BYTE](./_BYTE.md)
+* [AND](./AND.md) , [XOR](./XOR.md) , [OR](./OR.md)
 * Binary , Boolean
 * Mathematical Operations
-
-```vb
-Table 3: The relational operations for condition checking.
-
-In this table, A and B are the Expressions to compare. Both must represent
-the same general type, i.e. they must result into either numerical values
-or STRING values. If a test succeeds, then true (-1) is returned, false (0)
-    if it fails, which both can be used in further Boolean evaluations.
-┌─────────────────────────────────────────────────────────────────────────┐
-│                          Relational Operations                          │
-├────────────┬───────────────────────────────────────────┬────────────────┤
-│ Operation  │                Description                │ Example usage  │
-├────────────┼───────────────────────────────────────────┼────────────────┤
-│   A = B    │ Tests if A is equal to B.                 │ IF A = B THEN  │
-├────────────┼───────────────────────────────────────────┼────────────────┤
-│   A <> B   │ Tests if A is not equal to B.             │ IF A <> B THEN │
-├────────────┼───────────────────────────────────────────┼────────────────┤
-│   A < B    │ Tests if A is less than B.                │ IF A < B THEN  │
-├────────────┼───────────────────────────────────────────┼────────────────┤
-│   A > B    │ Tests if A is greater than B.             │ IF A > B THEN  │
-├────────────┼───────────────────────────────────────────┼────────────────┤
-│   A <= B   │ Tests if A is less than or equal to B.    │ IF A <= B THEN │
-├────────────┼───────────────────────────────────────────┼────────────────┤
-│   A >= B   │ Tests if A is greater than or equal to B. │ IF A >= B THEN │
-└────────────┴───────────────────────────────────────────┴────────────────┘
-  The operations should be very obvious for numerical values. For strings
-  be aware that all checks are done case sensitive (i.e. "Foo" <> "foo").
-  The equal/not equal check is pretty much straight forward, but for the
-  less/greater checks the ASCII value of the first different character is
-                         used for decision making:
-
-  E.g. "abc" is less than "abd", because in the first difference (the 3rd
-       character) the "c" has a lower ASCII value than the "d".
-
-  This behavior may give you some subtle results, if you are not aware of
-                  the ASCII values and the written case:
-
-  E.g. "abc" is greater than "abD", because the small letters have higher
-       ASCII values than the capital letters, hence "c" > "D". You may use
-       LCASE$ or UCASE$ to make sure both strings have the same case.
-```
-
-
-
-# SEE ALSO
-* [_BIT](_BIT.md) , &B , [_BYTE](_BYTE.md)
-* [AND](AND.md) , [XOR](XOR.md) , [OR](OR.md)
-* Binary , Boolean
-* Mathematical Operations
-

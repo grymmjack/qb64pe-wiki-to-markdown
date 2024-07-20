@@ -1,0 +1,736 @@
+<!DOCTYPE html>
+<html class="client-nojs" dir="ltr" lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <title>
+   _DEST - QB64 Phoenix Edition Wiki
+  </title>
+  <script>
+   document.documentElement.className="client-js";RLCONF={"wgBreakFrames":false,"wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgRequestId":"Zpp7Do_rYEQRpdCCob5ZqAAAASs","wgCSPNonce":false,"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"DEST","wgTitle":"DEST","wgCurRevisionId":8307,"wgRevisionId":8307,"wgArticleId":116,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":[],"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgRelevantPageName":"DEST","wgRelevantArticleId":116,"wgIsProbablyEditable":false,"wgRelevantPageIsProbablyEditable":false,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgVector2022PreviewPages":[]};RLSTATE={"site.styles":"ready","user.styles":"ready","user":"ready",
+"user.options":"loading","skins.vector.styles.legacy":"ready"};RLPAGEMODULES=["site","mediawiki.page.ready","mediawiki.toc","skins.vector.legacy.js"];
+  </script>
+  <script>
+   (RLQ=window.RLQ||[]).push(function(){mw.loader.implement("user.options@12s5i",function($,jQuery,require,module){mw.user.tokens.set({"patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});});});
+  </script>
+  <link href="/qb64wiki/load.php?lang=en&amp;modules=skins.vector.styles.legacy&amp;only=styles&amp;skin=vector" rel="stylesheet"/>
+  <script async="" src="/qb64wiki/load.php?lang=en&amp;modules=startup&amp;only=scripts&amp;raw=1&amp;skin=vector">
+  </script>
+  <meta content="" name="ResourceLoaderDynamicStyles"/>
+  <link href="/qb64wiki/load.php?lang=en&amp;modules=site.styles&amp;only=styles&amp;skin=vector" rel="stylesheet"/>
+  <meta content="MediaWiki 1.39.3" name="generator"/>
+  <meta content="telephone=no" name="format-detection"/>
+  <meta content="width=1000" name="viewport"/>
+  <link href="/favicon.ico" rel="icon"/>
+  <link href="/qb64wiki/opensearch_desc.php" rel="search" title="QB64 Phoenix Edition Wiki (en)" type="application/opensearchdescription+xml"/>
+  <link href="https://qb64phoenix.com/qb64wiki/api.php?action=rsd" rel="EditURI" type="application/rsd+xml"/>
+  <link href="/qb64wiki/index.php?title=Special:RecentChanges&amp;feed=atom" rel="alternate" title="QB64 Phoenix Edition Wiki Atom feed" type="application/atom+xml"/>
+ </head>
+ <body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject page-DEST rootpage-DEST skin-vector action-view skin-vector-legacy vector-feature-language-in-header-enabled vector-feature-language-in-main-page-header-disabled vector-feature-language-alert-in-sidebar-disabled vector-feature-sticky-header-disabled vector-feature-sticky-header-edit-disabled vector-feature-table-of-contents-disabled vector-feature-visual-enhancement-next-disabled">
+  <div class="noprint" id="mw-page-base">
+  </div>
+  <div class="noprint" id="mw-head-base">
+  </div>
+  <div class="mw-body" id="content" role="main">
+   <a id="top">
+   </a>
+   <div id="siteNotice">
+   </div>
+   <div class="mw-indicators">
+   </div>
+   <h1 class="firstHeading mw-first-heading" id="firstHeading">
+    _DEST
+   </h1>
+   <div class="vector-body" id="bodyContent">
+    <div class="noprint" id="siteSub">
+     From QB64 Phoenix Edition Wiki
+    </div>
+    <div id="contentSub">
+    </div>
+    <div id="contentSub2">
+    </div>
+    <div id="jump-to-nav">
+    </div>
+    <a class="mw-jump-link" href="#mw-head">
+     Jump to navigation
+    </a>
+    <a class="mw-jump-link" href="#searchInput">
+     Jump to search
+    </a>
+    <div class="mw-body-content mw-content-ltr" dir="ltr" id="mw-content-text" lang="en">
+     <div class="mw-parser-output">
+      <p>
+       The
+       <a class="mw-selflink selflink">
+        _DEST
+       </a>
+       statement sets the current write image or page. All graphic and print changes will be done to this image.
+      </p>
+      <p>
+       <br/>
+      </p>
+      <table align="right" style="max-width:25%;">
+       <tbody>
+        <tr>
+         <td>
+          <div aria-labelledby="mw-toc-heading" class="toc" id="toc" role="navigation">
+           <input class="toctogglecheckbox" id="toctogglecheckbox" role="button" style="display:none" type="checkbox"/>
+           <div class="toctitle" dir="ltr" lang="en">
+            <h2 id="mw-toc-heading">
+             Contents
+            </h2>
+            <span class="toctogglespan">
+             <label class="toctogglelabel" for="toctogglecheckbox">
+             </label>
+            </span>
+           </div>
+           <ul>
+            <li class="toclevel-1">
+             <a href="#Syntax">
+              <span class="tocnumber">
+               1
+              </span>
+              <span class="toctext">
+               Syntax
+              </span>
+             </a>
+            </li>
+            <li class="toclevel-1">
+             <a href="#Description">
+              <span class="tocnumber">
+               2
+              </span>
+              <span class="toctext">
+               Description
+              </span>
+             </a>
+            </li>
+            <li class="toclevel-1">
+             <a href="#Examples">
+              <span class="tocnumber">
+               3
+              </span>
+              <span class="toctext">
+               Examples
+              </span>
+             </a>
+            </li>
+            <li class="toclevel-1">
+             <a href="#See_also">
+              <span class="tocnumber">
+               4
+              </span>
+              <span class="toctext">
+               See also
+              </span>
+             </a>
+            </li>
+           </ul>
+          </div>
+         </td>
+        </tr>
+       </tbody>
+      </table>
+      <h2>
+       <span class="mw-headline" id="Syntax">
+        Syntax
+       </span>
+      </h2>
+      <dl>
+       <dd>
+        <a class="mw-selflink selflink">
+         _DEST
+        </a>
+        <i>
+         imageHandle&amp;
+        </i>
+       </dd>
+      </dl>
+      <p>
+       <br/>
+      </p>
+      <h2>
+       <span class="mw-headline" id="Description">
+        Description
+       </span>
+      </h2>
+      <ul>
+       <li>
+        <i>
+         imageHandle&amp;
+        </i>
+        is the handle of the image that will act as the current write page.
+       </li>
+       <li>
+        <b>
+         _DEST 0
+        </b>
+        refers to the present program
+        <a href="/qb64wiki/index.php/SCREEN" title="SCREEN">
+         SCREEN
+        </a>
+        . You can use 0 to refer to the present program
+        <a href="/qb64wiki/index.php/SCREEN" title="SCREEN">
+         SCREEN
+        </a>
+        .
+       </li>
+       <li>
+        <a class="mw-selflink selflink">
+         _DEST
+        </a>
+        <a href="/qb64wiki/index.php/CONSOLE" title="CONSOLE">
+         _CONSOLE
+        </a>
+        can set the destination to send information to a console window using
+        <a href="/qb64wiki/index.php/PRINT" title="PRINT">
+         PRINT
+        </a>
+        or
+        <a href="/qb64wiki/index.php/INPUT" title="INPUT">
+         INPUT
+        </a>
+        .
+       </li>
+       <li>
+        If
+        <i>
+         imageHandle&amp;
+        </i>
+        is an invalid handle, an
+        <a href="/qb64wiki/index.php/ERROR_Codes" title="ERROR Codes">
+         invalid handle
+        </a>
+        error occurs. Always check for valid handle values first (
+        <i>
+         imageHandle&amp;
+        </i>
+        &lt; -1).
+       </li>
+       <li>
+        <i>
+         Note:
+        </i>
+        Use
+        <a href="/qb64wiki/index.php/SOURCE" title="SOURCE">
+         _SOURCE
+        </a>
+        when you need to read a page or image with
+        <a href="/qb64wiki/index.php/POINT" title="POINT">
+         POINT
+        </a>
+        ,
+        <a href="/qb64wiki/index.php/GET_(graphics_statement)" title="GET (graphics statement)">
+         GET
+        </a>
+        or the
+        <a href="/qb64wiki/index.php/SCREEN_(function)" title="SCREEN (function)">
+         SCREEN
+        </a>
+        function.
+       </li>
+      </ul>
+      <p>
+       <br/>
+      </p>
+      <h2>
+       <span class="mw-headline" id="Examples">
+        Examples
+       </span>
+      </h2>
+      <p>
+       <i>
+        Example 1:
+       </i>
+       Placing a center point and a circle using
+       <a href="/qb64wiki/index.php/CLEARCOLOR" title="CLEARCOLOR">
+        _CLEARCOLOR
+       </a>
+       to eliminate the background color black.
+      </p>
+      <table cellpadding="15px" width="100%">
+       <tbody>
+        <tr>
+         <td>
+          <pre class="codeide"><a href="/qb64wiki/index.php/SCREEN" title="SCREEN"><span style="color:#4593D8;">SCREEN</span></a> <span style="color:#F580B1;">13</span> <span style="color:#919191;">'program screen can use 256 colors</span>
+a&amp; = <a href="/qb64wiki/index.php/NEWIMAGE" title="NEWIMAGE"><span style="color:#4593D8;">_NEWIMAGE</span></a>(<span style="color:#F580B1;">320</span>, <span style="color:#F580B1;">200</span>, <span style="color:#F580B1;">13</span>) <span style="color:#919191;">'create 2 screen page handles a&amp; and b&amp;</span>
+b&amp; = <a href="/qb64wiki/index.php/NEWIMAGE" title="NEWIMAGE"><span style="color:#4593D8;">_NEWIMAGE</span></a>(<span style="color:#F580B1;">320</span>, <span style="color:#F580B1;">200</span>, <span style="color:#F580B1;">13</span>)
+<a class="mw-selflink selflink"><span style="color:#4593D8;">_DEST</span></a> a&amp; <span style="color:#919191;">'set destination image to handle a&amp;</span>
+<a href="/qb64wiki/index.php/PSET" title="PSET"><span style="color:#4593D8;">PSET</span></a> (<span style="color:#F580B1;">100</span>, <span style="color:#F580B1;">100</span>), <span style="color:#F580B1;">15</span> <span style="color:#919191;">'draw a dot on the current destination handle a&amp;</span>
+<a class="mw-selflink selflink"><span style="color:#4593D8;">_DEST</span></a> b&amp; <span style="color:#919191;">'set destination image to handle b&amp;</span>
+<a href="/qb64wiki/index.php/CIRCLE" title="CIRCLE"><span style="color:#4593D8;">CIRCLE</span></a> (<span style="color:#F580B1;">100</span>, <span style="color:#F580B1;">100</span>), <span style="color:#F580B1;">50</span>, <span style="color:#F580B1;">15</span> <span style="color:#919191;">'draw a circle on the current destination handle b&amp;</span>
+<a href="/qb64wiki/index.php/CLEARCOLOR" title="CLEARCOLOR"><span style="color:#4593D8;">_CLEARCOLOR</span></a> <span style="color:#F580B1;">0</span> <span style="color:#919191;">'make page b color 0 (black) transparent</span>
+<a href="/qb64wiki/index.php/PUTIMAGE" title="PUTIMAGE"><span style="color:#4593D8;">_PUTIMAGE</span></a> , b&amp;, a&amp; <span style="color:#919191;">'put circle on image b to image a&amp; (a PSET dot)</span>
+<a href="/qb64wiki/index.php/PUTIMAGE" title="PUTIMAGE"><span style="color:#4593D8;">_PUTIMAGE</span></a> , a&amp;, <span style="color:#F580B1;">0</span> <span style="color:#919191;">'put what is on image a&amp; to the screen (handle 0)</span>
+</pre>
+         </td>
+        </tr>
+       </tbody>
+      </table>
+      <hr/>
+      <p>
+       <i>
+        Example 2:
+       </i>
+       Demonstrates how
+       <a href="/qb64wiki/index.php/PRINT" title="PRINT">
+        printed
+       </a>
+       text can be stretched using
+       <a href="/qb64wiki/index.php/PUTIMAGE" title="PUTIMAGE">
+        _PUTIMAGE
+       </a>
+       with
+       <a class="mw-selflink selflink">
+        _DEST
+       </a>
+       pages.
+      </p>
+      <table cellpadding="15px" width="100%">
+       <tbody>
+        <tr>
+         <td>
+          <pre class="codeide"><a href="/qb64wiki/index.php/DIM" title="DIM"><span style="color:#4593D8;">DIM</span></a> a(<span style="color:#F580B1;">10</span>) <a href="/qb64wiki/index.php/AS" title="AS"><span style="color:#4593D8;">AS</span></a> <a href="/qb64wiki/index.php/LONG" title="LONG"><span style="color:#4593D8;">LONG</span></a>
+<a href="/qb64wiki/index.php/DIM" title="DIM"><span style="color:#4593D8;">DIM</span></a> b <a href="/qb64wiki/index.php/AS" title="AS"><span style="color:#4593D8;">AS</span></a> <a href="/qb64wiki/index.php/LONG" title="LONG"><span style="color:#4593D8;">LONG</span></a>
+
+<a href="/qb64wiki/index.php/REM" title="REM"><span style="color:#4593D8;">REM</span></a><span style="color:#919191;"> Sets up a newimage for B then sets the screen to that.</span>
+b = <a href="/qb64wiki/index.php/NEWIMAGE" title="NEWIMAGE"><span style="color:#4593D8;">_NEWIMAGE</span></a>(<span style="color:#F580B1;">640</span>, <span style="color:#F580B1;">480</span>, <span style="color:#F580B1;">32</span>)
+<a href="/qb64wiki/index.php/SCREEN" title="SCREEN"><span style="color:#4593D8;">SCREEN</span></a> b
+
+<a href="/qb64wiki/index.php/REM" title="REM"><span style="color:#4593D8;">REM</span></a><span style="color:#919191;"> Make pages 48 pixels tall. If the image is not at least that it wont work</span>
+a(<span style="color:#F580B1;">1</span>) = <a href="/qb64wiki/index.php/NEWIMAGE" title="NEWIMAGE"><span style="color:#4593D8;">_NEWIMAGE</span></a>(<span style="color:#F580B1;">240</span>, <span style="color:#F580B1;">48</span>, <span style="color:#F580B1;">32</span>)
+a(<span style="color:#F580B1;">2</span>) = <a href="/qb64wiki/index.php/NEWIMAGE" title="NEWIMAGE"><span style="color:#4593D8;">_NEWIMAGE</span></a>(<span style="color:#F580B1;">240</span>, <span style="color:#F580B1;">48</span>, <span style="color:#F580B1;">32</span>)
+a(<span style="color:#F580B1;">3</span>) = <a href="/qb64wiki/index.php/NEWIMAGE" title="NEWIMAGE"><span style="color:#4593D8;">_NEWIMAGE</span></a>(<span style="color:#F580B1;">98</span>, <span style="color:#F580B1;">48</span>, <span style="color:#F580B1;">32</span>)
+
+xa = <span style="color:#F580B1;">100</span>
+ya = <span style="color:#F580B1;">120</span>
+xm = <span style="color:#F580B1;">4</span>
+ym = <span style="color:#F580B1;">4</span>
+
+<a href="/qb64wiki/index.php/REM" title="REM"><span style="color:#4593D8;">REM</span></a><span style="color:#919191;"> Some fun things for the bouncing text.</span>
+st$(<span style="color:#F580B1;">0</span>) = <span style="color:#FFB100;">"doo"</span>
+st$(<span style="color:#F580B1;">1</span>) = <span style="color:#FFB100;">"rey"</span>
+st$(<span style="color:#F580B1;">2</span>) = <span style="color:#FFB100;">"mee"</span>
+st$(<span style="color:#F580B1;">3</span>) = <span style="color:#FFB100;">"faa"</span>
+st$(<span style="color:#F580B1;">4</span>) = <span style="color:#FFB100;">"soo"</span>
+st$(<span style="color:#F580B1;">5</span>) = <span style="color:#FFB100;">"laa"</span>
+st$(<span style="color:#F580B1;">6</span>) = <span style="color:#FFB100;">"tee"</span>
+
+sta$(<span style="color:#F580B1;">0</span>) = <span style="color:#FFB100;">"This is a demo"</span>
+sta$(<span style="color:#F580B1;">1</span>) = <span style="color:#FFB100;">"showing how to use"</span>
+sta$(<span style="color:#F580B1;">2</span>) = <span style="color:#FFB100;">"the _DEST command"</span>
+sta$(<span style="color:#F580B1;">3</span>) = <span style="color:#FFB100;">"with PRINT"</span>
+sta$(<span style="color:#F580B1;">4</span>) = <span style="color:#FFB100;">"and _PUTIMAGE"</span>
+
+<a href="/qb64wiki/index.php/REM" title="REM"><span style="color:#4593D8;">REM</span></a><span style="color:#919191;"> prints to a(3) image then switches back to the default 0</span>
+<a class="mw-selflink selflink"><span style="color:#4593D8;">_DEST</span></a> a(<span style="color:#F580B1;">3</span>): f = <a href="/qb64wiki/index.php/INT" title="INT"><span style="color:#4593D8;">INT</span></a>(<a href="/qb64wiki/index.php/RND" title="RND"><span style="color:#4593D8;">RND</span></a> * <span style="color:#F580B1;">6</span>): <a href="/qb64wiki/index.php/PRINT" title="PRINT"><span style="color:#4593D8;">PRINT</span></a> st$(<span style="color:#F580B1;">3</span>): <a class="mw-selflink selflink"><span style="color:#4593D8;">_DEST</span></a> <span style="color:#F580B1;">0</span>
+
+<a class="mw-redirect" href="/qb64wiki/index.php/DO" title="DO"><span style="color:#4593D8;">DO</span></a>
+    <a href="/qb64wiki/index.php/REM" title="REM"><span style="color:#4593D8;">REM</span></a><span style="color:#919191;"> prints to a(1) and a(2) then switches bac to 0</span>
+    <a class="mw-selflink selflink"><span style="color:#4593D8;">_DEST</span></a> a(<span style="color:#F580B1;">1</span>)
+    <a href="/qb64wiki/index.php/CLS" title="CLS"><span style="color:#4593D8;">CLS</span></a>
+    <a href="/qb64wiki/index.php/PRINT" title="PRINT"><span style="color:#4593D8;">PRINT</span></a> sta(r)
+    <a class="mw-selflink selflink"><span style="color:#4593D8;">_DEST</span></a> a(<span style="color:#F580B1;">2</span>)
+    <a href="/qb64wiki/index.php/CLS" title="CLS"><span style="color:#4593D8;">CLS</span></a>
+    <a href="/qb64wiki/index.php/PRINT" title="PRINT"><span style="color:#4593D8;">PRINT</span></a> sta(r + <span style="color:#F580B1;">1</span>)
+    <a class="mw-selflink selflink"><span style="color:#4593D8;">_DEST</span></a> <span style="color:#F580B1;">0</span> <span style="color:#919191;">'destination zero is the main program page</span>
+
+    <a href="/qb64wiki/index.php/REM" title="REM"><span style="color:#4593D8;">REM</span></a><span style="color:#919191;"> a loop to putimage the images in a(1) and a(2) in a way to make it look like its rolling</span>
+    <a href="/qb64wiki/index.php/FOR" title="FOR"><span style="color:#4593D8;">FOR</span></a> yat = <span style="color:#F580B1;">150</span> <a href="/qb64wiki/index.php/TO" title="TO"><span style="color:#4593D8;">TO</span></a> <span style="color:#F580B1;">380</span> <a href="/qb64wiki/index.php/STEP" title="STEP"><span style="color:#4593D8;">STEP</span></a> <span style="color:#F580B1;">4</span>
+        <a href="/qb64wiki/index.php/CLS" title="CLS"><span style="color:#4593D8;">CLS</span></a>
+        <a href="/qb64wiki/index.php/PUTIMAGE" title="PUTIMAGE"><span style="color:#4593D8;">_PUTIMAGE</span></a> (<span style="color:#F580B1;">0</span>, yat)-(<span style="color:#F580B1;">640</span>, <span style="color:#F580B1;">380</span>), a(<span style="color:#F580B1;">1</span>)
+        <a href="/qb64wiki/index.php/PUTIMAGE" title="PUTIMAGE"><span style="color:#4593D8;">_PUTIMAGE</span></a> (<span style="color:#F580B1;">0</span>, <span style="color:#F580B1;">150</span>)-(<span style="color:#F580B1;">640</span>, yat), a(<span style="color:#F580B1;">2</span>)
+        <a href="/qb64wiki/index.php/GOSUB" title="GOSUB"><span style="color:#4593D8;">GOSUB</span></a> bounce
+        <a href="/qb64wiki/index.php/DISPLAY" title="DISPLAY"><span style="color:#4593D8;">_DISPLAY</span></a>
+        <a href="/qb64wiki/index.php/LIMIT" title="LIMIT"><span style="color:#4593D8;">_LIMIT</span></a> <span style="color:#F580B1;">20</span>
+    <a href="/qb64wiki/index.php/NEXT" title="NEXT"><span style="color:#4593D8;">NEXT</span></a> yat
+
+    r = r + <span style="color:#F580B1;">1</span>
+    <a class="mw-redirect" href="/qb64wiki/index.php/IF" title="IF"><span style="color:#4593D8;">IF</span></a> r = <span style="color:#F580B1;">4</span> <a href="/qb64wiki/index.php/THEN" title="THEN"><span style="color:#4593D8;">THEN</span></a> r = <span style="color:#F580B1;">0</span>
+<a href="/qb64wiki/index.php/DO...LOOP" title="DO...LOOP"><span style="color:#4593D8;">LOOP UNTIL</span></a> <a href="/qb64wiki/index.php/INKEY$" title="INKEY$"><span style="color:#4593D8;">INKEY$</span></a> &lt;&gt; <span style="color:#FFB100;">""</span>
+<a href="/qb64wiki/index.php/END" title="END"><span style="color:#4593D8;">END</span></a>
+
+bounce:
+<a class="mw-redirect" href="/qb64wiki/index.php/IF" title="IF"><span style="color:#4593D8;">IF</span></a> xa &gt; <span style="color:#F580B1;">600</span> <a href="/qb64wiki/index.php/OR_(boolean)" title="OR (boolean)"><span style="color:#4593D8;">OR</span></a> xa &lt; <span style="color:#F580B1;">20</span> <a href="/qb64wiki/index.php/THEN" title="THEN"><span style="color:#4593D8;">THEN</span></a> xm = xm * <span style="color:#F580B1;">-1</span>: <a class="mw-selflink selflink"><span style="color:#4593D8;">_DEST</span></a> a(<span style="color:#F580B1;">3</span>): f = <a href="/qb64wiki/index.php/INT" title="INT"><span style="color:#4593D8;">INT</span></a>(<a href="/qb64wiki/index.php/RND" title="RND"><span style="color:#4593D8;">RND</span></a> * <span style="color:#F580B1;">6</span>): <a href="/qb64wiki/index.php/CLS" title="CLS"><span style="color:#4593D8;">CLS</span></a>: <a href="/qb64wiki/index.php/CLEARCOLOR" title="CLEARCOLOR"><span style="color:#4593D8;">_CLEARCOLOR</span></a> <span style="color:#F580B1;">0</span>: <a href="/qb64wiki/index.php/PRINT" title="PRINT"><span style="color:#4593D8;">PRINT</span></a> st$(f): <a class="mw-selflink selflink"><span style="color:#4593D8;">_DEST</span></a> <span style="color:#F580B1;">0</span>
+<a class="mw-redirect" href="/qb64wiki/index.php/IF" title="IF"><span style="color:#4593D8;">IF</span></a> ya &gt; <span style="color:#F580B1;">400</span> <a href="/qb64wiki/index.php/OR_(boolean)" title="OR (boolean)"><span style="color:#4593D8;">OR</span></a> ya &lt; <span style="color:#F580B1;">20</span> <a href="/qb64wiki/index.php/THEN" title="THEN"><span style="color:#4593D8;">THEN</span></a> ym = ym * <span style="color:#F580B1;">-1</span>: <a class="mw-selflink selflink"><span style="color:#4593D8;">_DEST</span></a> a(<span style="color:#F580B1;">3</span>): f = <a href="/qb64wiki/index.php/INT" title="INT"><span style="color:#4593D8;">INT</span></a>(<a href="/qb64wiki/index.php/RND" title="RND"><span style="color:#4593D8;">RND</span></a> * <span style="color:#F580B1;">7</span>): <a href="/qb64wiki/index.php/CLS" title="CLS"><span style="color:#4593D8;">CLS</span></a>: <a href="/qb64wiki/index.php/CLEARCOLOR" title="CLEARCOLOR"><span style="color:#4593D8;">_CLEARCOLOR</span></a> <span style="color:#F580B1;">0</span>: <a href="/qb64wiki/index.php/PRINT" title="PRINT"><span style="color:#4593D8;">PRINT</span></a> st$(f): <a class="mw-selflink selflink"><span style="color:#4593D8;">_DEST</span></a> <span style="color:#F580B1;">0</span>
+<a href="/qb64wiki/index.php/PUTIMAGE" title="PUTIMAGE"><span style="color:#4593D8;">_PUTIMAGE</span></a> (xa, ya)-(xa + <span style="color:#F580B1;">150</span>, ya + <span style="color:#F580B1;">80</span>), a(<span style="color:#F580B1;">3</span>)
+xa = xa + xm
+ya = ya + ym
+<a href="/qb64wiki/index.php/RETURN" title="RETURN"><span style="color:#4593D8;">RETURN</span></a>
+</pre>
+         </td>
+        </tr>
+       </tbody>
+      </table>
+      <center>
+       <span style="font-family: Courier New, Courier, monospace; font-size: 0.80em; line-height: 50%;">
+        Adapted from code by CodeViper
+       </span>
+      </center>
+      <p>
+       <br/>
+      </p>
+      <h2>
+       <span class="mw-headline" id="See_also">
+        See also
+       </span>
+      </h2>
+      <ul>
+       <li>
+        <a href="/qb64wiki/index.php/DEST_(function)" title="DEST (function)">
+         _DEST (function)
+        </a>
+       </li>
+       <li>
+        <a href="/qb64wiki/index.php/SOURCE" title="SOURCE">
+         _SOURCE
+        </a>
+       </li>
+       <li>
+        <a href="/qb64wiki/index.php/PUTIMAGE" title="PUTIMAGE">
+         _PUTIMAGE
+        </a>
+       </li>
+       <li>
+        <a href="/qb64wiki/index.php/CONSOLE" title="CONSOLE">
+         _CONSOLE
+        </a>
+       </li>
+      </ul>
+      <p>
+       <br/>
+      </p>
+      <hr/>
+      <center>
+       <b>
+        Navigation:
+       </b>
+      </center>
+      <center>
+       <a href="/qb64wiki/index.php/Main_Page" title="Main Page">
+        Main Page with Articles and Tutorials
+       </a>
+      </center>
+      <center>
+       <a href="/qb64wiki/index.php/Keyword_Reference_-_Alphabetical" title="Keyword Reference - Alphabetical">
+        Keyword Reference - Alphabetical
+       </a>
+      </center>
+      <center>
+       <a href="/qb64wiki/index.php/Keyword_Reference_-_By_usage" title="Keyword Reference - By usage">
+        Keyword Reference - By usage
+       </a>
+      </center>
+      <center>
+       <b>
+        <a class="external text" href="https://qb64phoenix.com/forum/showthread.php?tid=2800" rel="nofollow">
+         Report a broken link
+        </a>
+       </b>
+       <br/>
+      </center>
+      <!-- 
+NewPP limit report
+Cached time: 20240719130439
+Cache expiry: 86400
+Reduced expiry: false
+Complications: [show‐toc]
+CPU time usage: 0.056 seconds
+Real time usage: 0.068 seconds
+Preprocessor visited node count: 1490/1000000
+Post‐expand include size: 10230/2097152 bytes
+Template argument size: 2825/2097152 bytes
+Highest expansion depth: 4/100
+Expensive parser function count: 0/100
+Unstrip recursion depth: 0/20
+Unstrip post‐expand size: 900/5000000 bytes
+-->
+      <!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%   36.692      1 -total
+ 15.69%    5.757    117 Template:Text
+ 12.44%    4.564     77 Template:Cl
+  6.94%    2.545      1 Template:PageSyntax
+  5.89%    2.160      4 Template:Parameter
+  5.63%    2.067      1 Template:Small
+  4.84%    1.775      1 Template:PageDescription
+  4.84%    1.774      2 Template:CodeEnd
+  4.78%    1.754      2 Template:CodeStart
+  4.62%    1.694      1 Template:PageNavigation
+-->
+      <!-- Saved in parser cache with key qb64pnix_mw19894-mwmb_:pcache:idhash:116-0!canonical and timestamp 20240719130439 and revision id 8307.
+ -->
+     </div>
+     <div class="printfooter" data-nosnippet="">
+      Retrieved from "
+      <a dir="ltr" href="https://qb64phoenix.com/qb64wiki/index.php?title=DEST&amp;oldid=8307">
+       https://qb64phoenix.com/qb64wiki/index.php?title=DEST&amp;oldid=8307
+      </a>
+      "
+     </div>
+    </div>
+    <div class="catlinks catlinks-allhidden" data-mw="interface" id="catlinks">
+    </div>
+   </div>
+  </div>
+  <div id="mw-navigation">
+   <h2>
+    Navigation menu
+   </h2>
+   <div id="mw-head">
+    <nav aria-labelledby="p-personal-label" class="vector-menu mw-portlet mw-portlet-personal vector-user-menu-legacy" id="p-personal" role="navigation">
+     <h3 class="vector-menu-heading" id="p-personal-label">
+      <span class="vector-menu-heading-label">
+       Personal tools
+      </span>
+     </h3>
+     <div class="vector-menu-content">
+      <ul class="vector-menu-content-list">
+       <li class="mw-list-item" id="pt-login">
+        <a accesskey="o" href="/qb64wiki/index.php?title=Special:UserLogin&amp;returnto=DEST" title="You are encouraged to log in; however, it is not mandatory [o]">
+         <span>
+          Log in
+         </span>
+        </a>
+       </li>
+      </ul>
+     </div>
+    </nav>
+    <div id="left-navigation">
+     <nav aria-labelledby="p-namespaces-label" class="vector-menu mw-portlet mw-portlet-namespaces vector-menu-tabs vector-menu-tabs-legacy" id="p-namespaces" role="navigation">
+      <h3 class="vector-menu-heading" id="p-namespaces-label">
+       <span class="vector-menu-heading-label">
+        Namespaces
+       </span>
+      </h3>
+      <div class="vector-menu-content">
+       <ul class="vector-menu-content-list">
+        <li class="selected mw-list-item" id="ca-nstab-main">
+         <a accesskey="c" href="/qb64wiki/index.php/DEST" title="View the content page [c]">
+          <span>
+           Page
+          </span>
+         </a>
+        </li>
+        <li class="new mw-list-item" id="ca-talk">
+         <a accesskey="t" href="/qb64wiki/index.php?title=Talk:DEST&amp;action=edit&amp;redlink=1" rel="discussion" title="Discussion about the content page (page does not exist) [t]">
+          <span>
+           Discussion
+          </span>
+         </a>
+        </li>
+       </ul>
+      </div>
+     </nav>
+     <nav aria-labelledby="p-variants-label" class="vector-menu mw-portlet mw-portlet-variants emptyPortlet vector-menu-dropdown" id="p-variants" role="navigation">
+      <input aria-haspopup="true" aria-labelledby="p-variants-label" class="vector-menu-checkbox" data-event-name="ui.dropdown-p-variants" id="p-variants-checkbox" role="button" type="checkbox"/>
+      <label aria-label="Change language variant" class="vector-menu-heading" id="p-variants-label">
+       <span class="vector-menu-heading-label">
+        English
+       </span>
+      </label>
+      <div class="vector-menu-content">
+       <ul class="vector-menu-content-list">
+       </ul>
+      </div>
+     </nav>
+    </div>
+    <div id="right-navigation">
+     <nav aria-labelledby="p-views-label" class="vector-menu mw-portlet mw-portlet-views vector-menu-tabs vector-menu-tabs-legacy" id="p-views" role="navigation">
+      <h3 class="vector-menu-heading" id="p-views-label">
+       <span class="vector-menu-heading-label">
+        Views
+       </span>
+      </h3>
+      <div class="vector-menu-content">
+       <ul class="vector-menu-content-list">
+        <li class="selected mw-list-item" id="ca-view">
+         <a href="/qb64wiki/index.php/DEST">
+          <span>
+           Read
+          </span>
+         </a>
+        </li>
+        <li class="mw-list-item" id="ca-viewsource">
+         <a accesskey="e" href="/qb64wiki/index.php?title=DEST&amp;action=edit" title="This page is protected.
+You can view its source [e]">
+          <span>
+           View source
+          </span>
+         </a>
+        </li>
+        <li class="mw-list-item" id="ca-history">
+         <a accesskey="h" href="/qb64wiki/index.php?title=DEST&amp;action=history" title="Past revisions of this page [h]">
+          <span>
+           View history
+          </span>
+         </a>
+        </li>
+       </ul>
+      </div>
+     </nav>
+     <nav aria-labelledby="p-cactions-label" class="vector-menu mw-portlet mw-portlet-cactions emptyPortlet vector-menu-dropdown" id="p-cactions" role="navigation" title="More options">
+      <input aria-haspopup="true" aria-labelledby="p-cactions-label" class="vector-menu-checkbox" data-event-name="ui.dropdown-p-cactions" id="p-cactions-checkbox" role="button" type="checkbox"/>
+      <label class="vector-menu-heading" id="p-cactions-label">
+       <span class="vector-menu-heading-label">
+        More
+       </span>
+      </label>
+      <div class="vector-menu-content">
+       <ul class="vector-menu-content-list">
+       </ul>
+      </div>
+     </nav>
+     <div class="vector-search-box-vue vector-search-box-show-thumbnail vector-search-box-auto-expand-width vector-search-box" id="p-search" role="search">
+      <div>
+       <h3>
+        <label for="searchInput">
+         Search
+        </label>
+       </h3>
+       <form action="/qb64wiki/index.php" class="vector-search-box-form" id="searchform">
+        <div class="vector-search-box-inner" data-search-loc="header-navigation" id="simpleSearch">
+         <input accesskey="f" aria-label="Search QB64 Phoenix Edition Wiki" autocapitalize="sentences" class="vector-search-box-input" id="searchInput" name="search" placeholder="Search QB64 Phoenix Edition Wiki" title="Search QB64 Phoenix Edition Wiki [f]" type="search"/>
+         <input name="title" type="hidden" value="Special:Search"/>
+         <input class="searchButton mw-fallbackSearchButton" id="mw-searchButton" name="fulltext" title="Search the pages for this text" type="submit" value="Search"/>
+         <input class="searchButton" id="searchButton" name="go" title="Go to a page with this exact name if it exists" type="submit" value="Go"/>
+        </div>
+       </form>
+      </div>
+     </div>
+    </div>
+   </div>
+   <div id="mw-panel">
+    <div id="p-logo" role="banner">
+     <a class="mw-wiki-logo" href="/qb64wiki/index.php/Main_Page" title="Visit the main page">
+     </a>
+    </div>
+    <nav aria-labelledby="p-navigation-label" class="vector-menu mw-portlet mw-portlet-navigation vector-menu-portal portal" id="p-navigation" role="navigation">
+     <h3 class="vector-menu-heading" id="p-navigation-label">
+      <span class="vector-menu-heading-label">
+       Navigation
+      </span>
+     </h3>
+     <div class="vector-menu-content">
+      <ul class="vector-menu-content-list">
+       <li class="mw-list-item" id="n-mainpage-description">
+        <a accesskey="z" href="/qb64wiki/index.php/Main_Page" title="Visit the main page [z]">
+         <span>
+          Main page
+         </span>
+        </a>
+       </li>
+       <li class="mw-list-item" id="n-recentchanges">
+        <a accesskey="r" href="/qb64wiki/index.php/Special:RecentChanges" title="A list of recent changes in the wiki [r]">
+         <span>
+          Recent changes
+         </span>
+        </a>
+       </li>
+       <li class="mw-list-item" id="n-randompage">
+        <a accesskey="x" href="/qb64wiki/index.php/Special:Random" title="Load a random page [x]">
+         <span>
+          Random page
+         </span>
+        </a>
+       </li>
+       <li class="mw-list-item" id="n-help-mediawiki">
+        <a href="https://www.mediawiki.org/wiki/Special:MyLanguage/Help:Contents">
+         <span>
+          Help about MediaWiki
+         </span>
+        </a>
+       </li>
+      </ul>
+     </div>
+    </nav>
+    <nav aria-labelledby="p-tb-label" class="vector-menu mw-portlet mw-portlet-tb vector-menu-portal portal" id="p-tb" role="navigation">
+     <h3 class="vector-menu-heading" id="p-tb-label">
+      <span class="vector-menu-heading-label">
+       Tools
+      </span>
+     </h3>
+     <div class="vector-menu-content">
+      <ul class="vector-menu-content-list">
+       <li class="mw-list-item" id="t-whatlinkshere">
+        <a accesskey="j" href="/qb64wiki/index.php/Special:WhatLinksHere/DEST" title="A list of all wiki pages that link here [j]">
+         <span>
+          What links here
+         </span>
+        </a>
+       </li>
+       <li class="mw-list-item" id="t-recentchangeslinked">
+        <a accesskey="k" href="/qb64wiki/index.php/Special:RecentChangesLinked/DEST" rel="nofollow" title="Recent changes in pages linked from this page [k]">
+         <span>
+          Related changes
+         </span>
+        </a>
+       </li>
+       <li class="mw-list-item" id="t-specialpages">
+        <a accesskey="q" href="/qb64wiki/index.php/Special:SpecialPages" title="A list of all special pages [q]">
+         <span>
+          Special pages
+         </span>
+        </a>
+       </li>
+       <li class="mw-list-item" id="t-print">
+        <a accesskey="p" href="javascript:print();" rel="alternate" title="Printable version of this page [p]">
+         <span>
+          Printable version
+         </span>
+        </a>
+       </li>
+       <li class="mw-list-item" id="t-permalink">
+        <a href="/qb64wiki/index.php?title=DEST&amp;oldid=8307" title="Permanent link to this revision of this page">
+         <span>
+          Permanent link
+         </span>
+        </a>
+       </li>
+       <li class="mw-list-item" id="t-info">
+        <a href="/qb64wiki/index.php?title=DEST&amp;action=info" title="More information about this page">
+         <span>
+          Page information
+         </span>
+        </a>
+       </li>
+      </ul>
+     </div>
+    </nav>
+   </div>
+  </div>
+  <footer class="mw-footer" id="footer" role="contentinfo">
+   <ul id="footer-info">
+    <li id="footer-info-lastmod">
+     This page was last edited on 23 March 2023, at 19:41.
+    </li>
+   </ul>
+   <ul id="footer-places">
+    <li id="footer-places-privacy">
+     <a href="/qb64wiki/index.php/QB64_Phoenix_Edition_Wiki:Privacy_policy">
+      Privacy policy
+     </a>
+    </li>
+    <li id="footer-places-about">
+     <a href="/qb64wiki/index.php/QB64_Phoenix_Edition_Wiki:About">
+      About QB64 Phoenix Edition Wiki
+     </a>
+    </li>
+    <li id="footer-places-disclaimer">
+     <a href="/qb64wiki/index.php/QB64_Phoenix_Edition_Wiki:General_disclaimer">
+      Disclaimers
+     </a>
+    </li>
+   </ul>
+   <ul class="noprint" id="footer-icons">
+    <li id="footer-poweredbyico">
+     <a href="https://www.mediawiki.org/">
+      <img alt="Powered by MediaWiki" height="31" loading="lazy" src="/qb64wiki/resources/assets/poweredby_mediawiki_88x31.png" srcset="/qb64wiki/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /qb64wiki/resources/assets/poweredby_mediawiki_176x62.png 2x" width="88"/>
+     </a>
+    </li>
+   </ul>
+  </footer>
+  <script>
+   (RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgPageParseReport":{"limitreport":{"cputime":"0.056","walltime":"0.068","ppvisitednodes":{"value":1490,"limit":1000000},"postexpandincludesize":{"value":10230,"limit":2097152},"templateargumentsize":{"value":2825,"limit":2097152},"expansiondepth":{"value":4,"limit":100},"expensivefunctioncount":{"value":0,"limit":100},"unstrip-depth":{"value":0,"limit":20},"unstrip-size":{"value":900,"limit":5000000},"timingprofile":["100.00%   36.692      1 -total"," 15.69%    5.757    117 Template:Text"," 12.44%    4.564     77 Template:Cl","  6.94%    2.545      1 Template:PageSyntax","  5.89%    2.160      4 Template:Parameter","  5.63%    2.067      1 Template:Small","  4.84%    1.775      1 Template:PageDescription","  4.84%    1.774      2 Template:CodeEnd","  4.78%    1.754      2 Template:CodeStart","  4.62%    1.694      1 Template:PageNavigation"]},"cachereport":{"timestamp":"20240719130439","ttl":86400,"transientcontent":false}}});mw.config.set({"wgBackendResponseTime":90});});
+  </script>
+ </body>
+</html>

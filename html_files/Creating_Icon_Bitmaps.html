@@ -1,0 +1,1027 @@
+<!DOCTYPE html>
+<html class="client-nojs" dir="ltr" lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <title>
+   Creating Icon Bitmaps - QB64 Phoenix Edition Wiki
+  </title>
+  <script>
+   document.documentElement.className="client-js";RLCONF={"wgBreakFrames":false,"wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgRequestId":"Zpp6_o_rYEQRpdCCob5Y5gAAAU4","wgCSPNonce":false,"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"Creating_Icon_Bitmaps","wgTitle":"Creating Icon Bitmaps","wgCurRevisionId":8121,"wgRevisionId":8121,"wgArticleId":623,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":[],"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgRelevantPageName":"Creating_Icon_Bitmaps","wgRelevantArticleId":623,"wgIsProbablyEditable":false,"wgRelevantPageIsProbablyEditable":false,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgVector2022PreviewPages":[]};RLSTATE={"site.styles":
+"ready","user.styles":"ready","user":"ready","user.options":"loading","skins.vector.styles.legacy":"ready"};RLPAGEMODULES=["site","mediawiki.page.ready","skins.vector.legacy.js"];
+  </script>
+  <script>
+   (RLQ=window.RLQ||[]).push(function(){mw.loader.implement("user.options@12s5i",function($,jQuery,require,module){mw.user.tokens.set({"patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});});});
+  </script>
+  <link href="/qb64wiki/load.php?lang=en&amp;modules=skins.vector.styles.legacy&amp;only=styles&amp;skin=vector" rel="stylesheet"/>
+  <script async="" src="/qb64wiki/load.php?lang=en&amp;modules=startup&amp;only=scripts&amp;raw=1&amp;skin=vector">
+  </script>
+  <meta content="" name="ResourceLoaderDynamicStyles"/>
+  <link href="/qb64wiki/load.php?lang=en&amp;modules=site.styles&amp;only=styles&amp;skin=vector" rel="stylesheet"/>
+  <meta content="MediaWiki 1.39.3" name="generator"/>
+  <meta content="telephone=no" name="format-detection"/>
+  <meta content="width=1000" name="viewport"/>
+  <link href="/favicon.ico" rel="icon"/>
+  <link href="/qb64wiki/opensearch_desc.php" rel="search" title="QB64 Phoenix Edition Wiki (en)" type="application/opensearchdescription+xml"/>
+  <link href="https://qb64phoenix.com/qb64wiki/api.php?action=rsd" rel="EditURI" type="application/rsd+xml"/>
+  <link href="/qb64wiki/index.php?title=Special:RecentChanges&amp;feed=atom" rel="alternate" title="QB64 Phoenix Edition Wiki Atom feed" type="application/atom+xml"/>
+ </head>
+ <body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject page-Creating_Icon_Bitmaps rootpage-Creating_Icon_Bitmaps skin-vector action-view skin-vector-legacy vector-feature-language-in-header-enabled vector-feature-language-in-main-page-header-disabled vector-feature-language-alert-in-sidebar-disabled vector-feature-sticky-header-disabled vector-feature-sticky-header-edit-disabled vector-feature-table-of-contents-disabled vector-feature-visual-enhancement-next-disabled">
+  <div class="noprint" id="mw-page-base">
+  </div>
+  <div class="noprint" id="mw-head-base">
+  </div>
+  <div class="mw-body" id="content" role="main">
+   <a id="top">
+   </a>
+   <div id="siteNotice">
+   </div>
+   <div class="mw-indicators">
+   </div>
+   <h1 class="firstHeading mw-first-heading" id="firstHeading">
+    <span class="mw-page-title-main">
+     Creating Icon Bitmaps
+    </span>
+   </h1>
+   <div class="vector-body" id="bodyContent">
+    <div class="noprint" id="siteSub">
+     From QB64 Phoenix Edition Wiki
+    </div>
+    <div id="contentSub">
+    </div>
+    <div id="contentSub2">
+    </div>
+    <div id="jump-to-nav">
+    </div>
+    <a class="mw-jump-link" href="#mw-head">
+     Jump to navigation
+    </a>
+    <a class="mw-jump-link" href="#searchInput">
+     Jump to search
+    </a>
+    <div class="mw-body-content mw-content-ltr" dir="ltr" id="mw-content-text" lang="en">
+     <div class="mw-parser-output">
+      <h2>
+       <span class="mw-headline" id="Icon_Viewer_and_Bitmap_Creator">
+        Icon Viewer and Bitmap Creator
+       </span>
+      </h2>
+      <p>
+       The following program can be used to view Icon or Cursor images and save them as Bitmaps. When you answer Y the bitmap is saved with a black background so that it can be PUT using
+       <a class="mw-redirect" href="/qb64wiki/index.php/XOR" title="XOR">
+        XOR
+       </a>
+       on to the
+       <a href="/qb64wiki/index.php/AND" title="AND">
+        AND
+       </a>
+       image. The AND image will be black and white if the image is irregularly shaped(not a full box image). It is placed first using
+       <a href="/qb64wiki/index.php/PUT_(graphics_statement)" title="PUT (graphics statement)">
+        PUT
+       </a>
+       with the AND action or can be placed using
+       <a href="/qb64wiki/index.php/PUTIMAGE" title="PUTIMAGE">
+        _PUTIMAGE
+       </a>
+       with the color white
+       <a href="/qb64wiki/index.php/ALPHA" title="ALPHA">
+        _ALPHA
+       </a>
+       being set to 0. In that case, try just placing the XOR image with the color black 0
+       <a href="/qb64wiki/index.php/ALPHA" title="ALPHA">
+        alpha
+       </a>
+       with
+       <a href="/qb64wiki/index.php/SETALPHA" title="SETALPHA">
+        _SETALPHA
+       </a>
+       .
+      </p>
+      <table cellpadding="5px" width="100%">
+       <tbody>
+        <tr>
+         <td>
+          <pre class="outputtext">'********************************* IconType.BI INCLUDE FILE ********************************
+
+<a href="/qb64wiki/index.php/TYPE" title="TYPE"><span style="color:blue;">TYPE</span></a> IconType            'Icon or cursor file header
+  Reserved <a href="/qb64wiki/index.php/AS" title="AS"><span style="color:blue;">AS</span></a> <a href="/qb64wiki/index.php/INTEGER" title="INTEGER"><span style="color:blue;">INTEGER</span></a>    'Reserved (always 0)
+  ID <a href="/qb64wiki/index.php/AS" title="AS"><span style="color:blue;">AS</span></a> <a href="/qb64wiki/index.php/INTEGER" title="INTEGER"><span style="color:blue;">INTEGER</span></a>          'Resource ID (Icon = 1, Cursor = 2)
+  Count <a href="/qb64wiki/index.php/AS" title="AS"><span style="color:blue;">AS</span></a> <a href="/qb64wiki/index.php/INTEGER" title="INTEGER"><span style="color:blue;">INTEGER</span></a>       'Number of icon bitmaps in Directory of icon entries array
+<a href="/qb64wiki/index.php/END" title="END"><span style="color:blue;">END</span></a> <a href="/qb64wiki/index.php/TYPE" title="TYPE"><span style="color:blue;">TYPE</span></a> '6 bytes
+
+<a href="/qb64wiki/index.php/TYPE" title="TYPE"><span style="color:blue;">TYPE</span></a> ICONENTRY           'or unanimated Cursor entry (see ANI for animated cursors)
+  PWidth <a href="/qb64wiki/index.php/AS" title="AS"><span style="color:blue;">AS</span></a> <a href="/qb64wiki/index.php/BYTE" title="BYTE"><span style="color:blue;">_BYTE</span></a>        'Width of icon in pixels (USE THIS)
+  PDepth <a href="/qb64wiki/index.php/AS" title="AS"><span style="color:blue;">AS</span></a> <a href="/qb64wiki/index.php/BYTE" title="BYTE"><span style="color:blue;">_BYTE</span></a>        'Height of icon in pixels (USE THIS)
+  NumColors <a href="/qb64wiki/index.php/AS" title="AS"><span style="color:blue;">AS</span></a> <a href="/qb64wiki/index.php/BYTE" title="BYTE"><span style="color:blue;">_BYTE</span></a>     'Maximum number of colors: (2 or 16 colors. 256 or 24/32 bit = 0}
+  RES2 <a href="/qb64wiki/index.php/AS" title="AS"><span style="color:blue;">AS</span></a> <a href="/qb64wiki/index.php/BYTE" title="BYTE"><span style="color:blue;">_BYTE</span></a>          'Reserved. Not used (always 0)
+  HotSpotX <a href="/qb64wiki/index.php/AS" title="AS"><span style="color:blue;">AS</span></a> <a href="/qb64wiki/index.php/INTEGER" title="INTEGER"><span style="color:blue;">INTEGER</span></a>    'Icon: NumberPlanes(normally 0), Cursor: hotspot pixels from left
+  HotSpotY <a href="/qb64wiki/index.php/AS" title="AS"><span style="color:blue;">AS</span></a> <a href="/qb64wiki/index.php/INTEGER" title="INTEGER"><span style="color:blue;">INTEGER</span></a>    'Icon: BitsPerPixel(normally 0), Cursor: hotspot pixels from top
+  DataSize <a href="/qb64wiki/index.php/AS" title="AS"><span style="color:blue;">AS</span></a> <a href="/qb64wiki/index.php/LONG" title="LONG"><span style="color:blue;">LONG</span></a>       'Length of icon bitmap in bytes (USE THIS)
+  DataOffset <a href="/qb64wiki/index.php/AS" title="AS"><span style="color:blue;">AS</span></a> <a href="/qb64wiki/index.php/LONG" title="LONG"><span style="color:blue;">LONG</span></a>     'Offset byte position of icon bitmap data header in file(add 1)
+<a href="/qb64wiki/index.php/END" title="END"><span style="color:blue;">END</span></a> <a href="/qb64wiki/index.php/TYPE" title="TYPE"><span style="color:blue;">TYPE</span></a> '16 bytes
+
+<a href="/qb64wiki/index.php/TYPE" title="TYPE"><span style="color:blue;">TYPE</span></a> ICONHEADER          'Bitmap type header found using entry DataOffset + 1
+  IconHSize <a href="/qb64wiki/index.php/AS" title="AS"><span style="color:blue;">AS</span></a> <a href="/qb64wiki/index.php/LONG" title="LONG"><span style="color:blue;">LONG</span></a>      'size of ICON header (always 40 bytes)
+  ICONWidth <a href="/qb64wiki/index.php/AS" title="AS"><span style="color:blue;">AS</span></a> <a href="/qb64wiki/index.php/LONG" title="LONG"><span style="color:blue;">LONG</span></a>      'bitmap width in pixels. (width and double height may be missing)
+  ICONDepth <a href="/qb64wiki/index.php/AS" title="AS"><span style="color:blue;">AS</span></a> <a href="/qb64wiki/index.php/LONG" title="LONG"><span style="color:blue;">LONG</span></a>      'Total map height in pixels (TWO TIMES the image height).
+  NumPlanes <a href="/qb64wiki/index.php/AS" title="AS"><span style="color:blue;">AS</span></a> <a href="/qb64wiki/index.php/INTEGER" title="INTEGER"><span style="color:blue;">INTEGER</span></a>   'number of color planes. Must be set to 1.
+  BPP <a href="/qb64wiki/index.php/AS" title="AS"><span style="color:blue;">AS</span></a> <a href="/qb64wiki/index.php/INTEGER" title="INTEGER"><span style="color:blue;">INTEGER</span></a>         'bits per pixel  1, 4, 8, 16, 24 or 32.(USE THIS for BPP)
+  Compress <a href="/qb64wiki/index.php/AS" title="AS"><span style="color:blue;">AS</span></a> <a href="/qb64wiki/index.php/LONG" title="LONG"><span style="color:blue;">LONG</span></a>       'compression method should always be 0.
+  RAWSize <a href="/qb64wiki/index.php/AS" title="AS"><span style="color:blue;">AS</span></a> <a href="/qb64wiki/index.php/LONG" title="LONG"><span style="color:blue;">LONG</span></a>        'size of the raw ICON image data(may only be <a class="mw-redirect" href="/qb64wiki/index.php/XOR" title="XOR"><span style="color:blue;">XOR</span></a> mask size).
+  Hres <a href="/qb64wiki/index.php/AS" title="AS"><span style="color:blue;">AS</span></a> <a href="/qb64wiki/index.php/LONG" title="LONG"><span style="color:blue;">LONG</span></a>           'horizontal resolution of the image(not normally used)
+  Vres <a href="/qb64wiki/index.php/AS" title="AS"><span style="color:blue;">AS</span></a> <a href="/qb64wiki/index.php/LONG" title="LONG"><span style="color:blue;">LONG</span></a>           'vertical resolution of the image(not normally used)
+  NumColors <a href="/qb64wiki/index.php/AS" title="AS"><span style="color:blue;">AS</span></a> <a href="/qb64wiki/index.php/LONG" title="LONG"><span style="color:blue;">LONG</span></a>      'number of colors in the color palette(not normally used)
+  SigColors <a href="/qb64wiki/index.php/AS" title="AS"><span style="color:blue;">AS</span></a> <a href="/qb64wiki/index.php/LONG" title="LONG"><span style="color:blue;">LONG</span></a>      'number of important colors used(not normally used)
+<a href="/qb64wiki/index.php/END" title="END"><span style="color:blue;">END</span></a> <a href="/qb64wiki/index.php/TYPE" title="TYPE"><span style="color:blue;">TYPE</span></a> '40 byte
+
+</pre>
+         </td>
+        </tr>
+       </tbody>
+      </table>
+      <center>
+       <span style="font-family: Courier New, Courier, monospace; font-size: 0.80em; line-height: 50%;">
+        Code by Ted Weissgerber
+       </span>
+      </center>
+      <table cellpadding="15px" width="100%">
+       <tbody>
+        <tr>
+         <td>
+          <pre class="codeide"><a href="/qb64wiki/index.php/REM" title="REM"><span style="color:#4593D8;">REM</span></a> <a href="/qb64wiki/index.php/$INCLUDE" title="$INCLUDE"><span style="color:#4593D8;">$INCLUDE</span></a>: 'IconType.BI'
+<a href="/qb64wiki/index.php/DEFINT" title="DEFINT"><span style="color:#4593D8;">DEFINT</span></a> A-Z
+<a href="/qb64wiki/index.php/DIM" title="DIM"><span style="color:#4593D8;">DIM</span></a> Icon <a href="/qb64wiki/index.php/AS" title="AS"><span style="color:#4593D8;">AS</span></a> IconType
+<a href="/qb64wiki/index.php/DIM" title="DIM"><span style="color:#4593D8;">DIM</span></a> <a href="/qb64wiki/index.php/SHARED" title="SHARED"><span style="color:#4593D8;">SHARED</span></a> Item, BPP
+<a href="/qb64wiki/index.php/DIM" title="DIM"><span style="color:#4593D8;">DIM</span></a> <a href="/qb64wiki/index.php/SHARED" title="SHARED"><span style="color:#4593D8;">SHARED</span></a> wide&amp;, deep&amp;, bmp&amp;, bmpStretch&amp;
+<a href="/qb64wiki/index.php/DIM" title="DIM"><span style="color:#4593D8;">DIM</span></a> Image(26000)
+dst&amp; = <a href="/qb64wiki/index.php/NEWIMAGE" title="NEWIMAGE"><span style="color:#4593D8;">_NEWIMAGE</span></a>(800, 600, 32)
+<a href="/qb64wiki/index.php/SCREEN" title="SCREEN"><span style="color:#4593D8;">SCREEN</span></a> dst&amp;
+
+hdr$ = " &amp; File  ID = #  ## Image(s) in file  #######, bytes "
+ico$ = "              Size = ## X ##   Colors = ##        Planes = #   BPP = ## "
+cur$ = "              Size = ## X ##   Colors = ##   HotSpot X = ##      Y = ## "
+dat$ = "              DATA Size = #####, bytes        <a href="/qb64wiki/index.php/DATA" title="DATA"><span style="color:#4593D8;">DATA</span></a> Offset =  ######,    "
+bm1$ = "              HeaderSize = ## MaskArea = ## X ##  Planes = #   BPP = ## "
+bm2$ = "              Compression = #   RAW Data Size = ######, bytes         "
+
+<a href="/qb64wiki/index.php/LOCATE" title="LOCATE"><span style="color:#4593D8;">LOCATE</span></a> 20, 20: <a href="/qb64wiki/index.php/LINE_INPUT" title="LINE INPUT"><span style="color:#4593D8;">LINE INPUT</span></a> "Enter an ICOn or CURsor file name: ", IconName$
+L = <a href="/qb64wiki/index.php/LEN" title="LEN"><span style="color:#4593D8;">LEN</span></a>(IconName$)
+<a class="mw-redirect" href="/qb64wiki/index.php/IF" title="IF"><span style="color:#4593D8;">IF</span></a> L = 0 <a href="/qb64wiki/index.php/THEN" title="THEN"><span style="color:#4593D8;">THEN</span></a> <a href="/qb64wiki/index.php/SOUND" title="SOUND"><span style="color:#4593D8;">SOUND</span></a> 400, 4: <a href="/qb64wiki/index.php/SYSTEM" title="SYSTEM"><span style="color:#4593D8;">SYSTEM</span></a>
+dot = <a href="/qb64wiki/index.php/INSTR" title="INSTR"><span style="color:#4593D8;">INSTR</span></a>(IconName$, ".")
+<a class="mw-redirect" href="/qb64wiki/index.php/IF" title="IF"><span style="color:#4593D8;">IF</span></a> dot = 0 <a href="/qb64wiki/index.php/THEN" title="THEN"><span style="color:#4593D8;">THEN</span></a>
+   Save$ = IconName$: IconName$ = IconName$ + ".ICO"
+<a href="/qb64wiki/index.php/ELSE" title="ELSE"><span style="color:#4593D8;">ELSE</span></a> Save$ = <a href="/qb64wiki/index.php/LEFT$" title="LEFT$"><span style="color:#4593D8;">LEFT$</span></a>(IconName$, dot - 1)
+<a class="mw-redirect" href="/qb64wiki/index.php/END_IF" title="END IF"><span style="color:#4593D8;">END IF</span></a>
+<a href="/qb64wiki/index.php/OPEN" title="OPEN"><span style="color:#4593D8;">OPEN</span></a> IconName$ <a class="mw-redirect" href="/qb64wiki/index.php/FOR_(file_statement)" title="FOR (file statement)"><span style="color:#4593D8;">FOR</span></a> <a class="mw-redirect" href="/qb64wiki/index.php/BINARY" title="BINARY"><span style="color:#4593D8;">BINARY</span></a> <a href="/qb64wiki/index.php/AS" title="AS"><span style="color:#4593D8;">AS</span></a> #1
+length&amp; = <a href="/qb64wiki/index.php/LOF" title="LOF"><span style="color:#4593D8;">LOF</span></a>(1)
+<a href="/qb64wiki/index.php/PRINT" title="PRINT"><span style="color:#4593D8;">PRINT</span></a>
+<a class="mw-redirect" href="/qb64wiki/index.php/IF" title="IF"><span style="color:#4593D8;">IF</span></a> length&amp; <a href="/qb64wiki/index.php/THEN" title="THEN"><span style="color:#4593D8;">THEN</span></a>
+  <a href="/qb64wiki/index.php/GET" title="GET"><span style="color:#4593D8;">GET</span></a> #1, 1, Icon
+  <a href="/qb64wiki/index.php/SELECT_CASE" title="SELECT CASE"><span style="color:#4593D8;">SELECT CASE</span></a> Icon.ID
+    <a class="mw-redirect" href="/qb64wiki/index.php/CASE" title="CASE"><span style="color:#4593D8;">CASE</span></a> 1: IC$ = "Icon": ent$ = ico$
+    <a class="mw-redirect" href="/qb64wiki/index.php/CASE" title="CASE"><span style="color:#4593D8;">CASE</span></a> 2: IC$ = "Cursor": ent$ = cur$
+    <a class="mw-redirect" href="/qb64wiki/index.php/CASE_ELSE" title="CASE ELSE"><span style="color:#4593D8;">CASE ELSE</span></a>: IC$ = "Bitmap?"
+  <a href="/qb64wiki/index.php/END_SELECT" title="END SELECT"><span style="color:#4593D8;">END SELECT</span></a>
+  <a href="/qb64wiki/index.php/LOCATE" title="LOCATE"><span style="color:#4593D8;">LOCATE</span></a> 22, 20: <a href="/qb64wiki/index.php/PRINT_USING" title="PRINT USING"><span style="color:#4593D8;">PRINT USING</span></a> hdr$; IC$; Icon.ID; Icon.Count; length&amp;
+  <a class="mw-redirect" href="/qb64wiki/index.php/IF" title="IF"><span style="color:#4593D8;">IF</span></a> Icon.Count <a href="/qb64wiki/index.php/THEN" title="THEN"><span style="color:#4593D8;">THEN</span></a>
+    count = Icon.Count
+    <a href="/qb64wiki/index.php/DIM" title="DIM"><span style="color:#4593D8;">DIM</span></a> <a href="/qb64wiki/index.php/SHARED" title="SHARED"><span style="color:#4593D8;">SHARED</span></a> Entry(count) <a href="/qb64wiki/index.php/AS" title="AS"><span style="color:#4593D8;">AS</span></a> ICONENTRY
+    <a href="/qb64wiki/index.php/DIM" title="DIM"><span style="color:#4593D8;">DIM</span></a> <a href="/qb64wiki/index.php/SHARED" title="SHARED"><span style="color:#4593D8;">SHARED</span></a> Header(count) <a href="/qb64wiki/index.php/AS" title="AS"><span style="color:#4593D8;">AS</span></a> ICONHEADER
+    <a href="/qb64wiki/index.php/FOR...NEXT" title="FOR...NEXT"><span style="color:#4593D8;">FOR</span></a> Item = 1 <a href="/qb64wiki/index.php/TO" title="TO"><span style="color:#4593D8;">TO</span></a> count                            '16 bytes each entry
+      <a href="/qb64wiki/index.php/GET" title="GET"><span style="color:#4593D8;">GET</span></a> #1, , Entry(Item)
+    <a href="/qb64wiki/index.php/NEXT" title="NEXT"><span style="color:#4593D8;">NEXT</span></a>
+    <a href="/qb64wiki/index.php/VIEW_PRINT" title="VIEW PRINT"><span style="color:#4593D8;">VIEW PRINT</span></a> 24 <a href="/qb64wiki/index.php/TO" title="TO"><span style="color:#4593D8;">TO</span></a> 32
+    <a href="/qb64wiki/index.php/FOR...NEXT" title="FOR...NEXT"><span style="color:#4593D8;">FOR</span></a> Item = 1 <a href="/qb64wiki/index.php/TO" title="TO"><span style="color:#4593D8;">TO</span></a> count
+      <a href="/qb64wiki/index.php/GET" title="GET"><span style="color:#4593D8;">GET</span></a> #1, Entry(Item).DataOffset + 1, Header(Item) 'ADD 1 to offsets!
+      <a href="/qb64wiki/index.php/COLOR" title="COLOR"><span style="color:#4593D8;">COLOR</span></a> <a href="/qb64wiki/index.php/RGB" title="RGB"><span style="color:#4593D8;">_RGB</span></a>(255, 255, 0): <a href="/qb64wiki/index.php/LOCATE" title="LOCATE"><span style="color:#4593D8;">LOCATE</span></a> 24, 30
+      <a class="mw-redirect" href="/qb64wiki/index.php/IF" title="IF"><span style="color:#4593D8;">IF</span></a> count &gt; 1 <a href="/qb64wiki/index.php/THEN" title="THEN"><span style="color:#4593D8;">THEN</span></a> <a href="/qb64wiki/index.php/PRINT" title="PRINT"><span style="color:#4593D8;">PRINT</span></a> " IMAGE ENTRY #"; Item <a href="/qb64wiki/index.php/ELSE" title="ELSE"><span style="color:#4593D8;">ELSE</span></a> <a href="/qb64wiki/index.php/PRINT" title="PRINT"><span style="color:#4593D8;">PRINT</span></a> " IMAGE ENTRY"
+      <a href="/qb64wiki/index.php/COLOR" title="COLOR"><span style="color:#4593D8;">COLOR</span></a> <a href="/qb64wiki/index.php/RGB" title="RGB"><span style="color:#4593D8;">_RGB</span></a>(50, 200, 255)
+      <a href="/qb64wiki/index.php/PRINT_USING" title="PRINT USING"><span style="color:#4593D8;">PRINT USING</span></a> ent$; Entry(Item).PWidth; Entry(Item).PDepth; Entry(Item).NumColors; Entry(Item).HotSpotX; Entry(Item).HotSpotY
+      <a href="/qb64wiki/index.php/PRINT_USING" title="PRINT USING"><span style="color:#4593D8;">PRINT USING</span></a> dat$; Entry(Item).DataSize; Entry(Item).DataOffset
+      <a href="/qb64wiki/index.php/PRINT_USING" title="PRINT USING"><span style="color:#4593D8;">PRINT USING</span></a> bm1$; Header(Item).IconHSize; Header(Item).ICONWidth; Header(Item).ICONDepth, Header(Item).NumPlanes; Header(Item).BPP
+      <a href="/qb64wiki/index.php/PRINT_USING" title="PRINT USING"><span style="color:#4593D8;">PRINT USING</span></a> bm2$; Header(Item).Compress; Header(Item).RAWSize
+      <a href="/qb64wiki/index.php/PRINT" title="PRINT"><span style="color:#4593D8;">PRINT</span></a>
+      k$ = <a href="/qb64wiki/index.php/INPUT$" title="INPUT$"><span style="color:#4593D8;">INPUT$</span></a>(1) 'Palette(4 or 8BPP) and/or <a href="/qb64wiki/index.php/XOR_(boolean)" title="XOR (boolean)"><span style="color:#4593D8;">XOR</span></a> mask starts immediately after an ICONHEADER
+      wide&amp; = Entry(Item).PWidth: deep&amp; = Entry(Item).PDepth: BPP = Header(Item).BPP
+      <a class="mw-redirect" href="/qb64wiki/index.php/IF" title="IF"><span style="color:#4593D8;">IF</span></a> BPP &gt; 8 <a href="/qb64wiki/index.php/THEN" title="THEN"><span style="color:#4593D8;">THEN</span></a> BitColor = 32 <a href="/qb64wiki/index.php/ELSE" title="ELSE"><span style="color:#4593D8;">ELSE</span></a> BitColor = 256  'assign for proper colors
+      bmpStretch&amp; = <a href="/qb64wiki/index.php/NEWIMAGE" title="NEWIMAGE"><span style="color:#4593D8;">_NEWIMAGE</span></a>(4 * wide&amp;, 4 * deep&amp;, BitColor) 'set either 256 or 32
+      bmp&amp; = <a href="/qb64wiki/index.php/NEWIMAGE" title="NEWIMAGE"><span style="color:#4593D8;">_NEWIMAGE</span></a>(wide&amp;, deep&amp;, BitColor) 'don't bother with <a href="/qb64wiki/index.php/FREEIMAGE" title="FREEIMAGE"><span style="color:#4593D8;">_FREEIMAGE</span></a>, reuse them!
+      <a href="/qb64wiki/index.php/SELECT_CASE" title="SELECT CASE"><span style="color:#4593D8;">SELECT CASE</span></a> BPP
+        <a class="mw-redirect" href="/qb64wiki/index.php/CASE" title="CASE"><span style="color:#4593D8;">CASE</span></a> 1: OneBit
+        <a class="mw-redirect" href="/qb64wiki/index.php/CASE" title="CASE"><span style="color:#4593D8;">CASE</span></a> 4: FourBIT
+        <a class="mw-redirect" href="/qb64wiki/index.php/CASE" title="CASE"><span style="color:#4593D8;">CASE</span></a> 8: EightBIT
+        <a class="mw-redirect" href="/qb64wiki/index.php/CASE" title="CASE"><span style="color:#4593D8;">CASE</span></a> <a class="mw-redirect" href="/qb64wiki/index.php/IS" title="IS"><span style="color:#4593D8;">IS</span></a> &gt; 8: True<a href="/qb64wiki/index.php/COLOR" title="COLOR"><span style="color:#4593D8;">COLOR</span></a>
+      <a href="/qb64wiki/index.php/END_SELECT" title="END SELECT"><span style="color:#4593D8;">END SELECT</span></a>
+      <a class="mw-redirect" href="/qb64wiki/index.php/IF" title="IF"><span style="color:#4593D8;">IF</span></a> BPP &lt; 24 <a href="/qb64wiki/index.php/THEN" title="THEN"><span style="color:#4593D8;">THEN</span></a> <a href="/qb64wiki/index.php/COPYPALETTE" title="COPYPALETTE"><span style="color:#4593D8;">_COPYPALETTE</span></a> bmp&amp;, bmpStretch&amp;
+      <a href="/qb64wiki/index.php/PUTIMAGE" title="PUTIMAGE"><span style="color:#4593D8;">_PUTIMAGE</span></a> , bmp&amp;, bmpStretch&amp;
+      <a href="/qb64wiki/index.php/DEST" title="DEST"><span style="color:#4593D8;">_DEST</span></a> 0: <a href="/qb64wiki/index.php/PUTIMAGE" title="PUTIMAGE"><span style="color:#4593D8;">_PUTIMAGE</span></a> (100, 0), bmpStretch&amp;
+      <a href="/qb64wiki/index.php/SOUND" title="SOUND"><span style="color:#4593D8;">SOUND</span></a> 600, 3
+      <a href="/qb64wiki/index.php/COLOR" title="COLOR"><span style="color:#4593D8;">COLOR</span></a> <a href="/qb64wiki/index.php/RGB" title="RGB"><span style="color:#4593D8;">_RGB</span></a>(255, 0, 255): <a href="/qb64wiki/index.php/LOCATE" title="LOCATE"><span style="color:#4593D8;">LOCATE</span></a> <a href="/qb64wiki/index.php/CSRLIN" title="CSRLIN"><span style="color:#4593D8;">CSRLIN</span></a>, 30: <a href="/qb64wiki/index.php/PRINT" title="PRINT"><span style="color:#4593D8;">PRINT</span></a> "Save as Bitmap? (Y/N)";
+      k$ = <a href="/qb64wiki/index.php/INPUT$" title="INPUT$"><span style="color:#4593D8;">INPUT$</span></a>(1)
+      k$ = <a href="/qb64wiki/index.php/UCASE$" title="UCASE$"><span style="color:#4593D8;">UCASE$</span></a>(k$)
+      <a href="/qb64wiki/index.php/PRINT" title="PRINT"><span style="color:#4593D8;">PRINT</span></a> k$ + <a href="/qb64wiki/index.php/SPACE$" title="SPACE$"><span style="color:#4593D8;">SPACE$</span></a>(1);
+      <a class="mw-redirect" href="/qb64wiki/index.php/IF" title="IF"><span style="color:#4593D8;">IF</span></a> k$ = "Y" <a href="/qb64wiki/index.php/THEN" title="THEN"><span style="color:#4593D8;">THEN</span></a>
+          SaveFile$ = Save$ + <a href="/qb64wiki/index.php/LTRIM$" title="LTRIM$"><span style="color:#4593D8;">LTRIM$</span></a>(<a href="/qb64wiki/index.php/STR$" title="STR$"><span style="color:#4593D8;">STR$</span></a>(Item)) + ".BMP"
+          ThirtyTwoBit 0, 0, wide&amp; - 1, deep&amp; - 1, bmp&amp;, SaveFile$
+      <a class="mw-redirect" href="/qb64wiki/index.php/END_IF" title="END IF"><span style="color:#4593D8;">END IF</span></a>
+      <a class="mw-redirect" href="/qb64wiki/index.php/IF" title="IF"><span style="color:#4593D8;">IF</span></a> k$ = "Y" <a href="/qb64wiki/index.php/THEN" title="THEN"><span style="color:#4593D8;">THEN</span></a> <a href="/qb64wiki/index.php/PRINT" title="PRINT"><span style="color:#4593D8;">PRINT</span></a> "Saved!" <a href="/qb64wiki/index.php/ELSE" title="ELSE"><span style="color:#4593D8;">ELSE</span></a> <a href="/qb64wiki/index.php/PRINT" title="PRINT"><span style="color:#4593D8;">PRINT</span></a> "Not saved"
+      <a href="/qb64wiki/index.php/AND_(boolean)" title="AND (boolean)"><span style="color:#4593D8;">AND</span></a>Mask
+      <a class="mw-redirect" href="/qb64wiki/index.php/IF" title="IF"><span style="color:#4593D8;">IF</span></a> BPP &lt; 24 <a href="/qb64wiki/index.php/THEN" title="THEN"><span style="color:#4593D8;">THEN</span></a> <a href="/qb64wiki/index.php/COPYPALETTE" title="COPYPALETTE"><span style="color:#4593D8;">_COPYPALETTE</span></a> bmp&amp;, bmpStretch&amp;
+      <a href="/qb64wiki/index.php/PUTIMAGE" title="PUTIMAGE"><span style="color:#4593D8;">_PUTIMAGE</span></a> , bmp&amp;, bmpStretch&amp;
+      <a href="/qb64wiki/index.php/DEST" title="DEST"><span style="color:#4593D8;">_DEST</span></a> 0: <a href="/qb64wiki/index.php/PUTIMAGE" title="PUTIMAGE"><span style="color:#4593D8;">_PUTIMAGE</span></a> (400, 0), bmpStretch&amp;
+      <a class="mw-redirect" href="/qb64wiki/index.php/IF" title="IF"><span style="color:#4593D8;">IF</span></a> k$ = "Y" <a href="/qb64wiki/index.php/THEN" title="THEN"><span style="color:#4593D8;">THEN</span></a>
+          ANDFile$ = Save$ + <a href="/qb64wiki/index.php/LTRIM$" title="LTRIM$"><span style="color:#4593D8;">LTRIM$</span></a>(<a href="/qb64wiki/index.php/STR$" title="STR$"><span style="color:#4593D8;">STR$</span></a>(Item)) + "BG.BMP"
+          ThirtyTwoBit 0, 0, wide&amp; - 1, deep&amp; - 1, bmp&amp;, ANDFile$
+      <a class="mw-redirect" href="/qb64wiki/index.php/END_IF" title="END IF"><span style="color:#4593D8;">END IF</span></a>
+      k$ = <a href="/qb64wiki/index.php/INPUT$" title="INPUT$"><span style="color:#4593D8;">INPUT$</span></a>(1)
+      <a href="/qb64wiki/index.php/CLS" title="CLS"><span style="color:#4593D8;">CLS</span></a>
+    <a href="/qb64wiki/index.php/NEXT" title="NEXT"><span style="color:#4593D8;">NEXT</span></a>
+    <a href="/qb64wiki/index.php/VIEW_PRINT" title="VIEW PRINT"><span style="color:#4593D8;">VIEW PRINT</span></a>
+  <a href="/qb64wiki/index.php/ELSE" title="ELSE"><span style="color:#4593D8;">ELSE</span></a> <a href="/qb64wiki/index.php/SOUND" title="SOUND"><span style="color:#4593D8;">SOUND</span></a> 400, 4: <a href="/qb64wiki/index.php/CLOSE" title="CLOSE"><span style="color:#4593D8;">CLOSE</span></a> #1: <a href="/qb64wiki/index.php/PRINT" title="PRINT"><span style="color:#4593D8;">PRINT</span></a> "No images entries found!": <a href="/qb64wiki/index.php/END" title="END"><span style="color:#4593D8;">END</span></a>
+  <a class="mw-redirect" href="/qb64wiki/index.php/END_IF" title="END IF"><span style="color:#4593D8;">END IF</span></a>
+<a href="/qb64wiki/index.php/ELSE" title="ELSE"><span style="color:#4593D8;">ELSE</span></a>: <a href="/qb64wiki/index.php/CLOSE" title="CLOSE"><span style="color:#4593D8;">CLOSE</span></a> #1: <a href="/qb64wiki/index.php/SOUND" title="SOUND"><span style="color:#4593D8;">SOUND</span></a> 400, 4: <a href="/qb64wiki/index.php/KILL" title="KILL"><span style="color:#4593D8;">KILL</span></a> IconName$: <a href="/qb64wiki/index.php/END" title="END"><span style="color:#4593D8;">END</span></a>
+<a class="mw-redirect" href="/qb64wiki/index.php/END_IF" title="END IF"><span style="color:#4593D8;">END IF</span></a>
+<a href="/qb64wiki/index.php/CLOSE" title="CLOSE"><span style="color:#4593D8;">CLOSE</span></a> #1
+<a href="/qb64wiki/index.php/END" title="END"><span style="color:#4593D8;">END</span></a>
+
+<a href="/qb64wiki/index.php/SUB" title="SUB"><span style="color:#4593D8;">SUB</span></a> OneBit 'adapted from TheBob's Winbit 'B &amp; W monochrome images ONLY (NO <a href="/qb64wiki/index.php/PALETTE" title="PALETTE"><span style="color:#4593D8;">PALETTE</span></a> data)
+BitsOver = wide&amp; <a href="/qb64wiki/index.php/MOD" title="MOD"><span style="color:#4593D8;">MOD</span></a> 32
+<a class="mw-redirect" href="/qb64wiki/index.php/IF" title="IF"><span style="color:#4593D8;">IF</span></a> BitsOver <a href="/qb64wiki/index.php/THEN" title="THEN"><span style="color:#4593D8;">THEN</span></a> ZeroPAD$ = <a href="/qb64wiki/index.php/SPACE$" title="SPACE$"><span style="color:#4593D8;">SPACE$</span></a>((32 - BitsOver) \ 8)
+<a href="/qb64wiki/index.php/DEST" title="DEST"><span style="color:#4593D8;">_DEST</span></a> bmp&amp;
+y = deep&amp; - 1: p$ = " "
+<a class="mw-redirect" href="/qb64wiki/index.php/DO" title="DO"><span style="color:#4593D8;">DO</span></a>
+  x = 0
+  <a class="mw-redirect" href="/qb64wiki/index.php/DO" title="DO"><span style="color:#4593D8;">DO</span></a>
+    <a href="/qb64wiki/index.php/GET" title="GET"><span style="color:#4593D8;">GET</span></a> #1, , p$
+    ByteVAL = <a href="/qb64wiki/index.php/ASC_(function)" title="ASC (function)"><span style="color:#4593D8;">ASC</span></a>(p$)
+    <a href="/qb64wiki/index.php/FOR...NEXT" title="FOR...NEXT"><span style="color:#4593D8;">FOR</span></a> Bit% = 7 <a href="/qb64wiki/index.php/TO" title="TO"><span style="color:#4593D8;">TO</span></a> 0 <a href="/qb64wiki/index.php/STEP" title="STEP"><span style="color:#4593D8;">STEP</span></a> -1 'read bits left to right
+      <a class="mw-redirect" href="/qb64wiki/index.php/IF" title="IF"><span style="color:#4593D8;">IF</span></a> ByteVAL <a href="/qb64wiki/index.php/AND" title="AND"><span style="color:#4593D8;">AND</span></a> 2 ^ Bit% <a href="/qb64wiki/index.php/THEN" title="THEN"><span style="color:#4593D8;">THEN</span></a> <a href="/qb64wiki/index.php/PSET" title="PSET"><span style="color:#4593D8;">PSET</span></a> (x, y), 15 <a href="/qb64wiki/index.php/ELSE" title="ELSE"><span style="color:#4593D8;">ELSE</span></a> <a href="/qb64wiki/index.php/PSET" title="PSET"><span style="color:#4593D8;">PSET</span></a> (x, y), 0
+      x = x + 1
+    <a href="/qb64wiki/index.php/NEXT" title="NEXT"><span style="color:#4593D8;">NEXT</span></a> Bit%
+  <a href="/qb64wiki/index.php/LOOP" title="LOOP"><span style="color:#4593D8;">LOOP</span></a> <a class="mw-redirect" href="/qb64wiki/index.php/WHILE" title="WHILE"><span style="color:#4593D8;">WHILE</span></a> x &lt; wide&amp;
+  <a href="/qb64wiki/index.php/GET" title="GET"><span style="color:#4593D8;">GET</span></a> #1, , ZeroPAD$  '         'prevents odd width image skewing
+  y = y - 1 '
+<a href="/qb64wiki/index.php/LOOP" title="LOOP"><span style="color:#4593D8;">LOOP</span></a> <a href="/qb64wiki/index.php/UNTIL" title="UNTIL"><span style="color:#4593D8;">UNTIL</span></a> y = -1
+<a href="/qb64wiki/index.php/END_SUB" title="END SUB"><span style="color:#4593D8;">END SUB</span></a>
+
+<a href="/qb64wiki/index.php/SUB" title="SUB"><span style="color:#4593D8;">SUB</span></a> EightBIT 'adapted from TheBob's Winbit      '256 palette data Colors (8 BPP)
+<a class="mw-redirect" href="/qb64wiki/index.php/IF" title="IF"><span style="color:#4593D8;">IF</span></a> wide&amp; <a href="/qb64wiki/index.php/MOD" title="MOD"><span style="color:#4593D8;">MOD</span></a> 4 <a href="/qb64wiki/index.php/THEN" title="THEN"><span style="color:#4593D8;">THEN</span></a> ZeroPAD$ = <a href="/qb64wiki/index.php/SPACE$" title="SPACE$"><span style="color:#4593D8;">SPACE$</span></a>(4 - (wide&amp; <a href="/qb64wiki/index.php/MOD" title="MOD"><span style="color:#4593D8;">MOD</span></a> 4))
+<a href="/qb64wiki/index.php/DEST" title="DEST"><span style="color:#4593D8;">_DEST</span></a> bmp&amp;
+a$ = " ": u$ = " "
+<a href="/qb64wiki/index.php/OUT" title="OUT"><span style="color:#4593D8;">OUT</span></a> <a href="/qb64wiki/index.php/%26H" title="&amp;H"><span style="color:#4593D8;">&amp;H</span></a>3C8, 0
+<a href="/qb64wiki/index.php/FOR...NEXT" title="FOR...NEXT"><span style="color:#4593D8;">FOR</span></a> Colr = 0 <a href="/qb64wiki/index.php/TO" title="TO"><span style="color:#4593D8;">TO</span></a> 255
+  <a href="/qb64wiki/index.php/GET" title="GET"><span style="color:#4593D8;">GET</span></a> #1, , a$: Blu = <a href="/qb64wiki/index.php/ASC_(function)" title="ASC (function)"><span style="color:#4593D8;">ASC</span></a>(a$) \ 4
+  <a href="/qb64wiki/index.php/GET" title="GET"><span style="color:#4593D8;">GET</span></a> #1, , a$: Grn = <a href="/qb64wiki/index.php/ASC_(function)" title="ASC (function)"><span style="color:#4593D8;">ASC</span></a>(a$) \ 4
+  <a href="/qb64wiki/index.php/GET" title="GET"><span style="color:#4593D8;">GET</span></a> #1, , a$: Red = <a href="/qb64wiki/index.php/ASC_(function)" title="ASC (function)"><span style="color:#4593D8;">ASC</span></a>(a$) \ 4
+  <a href="/qb64wiki/index.php/OUT" title="OUT"><span style="color:#4593D8;">OUT</span></a> <a href="/qb64wiki/index.php/%26H" title="&amp;H"><span style="color:#4593D8;">&amp;H</span></a>3C9, Red
+  <a href="/qb64wiki/index.php/OUT" title="OUT"><span style="color:#4593D8;">OUT</span></a> <a href="/qb64wiki/index.php/%26H" title="&amp;H"><span style="color:#4593D8;">&amp;H</span></a>3C9, Grn
+  <a href="/qb64wiki/index.php/OUT" title="OUT"><span style="color:#4593D8;">OUT</span></a> <a href="/qb64wiki/index.php/%26H" title="&amp;H"><span style="color:#4593D8;">&amp;H</span></a>3C9, Blu
+  <a href="/qb64wiki/index.php/GET" title="GET"><span style="color:#4593D8;">GET</span></a> #1, , u$ '--- unused byte
+<a href="/qb64wiki/index.php/NEXT" title="NEXT"><span style="color:#4593D8;">NEXT</span></a> Colr
+y = deep&amp; - 1: p$ = " "
+<a class="mw-redirect" href="/qb64wiki/index.php/DO" title="DO"><span style="color:#4593D8;">DO</span></a>: x = 0
+  <a class="mw-redirect" href="/qb64wiki/index.php/DO" title="DO"><span style="color:#4593D8;">DO</span></a>
+    <a href="/qb64wiki/index.php/GET" title="GET"><span style="color:#4593D8;">GET</span></a> #1, , p$
+    <a href="/qb64wiki/index.php/PSET" title="PSET"><span style="color:#4593D8;">PSET</span></a> (x, y), <a href="/qb64wiki/index.php/ASC_(function)" title="ASC (function)"><span style="color:#4593D8;">ASC</span></a>(p$)
+    x = x + 1
+  <a href="/qb64wiki/index.php/LOOP" title="LOOP"><span style="color:#4593D8;">LOOP</span></a> <a class="mw-redirect" href="/qb64wiki/index.php/WHILE" title="WHILE"><span style="color:#4593D8;">WHILE</span></a> x &lt; wide&amp;
+  <a href="/qb64wiki/index.php/GET" title="GET"><span style="color:#4593D8;">GET</span></a> #1, , ZeroPAD$  '           'prevents odd width image skewing
+  y = y - 1
+<a href="/qb64wiki/index.php/LOOP" title="LOOP"><span style="color:#4593D8;">LOOP</span></a> <a href="/qb64wiki/index.php/UNTIL" title="UNTIL"><span style="color:#4593D8;">UNTIL</span></a> y = -1
+<a href="/qb64wiki/index.php/END_SUB" title="END SUB"><span style="color:#4593D8;">END SUB</span></a>
+
+<a href="/qb64wiki/index.php/SUB" title="SUB"><span style="color:#4593D8;">SUB</span></a> FourBIT 'adapted from TheBob's Winbit  '16 palette data colors (4 BPP = 8 or 16 color)
+<a href="/qb64wiki/index.php/DEST" title="DEST"><span style="color:#4593D8;">_DEST</span></a> bmp&amp;
+<a class="mw-redirect" href="/qb64wiki/index.php/IF" title="IF"><span style="color:#4593D8;">IF</span></a> wide&amp; <a href="/qb64wiki/index.php/MOD" title="MOD"><span style="color:#4593D8;">MOD</span></a> 8 <a href="/qb64wiki/index.php/THEN" title="THEN"><span style="color:#4593D8;">THEN</span></a> ZeroPAD$ = <a href="/qb64wiki/index.php/SPACE$" title="SPACE$"><span style="color:#4593D8;">SPACE$</span></a>((8 - wide&amp; <a href="/qb64wiki/index.php/MOD" title="MOD"><span style="color:#4593D8;">MOD</span></a> 8) \ 2) 'prevents odd width image skewing
+a$ = " ": u$ = " "
+<a href="/qb64wiki/index.php/FOR...NEXT" title="FOR...NEXT"><span style="color:#4593D8;">FOR</span></a> Colr = 0 <a href="/qb64wiki/index.php/TO" title="TO"><span style="color:#4593D8;">TO</span></a> 15
+  <a href="/qb64wiki/index.php/OUT" title="OUT"><span style="color:#4593D8;">OUT</span></a> <a href="/qb64wiki/index.php/%26H" title="&amp;H"><span style="color:#4593D8;">&amp;H</span></a>3C8, Colr
+  <a href="/qb64wiki/index.php/GET" title="GET"><span style="color:#4593D8;">GET</span></a> #1, , a$: Blu = <a href="/qb64wiki/index.php/ASC_(function)" title="ASC (function)"><span style="color:#4593D8;">ASC</span></a>(a$) \ 4
+  <a href="/qb64wiki/index.php/GET" title="GET"><span style="color:#4593D8;">GET</span></a> #1, , a$: Grn = <a href="/qb64wiki/index.php/ASC_(function)" title="ASC (function)"><span style="color:#4593D8;">ASC</span></a>(a$) \ 4
+  <a href="/qb64wiki/index.php/GET" title="GET"><span style="color:#4593D8;">GET</span></a> #1, , a$: Red = <a href="/qb64wiki/index.php/ASC_(function)" title="ASC (function)"><span style="color:#4593D8;">ASC</span></a>(a$) \ 4
+  <a href="/qb64wiki/index.php/OUT" title="OUT"><span style="color:#4593D8;">OUT</span></a> <a href="/qb64wiki/index.php/%26H" title="&amp;H"><span style="color:#4593D8;">&amp;H</span></a>3C9, Red
+  <a href="/qb64wiki/index.php/OUT" title="OUT"><span style="color:#4593D8;">OUT</span></a> <a href="/qb64wiki/index.php/%26H" title="&amp;H"><span style="color:#4593D8;">&amp;H</span></a>3C9, Grn
+  <a href="/qb64wiki/index.php/OUT" title="OUT"><span style="color:#4593D8;">OUT</span></a> <a href="/qb64wiki/index.php/%26H" title="&amp;H"><span style="color:#4593D8;">&amp;H</span></a>3C9, Blu
+  <a href="/qb64wiki/index.php/GET" title="GET"><span style="color:#4593D8;">GET</span></a> #1, , u$ '--- unused byte
+<a href="/qb64wiki/index.php/NEXT" title="NEXT"><span style="color:#4593D8;">NEXT</span></a> Colr
+y = deep&amp; - 1: p$ = " "
+<a class="mw-redirect" href="/qb64wiki/index.php/DO" title="DO"><span style="color:#4593D8;">DO</span></a>
+  x = 0
+  <a class="mw-redirect" href="/qb64wiki/index.php/DO" title="DO"><span style="color:#4593D8;">DO</span></a>
+    <a href="/qb64wiki/index.php/GET" title="GET"><span style="color:#4593D8;">GET</span></a> #1, , p$
+    HiNIBBLE = <a href="/qb64wiki/index.php/ASC_(function)" title="ASC (function)"><span style="color:#4593D8;">ASC</span></a>(p$) \ <a href="/qb64wiki/index.php/%26H" title="&amp;H"><span style="color:#4593D8;">&amp;H</span></a>10
+    LoNIBBLE = <a href="/qb64wiki/index.php/ASC_(function)" title="ASC (function)"><span style="color:#4593D8;">ASC</span></a>(p$) <a href="/qb64wiki/index.php/AND_(boolean)" title="AND (boolean)"><span style="color:#4593D8;">AND</span></a> <a href="/qb64wiki/index.php/%26H" title="&amp;H"><span style="color:#4593D8;">&amp;H</span></a>F
+    <a href="/qb64wiki/index.php/PSET" title="PSET"><span style="color:#4593D8;">PSET</span></a> (x, y), HiNIBBLE
+    x = x + 1
+    <a href="/qb64wiki/index.php/PSET" title="PSET"><span style="color:#4593D8;">PSET</span></a> (x, y), LoNIBBLE
+    x = x + 1
+  <a href="/qb64wiki/index.php/LOOP" title="LOOP"><span style="color:#4593D8;">LOOP</span></a> <a class="mw-redirect" href="/qb64wiki/index.php/WHILE" title="WHILE"><span style="color:#4593D8;">WHILE</span></a> x &lt; wide&amp;
+  <a href="/qb64wiki/index.php/GET" title="GET"><span style="color:#4593D8;">GET</span></a> #1, , ZeroPAD$  '              'prevents odd width image skewing
+  y = y - 1
+<a href="/qb64wiki/index.php/LOOP" title="LOOP"><span style="color:#4593D8;">LOOP</span></a> <a href="/qb64wiki/index.php/UNTIL" title="UNTIL"><span style="color:#4593D8;">UNTIL</span></a> y = -1
+<a href="/qb64wiki/index.php/END_SUB" title="END SUB"><span style="color:#4593D8;">END SUB</span></a>
+
+<a href="/qb64wiki/index.php/SUB" title="SUB"><span style="color:#4593D8;">SUB</span></a> ANDMask '   '<a href="/qb64wiki/index.php/AND_(boolean)" title="AND (boolean)"><span style="color:#4593D8;">AND</span></a> MASK is B &amp; W. Black area holds <a href="/qb64wiki/index.php/XOR_(boolean)" title="XOR (boolean)"><span style="color:#4593D8;">XOR</span></a> colors, white displays background
+BitsOver = wide&amp; <a href="/qb64wiki/index.php/MOD" title="MOD"><span style="color:#4593D8;">MOD</span></a> 32
+<a class="mw-redirect" href="/qb64wiki/index.php/IF" title="IF"><span style="color:#4593D8;">IF</span></a> BitsOver <a href="/qb64wiki/index.php/THEN" title="THEN"><span style="color:#4593D8;">THEN</span></a> ZeroPAD$ = <a href="/qb64wiki/index.php/SPACE$" title="SPACE$"><span style="color:#4593D8;">SPACE$</span></a>((32 - BitsOver) \ 8) 'look for sizes not multiples of 32 bits
+<a href="/qb64wiki/index.php/DEST" title="DEST"><span style="color:#4593D8;">_DEST</span></a> bmp&amp;
+<a class="mw-redirect" href="/qb64wiki/index.php/IF" title="IF"><span style="color:#4593D8;">IF</span></a> BPP &lt; 24 <a href="/qb64wiki/index.php/THEN" title="THEN"><span style="color:#4593D8;">THEN</span></a> <a href="/qb64wiki/index.php/PALETTE" title="PALETTE"><span style="color:#4593D8;">PALETTE</span></a> '        'remove for a PUT using previous <a href="/qb64wiki/index.php/XOR_(boolean)" title="XOR (boolean)"><span style="color:#4593D8;">XOR</span></a> mask palette data
+y = deep&amp; - 1: a$ = " ": p$ = " "
+<a class="mw-redirect" href="/qb64wiki/index.php/DO" title="DO"><span style="color:#4593D8;">DO</span></a>
+  x = 0
+  <a class="mw-redirect" href="/qb64wiki/index.php/DO" title="DO"><span style="color:#4593D8;">DO</span></a>
+    <a href="/qb64wiki/index.php/GET" title="GET"><span style="color:#4593D8;">GET</span></a> #1, , a$
+    ByteVAL = <a href="/qb64wiki/index.php/ASC_(function)" title="ASC (function)"><span style="color:#4593D8;">ASC</span></a>(a$) 'MSBit is left when calculating 16 X 16 cursor map 2 byte integer
+    <a href="/qb64wiki/index.php/FOR...NEXT" title="FOR...NEXT"><span style="color:#4593D8;">FOR</span></a> Bit% = 7 <a href="/qb64wiki/index.php/TO" title="TO"><span style="color:#4593D8;">TO</span></a> 0 <a href="/qb64wiki/index.php/STEP" title="STEP"><span style="color:#4593D8;">STEP</span></a> -1 'values despite M$ documentation that says otherwise!
+      <a class="mw-redirect" href="/qb64wiki/index.php/IF" title="IF"><span style="color:#4593D8;">IF</span></a> ByteVAL <a href="/qb64wiki/index.php/AND" title="AND"><span style="color:#4593D8;">AND</span></a> 2 ^ Bit% <a href="/qb64wiki/index.php/THEN" title="THEN"><span style="color:#4593D8;">THEN</span></a> '<a href="/qb64wiki/index.php/LONG" title="LONG"><span style="color:#4593D8;">LONG</span></a> values cannot be used in a cursor file!
+        <a class="mw-redirect" href="/qb64wiki/index.php/IF" title="IF"><span style="color:#4593D8;">IF</span></a> BPP &gt; 8 <a href="/qb64wiki/index.php/THEN" title="THEN"><span style="color:#4593D8;">THEN</span></a> <a href="/qb64wiki/index.php/PSET" title="PSET"><span style="color:#4593D8;">PSET</span></a> (x, y), <a href="/qb64wiki/index.php/RGB32" title="RGB32"><span style="color:#4593D8;">_RGB32</span></a>(255, 255, 255) <a href="/qb64wiki/index.php/ELSE" title="ELSE"><span style="color:#4593D8;">ELSE</span></a> <a href="/qb64wiki/index.php/PSET" title="PSET"><span style="color:#4593D8;">PSET</span></a> (x, y), 15
+      <a href="/qb64wiki/index.php/ELSE" title="ELSE"><span style="color:#4593D8;">ELSE</span></a>: <a class="mw-redirect" href="/qb64wiki/index.php/IF" title="IF"><span style="color:#4593D8;">IF</span></a> BPP &gt; 8 <a href="/qb64wiki/index.php/THEN" title="THEN"><span style="color:#4593D8;">THEN</span></a> <a href="/qb64wiki/index.php/PSET" title="PSET"><span style="color:#4593D8;">PSET</span></a> (x, y), <a href="/qb64wiki/index.php/RGB32" title="RGB32"><span style="color:#4593D8;">_RGB32</span></a>(0, 0, 0) <a href="/qb64wiki/index.php/ELSE" title="ELSE"><span style="color:#4593D8;">ELSE</span></a> <a href="/qb64wiki/index.php/PSET" title="PSET"><span style="color:#4593D8;">PSET</span></a> (x, y), 0
+      <a class="mw-redirect" href="/qb64wiki/index.php/END_IF" title="END IF"><span style="color:#4593D8;">END IF</span></a>
+      x = x + 1        '16 X 16 = 32 bytes, 32 X 32 = 128 bytes <a href="/qb64wiki/index.php/AND_(boolean)" title="AND (boolean)"><span style="color:#4593D8;">AND</span></a> MASK SIZES
+    <a href="/qb64wiki/index.php/NEXT" title="NEXT"><span style="color:#4593D8;">NEXT</span></a> Bit%          '48 X 48 = 288 bytes, 64 X 64 = 512 bytes, 128 X 128 = 2048 bytes
+  <a href="/qb64wiki/index.php/LOOP" title="LOOP"><span style="color:#4593D8;">LOOP</span></a> <a class="mw-redirect" href="/qb64wiki/index.php/WHILE" title="WHILE"><span style="color:#4593D8;">WHILE</span></a> x &lt; wide&amp;
+  <a href="/qb64wiki/index.php/GET" title="GET"><span style="color:#4593D8;">GET</span></a> #1, , ZeroPAD$   '16 X 16 and 48 X 48 = 2 byte end padder per row in the <a href="/qb64wiki/index.php/AND_(boolean)" title="AND (boolean)"><span style="color:#4593D8;">AND</span></a> MASK
+  y = y - 1            'adds 32 and 96 bytes respectively to the raw data size!
+<a href="/qb64wiki/index.php/LOOP" title="LOOP"><span style="color:#4593D8;">LOOP</span></a> <a href="/qb64wiki/index.php/UNTIL" title="UNTIL"><span style="color:#4593D8;">UNTIL</span></a> y = -1
+<a href="/qb64wiki/index.php/END_SUB" title="END SUB"><span style="color:#4593D8;">END SUB</span></a>
+
+<a href="/qb64wiki/index.php/SUB" title="SUB"><span style="color:#4593D8;">SUB</span></a> True<a href="/qb64wiki/index.php/COLOR" title="COLOR"><span style="color:#4593D8;">COLOR</span></a> '     ' 16 Million colors. NO <a href="/qb64wiki/index.php/PALETTE" title="PALETTE"><span style="color:#4593D8;">PALETTE</span></a>! Colored by pixels (24 or 32 BPP)
+<a href="/qb64wiki/index.php/DEST" title="DEST"><span style="color:#4593D8;">_DEST</span></a> bmp&amp;
+<a class="mw-redirect" href="/qb64wiki/index.php/IF" title="IF"><span style="color:#4593D8;">IF</span></a> ((BMP.PWidth * 3) <a href="/qb64wiki/index.php/MOD" title="MOD"><span style="color:#4593D8;">MOD</span></a> 4) &lt;&gt; 0 <a href="/qb64wiki/index.php/THEN" title="THEN"><span style="color:#4593D8;">THEN</span></a>        '3 byte pixels
+ZeroPAD$ = <a href="/qb64wiki/index.php/SPACE$" title="SPACE$"><span style="color:#4593D8;">SPACE$</span></a>((4 - ((BMP.PWidth * 3) <a href="/qb64wiki/index.php/MOD" title="MOD"><span style="color:#4593D8;">MOD</span></a> 4)))
+<a class="mw-redirect" href="/qb64wiki/index.php/END_IF" title="END IF"><span style="color:#4593D8;">END IF</span></a>
+R$ = " ": G$ = " ": B$ = " "
+y = deep&amp; - 1
+<a class="mw-redirect" href="/qb64wiki/index.php/DO" title="DO"><span style="color:#4593D8;">DO</span></a>
+  x = 0
+  <a class="mw-redirect" href="/qb64wiki/index.php/DO" title="DO"><span style="color:#4593D8;">DO</span></a>
+    <a href="/qb64wiki/index.php/GET" title="GET"><span style="color:#4593D8;">GET</span></a> #1, , B$            '3 bytes set RGB color intensities
+    <a href="/qb64wiki/index.php/GET" title="GET"><span style="color:#4593D8;">GET</span></a> #1, , G$
+    <a href="/qb64wiki/index.php/GET" title="GET"><span style="color:#4593D8;">GET</span></a> #1, , R$
+    red&amp; = <a href="/qb64wiki/index.php/ASC_(function)" title="ASC (function)"><span style="color:#4593D8;">ASC</span></a>(R$)
+    green&amp; = <a href="/qb64wiki/index.php/ASC_(function)" title="ASC (function)"><span style="color:#4593D8;">ASC</span></a>(G$)
+    blue&amp; = <a href="/qb64wiki/index.php/ASC_(function)" title="ASC (function)"><span style="color:#4593D8;">ASC</span></a>(B$)
+    <a href="/qb64wiki/index.php/PSET" title="PSET"><span style="color:#4593D8;">PSET</span></a> (x, y), <a href="/qb64wiki/index.php/RGB" title="RGB"><span style="color:#4593D8;">_RGB</span></a>(red&amp;, green&amp;, blue&amp;) 'returns closest attribute in 4 or 8 bit
+    x = x + 1
+  <a href="/qb64wiki/index.php/LOOP" title="LOOP"><span style="color:#4593D8;">LOOP</span></a> <a class="mw-redirect" href="/qb64wiki/index.php/WHILE" title="WHILE"><span style="color:#4593D8;">WHILE</span></a> x &lt; wide&amp;
+  <a href="/qb64wiki/index.php/GET" title="GET"><span style="color:#4593D8;">GET</span></a> #1, , ZeroPAD$  '     'prevents odd width image skewing
+  y = y - 1
+<a href="/qb64wiki/index.php/LOOP" title="LOOP"><span style="color:#4593D8;">LOOP</span></a> <a href="/qb64wiki/index.php/UNTIL" title="UNTIL"><span style="color:#4593D8;">UNTIL</span></a> y = -1
+<a href="/qb64wiki/index.php/END_SUB" title="END SUB"><span style="color:#4593D8;">END SUB</span></a>
+<a href="/qb64wiki/index.php/REM" title="REM"><span style="color:#4593D8;">REM</span></a> <a href="/qb64wiki/index.php/$INCLUDE" title="$INCLUDE"><span style="color:#4593D8;">$INCLUDE</span></a>: '32BitSUB.BM'
+
+</pre>
+         </td>
+        </tr>
+       </tbody>
+      </table>
+      <table cellpadding="5px" width="100%">
+       <tbody>
+        <tr>
+         <td>
+          <pre class="outputtext">
+
+'*********************************** 32BitSUB.BM INCLUDE FILE *******************************
+
+<a href="/qb64wiki/index.php/SUB" title="SUB"><span style="color:blue;">SUB</span></a> ThirtyTwoBit (x1%, y1%, x2%, y2%, image&amp;, Filename$)
+  <a href="/qb64wiki/index.php/DIM" title="DIM"><span style="color:blue;">DIM</span></a> Colors8%(255)
+  <a class="mw-redirect" href="/qb64wiki/index.php/IF" title="IF"><span style="color:blue;">IF</span></a> x1% &gt; x2% <a href="/qb64wiki/index.php/THEN" title="THEN"><span style="color:blue;">THEN</span></a> <a href="/qb64wiki/index.php/SWAP" title="SWAP"><span style="color:blue;">SWAP</span></a> x1%, x2%
+  <a class="mw-redirect" href="/qb64wiki/index.php/IF" title="IF"><span style="color:blue;">IF</span></a> y1% &gt; y2% <a href="/qb64wiki/index.php/THEN" title="THEN"><span style="color:blue;">THEN</span></a> <a href="/qb64wiki/index.php/SWAP" title="SWAP"><span style="color:blue;">SWAP</span></a> y1%, y2%
+
+  <a href="/qb64wiki/index.php/SOURCE" title="SOURCE"><span style="color:blue;">_SOURCE</span></a> image&amp;
+  pixelbytes&amp; = <a href="/qb64wiki/index.php/PIXELSIZE" title="PIXELSIZE"><span style="color:blue;">_PIXELSIZE</span></a>(image&amp;)
+  <a class="mw-redirect" href="/qb64wiki/index.php/IF" title="IF"><span style="color:blue;">IF</span></a> pixelbytes&amp; = 0 <a href="/qb64wiki/index.php/THEN" title="THEN"><span style="color:blue;">THEN</span></a> <a href="/qb64wiki/index.php/BEEP" title="BEEP"><span style="color:blue;">BEEP</span></a>: <a href="/qb64wiki/index.php/EXIT_SUB" title="EXIT SUB"><span style="color:blue;">EXIT SUB</span></a> 'no text screens
+
+  FileType$ = "BM"
+  QB64$ = "QB64"           'free advertiising in reserved bytes
+  <a class="mw-redirect" href="/qb64wiki/index.php/IF" title="IF"><span style="color:blue;">IF</span></a> pixelbytes&amp; = 1 <a href="/qb64wiki/index.php/THEN" title="THEN"><span style="color:blue;">THEN</span></a> OffsetBITS&amp; = 1078 <a href="/qb64wiki/index.php/ELSE" title="ELSE"><span style="color:blue;">ELSE</span></a> OffsetBITS&amp; = 54 'no palette in 24/32 bit
+  InfoHEADER&amp; = 40
+  PictureWidth&amp; = (x2% - x1%) + 1  ' don't exceed maximum screen resolutions!
+  PictureDepth&amp; = (y2% - y1%) + 1
+  NumPLANES% = 1
+  <a class="mw-redirect" href="/qb64wiki/index.php/IF" title="IF"><span style="color:blue;">IF</span></a> pixelbytes&amp; = 1 <a href="/qb64wiki/index.php/THEN" title="THEN"><span style="color:blue;">THEN</span></a> BPP% = 8 <a href="/qb64wiki/index.php/ELSE" title="ELSE"><span style="color:blue;">ELSE</span></a> BPP% = 24
+  Compression&amp; = 0
+  WidthPELS&amp; = 3780
+  DepthPELS&amp; = 3780
+  <a class="mw-redirect" href="/qb64wiki/index.php/IF" title="IF"><span style="color:blue;">IF</span></a> pixelbytes&amp; = 1 <a href="/qb64wiki/index.php/THEN" title="THEN"><span style="color:blue;">THEN</span></a> NumColors&amp; = 256    '24/32 bit say none
+
+  <a class="mw-redirect" href="/qb64wiki/index.php/IF" title="IF"><span style="color:blue;">IF</span></a> (PictureWidth&amp; <a href="/qb64wiki/index.php/AND_(boolean)" title="AND (boolean)"><span style="color:blue;">AND</span></a> 3) <a href="/qb64wiki/index.php/THEN" title="THEN"><span style="color:blue;">THEN</span></a> ZeroPAD$ = <a href="/qb64wiki/index.php/SPACE$" title="SPACE$"><span style="color:blue;">SPACE$</span></a>(4 - (PictureWidth&amp; <a href="/qb64wiki/index.php/AND_(boolean)" title="AND (boolean)"><span style="color:blue;">AND</span></a> 3))
+
+  ImageSize&amp; = (PictureWidth&amp; + <a href="/qb64wiki/index.php/LEN" title="LEN"><span style="color:blue;">LEN</span></a>(ZeroPAD$)) * PictureDepth&amp;
+  FileSize&amp; = ImageSIZE&amp; + OffsetBITS&amp;
+  f = <a href="/qb64wiki/index.php/FREEFILE" title="FREEFILE"><span style="color:blue;">FREEFILE</span></a>
+  <a href="/qb64wiki/index.php/OPEN" title="OPEN"><span style="color:blue;">OPEN</span></a> Filename$ <a class="mw-redirect" href="/qb64wiki/index.php/FOR_(file_statement)" title="FOR (file statement)"><span style="color:blue;">FOR</span></a> <a class="mw-redirect" href="/qb64wiki/index.php/BINARY" title="BINARY"><span style="color:blue;">BINARY</span></a> <a href="/qb64wiki/index.php/AS" title="AS"><span style="color:blue;">AS</span></a> #f
+
+  <a href="/qb64wiki/index.php/PUT" title="PUT"><span style="color:blue;">PUT</span></a> #f, , FileType$
+  <a href="/qb64wiki/index.php/PUT" title="PUT"><span style="color:blue;">PUT</span></a> #f, , FileSize&amp;
+  <a href="/qb64wiki/index.php/PUT" title="PUT"><span style="color:blue;">PUT</span></a> #f, , QB64$
+  <a href="/qb64wiki/index.php/PUT" title="PUT"><span style="color:blue;">PUT</span></a> #f, , OffsetBITS&amp;
+  <a href="/qb64wiki/index.php/PUT" title="PUT"><span style="color:blue;">PUT</span></a> #f, , InfoHEADER&amp;
+  <a href="/qb64wiki/index.php/PUT" title="PUT"><span style="color:blue;">PUT</span></a> #f, , PictureWidth&amp;
+  <a href="/qb64wiki/index.php/PUT" title="PUT"><span style="color:blue;">PUT</span></a> #f, , PictureDepth&amp;
+  <a href="/qb64wiki/index.php/PUT" title="PUT"><span style="color:blue;">PUT</span></a> #f, , NumPLANES%
+  <a href="/qb64wiki/index.php/PUT" title="PUT"><span style="color:blue;">PUT</span></a> #f, , BPP%
+  <a href="/qb64wiki/index.php/PUT" title="PUT"><span style="color:blue;">PUT</span></a> #f, , Compression&amp;
+  <a href="/qb64wiki/index.php/PUT" title="PUT"><span style="color:blue;">PUT</span></a> #f, , ImageSize&amp;
+  <a href="/qb64wiki/index.php/PUT" title="PUT"><span style="color:blue;">PUT</span></a> #f, , WidthPELS&amp;
+  <a href="/qb64wiki/index.php/PUT" title="PUT"><span style="color:blue;">PUT</span></a> #f, , DepthPELS&amp;
+  <a href="/qb64wiki/index.php/PUT" title="PUT"><span style="color:blue;">PUT</span></a> #f, , NumColors&amp;
+  <a href="/qb64wiki/index.php/PUT" title="PUT"><span style="color:blue;">PUT</span></a> #f, , SigColors&amp;     '51 offset
+
+  <a class="mw-redirect" href="/qb64wiki/index.php/IF" title="IF"><span style="color:blue;">IF</span></a> pixelbytes&amp; = 1 <a href="/qb64wiki/index.php/THEN" title="THEN"><span style="color:blue;">THEN</span></a>     '4 or 8 BPP Palettes set for 256 colors
+    u$ = <a href="/qb64wiki/index.php/CHR$" title="CHR$"><span style="color:blue;">CHR$</span></a>(0)
+    <a href="/qb64wiki/index.php/FOR...NEXT" title="FOR...NEXT"><span style="color:blue;">FOR</span></a> c&amp; = 0 <a href="/qb64wiki/index.php/TO" title="TO"><span style="color:blue;">TO</span></a> 255  'PUT as BGR order colors
+      cv&amp; = <a href="/qb64wiki/index.php/PALETTECOLOR_(function)" title="PALETTECOLOR (function)"><span style="color:blue;">_PALLETTECOLOR</span></a>(c&amp;, image&amp;)
+      Colr$ = <a href="/qb64wiki/index.php/CHR$" title="CHR$"><span style="color:blue;">CHR$</span></a>(<a href="/qb64wiki/index.php/BLUE32" title="BLUE32"><span style="color:blue;">_BLUE32</span></a>(cv&amp;))
+      <a href="/qb64wiki/index.php/PUT" title="PUT"><span style="color:blue;">PUT</span></a> #f, , Colr$
+      Colr$ = <a href="/qb64wiki/index.php/CHR$" title="CHR$"><span style="color:blue;">CHR$</span></a>(<a href="/qb64wiki/index.php/GREEN32" title="GREEN32"><span style="color:blue;">_GREEN32</span></a>(cv&amp;))
+      <a href="/qb64wiki/index.php/PUT" title="PUT"><span style="color:blue;">PUT</span></a> #f, , Colr$
+      Colr$ = <a href="/qb64wiki/index.php/CHR$" title="CHR$"><span style="color:blue;">CHR$</span></a>(<a href="/qb64wiki/index.php/RED32" title="RED32"><span style="color:blue;">_RED32</span></a>(cv&amp;))
+      <a href="/qb64wiki/index.php/PUT" title="PUT"><span style="color:blue;">PUT</span></a> #f, , Colr$
+      <a href="/qb64wiki/index.php/PUT" title="PUT"><span style="color:blue;">PUT</span></a> #f, , u$  'Unused byte
+    <a href="/qb64wiki/index.php/NEXT" title="NEXT"><span style="color:blue;">NEXT</span></a>
+  <a class="mw-redirect" href="/qb64wiki/index.php/END_IF" title="END IF"><span style="color:blue;">END IF</span></a>
+
+  <a href="/qb64wiki/index.php/FOR...NEXT" title="FOR...NEXT"><span style="color:blue;">FOR</span></a> y% = y2% <a href="/qb64wiki/index.php/TO" title="TO"><span style="color:blue;">TO</span></a> y1% <a href="/qb64wiki/index.php/STEP" title="STEP"><span style="color:blue;">STEP</span></a> -1   'place bottom up
+    <a href="/qb64wiki/index.php/FOR...NEXT" title="FOR...NEXT"><span style="color:blue;">FOR</span></a> x% = x1% <a href="/qb64wiki/index.php/TO" title="TO"><span style="color:blue;">TO</span></a> x2%
+     c&amp; = <a href="/qb64wiki/index.php/POINT" title="POINT"><span style="color:blue;">POINT</span></a>(x%, y%)
+     <a class="mw-redirect" href="/qb64wiki/index.php/IF" title="IF"><span style="color:blue;">IF</span></a> pixelbytes&amp; = 1 <a href="/qb64wiki/index.php/THEN" title="THEN"><span style="color:blue;">THEN</span></a>
+       a$ = <a href="/qb64wiki/index.php/CHR$" title="CHR$"><span style="color:blue;">CHR$</span></a>(c&amp;)
+       Colors8%(<a href="/qb64wiki/index.php/ASC_(function)" title="ASC (function)"><span style="color:blue;">ASC</span></a>(a$)) = 1
+     <a href="/qb64wiki/index.php/ELSE" title="ELSE"><span style="color:blue;">ELSE</span></a> : a$ = <a href="/qb64wiki/index.php/LEFT$" title="LEFT$"><span style="color:blue;">LEFT$</span></a>(<a href="/qb64wiki/index.php/MKL$" title="MKL$"><span style="color:blue;">MKL$</span></a>(c&amp;), 3)
+     <a class="mw-redirect" href="/qb64wiki/index.php/END_IF" title="END IF"><span style="color:blue;">END IF</span></a>
+     <a href="/qb64wiki/index.php/PUT" title="PUT"><span style="color:blue;">PUT</span></a> #f, , a$
+    <a href="/qb64wiki/index.php/NEXT" title="NEXT"><span style="color:blue;">NEXT</span></a>
+    <a href="/qb64wiki/index.php/PUT" title="PUT"><span style="color:blue;">PUT</span></a> #f, , ZeroPAD$
+  <a href="/qb64wiki/index.php/NEXT" title="NEXT"><span style="color:blue;">NEXT</span></a>
+
+  <a href="/qb64wiki/index.php/FOR...NEXT" title="FOR...NEXT"><span style="color:blue;">FOR</span></a> n = 0 <a href="/qb64wiki/index.php/TO" title="TO"><span style="color:blue;">TO</span></a> 255
+    <a class="mw-redirect" href="/qb64wiki/index.php/IF" title="IF"><span style="color:blue;">IF</span></a> Colors8%(n) = 1 <a href="/qb64wiki/index.php/THEN" title="THEN"><span style="color:blue;">THEN</span></a> SigColors&amp; = SigColors&amp; + 1
+  <a href="/qb64wiki/index.php/NEXT" title="NEXT"><span style="color:blue;">NEXT</span></a> n
+  <a href="/qb64wiki/index.php/PUT" title="PUT"><span style="color:blue;">PUT</span></a> #f, 51, SigColors&amp;
+  <a href="/qb64wiki/index.php/CLOSE" title="CLOSE"><span style="color:blue;">CLOSE</span></a> #f
+<a href="/qb64wiki/index.php/END_SUB" title="END SUB"><span style="color:blue;">END SUB</span></a>
+</pre>
+         </td>
+        </tr>
+       </tbody>
+      </table>
+      <center>
+       <span style="font-family: Courier New, Courier, monospace; font-size: 0.80em; line-height: 50%;">
+        Adapted from code by Bob Seguin
+       </span>
+      </center>
+      <center>
+       <b>
+        If full code is not displayed, refresh browser!
+       </b>
+      </center>
+      <p>
+       <br/>
+      </p>
+      <center>
+       <b>
+        NOTE: Black areas of an image may become "see through" unless another color attribute is used and set to black!
+       </b>
+      </center>
+      <dl>
+       <dd>
+        This can be done by changing another color attribute's RGB settings to 0 or almost 0 and creating a mask after using it in solid black areas of a 4 or 8 BPP palette image. This can also be done using
+        <a href="/qb64wiki/index.php/PUTIMAGE" title="PUTIMAGE">
+         _PUTIMAGE
+        </a>
+        with 32 bit
+        <a href="/qb64wiki/index.php/CLEARCOLOR" title="CLEARCOLOR">
+         _CLEARCOLOR
+        </a>
+        settings.
+       </dd>
+      </dl>
+      <center>
+       <i>
+        See the following page:
+       </i>
+       <a href="/qb64wiki/index.php/Creating_Sprite_Masks" title="Creating Sprite Masks">
+        Creating Sprite Masks
+       </a>
+      </center>
+      <p>
+       <br/>
+      </p>
+      <h2>
+       <span class="mw-headline" id="Icon_to_Bitmap_Conversion_Function">
+        Icon to Bitmap Conversion Function
+       </span>
+      </h2>
+      <p>
+       The following program uses a conversion function with the
+       <a href="/qb64wiki/index.php/TYPE" title="TYPE">
+        TYPE
+       </a>
+       definitions inside of the function to eliminate an
+       <a href="/qb64wiki/index.php/$INCLUDE" title="$INCLUDE">
+        $INCLUDE
+       </a>
+       library file.
+      </p>
+      <table cellpadding="15px" width="100%">
+       <tbody>
+        <tr>
+         <td>
+          <pre class="codeide"><a href="/qb64wiki/index.php/SCREEN" title="SCREEN"><span style="color:#4593D8;">SCREEN</span></a> <a href="/qb64wiki/index.php/NEWIMAGE" title="NEWIMAGE"><span style="color:#4593D8;">_NEWIMAGE</span></a>(640, 480, 256)
+<a href="/qb64wiki/index.php/TITLE" title="TITLE"><span style="color:#4593D8;">_TITLE</span></a> "Icon Converter"
+icon$ = "daphne.ico" '&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt; change icon file name
+bitmap$ = "tempfile.bmp"
+indx% = 5 '1 minimum &lt;&lt;&lt;&lt;&lt;&lt;&lt; higher values than count get highest entry image in icon file
+
+<a href="/qb64wiki/index.php/IF...THEN" title="IF...THEN"><span style="color:#4593D8;">IF</span></a> Icon2BMP(icon$, bitmap$, indx%) <a href="/qb64wiki/index.php/THEN" title="THEN"><span style="color:#4593D8;">THEN</span></a>
+  img&amp; = <a href="/qb64wiki/index.php/LOADIMAGE" title="LOADIMAGE"><span style="color:#4593D8;">_LOADIMAGE</span></a>(bitmap$)
+  <a href="/qb64wiki/index.php/PRINT" title="PRINT"><span style="color:#4593D8;">PRINT</span></a> img&amp;
+  <a href="/qb64wiki/index.php/IF...THEN" title="IF...THEN"><span style="color:#4593D8;">IF</span></a> img&amp; &lt; -1 <a href="/qb64wiki/index.php/THEN" title="THEN"><span style="color:#4593D8;">THEN</span></a> '           check that handle value is good before loading
+    <a href="/qb64wiki/index.php/ICON" title="ICON"><span style="color:#4593D8;">_ICON</span></a> img&amp; '                place image in header
+    <a href="/qb64wiki/index.php/PUTIMAGE" title="PUTIMAGE"><span style="color:#4593D8;">_PUTIMAGE</span></a> (300, 250), img&amp; 'place image on screen
+    <a href="/qb64wiki/index.php/FREEIMAGE" title="FREEIMAGE"><span style="color:#4593D8;">_FREEIMAGE</span></a> img&amp; '           always free unused handles to save memory
+    '<a href="/qb64wiki/index.php/KILL" title="KILL"><span style="color:#4593D8;">KILL</span></a> bitmap$ '              comment out and/or rename to save the bitmaps
+  <a class="mw-redirect" href="/qb64wiki/index.php/END_IF" title="END IF"><span style="color:#4593D8;">END IF</span></a>
+<a href="/qb64wiki/index.php/ELSE" title="ELSE"><span style="color:#4593D8;">ELSE</span></a> <a href="/qb64wiki/index.php/PRINT" title="PRINT"><span style="color:#4593D8;">PRINT</span></a> "Could not create bitmap!"
+<a class="mw-redirect" href="/qb64wiki/index.php/END_IF" title="END IF"><span style="color:#4593D8;">END IF</span></a>
+<a href="/qb64wiki/index.php/END" title="END"><span style="color:#4593D8;">END</span></a>
+'                ----------------------------------------------------
+
+<a href="/qb64wiki/index.php/FUNCTION" title="FUNCTION"><span style="color:#4593D8;">FUNCTION</span></a> Icon2BMP% (filein <a href="/qb64wiki/index.php/AS" title="AS"><span style="color:#4593D8;">AS</span></a> <a href="/qb64wiki/index.php/STRING" title="STRING"><span style="color:#4593D8;">STRING</span></a>, fileout <a href="/qb64wiki/index.php/AS" title="AS"><span style="color:#4593D8;">AS</span></a> <a href="/qb64wiki/index.php/STRING" title="STRING"><span style="color:#4593D8;">STRING</span></a>, index <a href="/qb64wiki/index.php/AS" title="AS"><span style="color:#4593D8;">AS</span></a> <a href="/qb64wiki/index.php/INTEGER" title="INTEGER"><span style="color:#4593D8;">INTEGER</span></a>)
+<a href="/qb64wiki/index.php/TYPE" title="TYPE"><span style="color:#4593D8;">TYPE</span></a> ICONTYPE '              Icon or cursor file header
+  Reserved <a href="/qb64wiki/index.php/AS" title="AS"><span style="color:#4593D8;">AS</span></a> <a href="/qb64wiki/index.php/INTEGER" title="INTEGER"><span style="color:#4593D8;">INTEGER</span></a> '         Reserved (always 0)
+  ID <a href="/qb64wiki/index.php/AS" title="AS"><span style="color:#4593D8;">AS</span></a> <a href="/qb64wiki/index.php/INTEGER" title="INTEGER"><span style="color:#4593D8;">INTEGER</span></a> '               Resource ID (Icon = 1, Cursor = 2)
+  Count <a href="/qb64wiki/index.php/AS" title="AS"><span style="color:#4593D8;">AS</span></a> <a href="/qb64wiki/index.php/INTEGER" title="INTEGER"><span style="color:#4593D8;">INTEGER</span></a> '            Number of icon bitmaps in Directory of icon entries array
+<a href="/qb64wiki/index.php/END" title="END"><span style="color:#4593D8;">END</span></a> <a href="/qb64wiki/index.php/TYPE" title="TYPE"><span style="color:#4593D8;">TYPE</span></a> '6 bytes
+<a href="/qb64wiki/index.php/TYPE" title="TYPE"><span style="color:#4593D8;">TYPE</span></a> ENTRYTYPE '             or unanimated Cursor entry (ANI are animated cursors)
+  Wide <a href="/qb64wiki/index.php/AS" title="AS"><span style="color:#4593D8;">AS</span></a> <a href="/qb64wiki/index.php/UNSIGNED" title="UNSIGNED"><span style="color:#4593D8;">_UNSIGNED</span></a> <a href="/qb64wiki/index.php/BYTE" title="BYTE"><span style="color:#4593D8;">_BYTE</span></a> '     Width of icon in pixels (USE THIS) Use <a href="/qb64wiki/index.php/UNSIGNED" title="UNSIGNED"><span style="color:#4593D8;">_UNSIGNED</span></a> over 127
+  High <a href="/qb64wiki/index.php/AS" title="AS"><span style="color:#4593D8;">AS</span></a> <a href="/qb64wiki/index.php/UNSIGNED" title="UNSIGNED"><span style="color:#4593D8;">_UNSIGNED</span></a> <a href="/qb64wiki/index.php/BYTE" title="BYTE"><span style="color:#4593D8;">_BYTE</span></a> '     Height of icon in pixels (USE THIS) Use <a href="/qb64wiki/index.php/UNSIGNED" title="UNSIGNED"><span style="color:#4593D8;">_UNSIGNED</span></a> over 127
+  NumColors <a href="/qb64wiki/index.php/AS" title="AS"><span style="color:#4593D8;">AS</span></a> <a href="/qb64wiki/index.php/BYTE" title="BYTE"><span style="color:#4593D8;">_BYTE</span></a> '          Maximum number of colors. (2, 8 or 16 colors. 256 or 24/32 bit = 0)
+  RES2 <a href="/qb64wiki/index.php/AS" title="AS"><span style="color:#4593D8;">AS</span></a> <a href="/qb64wiki/index.php/BYTE" title="BYTE"><span style="color:#4593D8;">_BYTE</span></a> '               Reserved. Not used (always 0)
+  HotSpotX <a href="/qb64wiki/index.php/AS" title="AS"><span style="color:#4593D8;">AS</span></a> <a href="/qb64wiki/index.php/INTEGER" title="INTEGER"><span style="color:#4593D8;">INTEGER</span></a> '         Icon: NumberPlanes(normally 0), Cursor: hotspot pixels from left
+  HotSpotY <a href="/qb64wiki/index.php/AS" title="AS"><span style="color:#4593D8;">AS</span></a> <a href="/qb64wiki/index.php/INTEGER" title="INTEGER"><span style="color:#4593D8;">INTEGER</span></a> '         Icon: BitsPerPixel(normally 0), Cursor: hotspot pixels from top
+  DataSize <a href="/qb64wiki/index.php/AS" title="AS"><span style="color:#4593D8;">AS</span></a> <a href="/qb64wiki/index.php/LONG" title="LONG"><span style="color:#4593D8;">LONG</span></a> '            Length of image data in bytes minus Icon and Entry headers (USE THIS)
+  Offset <a href="/qb64wiki/index.php/AS" title="AS"><span style="color:#4593D8;">AS</span></a> <a href="/qb64wiki/index.php/LONG" title="LONG"><span style="color:#4593D8;">LONG</span></a> '              Start Offset byte position of icon bitmap header(add 1 if <a href="/qb64wiki/index.php/TYPE" title="TYPE"><span style="color:#4593D8;">TYPE</span></a> GET)
+<a href="/qb64wiki/index.php/END" title="END"><span style="color:#4593D8;">END</span></a> <a href="/qb64wiki/index.php/TYPE" title="TYPE"><span style="color:#4593D8;">TYPE</span></a> '16 bytes
+<a href="/qb64wiki/index.php/TYPE" title="TYPE"><span style="color:#4593D8;">TYPE</span></a> PREHEADER '             Bitmap information not in icon BM header
+  BM <a href="/qb64wiki/index.php/AS" title="AS"><span style="color:#4593D8;">AS</span></a> <a href="/qb64wiki/index.php/INTEGER" title="INTEGER"><span style="color:#4593D8;">INTEGER</span></a> '               Integer value changed to "BM" by PUT
+  Size <a href="/qb64wiki/index.php/AS" title="AS"><span style="color:#4593D8;">AS</span></a> <a href="/qb64wiki/index.php/LONG" title="LONG"><span style="color:#4593D8;">LONG</span></a> '                Size of the data file(<a href="/qb64wiki/index.php/LOF" title="LOF"><span style="color:#4593D8;">LOF</span></a>)
+  Reser <a href="/qb64wiki/index.php/AS" title="AS"><span style="color:#4593D8;">AS</span></a> <a href="/qb64wiki/index.php/LONG" title="LONG"><span style="color:#4593D8;">LONG</span></a>'                2 reserved integers are zero automatically
+  BOffset <a href="/qb64wiki/index.php/AS" title="AS"><span style="color:#4593D8;">AS</span></a> <a href="/qb64wiki/index.php/LONG" title="LONG"><span style="color:#4593D8;">LONG</span></a> '             Start offset of pixel data(next byte)
+<a href="/qb64wiki/index.php/END" title="END"><span style="color:#4593D8;">END</span></a> <a href="/qb64wiki/index.php/TYPE" title="TYPE"><span style="color:#4593D8;">TYPE</span></a> '14 bytes
+<a href="/qb64wiki/index.php/TYPE" title="TYPE"><span style="color:#4593D8;">TYPE</span></a> BMPHEADER '             Bitmap type header found using entry DataOffset + 1
+  IconHSize <a href="/qb64wiki/index.php/AS" title="AS"><span style="color:#4593D8;">AS</span></a> <a href="/qb64wiki/index.php/LONG" title="LONG"><span style="color:#4593D8;">LONG</span></a> '           size of ICON header (always 40 bytes)
+  PWidth <a href="/qb64wiki/index.php/AS" title="AS"><span style="color:#4593D8;">AS</span></a> <a href="/qb64wiki/index.php/LONG" title="LONG"><span style="color:#4593D8;">LONG</span></a> '              bitmap width in pixels (signed integer).
+  PDepth <a href="/qb64wiki/index.php/AS" title="AS"><span style="color:#4593D8;">AS</span></a> <a href="/qb64wiki/index.php/LONG" title="LONG"><span style="color:#4593D8;">LONG</span></a> '              Total map height in pixels (signed integer is 2 times image height)
+  NumPlanes <a href="/qb64wiki/index.php/AS" title="AS"><span style="color:#4593D8;">AS</span></a> <a href="/qb64wiki/index.php/INTEGER" title="INTEGER"><span style="color:#4593D8;">INTEGER</span></a> '        number of color planes. Must be set to 1.
+  BPP <a href="/qb64wiki/index.php/AS" title="AS"><span style="color:#4593D8;">AS</span></a> <a href="/qb64wiki/index.php/INTEGER" title="INTEGER"><span style="color:#4593D8;">INTEGER</span></a> '              bits per pixel  1, 4, 8, 16, 24 or 32.(USE THIS)
+  Compress <a href="/qb64wiki/index.php/AS" title="AS"><span style="color:#4593D8;">AS</span></a> <a href="/qb64wiki/index.php/LONG" title="LONG"><span style="color:#4593D8;">LONG</span></a> '            compression method should always be 0.
+  RAWSize <a href="/qb64wiki/index.php/AS" title="AS"><span style="color:#4593D8;">AS</span></a> <a href="/qb64wiki/index.php/LONG" title="LONG"><span style="color:#4593D8;">LONG</span></a> '             size of the raw ICON image data(may only be <a href="/qb64wiki/index.php/XOR_(boolean)" title="XOR (boolean)"><span style="color:#4593D8;">XOR</span></a> mask size).
+  Hres <a href="/qb64wiki/index.php/AS" title="AS"><span style="color:#4593D8;">AS</span></a> <a href="/qb64wiki/index.php/LONG" title="LONG"><span style="color:#4593D8;">LONG</span></a> '                horizontal resolution of the image(not normally used)
+  Vres <a href="/qb64wiki/index.php/AS" title="AS"><span style="color:#4593D8;">AS</span></a> <a href="/qb64wiki/index.php/LONG" title="LONG"><span style="color:#4593D8;">LONG</span></a> '                vertical resolution of the image(not normally used)
+  NumColors <a href="/qb64wiki/index.php/AS" title="AS"><span style="color:#4593D8;">AS</span></a> <a href="/qb64wiki/index.php/LONG" title="LONG"><span style="color:#4593D8;">LONG</span></a> '           number of colors in the color palette(not normally used)
+  SigColors <a href="/qb64wiki/index.php/AS" title="AS"><span style="color:#4593D8;">AS</span></a> <a href="/qb64wiki/index.php/LONG" title="LONG"><span style="color:#4593D8;">LONG</span></a> '           number of important colors used(not normally used)
+<a href="/qb64wiki/index.php/END" title="END"><span style="color:#4593D8;">END</span></a> <a href="/qb64wiki/index.php/TYPE" title="TYPE"><span style="color:#4593D8;">TYPE</span></a> '40 bytes              palette and image data immediately follow this header!
+
+<a href="/qb64wiki/index.php/DIM" title="DIM"><span style="color:#4593D8;">DIM</span></a> ICON <a href="/qb64wiki/index.php/AS" title="AS"><span style="color:#4593D8;">AS</span></a> ICONTYPE, ENT <a href="/qb64wiki/index.php/AS" title="AS"><span style="color:#4593D8;">AS</span></a> ENTRYTYPE, PRE <a href="/qb64wiki/index.php/AS" title="AS"><span style="color:#4593D8;">AS</span></a> PREHEADER, BMP <a href="/qb64wiki/index.php/AS" title="AS"><span style="color:#4593D8;">AS</span></a> BMPHEADER
+
+rf = <a href="/qb64wiki/index.php/FREEFILE" title="FREEFILE"><span style="color:#4593D8;">FREEFILE</span></a>
+<a href="/qb64wiki/index.php/IF...THEN" title="IF...THEN"><span style="color:#4593D8;">IF</span></a> <a href="/qb64wiki/index.php/LCASE$" title="LCASE$"><span style="color:#4593D8;">LCASE$</span></a>(<a href="/qb64wiki/index.php/RIGHT$" title="RIGHT$"><span style="color:#4593D8;">RIGHT$</span></a>(filein, 4)) = ".ico" <a href="/qb64wiki/index.php/THEN" title="THEN"><span style="color:#4593D8;">THEN</span></a> 'check file extension is ICO only
+  <a href="/qb64wiki/index.php/OPEN" title="OPEN"><span style="color:#4593D8;">OPEN</span></a> filein <a href="/qb64wiki/index.php/FOR...NEXT" title="FOR...NEXT"><span style="color:#4593D8;">FOR</span></a> <a class="mw-redirect" href="/qb64wiki/index.php/BINARY" title="BINARY"><span style="color:#4593D8;">BINARY</span></a> <a class="mw-redirect" href="/qb64wiki/index.php/ACCESS" title="ACCESS"><span style="color:#4593D8;">ACCESS</span></a> <a href="/qb64wiki/index.php/READ" title="READ"><span style="color:#4593D8;">READ</span></a> <a href="/qb64wiki/index.php/AS" title="AS"><span style="color:#4593D8;">AS</span></a> rf
+<a href="/qb64wiki/index.php/ELSE" title="ELSE"><span style="color:#4593D8;">ELSE</span></a> <a href="/qb64wiki/index.php/EXIT_FUNCTION" title="EXIT FUNCTION"><span style="color:#4593D8;">EXIT FUNCTION</span></a>
+<a class="mw-redirect" href="/qb64wiki/index.php/END_IF" title="END IF"><span style="color:#4593D8;">END IF</span></a>
+<a href="/qb64wiki/index.php/GET" title="GET"><span style="color:#4593D8;">GET</span></a> rf, , ICON 'GET 6 byte icon header
+<a href="/qb64wiki/index.php/IF...THEN" title="IF...THEN"><span style="color:#4593D8;">IF</span></a> ICON.ID &lt;&gt; 1 <a href="/qb64wiki/index.php/OR_(boolean)" title="OR (boolean)"><span style="color:#4593D8;">OR</span></a> ICON.Count = 0 <a href="/qb64wiki/index.php/THEN" title="THEN"><span style="color:#4593D8;">THEN</span></a> <a href="/qb64wiki/index.php/CLOSE" title="CLOSE"><span style="color:#4593D8;">CLOSE</span></a> rf: <a href="/qb64wiki/index.php/EXIT_FUNCTION" title="EXIT FUNCTION"><span style="color:#4593D8;">EXIT FUNCTION</span></a>
+<a href="/qb64wiki/index.php/IF...THEN" title="IF...THEN"><span style="color:#4593D8;">IF</span></a> index &gt; 0 <a href="/qb64wiki/index.php/AND_(boolean)" title="AND (boolean)"><span style="color:#4593D8;">AND</span></a> index &lt;= ICON.Count <a href="/qb64wiki/index.php/THEN" title="THEN"><span style="color:#4593D8;">THEN</span></a> entry = 16 * (index - 1) <a href="/qb64wiki/index.php/ELSE" title="ELSE"><span style="color:#4593D8;">ELSE</span></a> entry = 16 * (ICON.Count - 1)
+<a href="/qb64wiki/index.php/PRINT" title="PRINT"><span style="color:#4593D8;">PRINT</span></a> ICON.Count, entry
+<a href="/qb64wiki/index.php/SEEK" title="SEEK"><span style="color:#4593D8;">SEEK</span></a> rf, 1 + 6 + entry 'start of indexed Entry header selected
+<a href="/qb64wiki/index.php/GET" title="GET"><span style="color:#4593D8;">GET</span></a> rf, , ENT 'GET 16 byte Entry Header set by index request or highest available
+
+<a href="/qb64wiki/index.php/SEEK" title="SEEK"><span style="color:#4593D8;">SEEK</span></a> rf, 1 + ENT.Offset 'go to BMP header offset given in Entry header
+<a href="/qb64wiki/index.php/GET" title="GET"><span style="color:#4593D8;">GET</span></a> rf, , BMP 'GET 40 byte icon bitmap header information
+<a href="/qb64wiki/index.php/IF...THEN" title="IF...THEN"><span style="color:#4593D8;">IF</span></a> BMP.BPP &lt;= 24 <a href="/qb64wiki/index.php/THEN" title="THEN"><span style="color:#4593D8;">THEN</span></a> pixelbytes = BMP.BPP / 8 <a href="/qb64wiki/index.php/ELSE" title="ELSE"><span style="color:#4593D8;">ELSE</span></a> pixelbytes = 3
+<a href="/qb64wiki/index.php/IF...THEN" title="IF...THEN"><span style="color:#4593D8;">IF</span></a> BMP.BPP &gt; 1 <a href="/qb64wiki/index.php/AND_(boolean)" title="AND (boolean)"><span style="color:#4593D8;">AND</span></a> BMP.BPP &lt;= 8 <a href="/qb64wiki/index.php/THEN" title="THEN"><span style="color:#4593D8;">THEN</span></a> palettebytes = 4 * (2 ^ BMP.BPP) <a href="/qb64wiki/index.php/ELSE" title="ELSE"><span style="color:#4593D8;">ELSE</span></a> palettebytes = 0
+datasize&amp; = (ENT.Wide * ENT.High * pixelbytes) + palettebytes 'no padder should be necessary
+filesize&amp; = datasize&amp; + 14 + 40 '                      data and palette + header
+bmpoffset&amp; = palettebytes + 54 '                       data offset from start of bitmap
+BMP.PWidth = ENT.Wide
+BMP.PDepth = ENT.High
+BMP.RAWSize = datasize&amp; - palettebytes
+
+PRE.BM = <a href="/qb64wiki/index.php/CVI" title="CVI"><span style="color:#4593D8;">CVI</span></a>("BM") 'integer value changes to "BM" in file
+PRE.Size = filesize&amp;
+PRE.BOffset = bmpoffset&amp; 'start of data after header and palette if used
+
+wf = <a href="/qb64wiki/index.php/FREEFILE" title="FREEFILE"><span style="color:#4593D8;">FREEFILE</span></a>
+<a href="/qb64wiki/index.php/OPEN" title="OPEN"><span style="color:#4593D8;">OPEN</span></a> fileout <a href="/qb64wiki/index.php/FOR...NEXT" title="FOR...NEXT"><span style="color:#4593D8;">FOR</span></a> <a class="mw-redirect" href="/qb64wiki/index.php/BINARY" title="BINARY"><span style="color:#4593D8;">BINARY</span></a> <a href="/qb64wiki/index.php/AS" title="AS"><span style="color:#4593D8;">AS</span></a> wf
+<a href="/qb64wiki/index.php/PUT" title="PUT"><span style="color:#4593D8;">PUT</span></a> wf, , PRE 'PUT 14 byte bitmap information
+<a href="/qb64wiki/index.php/PUT" title="PUT"><span style="color:#4593D8;">PUT</span></a> wf, , BMP 'PUT 40 byte bitmap header information
+<a href="/qb64wiki/index.php/SEEK" title="SEEK"><span style="color:#4593D8;">SEEK</span></a> rf, 1 + ENT.Offset + 40
+dat$ = <a href="/qb64wiki/index.php/STRING$" title="STRING$"><span style="color:#4593D8;">STRING$</span></a>(datasize&amp;, 0) 'create string variable the length of remaining image data
+<a href="/qb64wiki/index.php/GET" title="GET"><span style="color:#4593D8;">GET</span></a> rf, , dat$ 'GET remaining palette and only the XOR image data after the indexed header
+<a href="/qb64wiki/index.php/PUT" title="PUT"><span style="color:#4593D8;">PUT</span></a> wf, , dat$ 'PUT remaining data into new bitmap file
+<a href="/qb64wiki/index.php/CLOSE" title="CLOSE"><span style="color:#4593D8;">CLOSE</span></a> rf, wf
+Icon2BMP = ICON.Count 'function returns number of images available in icon file
+<a class="mw-redirect" href="/qb64wiki/index.php/END_FUNCTION" title="END FUNCTION"><span style="color:#4593D8;">END FUNCTION</span></a>
+</pre>
+         </td>
+        </tr>
+       </tbody>
+      </table>
+      <center>
+       <span style="font-family: Courier New, Courier, monospace; font-size: 0.80em; line-height: 50%;">
+        Code by Ted Weissgerber
+       </span>
+      </center>
+      <dl>
+       <dd>
+        <i>
+         Note:
+        </i>
+        The index selected or the highest numbered icon image less than the index value is the image displayed.
+       </dd>
+      </dl>
+      <p>
+       <br/>
+      </p>
+      <h2>
+       <span class="mw-headline" id="See_also">
+        See also
+       </span>
+      </h2>
+      <ul>
+       <li>
+        <a href="/qb64wiki/index.php/Creating_Icons_from_Bitmaps" title="Creating Icons from Bitmaps">
+         Creating Icons from Bitmaps
+        </a>
+       </li>
+       <li>
+        <a href="/qb64wiki/index.php/Bitmaps" title="Bitmaps">
+         Bitmaps
+        </a>
+        ,
+        <a href="/qb64wiki/index.php/Icons_and_Cursors" title="Icons and Cursors">
+         Icons and Cursors
+        </a>
+       </li>
+       <li>
+        <a href="/qb64wiki/index.php/CLEARCOLOR" title="CLEARCOLOR">
+         _CLEARCOLOR
+        </a>
+       </li>
+       <li>
+        <a href="/qb64wiki/index.php/ALPHA" title="ALPHA">
+         _ALPHA
+        </a>
+        ,
+        <a href="/qb64wiki/index.php/ICON" title="ICON">
+         _ICON
+        </a>
+       </li>
+       <li>
+        <a href="/qb64wiki/index.php/SaveIcon32" title="SaveIcon32">
+         SaveIcon32
+        </a>
+        <span style="color:#777777;">
+         (create icons from any image)
+        </span>
+       </li>
+      </ul>
+      <p>
+       <br/>
+      </p>
+      <hr/>
+      <center>
+       <b>
+        Navigation:
+       </b>
+      </center>
+      <center>
+       <a href="/qb64wiki/index.php/Main_Page" title="Main Page">
+        Main Page with Articles and Tutorials
+       </a>
+      </center>
+      <center>
+       <a href="/qb64wiki/index.php/Keyword_Reference_-_Alphabetical" title="Keyword Reference - Alphabetical">
+        Keyword Reference - Alphabetical
+       </a>
+      </center>
+      <center>
+       <a href="/qb64wiki/index.php/Keyword_Reference_-_By_usage" title="Keyword Reference - By usage">
+        Keyword Reference - By usage
+       </a>
+      </center>
+      <center>
+       <b>
+        <a class="external text" href="https://qb64phoenix.com/forum/showthread.php?tid=2800" rel="nofollow">
+         Report a broken link
+        </a>
+       </b>
+       <br/>
+      </center>
+      <!-- 
+NewPP limit report
+Cached time: 20240719142722
+Cache expiry: 86400
+Reduced expiry: false
+Complications: []
+CPU time usage: 0.245 seconds
+Real time usage: 0.265 seconds
+Preprocessor visited node count: 5360/1000000
+Post‐expand include size: 31846/2097152 bytes
+Template argument size: 5732/2097152 bytes
+Highest expansion depth: 3/100
+Expensive parser function count: 0/100
+Unstrip recursion depth: 0/20
+Unstrip post‐expand size: 0/5000000 bytes
+-->
+      <!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%  115.635      1 -total
+ 30.17%   34.887    475 Template:Cl
+ 10.09%   11.665    146 Template:Cb
+  2.99%    3.461      1 Template:PageNavigation
+  2.78%    3.220      2 Template:TextEnd
+  2.63%    3.045      1 Template:PageSeeAlso
+  2.62%    3.024      2 Template:TextStart
+  2.50%    2.892      2 Template:CodeEnd
+  2.20%    2.548      3 Template:Small
+  2.18%    2.526      1 Template:Text
+-->
+      <!-- Saved in parser cache with key qb64pnix_mw19894-mwmb_:pcache:idhash:623-0!canonical and timestamp 20240719142721 and revision id 8121.
+ -->
+     </div>
+     <div class="printfooter" data-nosnippet="">
+      Retrieved from "
+      <a dir="ltr" href="https://qb64phoenix.com/qb64wiki/index.php?title=Creating_Icon_Bitmaps&amp;oldid=8121">
+       https://qb64phoenix.com/qb64wiki/index.php?title=Creating_Icon_Bitmaps&amp;oldid=8121
+      </a>
+      "
+     </div>
+    </div>
+    <div class="catlinks catlinks-allhidden" data-mw="interface" id="catlinks">
+    </div>
+   </div>
+  </div>
+  <div id="mw-navigation">
+   <h2>
+    Navigation menu
+   </h2>
+   <div id="mw-head">
+    <nav aria-labelledby="p-personal-label" class="vector-menu mw-portlet mw-portlet-personal vector-user-menu-legacy" id="p-personal" role="navigation">
+     <h3 class="vector-menu-heading" id="p-personal-label">
+      <span class="vector-menu-heading-label">
+       Personal tools
+      </span>
+     </h3>
+     <div class="vector-menu-content">
+      <ul class="vector-menu-content-list">
+       <li class="mw-list-item" id="pt-login">
+        <a accesskey="o" href="/qb64wiki/index.php?title=Special:UserLogin&amp;returnto=Creating+Icon+Bitmaps" title="You are encouraged to log in; however, it is not mandatory [o]">
+         <span>
+          Log in
+         </span>
+        </a>
+       </li>
+      </ul>
+     </div>
+    </nav>
+    <div id="left-navigation">
+     <nav aria-labelledby="p-namespaces-label" class="vector-menu mw-portlet mw-portlet-namespaces vector-menu-tabs vector-menu-tabs-legacy" id="p-namespaces" role="navigation">
+      <h3 class="vector-menu-heading" id="p-namespaces-label">
+       <span class="vector-menu-heading-label">
+        Namespaces
+       </span>
+      </h3>
+      <div class="vector-menu-content">
+       <ul class="vector-menu-content-list">
+        <li class="selected mw-list-item" id="ca-nstab-main">
+         <a accesskey="c" href="/qb64wiki/index.php/Creating_Icon_Bitmaps" title="View the content page [c]">
+          <span>
+           Page
+          </span>
+         </a>
+        </li>
+        <li class="new mw-list-item" id="ca-talk">
+         <a accesskey="t" href="/qb64wiki/index.php?title=Talk:Creating_Icon_Bitmaps&amp;action=edit&amp;redlink=1" rel="discussion" title="Discussion about the content page (page does not exist) [t]">
+          <span>
+           Discussion
+          </span>
+         </a>
+        </li>
+       </ul>
+      </div>
+     </nav>
+     <nav aria-labelledby="p-variants-label" class="vector-menu mw-portlet mw-portlet-variants emptyPortlet vector-menu-dropdown" id="p-variants" role="navigation">
+      <input aria-haspopup="true" aria-labelledby="p-variants-label" class="vector-menu-checkbox" data-event-name="ui.dropdown-p-variants" id="p-variants-checkbox" role="button" type="checkbox"/>
+      <label aria-label="Change language variant" class="vector-menu-heading" id="p-variants-label">
+       <span class="vector-menu-heading-label">
+        English
+       </span>
+      </label>
+      <div class="vector-menu-content">
+       <ul class="vector-menu-content-list">
+       </ul>
+      </div>
+     </nav>
+    </div>
+    <div id="right-navigation">
+     <nav aria-labelledby="p-views-label" class="vector-menu mw-portlet mw-portlet-views vector-menu-tabs vector-menu-tabs-legacy" id="p-views" role="navigation">
+      <h3 class="vector-menu-heading" id="p-views-label">
+       <span class="vector-menu-heading-label">
+        Views
+       </span>
+      </h3>
+      <div class="vector-menu-content">
+       <ul class="vector-menu-content-list">
+        <li class="selected mw-list-item" id="ca-view">
+         <a href="/qb64wiki/index.php/Creating_Icon_Bitmaps">
+          <span>
+           Read
+          </span>
+         </a>
+        </li>
+        <li class="mw-list-item" id="ca-viewsource">
+         <a accesskey="e" href="/qb64wiki/index.php?title=Creating_Icon_Bitmaps&amp;action=edit" title="This page is protected.
+You can view its source [e]">
+          <span>
+           View source
+          </span>
+         </a>
+        </li>
+        <li class="mw-list-item" id="ca-history">
+         <a accesskey="h" href="/qb64wiki/index.php?title=Creating_Icon_Bitmaps&amp;action=history" title="Past revisions of this page [h]">
+          <span>
+           View history
+          </span>
+         </a>
+        </li>
+       </ul>
+      </div>
+     </nav>
+     <nav aria-labelledby="p-cactions-label" class="vector-menu mw-portlet mw-portlet-cactions emptyPortlet vector-menu-dropdown" id="p-cactions" role="navigation" title="More options">
+      <input aria-haspopup="true" aria-labelledby="p-cactions-label" class="vector-menu-checkbox" data-event-name="ui.dropdown-p-cactions" id="p-cactions-checkbox" role="button" type="checkbox"/>
+      <label class="vector-menu-heading" id="p-cactions-label">
+       <span class="vector-menu-heading-label">
+        More
+       </span>
+      </label>
+      <div class="vector-menu-content">
+       <ul class="vector-menu-content-list">
+       </ul>
+      </div>
+     </nav>
+     <div class="vector-search-box-vue vector-search-box-show-thumbnail vector-search-box-auto-expand-width vector-search-box" id="p-search" role="search">
+      <div>
+       <h3>
+        <label for="searchInput">
+         Search
+        </label>
+       </h3>
+       <form action="/qb64wiki/index.php" class="vector-search-box-form" id="searchform">
+        <div class="vector-search-box-inner" data-search-loc="header-navigation" id="simpleSearch">
+         <input accesskey="f" aria-label="Search QB64 Phoenix Edition Wiki" autocapitalize="sentences" class="vector-search-box-input" id="searchInput" name="search" placeholder="Search QB64 Phoenix Edition Wiki" title="Search QB64 Phoenix Edition Wiki [f]" type="search"/>
+         <input name="title" type="hidden" value="Special:Search"/>
+         <input class="searchButton mw-fallbackSearchButton" id="mw-searchButton" name="fulltext" title="Search the pages for this text" type="submit" value="Search"/>
+         <input class="searchButton" id="searchButton" name="go" title="Go to a page with this exact name if it exists" type="submit" value="Go"/>
+        </div>
+       </form>
+      </div>
+     </div>
+    </div>
+   </div>
+   <div id="mw-panel">
+    <div id="p-logo" role="banner">
+     <a class="mw-wiki-logo" href="/qb64wiki/index.php/Main_Page" title="Visit the main page">
+     </a>
+    </div>
+    <nav aria-labelledby="p-navigation-label" class="vector-menu mw-portlet mw-portlet-navigation vector-menu-portal portal" id="p-navigation" role="navigation">
+     <h3 class="vector-menu-heading" id="p-navigation-label">
+      <span class="vector-menu-heading-label">
+       Navigation
+      </span>
+     </h3>
+     <div class="vector-menu-content">
+      <ul class="vector-menu-content-list">
+       <li class="mw-list-item" id="n-mainpage-description">
+        <a accesskey="z" href="/qb64wiki/index.php/Main_Page" title="Visit the main page [z]">
+         <span>
+          Main page
+         </span>
+        </a>
+       </li>
+       <li class="mw-list-item" id="n-recentchanges">
+        <a accesskey="r" href="/qb64wiki/index.php/Special:RecentChanges" title="A list of recent changes in the wiki [r]">
+         <span>
+          Recent changes
+         </span>
+        </a>
+       </li>
+       <li class="mw-list-item" id="n-randompage">
+        <a accesskey="x" href="/qb64wiki/index.php/Special:Random" title="Load a random page [x]">
+         <span>
+          Random page
+         </span>
+        </a>
+       </li>
+       <li class="mw-list-item" id="n-help-mediawiki">
+        <a href="https://www.mediawiki.org/wiki/Special:MyLanguage/Help:Contents">
+         <span>
+          Help about MediaWiki
+         </span>
+        </a>
+       </li>
+      </ul>
+     </div>
+    </nav>
+    <nav aria-labelledby="p-tb-label" class="vector-menu mw-portlet mw-portlet-tb vector-menu-portal portal" id="p-tb" role="navigation">
+     <h3 class="vector-menu-heading" id="p-tb-label">
+      <span class="vector-menu-heading-label">
+       Tools
+      </span>
+     </h3>
+     <div class="vector-menu-content">
+      <ul class="vector-menu-content-list">
+       <li class="mw-list-item" id="t-whatlinkshere">
+        <a accesskey="j" href="/qb64wiki/index.php/Special:WhatLinksHere/Creating_Icon_Bitmaps" title="A list of all wiki pages that link here [j]">
+         <span>
+          What links here
+         </span>
+        </a>
+       </li>
+       <li class="mw-list-item" id="t-recentchangeslinked">
+        <a accesskey="k" href="/qb64wiki/index.php/Special:RecentChangesLinked/Creating_Icon_Bitmaps" rel="nofollow" title="Recent changes in pages linked from this page [k]">
+         <span>
+          Related changes
+         </span>
+        </a>
+       </li>
+       <li class="mw-list-item" id="t-specialpages">
+        <a accesskey="q" href="/qb64wiki/index.php/Special:SpecialPages" title="A list of all special pages [q]">
+         <span>
+          Special pages
+         </span>
+        </a>
+       </li>
+       <li class="mw-list-item" id="t-print">
+        <a accesskey="p" href="javascript:print();" rel="alternate" title="Printable version of this page [p]">
+         <span>
+          Printable version
+         </span>
+        </a>
+       </li>
+       <li class="mw-list-item" id="t-permalink">
+        <a href="/qb64wiki/index.php?title=Creating_Icon_Bitmaps&amp;oldid=8121" title="Permanent link to this revision of this page">
+         <span>
+          Permanent link
+         </span>
+        </a>
+       </li>
+       <li class="mw-list-item" id="t-info">
+        <a href="/qb64wiki/index.php?title=Creating_Icon_Bitmaps&amp;action=info" title="More information about this page">
+         <span>
+          Page information
+         </span>
+        </a>
+       </li>
+      </ul>
+     </div>
+    </nav>
+   </div>
+  </div>
+  <footer class="mw-footer" id="footer" role="contentinfo">
+   <ul id="footer-info">
+    <li id="footer-info-lastmod">
+     This page was last edited on 26 February 2023, at 00:32.
+    </li>
+   </ul>
+   <ul id="footer-places">
+    <li id="footer-places-privacy">
+     <a href="/qb64wiki/index.php/QB64_Phoenix_Edition_Wiki:Privacy_policy">
+      Privacy policy
+     </a>
+    </li>
+    <li id="footer-places-about">
+     <a href="/qb64wiki/index.php/QB64_Phoenix_Edition_Wiki:About">
+      About QB64 Phoenix Edition Wiki
+     </a>
+    </li>
+    <li id="footer-places-disclaimer">
+     <a href="/qb64wiki/index.php/QB64_Phoenix_Edition_Wiki:General_disclaimer">
+      Disclaimers
+     </a>
+    </li>
+   </ul>
+   <ul class="noprint" id="footer-icons">
+    <li id="footer-poweredbyico">
+     <a href="https://www.mediawiki.org/">
+      <img alt="Powered by MediaWiki" height="31" loading="lazy" src="/qb64wiki/resources/assets/poweredby_mediawiki_88x31.png" srcset="/qb64wiki/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /qb64wiki/resources/assets/poweredby_mediawiki_176x62.png 2x" width="88"/>
+     </a>
+    </li>
+   </ul>
+  </footer>
+  <script>
+   (RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgPageParseReport":{"limitreport":{"cputime":"0.245","walltime":"0.265","ppvisitednodes":{"value":5360,"limit":1000000},"postexpandincludesize":{"value":31846,"limit":2097152},"templateargumentsize":{"value":5732,"limit":2097152},"expansiondepth":{"value":3,"limit":100},"expensivefunctioncount":{"value":0,"limit":100},"unstrip-depth":{"value":0,"limit":20},"unstrip-size":{"value":0,"limit":5000000},"timingprofile":["100.00%  115.635      1 -total"," 30.17%   34.887    475 Template:Cl"," 10.09%   11.665    146 Template:Cb","  2.99%    3.461      1 Template:PageNavigation","  2.78%    3.220      2 Template:TextEnd","  2.63%    3.045      1 Template:PageSeeAlso","  2.62%    3.024      2 Template:TextStart","  2.50%    2.892      2 Template:CodeEnd","  2.20%    2.548      3 Template:Small","  2.18%    2.526      1 Template:Text"]},"cachereport":{"timestamp":"20240719142722","ttl":86400,"transientcontent":false}}});mw.config.set({"wgBackendResponseTime":161});});
+  </script>
+ </body>
+</html>

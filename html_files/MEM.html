@@ -1,0 +1,1083 @@
+<!DOCTYPE html>
+<html class="client-nojs" dir="ltr" lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <title>
+   _MEM - QB64 Phoenix Edition Wiki
+  </title>
+  <script>
+   document.documentElement.className="client-js";RLCONF={"wgBreakFrames":false,"wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgRequestId":"Zpp8YZ35EcyPqcm4ZfY_fgAAAE4","wgCSPNonce":false,"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"MEM","wgTitle":"MEM","wgCurRevisionId":8528,"wgRevisionId":8528,"wgArticleId":175,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":[],"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgRelevantPageName":"MEM","wgRelevantArticleId":175,"wgIsProbablyEditable":false,"wgRelevantPageIsProbablyEditable":false,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgVector2022PreviewPages":[]};RLSTATE={"site.styles":"ready","user.styles":"ready","user":"ready",
+"user.options":"loading","skins.vector.styles.legacy":"ready"};RLPAGEMODULES=["site","mediawiki.page.ready","mediawiki.toc","skins.vector.legacy.js"];
+  </script>
+  <script>
+   (RLQ=window.RLQ||[]).push(function(){mw.loader.implement("user.options@12s5i",function($,jQuery,require,module){mw.user.tokens.set({"patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});});});
+  </script>
+  <link href="/qb64wiki/load.php?lang=en&amp;modules=skins.vector.styles.legacy&amp;only=styles&amp;skin=vector" rel="stylesheet"/>
+  <script async="" src="/qb64wiki/load.php?lang=en&amp;modules=startup&amp;only=scripts&amp;raw=1&amp;skin=vector">
+  </script>
+  <meta content="" name="ResourceLoaderDynamicStyles"/>
+  <link href="/qb64wiki/load.php?lang=en&amp;modules=site.styles&amp;only=styles&amp;skin=vector" rel="stylesheet"/>
+  <meta content="MediaWiki 1.39.3" name="generator"/>
+  <meta content="telephone=no" name="format-detection"/>
+  <meta content="width=1000" name="viewport"/>
+  <link href="/favicon.ico" rel="icon"/>
+  <link href="/qb64wiki/opensearch_desc.php" rel="search" title="QB64 Phoenix Edition Wiki (en)" type="application/opensearchdescription+xml"/>
+  <link href="https://qb64phoenix.com/qb64wiki/api.php?action=rsd" rel="EditURI" type="application/rsd+xml"/>
+  <link href="/qb64wiki/index.php?title=Special:RecentChanges&amp;feed=atom" rel="alternate" title="QB64 Phoenix Edition Wiki Atom feed" type="application/atom+xml"/>
+ </head>
+ <body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject page-MEM rootpage-MEM skin-vector action-view skin-vector-legacy vector-feature-language-in-header-enabled vector-feature-language-in-main-page-header-disabled vector-feature-language-alert-in-sidebar-disabled vector-feature-sticky-header-disabled vector-feature-sticky-header-edit-disabled vector-feature-table-of-contents-disabled vector-feature-visual-enhancement-next-disabled">
+  <div class="noprint" id="mw-page-base">
+  </div>
+  <div class="noprint" id="mw-head-base">
+  </div>
+  <div class="mw-body" id="content" role="main">
+   <a id="top">
+   </a>
+   <div id="siteNotice">
+   </div>
+   <div class="mw-indicators">
+   </div>
+   <h1 class="firstHeading mw-first-heading" id="firstHeading">
+    _MEM
+   </h1>
+   <div class="vector-body" id="bodyContent">
+    <div class="noprint" id="siteSub">
+     From QB64 Phoenix Edition Wiki
+    </div>
+    <div id="contentSub">
+    </div>
+    <div id="contentSub2">
+    </div>
+    <div id="jump-to-nav">
+    </div>
+    <a class="mw-jump-link" href="#mw-head">
+     Jump to navigation
+    </a>
+    <a class="mw-jump-link" href="#searchInput">
+     Jump to search
+    </a>
+    <div class="mw-body-content mw-content-ltr" dir="ltr" id="mw-content-text" lang="en">
+     <div class="mw-parser-output">
+      <p>
+       The
+       <a class="mw-selflink selflink">
+        _MEM
+       </a>
+       variable type can be used when working with memory blocks. It has no variable
+       <a href="/qb64wiki/index.php/Variable_Types" title="Variable Types">
+        type
+       </a>
+       suffix.
+      </p>
+      <p>
+       <br/>
+      </p>
+      <table align="right" style="max-width:25%;">
+       <tbody>
+        <tr>
+         <td>
+          <div aria-labelledby="mw-toc-heading" class="toc" id="toc" role="navigation">
+           <input class="toctogglecheckbox" id="toctogglecheckbox" role="button" style="display:none" type="checkbox"/>
+           <div class="toctitle" dir="ltr" lang="en">
+            <h2 id="mw-toc-heading">
+             Contents
+            </h2>
+            <span class="toctogglespan">
+             <label class="toctogglelabel" for="toctogglecheckbox">
+             </label>
+            </span>
+           </div>
+           <ul>
+            <li class="toclevel-1">
+             <a href="#Syntax">
+              <span class="tocnumber">
+               1
+              </span>
+              <span class="toctext">
+               Syntax
+              </span>
+             </a>
+            </li>
+            <li class="toclevel-1">
+             <a href="#Description">
+              <span class="tocnumber">
+               2
+              </span>
+              <span class="toctext">
+               Description
+              </span>
+             </a>
+             <ul>
+              <li class="toclevel-2 tocsection-1">
+               <a href="#Usage">
+                <span class="tocnumber">
+                 2.1
+                </span>
+                <span class="toctext">
+                 Usage
+                </span>
+               </a>
+              </li>
+             </ul>
+            </li>
+            <li class="toclevel-1 tocsection-2">
+             <a href="#.TYPE_values_(version_1.000_and_up_incl._all_QB64-PE_releases)">
+              <span class="tocnumber">
+               3
+              </span>
+              <span class="toctext">
+               .TYPE values (version 1.000 and up incl. all QB64-PE releases)
+              </span>
+             </a>
+             <ul>
+              <li class="toclevel-2 tocsection-3">
+               <a href="#Versions_prior_to_1.000_(never_use_with_QB64-PE_releases)">
+                <span class="tocnumber">
+                 3.1
+                </span>
+                <span class="toctext">
+                 Versions prior to 1.000 (never use with QB64-PE releases)
+                </span>
+               </a>
+              </li>
+             </ul>
+            </li>
+            <li class="toclevel-1">
+             <a href="#Examples">
+              <span class="tocnumber">
+               4
+              </span>
+              <span class="toctext">
+               Examples
+              </span>
+             </a>
+            </li>
+            <li class="toclevel-1">
+             <a href="#See_also">
+              <span class="tocnumber">
+               5
+              </span>
+              <span class="toctext">
+               See also
+              </span>
+             </a>
+            </li>
+           </ul>
+          </div>
+         </td>
+        </tr>
+       </tbody>
+      </table>
+      <h2>
+       <span class="mw-headline" id="Syntax">
+        Syntax
+       </span>
+      </h2>
+      <dl>
+       <dd>
+        <a href="/qb64wiki/index.php/DIM" title="DIM">
+         DIM
+        </a>
+        m
+        <a href="/qb64wiki/index.php/AS" title="AS">
+         AS
+        </a>
+        <a class="mw-selflink selflink">
+         _MEM
+        </a>
+       </dd>
+      </dl>
+      <p>
+       <br/>
+      </p>
+      <h2>
+       <span class="mw-headline" id="Description">
+        Description
+       </span>
+      </h2>
+      <p>
+       <i>
+        Variable TYPE:
+       </i>
+      </p>
+      <ul>
+       <li>
+        Memory DOT values are actually part of the built in memory variable
+        <a href="/qb64wiki/index.php/Variable_Types" title="Variable Types">
+         type
+        </a>
+        in QB64. The following
+        <a href="/qb64wiki/index.php/TYPE" title="TYPE">
+         TYPE
+        </a>
+        is built in:
+       </li>
+      </ul>
+      <table cellpadding="5px" width="100%">
+       <tbody>
+        <tr>
+         <td>
+          <pre class="outputfixed">TYPE memory_type
+  OFFSET AS _OFFSET       'start location of block(changes with byte position)
+  SIZE AS _OFFSET         'size of block remaining at offset(changes with position)
+  TYPE AS _OFFSET         'type description of variable used(never changes)
+  ELEMENTSIZE AS _OFFSET  'byte size of values inside the block(never changes)
+  IMAGE AS LONG           'the image handle used when _MEMIMAGE(handle) is used
+  SOUND AS LONG           'the sound handle used when _MEMSOUND(handle) is used
+END TYPE
+
+<span style="color:red;">The above <a href="/qb64wiki/index.php/TYPE" title="TYPE">TYPE</a> is for clarification purposes only. It <b>doesn't need</b> to be pasted in<br/>a program to use _MEM.</span>
+
+<span style="color:red;"><b>IMPORTANT NOTE:</b> <i>As of Build 20170802/57 onward (early v1.2 development), mem.TYPE has<br/>been changed to be an _OFFSET, just as mem.SIZE and mem.ELEMENTSIZE.</i></span>
+</pre>
+         </td>
+        </tr>
+       </tbody>
+      </table>
+      <h3>
+       <span class="mw-headline" id="Usage">
+        Usage
+       </span>
+      </h3>
+      <ul>
+       <li>
+        The _MEM type contains the following
+        <b>
+         read-only
+        </b>
+        elements where
+        <i>
+         name
+        </i>
+        is the _MEM variable name:
+       </li>
+      </ul>
+      <dl>
+       <dd>
+        <dl>
+         <dd>
+          <i>
+           name
+          </i>
+          <b>
+           .OFFSET
+          </b>
+          is the current start position in the memory block AS
+          <a href="/qb64wiki/index.php/OFFSET" title="OFFSET">
+           _OFFSET
+          </a>
+          . Add bytes to change position.
+         </dd>
+         <dd>
+          <i>
+           name
+          </i>
+          <b>
+           .SIZE
+          </b>
+          is the remaining size of the block at current position in bytes AS
+          <a href="/qb64wiki/index.php/OFFSET" title="OFFSET">
+           _OFFSET
+          </a>
+         </dd>
+         <dd>
+          <i>
+           name
+          </i>
+          <b>
+           .TYPE
+          </b>
+          is the type (represented as bits combined to form a value) AS
+          <a href="/qb64wiki/index.php/OFFSET" title="OFFSET">
+           _OFFSET
+          </a>
+          :
+         </dd>
+        </dl>
+       </dd>
+      </dl>
+      <p>
+       <br/>
+      </p>
+      <h2>
+       <span id=".TYPE_values_.28version_1.000_and_up_incl._all_QB64-PE_releases.29">
+       </span>
+       <span class="mw-headline" id=".TYPE_values_(version_1.000_and_up_incl._all_QB64-PE_releases)">
+        .TYPE values (version 1.000 and up incl. all QB64-PE releases)
+       </span>
+      </h2>
+      <dl>
+       <dd>
+        <dl>
+         <dd>
+          <dl>
+           <dd>
+            <ul>
+             <li>
+              [bit 0] 1* byte types (_BYTE)
+             </li>
+             <li>
+              [bit 1] 2* byte types (INTEGER)
+             </li>
+             <li>
+              [bit 2] 4* byte types (LONG or SINGLE)
+             </li>
+             <li>
+              [bit 3] 8* byte types (DOUBLE or _INTEGER64)
+             </li>
+             <li>
+              [bit 4] 16* byte types (reserved for future use)
+             </li>
+             <li>
+              [bit 5] 32* byte types (_FLOAT)
+             </li>
+             <li>
+              [bit 6] 64* byte types (reserved for future use)
+             </li>
+             <li>
+              [bit 7] 128 = integer types (_BYTE, INTEGER, LONG, _INTEGER64) (added to *)
+             </li>
+             <li>
+              [bit 8] 256 = floating point types (SINGLE, DOUBLE, _FLOAT) (added to *)
+             </li>
+             <li>
+              [bit 9] 512 = STRING types (fixed length or variable length)
+             </li>
+             <li>
+              [bit 10] 1024 = _UNSIGNED types (added to *+128)
+             </li>
+             <li>
+              [bit 11] 2048 = pixel data usually from _MEMIMAGE (added to 1+128+1024 for 256 color screens, or 2+128+1024 for text screens, or 4+128+1024 for 32-bit color screens)
+             </li>
+             <li>
+              [bit 12] 4096 = _MEM TYPE structure (NOT added to 32768)
+             </li>
+             <li>
+              [bit 13] 8192 = _OFFSET type (added to 4+128+[1024] or 8+128+[1024] or future_size+128+[1024])
+             </li>
+             <li>
+              [bit 14] 16384 = data created/defined by _MEMNEW(size) or _MEMNEW(offset,size)
+             </li>
+             <li>
+              [bit 15] 32768 = a custom, user defined type (ie. created with TYPE name ... END TYPE)
+             </li>
+             <li>
+              [bit 16] 65536 = an array of data (added to other type values defining the array's data type)
+             </li>
+            </ul>
+           </dd>
+          </dl>
+         </dd>
+        </dl>
+       </dd>
+      </dl>
+      <p>
+       <i>
+        Note: If a future integer, float or other type doesn't have a size that is 1,2,4,8,16,32,64,128 or 256 it won't have a size-bit set.
+       </i>
+      </p>
+      <h3>
+       <span id="Versions_prior_to_1.000_.28never_use_with_QB64-PE_releases.29">
+       </span>
+       <span class="mw-headline" id="Versions_prior_to_1.000_(never_use_with_QB64-PE_releases)">
+        Versions prior to 1.000 (never use with QB64-PE releases)
+       </span>
+      </h3>
+      <dl>
+       <dd>
+        <dl>
+         <dd>
+          <dl>
+           <dd>
+            <ul>
+             <li>
+              1 = Integer types such as
+              <a href="/qb64wiki/index.php/BYTE" title="BYTE">
+               _BYTE
+              </a>
+              ,
+              <a href="/qb64wiki/index.php/INTEGER" title="INTEGER">
+               INTEGER
+              </a>
+              ,
+              <a href="/qb64wiki/index.php/LONG" title="LONG">
+               LONG
+              </a>
+              ,
+              <a href="/qb64wiki/index.php/INTEGER64" title="INTEGER64">
+               _INTEGER64
+              </a>
+              or
+              <a href="/qb64wiki/index.php/OFFSET" title="OFFSET">
+               _OFFSET
+              </a>
+             </li>
+             <li>
+              2 =
+              <a href="/qb64wiki/index.php/UNSIGNED" title="UNSIGNED">
+               _UNSIGNED
+              </a>
+              variable types. Value must be added to the variable type value.(2 cannot be used by itself)
+             </li>
+             <li>
+              3 = ALL
+              <a href="/qb64wiki/index.php/UNSIGNED" title="UNSIGNED">
+               _UNSIGNED
+              </a>
+              <a href="/qb64wiki/index.php/INTEGER" title="INTEGER">
+               INTEGER
+              </a>
+              type values.(add 1 + 2)
+             </li>
+             <li>
+              4 = Floating point types such as
+              <a href="/qb64wiki/index.php/SINGLE" title="SINGLE">
+               SINGLE
+              </a>
+              ,
+              <a href="/qb64wiki/index.php/DOUBLE" title="DOUBLE">
+               DOUBLE
+              </a>
+              or
+              <a href="/qb64wiki/index.php/FLOAT" title="FLOAT">
+               _FLOAT
+              </a>
+             </li>
+             <li>
+              8 =
+              <a href="/qb64wiki/index.php/STRING" title="STRING">
+               STRING
+              </a>
+             </li>
+             <li>
+              0 = unknown(eg. created with
+              <a href="/qb64wiki/index.php/MEMNEW" title="MEMNEW">
+               _MEMNEW
+              </a>
+              ) or
+              <a href="/qb64wiki/index.php/TYPE" title="TYPE">
+               user-defined-types
+              </a>
+             </li>
+            </ul>
+           </dd>
+          </dl>
+         </dd>
+        </dl>
+       </dd>
+      </dl>
+      <ul>
+       <li>
+        <b>
+         Note:
+         <a href="/qb64wiki/index.php/OFFSET" title="OFFSET">
+          _OFFSET
+         </a>
+         values cannot be cast to other variable
+         <a href="/qb64wiki/index.php/Variable_Types" title="Variable Types">
+          types
+         </a>
+         reliably. _MEM is a reserved custom variable
+         <a href="/qb64wiki/index.php/Variable_Types" title="Variable Types">
+          type
+         </a>
+         .
+        </b>
+       </li>
+       <li>
+        <b>
+         <a href="/qb64wiki/index.php/MEM_(function)" title="MEM (function)">
+          _MEM
+         </a>
+         cannot reference variable length
+         <a href="/qb64wiki/index.php/STRING" title="STRING">
+          STRING
+         </a>
+         variable values. String values must be designated as a fixed-
+         <a href="/qb64wiki/index.php/LEN" title="LEN">
+          length
+         </a>
+         string.
+        </b>
+       </li>
+      </ul>
+      <p>
+       <br/>
+      </p>
+      <h2>
+       <span class="mw-headline" id="Examples">
+        Examples
+       </span>
+      </h2>
+      <p>
+       <i>
+        Example 1:
+       </i>
+       Demonstration of .IMAGE to determine an image's dimensions, .TYPE to verify the type and
+       <a href="/qb64wiki/index.php/MEMEXISTS" title="MEMEXISTS">
+        _MEMEXISTS
+       </a>
+       to check image has not been freed
+      </p>
+      <table cellpadding="15px" width="100%">
+       <tbody>
+        <tr>
+         <td>
+          <pre class="codeide"><span style="color:#919191;">'The $UNSTABLE command may not be necessary if HTTP integration has been fully accepted into QB64PE.</span>
+<span style="color:#919191;">'Feel free to remark it out if the IDE flags the following line with an ERROR message.</span>
+<span style="color:#919191;">'And kindly report the issue on our forums or Discord so that we can update this page to keep it as 100% relevant, as possible.</span>
+
+<a href="/qb64wiki/index.php/$UNSTABLE" title="$UNSTABLE"><span style="color:#55FF55;">$UNSTABLE</span></a>:HTTP
+
+<a href="/qb64wiki/index.php/SCREEN" title="SCREEN"><span style="color:#4593D8;">SCREEN</span></a> <a href="/qb64wiki/index.php/NEWIMAGE" title="NEWIMAGE"><span style="color:#4593D8;">_NEWIMAGE</span></a>(<span style="color:#F580B1;">500</span>, <span style="color:#F580B1;">500</span>, <span style="color:#F580B1;">32</span>)
+
+Image$ = <span style="color:#55FF55;">Download$</span>(<span style="color:#FFB100;">"https://qb64phoenix.com/qb64wiki/resources/assets/peWikiLogo.png"</span>, statusCode&amp;) <span style="color:#919191;">'Let's try and download the QB64PE Logo from the web</span>
+<a class="mw-redirect" href="/qb64wiki/index.php/IF" title="IF"><span style="color:#4593D8;">IF</span></a> statusCode&amp; = <span style="color:#F580B1;">200</span> <a href="/qb64wiki/index.php/THEN" title="THEN"><span style="color:#4593D8;">THEN</span></a> <span style="color:#919191;">'                                      200 says a proper connection was made to the web page in question</span>
+    i = <a href="/qb64wiki/index.php/LOADIMAGE" title="LOADIMAGE"><span style="color:#4593D8;">_LOADIMAGE</span></a>(Image$, <span style="color:#F580B1;">32</span>, <span style="color:#FFB100;">"memory"</span>) <span style="color:#919191;">'                       and then we load it for use as a registered imange</span>
+<a href="/qb64wiki/index.php/ELSE" title="ELSE"><span style="color:#4593D8;">ELSE</span></a>
+    <a href="/qb64wiki/index.php/PRINT" title="PRINT"><span style="color:#4593D8;">PRINT</span></a> <span style="color:#FFB100;">"HTTP ERROR"</span>; statusCode <span style="color:#919191;">'                             can't get a proper connection to our webpage, so we don't have an image to work with.</span>
+    <a href="/qb64wiki/index.php/END" title="END"><span style="color:#4593D8;">END</span></a> <span style="color:#919191;">'                                                        end and go report the issue on the forums, if you'd be so kind, dear user.</span>
+<a class="mw-redirect" href="/qb64wiki/index.php/END_IF" title="END IF"><span style="color:#4593D8;">END IF</span></a>
+
+<a href="/qb64wiki/index.php/PUTIMAGE" title="PUTIMAGE"><span style="color:#4593D8;">_PUTIMAGE</span></a> (<span style="color:#F580B1;">0</span>, <span style="color:#F580B1;">0</span>)-(<span style="color:#F580B1;">500</span>, <span style="color:#F580B1;">500</span>), i <span style="color:#919191;">'                                 put the image on the screen so we can view it</span>
+<a href="/qb64wiki/index.php/DIM" title="DIM"><span style="color:#4593D8;">DIM</span></a> m <a href="/qb64wiki/index.php/AS" title="AS"><span style="color:#4593D8;">AS</span></a> <a class="mw-selflink selflink"><span style="color:#4593D8;">_MEM</span></a>: m = <a href="/qb64wiki/index.php/MEMIMAGE" title="MEMIMAGE"><span style="color:#4593D8;">_MEMIMAGE</span></a>(i) <span style="color:#919191;">'                                make a memblock and point it towards our image</span>
+
+
+<span style="color:#919191;">'                                                           **** try uncommenting the following line and see what happens ****</span>
+<span style="color:#919191;">'_MEMFREE m</span>
+
+
+<a class="mw-redirect" href="/qb64wiki/index.php/IF" title="IF"><span style="color:#4593D8;">IF</span></a> m.TYPE <a href="/qb64wiki/index.php/AND_(boolean)" title="AND (boolean)"><span style="color:#4593D8;">AND</span></a> <span style="color:#F580B1;">2048</span> <a href="/qb64wiki/index.php/THEN" title="THEN"><span style="color:#4593D8;">THEN</span></a>
+    <a href="/qb64wiki/index.php/PRINT" title="PRINT"><span style="color:#4593D8;">PRINT</span></a> <span style="color:#FFB100;">"this is/was an image"</span>
+    <a class="mw-redirect" href="/qb64wiki/index.php/IF" title="IF"><span style="color:#4593D8;">IF</span></a> <a href="/qb64wiki/index.php/MEMEXISTS" title="MEMEXISTS"><span style="color:#4593D8;">_MEMEXISTS</span></a>(m) <a href="/qb64wiki/index.php/THEN" title="THEN"><span style="color:#4593D8;">THEN</span></a> <span style="color:#919191;">'                                      check if memory m is still available</span>
+        <a href="/qb64wiki/index.php/PRINT" title="PRINT"><span style="color:#4593D8;">PRINT</span></a> t <a href="/qb64wiki/index.php/AND" title="AND"><span style="color:#4593D8;">AND</span></a> <span style="color:#F580B1;">7</span>; <span style="color:#FFB100;">"bytes per pixel"</span>
+        <a href="/qb64wiki/index.php/PRINT" title="PRINT"><span style="color:#4593D8;">PRINT</span></a> <span style="color:#FFB100;">"image handle "</span>; m.IMAGE
+        <a href="/qb64wiki/index.php/PRINT" title="PRINT"><span style="color:#4593D8;">PRINT</span></a> <span style="color:#FFB100;">"image width"</span>; <a href="/qb64wiki/index.php/WIDTH_(function)" title="WIDTH (function)"><span style="color:#4593D8;">_WIDTH</span></a>(m.IMAGE)
+        <a href="/qb64wiki/index.php/PRINT" title="PRINT"><span style="color:#4593D8;">PRINT</span></a> <span style="color:#FFB100;">"image height"</span>; <a href="/qb64wiki/index.php/HEIGHT" title="HEIGHT"><span style="color:#4593D8;">_HEIGHT</span></a>(m.IMAGE)
+    <a href="/qb64wiki/index.php/ELSE" title="ELSE"><span style="color:#4593D8;">ELSE</span></a> <span style="color:#919191;">'                                                       if we removed the remark from the _MEMFREE above, we'll see the following message</span>
+        <a href="/qb64wiki/index.php/PRINT" title="PRINT"><span style="color:#4593D8;">PRINT</span></a> <span style="color:#FFB100;">"Memory already freed!"</span>
+    <a class="mw-redirect" href="/qb64wiki/index.php/END_IF" title="END IF"><span style="color:#4593D8;">END IF</span></a>
+<a class="mw-redirect" href="/qb64wiki/index.php/END_IF" title="END IF"><span style="color:#4593D8;">END IF</span></a>
+
+
+<span style="color:#919191;">' Content of the HTTP response is returned.</span>
+<span style="color:#919191;">' The statusCode is also assigned.</span>
+<a href="/qb64wiki/index.php/FUNCTION" title="FUNCTION"><span style="color:#4593D8;">FUNCTION</span></a> <span style="color:#55FF55;">Download$</span> (url <a href="/qb64wiki/index.php/AS" title="AS"><span style="color:#4593D8;">AS</span></a> <a href="/qb64wiki/index.php/STRING" title="STRING"><span style="color:#4593D8;">STRING</span></a>, statusCode <a href="/qb64wiki/index.php/AS" title="AS"><span style="color:#4593D8;">AS</span></a> <a href="/qb64wiki/index.php/LONG" title="LONG"><span style="color:#4593D8;">LONG</span></a>)
+    <a href="/qb64wiki/index.php/DIM" title="DIM"><span style="color:#4593D8;">DIM</span></a> h <a href="/qb64wiki/index.php/AS" title="AS"><span style="color:#4593D8;">AS</span></a> <a href="/qb64wiki/index.php/LONG" title="LONG"><span style="color:#4593D8;">LONG</span></a>, content <a href="/qb64wiki/index.php/AS" title="AS"><span style="color:#4593D8;">AS</span></a> <a href="/qb64wiki/index.php/STRING" title="STRING"><span style="color:#4593D8;">STRING</span></a>, s <a href="/qb64wiki/index.php/AS" title="AS"><span style="color:#4593D8;">AS</span></a> <a href="/qb64wiki/index.php/STRING" title="STRING"><span style="color:#4593D8;">STRING</span></a>
+    h = <a href="/qb64wiki/index.php/OPENCLIENT" title="OPENCLIENT"><span style="color:#4593D8;">_OPENCLIENT</span></a>(<span style="color:#FFB100;">"HTTP:"</span> + url)
+
+    statusCode = <a href="/qb64wiki/index.php/STATUSCODE" title="STATUSCODE"><span style="color:#4593D8;">_STATUSCODE</span></a>(h)
+
+    <a class="mw-redirect" href="/qb64wiki/index.php/WHILE" title="WHILE"><span style="color:#4593D8;">WHILE</span></a> <a href="/qb64wiki/index.php/NOT" title="NOT"><span style="color:#4593D8;">NOT</span></a> <a href="/qb64wiki/index.php/EOF" title="EOF"><span style="color:#4593D8;">EOF</span></a>(h)
+        <a href="/qb64wiki/index.php/LIMIT" title="LIMIT"><span style="color:#4593D8;">_LIMIT</span></a> <span style="color:#F580B1;">60</span>
+        <a href="/qb64wiki/index.php/GET" title="GET"><span style="color:#4593D8;">GET</span></a> #h, , s
+        content = content + s
+    <a class="mw-redirect" href="/qb64wiki/index.php/WEND" title="WEND"><span style="color:#4593D8;">WEND</span></a>
+    <a href="/qb64wiki/index.php/CLOSE" title="CLOSE"><span style="color:#4593D8;">CLOSE</span></a> #h
+
+    <span style="color:#55FF55;">Download$</span> = content
+<a class="mw-redirect" href="/qb64wiki/index.php/END_FUNCTION" title="END FUNCTION"><span style="color:#4593D8;">END FUNCTION</span></a>
+</pre>
+         </td>
+        </tr>
+       </tbody>
+      </table>
+      <p>
+       <br/>
+      </p>
+      <p>
+       <i>
+        Example 2:
+       </i>
+       Converts the current
+       <a href="/qb64wiki/index.php/DEST" title="DEST">
+        destination
+       </a>
+       <a href="/qb64wiki/index.php/SCREEN" title="SCREEN">
+        SCREEN
+       </a>
+       13 image memory altered by
+       <a href="/qb64wiki/index.php/PSET" title="PSET">
+        PSET
+       </a>
+       to a
+       <a href="/qb64wiki/index.php/STRING" title="STRING">
+        STRING
+       </a>
+       value. SCREEN 13 only.
+      </p>
+      <table cellpadding="15px" width="100%">
+       <tbody>
+        <tr>
+         <td>
+          <pre class="codeide"><a href="/qb64wiki/index.php/SCREEN" title="SCREEN"><span style="color:#4593D8;">SCREEN</span></a> <span style="color:#F580B1;">13</span>
+<a href="/qb64wiki/index.php/PSET" title="PSET"><span style="color:#4593D8;">PSET</span></a> (<span style="color:#F580B1;">0</span>, <span style="color:#F580B1;">0</span>), <a href="/qb64wiki/index.php/ASC_(function)" title="ASC (function)"><span style="color:#4593D8;">ASC</span></a>(<span style="color:#FFB100;">"H"</span>) <span style="color:#919191;">'put the ASCII value of "H" into the top left corner of screen, which is the first byte of screen image memory</span>
+<a href="/qb64wiki/index.php/PSET" title="PSET"><span style="color:#4593D8;">PSET</span></a> (<span style="color:#F580B1;">1</span>, <span style="color:#F580B1;">0</span>), <a href="/qb64wiki/index.php/ASC_(function)" title="ASC (function)"><span style="color:#4593D8;">ASC</span></a>(<span style="color:#FFB100;">"E"</span>) <span style="color:#919191;">'put the ASCII value of "E" into the 2nd byte of screen image memory</span>
+<a href="/qb64wiki/index.php/PSET" title="PSET"><span style="color:#4593D8;">PSET</span></a> (<span style="color:#F580B1;">2</span>, <span style="color:#F580B1;">0</span>), <a href="/qb64wiki/index.php/ASC_(function)" title="ASC (function)"><span style="color:#4593D8;">ASC</span></a>(<span style="color:#FFB100;">"L"</span>) <span style="color:#919191;">'put the ASCII value of "L" into the 3nd byte of screen image memory</span>
+<a href="/qb64wiki/index.php/PSET" title="PSET"><span style="color:#4593D8;">PSET</span></a> (<span style="color:#F580B1;">3</span>, <span style="color:#F580B1;">0</span>), <a href="/qb64wiki/index.php/ASC_(function)" title="ASC (function)"><span style="color:#4593D8;">ASC</span></a>(<span style="color:#FFB100;">"L"</span>) <span style="color:#919191;">'put the ASCII value of "L" into the 4th byte of screen image memory</span>
+<a href="/qb64wiki/index.php/PSET" title="PSET"><span style="color:#4593D8;">PSET</span></a> (<span style="color:#F580B1;">4</span>, <span style="color:#F580B1;">0</span>), <a href="/qb64wiki/index.php/ASC_(function)" title="ASC (function)"><span style="color:#4593D8;">ASC</span></a>(<span style="color:#FFB100;">"O"</span>) <span style="color:#919191;">'put the ASCII value of "O" into the 5th byte of screen image memory                                                                                                                                                                                                            'put the ASCII value of "E" into the 2nd byte of screen image memory</span>
+
+<a href="/qb64wiki/index.php/DIM" title="DIM"><span style="color:#4593D8;">DIM</span></a> m <a href="/qb64wiki/index.php/AS" title="AS"><span style="color:#4593D8;">AS</span></a> <a class="mw-selflink selflink"><span style="color:#4593D8;">_MEM</span></a> <span style="color:#919191;">'                         define m as a mem block</span>
+m = <a href="/qb64wiki/index.php/MEMIMAGE" title="MEMIMAGE"><span style="color:#4593D8;">_MEMIMAGE</span></a>(<span style="color:#F580B1;">0</span>) <span style="color:#919191;">'                      point m to where our screen exists in memory</span>
+
+x1$ = <a href="/qb64wiki/index.php/MEMGET_(function)" title="MEMGET (function)"><span style="color:#4593D8;">_MEMGET</span></a>(m, m.OFFSET, <a href="/qb64wiki/index.php/STRING" title="STRING"><span style="color:#4593D8;">STRING</span></a> * <span style="color:#F580B1;">5</span>) <span style="color:#919191;">'m is the mem block that we're wanting to get information from</span>
+<span style="color:#919191;">'                                       m.OFFSET is the mem block m starting position</span>
+<span style="color:#919191;">'                                       STRING * 5 is the size and type of information that we want to get from that position in memory.</span>
+
+<a href="/qb64wiki/index.php/LOCATE" title="LOCATE"><span style="color:#4593D8;">LOCATE</span></a> <span style="color:#F580B1;">2</span>, <span style="color:#F580B1;">1</span>
+<a href="/qb64wiki/index.php/PRINT" title="PRINT"><span style="color:#4593D8;">PRINT</span></a> <a href="/qb64wiki/index.php/LEN" title="LEN"><span style="color:#4593D8;">LEN</span></a>(x1$) <span style="color:#919191;">'                        prints 5 bytes as we deliberately fetched STRING * 5 bytes with our _MEMGET above.</span>
+<a href="/qb64wiki/index.php/PRINT" title="PRINT"><span style="color:#4593D8;">PRINT</span></a> x1$ <span style="color:#919191;">'                             prints the contents of that 5-byte string which we got above -- which is "HELLO" as CHR$() string character values</span>
+<a href="/qb64wiki/index.php/MEMFREE" title="MEMFREE"><span style="color:#4593D8;">_MEMFREE</span></a> m
+</pre>
+         </td>
+        </tr>
+       </tbody>
+      </table>
+      <table cellpadding="15px" width="100%">
+       <tbody>
+        <tr>
+         <td>
+          <pre class="outputcrt0"> 5
+HELLO
+
+</pre>
+         </td>
+        </tr>
+       </tbody>
+      </table>
+      <p>
+       <br/>
+       <i>
+        Example 3:
+       </i>
+       Using _MEM to convert _OFFSET to _INTEGER64.
+      </p>
+      <table cellpadding="15px" width="100%">
+       <tbody>
+        <tr>
+         <td>
+          <pre class="codeide"><a href="/qb64wiki/index.php/DIM" title="DIM"><span style="color:#4593D8;">DIM</span></a> x <a href="/qb64wiki/index.php/AS" title="AS"><span style="color:#4593D8;">AS</span></a> <a href="/qb64wiki/index.php/INTEGER" title="INTEGER"><span style="color:#4593D8;">INTEGER</span></a>
+<a href="/qb64wiki/index.php/DIM" title="DIM"><span style="color:#4593D8;">DIM</span></a> m <a href="/qb64wiki/index.php/AS" title="AS"><span style="color:#4593D8;">AS</span></a> <a class="mw-selflink selflink"><span style="color:#4593D8;">_MEM</span></a>
+m = <a href="/qb64wiki/index.php/MEM_(function)" title="MEM (function)"><span style="color:#4593D8;">_MEM</span></a>(x)
+<a href="/qb64wiki/index.php/PRINT" title="PRINT"><span style="color:#4593D8;">PRINT</span></a> m.OFFSET
+<a href="/qb64wiki/index.php/PRINT" title="PRINT"><span style="color:#4593D8;">PRINT</span></a> <span style="color:#55FF55;">ConvertOffset</span>(m.OFFSET)
+
+
+<a href="/qb64wiki/index.php/FUNCTION" title="FUNCTION"><span style="color:#4593D8;">FUNCTION</span></a> <span style="color:#55FF55;">ConvertOffset&amp;&amp;</span> (value <a href="/qb64wiki/index.php/AS" title="AS"><span style="color:#4593D8;">AS</span></a> <a href="/qb64wiki/index.php/OFFSET_(function)" title="OFFSET (function)"><span style="color:#4593D8;">_OFFSET</span></a>)
+    <a href="/qb64wiki/index.php/$CHECKING" title="$CHECKING"><span style="color:#55FF55;">$CHECKING</span></a>:<a href="/qb64wiki/index.php/OFF" title="OFF"><span style="color:#4593D8;">OFF</span></a>
+    <a href="/qb64wiki/index.php/DIM" title="DIM"><span style="color:#4593D8;">DIM</span></a> m <a href="/qb64wiki/index.php/AS" title="AS"><span style="color:#4593D8;">AS</span></a> <a class="mw-selflink selflink"><span style="color:#4593D8;">_MEM</span></a> <span style="color:#919191;">'Define a memblock</span>
+    m = <a href="/qb64wiki/index.php/MEM_(function)" title="MEM (function)"><span style="color:#4593D8;">_MEM</span></a>(value) <span style="color:#919191;">'Point it to use value</span>
+    <a href="/qb64wiki/index.php/$IF" title="$IF"><span style="color:#55FF55;">$IF</span></a> <span style="color:#F580B1;">64BIT</span> <a href="/qb64wiki/index.php/THEN" title="THEN"><span style="color:#55FF55;">THEN</span></a>
+        <a href="/qb64wiki/index.php/DIM" title="DIM"><span style="color:#4593D8;">DIM</span></a> temp <a href="/qb64wiki/index.php/AS" title="AS"><span style="color:#4593D8;">AS</span></a> <a href="/qb64wiki/index.php/INTEGER64" title="INTEGER64"><span style="color:#4593D8;">_INTEGER64</span></a> <span style="color:#919191;">'On 64 bit OSes, an OFFSET is 8 bytes in size.</span>
+    <a class="mw-redirect" href="/qb64wiki/index.php/$ELSE" title="$ELSE"><span style="color:#55FF55;">$ELSE</span></a>
+        <a href="/qb64wiki/index.php/DIM" title="DIM"><span style="color:#4593D8;">DIM</span></a> temp <a href="/qb64wiki/index.php/AS" title="AS"><span style="color:#4593D8;">AS</span></a> <a href="/qb64wiki/index.php/LONG" title="LONG"><span style="color:#4593D8;">LONG</span></a> <span style="color:#919191;">'      However, on 32 bit OSes, an OFFSET is only 4 bytes.</span>
+    <a class="mw-redirect" href="/qb64wiki/index.php/$END_IF" title="$END IF"><span style="color:#55FF55;">$END IF</span></a> 
+    <a href="/qb64wiki/index.php/MEMGET" title="MEMGET"><span style="color:#4593D8;">_MEMGET</span></a> m, m.OFFSET, temp <span style="color:#919191;">'Once we've sized our variable correctly, let's get it</span>
+    <span style="color:#55FF55;">ConvertOffset&amp;&amp;</span> = temp <span style="color:#919191;">'   And then assign that long value to ConvertOffset&amp;&amp;</span>
+    <a href="/qb64wiki/index.php/MEMFREE" title="MEMFREE"><span style="color:#4593D8;">_MEMFREE</span></a> m <span style="color:#919191;">'               Free the memblock</span>
+    <a href="/qb64wiki/index.php/$CHECKING" title="$CHECKING"><span style="color:#55FF55;">$CHECKING</span></a>:<a href="/qb64wiki/index.php/ON" title="ON"><span style="color:#4593D8;">ON</span></a>
+<a class="mw-redirect" href="/qb64wiki/index.php/END_FUNCTION" title="END FUNCTION"><span style="color:#4593D8;">END FUNCTION</span></a>
+</pre>
+         </td>
+        </tr>
+       </tbody>
+      </table>
+      <p>
+       <br/>
+       <i>
+        Explanation:
+       </i>
+       The above will print two numbers which should match.  These numbers will vary, as they're representations of where X is stored in memory, and that position is going to vary every time the program is run.  What it should illustrate, however, is a way to convert _OFFSET to _INTEGER64 values, which can sometimes be useful when trying to run calculations involving mem.SIZE, mem.TYPE, or mem.ELEMENTSIZE.
+      </p>
+      <p>
+       <br/>
+      </p>
+      <h2>
+       <span class="mw-headline" id="See_also">
+        See also
+       </span>
+      </h2>
+      <ul>
+       <li>
+        <a href="/qb64wiki/index.php/MEM_(function)" title="MEM (function)">
+         _MEM (function)
+        </a>
+        ,
+        <a href="/qb64wiki/index.php/MEMELEMENT" title="MEMELEMENT">
+         _MEMELEMENT
+        </a>
+       </li>
+       <li>
+        <a href="/qb64wiki/index.php/MEMNEW" title="MEMNEW">
+         _MEMNEW
+        </a>
+        ,
+        <a href="/qb64wiki/index.php/MEMCOPY" title="MEMCOPY">
+         _MEMCOPY
+        </a>
+        ,
+        <a href="/qb64wiki/index.php/MEMFREE" title="MEMFREE">
+         _MEMFREE
+        </a>
+       </li>
+       <li>
+        <a href="/qb64wiki/index.php/MEMGET" title="MEMGET">
+         _MEMGET
+        </a>
+        ,
+        <a href="/qb64wiki/index.php/MEMPUT" title="MEMPUT">
+         _MEMPUT
+        </a>
+        ,
+        <a href="/qb64wiki/index.php/MEMFILL" title="MEMFILL">
+         _MEMFILL
+        </a>
+       </li>
+       <li>
+        <a href="/qb64wiki/index.php/MEMIMAGE" title="MEMIMAGE">
+         _MEMIMAGE
+        </a>
+        ,
+        <a href="/qb64wiki/index.php/MEMSOUND" title="MEMSOUND">
+         _MEMSOUND
+        </a>
+       </li>
+      </ul>
+      <p>
+       <br/>
+      </p>
+      <hr/>
+      <center>
+       <b>
+        Navigation:
+       </b>
+      </center>
+      <center>
+       <a href="/qb64wiki/index.php/Main_Page" title="Main Page">
+        Main Page with Articles and Tutorials
+       </a>
+      </center>
+      <center>
+       <a href="/qb64wiki/index.php/Keyword_Reference_-_Alphabetical" title="Keyword Reference - Alphabetical">
+        Keyword Reference - Alphabetical
+       </a>
+      </center>
+      <center>
+       <a href="/qb64wiki/index.php/Keyword_Reference_-_By_usage" title="Keyword Reference - By usage">
+        Keyword Reference - By usage
+       </a>
+      </center>
+      <center>
+       <b>
+        <a class="external text" href="https://qb64phoenix.com/forum/showthread.php?tid=2800" rel="nofollow">
+         Report a broken link
+        </a>
+       </b>
+       <br/>
+      </center>
+      <!-- 
+NewPP limit report
+Cached time: 20240719141248
+Cache expiry: 86400
+Reduced expiry: false
+Complications: [show‐toc]
+CPU time usage: 0.074 seconds
+Real time usage: 0.091 seconds
+Preprocessor visited node count: 1590/1000000
+Post‐expand include size: 11828/2097152 bytes
+Template argument size: 3896/2097152 bytes
+Highest expansion depth: 4/100
+Expensive parser function count: 0/100
+Unstrip recursion depth: 0/20
+Unstrip post‐expand size: 3174/5000000 bytes
+-->
+      <!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%   43.763      1 -total
+ 12.08%    5.286     86 Template:Text
+ 11.73%    5.133    103 Template:Cl
+  6.03%    2.638      3 Template:CodeEnd
+  5.86%    2.566      7 Template:Cm
+  4.90%    2.144      1 Template:PageNavigation
+  4.77%    2.089      1 Template:OutputStart
+  4.77%    2.087      1 Template:PageSyntax
+  4.40%    1.926      1 Template:PageSeeAlso
+  3.51%    1.534      1 Template:PageDescription
+-->
+      <!-- Saved in parser cache with key qb64pnix_mw19894-mwmb_:pcache:idhash:175-0!canonical and timestamp 20240719141248 and revision id 8528.
+ -->
+     </div>
+     <div class="printfooter" data-nosnippet="">
+      Retrieved from "
+      <a dir="ltr" href="https://qb64phoenix.com/qb64wiki/index.php?title=MEM&amp;oldid=8528">
+       https://qb64phoenix.com/qb64wiki/index.php?title=MEM&amp;oldid=8528
+      </a>
+      "
+     </div>
+    </div>
+    <div class="catlinks catlinks-allhidden" data-mw="interface" id="catlinks">
+    </div>
+   </div>
+  </div>
+  <div id="mw-navigation">
+   <h2>
+    Navigation menu
+   </h2>
+   <div id="mw-head">
+    <nav aria-labelledby="p-personal-label" class="vector-menu mw-portlet mw-portlet-personal vector-user-menu-legacy" id="p-personal" role="navigation">
+     <h3 class="vector-menu-heading" id="p-personal-label">
+      <span class="vector-menu-heading-label">
+       Personal tools
+      </span>
+     </h3>
+     <div class="vector-menu-content">
+      <ul class="vector-menu-content-list">
+       <li class="mw-list-item" id="pt-login">
+        <a accesskey="o" href="/qb64wiki/index.php?title=Special:UserLogin&amp;returnto=MEM" title="You are encouraged to log in; however, it is not mandatory [o]">
+         <span>
+          Log in
+         </span>
+        </a>
+       </li>
+      </ul>
+     </div>
+    </nav>
+    <div id="left-navigation">
+     <nav aria-labelledby="p-namespaces-label" class="vector-menu mw-portlet mw-portlet-namespaces vector-menu-tabs vector-menu-tabs-legacy" id="p-namespaces" role="navigation">
+      <h3 class="vector-menu-heading" id="p-namespaces-label">
+       <span class="vector-menu-heading-label">
+        Namespaces
+       </span>
+      </h3>
+      <div class="vector-menu-content">
+       <ul class="vector-menu-content-list">
+        <li class="selected mw-list-item" id="ca-nstab-main">
+         <a accesskey="c" href="/qb64wiki/index.php/MEM" title="View the content page [c]">
+          <span>
+           Page
+          </span>
+         </a>
+        </li>
+        <li class="new mw-list-item" id="ca-talk">
+         <a accesskey="t" href="/qb64wiki/index.php?title=Talk:MEM&amp;action=edit&amp;redlink=1" rel="discussion" title="Discussion about the content page (page does not exist) [t]">
+          <span>
+           Discussion
+          </span>
+         </a>
+        </li>
+       </ul>
+      </div>
+     </nav>
+     <nav aria-labelledby="p-variants-label" class="vector-menu mw-portlet mw-portlet-variants emptyPortlet vector-menu-dropdown" id="p-variants" role="navigation">
+      <input aria-haspopup="true" aria-labelledby="p-variants-label" class="vector-menu-checkbox" data-event-name="ui.dropdown-p-variants" id="p-variants-checkbox" role="button" type="checkbox"/>
+      <label aria-label="Change language variant" class="vector-menu-heading" id="p-variants-label">
+       <span class="vector-menu-heading-label">
+        English
+       </span>
+      </label>
+      <div class="vector-menu-content">
+       <ul class="vector-menu-content-list">
+       </ul>
+      </div>
+     </nav>
+    </div>
+    <div id="right-navigation">
+     <nav aria-labelledby="p-views-label" class="vector-menu mw-portlet mw-portlet-views vector-menu-tabs vector-menu-tabs-legacy" id="p-views" role="navigation">
+      <h3 class="vector-menu-heading" id="p-views-label">
+       <span class="vector-menu-heading-label">
+        Views
+       </span>
+      </h3>
+      <div class="vector-menu-content">
+       <ul class="vector-menu-content-list">
+        <li class="selected mw-list-item" id="ca-view">
+         <a href="/qb64wiki/index.php/MEM">
+          <span>
+           Read
+          </span>
+         </a>
+        </li>
+        <li class="mw-list-item" id="ca-viewsource">
+         <a accesskey="e" href="/qb64wiki/index.php?title=MEM&amp;action=edit" title="This page is protected.
+You can view its source [e]">
+          <span>
+           View source
+          </span>
+         </a>
+        </li>
+        <li class="mw-list-item" id="ca-history">
+         <a accesskey="h" href="/qb64wiki/index.php?title=MEM&amp;action=history" title="Past revisions of this page [h]">
+          <span>
+           View history
+          </span>
+         </a>
+        </li>
+       </ul>
+      </div>
+     </nav>
+     <nav aria-labelledby="p-cactions-label" class="vector-menu mw-portlet mw-portlet-cactions emptyPortlet vector-menu-dropdown" id="p-cactions" role="navigation" title="More options">
+      <input aria-haspopup="true" aria-labelledby="p-cactions-label" class="vector-menu-checkbox" data-event-name="ui.dropdown-p-cactions" id="p-cactions-checkbox" role="button" type="checkbox"/>
+      <label class="vector-menu-heading" id="p-cactions-label">
+       <span class="vector-menu-heading-label">
+        More
+       </span>
+      </label>
+      <div class="vector-menu-content">
+       <ul class="vector-menu-content-list">
+       </ul>
+      </div>
+     </nav>
+     <div class="vector-search-box-vue vector-search-box-show-thumbnail vector-search-box-auto-expand-width vector-search-box" id="p-search" role="search">
+      <div>
+       <h3>
+        <label for="searchInput">
+         Search
+        </label>
+       </h3>
+       <form action="/qb64wiki/index.php" class="vector-search-box-form" id="searchform">
+        <div class="vector-search-box-inner" data-search-loc="header-navigation" id="simpleSearch">
+         <input accesskey="f" aria-label="Search QB64 Phoenix Edition Wiki" autocapitalize="sentences" class="vector-search-box-input" id="searchInput" name="search" placeholder="Search QB64 Phoenix Edition Wiki" title="Search QB64 Phoenix Edition Wiki [f]" type="search"/>
+         <input name="title" type="hidden" value="Special:Search"/>
+         <input class="searchButton mw-fallbackSearchButton" id="mw-searchButton" name="fulltext" title="Search the pages for this text" type="submit" value="Search"/>
+         <input class="searchButton" id="searchButton" name="go" title="Go to a page with this exact name if it exists" type="submit" value="Go"/>
+        </div>
+       </form>
+      </div>
+     </div>
+    </div>
+   </div>
+   <div id="mw-panel">
+    <div id="p-logo" role="banner">
+     <a class="mw-wiki-logo" href="/qb64wiki/index.php/Main_Page" title="Visit the main page">
+     </a>
+    </div>
+    <nav aria-labelledby="p-navigation-label" class="vector-menu mw-portlet mw-portlet-navigation vector-menu-portal portal" id="p-navigation" role="navigation">
+     <h3 class="vector-menu-heading" id="p-navigation-label">
+      <span class="vector-menu-heading-label">
+       Navigation
+      </span>
+     </h3>
+     <div class="vector-menu-content">
+      <ul class="vector-menu-content-list">
+       <li class="mw-list-item" id="n-mainpage-description">
+        <a accesskey="z" href="/qb64wiki/index.php/Main_Page" title="Visit the main page [z]">
+         <span>
+          Main page
+         </span>
+        </a>
+       </li>
+       <li class="mw-list-item" id="n-recentchanges">
+        <a accesskey="r" href="/qb64wiki/index.php/Special:RecentChanges" title="A list of recent changes in the wiki [r]">
+         <span>
+          Recent changes
+         </span>
+        </a>
+       </li>
+       <li class="mw-list-item" id="n-randompage">
+        <a accesskey="x" href="/qb64wiki/index.php/Special:Random" title="Load a random page [x]">
+         <span>
+          Random page
+         </span>
+        </a>
+       </li>
+       <li class="mw-list-item" id="n-help-mediawiki">
+        <a href="https://www.mediawiki.org/wiki/Special:MyLanguage/Help:Contents">
+         <span>
+          Help about MediaWiki
+         </span>
+        </a>
+       </li>
+      </ul>
+     </div>
+    </nav>
+    <nav aria-labelledby="p-tb-label" class="vector-menu mw-portlet mw-portlet-tb vector-menu-portal portal" id="p-tb" role="navigation">
+     <h3 class="vector-menu-heading" id="p-tb-label">
+      <span class="vector-menu-heading-label">
+       Tools
+      </span>
+     </h3>
+     <div class="vector-menu-content">
+      <ul class="vector-menu-content-list">
+       <li class="mw-list-item" id="t-whatlinkshere">
+        <a accesskey="j" href="/qb64wiki/index.php/Special:WhatLinksHere/MEM" title="A list of all wiki pages that link here [j]">
+         <span>
+          What links here
+         </span>
+        </a>
+       </li>
+       <li class="mw-list-item" id="t-recentchangeslinked">
+        <a accesskey="k" href="/qb64wiki/index.php/Special:RecentChangesLinked/MEM" rel="nofollow" title="Recent changes in pages linked from this page [k]">
+         <span>
+          Related changes
+         </span>
+        </a>
+       </li>
+       <li class="mw-list-item" id="t-specialpages">
+        <a accesskey="q" href="/qb64wiki/index.php/Special:SpecialPages" title="A list of all special pages [q]">
+         <span>
+          Special pages
+         </span>
+        </a>
+       </li>
+       <li class="mw-list-item" id="t-print">
+        <a accesskey="p" href="javascript:print();" rel="alternate" title="Printable version of this page [p]">
+         <span>
+          Printable version
+         </span>
+        </a>
+       </li>
+       <li class="mw-list-item" id="t-permalink">
+        <a href="/qb64wiki/index.php?title=MEM&amp;oldid=8528" title="Permanent link to this revision of this page">
+         <span>
+          Permanent link
+         </span>
+        </a>
+       </li>
+       <li class="mw-list-item" id="t-info">
+        <a href="/qb64wiki/index.php?title=MEM&amp;action=info" title="More information about this page">
+         <span>
+          Page information
+         </span>
+        </a>
+       </li>
+      </ul>
+     </div>
+    </nav>
+   </div>
+  </div>
+  <footer class="mw-footer" id="footer" role="contentinfo">
+   <ul id="footer-info">
+    <li id="footer-info-lastmod">
+     This page was last edited on 23 September 2023, at 07:25.
+    </li>
+   </ul>
+   <ul id="footer-places">
+    <li id="footer-places-privacy">
+     <a href="/qb64wiki/index.php/QB64_Phoenix_Edition_Wiki:Privacy_policy">
+      Privacy policy
+     </a>
+    </li>
+    <li id="footer-places-about">
+     <a href="/qb64wiki/index.php/QB64_Phoenix_Edition_Wiki:About">
+      About QB64 Phoenix Edition Wiki
+     </a>
+    </li>
+    <li id="footer-places-disclaimer">
+     <a href="/qb64wiki/index.php/QB64_Phoenix_Edition_Wiki:General_disclaimer">
+      Disclaimers
+     </a>
+    </li>
+   </ul>
+   <ul class="noprint" id="footer-icons">
+    <li id="footer-poweredbyico">
+     <a href="https://www.mediawiki.org/">
+      <img alt="Powered by MediaWiki" height="31" loading="lazy" src="/qb64wiki/resources/assets/poweredby_mediawiki_88x31.png" srcset="/qb64wiki/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /qb64wiki/resources/assets/poweredby_mediawiki_176x62.png 2x" width="88"/>
+     </a>
+    </li>
+   </ul>
+  </footer>
+  <script>
+   (RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgPageParseReport":{"limitreport":{"cputime":"0.074","walltime":"0.091","ppvisitednodes":{"value":1590,"limit":1000000},"postexpandincludesize":{"value":11828,"limit":2097152},"templateargumentsize":{"value":3896,"limit":2097152},"expansiondepth":{"value":4,"limit":100},"expensivefunctioncount":{"value":0,"limit":100},"unstrip-depth":{"value":0,"limit":20},"unstrip-size":{"value":3174,"limit":5000000},"timingprofile":["100.00%   43.763      1 -total"," 12.08%    5.286     86 Template:Text"," 11.73%    5.133    103 Template:Cl","  6.03%    2.638      3 Template:CodeEnd","  5.86%    2.566      7 Template:Cm","  4.90%    2.144      1 Template:PageNavigation","  4.77%    2.089      1 Template:OutputStart","  4.77%    2.087      1 Template:PageSyntax","  4.40%    1.926      1 Template:PageSeeAlso","  3.51%    1.534      1 Template:PageDescription"]},"cachereport":{"timestamp":"20240719141248","ttl":86400,"transientcontent":false}}});mw.config.set({"wgBackendResponseTime":110});});
+  </script>
+ </body>
+</html>

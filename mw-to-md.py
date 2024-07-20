@@ -22,7 +22,8 @@ import requests
 from bs4 import BeautifulSoup
 from bs4 import Tag
 
-HELP_DIR = '/home/grymmjack/git/QB64pe/internal/help'
+# HELP_DIR = '/home/grymmjack/git/QB64pe/internal/help'
+HELP_DIR = '.'
 
 
 def fetch_html(url):
@@ -97,10 +98,12 @@ def link_keywords(line, use_file=True):
     ret = line
     for keyword in keywords_sorted:
         if keyword in line:
+            keyword_esc = re.escape(keyword)
+            # line = escape_dollar_signs(line)
             if use_file:
                 ret = re.sub('\\b' + keyword + '\\b', f'[{keyword}](file:{HELP_DIR}/{keyword}.md)', ret)
             else:
-                ret = re.sub('\\b' + keyword + '\\b', f'[{keyword}]({HELP_DIR}/{keyword}.md)', ret)
+                ret = re.sub('\\b' + keyword  + '\\b', f'[{keyword}]({HELP_DIR}/{keyword}.md)', ret)
     return ret
 
 
@@ -130,7 +133,7 @@ def get_list_items(tag, keyword, linked=False, indent_level=0):
 
         # line = tag.get_text(strip=True, separator=' ')
         if linked:
-            ret = link_keywords('\t' * indent_level + '* ' + line + '\n', True)
+            ret = link_keywords('\t' * indent_level + '* ' + line + '\n', False)
         else:
             ret = '\t' * indent_level + '* ' + line + '\n'
     for child in tag.children:
@@ -159,19 +162,19 @@ def convert_to_markdown(html, keyword):
         #TITLE
         h1_tag = soup.find('h1', class_="firstHeading mw-first-heading")
         if h1_tag:
-            ret_content += '# ' + h1_tag.text.strip() + '\n'
+            ret_content += '## ' + h1_tag.text.strip() + '\n---\n'
 
         #SUMMARY
         try:
             summary = soup.find('div', class_='mw-parser-output').find('p')
-            ret_content += '> ' + summary.get_text(strip=True, separator=' ') + '\n'
+            ret_content += '\n### ' + summary.get_text(strip=True, separator=' ') + '\n'
         except:
             pass
 
         #SYNTAX
         try:
             syntax = soup.select('h2 + dl dd:first-child')[0]
-            ret_content += '\n## SYNTAX\n'
+            ret_content += '\n#### SYNTAX\n\n'
             ret_content += '`' + syntax.get_text(strip=True, separator=' ') + '`\n'
         except:
             pass
@@ -188,10 +191,10 @@ def convert_to_markdown(html, keyword):
                         break
                     if sibling.name == 'dl':
                         dd = sibling.find('dd')
-                        list_items.append('```vb\n' + dd.get_text(strip=True, separator=' ') + '\n```  \n\n')
+                        list_items.append('  \n  \n---\n```vb\n' + dd.get_text(strip=True, separator=' ') + '\n```\n---\n  \n  \n')
 
             sample_text = ''.join(list_items)
-            ret_content += '\n## SAMPLES\n'
+            ret_content += '  \n#### SAMPLES\n'
             ret_content += sample_text
 
         #PARAMETERS
@@ -212,7 +215,7 @@ def convert_to_markdown(html, keyword):
                         break
 
             parameters_text = ''.join(list_items)
-            ret_content += '\n## PARAMETERS\n'
+            ret_content += '\n#### PARAMETERS\n'
             ret_content += parameters_text + '\n'
 
         #DESCRIPTION
@@ -233,7 +236,7 @@ def convert_to_markdown(html, keyword):
                         break
 
             description_text = ''.join(list_items)
-            ret_content += '\n## DESCRIPTION\n'
+            ret_content += '\n#### DESCRIPTION\n'
             ret_content += description_text + '\n'
 
         #EXAMPLES
@@ -247,14 +250,14 @@ def convert_to_markdown(html, keyword):
                         temp = ' '
                         temp = sibling.get_text(strip=True, separator=' ')
                         if temp:
-                            list_items.append("> " + temp + '\n')
+                            list_items.append("##### " + temp + '\n')
                     codeblock = sibling.find('pre', recursive=True)
                     if codeblock:
                         code = re.sub(r'\n ', '\n', codeblock.text)
-                        list_items.append("\n```vb" + '\n' + code.strip() + "\n```\n\n")
+                        list_items.append("```vb" + '\n' + code.strip() + "\n```\n  \n")
 
             examples_text = ''.join(list_items)
-            ret_content += '\n## EXAMPLES\n'
+            ret_content += '\n#### EXAMPLES\n'
             ret_content += examples_text + '\n'
 
         #MORE EXAMPLES
@@ -275,7 +278,7 @@ def convert_to_markdown(html, keyword):
                         break
 
             more_text = ''.join(list_items)
-            ret_content += '\n## MORE EXAMPLES\n'
+            ret_content += '\n#### MORE EXAMPLES\n'
             ret_content += more_text + '\n'
 
         #SEE ALSO
@@ -296,12 +299,10 @@ def convert_to_markdown(html, keyword):
                         break
 
             see_also_text = ''.join(list_items)
-            ret_content += '\n# SEE ALSO\n'
-            ret_content += see_also_text + '\n'
+            ret_content += '\n#### SEE ALSO\n'
+            ret_content += see_also_text
 
-    ret_content = escape_dollar_signs(ret_content)
-    style = '<style type="text/css">pre { padding: 1em !important; border: 1px solid rgba(255, 255, 255, 0.25) !important; } </style>'
-    return style + '\n' + ret_content
+    return ret_content
 
 
 def save_markdown(markdown, filename):
@@ -347,10 +348,10 @@ def escape_dollar_signs(text: str) -> str:
     Returns:
         str: The text with dollar signs escaped.
     """
-    return text.replace('$', r'\$')
+    return text.replace('$', r'&dollar;')
 
 
-def process_keyword(keyword, output_dir):
+def process_page(keyword, output_dir):
     """
     Process a keyword by fetching its HTML content from the QB64PE wiki,
     converting it to Markdown, and saving the Markdown content to a file.
@@ -367,13 +368,17 @@ def process_keyword(keyword, output_dir):
 
     # Correctly encode the keyword for URL use
     encoded_keyword = urllib.parse.quote_plus(keyword)
+    encoded_keyword = encoded_keyword.replace('+', '_')
+
 
     # from wiki
     url = f'https://qb64phoenix.com/qb64wiki/index.php/{encoded_keyword}'
     print(f'\nProcessing: {url}...')
     html_content = fetch_html(url)
     if html_content:
-        with open(f'html_files/{keyword}.html', 'w') as f:
+        safe_filename = re.sub('/', '-', keyword)
+        safe_filename = re.sub(' ', '_', safe_filename)
+        with open(f'html_files/{safe_filename}.html', 'w') as f:
             f.write(html_content)
             f.close()
             print(f'Requested and Saved HTML: html_files/{keyword}')
@@ -382,8 +387,8 @@ def process_keyword(keyword, output_dir):
         if '`' in html_content:
             html = backticks_to_graves(html_content)
             html_content = html
-        markdown_content = convert_to_markdown(html_content, keyword)
-        file_path = os.path.join(output_dir, f"{keyword}.md")
+        markdown_content = convert_to_markdown(html_content, safe_filename)
+        file_path = os.path.join(output_dir, f"{safe_filename}.md")
         save_markdown(markdown_content, file_path)
         print(f"Converted HTML and Saved Markdown: {file_path}\n")
 
@@ -399,10 +404,15 @@ with open('keywords.txt', 'r') as file:
 keywords_sorted = copy.deepcopy(keywords)
 keywords_sorted.sort(key=len, reverse=True)
 
+# Read wiki pages from file
+with open('wikipages.txt', 'r') as file:
+    pages = [line.strip() for line in file.readlines()]
+    file.close()
+
 # Process each keyword
-for keyword in keywords:
-    if keyword != '**EOF**':
-        process_keyword(keyword, output_directory)
+for page in pages:
+    if page != '**EOF**':
+        process_page(page, output_directory)
     else:
         break
 
