@@ -1,13 +1,23 @@
 ## $IF
 ---
+<blockquote>
 
 ### $IF is precompiler metacommand , which determines which sections of code inside its blocks are included into the final code for compliing.
 
+</blockquote>
+
 #### SYNTAX
+
+<blockquote>
 
 `$IF variable = expression THEN`
 
+</blockquote>
+
 #### DESCRIPTION
+
+<blockquote>
+
 * $[IF](./IF.md) is the start of a precompiler code block which includes or excludes sections of code from being compiled.
 * There is no single line $[IF](./IF.md) statement.  $[IF](./IF.md) must be in a valid $[IF](./IF.md) [THEN](./THEN.md)...$[END](./END.md) [IF](./IF.md) block to work properly.
 * Like all other metacommands, you can not use more than one metacommand per line. Use of : to separate statements in a single line is not allowed.
@@ -27,46 +37,14 @@
 	* There can only be one $[ELSE](./ELSE.md) in an $[IF](./IF.md)-$[ELSEIF](./ELSEIF.md)-$[ELSE](./ELSE.md)-$[END](./END.md) [IF](./IF.md) block, and it must be the last block selection before the $[END](./END.md) [IF](./IF.md).  $[ELSEIF](./ELSEIF.md) cannot follow $[ELSE](./ELSE.md).
 
 
-#### EXAMPLES
-##### Example 1:
-```vb
-$LET SCREENMODE = 32
-$IF SCREENMODE = 0 THEN
-   CONST Red = 4
-$ELSEIF SCREENMODE = 32 THEN
-   CONST Red = _RGB32(255, 0, 0)
-$END IF 
-
-COLOR Red
-PRINT "Hello World"
-```
-  
-##### Explanation: The same CONST is defined twice inside the program.  Normally, defining a CONST more than once generates an error, but the $IF condition here is choosing which CONST will be inside the final program.
-##### As long as Screenmode is 0, the program will exclude the code where CONST Red is defined as color 4.  If Screenmode is 32, CONST Red will be defined as _RGB32(255, 0, 0).
-##### The $LET and $IF statements let the programmer control the code that actually gets compiled, while excluding the other blocks completely.
-##### Example 2:
-```vb
-$IF WIN THEN
-   CONST Slash = "\"
-$ELSE
-   CONST Slash = "/"
-$END IF 
-
-PRINT "The proper slash for your operating system is "; Slash
-```
-  
-##### Explanation: For the above, the CONST slash is defined by the automatic internal flags which returns what operating system is being used at compile time. On a Windows PC, the Slash will be the backslash; for any other OS it will be the forward slash.
-##### Example 3:
-```vb
-$IF VERSION < 1.5 THEN
-   $ERROR Requires QB64 version 1.5 or greater
-$END IF
-```
-  
-##### Explanation: VERSION is a predefined variable that holds the QB64 compiler version. If we know our program needs features only available above a certain version, we can check for that and give the user a helpful error message instead of a confusing error elsewhere in the program.
-
+</blockquote>
 
 #### SEE ALSO
+
+<blockquote>
+
 * $[LET](./LET.md)
 * $[ERROR](./ERROR.md)
 * Metacommands
+
+</blockquote>

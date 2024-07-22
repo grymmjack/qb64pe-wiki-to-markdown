@@ -1,68 +1,113 @@
-## _TITLE
+<style type="text/css">
+body {
+    background: #00a !important;
+    color: #ccc !important;
+}
+li {
+    list-style-type: square !important;
+    color: #ccc !important;
+}
+li::marker {
+    color: #77f !important;
+}    
+hr {
+    border-color: #55f !important;
+    border-width: 2px !important;
+}
+h2 {
+    color: #fff !important;
+    border: 0 !important;
+}
+h3 {
+    color: #cfc !important;
+    border: 0 !important;
+}
+h4 {
+    color: #ccc !important;
+    border: 0 !important;
+}
+h5 {
+    margin: 0 0 1em 0  !important;
+    color: #88f !important;
+    border: 0 !important;
+}
+code {
+    background: #000 !important;
+    margin: 0 !important;
+    padding: 8px !important;
+    border-radius: 8px !important; 
+    border: 1px solid #567 !important;
+}
+pre > code {
+    background: transparent !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    border-radius: inherit !important; 
+    border: 0 !important;
+}
+blockquote {
+    border: 0 !important;
+    background: transparent !important;
+    margin: 0 !important;
+    padding: 0 1em !important;
+}
+pre {
+    border-radius: 8px !important; 
+    border: 1px solid #567 !important;
+    margin: 0 !important;
+    box-shadow: 0px 5px 0px rgba(0, 0, 0, 0.25) !important;
+}
+a:link, a:visited, a:hover, a:active {
+    color: #ff0 !important;
+}
+
+</style>
+
+## [_TITLE](TITLE.md) [📖](https://qb64phoenix.com/qb64wiki/index.php/_TITLE)
 ---
+<blockquote>
 
 ### The _TITLE statement provides the program name in the title bar of the program window.
 
+</blockquote>
+
 #### SYNTAX
+
+<blockquote>
 
 `_TITLE text$`
 
-#### PARAMETERS
-* text$ can be any literal or variable [STRING](./STRING.md) or ASCII character value.
+</blockquote>
 
+#### PARAMETERS
+
+<blockquote>
+
+*  text$ can be any literal or variable [STRING](STRING.md)  or ASCII character value.
+
+</blockquote>
 
 #### DESCRIPTION
-* The title can be changed anywhere in a program procedure.
-* The title bar will say "Untitled" if a title is not set.
-* Change the title of the $[CONSOLE](./CONSOLE.md) windows created using [_CONSOLETITLE](./_CONSOLETITLE.md)
-* Note: A delay may be required before the title can be set. See [_SCREENEXISTS](./_SCREENEXISTS.md) .
+
+<blockquote>
+
+*  The title can be changed anywhere in a program procedure.
+*  The title bar will say "Untitled" if a title is not set.
+*  Change the title of the $CONSOLE windows created using [_CONSOLETITLE](CONSOLETITLE.md) 
+*  Note: A delay may be required before the title can be set. See [_SCREENEXISTS](SCREENEXISTS.md)  .
 
 
-#### EXAMPLES
-##### Example 1: How to create the window title bar.
-```vb
-_TITLE "My New Program"
-```
-  
-##### Example 2: How to find the currently running program module name and current path using a Windows API Library.
-```vb
-_TITLE "My program"
-_DELAY 5             '5 second delay
-
-_TITLE MID$(TITLE$, 1, INSTR(TITLE$, ".") - 1)
-
-PRINT PATH$
-
-
-FUNCTION TITLE$ '=== SHOW CURRENT PROGRAM
-SHARED PATH$
-DECLARE LIBRARY 'Directory Information using KERNEL32 provided by Dav
- FUNCTION GetModuleFileNameA (BYVAL Module AS LONG, FileName AS STRING, BYVAL nSize AS LONG)
-END DECLARE
-
-FileName$ = SPACE$(256)
-Result = GetModuleFileNameA(0, FileName$, LEN(FileName$))
-IF Result THEN
- PATH$ = LEFT$(FileName$, Result)
- start = 1
- DO
-   posit = INSTR(start, PATH$, "\")
-   IF posit THEN last = posit
-   start = posit + 1
- LOOP UNTIL posit = 0
- TITLE$ = MID$(PATH$, last + 1)
- PATH$ = LEFT$(PATH$, last)
-ELSE TITLE$ = "": PATH$ = ""
-END IF
-END FUNCTION
-```
-  
-
+</blockquote>
 
 #### SEE ALSO
-* [_TITLE](./_TITLE.md)$
-* [_ICON](./_ICON.md)
-* [_DELAY](./_DELAY.md)
-* ASCII
-* [_CONSOLETITLE](./_CONSOLETITLE.md)
-* [_SCREENEXISTS](./_SCREENEXISTS.md)
+
+<blockquote>
+
+*  [_TITLE\$](TITLE\$.md) 
+*  [_ICON](ICON.md) 
+*  [_DELAY](DELAY.md) 
+*  ASCII
+*  [_CONSOLETITLE](CONSOLETITLE.md) 
+*  [_SCREENEXISTS](SCREENEXISTS.md) 
+
+</blockquote>

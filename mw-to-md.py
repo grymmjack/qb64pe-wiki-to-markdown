@@ -93,17 +93,29 @@ def link_keywords(line, use_file=True):
 
     Returns:
         str: The processed line with keywords replaced by markdown links.
-
     """
     ret = line
+    processed_keywords = []
+    word_boundary_open =  '\\s*\\b'
+    word_boundary_close = '(\\b|$)'
+    neg_lookahead = '(?![\(|\)])'
     for keyword in keywords_sorted:
         if keyword in line:
-            keyword_esc = re.escape(keyword)
-            # line = escape_dollar_signs(line)
-            if use_file:
-                ret = re.sub('\\b' + keyword + '\\b', f'[{keyword}](file:{HELP_DIR}/{keyword}.md)', ret)
-            else:
-                ret = re.sub('\\b' + keyword  + '\\b', f'[{keyword}]({HELP_DIR}/{keyword}.md)', ret)
+            keyword_esc = keyword.replace('$', '\$')
+            find = neg_lookahead + word_boundary_open + keyword_esc + word_boundary_close
+            keyword_esc = keyword_esc.replace('/', '-')
+            if len(re.findall(find, ' '.join(processed_keywords))) == 0:
+                keyword_no_prefix = re.sub('^_', '', keyword_esc) # remove leading underscore
+                if use_file:
+                    # ret = ret.replace(keyword, f'[{keyword}](file:{HELP_DIR}/{keyword}.md)')
+                    repl = f' [{keyword_esc}](file:{HELP_DIR}/{keyword_no_prefix}.md) '
+                else:
+                    # ret = ret.replace(keyword, f'[{keyword}]({HELP_DIR}/{keyword}.md)')
+                    repl = f' [{keyword_esc}]({keyword_no_prefix}.md) '
+
+                ret = re.sub(find, repl, ret, flags=re.IGNORECASE | re.DOTALL | re.MULTILINE)
+                processed_keywords.append(keyword)
+    ret = re.sub('^\*', '* ', ret)
     return ret
 
 
@@ -162,20 +174,25 @@ def convert_to_markdown(html, keyword):
         #TITLE
         h1_tag = soup.find('h1', class_="firstHeading mw-first-heading")
         if h1_tag:
-            ret_content += '## ' + h1_tag.text.strip() + '\n---\n'
+            h1_keyword = h1_tag.text.strip().replace('$', '\$')
+            h1_keyword = h1_keyword.replace(' ', '_')
+            h1_keyword = h1_keyword.replace('/', '-')
+            h1_page = re.sub('^_', '', h1_keyword) # remove leading underscore
+            wiki_link = ' [📖](https://qb64phoenix.com/qb64wiki/index.php/' + h1_tag.text.strip() + ')'
+            ret_content += '## [' +  h1_keyword + '](' + h1_page + '.md)' + wiki_link + '\n---\n'
 
         #SUMMARY
         try:
             summary = soup.find('div', class_='mw-parser-output').find('p')
-            ret_content += '\n### ' + summary.get_text(strip=True, separator=' ') + '\n'
+            ret_content += '<blockquote>\n\n### ' + summary.get_text(strip=True, separator=' ') + '\n\n</blockquote>\n'
         except:
             pass
 
         #SYNTAX
         try:
             syntax = soup.select('h2 + dl dd:first-child')[0]
-            ret_content += '\n#### SYNTAX\n\n'
-            ret_content += '`' + syntax.get_text(strip=True, separator=' ') + '`\n'
+            ret_content += '\n#### SYNTAX\n\n<blockquote>\n\n'
+            ret_content += '`' + syntax.get_text(strip=True, separator=' ') + '`\n\n</blockquote>\n'
         except:
             pass
 
@@ -194,8 +211,8 @@ def convert_to_markdown(html, keyword):
                         list_items.append('  \n  \n---\n```vb\n' + dd.get_text(strip=True, separator=' ') + '\n```\n---\n  \n  \n')
 
             sample_text = ''.join(list_items)
-            ret_content += '  \n#### SAMPLES\n'
-            ret_content += sample_text
+            ret_content += '  \n#### SAMPLES\n\n<blockquote>\n\n'
+            ret_content += sample_text + '\n</blockquote>\n'
 
         #PARAMETERS
         h2_tag = soup.select('span#Parameters')
@@ -215,8 +232,8 @@ def convert_to_markdown(html, keyword):
                         break
 
             parameters_text = ''.join(list_items)
-            ret_content += '\n#### PARAMETERS\n'
-            ret_content += parameters_text + '\n'
+            ret_content += '\n#### PARAMETERS\n\n<blockquote>\n\n'
+            ret_content += parameters_text + '\n</blockquote>\n'
 
         #DESCRIPTION
         h2_tag = soup.select('span#Description')
@@ -236,13 +253,13 @@ def convert_to_markdown(html, keyword):
                         break
 
             description_text = ''.join(list_items)
-            ret_content += '\n#### DESCRIPTION\n'
-            ret_content += description_text + '\n'
+            ret_content += '\n#### DESCRIPTION\n\n<blockquote>\n\n'
+            ret_content += description_text + '\n\n</blockquote>\n'
 
         #EXAMPLES
         h2_tag = soup.select('span#Examples')
         list_items = []
-        if h2_tag:
+        if h2_tag: # officially in page
             h2_tag = h2_tag[0].parent
             for sibling in h2_tag.next_siblings:
                 if isinstance(sibling, Tag):
@@ -250,15 +267,26 @@ def convert_to_markdown(html, keyword):
                         temp = ' '
                         temp = sibling.get_text(strip=True, separator=' ')
                         if temp:
-                            list_items.append("##### " + temp + '\n')
+                            list_items.append("\n\n##### " + temp + '\n')
                     codeblock = sibling.find('pre', recursive=True)
                     if codeblock:
                         code = re.sub(r'\n ', '\n', codeblock.text)
-                        list_items.append("```vb" + '\n' + code.strip() + "\n```\n  \n")
-
+                        list_items.append("```vb" + '\n' + code.strip() + "\n```\n  \n<br>")
+        else: # unofficially in page
+            codeblocks  = soup.find_all('pre')
+            for codeblock in codeblocks:
+                for parent in codeblock.parents:
+                    if parent.name == 'table':
+                        p = parent.find_previous_sibling('p')
+                        temp = p.get_text(strip=True, separator=' ')
+                        if 'Example' in temp:
+                            list_items.append("\n\n##### " + temp + '\n')
+                            break
+                code = re.sub(r'\n ', '\n', codeblock.text)
+                list_items.append("```vb" + '\n' + code.strip() + "\n```\n  \n<br>")
             examples_text = ''.join(list_items)
-            ret_content += '\n#### EXAMPLES\n'
-            ret_content += examples_text + '\n'
+            ret_content += '\n#### EXAMPLES\n\n<blockquote>\n\n'
+            ret_content += examples_text + '\n</blockquote>\n'
 
         #MORE EXAMPLES
         h3_tag = soup.select('span#More_examples')
@@ -278,8 +306,8 @@ def convert_to_markdown(html, keyword):
                         break
 
             more_text = ''.join(list_items)
-            ret_content += '\n#### MORE EXAMPLES\n'
-            ret_content += more_text + '\n'
+            ret_content += '\n#### MORE EXAMPLES\n\n<blockquote>\n\n'
+            ret_content += more_text + '\n</blockquote>\n'
 
         #SEE ALSO
         h2_tag = soup.select('span#See_also')
@@ -299,13 +327,13 @@ def convert_to_markdown(html, keyword):
                         break
 
             see_also_text = ''.join(list_items)
-            ret_content += '\n#### SEE ALSO\n'
-            ret_content += see_also_text
+            ret_content += '\n#### SEE ALSO\n\n<blockquote>\n\n'
+            ret_content += see_also_text + '\n</blockquote>\n'
 
     return ret_content
 
 
-def save_markdown(markdown, filename):
+def save_markdown(markdown, filename, use_css=True):
     """
     Saves the given markdown content to a file.
 
@@ -316,11 +344,24 @@ def save_markdown(markdown, filename):
     Returns:
         None
     """
-    with open(filename, 'w', encoding='utf-8') as file:
-        file.write(markdown)
+    if use_css:
+        with open(filename, 'w', encoding='utf-8') as file:
+            file.write(css + markdown)
+    else: 
+        with open(filename, 'w', encoding='utf-8') as file:
+            file.write(css + markdown)
 
 
 def replace_backtick_with_grave(matchobj) -> str:
+    """
+    Replaces backticks with the HTML entity for grave accent.
+
+    Args:
+        matchobj (re.Match): The match object representing the matched backtick.
+
+    Returns:
+        str: The replacement string with the HTML entity for grave accent.
+    """
     if matchobj.group(0) == '`':
         return '&grave;'
 
@@ -394,6 +435,10 @@ def process_page(keyword, output_dir):
 
 output_directory = 'markdown_files'
 
+css = ''
+with open('style.css', 'r') as file:
+    css = '<style type="text/css">\n' + file.read() + '\n</style>\n\n'
+    file.close()
 
 # Read keywords from file
 current_directory = os.path.dirname(os.path.abspath(__file__))
@@ -402,6 +447,8 @@ with open('keywords.txt', 'r') as file:
     keywords = [line.strip() for line in file.readlines()]
     file.close()
 keywords_sorted = copy.deepcopy(keywords)
+keywords_sorted.sort()
+keywords_sorted.sort(key=len)
 keywords_sorted.sort(key=len, reverse=True)
 
 # Read wiki pages from file

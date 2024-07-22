@@ -1,47 +1,101 @@
-## &B
+<style type="text/css">
+body {
+    background: #00a !important;
+    color: #ccc !important;
+}
+li {
+    list-style-type: square !important;
+    color: #ccc !important;
+}
+li::marker {
+    color: #77f !important;
+}    
+hr {
+    border-color: #55f !important;
+    border-width: 2px !important;
+}
+h2 {
+    color: #fff !important;
+    border: 0 !important;
+}
+h3 {
+    color: #cfc !important;
+    border: 0 !important;
+}
+h4 {
+    color: #ccc !important;
+    border: 0 !important;
+}
+h5 {
+    margin: 0 0 1em 0  !important;
+    color: #88f !important;
+    border: 0 !important;
+}
+code {
+    background: #000 !important;
+    margin: 0 !important;
+    padding: 8px !important;
+    border-radius: 8px !important; 
+    border: 1px solid #567 !important;
+}
+pre > code {
+    background: transparent !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    border-radius: inherit !important; 
+    border: 0 !important;
+}
+blockquote {
+    border: 0 !important;
+    background: transparent !important;
+    margin: 0 !important;
+    padding: 0 1em !important;
+}
+pre {
+    border-radius: 8px !important; 
+    border: 1px solid #567 !important;
+    margin: 0 !important;
+    box-shadow: 0px 5px 0px rgba(0, 0, 0, 0.25) !important;
+}
+a:link, a:visited, a:hover, a:active {
+    color: #ff0 !important;
+}
+
+</style>
+
+## [&B](&B.md) [📖](https://qb64phoenix.com/qb64wiki/index.php/&B)
 ---
+<blockquote>
 
 ### The &B prefix denotes that an integer value is expressed in a Binary base 2 format. Every 8 digits represent a _BYTE .
 
+</blockquote>
+
 #### SYNTAX
+
+<blockquote>
 
 `a& = &B 10010110`
 
+</blockquote>
+
 #### DESCRIPTION
-* The base 2 numbering system uses binary digit values of 0 and 1 only.
-* Leading zero values can be omitted just like in decimal values as they add nothing to the return value.
-* Decimal values returned can be any signed [INTEGER](./INTEGER.md) , [LONG](./LONG.md) integer, or [_INTEGER64](./_INTEGER64.md) value so use those type of variables when converting directly as shown above in the Syntax. The program "overflow" error limits are listed as:
+
+<blockquote>
+
+*  The base 2 numbering system uses binary digit values of 0 and 1 only.
+*  Leading zero values can be omitted just like in decimal values as they add nothing to the return value.
+*  Decimal values returned can be any signed [INTEGER](INTEGER.md)  , [LONG](LONG.md)  [INTEGER](INTEGER.md) , or [_INTEGER64](INTEGER64.md)  value so use those type of variables when converting directly as shown above in the Syntax. The program "overflow" error limits are listed as:
 
 
-#### EXAMPLES
-```vb
-c&& = -1: d& = -1: e% = -1: f%% = -1
-bi$ = _BIN$(f%%)
-PRINT "Max binary _BYTE = "; bi$; " with"; LEN(bi$); "digits ="; VAL("&B" + bi$)
-bi$ = _BIN$(e%)
-PRINT "Max binary INTEGER = "; bi$; " with"; LEN(bi$); "digits ="; VAL("&B" + bi$)
-bi$ = _BIN$(d&)
-PRINT "Max binary LONG = "; bi$; " with"; LEN(bi$); "digits ="; VAL("&B" + bi$)
-bi$ = _BIN$(c&&)
-PRINT "Max binary _INTEGER64 = "; bi$; " with"; LEN(bi$); "digits ="; VAL("&B" + bi$)
-bi$ = _BIN$(9223372036854775807)
-PRINT "Max _INTEGER64 value = "; bi$; " with"; LEN(bi$); "digits"
-bi$ = _BIN$(-9223372036854775808)
-PRINT "Min _INTEGER64 value = "; bi$; " with"; LEN(bi$); "digits"
-```
-  
-```vb
-Max binary _BYTE = 11111111 with 8 digits = 255
-Max binary INTEGER = 1111111111111111 with 16 digits = 65535
-Max binary LONG = 11111111111111111111111111111111 with 32 digits = 4294967295
-Max binary _INTEGER64 = 1111111111111111111111111111111111111111111111111111111111111111 with 64 digits =-1
-Max _INTEGER64 value = 111111111111111111111111111111111111111111111111111111111111111 with 63 digits
-Min _INTEGER64 value = 1000000000000000000000000000000000000000000000000000000000000000 with 64 digits
-```
-  
-
+</blockquote>
 
 #### SEE ALSO
-* _BIN$ , HEX$ , OCT$ , STR$
-* &H (hexadecimal), &O (octal), [VAL](./VAL.md)
-* Base Comparisons
+
+<blockquote>
+
+*  _BIN$ , HEX$ , OCT$ , [STR\$](STR\$.md) 
+*  &H (hexadecimal), &O (octal), [VAL](VAL.md) 
+*  Base Comparisons
+
+</blockquote>

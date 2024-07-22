@@ -1,18 +1,32 @@
 ## LINE INPUT (file statement)
 ---
+<blockquote>
 
 ### The LINE INPUT # file statement reads an entire line from a text file into a string variable.
 
+</blockquote>
+
 #### SYNTAX
+
+<blockquote>
 
 `LINE INPUT # fileNumber& , stringVariable$`
 
+</blockquote>
+
 #### PARAMETERS
+
+<blockquote>
+
 * fileNumber& is the [INTEGER](./INTEGER.md) number of the file previously opened with the [OPEN](./OPEN.md) statement.
 * stringVariable$ holds the text line read from the file.
 
+</blockquote>
 
 #### DESCRIPTION
+
+<blockquote>
+
 * Reads a file using the fileNumber& OPENed in the [INPUT](./INPUT.md) (file mode) or [BINARY](./BINARY.md) file mode as one file line text string.
 * NOTE: [LINE](./LINE.md) [INPUT](./INPUT.md) will work faster in [BINARY](./BINARY.md) mode than in [INPUT](./INPUT.md) mode.
 	* Using [LINE](./LINE.md) [INPUT](./INPUT.md) # in [BINARY](./BINARY.md) mode is possible in version 1.000 and up
@@ -22,28 +36,16 @@
 * Note: QB64 will not remove CHR$(0) from the end of [LINE](./LINE.md) [INPUT](./INPUT.md) # string return values like QBasic did.
 
 
-#### EXAMPLES
-##### Example: Finding the number of filenames listed in a file to dimension an array to hold them.
-```vb
-REDIM FileArray$(100) 'create dynamic array
-SHELL _HIDE "DIR /B *.* > D0S-DATA.INF"
-IF _FILEEXISTS("D0S-DATA.INF") THEN
- OPEN "D0S-DATA.INF" FOR INPUT AS #1
- DO UNTIL EOF(1)
-   LINE INPUT #1, file$        'read entire text file line
-   filecount% = filecount% + 1
- LOOP
- CLOSE #1
-END IF
-REDIM FileArray$(filecount%)
-PRINT filecount%
-```
-  
-
+</blockquote>
 
 #### SEE ALSO
+
+<blockquote>
+
 * [OPEN](./OPEN.md) , [CLOSE](./CLOSE.md)
 * [INPUT](./INPUT.md) (file mode) , [INPUT](./INPUT.md) # , [INPUT](./INPUT.md)$ (file input)
 * [INPUT](./INPUT.md) , [LINE](./LINE.md) [INPUT](./INPUT.md) , [INPUT](./INPUT.md)$ (keyboard input)
 * [_FILEEXISTS](./_FILEEXISTS.md) , [_DIREXISTS](./_DIREXISTS.md)
 * FILELIST$ (member-contributed function replacement for [FILES](./FILES.md) )
+
+</blockquote>

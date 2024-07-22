@@ -1,19 +1,33 @@
 ## DECLARE LIBRARY
 ---
+<blockquote>
 
 ### The DECLARE LIBRARY declaration allows for the utilization of external library SUB and FUNCTION procedures.
 
+</blockquote>
+
 #### SYNTAX
+
+<blockquote>
 
 `DECLARE [DYNAMIC|CUSTOMTYPE|STATIC] LIBRARY [ "Library_name" ][, "Library_name2" ][, ...] { SUB | FUNCTION } Procedure_name [ ALIAS Library_procedure ] ( BYVAL Parameter [{suffix| AS type [, Parameter2 ...][, ...]]) . . ' Other SUBs or FUNCTIONs as required .`
 
+</blockquote>
+
 #### PARAMETERS
+
+<blockquote>
+
 * The Library_name is needed if a library is not already loaded by QB64. Do not include the file extension. Begin the Library_name with ./ or .\ to make it relative to the path where your source file is saved, so you can keep all your project files together.
 * Procedure_name is any program procedure name you want to designate by using [ALIAS](./ALIAS.md) with the Library_procedure name.
 * Library procedure is the actual procedure name used inside of the library or header file.
 
+</blockquote>
 
 #### DESCRIPTION
+
+<blockquote>
+
 * The declaration can be used with:
 	* C/C++ sub-procedures files ( .h and .hpp )
 	* Dynamically linked libraries and shared object files ( .dll , .so and .dylib )
@@ -41,98 +55,17 @@
 * What libraries are or aren't automatically used in the linking process is not formally defined, nor is it guaranteed to stay that way in future versions of QB64.
 
 
-#### EXAMPLES
-```vb
-CONST CURSOR_NORMAL = 1
-CONST CURSOR_HAND = 2
-CONST CURSOR_HELP = 4
-CONST CURSOR_CYCLE = 7
-CONST CURSOR_TEXT = 8
-CONST CURSOR_CROSSHAIR = 3
-CONST CURSOR_UP_DOWN = 10
-CONST CURSOR_LEFT_RIGHT = 11
-CONST CURSOR_LEFT_RIGHT_CORNER = 16
-CONST CURSOR_RIGHT_LEFT_CORNER = 17
-CONST CURSOR_MOVE = 5
-CONST CURSOR_NONE = 23
-
-DECLARE LIBRARY
-   SUB glutSetCursor (BYVAL style&)
-END DECLARE
-
-glutSetCursor CURSOR_CROSSHAIR
-```
-  
-```vb
-DECLARE LIBRARY
-   FUNCTION GetMilliseconds~&& ALIAS GetTicks
-END DECLARE
-
-DO
-   LOCATE , 1: PRINT "Seconds since program start:"; GetMilliseconds \ 1000;
-LOOP UNTIL _KEYHIT = 27
-```
-  
-```vb
-DECLARE LIBRARY ""
-   FUNCTION addone& (BYVAL value&)
-END DECLARE
-```
-  
-```vb
-DECLARE DYNAMIC LIBRARY "playmidi32"
-   FUNCTION PlayMIDI& (filename AS STRING)
-END DECLARE
-result = PlayMIDI(".\samples\qb64\original\ps2battl.mid" + CHR$(0))
-PRINT result
-```
-  
-```vb
-SCREEN 12
-
-DECLARE CUSTOMTYPE LIBRARY 'Directory Information using KERNEL32 provided by Dav
-   FUNCTION GetModuleFileNameA& (BYVAL hModule AS LONG, lpFileName AS STRING, BYVAL nSize AS LONG)
-   FUNCTION GetModuleFileNameW& (BYVAL hModule AS LONG, lpFileName AS STRING, BYVAL nSize AS LONG)
-END DECLARE
-
-'=== SHOW CURRENT PROGRAM
-FileName$ = SPACE$(512)
-
-Result = GetModuleFileNameA(0, FileName$, LEN(FileName$))
-IF Result THEN PRINT "CURRENT PROGRAM (ASCII): "; LEFT$(FileName$, Result)
-
-'load a unicode font
-f = _LOADFONT("cyberbit.ttf", 24, "UNICODE")
-_FONT f
-Result = GetModuleFileNameW(0, FileName$, LEN(FileName$) \ 2)
-LOCATE 2, 1
-PRINT QuickCP437toUTF32$("CURRENT PROGRAM (UTF): ") + QuickUTF16toUTF32$(LEFT$(FileName$, Result * 2))
-_FONT 16 'restore CP437 font
-
-FUNCTION QuickCP437toUTF32$ (a$)
-   b$ = STRING$(LEN(a$) * 4, 0)
-   FOR i = 1 TO LEN(a$)
-       ASC(b$, i * 4 - 3) = ASC(a$, i)
-   NEXT
-   QuickCP437toUTF32$ = b$
-END FUNCTION
-
-FUNCTION QuickUTF16toUTF32$ (a$)
-   b$ = STRING$(LEN(a$) * 2, 0)
-   FOR i = 1 TO LEN(a$) \ 2
-       ASC(b$, i * 4 - 3) = ASC(a$, i * 2 - 1)
-       ASC(b$, i * 4 - 2) = ASC(a$, i * 2)
-   NEXT
-   QuickUTF16toUTF32$ = b$
-END FUNCTION
-```
-  
-
+</blockquote>
 
 #### SEE ALSO
+
+<blockquote>
+
 * [SUB](./SUB.md) , [FUNCTION](./FUNCTION.md)
 * [BYVAL](./BYVAL.md) , [ALIAS](./ALIAS.md)
 * [_OFFSET](./_OFFSET.md) (function) , [_OFFSET](./_OFFSET.md) (variable type)
 * C Libraries , DLL Libraries , Windows Libraries
 * Port Access Libraries
 * SQL Client
+
+</blockquote>

@@ -1,44 +1,98 @@
-## _DEFLATE$
+<style type="text/css">
+body {
+    background: #00a !important;
+    color: #ccc !important;
+}
+li {
+    list-style-type: square !important;
+    color: #ccc !important;
+}
+li::marker {
+    color: #77f !important;
+}    
+hr {
+    border-color: #55f !important;
+    border-width: 2px !important;
+}
+h2 {
+    color: #fff !important;
+    border: 0 !important;
+}
+h3 {
+    color: #cfc !important;
+    border: 0 !important;
+}
+h4 {
+    color: #ccc !important;
+    border: 0 !important;
+}
+h5 {
+    margin: 0 0 1em 0  !important;
+    color: #88f !important;
+    border: 0 !important;
+}
+code {
+    background: #000 !important;
+    margin: 0 !important;
+    padding: 8px !important;
+    border-radius: 8px !important; 
+    border: 1px solid #567 !important;
+}
+pre > code {
+    background: transparent !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    border-radius: inherit !important; 
+    border: 0 !important;
+}
+blockquote {
+    border: 0 !important;
+    background: transparent !important;
+    margin: 0 !important;
+    padding: 0 1em !important;
+}
+pre {
+    border-radius: 8px !important; 
+    border: 1px solid #567 !important;
+    margin: 0 !important;
+    box-shadow: 0px 5px 0px rgba(0, 0, 0, 0.25) !important;
+}
+a:link, a:visited, a:hover, a:active {
+    color: #ff0 !important;
+}
+
+</style>
+
+## [_DEFLATE\$](DEFLATE\$.md) [📖](https://qb64phoenix.com/qb64wiki/index.php/_DEFLATE$)
 ---
+<blockquote>
 
 ### The _DEFLATE$ function compresses a string .
 
+</blockquote>
+
 #### SYNTAX
+
+<blockquote>
 
 `result$ = _DEFLATE$ ( stringToCompress$ )`
 
+</blockquote>
+
 #### DESCRIPTION
-* result$ will contain the compressed version of stringToCompress$ .
-* To decompress the resulting string, use _INFLATE$ .
+
+<blockquote>
+
+*  result$ will contain the compressed version of stringToCompress$ .
+*  To decompress the resulting string, use _INFLATE$ .
 
 
-#### EXAMPLES
-##### Example 1: Compressing a long string of text.
-```vb
-a$ = "The quick brown fox jumps over the lazy dog. "
-PRINT "Original string (a$): "; a$
-FOR i = 1 TO 15
-   a$ = a$ + a$
-NEXT
-
-PRINT "After concatenating it into itself several times, LEN(a$) ="; LEN(a$)
-
-b$ = _DEFLATE$(a$)
-PRINT "After using _DEFLATE$ to compress it, LEN ="; LEN(b$)
-PRINT USING "(compressed size is #.###% of the original)"; ((LEN(b$) * 100) / LEN(a$))
-c$ = _INFLATE$(b$)
-PRINT "After using _INFLATE$ to decompress it, LEN ="; LEN(c$)
-```
-  
-```vb
-Original string (a$): The quick brown fox jumps over the lazy dog
-After concatenating it into itself several times, LEN(a$) = 1474560
-After using _DEFLATE$ to compress it, LEN = 4335
-(compressed size is 0.295% of the original)
-After using _INFLATE$ to decompress it, LEN = 1474560
-```
-  
-
+</blockquote>
 
 #### SEE ALSO
-* _INFLATE$
+
+<blockquote>
+
+*  [_INFLATE\$](INFLATE\$.md) 
+
+</blockquote>

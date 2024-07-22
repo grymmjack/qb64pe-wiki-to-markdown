@@ -6,7 +6,7 @@
    _SAVEIMAGE - QB64 Phoenix Edition Wiki
   </title>
   <script>
-   document.documentElement.className="client-js";RLCONF={"wgBreakFrames":false,"wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgRequestId":"Zpp8yAEfJaEdFRpaWXtOUwAAAeQ","wgCSPNonce":false,"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"SAVEIMAGE","wgTitle":"SAVEIMAGE","wgCurRevisionId":8953,"wgRevisionId":8953,"wgArticleId":466,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":[],"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgRelevantPageName":"SAVEIMAGE","wgRelevantArticleId":466,"wgIsProbablyEditable":false,"wgRelevantPageIsProbablyEditable":false,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgVector2022PreviewPages":[]};RLSTATE={"site.styles":"ready","user.styles":"ready","user":
+   document.documentElement.className="client-js";RLCONF={"wgBreakFrames":false,"wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgRequestId":"Zp2G9RpdvGGeVdK1DlhuDQAAAlA","wgCSPNonce":false,"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"SAVEIMAGE","wgTitle":"SAVEIMAGE","wgCurRevisionId":9051,"wgRevisionId":9051,"wgArticleId":466,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":[],"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgRelevantPageName":"SAVEIMAGE","wgRelevantArticleId":466,"wgIsProbablyEditable":false,"wgRelevantPageIsProbablyEditable":false,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgVector2022PreviewPages":[]};RLSTATE={"site.styles":"ready","user.styles":"ready","user":
 "ready","user.options":"loading","mediawiki.page.gallery.styles":"ready","skins.vector.styles.legacy":"ready"};RLPAGEMODULES=["site","mediawiki.page.ready","mediawiki.toc","skins.vector.legacy.js"];
   </script>
   <script>
@@ -215,39 +215,51 @@
         <ul>
          <li>
           <b>
-           PNG
-          </b>
-          : Saves the image as Portable Network Graphics format if no file extension is specified.
-         </li>
-         <li>
-          <b>
-           QOI
-          </b>
-          : Saves the image as Quite OK Image format if no file extension is specified.
-         </li>
-         <li>
-          <b>
            BMP
           </b>
-          : Saves the image as Windows Bitmap format if no file extension is specified.
+          : Saves the image as Windows Bitmap if no file extension is specified.
          </li>
          <li>
           <b>
-           TGA
+           GIF
           </b>
-          : Saves the image as Truevision TARGA format if no file extension is specified.
-         </li>
-         <li>
-          <b>
-           JPG
-          </b>
-          : Saves the image as Joint Photographic Experts Group format if no file extension is specified.
+          : Saves the image as Graphics Interchange Format if no file extension is specified.
          </li>
          <li>
           <b>
            HDR
           </b>
-          : Saves the image as Radiance HDR format if no file extension is specified.
+          : Saves the image as Radiance HDR if no file extension is specified.
+         </li>
+         <li>
+          <b>
+           ICO
+          </b>
+          : Saves the image as Windows Icon if no file extension is specified.
+         </li>
+         <li>
+          <b>
+           JPG
+          </b>
+          : Saves the image as Joint Photographic Experts Group if no file extension is specified.
+         </li>
+         <li>
+          <b>
+           PNG
+          </b>
+          : Saves the image as Portable Network Graphics if no file extension is specified.
+         </li>
+         <li>
+          <b>
+           QOI
+          </b>
+          : Saves the image as Quite OK Image if no file extension is specified.
+         </li>
+         <li>
+          <b>
+           TGA
+          </b>
+          : Saves the image as Truevision TARGA if no file extension is specified.
          </li>
         </ul>
        </li>
@@ -293,10 +305,16 @@
         is used.
        </li>
        <li>
-        All attempts are made to ensure the image is saved in the best possible quality in 32-bit RGBA format. Alpha channel information is preserved wherever the format allows.
+        Efforts are made to save the image in the highest quality possible using 32-bit RGBA format, ensuring that alpha channel information is retained whenever the format permits.
        </li>
        <li>
-        SCREEN 0 (text mode) screen and "images" can also be saved. Text surfaces are internally rendered using the master QB64-PE VGA fonts before saving.
+        Due to the inherent limitations of GIFs, these images are stored in an 8-bit indexed format, which results in a reduction of quality and color detail.
+       </li>
+       <li>
+        Windows ICO files utilize the PNG specification, which enables the storage of images exceeding 256x256 pixels in size.
+       </li>
+       <li>
+        SCREEN 0 (text mode) screens and "images" can be saved. Text surfaces are rendered internally using the master QB64-PE VGA fonts prior to saving.
        </li>
       </ul>
       <p>
@@ -410,6 +428,15 @@
           </p>
          </div>
         </div>
+       </li>
+      </ul>
+      <ul>
+       <li>
+        ICO and GIF support was added in
+        <b>
+         QB64-PE v3.14.0
+        </b>
+        .
        </li>
       </ul>
       <p>
@@ -637,12 +664,12 @@
       </ul>
       <!-- 
 NewPP limit report
-Cached time: 20240719141438
+Cached time: 20240721172324
 Cache expiry: 86400
 Reduced expiry: false
 Complications: [show‐toc]
-CPU time usage: 0.090 seconds
-Real time usage: 0.108 seconds
+CPU time usage: 0.083 seconds
+Real time usage: 0.094 seconds
 Preprocessor visited node count: 1349/1000000
 Post‐expand include size: 8980/2097152 bytes
 Template argument size: 1737/2097152 bytes
@@ -653,24 +680,24 @@ Unstrip post‐expand size: 2415/5000000 bytes
 -->
       <!--
 Transclusion expansion time report (%,ms,calls,template)
-100.00%   68.113      1 -total
- 11.29%    7.691    130 Template:Cl
-  7.34%    5.002      1 Template:PageAvailability
-  5.32%    3.622     50 Template:Text
-  4.14%    2.817     11 Template:Parameter
-  3.96%    2.698      1 Template:PageSyntax
-  3.67%    2.499      1 Template:PageExamples
-  3.56%    2.428      2 Template:CodeStart
-  3.41%    2.320      1 Template:PageParameters
-  3.21%    2.184      1 Template:PageSeeAlso
+100.00%   53.558      1 -total
+ 11.27%    6.038    130 Template:Cl
+  5.68%    3.043     50 Template:Text
+  5.17%    2.767      1 Template:PageSyntax
+  4.88%    2.614     11 Template:Parameter
+  3.91%    2.096      1 Template:PageSeeAlso
+  3.83%    2.052      1 Template:PageExamples
+  3.60%    1.928      1 Template:PageParameters
+  3.41%    1.829      1 Template:PageAvailability
+  3.34%    1.787      2 Template:CodeEnd
 -->
-      <!-- Saved in parser cache with key qb64pnix_mw19894-mwmb_:pcache:idhash:466-0!canonical and timestamp 20240719141437 and revision id 8953.
+      <!-- Saved in parser cache with key qb64pnix_mw19894-mwmb_:pcache:idhash:466-0!canonical and timestamp 20240721172324 and revision id 9051.
  -->
      </div>
      <div class="printfooter" data-nosnippet="">
       Retrieved from "
-      <a dir="ltr" href="https://qb64phoenix.com/qb64wiki/index.php?title=SAVEIMAGE&amp;oldid=8953">
-       https://qb64phoenix.com/qb64wiki/index.php?title=SAVEIMAGE&amp;oldid=8953
+      <a dir="ltr" href="https://qb64phoenix.com/qb64wiki/index.php?title=SAVEIMAGE&amp;oldid=9051">
+       https://qb64phoenix.com/qb64wiki/index.php?title=SAVEIMAGE&amp;oldid=9051
       </a>
       "
      </div>
@@ -887,7 +914,7 @@ You can view its source [e]">
         </a>
        </li>
        <li class="mw-list-item" id="t-permalink">
-        <a href="/qb64wiki/index.php?title=SAVEIMAGE&amp;oldid=8953" title="Permanent link to this revision of this page">
+        <a href="/qb64wiki/index.php?title=SAVEIMAGE&amp;oldid=9051" title="Permanent link to this revision of this page">
          <span>
           Permanent link
          </span>
@@ -908,7 +935,7 @@ You can view its source [e]">
   <footer class="mw-footer" id="footer" role="contentinfo">
    <ul id="footer-info">
     <li id="footer-info-lastmod">
-     This page was last edited on 29 May 2024, at 12:11.
+     This page was last edited on 21 July 2024, at 17:23.
     </li>
    </ul>
    <ul id="footer-places">
@@ -937,7 +964,7 @@ You can view its source [e]">
    </ul>
   </footer>
   <script>
-   (RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgPageParseReport":{"limitreport":{"cputime":"0.090","walltime":"0.108","ppvisitednodes":{"value":1349,"limit":1000000},"postexpandincludesize":{"value":8980,"limit":2097152},"templateargumentsize":{"value":1737,"limit":2097152},"expansiondepth":{"value":4,"limit":100},"expensivefunctioncount":{"value":0,"limit":100},"unstrip-depth":{"value":0,"limit":20},"unstrip-size":{"value":2415,"limit":5000000},"timingprofile":["100.00%   68.113      1 -total"," 11.29%    7.691    130 Template:Cl","  7.34%    5.002      1 Template:PageAvailability","  5.32%    3.622     50 Template:Text","  4.14%    2.817     11 Template:Parameter","  3.96%    2.698      1 Template:PageSyntax","  3.67%    2.499      1 Template:PageExamples","  3.56%    2.428      2 Template:CodeStart","  3.41%    2.320      1 Template:PageParameters","  3.21%    2.184      1 Template:PageSeeAlso"]},"cachereport":{"timestamp":"20240719141438","ttl":86400,"transientcontent":false}}});mw.config.set({"wgBackendResponseTime":70});});
+   (RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgPageParseReport":{"limitreport":{"cputime":"0.083","walltime":"0.094","ppvisitednodes":{"value":1349,"limit":1000000},"postexpandincludesize":{"value":8980,"limit":2097152},"templateargumentsize":{"value":1737,"limit":2097152},"expansiondepth":{"value":4,"limit":100},"expensivefunctioncount":{"value":0,"limit":100},"unstrip-depth":{"value":0,"limit":20},"unstrip-size":{"value":2415,"limit":5000000},"timingprofile":["100.00%   53.558      1 -total"," 11.27%    6.038    130 Template:Cl","  5.68%    3.043     50 Template:Text","  5.17%    2.767      1 Template:PageSyntax","  4.88%    2.614     11 Template:Parameter","  3.91%    2.096      1 Template:PageSeeAlso","  3.83%    2.052      1 Template:PageExamples","  3.60%    1.928      1 Template:PageParameters","  3.41%    1.829      1 Template:PageAvailability","  3.34%    1.787      2 Template:CodeEnd"]},"cachereport":{"timestamp":"20240721172324","ttl":86400,"transientcontent":false}}});mw.config.set({"wgBackendResponseTime":99});});
   </script>
  </body>
 </html>

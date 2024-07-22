@@ -1,48 +1,101 @@
-## _CLIP
+<style type="text/css">
+body {
+    background: #00a !important;
+    color: #ccc !important;
+}
+li {
+    list-style-type: square !important;
+    color: #ccc !important;
+}
+li::marker {
+    color: #77f !important;
+}    
+hr {
+    border-color: #55f !important;
+    border-width: 2px !important;
+}
+h2 {
+    color: #fff !important;
+    border: 0 !important;
+}
+h3 {
+    color: #cfc !important;
+    border: 0 !important;
+}
+h4 {
+    color: #ccc !important;
+    border: 0 !important;
+}
+h5 {
+    margin: 0 0 1em 0  !important;
+    color: #88f !important;
+    border: 0 !important;
+}
+code {
+    background: #000 !important;
+    margin: 0 !important;
+    padding: 8px !important;
+    border-radius: 8px !important; 
+    border: 1px solid #567 !important;
+}
+pre > code {
+    background: transparent !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    border-radius: inherit !important; 
+    border: 0 !important;
+}
+blockquote {
+    border: 0 !important;
+    background: transparent !important;
+    margin: 0 !important;
+    padding: 0 1em !important;
+}
+pre {
+    border-radius: 8px !important; 
+    border: 1px solid #567 !important;
+    margin: 0 !important;
+    box-shadow: 0px 5px 0px rgba(0, 0, 0, 0.25) !important;
+}
+a:link, a:visited, a:hover, a:active {
+    color: #ff0 !important;
+}
+
+</style>
+
+## [_CLIP](CLIP.md) [📖](https://qb64phoenix.com/qb64wiki/index.php/_CLIP)
 ---
+<blockquote>
 
 ### The _CLIP option is used in a QB64 graphics PUT to allow placement of an image partially off of the screen.
 
+</blockquote>
+
 #### SYNTAX
+
+<blockquote>
 
 `PUT [[[STEP]]]( column, row ), image_array(start) [, _CLIP ] [{XOR|PSET|AND|OR|PRESET}][, omitcolor ]`
 
+</blockquote>
+
 #### DESCRIPTION
-* [_CLIP](./_CLIP.md) should be placed immediately before the [PUT](./PUT.md) action if used. [XOR](./XOR.md) is default when not used.
-* The offscreen portions of the image will be the omit color.
-* [GET](./GET.md) can get portions of the images off screen in QB64 .
+
+<blockquote>
+
+*  [_CLIP](CLIP.md)  should be placed immediately before the [PUT](PUT.md)  action if used. [XOR](XOR.md)  is default when not used.
+*  The offscreen portions of the image will be the omit color.
+*  [GET](GET.md)  can [GET](GET.md)  portions of the images off screen in QB64 .
 
 
-#### EXAMPLES
-##### Example: Placing an image partially or fully offscreen.
-```vb
-DIM mypic(500)
-SCREEN 13
-
-CLS
-CIRCLE (10, 10), 10
-GET (0, 0)-(20, 20), mypic(0)
-
-PRINT "This program puts an image off screen."
-PRINT "Select which option you'd like to try."
-PRINT "1 will produce an illegal function call."
-PRINT "1 is putting without _CLIP."
-PRINT "2 is putting with _CLIP PSET."
-PRINT "3 is putting with _CLIP XOR."
-PRINT "4 is putting with _CLIP PSET, 4."
-
-INPUT sel
-IF sel = 1 THEN PUT (-10, 10), mypic(0), PSET ' this causes an illegal function call
-IF sel = 2 THEN PUT (-10, 10), mypic(0), _CLIP PSET ' allows graphic to be drawn off-screen
-IF sel = 3 THEN PUT (-10, 10), mypic(0), _CLIP ' uses the default PUT XOR operation
-IF sel = 4 THEN PUT (-10, 10), mypic(0), _CLIP PSET, 4 ' doesn't draw red pixels
-
-END
-```
-  
-
+</blockquote>
 
 #### SEE ALSO
-* [PUT](./PUT.md) (graphics statement)
-* [GET](./GET.md) (graphics statement)
-* [STEP](./STEP.md)
+
+<blockquote>
+
+*  [PUT](PUT.md)  (graphics statement)
+*  [GET](GET.md)  (graphics statement)
+*  [STEP](STEP.md) 
+
+</blockquote>

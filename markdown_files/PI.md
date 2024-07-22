@@ -1,37 +1,109 @@
-## _PI
+<style type="text/css">
+body {
+    background: #00a !important;
+    color: #ccc !important;
+}
+li {
+    list-style-type: square !important;
+    color: #ccc !important;
+}
+li::marker {
+    color: #77f !important;
+}    
+hr {
+    border-color: #55f !important;
+    border-width: 2px !important;
+}
+h2 {
+    color: #fff !important;
+    border: 0 !important;
+}
+h3 {
+    color: #cfc !important;
+    border: 0 !important;
+}
+h4 {
+    color: #ccc !important;
+    border: 0 !important;
+}
+h5 {
+    margin: 0 0 1em 0  !important;
+    color: #88f !important;
+    border: 0 !important;
+}
+code {
+    background: #000 !important;
+    margin: 0 !important;
+    padding: 8px !important;
+    border-radius: 8px !important; 
+    border: 1px solid #567 !important;
+}
+pre > code {
+    background: transparent !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    border-radius: inherit !important; 
+    border: 0 !important;
+}
+blockquote {
+    border: 0 !important;
+    background: transparent !important;
+    margin: 0 !important;
+    padding: 0 1em !important;
+}
+pre {
+    border-radius: 8px !important; 
+    border: 1px solid #567 !important;
+    margin: 0 !important;
+    box-shadow: 0px 5px 0px rgba(0, 0, 0, 0.25) !important;
+}
+a:link, a:visited, a:hover, a:active {
+    color: #ff0 !important;
+}
+
+</style>
+
+## [_PI](PI.md) [📖](https://qb64phoenix.com/qb64wiki/index.php/_PI)
 ---
+<blockquote>
 
 ### The _PI function returns π as a _FLOAT value with an optional multiplier parameter.
 
+</blockquote>
+
 #### SYNTAX
+
+<blockquote>
 
 `circumference = _PI [( multiplier )]`
 
-#### PARAMETERS
-* Optional multiplier ( 2 * radius in above syntax) allows multiplication of the π value.
+</blockquote>
 
+#### PARAMETERS
+
+<blockquote>
+
+*  Optional multiplier ( 2 * radius in above syntax) allows multiplication of the π value.
+
+</blockquote>
 
 #### DESCRIPTION
-* Function can be used in to supply π or multiples in a program.
-* Accuracy is determined by the return variable type [AS](./AS.md) [SINGLE](./SINGLE.md) , [DOUBLE](./DOUBLE.md) or [_FLOAT](./_FLOAT.md) .
-* The π value can also be derived using 4 * [ATN](./ATN.md) (1) for a [SINGLE](./SINGLE.md) value.
+
+<blockquote>
+
+*  Function can be used in to supply π or multiples in a program.
+*  Accuracy is determined by the return variable type [AS](AS.md)  [SINGLE](SINGLE.md)  , [DOUBLE](DOUBLE.md)  or [_FLOAT](FLOAT.md)  .
+*  The π value can also be derived using 4 * [ATN](ATN.md)  (1) for a [SINGLE](SINGLE.md)  value.
 
 
-#### EXAMPLES
-##### Example: Calculating the area of a circle using a SINGLE variable in this case.
-```vb
-radius = 5
-circlearea = _PI(radius ^ 2)
-PRINT circlearea
-```
-  
-```vb
-78.53982
-```
-  
-
+</blockquote>
 
 #### SEE ALSO
-* [_ATAN2](./_ATAN2.md) , [TAN](./TAN.md)
-* [ATN](./ATN.md)
-* [SIN](./SIN.md) , [COS](./COS.md)
+
+<blockquote>
+
+*  [_ATAN2](ATAN2.md)  , [TAN](TAN.md) 
+*  [ATN](ATN.md) 
+*  [SIN](SIN.md)  , [COS](COS.md) 
+
+</blockquote>

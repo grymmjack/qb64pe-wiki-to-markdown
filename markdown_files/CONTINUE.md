@@ -1,29 +1,91 @@
-## _CONTINUE
+<style type="text/css">
+body {
+    background: #00a !important;
+    color: #ccc !important;
+}
+li {
+    list-style-type: square !important;
+    color: #ccc !important;
+}
+li::marker {
+    color: #77f !important;
+}    
+hr {
+    border-color: #55f !important;
+    border-width: 2px !important;
+}
+h2 {
+    color: #fff !important;
+    border: 0 !important;
+}
+h3 {
+    color: #cfc !important;
+    border: 0 !important;
+}
+h4 {
+    color: #ccc !important;
+    border: 0 !important;
+}
+h5 {
+    margin: 0 0 1em 0  !important;
+    color: #88f !important;
+    border: 0 !important;
+}
+code {
+    background: #000 !important;
+    margin: 0 !important;
+    padding: 8px !important;
+    border-radius: 8px !important; 
+    border: 1px solid #567 !important;
+}
+pre > code {
+    background: transparent !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    border-radius: inherit !important; 
+    border: 0 !important;
+}
+blockquote {
+    border: 0 !important;
+    background: transparent !important;
+    margin: 0 !important;
+    padding: 0 1em !important;
+}
+pre {
+    border-radius: 8px !important; 
+    border: 1px solid #567 !important;
+    margin: 0 !important;
+    box-shadow: 0px 5px 0px rgba(0, 0, 0, 0.25) !important;
+}
+a:link, a:visited, a:hover, a:active {
+    color: #ff0 !important;
+}
+
+</style>
+
+## [_CONTINUE](CONTINUE.md) [📖](https://qb64phoenix.com/qb64wiki/index.php/_CONTINUE)
 ---
+<blockquote>
 
 ### The _CONTINUE statement is used in a DO...LOOP , WHILE...WEND or FOR...NEXT block to skip the remaining lines of code in a block (without exiting it) and start the next iteration. It works as a shortcut to a GOTO , but without the need for a line label .
 
+</blockquote>
+
 #### SYNTAX
+
+<blockquote>
 
 `_CONTINUE`
 
-#### EXAMPLES
-##### Example:
-```vb
-FOR i = 1 TO 10
-   IF i = 5 THEN _CONTINUE
-   PRINT i;
-NEXT
-```
-  
-```vb
-1  2  3  4  6  7  8  9  10
-```
-  
-
+</blockquote>
 
 #### SEE ALSO
-* [DO](./DO.md)...[LOOP](./LOOP.md)
-* [WHILE](./WHILE.md)...[WEND](./WEND.md)
-* [FOR](./FOR.md)...[NEXT](./NEXT.md)
-* [GOTO](./GOTO.md)
+
+<blockquote>
+
+*  [DO](DO.md) ... [LOOP](LOOP.md) 
+*  [WHILE](WHILE.md) ... [WEND](WEND.md) 
+*  [FOR](FOR.md) ... [NEXT](NEXT.md) 
+*  [GOTO](GOTO.md) 
+
+</blockquote>

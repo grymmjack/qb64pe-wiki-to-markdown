@@ -1,29 +1,80 @@
-## Variable
+<style type="text/css">
+body {
+    background: #00a !important;
+    color: #ccc !important;
+}
+li {
+    list-style-type: square !important;
+    color: #ccc !important;
+}
+li::marker {
+    color: #77f !important;
+}    
+hr {
+    border-color: #55f !important;
+    border-width: 2px !important;
+}
+h2 {
+    color: #fff !important;
+    border: 0 !important;
+}
+h3 {
+    color: #cfc !important;
+    border: 0 !important;
+}
+h4 {
+    color: #ccc !important;
+    border: 0 !important;
+}
+h5 {
+    margin: 0 0 1em 0  !important;
+    color: #88f !important;
+    border: 0 !important;
+}
+code {
+    background: #000 !important;
+    margin: 0 !important;
+    padding: 8px !important;
+    border-radius: 8px !important; 
+    border: 1px solid #567 !important;
+}
+pre > code {
+    background: transparent !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    border-radius: inherit !important; 
+    border: 0 !important;
+}
+blockquote {
+    border: 0 !important;
+    background: transparent !important;
+    margin: 0 !important;
+    padding: 0 1em !important;
+}
+pre {
+    border-radius: 8px !important; 
+    border: 1px solid #567 !important;
+    margin: 0 !important;
+    box-shadow: 0px 5px 0px rgba(0, 0, 0, 0.25) !important;
+}
+a:link, a:visited, a:hover, a:active {
+    color: #ff0 !important;
+}
+
+</style>
+
+## [Variable](Variable.md) [📖](https://qb64phoenix.com/qb64wiki/index.php/Variable)
 ---
+<blockquote>
 
 ### A variable is a "container" name that can hold a numerical or string value which can be referenced or changed by the program (as opposed to CONSTant values which never change).
 
-#### EXAMPLES
-##### Example of different usages of variables:
-```vb
-max = 1000
-DIM d(max)
-FOR c = 1 TO max
-d(c) = c + d(c - 1)
-NEXT
-PRINT "Show the result of the addition from 1 to n (1+2+3...+n)"
-PRINT "n = (0-" + LTRIM$(STR$(max)) + "): ";
-INPUT "", n
-IF n <= max AND n >= 0 THEN PRINT d(n) ELSE PRINT "Invalid value (only 0 to" + STR$(max) + " is permitted)."
-```
-  
-```vb
-Show the result of the addition from 1 to n (1+2+3...+n)
-n = (1-1000): 10
-55
-```
-  
-
+</blockquote>
 
 #### SEE ALSO
-* Argument , Expression , Arrays
+
+<blockquote>
+
+*  Argument , Expression , Arrays
+
+</blockquote>

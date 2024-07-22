@@ -1,38 +1,91 @@
-## _MEMELEMENT
+<style type="text/css">
+body {
+    background: #00a !important;
+    color: #ccc !important;
+}
+li {
+    list-style-type: square !important;
+    color: #ccc !important;
+}
+li::marker {
+    color: #77f !important;
+}    
+hr {
+    border-color: #55f !important;
+    border-width: 2px !important;
+}
+h2 {
+    color: #fff !important;
+    border: 0 !important;
+}
+h3 {
+    color: #cfc !important;
+    border: 0 !important;
+}
+h4 {
+    color: #ccc !important;
+    border: 0 !important;
+}
+h5 {
+    margin: 0 0 1em 0  !important;
+    color: #88f !important;
+    border: 0 !important;
+}
+code {
+    background: #000 !important;
+    margin: 0 !important;
+    padding: 8px !important;
+    border-radius: 8px !important; 
+    border: 1px solid #567 !important;
+}
+pre > code {
+    background: transparent !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    border-radius: inherit !important; 
+    border: 0 !important;
+}
+blockquote {
+    border: 0 !important;
+    background: transparent !important;
+    margin: 0 !important;
+    padding: 0 1em !important;
+}
+pre {
+    border-radius: 8px !important; 
+    border: 1px solid #567 !important;
+    margin: 0 !important;
+    box-shadow: 0px 5px 0px rgba(0, 0, 0, 0.25) !important;
+}
+a:link, a:visited, a:hover, a:active {
+    color: #ff0 !important;
+}
+
+</style>
+
+## [_MEMELEMENT](MEMELEMENT.md) [📖](https://qb64phoenix.com/qb64wiki/index.php/_MEMELEMENT)
 ---
+<blockquote>
 
 ### The _MEMELEMENT function returns a _MEM block referring to a variable's memory, but not past it.
 
+</blockquote>
+
 #### SYNTAX
+
+<blockquote>
 
 `memoryBlock = _MEMELEMENT ( referenceVariable )`
 
-#### EXAMPLES
-##### Example: Comparing the specifications returned by _MEM and _MEMELEMENT from an array.
-```vb
-DIM a(1 TO 100) AS _UNSIGNED _BYTE
-
-DIM m1 AS _MEM
-DIM m2 AS _MEM
-
-m1 = _MEM(a(50)) 'function returns information about array up to specific element
-PRINT m1.OFFSET, m1.SIZE, m1.TYPE, m1.ELEMENTSIZE
-
-m2 = _MEMELEMENT(a(50)) 'function returns information about the specific element
-PRINT m2.OFFSET, m2.SIZE, m2.TYPE, m2.ELEMENTSIZE
-
-END
-```
-  
-```vb
-28377205        51        3        1
-28377205        1         3        1
-```
-  
-
+</blockquote>
 
 #### SEE ALSO
-* [_MEM](./_MEM.md)
-* [_MEMNEW](./_MEMNEW.md)
-* [_MEMGET](./_MEMGET.md) , [_MEMPUT](./_MEMPUT.md)
-* [_MEMFREE](./_MEMFREE.md)
+
+<blockquote>
+
+*  [_MEM](MEM.md) 
+*  [_MEMNEW](MEMNEW.md) 
+*  [_MEMGET](MEMGET.md)  , [_MEMPUT](MEMPUT.md) 
+*  [_MEMFREE](MEMFREE.md) 
+
+</blockquote>

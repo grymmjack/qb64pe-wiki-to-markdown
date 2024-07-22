@@ -1,13 +1,23 @@
 ## _FULLSCREEN (function)
 ---
+<blockquote>
 
 ### The _FULLSCREEN function returns the present full screen mode setting of the screen window.
 
+</blockquote>
+
 #### SYNTAX
+
+<blockquote>
 
 `full% = _FULLSCREEN`
 
+</blockquote>
+
 #### DESCRIPTION
+
+<blockquote>
+
 * Function returns:
 	* 0 = [_OFF](./_OFF.md) (any positive non-0 value means fullscreen is on)
 	* 1 = [_STRETCH](./_STRETCH.md)
@@ -17,88 +27,14 @@
 Using large fonts with _FULLSCREEN can cause monitor or Windows Desktop problems or kill a program.
 
 
-#### EXAMPLES
-##### Example: Shows how fonts and the _FULLSCREEN mode can resize a program window.
-```vb
-CLS
-fontpath$ = ENVIRON$("SYSTEMROOT") + "\fonts\lucon.ttf" 'Find Windows Folder Path.
-f& = _FONT: defaultf& = f&
-DO
-   INPUT "1) DEFAULT  2) SIZE WINDOW  3) FULL SCREEN   4) FULL STRETCHED  Q) QUIT: ", winmode$
-
-   IF UCASE$(winmode$) = "Q" THEN EXIT DO
-
-   style$ = "MONOSPACE"
-
-   SELECT CASE winmode$
-       CASE "1"
-           full = _FULLSCREEN 'get current full screen mode
-           IF full <> 0 THEN _FULLSCREEN _OFF
-           GOSUB ChangeFont
-
-       CASE "2"
-           DO
-               PRINT
-               INPUT "Enter a FONT SIZE 5 to 25: ", fontsize%
-           LOOP UNTIL fontsize% > 4 AND fontsize% < 26
-
-           DO
-               PRINT
-               INPUT "Enter (0) for REGULAR or (1) for ITALIC FONT: ", italic%
-           LOOP UNTIL italic% = 0 OR italic% = 1
-
-           DO
-               PRINT
-               INPUT "Enter (0) for REGULAR or (1) for BOLD FONT: ", bold%
-           LOOP UNTIL italic% = 0 OR italic% = 1
-
-           IF italic% = 1 THEN style$ = style$ + ", ITALIC"
-           IF bold% = 1 THEN style$ = style$ + ", BOLD"
-           full = _FULLSCREEN 'get current full screen mode
-           IF full <> 0 THEN _FULLSCREEN _OFF
-           GOSUB ChangeFont
-
-       CASE "3"
-           GOSUB ChangeFont
-           _FULLSCREEN _SQUAREPIXELS
-           GOSUB CheckFull
-
-       CASE "4"
-           GOSUB ChangeFont
-           _FULLSCREEN _STRETCH
-           GOSUB CheckFull
-
-   END SELECT
-
-   PRINT: PRINT "_FullScreen mode ="; _FULLSCREEN
-   PRINT
-LOOP
-GOSUB ChangeFont
-END
-
-CheckFull: '<<<<<<<<<<<<<< turn off full screen if function returns 0!
-full = _FULLSCREEN 'get current full screen mode
-IF full = 0 THEN _FULLSCREEN _OFF: SOUND 100, .75
-RETURN
-
-ChangeFont:
-IF winmode$ <> "2" THEN
-   _FONT 16 'select inbuilt 8x16 default font
-   currentf& = _FONT
-ELSE
-   currentf& = _LOADFONT(fontpath$, fontsize%, style$)
-   _FONT currentf&
-END IF
-
-IF currentf& <> f& AND f& <> defaultf& THEN _FREEFONT f&
-f& = currentf&
-RETURN
-```
-  
-##### Explanation: The _FULLSCREEN function can avoid screen display and monitor problems when used to monitor the success of the full screen operation. If a full screen mode is not achieved (the function will return 0), call _FULLSCREEN OFF
-
+</blockquote>
 
 #### SEE ALSO
+
+<blockquote>
+
 * [_FULLSCREEN](./_FULLSCREEN.md) (statement)
 * [_ALLOWFULLSCREEN](./_ALLOWFULLSCREEN.md)
 * [_SCREENMOVE](./_SCREENMOVE.md) , [_SCREENX](./_SCREENX.md) , [_SCREENY](./_SCREENY.md)
+
+</blockquote>

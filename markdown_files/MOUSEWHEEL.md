@@ -1,62 +1,103 @@
-## _MOUSEWHEEL
+<style type="text/css">
+body {
+    background: #00a !important;
+    color: #ccc !important;
+}
+li {
+    list-style-type: square !important;
+    color: #ccc !important;
+}
+li::marker {
+    color: #77f !important;
+}    
+hr {
+    border-color: #55f !important;
+    border-width: 2px !important;
+}
+h2 {
+    color: #fff !important;
+    border: 0 !important;
+}
+h3 {
+    color: #cfc !important;
+    border: 0 !important;
+}
+h4 {
+    color: #ccc !important;
+    border: 0 !important;
+}
+h5 {
+    margin: 0 0 1em 0  !important;
+    color: #88f !important;
+    border: 0 !important;
+}
+code {
+    background: #000 !important;
+    margin: 0 !important;
+    padding: 8px !important;
+    border-radius: 8px !important; 
+    border: 1px solid #567 !important;
+}
+pre > code {
+    background: transparent !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    border-radius: inherit !important; 
+    border: 0 !important;
+}
+blockquote {
+    border: 0 !important;
+    background: transparent !important;
+    margin: 0 !important;
+    padding: 0 1em !important;
+}
+pre {
+    border-radius: 8px !important; 
+    border: 1px solid #567 !important;
+    margin: 0 !important;
+    box-shadow: 0px 5px 0px rgba(0, 0, 0, 0.25) !important;
+}
+a:link, a:visited, a:hover, a:active {
+    color: #ff0 !important;
+}
+
+</style>
+
+## [_MOUSEWHEEL](MOUSEWHEEL.md) [📖](https://qb64phoenix.com/qb64wiki/index.php/_MOUSEWHEEL)
 ---
+<blockquote>
 
 ### The _MOUSEWHEEL function returns a positive or negative INTEGER value indicating mouse scroll events since the last read of _MOUSEINPUT .
 
+</blockquote>
+
 #### SYNTAX
+
+<blockquote>
 
 `scrollAmount% = _MOUSEWHEEL`
 
+</blockquote>
+
 #### DESCRIPTION
-* Returns -1 when scrolling up and 1 when scrolling down with 0 indicating no movement since last read.
-* After an event has been read, the value resets to 0 automatically so cumulative position values must be added.
-* If no movement on the wheel has occurred since the last [_MOUSEINPUT](./_MOUSEINPUT.md) read, [_MOUSEWHEEL](./_MOUSEWHEEL.md) returns 0.
+
+<blockquote>
+
+*  Returns -1 when scrolling up and 1 when scrolling down with 0 indicating no movement since last read.
+*  After an event has been read, the value resets to 0 automatically so cumulative position values must be added.
+*  If no movement on the wheel has occurred since the last [_MOUSEINPUT](MOUSEINPUT.md)  read, [_MOUSEWHEEL](MOUSEWHEEL.md)  returns 0.
 
 
-#### EXAMPLES
-```vb
-DO
-   _LIMIT 50
-   DO WHILE _MOUSEINPUT
-       Scroll = Scroll + _MOUSEWHEEL
-       LOCATE 10, 20: PRINT Scroll
-   LOOP
-LOOP UNTIL INKEY$ = CHR$(13) ' press Enter to quit
-```
-  
-```vb
-DIM Array$(100)
-LINE INPUT "Enter a file name with 100 or more lines of text: ", file$
-OPEN file$ FOR INPUT AS #1
-DO UNTIL EOF(1)
-   inputcount = inputcount + 1
-   LINE INPUT #1, Array$(inputcount)
-   IF inputcount = 100 THEN EXIT DO
-LOOP
-FOR n = 1 TO 21: PRINT Array$(n): NEXT
-CLOSE #1
-DO
-   DO WHILE _MOUSEINPUT
-       IF row >= 0 THEN row = row + _MOUSEWHEEL ELSE row = 0 'prevent under scrolling
-       IF row > inputcount - 20 THEN row = inputcount - 20 'prevent over scrolling
-       IF prevrow <> row THEN 'look for a change in row value
-           IF row > 0 AND row <= inputcount - 20 THEN
-               CLS: LOCATE 2, 1
-               FOR n = row TO row + 20
-                   PRINT Array$(n)
-               NEXT
-           END IF
-       END IF
-       prevrow = row 'store previous row value
-   LOOP
-LOOP UNTIL INKEY$ > ""
-```
-  
-
+</blockquote>
 
 #### SEE ALSO
-* Featured in our "Keyword of the Day" series
-* [_MOUSEX](./_MOUSEX.md) , [_MOUSEY](./_MOUSEY.md) , [_MOUSEBUTTON](./_MOUSEBUTTON.md)
-* [_MOUSEINPUT](./_MOUSEINPUT.md) , [_MOUSEMOVE](./_MOUSEMOVE.md)
-* [_MOUSESHOW](./_MOUSESHOW.md) , [_MOUSEHIDE](./_MOUSEHIDE.md)
-* Controller Devices
+
+<blockquote>
+
+*  Featured in our "Keyword of the Day" series
+*  [_MOUSEX](MOUSEX.md)  , [_MOUSEY](MOUSEY.md)  , [_MOUSEBUTTON](MOUSEBUTTON.md) 
+*  [_MOUSEINPUT](MOUSEINPUT.md)  , [_MOUSEMOVE](MOUSEMOVE.md) 
+*  [_MOUSESHOW](MOUSESHOW.md)  , [_MOUSEHIDE](MOUSEHIDE.md) 
+*  Controller Devices
+
+</blockquote>

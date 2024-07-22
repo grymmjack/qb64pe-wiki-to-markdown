@@ -6,7 +6,7 @@
    _SNDOPEN - QB64 Phoenix Edition Wiki
   </title>
   <script>
-   document.documentElement.className="client-js";RLCONF={"wgBreakFrames":false,"wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgRequestId":"Zpp86wEfJaEdFRpaWXtRdgAAAac","wgCSPNonce":false,"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"SNDOPEN","wgTitle":"SNDOPEN","wgCurRevisionId":8900,"wgRevisionId":8900,"wgArticleId":336,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":[],"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgRelevantPageName":"SNDOPEN","wgRelevantArticleId":336,"wgIsProbablyEditable":false,"wgRelevantPageIsProbablyEditable":false,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgVector2022PreviewPages":[]};RLSTATE={"site.styles":"ready","user.styles":"ready","user":"ready"
+   document.documentElement.className="client-js";RLCONF={"wgBreakFrames":false,"wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgRequestId":"Zp2HD4VyUtajyJ55jofAoQAAARw","wgCSPNonce":false,"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"SNDOPEN","wgTitle":"SNDOPEN","wgCurRevisionId":9064,"wgRevisionId":9064,"wgArticleId":336,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":[],"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgRelevantPageName":"SNDOPEN","wgRelevantArticleId":336,"wgIsProbablyEditable":false,"wgRelevantPageIsProbablyEditable":false,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgVector2022PreviewPages":[]};RLSTATE={"site.styles":"ready","user.styles":"ready","user":"ready"
 ,"user.options":"loading","mediawiki.page.gallery.styles":"ready","skins.vector.styles.legacy":"ready"};RLPAGEMODULES=["site","mediawiki.page.ready","mediawiki.toc","skins.vector.legacy.js"];
   </script>
   <script>
@@ -202,21 +202,9 @@
         </i>
         can be
         <b>
-         WAV, AIFF, AIFC, FLAC, OGG, MP3, MID, IT, XM, S3M, MOD, RAD (v1 &amp; v2), AHX, HVL &amp; QOA
+         WAV, AIFF, AIFC, FLAC, OGG, MP3, IT, XM, S3M, MOD, RAD, AHX, HVL, MUS, HMI, HMP, HMQ, KAR, LDS, MDS, MIDS, RCP, R36, G18, G36, RMI, MID, MIDI, XFM, XMI &amp; QOA
         </b>
         file types.
-        <ul>
-         <li>
-          <b>
-           MID
-          </b>
-          support is enabled via the
-          <a href="/qb64wiki/index.php/$MIDISOUNDFONT" title="$MIDISOUNDFONT">
-           $MIDISOUNDFONT
-          </a>
-          metacommand.
-         </li>
-        </ul>
        </li>
        <li>
         The literal or variable
@@ -230,9 +218,33 @@
         <ul>
          <li>
           <b>
+           NODECODE
+          </b>
+          : This loads the sound into memory without decompressing it. Decompression is performed in small blocks at the final mixing stage.
+         </li>
+         <li>
+          <b>
            STREAM
           </b>
-          : This will "stream" the sound into memory rather than fully decoding it.
+          : This will stream the sound into memory in small blocks instead of loading it entirely. Using
+          <b>
+           NODECODE
+          </b>
+          with
+          <b>
+           STREAM
+          </b>
+          will postpone the block's decoding until the final mixing phase.
+         </li>
+         <li>
+          <b>
+           NOASYNC
+          </b>
+          : This option will block the caller until the entire sound (or a portion, if
+          <b>
+           STREAM
+          </b>
+          is utilized) is loaded and prepared in memory.
          </li>
          <li>
           <b>
@@ -255,7 +267,7 @@
         <b>
          STREAM
         </b>
-        when you want to play long sounds as background music and want to avoid loading delays.
+        when you want to play long sounds as background music.
        </li>
        <li>
         <a href="/qb64wiki/index.php/MEMSOUND" title="MEMSOUND">
@@ -264,6 +276,10 @@
         will not work for sounds loaded using
         <b>
          STREAM
+        </b>
+        ,
+        <b>
+         NODECODE
         </b>
         or
         <b>
@@ -296,6 +312,13 @@
          Play WAV sounds library
         </a>
         to check it or convert the sound file to FLAC, OGG or MP3.
+       </li>
+       <li>
+        MIDI files can be played using a built-in 108 channel OPL3 FM emulation, which is ideal for retro-style music playback. Additionally, MIDI files can also be played using other FM Banks and SoundFonts. For more information, refer to
+        <a href="/qb64wiki/index.php/MIDISOUNDBANK" title="MIDISOUNDBANK">
+         _MIDISOUNDBANK
+        </a>
+        .
        </li>
       </ul>
       <p>
@@ -525,10 +548,40 @@
         </b>
         the old OpenAL audio backend was finally removed.
        </li>
+       <li>
+        Support for unrestricted MUS, HMI, HMP, HMQ, KAR, LDS, MDS, MIDS, RCP, R36, G18, G36, RMI, MID, MIDI, XFM, and XMI was introduced in
+        <b>
+         QB64-PE v3.14.0
+        </b>
+        . The previous requirement to use
+        <a href="/qb64wiki/index.php/$UNSTABLE" title="$UNSTABLE">
+         $UNSTABLE
+        </a>
+        :
+        <b>
+         MIDI
+        </b>
+        and
+        <a href="/qb64wiki/index.php/$MIDISOUNDFONT" title="$MIDISOUNDFONT">
+         $MIDISOUNDFONT
+        </a>
+        has been removed.
+       </li>
+       <li>
+        <b>
+         NODECODE
+        </b>
+        and
+        <b>
+         NOASYNC
+        </b>
+        capabilities were added in
+        <b>
+         QB64-PE v3.14.0
+        </b>
+        .
+       </li>
       </ul>
-      <p>
-       <br/>
-      </p>
       <h2>
        <span class="mw-headline" id="Examples">
         Examples
@@ -802,12 +855,12 @@ dir = 0.01
       </center>
       <!-- 
 NewPP limit report
-Cached time: 20240719141507
+Cached time: 20240721212618
 Cache expiry: 86400
 Reduced expiry: false
 Complications: [show‐toc]
-CPU time usage: 0.077 seconds
-Real time usage: 0.104 seconds
+CPU time usage: 0.065 seconds
+Real time usage: 0.080 seconds
 Preprocessor visited node count: 731/1000000
 Post‐expand include size: 5713/2097152 bytes
 Template argument size: 963/2097152 bytes
@@ -818,24 +871,24 @@ Unstrip post‐expand size: 2365/5000000 bytes
 -->
       <!--
 Transclusion expansion time report (%,ms,calls,template)
-100.00%   73.980      1 -total
- 14.48%   10.710      1 Template:PageSyntax
- 13.48%    9.973     95 Template:Cl
-  4.41%    3.264      7 Template:Parameter
-  4.33%    3.200      1 Template:PageExamples
-  3.86%    2.853      3 Template:CodeEnd
-  3.67%    2.718      1 Template:PageDescription
-  3.53%    2.609      1 Template:PageAvailability
-  3.50%    2.589      3 Template:CodeStart
-  3.15%    2.330      1 Template:PageSeeAlso
+100.00%   45.604      1 -total
+ 11.32%    5.160     95 Template:Cl
+  6.08%    2.773      1 Template:PageExamples
+  5.67%    2.587      3 Template:CodeStart
+  5.28%    2.406      7 Template:Parameter
+  5.26%    2.401      1 Template:PageSyntax
+  4.80%    2.189      1 Template:PageDescription
+  4.66%    2.125      1 Template:PageSeeAlso
+  4.20%    1.914      1 Template:PageAvailability
+  3.70%    1.689      1 Template:PageNavigation
 -->
-      <!-- Saved in parser cache with key qb64pnix_mw19894-mwmb_:pcache:idhash:336-0!canonical and timestamp 20240719141507 and revision id 8900.
+      <!-- Saved in parser cache with key qb64pnix_mw19894-mwmb_:pcache:idhash:336-0!canonical and timestamp 20240721212618 and revision id 9064.
  -->
      </div>
      <div class="printfooter" data-nosnippet="">
       Retrieved from "
-      <a dir="ltr" href="https://qb64phoenix.com/qb64wiki/index.php?title=SNDOPEN&amp;oldid=8900">
-       https://qb64phoenix.com/qb64wiki/index.php?title=SNDOPEN&amp;oldid=8900
+      <a dir="ltr" href="https://qb64phoenix.com/qb64wiki/index.php?title=SNDOPEN&amp;oldid=9064">
+       https://qb64phoenix.com/qb64wiki/index.php?title=SNDOPEN&amp;oldid=9064
       </a>
       "
      </div>
@@ -1052,7 +1105,7 @@ You can view its source [e]">
         </a>
        </li>
        <li class="mw-list-item" id="t-permalink">
-        <a href="/qb64wiki/index.php?title=SNDOPEN&amp;oldid=8900" title="Permanent link to this revision of this page">
+        <a href="/qb64wiki/index.php?title=SNDOPEN&amp;oldid=9064" title="Permanent link to this revision of this page">
          <span>
           Permanent link
          </span>
@@ -1073,7 +1126,7 @@ You can view its source [e]">
   <footer class="mw-footer" id="footer" role="contentinfo">
    <ul id="footer-info">
     <li id="footer-info-lastmod">
-     This page was last edited on 25 May 2024, at 12:39.
+     This page was last edited on 21 July 2024, at 19:38.
     </li>
    </ul>
    <ul id="footer-places">
@@ -1102,7 +1155,7 @@ You can view its source [e]">
    </ul>
   </footer>
   <script>
-   (RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgPageParseReport":{"limitreport":{"cputime":"0.077","walltime":"0.104","ppvisitednodes":{"value":731,"limit":1000000},"postexpandincludesize":{"value":5713,"limit":2097152},"templateargumentsize":{"value":963,"limit":2097152},"expansiondepth":{"value":3,"limit":100},"expensivefunctioncount":{"value":0,"limit":100},"unstrip-depth":{"value":0,"limit":20},"unstrip-size":{"value":2365,"limit":5000000},"timingprofile":["100.00%   73.980      1 -total"," 14.48%   10.710      1 Template:PageSyntax"," 13.48%    9.973     95 Template:Cl","  4.41%    3.264      7 Template:Parameter","  4.33%    3.200      1 Template:PageExamples","  3.86%    2.853      3 Template:CodeEnd","  3.67%    2.718      1 Template:PageDescription","  3.53%    2.609      1 Template:PageAvailability","  3.50%    2.589      3 Template:CodeStart","  3.15%    2.330      1 Template:PageSeeAlso"]},"cachereport":{"timestamp":"20240719141507","ttl":86400,"transientcontent":false}}});mw.config.set({"wgBackendResponseTime":85});});
+   (RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgPageParseReport":{"limitreport":{"cputime":"0.065","walltime":"0.080","ppvisitednodes":{"value":731,"limit":1000000},"postexpandincludesize":{"value":5713,"limit":2097152},"templateargumentsize":{"value":963,"limit":2097152},"expansiondepth":{"value":3,"limit":100},"expensivefunctioncount":{"value":0,"limit":100},"unstrip-depth":{"value":0,"limit":20},"unstrip-size":{"value":2365,"limit":5000000},"timingprofile":["100.00%   45.604      1 -total"," 11.32%    5.160     95 Template:Cl","  6.08%    2.773      1 Template:PageExamples","  5.67%    2.587      3 Template:CodeStart","  5.28%    2.406      7 Template:Parameter","  5.26%    2.401      1 Template:PageSyntax","  4.80%    2.189      1 Template:PageDescription","  4.66%    2.125      1 Template:PageSeeAlso","  4.20%    1.914      1 Template:PageAvailability","  3.70%    1.689      1 Template:PageNavigation"]},"cachereport":{"timestamp":"20240721212618","ttl":86400,"transientcontent":false}}});mw.config.set({"wgBackendResponseTime":114});});
   </script>
  </body>
 </html>

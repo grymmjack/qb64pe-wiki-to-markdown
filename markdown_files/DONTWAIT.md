@@ -1,39 +1,100 @@
-## _DONTWAIT
+<style type="text/css">
+body {
+    background: #00a !important;
+    color: #ccc !important;
+}
+li {
+    list-style-type: square !important;
+    color: #ccc !important;
+}
+li::marker {
+    color: #77f !important;
+}    
+hr {
+    border-color: #55f !important;
+    border-width: 2px !important;
+}
+h2 {
+    color: #fff !important;
+    border: 0 !important;
+}
+h3 {
+    color: #cfc !important;
+    border: 0 !important;
+}
+h4 {
+    color: #ccc !important;
+    border: 0 !important;
+}
+h5 {
+    margin: 0 0 1em 0  !important;
+    color: #88f !important;
+    border: 0 !important;
+}
+code {
+    background: #000 !important;
+    margin: 0 !important;
+    padding: 8px !important;
+    border-radius: 8px !important; 
+    border: 1px solid #567 !important;
+}
+pre > code {
+    background: transparent !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    border-radius: inherit !important; 
+    border: 0 !important;
+}
+blockquote {
+    border: 0 !important;
+    background: transparent !important;
+    margin: 0 !important;
+    padding: 0 1em !important;
+}
+pre {
+    border-radius: 8px !important; 
+    border: 1px solid #567 !important;
+    margin: 0 !important;
+    box-shadow: 0px 5px 0px rgba(0, 0, 0, 0.25) !important;
+}
+a:link, a:visited, a:hover, a:active {
+    color: #ff0 !important;
+}
+
+</style>
+
+## [_DONTWAIT](DONTWAIT.md) [📖](https://qb64phoenix.com/qb64wiki/index.php/_DONTWAIT)
 ---
+<blockquote>
 
 ### _DONTWAIT is used with the SHELL statement in QB64 to specify that the program shouldn't wait until the external command/program is finished (which it otherwise does by default).
 
+</blockquote>
+
 #### SYNTAX
+
+<blockquote>
 
 `SHELL [[[_DONTWAIT]]] [ commandLine$ ]`
 
+</blockquote>
+
 #### DESCRIPTION
-* Runs the command/program specified in commandline$ and lets the calling program continue at the same time in its current screen format.
-* Especially useful when CMD /C or START is used in a [SHELL](./SHELL.md) command line to run another program.
-* QB64 automatically uses CMD /C or COMMAND /C when using [SHELL](./SHELL.md).
-* QB64 program screens will not get distorted or minimized like QBasic fullscreen modes would.
+
+<blockquote>
+
+*  Runs the command/program specified in commandline$ and lets the calling program continue at the same time in its current screen format.
+*  Especially useful when CMD /C or START is used in a [SHELL](SHELL.md)  command line to run another program.
+*  QB64 automatically uses CMD /C or COMMAND /C when using [SHELL](SHELL.md) .
+*  QB64 program screens will not get distorted or minimized like QBasic fullscreen modes would.
 
 
-#### EXAMPLES
-```vb
-SHELL _DONTWAIT "notepad " + filename$
-
-FOR x = 1 TO 5
-   _LIMIT 1
-   PRINT x
-NEXT
-```
-  
-##### (opens up notepad at the same time as counting to 5)
-```vb
-1
-2
-3
-4
-5
-```
-  
-
+</blockquote>
 
 #### SEE ALSO
-* [SHELL](./SHELL.md) , [_HIDE](./_HIDE.md)
+
+<blockquote>
+
+*  [SHELL](SHELL.md)  , [_HIDE](HIDE.md) 
+
+</blockquote>

@@ -836,7 +836,6 @@ QB64 Phoenix Edition Wiki:Copyrights
 QB64 Phoenix Edition Wiki:General disclaimer
 QB64 Phoenix Edition Wiki:Privacy policy
 Question mark
-Quick Reference - Tables
 Quotation mark
 R2D
 R2G

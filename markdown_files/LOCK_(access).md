@@ -1,13 +1,23 @@
 ## LOCK (access)
 ---
+<blockquote>
 
 ### The LOCK statement restricts access to parts of a file by other programs or processes.
 
+</blockquote>
+
 #### SYNTAX
+
+<blockquote>
 
 `LOCK [#] fileNumber%`
 
+</blockquote>
+
 #### DESCRIPTION
+
+<blockquote>
+
 * fileNumber% is the file number of the file to lock.
 * In the first syntax, the entire file is locked.
 * In the second syntax, record& is the record number of the file to lock.
@@ -18,7 +28,21 @@
 * Keyword not supported in Linux or macOS versions
 
 
+</blockquote>
+
+#### EXAMPLES
+
+<blockquote>
+
+
+</blockquote>
+
 #### SEE ALSO
+
+<blockquote>
+
 * [UNLOCK](./UNLOCK.md)
 * [OPEN](./OPEN.md)
 * [ACCESS](./ACCESS.md)
+
+</blockquote>

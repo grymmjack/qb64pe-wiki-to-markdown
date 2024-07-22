@@ -1,13 +1,23 @@
 ## _OFFSET (function)
 ---
+<blockquote>
 
 ### The _OFFSET function returns the memory offset of/within a given variable.
 
+</blockquote>
+
 #### SYNTAX
+
+<blockquote>
 
 `offset%& = _OFFSET ( variable )`
 
+</blockquote>
+
 #### DESCRIPTION
+
+<blockquote>
+
 * The variable parameter can be any type of numerical or string variable name.
 * API [LIBRARY](./LIBRARY.md) parameter or type names may include lp, ptr or p which designates them as a pointer type.
 * [_OFFSET](./_OFFSET.md) function return values should be stored in [_OFFSET](./_OFFSET.md) type variables. As no other variable type is 'elastic' like [_OFFSET](./_OFFSET.md) , there can be no guarantee that any other variable type can hold the value of an [_OFFSET](./_OFFSET.md).
@@ -17,28 +27,15 @@
 * Warning: QB64 variable length strings can move about in memory at any time. If you get the [_OFFSET](./_OFFSET.md) of a variable length sting on one line and use it on the next it may not be there anymore. To be safe, move variable length strings into fixed length strings first.
 
 
-#### EXAMPLES
-##### Example: Using memcpy with the _OFFSET function values as parameters.
-```vb
-DECLARE CUSTOMTYPE LIBRARY
-   SUB memcpy (BYVAL dest AS _OFFSET, BYVAL source AS _OFFSET, BYVAL bytes AS LONG)
-END DECLARE
-
-a$ = "1234567890"
-b$ = "ABCDEFGHIJ"
-
-memcpy _OFFSET(a$) + 5, _OFFSET(b$) + 5, 5
-PRINT a$
-```
-  
-```vb
-12345FGHIJ
-```
-  
-
+</blockquote>
 
 #### SEE ALSO
+
+<blockquote>
+
 * [_OFFSET](./_OFFSET.md)
 * [DECLARE](./DECLARE.md) [LIBRARY](./LIBRARY.md)
 * [DECLARE](./DECLARE.md) [LIBRARY](./LIBRARY.md)
 * Using [_OFFSET](./_OFFSET.md)
+
+</blockquote>

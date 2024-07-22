@@ -6,7 +6,7 @@
    _LOADIMAGE - QB64 Phoenix Edition Wiki
   </title>
   <script>
-   document.documentElement.className="client-js";RLCONF={"wgBreakFrames":false,"wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgRequestId":"Zpp8UuZL16Jh9AOFAcaAggAAANg","wgCSPNonce":false,"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"LOADIMAGE","wgTitle":"LOADIMAGE","wgCurRevisionId":8660,"wgRevisionId":8660,"wgArticleId":170,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":[],"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgRelevantPageName":"LOADIMAGE","wgRelevantArticleId":170,"wgIsProbablyEditable":false,"wgRelevantPageIsProbablyEditable":false,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgVector2022PreviewPages":[]};RLSTATE={"site.styles":"ready","user.styles":"ready","user":
+   document.documentElement.className="client-js";RLCONF={"wgBreakFrames":false,"wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgRequestId":"Zp2GeCSKw_M1BQgKFBbkWAAAAvI","wgCSPNonce":false,"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"LOADIMAGE","wgTitle":"LOADIMAGE","wgCurRevisionId":9046,"wgRevisionId":9046,"wgArticleId":170,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":[],"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgRelevantPageName":"LOADIMAGE","wgRelevantArticleId":170,"wgIsProbablyEditable":false,"wgRelevantPageIsProbablyEditable":false,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgVector2022PreviewPages":[]};RLSTATE={"site.styles":"ready","user.styles":"ready","user":
 "ready","user.options":"loading","mediawiki.page.gallery.styles":"ready","skins.vector.styles.legacy":"ready"};RLPAGEMODULES=["site","mediawiki.page.ready","mediawiki.toc","skins.vector.legacy.js"];
   </script>
   <script>
@@ -149,18 +149,6 @@
                Examples
               </span>
              </a>
-             <ul>
-              <li class="toclevel-2 tocsection-2">
-               <a href="#More_examples">
-                <span class="tocnumber">
-                 5.1
-                </span>
-                <span class="toctext">
-                 More examples
-                </span>
-               </a>
-              </li>
-             </ul>
             </li>
             <li class="toclevel-1">
              <a href="#See_also">
@@ -341,7 +329,7 @@
        <li>
         Image file formats
         <b>
-         JPG, PNG, TGA, BMP, PSD, GIF, HDR, PIC, PNM, PCX, SVG and QOI
+         JPG, PNG, TGA, BMP, PSD, GIF, HDR, PIC, PNM, PCX, SVG, ICO, CUR and QOI
         </b>
         are supported. A path can also be given.
        </li>
@@ -350,7 +338,7 @@
         <i>
          mode&amp;
         </i>
-        parameter can be 32, 33,256 or 257. Omit to use the current graphic screen settings.
+        parameter can be 32, 33, 256 or 257. Omit to use the current graphic screen settings.
        </li>
        <li>
         Mode 33 images are
@@ -660,6 +648,13 @@
         </b>
         .
        </li>
+       <li>
+        ICO and CUR support was added in
+        <b>
+         QB64-PE v3.14.0
+        </b>
+        .
+       </li>
       </ul>
       <p>
        <br/>
@@ -681,7 +676,7 @@
        <tbody>
         <tr>
          <td>
-          <pre class="codeide">i&amp; = <a class="mw-selflink selflink"><span style="color:#4593D8;">_LOADIMAGE</span></a>("mypic.jpg", 32)
+          <pre class="codeide">i&amp; = <a class="mw-selflink selflink"><span style="color:#4593D8;">_LOADIMAGE</span></a>(<span style="color:#FFB100;">"mypic.jpg"</span>, <span style="color:#F580B1;">32</span>)
 <a href="/qb64wiki/index.php/SCREEN" title="SCREEN"><span style="color:#4593D8;">SCREEN</span></a> i&amp;
 </pre>
          </td>
@@ -708,27 +703,27 @@
        <tbody>
         <tr>
          <td>
-          <pre class="codeide"><a href="/qb64wiki/index.php/SCREEN" title="SCREEN"><span style="color:#4593D8;">SCREEN</span></a> <a href="/qb64wiki/index.php/NEWIMAGE" title="NEWIMAGE"><span style="color:#4593D8;">_NEWIMAGE</span></a>(800, 600, 32)
-img&amp; = <a class="mw-selflink selflink"><span style="color:#4593D8;">_LOADIMAGE</span></a>("QB64.PNG")                           'use any 24/32 bit image
+          <pre class="codeide"><a href="/qb64wiki/index.php/SCREEN" title="SCREEN"><span style="color:#4593D8;">SCREEN</span></a> <a href="/qb64wiki/index.php/NEWIMAGE" title="NEWIMAGE"><span style="color:#4593D8;">_NEWIMAGE</span></a>(<span style="color:#F580B1;">800</span>, <span style="color:#F580B1;">600</span>, <span style="color:#F580B1;">32</span>)
+img&amp; = <a class="mw-selflink selflink"><span style="color:#4593D8;">_LOADIMAGE</span></a>(<span style="color:#FFB100;">"QB64.PNG"</span>) <span style="color:#919191;">'use any 24/32 bit image</span>
 
 wide% = <a href="/qb64wiki/index.php/WIDTH_(function)" title="WIDTH (function)"><span style="color:#4593D8;">_WIDTH</span></a>(img&amp;): deep% = <a href="/qb64wiki/index.php/HEIGHT" title="HEIGHT"><span style="color:#4593D8;">_HEIGHT</span></a>(img&amp;)
-TLC$ = "BL" + <a href="/qb64wiki/index.php/STR$" title="STR$"><span style="color:#4593D8;">STR$</span></a>(wide% \ 2) + "BU" + <a href="/qb64wiki/index.php/STR$" title="STR$"><span style="color:#4593D8;">STR$</span></a>(deep% \ 2)  'start draw at top left corner
-RET$ = "BD BL" + <a href="/qb64wiki/index.php/STR$" title="STR$"><span style="color:#4593D8;">STR$</span></a>(wide%)                            'return to left side of image
+TLC$ = <span style="color:#FFB100;">"BL"</span> + <a href="/qb64wiki/index.php/STR$" title="STR$"><span style="color:#4593D8;">STR$</span></a>(wide% \ <span style="color:#F580B1;">2</span>) + <span style="color:#FFB100;">"BU"</span> + <a href="/qb64wiki/index.php/STR$" title="STR$"><span style="color:#4593D8;">STR$</span></a>(deep% \ <span style="color:#F580B1;">2</span>) <span style="color:#919191;">'start draw at top left corner</span>
+RET$ = <span style="color:#FFB100;">"BD BL"</span> + <a href="/qb64wiki/index.php/STR$" title="STR$"><span style="color:#4593D8;">STR$</span></a>(wide%) <span style="color:#919191;">'return to left side of image</span>
 <a href="/qb64wiki/index.php/SOURCE" title="SOURCE"><span style="color:#4593D8;">_SOURCE</span></a> img&amp;
-<a href="/qb64wiki/index.php/DEST" title="DEST"><span style="color:#4593D8;">_DEST</span></a> 0
-DO
-  <a href="/qb64wiki/index.php/FOR...NEXT" title="FOR...NEXT"><span style="color:#4593D8;">FOR</span></a> angle% = 0 <a href="/qb64wiki/index.php/TO" title="TO"><span style="color:#4593D8;">TO</span></a> 360 <a href="/qb64wiki/index.php/STEP" title="STEP"><span style="color:#4593D8;">STEP</span></a> 15
-    <a href="/qb64wiki/index.php/CLS" title="CLS"><span style="color:#4593D8;">CLS</span></a>
-    <a href="/qb64wiki/index.php/DRAW" title="DRAW"><span style="color:#4593D8;">DRAW</span></a> "BM400, 300" + "TA=" + <a href="/qb64wiki/index.php/VARPTR$" title="VARPTR$"><span style="color:#4593D8;">VARPTR$</span></a>(angle%) + TLC$
-    <a href="/qb64wiki/index.php/FOR...NEXT" title="FOR...NEXT"><span style="color:#4593D8;">FOR</span></a> y = 0 <a href="/qb64wiki/index.php/TO" title="TO"><span style="color:#4593D8;">TO</span></a> deep% - 1
-      <a href="/qb64wiki/index.php/FOR...NEXT" title="FOR...NEXT"><span style="color:#4593D8;">FOR</span></a> x = 0 <a href="/qb64wiki/index.php/TO" title="TO"><span style="color:#4593D8;">TO</span></a> wide% - 1
-        <a href="/qb64wiki/index.php/DRAW" title="DRAW"><span style="color:#4593D8;">DRAW</span></a> "C" + <a href="/qb64wiki/index.php/STR$" title="STR$"><span style="color:#4593D8;">STR$</span></a>(<a href="/qb64wiki/index.php/POINT" title="POINT"><span style="color:#4593D8;">POINT</span></a>(x, y)) + "R1"            'color and DRAW each pixel
-      <a href="/qb64wiki/index.php/NEXT" title="NEXT"><span style="color:#4593D8;">NEXT</span></a>
-      <a href="/qb64wiki/index.php/DRAW" title="DRAW"><span style="color:#4593D8;">DRAW</span></a> RET$
+<a href="/qb64wiki/index.php/DEST" title="DEST"><span style="color:#4593D8;">_DEST</span></a> <span style="color:#F580B1;">0</span>
+<a class="mw-redirect" href="/qb64wiki/index.php/DO" title="DO"><span style="color:#4593D8;">DO</span></a>
+    <a href="/qb64wiki/index.php/FOR" title="FOR"><span style="color:#4593D8;">FOR</span></a> angle% = <span style="color:#F580B1;">0</span> <a href="/qb64wiki/index.php/TO" title="TO"><span style="color:#4593D8;">TO</span></a> <span style="color:#F580B1;">360</span> <a href="/qb64wiki/index.php/STEP" title="STEP"><span style="color:#4593D8;">STEP</span></a> <span style="color:#F580B1;">15</span>
+        <a href="/qb64wiki/index.php/CLS" title="CLS"><span style="color:#4593D8;">CLS</span></a>
+        <a href="/qb64wiki/index.php/DRAW" title="DRAW"><span style="color:#4593D8;">DRAW</span></a> <span style="color:#FFB100;">"BM400, 300"</span> + <span style="color:#FFB100;">"TA="</span> + <a href="/qb64wiki/index.php/VARPTR$" title="VARPTR$"><span style="color:#4593D8;">VARPTR$</span></a>(angle%) + TLC$
+        <a href="/qb64wiki/index.php/FOR" title="FOR"><span style="color:#4593D8;">FOR</span></a> y = <span style="color:#F580B1;">0</span> <a href="/qb64wiki/index.php/TO" title="TO"><span style="color:#4593D8;">TO</span></a> deep% - <span style="color:#F580B1;">1</span>
+            <a href="/qb64wiki/index.php/FOR" title="FOR"><span style="color:#4593D8;">FOR</span></a> x = <span style="color:#F580B1;">0</span> <a href="/qb64wiki/index.php/TO" title="TO"><span style="color:#4593D8;">TO</span></a> wide% - <span style="color:#F580B1;">1</span>
+                <a href="/qb64wiki/index.php/DRAW" title="DRAW"><span style="color:#4593D8;">DRAW</span></a> <span style="color:#FFB100;">"C"</span> + <a href="/qb64wiki/index.php/STR$" title="STR$"><span style="color:#4593D8;">STR$</span></a>(<a href="/qb64wiki/index.php/POINT" title="POINT"><span style="color:#4593D8;">POINT</span></a>(x, y)) + <span style="color:#FFB100;">"R1"</span> <span style="color:#919191;">'color and DRAW each pixel</span>
+            <a href="/qb64wiki/index.php/NEXT" title="NEXT"><span style="color:#4593D8;">NEXT</span></a>
+            <a href="/qb64wiki/index.php/DRAW" title="DRAW"><span style="color:#4593D8;">DRAW</span></a> RET$
+        <a href="/qb64wiki/index.php/NEXT" title="NEXT"><span style="color:#4593D8;">NEXT</span></a>
+        <a href="/qb64wiki/index.php/DISPLAY" title="DISPLAY"><span style="color:#4593D8;">_DISPLAY</span></a> <span style="color:#919191;">'NOTE: CPU usage will be HIGH!</span>
     <a href="/qb64wiki/index.php/NEXT" title="NEXT"><span style="color:#4593D8;">NEXT</span></a>
-    <a href="/qb64wiki/index.php/DISPLAY" title="DISPLAY"><span style="color:#4593D8;">_DISPLAY</span></a>                         'NOTE: CPU usage will be HIGH!
-  <a href="/qb64wiki/index.php/NEXT" title="NEXT"><span style="color:#4593D8;">NEXT</span></a>
-<a href="/qb64wiki/index.php/LOOP" title="LOOP"><span style="color:#4593D8;">LOOP</span></a> <a href="/qb64wiki/index.php/UNTIL" title="UNTIL"><span style="color:#4593D8;">UNTIL</span></a> <a href="/qb64wiki/index.php/INKEY$" title="INKEY$"><span style="color:#4593D8;">INKEY$</span></a> &gt; ""
+<a href="/qb64wiki/index.php/DO...LOOP" title="DO...LOOP"><span style="color:#4593D8;">LOOP UNTIL</span></a> <a href="/qb64wiki/index.php/INKEY$" title="INKEY$"><span style="color:#4593D8;">INKEY$</span></a> &gt; <span style="color:#FFB100;">""</span>
 </pre>
          </td>
         </tr>
@@ -956,31 +951,6 @@ svg_data:
       <p>
        <br/>
       </p>
-      <h3>
-       <span class="mw-headline" id="More_examples">
-        More examples
-       </span>
-      </h3>
-      <ul>
-       <li>
-        <a href="/qb64wiki/index.php/Program_ScreenShots" title="Program ScreenShots">
-         Program ScreenShots
-        </a>
-       </li>
-       <li>
-        <a href="/qb64wiki/index.php/SaveImage_SUB" title="SaveImage SUB">
-         SaveImage SUB
-        </a>
-       </li>
-       <li>
-        <a href="/qb64wiki/index.php/ThirtyTwoBit_SUB" title="ThirtyTwoBit SUB">
-         ThirtyTwoBit SUB
-        </a>
-       </li>
-      </ul>
-      <p>
-       <br/>
-      </p>
       <h2>
        <span class="mw-headline" id="See_also">
         See also
@@ -990,10 +960,6 @@ svg_data:
        <li>
         <a href="/qb64wiki/index.php/FREEIMAGE" title="FREEIMAGE">
          _FREEIMAGE
-        </a>
-        ,
-        <a href="/qb64wiki/index.php/ICON" title="ICON">
-         _ICON
         </a>
        </li>
        <li>
@@ -1096,40 +1062,40 @@ svg_data:
       </center>
       <!-- 
 NewPP limit report
-Cached time: 20240719070738
+Cached time: 20240721170554
 Cache expiry: 86400
 Reduced expiry: false
 Complications: [show‐toc]
-CPU time usage: 0.122 seconds
-Real time usage: 0.143 seconds
-Preprocessor visited node count: 3570/1000000
-Post‐expand include size: 20185/2097152 bytes
-Template argument size: 6047/2097152 bytes
+CPU time usage: 0.133 seconds
+Real time usage: 0.166 seconds
+Preprocessor visited node count: 3063/1000000
+Post‐expand include size: 21746/2097152 bytes
+Template argument size: 6767/2097152 bytes
 Highest expansion depth: 4/100
 Expensive parser function count: 0/100
 Unstrip recursion depth: 0/20
-Unstrip post‐expand size: 7031/5000000 bytes
+Unstrip post‐expand size: 7232/5000000 bytes
 -->
       <!--
 Transclusion expansion time report (%,ms,calls,template)
-100.00%   76.612      1 -total
- 12.69%    9.724    219 Template:Cl
-  8.81%    6.747    134 Template:Text
-  4.48%    3.431      1 Template:Cm
-  3.66%    2.803      1 Template:PageAvailability
-  3.37%    2.578      1 Template:PageSyntax
-  3.15%    2.411      2 Template:Small
-  2.97%    2.277      1 Template:PageExamples
-  2.92%    2.237      4 Template:CodeStart
-  2.80%    2.146      1 Template:PageSeeAlso
+100.00%   95.379      1 -total
+ 14.32%   13.655    219 Template:Cl
+  9.19%    8.767    163 Template:Text
+  7.47%    7.128      4 Template:CodeStart
+  3.55%    3.386      4 Template:CodeEnd
+  3.45%    3.286     14 Template:Parameter
+  3.32%    3.165      2 Template:Small
+  2.73%    2.608      1 Template:PageSyntax
+  2.54%    2.421      1 Template:Cm
+  2.45%    2.338      1 Template:PageAvailability
 -->
-      <!-- Saved in parser cache with key qb64pnix_mw19894-mwmb_:pcache:idhash:170-0!canonical and timestamp 20240719070738 and revision id 8660.
+      <!-- Saved in parser cache with key qb64pnix_mw19894-mwmb_:pcache:idhash:170-0!canonical and timestamp 20240721170554 and revision id 9046.
  -->
      </div>
      <div class="printfooter" data-nosnippet="">
       Retrieved from "
-      <a dir="ltr" href="https://qb64phoenix.com/qb64wiki/index.php?title=LOADIMAGE&amp;oldid=8660">
-       https://qb64phoenix.com/qb64wiki/index.php?title=LOADIMAGE&amp;oldid=8660
+      <a dir="ltr" href="https://qb64phoenix.com/qb64wiki/index.php?title=LOADIMAGE&amp;oldid=9046">
+       https://qb64phoenix.com/qb64wiki/index.php?title=LOADIMAGE&amp;oldid=9046
       </a>
       "
      </div>
@@ -1346,7 +1312,7 @@ You can view its source [e]">
         </a>
        </li>
        <li class="mw-list-item" id="t-permalink">
-        <a href="/qb64wiki/index.php?title=LOADIMAGE&amp;oldid=8660" title="Permanent link to this revision of this page">
+        <a href="/qb64wiki/index.php?title=LOADIMAGE&amp;oldid=9046" title="Permanent link to this revision of this page">
          <span>
           Permanent link
          </span>
@@ -1367,7 +1333,7 @@ You can view its source [e]">
   <footer class="mw-footer" id="footer" role="contentinfo">
    <ul id="footer-info">
     <li id="footer-info-lastmod">
-     This page was last edited on 5 January 2024, at 20:02.
+     This page was last edited on 21 July 2024, at 17:05.
     </li>
    </ul>
    <ul id="footer-places">
@@ -1396,7 +1362,7 @@ You can view its source [e]">
    </ul>
   </footer>
   <script>
-   (RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgPageParseReport":{"limitreport":{"cputime":"0.122","walltime":"0.143","ppvisitednodes":{"value":3570,"limit":1000000},"postexpandincludesize":{"value":20185,"limit":2097152},"templateargumentsize":{"value":6047,"limit":2097152},"expansiondepth":{"value":4,"limit":100},"expensivefunctioncount":{"value":0,"limit":100},"unstrip-depth":{"value":0,"limit":20},"unstrip-size":{"value":7031,"limit":5000000},"timingprofile":["100.00%   76.612      1 -total"," 12.69%    9.724    219 Template:Cl","  8.81%    6.747    134 Template:Text","  4.48%    3.431      1 Template:Cm","  3.66%    2.803      1 Template:PageAvailability","  3.37%    2.578      1 Template:PageSyntax","  3.15%    2.411      2 Template:Small","  2.97%    2.277      1 Template:PageExamples","  2.92%    2.237      4 Template:CodeStart","  2.80%    2.146      1 Template:PageSeeAlso"]},"cachereport":{"timestamp":"20240719070738","ttl":86400,"transientcontent":false}}});mw.config.set({"wgBackendResponseTime":138});});
+   (RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgPageParseReport":{"limitreport":{"cputime":"0.133","walltime":"0.166","ppvisitednodes":{"value":3063,"limit":1000000},"postexpandincludesize":{"value":21746,"limit":2097152},"templateargumentsize":{"value":6767,"limit":2097152},"expansiondepth":{"value":4,"limit":100},"expensivefunctioncount":{"value":0,"limit":100},"unstrip-depth":{"value":0,"limit":20},"unstrip-size":{"value":7232,"limit":5000000},"timingprofile":["100.00%   95.379      1 -total"," 14.32%   13.655    219 Template:Cl","  9.19%    8.767    163 Template:Text","  7.47%    7.128      4 Template:CodeStart","  3.55%    3.386      4 Template:CodeEnd","  3.45%    3.286     14 Template:Parameter","  3.32%    3.165      2 Template:Small","  2.73%    2.608      1 Template:PageSyntax","  2.54%    2.421      1 Template:Cm","  2.45%    2.338      1 Template:PageAvailability"]},"cachereport":{"timestamp":"20240721170554","ttl":86400,"transientcontent":false}}});mw.config.set({"wgBackendResponseTime":134});});
   </script>
  </body>
 </html>

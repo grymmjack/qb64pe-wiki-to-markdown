@@ -1,13 +1,23 @@
 ## _PALETTECOLOR (function)
 ---
+<blockquote>
 
 ### The _PALETTECOLOR function is used to return the 32 bit attribute color setting of an image or screen page handle's palette.
 
+</blockquote>
+
 #### SYNTAX
+
+<blockquote>
 
 `color32Value& = _PALETTECOLOR ( attributeNumber% , imgHandle& )`
 
+</blockquote>
+
 #### DESCRIPTION
+
+<blockquote>
+
 * attributeNumber% is the color attribute value from 0 to 255 for 1, 4 or 8 bit images.
 * imgHandle& is the image handle being read for color data. Zero can be used to read the current screen mode palette.
 * Returns the 32 bit color value to be used by the 32 bit RGB functions.
@@ -15,33 +25,14 @@
 * Although 32 bit palette values are returned, the function cannot be used with 32 bit images or screen modes.
 
 
-#### EXAMPLES
-##### Example: How _PALETTECOLOR works on 32 bit RGB compared to a 4 BPP(SCREEN 12) QBasic procedure.
-```vb
-SCREEN 12                         'can use any QBasic legacy screen mode
-DIM RGB(0 TO 47) AS INTEGER       'color intensity array
-FOR c& = 0 TO 15
- 'OUT &H3C7, c&                  'set color attribute to read
- value32& = _PALETTECOLOR(c&, 0) 'sets color value to read of an image page handle.
- 'red% = INP(&H3C9)
- red% = _RED32(value32&)
- 'green% = INP(&H3C9)
- green% = _GREEN32(value32&)
- 'blue% = INP(&H3C9)
- blue% = _BLUE32(value32&)
- RGB(c& * 3) = red%: RGB((c& * 3) + 1) = green%: RGB((c& * 3) + 2) = blue%
-NEXT
-FOR i = 0 TO 47 STEP 3
- RGBval$ = LTRIM$(STR$(RGB(i))) + "," + STR$(RGB(i + 1)) + "," + STR$(RGB(i + 2)) + ")"
- PRINT "Color"; i / 3, "_RGB(" + RGBval$;
- PRINT
-NEXT
-END
-```
-  
-
+</blockquote>
 
 #### SEE ALSO
+
+<blockquote>
+
 * [_PALETTECOLOR](./_PALETTECOLOR.md)
 * [_NEWIMAGE](./_NEWIMAGE.md) , [_LOADIMAGE](./_LOADIMAGE.md)
 * SaveImage [SUB](./SUB.md)
+
+</blockquote>

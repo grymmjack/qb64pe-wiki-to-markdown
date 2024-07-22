@@ -1,27 +1,100 @@
-## _ECHO
+<style type="text/css">
+body {
+    background: #00a !important;
+    color: #ccc !important;
+}
+li {
+    list-style-type: square !important;
+    color: #ccc !important;
+}
+li::marker {
+    color: #77f !important;
+}    
+hr {
+    border-color: #55f !important;
+    border-width: 2px !important;
+}
+h2 {
+    color: #fff !important;
+    border: 0 !important;
+}
+h3 {
+    color: #cfc !important;
+    border: 0 !important;
+}
+h4 {
+    color: #ccc !important;
+    border: 0 !important;
+}
+h5 {
+    margin: 0 0 1em 0  !important;
+    color: #88f !important;
+    border: 0 !important;
+}
+code {
+    background: #000 !important;
+    margin: 0 !important;
+    padding: 8px !important;
+    border-radius: 8px !important; 
+    border: 1px solid #567 !important;
+}
+pre > code {
+    background: transparent !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    border-radius: inherit !important; 
+    border: 0 !important;
+}
+blockquote {
+    border: 0 !important;
+    background: transparent !important;
+    margin: 0 !important;
+    padding: 0 1em !important;
+}
+pre {
+    border-radius: 8px !important; 
+    border: 1px solid #567 !important;
+    margin: 0 !important;
+    box-shadow: 0px 5px 0px rgba(0, 0, 0, 0.25) !important;
+}
+a:link, a:visited, a:hover, a:active {
+    color: #ff0 !important;
+}
+
+</style>
+
+## [_ECHO](ECHO.md) [📖](https://qb64phoenix.com/qb64wiki/index.php/_ECHO)
 ---
+<blockquote>
 
 ### The _ECHO statement allows outputting text to a $CONSOLE window without having to alternate between _DEST pages.
 
+</blockquote>
+
 #### SYNTAX
+
+<blockquote>
 
 `_ECHO { "text to output" | textVariable$ }`
 
+</blockquote>
+
 #### DESCRIPTION
-* [_ECHO](./_ECHO.md) is a shorthand to saving current [_DEST](./_DEST.md) , switching to [_DEST](./_DEST.md) [_CONSOLE](./_CONSOLE.md) , PRINTing , then switching back to the previous [_DEST](./_DEST.md) .
-* To output numbers, use the STR$ function.
+
+<blockquote>
+
+*  [_ECHO](ECHO.md)  is a shorthand to saving current [_DEST](DEST.md)  , switching to [_DEST](DEST.md)  [_CONSOLE]( [CONSOLE](CONSOLE.md) .md)  , PRINTing , then switching back to the previous [_DEST](DEST.md)  .
+*  To output numbers, use the STR$ function.
 
 
-#### EXAMPLES
-```vb
-$CONSOLE
-PRINT "this will show in the main window"
-_ECHO "this will show in the console"
-```
-  
-
+</blockquote>
 
 #### SEE ALSO
-* [_DEST](./_DEST.md)
-* $[CONSOLE](./CONSOLE.md) , [_CONSOLE](./_CONSOLE.md)
-* STR$
+
+<blockquote>
+
+*  [_DEST](DEST.md) 
+*  $CONSOLE , [_CONSOLE](CONSOLE.md) 
+*  [STR\$](STR\$.md) 
+
+</blockquote>
