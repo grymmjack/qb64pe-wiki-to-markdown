@@ -72,7 +72,6 @@ def fetch_html_offline(path):
     Returns:
         str: The fetched HTML content, or None if an error occurred.
     """
-
     try:
         with open(path, 'r') as file:
             html_content = '\n'.join([line.strip() for line in file.readlines()])
@@ -95,27 +94,26 @@ def link_keywords(line, use_file=True):
         str: The processed line with keywords replaced by markdown links.
     """
     ret = line
-    processed_keywords = []
-    word_boundary_open =  '\\s*\\b'
-    word_boundary_close = '(\\b|$)'
-    neg_lookahead = '(?![\(|\)])'
-    for keyword in keywords_sorted:
-        if keyword in line:
-            keyword_esc = keyword.replace('$', '\$')
-            find = neg_lookahead + word_boundary_open + keyword_esc + word_boundary_close
+    words = line.split(' ')
+    items = []
+    for word in words:
+        word = word.replace(' ', '')
+        word = word.strip()
+        if word in keywords_sorted:
+            keyword_esc = escape_dollar_signs(word)
             keyword_esc = keyword_esc.replace('/', '-')
-            if len(re.findall(find, ' '.join(processed_keywords))) == 0:
-                keyword_no_prefix = re.sub('^_', '', keyword_esc) # remove leading underscore
-                if use_file:
-                    # ret = ret.replace(keyword, f'[{keyword}](file:{HELP_DIR}/{keyword}.md)')
-                    repl = f' [{keyword_esc}](file:{HELP_DIR}/{keyword_no_prefix}.md) '
-                else:
-                    # ret = ret.replace(keyword, f'[{keyword}]({HELP_DIR}/{keyword}.md)')
-                    repl = f' [{keyword_esc}]({keyword_no_prefix}.md) '
-
-                ret = re.sub(find, repl, ret, flags=re.IGNORECASE | re.DOTALL | re.MULTILINE)
-                processed_keywords.append(keyword)
-    ret = re.sub('^\*', '* ', ret)
+            keyword_no_prefix = re.sub('^_', '', keyword_esc) # remove leading underscore
+            if use_file:
+                repl = f'[{keyword_esc}](file:{HELP_DIR}/{keyword_no_prefix}.md)'
+            else:
+                repl = f'[{keyword_esc}]({keyword_no_prefix}.md)'
+            items.append(repl)
+        else:
+            if word != '*':
+                items.append(word)
+            else:
+                items.append('\n*')
+    ret = ' '.join(items)
     return ret
 
 
@@ -140,7 +138,7 @@ def get_list_items(tag, keyword, linked=False, indent_level=0):
             work_li.ul.decompose()
             line = work_li.get_text(strip=True, separator=' ')
         else:
-            # If no inside ul, get the text from the current li.
+            # If no inside ul, get the text from the current li
             line = tag.get_text(strip=True, separator=' ')
 
         # line = tag.get_text(strip=True, separator=' ')
@@ -175,11 +173,12 @@ def convert_to_markdown(html, keyword):
         h1_tag = soup.find('h1', class_="firstHeading mw-first-heading")
         if h1_tag:
             h1_keyword = h1_tag.text.strip().replace('$', '\$')
-            h1_keyword = h1_keyword.replace(' ', '_')
             h1_keyword = h1_keyword.replace('/', '-')
             h1_page = re.sub('^_', '', h1_keyword) # remove leading underscore
-            wiki_link = ' [📖](https://qb64phoenix.com/qb64wiki/index.php/' + h1_tag.text.strip() + ')'
-            ret_content += '## [' +  h1_keyword + '](' + h1_page + '.md)' + wiki_link + '\n---\n'
+            h1_page = h1_page.replace(' ', '_')
+            h1_wiki_keyword = urllib.parse.quote(h1_tag.text.strip())
+            wiki_link = '[📖](https://qb64phoenix.com/qb64wiki/index.php/' + h1_wiki_keyword + ')'
+            ret_content += f'## [{h1_keyword}]({h1_page}.md) {wiki_link}\n---\n'
 
         #SUMMARY
         try:
@@ -257,36 +256,69 @@ def convert_to_markdown(html, keyword):
             ret_content += description_text + '\n\n</blockquote>\n'
 
         #EXAMPLES
-        h2_tag = soup.select('span#Examples')
         list_items = []
-        if h2_tag: # officially in page
-            h2_tag = h2_tag[0].parent
-            for sibling in h2_tag.next_siblings:
-                if isinstance(sibling, Tag):
-                    if sibling.name == 'p':
-                        temp = ' '
-                        temp = sibling.get_text(strip=True, separator=' ')
-                        if temp:
-                            list_items.append("\n\n##### " + temp + '\n')
-                    codeblock = sibling.find('pre', recursive=True)
-                    if codeblock:
-                        code = re.sub(r'\n ', '\n', codeblock.text)
-                        list_items.append("```vb" + '\n' + code.strip() + "\n```\n  \n<br>")
-        else: # unofficially in page
-            codeblocks  = soup.find_all('pre')
-            for codeblock in codeblocks:
-                for parent in codeblock.parents:
-                    if parent.name == 'table':
-                        p = parent.find_previous_sibling('p')
+        explanation = ''
+        subsequent_codeblocks = 0
+        # h2_tag = soup.select('span#Examples')
+        # if h2_tag: # officially in page
+        #     h2_tag = h2_tag[0].parent
+        #     for sibling in h2_tag.next_siblings:
+        #         if isinstance(sibling, Tag):
+        #             if sibling.name == 'p':
+        #                 temp = ' '
+        #                 temp = sibling.get_text(strip=True, separator=' ')
+        #                 if temp:
+        #                     list_items.append("\n\n##### " + temp + '\n')
+        #             codeblock = sibling.find('pre', recursive=True)
+        #             if codeblock:
+        #                 code = re.sub(r'\n ', '\n', codeblock.text)
+        #                 list_items.append("```vb" + '\n' + code.strip() + "\n```\n  \n<br>\n\n")
+        # else: # unofficially in page
+        codeblocks = soup.find_all('pre')
+        for codeblock in codeblocks:
+            if explanation:
+                if explanation not in list_items and subsequent_codeblocks == 2:
+                    list_items.append(explanation)
+                    explanation = ''
+                    subsequent_codeblocks = 0
+            for parent in codeblock.parents:
+                if parent.name == 'table':
+                    p = parent.find_previous_sibling('p')
+                    if p:
                         temp = p.get_text(strip=True, separator=' ')
+                        temp = temp.replace('$', '\$')
                         if 'Example' in temp:
-                            list_items.append("\n\n##### " + temp + '\n')
-                            break
-                code = re.sub(r'\n ', '\n', codeblock.text)
-                list_items.append("```vb" + '\n' + code.strip() + "\n```\n  \n<br>")
-            examples_text = ''.join(list_items)
-            ret_content += '\n#### EXAMPLES\n\n<blockquote>\n\n'
-            ret_content += examples_text + '\n</blockquote>\n'
+                            temp = "\n\n##### " + temp + '\n'
+                            if temp not in list_items:
+                                list_items.append(temp)
+                        code = re.sub(r'\n ', '\n', codeblock.text)
+                        list_items.append("```vb" + '\n' + code.strip() + "\n```\n  \n<br>\n\n")
+                        subsequent_codeblocks += 1
+                    else:
+                        code = re.sub(r'\n ', '\n', codeblock.text)
+                        list_items.append("```" + '\n' + code.strip() + "\n```\n  \n<br>\n\n")
+                        subsequent_codeblocks += 1
+                dl = parent.select('table + table + dl > dd')
+                if dl:
+                    for dd in dl:
+                        explanation = dd.get_text(strip=True, separator=' ')
+                        explanation = explanation.replace('$', '\$')
+                        explanation = '\n<div class="explanation">' + explanation + '</div>\n\n'
+
+
+            # output = parent.find_next_sibling('table pre')
+            # if output:
+            #     temp = output.get_text(strip=True, separator=' ')
+            #     list_items.append("\n\n> ###### Output" + '\n')
+            #     # list_items.append("```vb" + '\n' + temp + "\n```\n  \n<br>\n\n")
+            # dd = parent.find_next_sibling('dd')
+            # if dd:
+            #     temp = dd.get_text(strip=True, separator=' ')
+            #     list_items.append("\n\n> " + temp + '\n')
+
+        examples_text = ''.join(list_items)
+        ret_content += '\n#### EXAMPLES\n\n<blockquote>\n\n'
+        ret_content += examples_text + '\n</blockquote>\n'
 
         #MORE EXAMPLES
         h3_tag = soup.select('span#More_examples')
@@ -346,10 +378,10 @@ def save_markdown(markdown, filename, use_css=True):
     """
     if use_css:
         with open(filename, 'w', encoding='utf-8') as file:
-            file.write(css + markdown)
+            file.write(css + '\n' + markdown)
     else: 
         with open(filename, 'w', encoding='utf-8') as file:
-            file.write(css + markdown)
+            file.write(markdown)
 
 
 def replace_backtick_with_grave(matchobj) -> str:
@@ -420,7 +452,7 @@ def process_page(keyword, output_dir):
             html = backticks_to_graves(html_content)
             html_content = html
         markdown_content = convert_to_markdown(html_content, keyword)
-        file_path = os.path.join(output_dir, f"{keyword}.md")
+        file_path = os.path.join(output_dir, f"{encoded_keyword}.md")
         save_markdown(markdown_content, file_path)
         print(f"Converted HTML and Saved Markdown: {file_path}\n")
 
