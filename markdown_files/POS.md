@@ -144,5 +144,5 @@ PRINT POS(0) ' column position is 1 on next row
 
 
 * [CSRLIN](CSRLIN.md) , [LOCATE](LOCATE.md) , [PRINT](PRINT.md)
-* [_PRINTSTRING](PRINTSTRING.md)
+* _PRINTSTRING
 </blockquote>

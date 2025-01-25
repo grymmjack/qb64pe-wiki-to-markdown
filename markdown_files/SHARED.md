@@ -133,14 +133,14 @@ DIM SHARED Q$, prices#, IDs%
 ##### Example 2: The DIR\$ function returns a filename or a list when more than one exist. The file spec can use a path and/or wildcards.
 ```vb
 FOR i = 1 TO 2
-LINE INPUT "Enter a file spec: ", spec$
-file$ = DIR$(spec$)        'use a file spec ONCE to find the last file name listed
-PRINT DIRCount%, file$,    'function can return the file count using SHARED variable
-DO
-K$ = INPUT$(1)
-file$ = DIR$("")         'use an empty string parameter to return a list of files!
-PRINT file$,
-LOOP UNTIL LEN(file$) = 0  'file list ends with an empty string
+ LINE INPUT "Enter a file spec: ", spec$
+ file$ = DIR$(spec$)        'use a file spec ONCE to find the last file name listed
+ PRINT DIRCount%, file$,    'function can return the file count using SHARED variable
+ DO
+   K$ = INPUT$(1)
+   file$ = DIR$("")         'use an empty string parameter to return a list of files!
+   PRINT file$,
+ LOOP UNTIL LEN(file$) = 0  'file list ends with an empty string
 NEXT
 END
 
@@ -150,20 +150,20 @@ SHARED DIRCount%                                 'returns file count if desired
 STATIC Ready%, Index%, DirList$()
 IF NOT Ready% THEN REDIM DirList$(ListMax%): Ready% = -1  'DIM array first use
 IF spec$ > "" THEN                               'get file names when a spec is given
-SHELL _HIDE "DIR " + spec$ + " /b > " + TmpFile$
-Index% = 0: DirList$(Index%) = "": ff% = FREEFILE
-OPEN TmpFile$ FOR APPEND AS #ff%
-size& = LOF(ff%)
-CLOSE #ff%
-IF size& = 0 THEN KILL TmpFile$: EXIT FUNCTION
-OPEN TmpFile$ FOR INPUT AS #ff%
-DO WHILE NOT EOF(ff%) AND Index% < ListMAX%
-Index% = Index% + 1
-LINE INPUT #ff%, DirList$(Index%)
-LOOP
-DIRCount% = Index%                       'SHARED variable can return the file count
-CLOSE #ff%
-KILL TmpFile$
+ SHELL _HIDE "DIR " + spec$ + " /b > " + TmpFile$
+ Index% = 0: DirList$(Index%) = "": ff% = FREEFILE
+ OPEN TmpFile$ FOR APPEND AS #ff%
+ size& = LOF(ff%)
+ CLOSE #ff%
+ IF size& = 0 THEN KILL TmpFile$: EXIT FUNCTION
+ OPEN TmpFile$ FOR INPUT AS #ff%
+ DO WHILE NOT EOF(ff%) AND Index% < ListMAX%
+   Index% = Index% + 1
+   LINE INPUT #ff%, DirList$(Index%)
+ LOOP
+ DIRCount% = Index%                       'SHARED variable can return the file count
+ CLOSE #ff%
+ KILL TmpFile$
 ELSE IF Index% > 0 THEN Index% = Index% - 1 'no spec sends next file name
 END IF
 DIR$ = DirList$(Index%)

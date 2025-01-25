@@ -135,7 +135,7 @@ br ~ h5 {
 ```vb
 limit = _COMMANDCOUNT
 FOR i = 1 TO limit
-PRINT COMMAND$(i)
+   PRINT COMMAND$(i)
 NEXT
 ```
   
@@ -149,6 +149,6 @@ NEXT
 <blockquote>
 
 
-* [COMMAND&dollar;](COMMAND&dollar;.md)
+* [COMMAND\$](COMMAND\$.md)
 * [SHELL](SHELL.md)
 </blockquote>

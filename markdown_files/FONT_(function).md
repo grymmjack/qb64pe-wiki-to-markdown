@@ -135,6 +135,6 @@ br ~ h5 {
 <blockquote>
 
 
-* [_LOADFONT](LOADFONT.md) , [_FONT](FONT.md)
-* [_DEST](DEST.md)
+* _LOADFONT , _FONT
+* _DEST
 </blockquote>

@@ -119,9 +119,9 @@ br ~ h5 {
 <blockquote>
 
 
-* [&dollar;STATIC](&dollar;STATIC.md) denotes that all arrays can only be dimensioned once using [DIM](DIM.md) .
-* [&dollar;DYNAMIC](&dollar;DYNAMIC.md) denotes that all arrays can be redimensioned using [REDIM](REDIM.md) ONLY.
-* [&dollar;INCLUDE](&dollar;INCLUDE.md) includes a BI file or QBasic Library in a program. The file name requires a comment before and after the name.
+* [\$STATIC](\$STATIC.md) denotes that all arrays can only be dimensioned once using [DIM](DIM.md) .
+* [\$DYNAMIC](\$DYNAMIC.md) denotes that all arrays can be redimensioned using [REDIM](REDIM.md) ONLY.
+* [\$INCLUDE](\$INCLUDE.md) includes a BI file or QBasic Library in a program. The file name requires a comment before and after the name.
 * The string variable suffix MUST be used if the variable is not dimensioned in a [DIM](DIM.md) statement. The statement can also set a fixed string length .
 
 </blockquote>
@@ -139,5 +139,5 @@ br ~ h5 {
 
 
 * [DIM](DIM.md) , [REDIM](REDIM.md)
-* Metacommand
+* [Metacommand](Metacommand.md)
 </blockquote>

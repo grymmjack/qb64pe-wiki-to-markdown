@@ -136,7 +136,7 @@ br ~ h5 {
 <blockquote>
 
 
-* IF...THEN
+* [IF...THEN](IF...THEN.md)
 * [ELSE](ELSE.md) , [ELSEIF](ELSEIF.md)
 * [END](END.md) [IF](IF.md)
 </blockquote>

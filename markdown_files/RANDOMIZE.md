@@ -149,7 +149,7 @@ Print7
 
 SUB Print7
 FOR r = 1 TO 7
-PRINT RND;
+ PRINT RND;
 NEXT
 PRINT: PRINT
 END SUB
@@ -165,8 +165,8 @@ RANDOMIZE TIMER
 DEFINT A-Z
 
 TYPE ftype
-vx AS SINGLE
-vy AS SINGLE
+   vx AS SINGLE
+   vy AS SINGLE
 END TYPE
 DIM frag(500) AS ftype 'fragments
 
@@ -185,24 +185,24 @@ sh = 600
 SCREEN _NEWIMAGE(sw, sh, 32)
 
 DO
-FOR i = 0 TO UBOUND(frag)
-frag(i).vx = RND * COS(2 * pi * RND)
-frag(i).vy = RND * SIN(2 * pi * RND)
-NEXT
+   FOR i = 0 TO UBOUND(frag)
+       frag(i).vx = RND * COS(2 * pi * RND)
+       frag(i).vy = RND * SIN(2 * pi * RND)
+   NEXT
 
-x = sw * RND
-y = sh * RND
+   x = sw * RND
+   y = sh * RND
 
-FOR t = 0 TO 25 STEP 0.1
-LINE (0, 0)-(sw, sh), _RGB(0, 0, 0), BF
-FOR i = 0 TO UBOUND(frag)
-PSET (x + t * p * frag(i).vx, y + t * p * frag(i).vy + g * t * t), _RGB(255, 255, 0)
-NEXT
-_DISPLAY
-_LIMIT 150
+   FOR t = 0 TO 25 STEP 0.1
+       LINE (0, 0)-(sw, sh), _RGB(0, 0, 0), BF
+       FOR i = 0 TO UBOUND(frag)
+           PSET (x + t * p * frag(i).vx, y + t * p * frag(i).vy + g * t * t), _RGB(255, 255, 0)
+       NEXT
+       _DISPLAY
+       _LIMIT 150
 
-IF _KEYHIT = -27 THEN EXIT DO
-NEXT
+       IF _KEYHIT = -27 THEN EXIT DO
+   NEXT
 LOOP
 SYSTEM
 ```

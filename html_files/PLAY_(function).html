@@ -6,7 +6,7 @@
    PLAY (function) - QB64 Phoenix Edition Wiki
   </title>
   <script>
-   document.documentElement.className="client-js";RLCONF={"wgBreakFrames":false,"wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgRequestId":"Zp2GwCSKw_M1BQgKFBbqCQAAAu8","wgCSPNonce":false,"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"PLAY_(function)","wgTitle":"PLAY (function)","wgCurRevisionId":8478,"wgRevisionId":8478,"wgArticleId":965,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":[],"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgRelevantPageName":"PLAY_(function)","wgRelevantArticleId":965,"wgIsProbablyEditable":false,"wgRelevantPageIsProbablyEditable":false,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgVector2022PreviewPages":[]};RLSTATE={"site.styles":"ready",
+   document.documentElement.className="client-js";RLCONF={"wgBreakFrames":false,"wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgRequestId":"Z5RiYQWKRwiE9zBBFH0bfwAAAPM","wgCSPNonce":false,"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"PLAY_(function)","wgTitle":"PLAY (function)","wgCurRevisionId":9308,"wgRevisionId":9308,"wgArticleId":965,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":[],"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgRelevantPageName":"PLAY_(function)","wgRelevantArticleId":965,"wgIsProbablyEditable":false,"wgRelevantPageIsProbablyEditable":false,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgVector2022PreviewPages":[]};RLSTATE={"site.styles":"ready",
 "user.styles":"ready","user":"ready","user.options":"loading","mediawiki.page.gallery.styles":"ready","skins.vector.styles.legacy":"ready"};RLPAGEMODULES=["site","mediawiki.page.ready","mediawiki.toc","skins.vector.legacy.js"];
   </script>
   <script>
@@ -65,7 +65,7 @@
        <b>
         PLAY
        </b>
-       function returns the number of remaining notes/samples/seconds in the background music queue.
+       function returns the amount of time (in seconds) in the background music queue.
       </p>
       <p>
        <br/>
@@ -160,7 +160,7 @@
       <dl>
        <dd>
         <i>
-         remaining&amp;
+         remaining#
         </i>
         =
         <b>
@@ -168,7 +168,7 @@
         </b>
         (
         <i>
-         numericExpression&amp;
+         voice&amp;
         </i>
         )
        </dd>
@@ -184,19 +184,27 @@
       <ul>
        <li>
         <i>
-         remaining&amp;
+         remaining#
         </i>
-        is the number of notes/samples/seconds left to play in the background music queue.
+        is the number of seconds left to play in the background music queue.
        </li>
        <li>
         <i>
-         numericExpression&amp;
+         voice&amp;
         </i>
-        can be any numeric expression.
+        can be any numeric expression. It indicates for which tone voice channel the number of seconds remaining is to be returned. If
+        <i>
+         voice&amp;
+        </i>
+        is not in [0-3], the queue for voice 0 is returned.
        </li>
        <li>
         <b>
-         See also the important version dependent notes in the Availability section.
+         See also the important version dependent notes in the
+         <a href="#Availability">
+          Availability
+         </a>
+         section.
         </b>
        </li>
       </ul>
@@ -213,7 +221,7 @@
         This function may be used to detect, if the background music queue is still playing.
        </li>
        <li>
-        When there is nothing left to play, then this function returns zero.
+        When nothing is left to play, this function returns zero.
        </li>
       </ul>
       <p>
@@ -339,14 +347,14 @@
         <b>
          QB64-PE
         </b>
-        , this was just implemented as stub function which always returned zero.
+        , this was implemented as a stub function that always returned zero.
        </li>
        <li>
-        Since
+        The function has been fully implemented since
         <b>
          QB64-PE v3.1.0
         </b>
-        the function is fully implemented, but unlike
+        , but unlike
         <b>
          QuickBASIC
         </b>
@@ -354,7 +362,7 @@
         <b>
          QB64-PE
         </b>
-        this function does not return the number of notes left, but the number of audio samples.
+        , this function does not return the number of notes left but the amount of time (in seconds) left to play.
        </li>
        <li>
         Since
@@ -363,9 +371,27 @@
         </b>
         , if
         <i>
-         numericExpression&amp;
+         voice&amp;
         </i>
-        is a number other than zero, then the function will return the amount of time (seconds) left to play.
+        is a number other than zero, the function returns the amount of time (seconds) left to play.
+       </li>
+       <li>
+        Multi-voice support was introduced in
+        <b>
+         QB64-PE v4.0.0
+        </b>
+        .
+       </li>
+       <li>
+        Since
+        <b>
+         QB64-PE v4.0.0
+        </b>
+        , the function returns the amount of time (seconds) left to play specifically for the tone voice channel identified by the given
+        <i>
+         voice&amp;
+        </i>
+        number.
        </li>
       </ul>
       <p>
@@ -376,23 +402,236 @@
         Examples
        </span>
       </h2>
+      <dl>
+       <dt>
+        Example 1
+       </dt>
+       <dd>
+        Using PLAY with a single voice.
+       </dd>
+      </dl>
       <table cellpadding="15px" width="100%">
        <tbody>
         <tr>
          <td>
-          <pre class="codeide"><a href="/qb64wiki/index.php/PLAY" title="PLAY"><span style="color:#4593D8;">PLAY</span></a> <span style="color:#FFB100;">"mb l4cf.l8el4fag.l8fl4gl8agl4f.l8fl4a&gt;cl2dl4dl4c.&lt;l8al4afg.l8fl4gl8agl4f.l8dl4dcl2f&gt;l4dc.&lt;l8al4afg.l8fl4g&gt;dc.&lt;l8al4a&gt;cl2dl4dc.&lt;l8al4afg.l8fl4gl8agl4f.l8dl4dcl1f"</span>
+          <pre class="codeide"><a href="/qb64wiki/index.php/OPTION" title="OPTION"><span style="color:#4593D8;">OPTION</span></a> <a class="mw-redirect" href="/qb64wiki/index.php/EXPLICIT" title="EXPLICIT"><span style="color:#4593D8;">_EXPLICIT</span></a>
 
-<a href="/qb64wiki/index.php/PRINT" title="PRINT"><span style="color:#4593D8;">PRINT</span></a> <span style="color:#FFB100;">"Playing tune..."</span>
+<a href="/qb64wiki/index.php/CONST" title="CONST"><span style="color:#4593D8;">CONST</span></a> MML = <span style="color:#FFB100;">"mbv15l16t155o2mnb4p8msbbmnb4p8msbbb8g#8e8g#8b8g#8b8o3e8o2b8g#8e8g#8b8g#8b8o3e8o2mnb4p8msbbmnb4"</span> + _
+    <span style="color:#FFB100;">"p8msbbmnb4p8msbbmnb4p8msbbb8bbb8b8b8bbb8b8b8bbb8b8b8bbb8b8mlb2b2b8p8p4p4p8mso1bbb8bbb8bbo2e8f#8g#8o1bb"</span> + _
+    <span style="color:#FFB100;">"b8bbo2e8g#g#f#8d#8o1b8bbb8bbb8bbo2e8f#8g#8eg#mlb4bmsag#f#e8g#8e8o3bbb8bbb8bbo4e8f#8"</span> + _
+    <span style="color:#FFB100;">"g#8o3bbb8bbo4e8g#g#f#8d#8o3b8bbb8bbb8bbo4e8f#8g#8mleg#b4bag#f#mse8g#8e8o3g#g#g#8g#g#g#8g#g#"</span> + _
+    <span style="color:#FFB100;">"g#8o4c#8o3g#8o4c#8o3g#8o4c#8o3g#8f#8e8d#8c#8g#g#g#8g#g#g#8g#g#g#8o4c#8o3g#8o4c#8"</span> + _
+    <span style="color:#FFB100;">"o3g#8o4c#8o3b8a#8b8a#8b8g#g#g#8g#g#g#8g#g#g#8o4c#8o3g#8o4c#8o3g#8o4c#8o3g#8f#8"</span> + _
+    <span style="color:#FFB100;">"e8d#8c#8g#g#g#8g#g#g#8g#g#g#8o4c#8o3g#8o4c#8o3g#8o4c#8o3b8a#8b8o2bbb8f#f#"</span> + _
+    <span style="color:#FFB100;">"f#8f#f#f#8g#8a8f#4mna8msg#8mne4msg#8f#8f#8f#8o3f#f#f#8f#f#f#8g#8"</span> + _
+    <span style="color:#FFB100;">"a8mnf#4msa8g#8mne4msg#8f#8o2bbb8o1bbb8bbb8bbo2mne8f#8g#8o1bbb8bbo2e8g#g#f#8d#8o1b8bbb8bb"</span> + _
+    <span style="color:#FFB100;">"b8bbo2e8f#8g#8eg#mlb4mnbag#f#e8g#8e8o3bbb8bbb8bbo4e8f#8g#8o3bbb8bbo4e8g#g#f#8d#8o3b8bb"</span> + _
+    <span style="color:#FFB100;">"b8bbb8bbo4e8f#8g#8mleg#mlb4mnbag#f#mne8g#8e8o3mle56f56g56a56b56o4c56d56mne8eee8e8mlg#4g#8"</span> + _
+    <span style="color:#FFB100;">"mnf#8e8d#8e8c#8mso3bo4c#o3bo4c#o3bo4c#d#eo3abababo4c#d#o3g#ag#ag#abo4c#o3f#"</span> + _
+    <span style="color:#FFB100;">"g#f#g#f#g#f#g#f#g#f#d#o2bo3mlbo4c#d#e8d#8e8c#8o3msbo4c#o3bo4c#o3bo4c#d#eo3abababo4c#d#o3g#"</span> + _
+    <span style="color:#FFB100;">"ag#ag#abo4c#o3f#g#f#g#f#af#emne8p8mlc#4mnc#o2cmso3c#o2co3d#c#o2baag#ec#c#c#c#c#e"</span> + _
+    <span style="color:#FFB100;">"d#o1cg#g#g#g#g#g#o2c#eg#o3c#c#c#c#c#o2co3c#o2co3d#c#o2baag#ec#c#c#c#c#ed#o1cg#g#g#g#g#mng#"</span> + _
+    <span style="color:#FFB100;">"o2c#eg#o3msc#ed#c#d#o2cg#g#g#o3g#ec#d#o2cg#g#g#o3g#ec#d#o2bg#g#a#gd#d#g#gg#gg#ag#f#e"</span> + _
+    <span style="color:#FFB100;">"o1ba#bo2eo1bo2f#o1bo2g#ed#eg#eaf#bo3g#f#ed#f#ec#o2bo3c#o2bo3c#d#ef#g#o2ababo3c#d#ef#o2g#"</span> + _
+    <span style="color:#FFB100;">"ag#aco3c#d#eo2f#g#f#g#f#g#f#g#f#g#f#d#o1bco2c#d#eo1ba#bo2eo1bo2f#o1bo2g#ed#eg#eaf#b"</span> + _
+    <span style="color:#FFB100;">"o3g#f#ed#f#ec#o2bo3c#o2bo3c#d#ef#g#o2ababo3c#d#ef#o2g#ag#abo3c#d#eo2f#o3c#o2co3c#d#c#o2af#mne"</span> + _
+    <span style="color:#FFB100;">"o3mlef#g#abo4c#d#mne8mseee8e8mlg#4g#8msf#8mse8d#8e8c#8o3bo4c#o3bo4c#o3bo4c#d#eo3a"</span> + _
+    <span style="color:#FFB100;">"bababo4c#d#o3g#ag#ag#abo4c#o3f#g#f#g#f#g#f#g#f#g#f#d#o2bo3mlbo4c#d#mne8eee8e8mlg#4g#8"</span> + _
+    <span style="color:#FFB100;">"msf#8e8d#8e8c#8o3bo4c#o3bo4c#o3bo4c#d#eo3abababo4c#d#o3g#ag#ag#abo4c#o3f#"</span> + _
+    <span style="color:#FFB100;">"g#f#g#f#ag#f#e8o2b8o3e8g#g#g#8mng#g#g#8g#g#g#8o4c#8o3g#8o4c#8o3g#8o4c#8o3g#8f#8e8"</span> + _
+    <span style="color:#FFB100;">"d#8c#8g#g#g#8g#g#g#8g#g#g#8o4c#8o3g#8o4c#8o3g#8o4c#8o3b8a#8b8a#8b8g#g#g#8"</span> + _
+    <span style="color:#FFB100;">"g#g#g#8g#g#g#8o4c#8o3g#8o4c#8o3g#8o4c#8o3g#8f#8e8d#8c#8g#g#g#8g#g#g#8g#g#g#8"</span> + _
+    <span style="color:#FFB100;">"o4c#8o3g#8o4c#8o3g#8o4c#8o3b8a#8b8a#8b8o2f#f#f#8f#f#f#8g#8a8f#4a8g#8"</span> + _
+    <span style="color:#FFB100;">"e4g#8f#8o0b8o1b8o2f#f#f#8f#f#f#8g#8a8f#4a8g#8e4g#8f#8bbb8o1bbb8bbb8bbo2e8f#8g#8"</span> + _
+    <span style="color:#FFB100;">"o1bbb8bbo2e8g#g#f#8d#8o1b8bbb8bbb8bbo2e8f#8g#8eg#mlb4mnbag#f#e8o1b8o2e8o3bbb8bbb8bbo4e8"</span> + _
+    <span style="color:#FFB100;">"f#8g#8o3bbb8bbo4e8g#g#f#8d#8o3b8bbb8bbb8bbo4e8f#8g#8o3eg#mlb4mnbag#f#mlef#g#mnamlg#abo4mnc#mlo3bo4c#d#mnemld#"</span> + _
+    <span style="color:#FFB100;">"ef#mng#ao3bo4ao3bo4ao3bo4ao3bo4ao3bo4ao3bo4ao3bo4ao3bmlef#g#mnamlg#abmno4c#mlo3bo4c#d#mnemld#ef#mng#ao3bo4ao3bo4a"</span> + _
+    <span style="color:#FFB100;">"o3bo4ao3bo4ao3bo4ao3bo4ao3bo4ao3bp16mlg#o4g#o3mng#p16mld#o4d#o3mnd#p16"</span> + _
+    <span style="color:#FFB100;">"mleo4eo3mnep16mlao4ao3mnap16mlg#o4g#o3mng#p16mld#o4d#o3mnd#p16mleo4eo3mnep16"</span> + _
+    <span style="color:#FFB100;">"mlao4ao3mnao4go3go4go3go4go3go4go3go4msg8e8c8e8o4mng#o3g#o4g#o3g#o4g#o3g#o4g#o3g#o4msg#8e8o3b8o4e8mng#o3g#o4g#o3g#o4g#"</span> + _
+    <span style="color:#FFB100;">"o3g#o4g#o3g#o4msg#8f8c#8f8mna#o3a#o4a#o3a#o4a#o3a#o4a#o3a#o4msa#8g8e8g8b8p16mna#p16ap16g#p16f#p16ep16"</span> + _
+    <span style="color:#FFB100;">"d#p16c#p16o3bp16a#p16ap16g#p16f#p16ep16d#p16f#mlef#g#mnamlg#abmno4c#o3mlbo4c#d#mnemld#ef#mng#ao3bo4ao3bo4a"</span> + _
+    <span style="color:#FFB100;">"o3bo4ao3bo4ao3bo4ao3bo4ao3bo4ao3bmlef#g#mnamlg#abmno4c#o3mlb"</span> + _
+    <span style="color:#FFB100;">"o4c#d#mnemld#ef#mng#ao3bo4ao3bo4ao3bo4ao3bo4ao3bo4ao3bo4a"</span> + _
+    <span style="color:#FFB100;">"o3bo4ao3bp16mlg#o4g#o3mng#p16mld#o4d#o3mnd#p16mleo4eo3mnep16mlao4ao3mnap16"</span> + _
+    <span style="color:#FFB100;">"mlg#o4g#o3mng#p16mld#o4d#o3mnd#p16mleo4eo3mnep16mlao4ao3mnao4go3go4go3go4g"</span> + _
+    <span style="color:#FFB100;">"o3go4go3go4g8e8c8e8g#o3g#o4g#o3g#o4g#o3g#o4g#o3g#o4g#8e8o3b8o4e8g#o3g#o4g#o3g#o4g#o3g#o4g#o3g#o4msg#8mnf8c#8"</span> + _
+    <span style="color:#FFB100;">"f8a#o3a#o4a#o3a#o4a#o3a#o4a#o3a#o4a#8g8e8g8b8p16a#p16ap16g#p16f#p16ep16d#p16c#p16o3bp16a#p16"</span> + _
+    <span style="color:#FFB100;">"ap16g#p16f#p16ep16d#p16fmled#ed#mne8bbb8bbb8bbo4e8f#8g#8o3bbb8bbb8bbo4g#8a8b8p8e8f#8g#8p8o3g#8"</span> + _
+    <span style="color:#FFB100;">"a8b8p8p2o2bco3c#dd#eff#gg#aa#bco4c#d#ed#f#d#ed#f#d#ed#f#d#ed#f#d#ed#f#d#ed#f#d#ed#f#d#e"</span> + _
+    <span style="color:#FFB100;">"d#f#d#e8eo3eo4eo3eo4eo3eo4e8o3bo2bo3bo2bo3bo2bo3b8g#o2g#o3g#o2g#o3g#o2g#o3g8eo2eo3eo2eo3eo2eo3e8eee8"</span> + _
+    <span style="color:#FFB100;">"e8e8o2bbb8b8b8g#g#g#8g#8g#8eee8e8e8o1b8o2e8o1b8o2g#8e8b8g#8o3e8o2b8o3e8o2b8o3g#8e8b8g#8o4e4"</span> + _
+    <span style="color:#FFB100;">"p8eee8e8e8e8e4p8p16ee4p8p16o2ee2"</span>
+
+<a href="/qb64wiki/index.php/LOCATE" title="LOCATE"><span style="color:#4593D8;">LOCATE</span></a> <span style="color:#F580B1;">12</span>, <span style="color:#F580B1;">28</span>
+<a href="/qb64wiki/index.php/PRINT" title="PRINT"><span style="color:#4593D8;">PRINT</span></a> <span style="color:#FFB100;">"The William Tell Overture."</span>
+<a href="/qb64wiki/index.php/PLAY" title="PLAY"><span style="color:#4593D8;">PLAY</span></a> MML
+
+<a href="/qb64wiki/index.php/DIM" title="DIM"><span style="color:#4593D8;">DIM</span></a> secondsLeft <a href="/qb64wiki/index.php/AS" title="AS"><span style="color:#4593D8;">AS</span></a> <a href="/qb64wiki/index.php/LONG" title="LONG"><span style="color:#4593D8;">LONG</span></a>
 
 <a class="mw-redirect" href="/qb64wiki/index.php/DO" title="DO"><span style="color:#4593D8;">DO</span></a>
-    smplLeft&amp; = <a class="mw-selflink selflink"><span style="color:#4593D8;">PLAY</span></a>(<span style="color:#F580B1;">0</span>)
-    timeLeft&amp; = <a class="mw-selflink selflink"><span style="color:#4593D8;">PLAY</span></a>(<span style="color:#F580B1;">1</span>)
-    <a href="/qb64wiki/index.php/LOCATE" title="LOCATE"><span style="color:#4593D8;">LOCATE</span></a> <span style="color:#F580B1;">3</span>, <span style="color:#F580B1;">1</span>: <a href="/qb64wiki/index.php/PRINT" title="PRINT"><span style="color:#4593D8;">PRINT</span></a> <span style="color:#FFB100;">"Samples left to play ="</span>; smplLeft&amp;; <span style="color:#FFB100;">" "</span>;
-    <a href="/qb64wiki/index.php/LOCATE" title="LOCATE"><span style="color:#4593D8;">LOCATE</span></a> <span style="color:#F580B1;">4</span>, <span style="color:#F580B1;">1</span>: <a href="/qb64wiki/index.php/PRINT" title="PRINT"><span style="color:#4593D8;">PRINT</span></a> <span style="color:#FFB100;">"Seconds left to play ="</span>; timeLeft&amp;; <span style="color:#FFB100;">" "</span>;
-<a href="/qb64wiki/index.php/DO...LOOP" title="DO...LOOP"><span style="color:#4593D8;">LOOP WHILE</span></a> smplLeft&amp;
+    <a href="/qb64wiki/index.php/LOCATE" title="LOCATE"><span style="color:#4593D8;">LOCATE</span></a> <span style="color:#F580B1;">13</span>, <span style="color:#F580B1;">32</span>
 
-<a href="/qb64wiki/index.php/PRINT" title="PRINT"><span style="color:#4593D8;">PRINT</span></a>: <a href="/qb64wiki/index.php/PRINT" title="PRINT"><span style="color:#4593D8;">PRINT</span></a>: <a href="/qb64wiki/index.php/PRINT" title="PRINT"><span style="color:#4593D8;">PRINT</span></a> <span style="color:#FFB100;">"And we are done!"</span>
+    secondsLeft = <a class="mw-selflink selflink"><span style="color:#4593D8;">PLAY</span></a>(<span style="color:#F580B1;">0</span>)
+
+    <a href="/qb64wiki/index.php/PRINT_USING" title="PRINT USING"><span style="color:#4593D8;">PRINT USING</span></a> <span style="color:#FFB100;">"(### seconds left)"</span>; secondsLeft;
+
+    <a href="/qb64wiki/index.php/LIMIT" title="LIMIT"><span style="color:#4593D8;">_LIMIT</span></a> <span style="color:#F580B1;">30</span>
+<a href="/qb64wiki/index.php/DO...LOOP" title="DO...LOOP"><span style="color:#4593D8;">LOOP WHILE</span></a> secondsLeft <a href="/qb64wiki/index.php/ANDALSO" title="ANDALSO"><span style="color:#4593D8;">_ANDALSO</span></a> <a href="/qb64wiki/index.php/KEYHIT" title="KEYHIT"><span style="color:#4593D8;">_KEYHIT</span></a> &lt;&gt; <span style="color:#F580B1;">27</span>
+
 <a href="/qb64wiki/index.php/END" title="END"><span style="color:#4593D8;">END</span></a>
+</pre>
+         </td>
+        </tr>
+       </tbody>
+      </table>
+      <p>
+       <br/>
+      </p>
+      <dl>
+       <dt>
+        Example 2
+       </dt>
+       <dd>
+        Using PLAY with 3 voices.
+       </dd>
+      </dl>
+      <table cellpadding="15px" width="100%">
+       <tbody>
+        <tr>
+         <td>
+          <pre class="codeide"><a href="/qb64wiki/index.php/OPTION" title="OPTION"><span style="color:#4593D8;">OPTION</span></a> <a class="mw-redirect" href="/qb64wiki/index.php/EXPLICIT" title="EXPLICIT"><span style="color:#4593D8;">_EXPLICIT</span></a>
+
+<a href="/qb64wiki/index.php/DIM" title="DIM"><span style="color:#4593D8;">DIM</span></a> mml(<span style="color:#F580B1;">0</span> <a href="/qb64wiki/index.php/TO" title="TO"><span style="color:#4593D8;">TO</span></a> <span style="color:#F580B1;">2</span>) <a href="/qb64wiki/index.php/AS" title="AS"><span style="color:#4593D8;">AS</span></a> <a href="/qb64wiki/index.php/STRING" title="STRING"><span style="color:#4593D8;">STRING</span></a>
+
+<a href="/qb64wiki/index.php/PRINT" title="PRINT"><span style="color:#4593D8;">PRINT</span></a> <span style="color:#FFB100;">"Playing tune."</span>
+
+<a class="mw-redirect" href="/qb64wiki/index.php/DO" title="DO"><span style="color:#4593D8;">DO</span></a>
+    <a href="/qb64wiki/index.php/READ" title="READ"><span style="color:#4593D8;">READ</span></a> mml(<span style="color:#F580B1;">0</span>), mml(<span style="color:#F580B1;">1</span>), mml(<span style="color:#F580B1;">2</span>)
+    <a href="/qb64wiki/index.php/PLAY" title="PLAY"><span style="color:#4593D8;">PLAY</span></a> mml(<span style="color:#F580B1;">0</span>), mml(<span style="color:#F580B1;">1</span>), mml(<span style="color:#F580B1;">2</span>)
+<a href="/qb64wiki/index.php/DO...LOOP" title="DO...LOOP"><span style="color:#4593D8;">LOOP WHILE</span></a> <a href="/qb64wiki/index.php/LEN" title="LEN"><span style="color:#4593D8;">LEN</span></a>(mml(<span style="color:#F580B1;">0</span>)) <a href="/qb64wiki/index.php/ORELSE" title="ORELSE"><span style="color:#4593D8;">_ORELSE</span></a> <a href="/qb64wiki/index.php/LEN" title="LEN"><span style="color:#4593D8;">LEN</span></a>(mml(<span style="color:#F580B1;">1</span>)) <a href="/qb64wiki/index.php/ORELSE" title="ORELSE"><span style="color:#4593D8;">_ORELSE</span></a> <a href="/qb64wiki/index.php/LEN" title="LEN"><span style="color:#4593D8;">LEN</span></a>(mml(<span style="color:#F580B1;">2</span>))
+
+<a href="/qb64wiki/index.php/PRINT" title="PRINT"><span style="color:#4593D8;">PRINT</span></a> <span style="color:#FFB100;">"Waiting for tune to finish playing."</span>
+
+<a href="/qb64wiki/index.php/DIM" title="DIM"><span style="color:#4593D8;">DIM</span></a> cLine <a href="/qb64wiki/index.php/AS" title="AS"><span style="color:#4593D8;">AS</span></a> <a href="/qb64wiki/index.php/LONG" title="LONG"><span style="color:#4593D8;">LONG</span></a>: cLine = <a href="/qb64wiki/index.php/CSRLIN" title="CSRLIN"><span style="color:#4593D8;">CSRLIN</span></a>
+
+<a class="mw-redirect" href="/qb64wiki/index.php/DO" title="DO"><span style="color:#4593D8;">DO</span></a>
+    <a href="/qb64wiki/index.php/LIMIT" title="LIMIT"><span style="color:#4593D8;">_LIMIT</span></a> <span style="color:#F580B1;">60</span>
+    <a href="/qb64wiki/index.php/LOCATE" title="LOCATE"><span style="color:#4593D8;">LOCATE</span></a> cLine, <span style="color:#F580B1;">1</span>
+<a href="/qb64wiki/index.php/DO...LOOP" title="DO...LOOP"><span style="color:#4593D8;">LOOP WHILE</span></a> <a href="/qb64wiki/index.php/KEYHIT" title="KEYHIT"><span style="color:#4593D8;">_KEYHIT</span></a> &lt;&gt; <span style="color:#F580B1;">27</span> <a href="/qb64wiki/index.php/ANDALSO" title="ANDALSO"><span style="color:#4593D8;">_ANDALSO</span></a> <span style="color:#55FF55;">DisplayVoiceStats</span>
+
+<a href="/qb64wiki/index.php/END" title="END"><span style="color:#4593D8;">END</span></a>
+
+<a href="/qb64wiki/index.php/DATA" title="DATA"><span style="color:#4593D8;">DATA</span></a> <span style="color:#FFB100;">"mb v15"</span>,<span style="color:#FFB100;">"mb v15"</span>,<span style="color:#FFB100;">"mb v15"</span>
+<a href="/qb64wiki/index.php/DATA" title="DATA"><span style="color:#4593D8;">DATA</span></a> <span style="color:#FFB100;">"v11 t120 o3 e-8 &gt;e-8"</span>,<span style="color:#FFB100;">"v12 t120 o2 p4"</span>,<span style="color:#FFB100;">"v12 t120 o2 e-4"</span>
+<a href="/qb64wiki/index.php/DATA" title="DATA"><span style="color:#4593D8;">DATA</span></a> <span style="color:#FFB100;">"o4 &lt;f8 &gt;e-8"</span>,<span style="color:#FFB100;">"o2 p4"</span>,<span style="color:#FFB100;">"o2 e-4"</span>
+<a href="/qb64wiki/index.php/DATA" title="DATA"><span style="color:#4593D8;">DATA</span></a> <span style="color:#FFB100;">"o4 &lt;g8 &gt;e-8"</span>,<span style="color:#FFB100;">"o2 p4"</span>,<span style="color:#FFB100;">"o2 p4"</span>
+<a href="/qb64wiki/index.php/DATA" title="DATA"><span style="color:#4593D8;">DATA</span></a> <span style="color:#FFB100;">"o4 &lt;a-8 &gt;e-8"</span>,<span style="color:#FFB100;">"o2 p4"</span>,<span style="color:#FFB100;">"o2 c4"</span>
+<a href="/qb64wiki/index.php/DATA" title="DATA"><span style="color:#4593D8;">DATA</span></a> <span style="color:#FFB100;">"o4 &lt;b-8 &gt;e-8"</span>,<span style="color:#FFB100;">"o2 p4"</span>,<span style="color:#FFB100;">"o2 c4"</span>
+<a href="/qb64wiki/index.php/DATA" title="DATA"><span style="color:#4593D8;">DATA</span></a> <span style="color:#FFB100;">"o4 c8 e-8"</span>,<span style="color:#FFB100;">"o2 p4"</span>,<span style="color:#FFB100;">"o2 p4"</span>
+<a href="/qb64wiki/index.php/DATA" title="DATA"><span style="color:#4593D8;">DATA</span></a> <span style="color:#FFB100;">"o4 &lt;b-16 &gt;e-16 d16 c16"</span>,<span style="color:#FFB100;">"o2 p4"</span>,<span style="color:#FFB100;">"o1 g4"</span>
+<a href="/qb64wiki/index.php/DATA" title="DATA"><span style="color:#4593D8;">DATA</span></a> <span style="color:#FFB100;">"o4 &lt;b-16 &gt;g16 f16 e-16"</span>,<span style="color:#FFB100;">"o2 p4"</span>,<span style="color:#FFB100;">"o1 a-4"</span>
+<a href="/qb64wiki/index.php/DATA" title="DATA"><span style="color:#4593D8;">DATA</span></a> <span style="color:#FFB100;">"o4 d16 c16 &lt;b-16 a-16"</span>,<span style="color:#FFB100;">"o2 p4"</span>,<span style="color:#FFB100;">"o1 b-4"</span>
+<a href="/qb64wiki/index.php/DATA" title="DATA"><span style="color:#4593D8;">DATA</span></a> <span style="color:#FFB100;">"o3 g16 a-16 b-16 g16"</span>,<span style="color:#FFB100;">"o2 p4"</span>,<span style="color:#FFB100;">"o1 e-4"</span>
+<a href="/qb64wiki/index.php/DATA" title="DATA"><span style="color:#4593D8;">DATA</span></a> <span style="color:#FFB100;">"o3 e-16 g16 b-16 &gt;e-16"</span>,<span style="color:#FFB100;">"o2 p4"</span>,<span style="color:#FFB100;">"o1 g4"</span>
+<a href="/qb64wiki/index.php/DATA" title="DATA"><span style="color:#4593D8;">DATA</span></a> <span style="color:#FFB100;">"o4 &lt;f16 a16 &gt;c16 e-16"</span>,<span style="color:#FFB100;">"o2 p4"</span>,<span style="color:#FFB100;">"o1 a4"</span>
+<a href="/qb64wiki/index.php/DATA" title="DATA"><span style="color:#4593D8;">DATA</span></a> <span style="color:#FFB100;">"o4 d16 c16 d16 f16"</span>,<span style="color:#FFB100;">"o2 b-8 &gt;b-8"</span>,<span style="color:#FFB100;">"o1 b-4"</span>
+<a href="/qb64wiki/index.php/DATA" title="DATA"><span style="color:#4593D8;">DATA</span></a> <span style="color:#FFB100;">"o4 e-16 d16 e-16 g16"</span>,<span style="color:#FFB100;">"o3 c8 b-8"</span>,<span style="color:#FFB100;">"o1 b-4"</span>
+<a href="/qb64wiki/index.php/DATA" title="DATA"><span style="color:#4593D8;">DATA</span></a> <span style="color:#FFB100;">"o4 f16 e-16 f16 a-16"</span>,<span style="color:#FFB100;">"o3 d8 b-8"</span>,<span style="color:#FFB100;">"o1 p4"</span>
+<a href="/qb64wiki/index.php/DATA" title="DATA"><span style="color:#4593D8;">DATA</span></a> <span style="color:#FFB100;">"o4 g16 f16 g16 b-16"</span>,<span style="color:#FFB100;">"o3 e-8 b-8"</span>,<span style="color:#FFB100;">"o1 b-4"</span>
+<a href="/qb64wiki/index.php/DATA" title="DATA"><span style="color:#4593D8;">DATA</span></a> <span style="color:#FFB100;">"o4 d16 c16 d16 b-16"</span>,<span style="color:#FFB100;">"o3 f8 b-8"</span>,<span style="color:#FFB100;">"o1 b-4"</span>
+<a href="/qb64wiki/index.php/DATA" title="DATA"><span style="color:#4593D8;">DATA</span></a> <span style="color:#FFB100;">"o4 e-16 d16 e-16 b-16"</span>,<span style="color:#FFB100;">"o3 g8 b-8"</span>,<span style="color:#FFB100;">"o1 p4"</span>
+<a href="/qb64wiki/index.php/DATA" title="DATA"><span style="color:#4593D8;">DATA</span></a> <span style="color:#FFB100;">"o4 d8 f8"</span>,<span style="color:#FFB100;">"o3 f16 b-16 a16 g16"</span>,<span style="color:#FFB100;">"o1 b-4"</span>
+<a href="/qb64wiki/index.php/DATA" title="DATA"><span style="color:#4593D8;">DATA</span></a> <span style="color:#FFB100;">"o4 b-8 d8"</span>,<span style="color:#FFB100;">"o3 f16 &gt;d16 c16 &lt;b-16"</span>,<span style="color:#FFB100;">"o1 &gt;d4"</span>
+<a href="/qb64wiki/index.php/DATA" title="DATA"><span style="color:#4593D8;">DATA</span></a> <span style="color:#FFB100;">"o4 c8 a8"</span>,<span style="color:#FFB100;">"o3 a16 g16 f16 e-16"</span>,<span style="color:#FFB100;">"o2 f4"</span>
+<a href="/qb64wiki/index.php/DATA" title="DATA"><span style="color:#4593D8;">DATA</span></a> <span style="color:#FFB100;">"o4 b-8 d8"</span>,<span style="color:#FFB100;">"o3 d16 e-16 f16 d16"</span>,<span style="color:#FFB100;">"o2 b-4"</span>
+<a href="/qb64wiki/index.php/DATA" title="DATA"><span style="color:#4593D8;">DATA</span></a> <span style="color:#FFB100;">"o4 f8 d8"</span>,<span style="color:#FFB100;">"o3 &lt;b-16 &gt;d16 f16 b-16"</span>,<span style="color:#FFB100;">"o2 b-4"</span>
+<a href="/qb64wiki/index.php/DATA" title="DATA"><span style="color:#4593D8;">DATA</span></a> <span style="color:#FFB100;">"o4 &lt;b-8 &gt;d8"</span>,<span style="color:#FFB100;">"o3 d16 f16 a-16 b-16"</span>,<span style="color:#FFB100;">"o2 p4"</span>
+<a href="/qb64wiki/index.php/DATA" title="DATA"><span style="color:#4593D8;">DATA</span></a> <span style="color:#FFB100;">"o4 e-8 p8"</span>,<span style="color:#FFB100;">"o3 g16 f16 g16 b-16"</span>,<span style="color:#FFB100;">"o1 e-8 &gt;e-8"</span>
+<a href="/qb64wiki/index.php/DATA" title="DATA"><span style="color:#4593D8;">DATA</span></a> <span style="color:#FFB100;">"o4 e-8 p8"</span>,<span style="color:#FFB100;">"o3 a-16 g16 a-16 &gt;c16"</span>,<span style="color:#FFB100;">"o2 &lt;f8 &gt;e-8"</span>
+<a href="/qb64wiki/index.php/DATA" title="DATA"><span style="color:#4593D8;">DATA</span></a> <span style="color:#FFB100;">"o4 e-8 p8"</span>,<span style="color:#FFB100;">"o3 &lt;b-16 a-16 b-16 &gt;d-16"</span>,<span style="color:#FFB100;">"o2 &lt;g8 &gt;e-8"</span>
+<a href="/qb64wiki/index.php/DATA" title="DATA"><span style="color:#4593D8;">DATA</span></a> <span style="color:#FFB100;">"o4 e-8 p8"</span>,<span style="color:#FFB100;">"o4 c16 &lt;b-16 &gt;c16 e-16"</span>,<span style="color:#FFB100;">"o2 &lt;a-8 &gt;e-8"</span>
+<a href="/qb64wiki/index.php/DATA" title="DATA"><span style="color:#4593D8;">DATA</span></a> <span style="color:#FFB100;">"o4 e-8 p8"</span>,<span style="color:#FFB100;">"o4 &lt;g16 f16 g16 &gt;e-16"</span>,<span style="color:#FFB100;">"o2 &lt;b-8 &gt;e-8"</span>
+<a href="/qb64wiki/index.php/DATA" title="DATA"><span style="color:#4593D8;">DATA</span></a> <span style="color:#FFB100;">"o4 e-8 p8"</span>,<span style="color:#FFB100;">"o4 &lt;a-16 g16 a-16 &gt;e-16"</span>,<span style="color:#FFB100;">"o2 c8 e-8"</span>
+<a href="/qb64wiki/index.php/DATA" title="DATA"><span style="color:#4593D8;">DATA</span></a> <span style="color:#FFB100;">"o4 p16 e-16 f16 g16"</span>,<span style="color:#FFB100;">"o4 &lt;g8 b-8"</span>,<span style="color:#FFB100;">"o2 &lt;b-8 p8"</span>
+<a href="/qb64wiki/index.php/DATA" title="DATA"><span style="color:#4593D8;">DATA</span></a> <span style="color:#FFB100;">"o4 a-16 b-16 &gt;c16 &lt;b-16"</span>,<span style="color:#FFB100;">"o3 &gt;e-8 &lt;g8"</span>,<span style="color:#FFB100;">"o1 &gt;c8 p8"</span>
+<a href="/qb64wiki/index.php/DATA" title="DATA"><span style="color:#4593D8;">DATA</span></a> <span style="color:#FFB100;">"o4 a-16 g16 f16 a-16"</span>,<span style="color:#FFB100;">"o3 f8 b-8"</span>,<span style="color:#FFB100;">"o2 d8 p8"</span>
+<a href="/qb64wiki/index.php/DATA" title="DATA"><span style="color:#4593D8;">DATA</span></a> <span style="color:#FFB100;">"o4 g8 &lt;b-8"</span>,<span style="color:#FFB100;">"o3 p16 e-16 f16 g16"</span>,<span style="color:#FFB100;">"o2 e-4"</span>
+<a href="/qb64wiki/index.php/DATA" title="DATA"><span style="color:#4593D8;">DATA</span></a> <span style="color:#FFB100;">"o3 &gt;c8 &lt;a-8"</span>,<span style="color:#FFB100;">"o3 a-16 b-16 &gt;c16 &lt;b-16"</span>,<span style="color:#FFB100;">"o2 e-4"</span>
+<a href="/qb64wiki/index.php/DATA" title="DATA"><span style="color:#4593D8;">DATA</span></a> <span style="color:#FFB100;">"o3 &gt;f4"</span>,<span style="color:#FFB100;">"o3 a-16 g16 f16 a-16"</span>,<span style="color:#FFB100;">"o2 d4"</span>
+<a href="/qb64wiki/index.php/DATA" title="DATA"><span style="color:#4593D8;">DATA</span></a> <span style="color:#FFB100;">"o4 p16 a-16 g16 f16"</span>,<span style="color:#FFB100;">"o3 g8 &lt;b-8"</span>,<span style="color:#FFB100;">"o2 e-4"</span>
+<a href="/qb64wiki/index.php/DATA" title="DATA"><span style="color:#4593D8;">DATA</span></a> <span style="color:#FFB100;">"o4 e-16 d16 c16 &lt;b-16"</span>,<span style="color:#FFB100;">"o2 &gt;c8 &lt;a-8"</span>,<span style="color:#FFB100;">"o2 a-4"</span>
+<a href="/qb64wiki/index.php/DATA" title="DATA"><span style="color:#4593D8;">DATA</span></a> <span style="color:#FFB100;">"o3 a-16 g16 a-16 &gt;f16"</span>,<span style="color:#FFB100;">"o2 &gt;f4"</span>,<span style="color:#FFB100;">"o2 p4"</span>
+<a href="/qb64wiki/index.php/DATA" title="DATA"><span style="color:#4593D8;">DATA</span></a> <span style="color:#FFB100;">"o4 &lt;g16 &gt;f16 e-16 d16"</span>,<span style="color:#FFB100;">"o3 p16 a-16 g16 f16"</span>,<span style="color:#FFB100;">"o2 &lt;b4"</span>
+<a href="/qb64wiki/index.php/DATA" title="DATA"><span style="color:#4593D8;">DATA</span></a> <span style="color:#FFB100;">"o4 c16 &lt;b-16 a-16 g16"</span>,<span style="color:#FFB100;">"o3 e-16 d16 c16 &lt;b-16"</span>,<span style="color:#FFB100;">"o1 &gt;c4"</span>
+<a href="/qb64wiki/index.php/DATA" title="DATA"><span style="color:#4593D8;">DATA</span></a> <span style="color:#FFB100;">"o3 f4"</span>,<span style="color:#FFB100;">"o2 a-16 g16 a-16 &gt;f16"</span>,<span style="color:#FFB100;">"o2 d4"</span>
+<a href="/qb64wiki/index.php/DATA" title="DATA"><span style="color:#4593D8;">DATA</span></a> <span style="color:#FFB100;">"o3 p16 a-16 g16 f16"</span>,<span style="color:#FFB100;">"o3 &lt;g16 &gt;f16 e-16 d16"</span>,<span style="color:#FFB100;">"o2 &lt;e-4"</span>
+<a href="/qb64wiki/index.php/DATA" title="DATA"><span style="color:#4593D8;">DATA</span></a> <span style="color:#FFB100;">"o3 e-4"</span>,<span style="color:#FFB100;">"o3 c16 &lt;b-16 a-16 g16"</span>,<span style="color:#FFB100;">"o1 a-4"</span>
+<a href="/qb64wiki/index.php/DATA" title="DATA"><span style="color:#4593D8;">DATA</span></a> <span style="color:#FFB100;">"o3 p16 d16 e-16 f16"</span>,<span style="color:#FFB100;">"o2 f4"</span>,<span style="color:#FFB100;">"o1 a-4"</span>
+<a href="/qb64wiki/index.php/DATA" title="DATA"><span style="color:#4593D8;">DATA</span></a> <span style="color:#FFB100;">"o3 &lt;b8 &gt;d8"</span>,<span style="color:#FFB100;">"o2 p16 a-16 g16 f16"</span>,<span style="color:#FFB100;">"o1 g4"</span>
+<a href="/qb64wiki/index.php/DATA" title="DATA"><span style="color:#4593D8;">DATA</span></a> <span style="color:#FFB100;">"o3 g8 b8"</span>,<span style="color:#FFB100;">"o2 e-8 g8"</span>,<span style="color:#FFB100;">"o1 p16 &gt;g16 f16 g16"</span>
+<a href="/qb64wiki/index.php/DATA" title="DATA"><span style="color:#4593D8;">DATA</span></a> <span style="color:#FFB100;">"o3 &gt;c8 d8"</span>,<span style="color:#FFB100;">"o2 a8 b8"</span>,<span style="color:#FFB100;">"o2 e-16 f16 d16 e-16"</span>
+<a href="/qb64wiki/index.php/DATA" title="DATA"><span style="color:#4593D8;">DATA</span></a> <span style="color:#FFB100;">"o4 e-16 c16 &lt;b16 &gt;c16"</span>,<span style="color:#FFB100;">"o3 c8 p8"</span>,<span style="color:#FFB100;">"o2 c8 e-8"</span>
+<a href="/qb64wiki/index.php/DATA" title="DATA"><span style="color:#4593D8;">DATA</span></a> <span style="color:#FFB100;">"o4 &lt;g16 &gt;c16 &lt;b16 &gt;c16"</span>,<span style="color:#FFB100;">"o3 p4"</span>,<span style="color:#FFB100;">"o2 c8 e-8"</span>
+<a href="/qb64wiki/index.php/DATA" title="DATA"><span style="color:#4593D8;">DATA</span></a> <span style="color:#FFB100;">"o4 e-16 c16 &lt;b-16 &gt;c16"</span>,<span style="color:#FFB100;">"o3 p4"</span>,<span style="color:#FFB100;">"o2 c8 e-8"</span>
+<a href="/qb64wiki/index.php/DATA" title="DATA"><span style="color:#4593D8;">DATA</span></a> <span style="color:#FFB100;">"o4 &lt;a-8 p8"</span>,<span style="color:#FFB100;">"o3 p16 f16 e-16 f16"</span>,<span style="color:#FFB100;">"o2 &lt;f8 &gt;a-8"</span>
+<a href="/qb64wiki/index.php/DATA" title="DATA"><span style="color:#4593D8;">DATA</span></a> <span style="color:#FFB100;">"o3 &gt;e-8 p8"</span>,<span style="color:#FFB100;">"o3 c16 f16 e-16 f16"</span>,<span style="color:#FFB100;">"o2 &lt;f8 &gt;a-8"</span>
+<a href="/qb64wiki/index.php/DATA" title="DATA"><span style="color:#4593D8;">DATA</span></a> <span style="color:#FFB100;">"o4 e-8 p8"</span>,<span style="color:#FFB100;">"o3 a-16 f16 e-16 f16"</span>,<span style="color:#FFB100;">"o2 &lt;f8 &gt;a-8"</span>
+<a href="/qb64wiki/index.php/DATA" title="DATA"><span style="color:#4593D8;">DATA</span></a> <span style="color:#FFB100;">"o4 p16 &lt;b-16 a-16 b-16"</span>,<span style="color:#FFB100;">"o3 d8 p8"</span>,<span style="color:#FFB100;">"o2 &lt;b-8 &gt;d8"</span>
+<a href="/qb64wiki/index.php/DATA" title="DATA"><span style="color:#4593D8;">DATA</span></a> <span style="color:#FFB100;">"o3 f16 b-16 a-16 b-16"</span>,<span style="color:#FFB100;">"o3 a-8 p8"</span>,<span style="color:#FFB100;">"o2 &lt;b-8 &gt;d8"</span>
+<a href="/qb64wiki/index.php/DATA" title="DATA"><span style="color:#4593D8;">DATA</span></a> <span style="color:#FFB100;">"o3 &gt;d16 &lt;b-16 a-16 b-16"</span>,<span style="color:#FFB100;">"o3 a-8 p8"</span>,<span style="color:#FFB100;">"o2 &lt;b-8 &gt;d8"</span>
+<a href="/qb64wiki/index.php/DATA" title="DATA"><span style="color:#4593D8;">DATA</span></a> <span style="color:#FFB100;">"o3 g8 p8"</span>,<span style="color:#FFB100;">"o3 p16 e-16 d-16 e-16"</span>,<span style="color:#FFB100;">"o2 &lt;e-8 &gt;g8"</span>
+<a href="/qb64wiki/index.php/DATA" title="DATA"><span style="color:#4593D8;">DATA</span></a> <span style="color:#FFB100;">"o3 &gt;d-8 p8"</span>,<span style="color:#FFB100;">"o3 &lt;b-16 &gt;e-16 d-16 e-16"</span>,<span style="color:#FFB100;">"o2 &lt;e-8 &gt;g8"</span>
+<a href="/qb64wiki/index.php/DATA" title="DATA"><span style="color:#4593D8;">DATA</span></a> <span style="color:#FFB100;">"o4 d-8 p8"</span>,<span style="color:#FFB100;">"o3 g16 e-16 d-16 e-16"</span>,<span style="color:#FFB100;">"o2 &lt;e-8 g8"</span>
+<a href="/qb64wiki/index.php/DATA" title="DATA"><span style="color:#4593D8;">DATA</span></a> <span style="color:#FFB100;">"o3 p16 a-16 g16 a-16"</span>,<span style="color:#FFB100;">"o3 c16 f16 e16 f16"</span>,<span style="color:#FFB100;">"o1 a-8 &gt;c8"</span>
+<a href="/qb64wiki/index.php/DATA" title="DATA"><span style="color:#4593D8;">DATA</span></a> <span style="color:#FFB100;">"o3 f16 a-16 g16 a-16"</span>,<span style="color:#FFB100;">"o3 c16 f16 e16 f16"</span>,<span style="color:#FFB100;">"o2 &lt;a-8 &gt;c8"</span>
+<a href="/qb64wiki/index.php/DATA" title="DATA"><span style="color:#4593D8;">DATA</span></a> <span style="color:#FFB100;">"o3 &gt;c16 &lt;a-16 g16 a-16"</span>,<span style="color:#FFB100;">"o3 a-16 f16 e-16 f16"</span>,<span style="color:#FFB100;">"o2 &lt;a-8 &gt;c8"</span>
+<a href="/qb64wiki/index.php/DATA" title="DATA"><span style="color:#4593D8;">DATA</span></a> <span style="color:#FFB100;">"o3 f16 b-16 a-16 b-16"</span>,<span style="color:#FFB100;">"o3 d8 f8"</span>,<span style="color:#FFB100;">"o2 &lt;a-8 &gt;d8"</span>
+<a href="/qb64wiki/index.php/DATA" title="DATA"><span style="color:#4593D8;">DATA</span></a> <span style="color:#FFB100;">"o3 &gt;d16 &lt;b-16 a-16 b-16"</span>,<span style="color:#FFB100;">"o3 b-4"</span>,<span style="color:#FFB100;">"o2 &lt;a-8 &gt;d8"</span>
+<a href="/qb64wiki/index.php/DATA" title="DATA"><span style="color:#4593D8;">DATA</span></a> <span style="color:#FFB100;">"o3 &gt;f16 d16 c16 d16"</span>,<span style="color:#FFB100;">"o3 b-4"</span>,<span style="color:#FFB100;">"o2 &lt;a-8 &gt;d8"</span>
+<a href="/qb64wiki/index.php/DATA" title="DATA"><span style="color:#4593D8;">DATA</span></a> <span style="color:#FFB100;">"o4 b-8 g8"</span>,<span style="color:#FFB100;">"o3 p16 &lt;b-16 a-16 b-16"</span>,<span style="color:#FFB100;">"o2 &lt;g8 &gt;e-8"</span>
+<a href="/qb64wiki/index.php/DATA" title="DATA"><span style="color:#4593D8;">DATA</span></a> <span style="color:#FFB100;">"o4 e-4"</span>,<span style="color:#FFB100;">"o2 &gt;e-16 &lt;b-16 a-16 b-16"</span>,<span style="color:#FFB100;">"o2 &lt;g8 &gt;e-8"</span>
+<a href="/qb64wiki/index.php/DATA" title="DATA"><span style="color:#4593D8;">DATA</span></a> <span style="color:#FFB100;">"o4 e-4"</span>,<span style="color:#FFB100;">"o2 &gt;g16 e-16 d16 e-16"</span>,<span style="color:#FFB100;">"o2 &lt;g8 &gt;e-8"</span>
+<a href="/qb64wiki/index.php/DATA" title="DATA"><span style="color:#4593D8;">DATA</span></a> <span style="color:#FFB100;">"o4 p16 d16 c16 &lt;b-16"</span>,<span style="color:#FFB100;">"o3 a16 b-16 a16 g16"</span>,<span style="color:#FFB100;">"o2 &lt;f4"</span>
+<a href="/qb64wiki/index.php/DATA" title="DATA"><span style="color:#4593D8;">DATA</span></a> <span style="color:#FFB100;">"o3 a16 b-16 a16 g16"</span>,<span style="color:#FFB100;">"o3 f16 &gt;d16 c16 &lt;b-16"</span>,<span style="color:#FFB100;">"o1 p4"</span>
+<a href="/qb64wiki/index.php/DATA" title="DATA"><span style="color:#4593D8;">DATA</span></a> <span style="color:#FFB100;">"o3 f16 &gt;e-16 d16 c16"</span>,<span style="color:#FFB100;">"o3 a16 g16 f16 e-16"</span>,<span style="color:#FFB100;">"o1 p4"</span>
+<a href="/qb64wiki/index.php/DATA" title="DATA"><span style="color:#4593D8;">DATA</span></a> <span style="color:#FFB100;">"o3 b-4"</span>,<span style="color:#FFB100;">"o3 d16 c16 d16 f16"</span>,<span style="color:#FFB100;">"o1 b-8 &gt;b-8"</span>
+<a href="/qb64wiki/index.php/DATA" title="DATA"><span style="color:#4593D8;">DATA</span></a> <span style="color:#FFB100;">"o3 b-4"</span>,<span style="color:#FFB100;">"o3 e-16 d16 e-16 g16"</span>,<span style="color:#FFB100;">"o2 c8 b-8"</span>
+<a href="/qb64wiki/index.php/DATA" title="DATA"><span style="color:#4593D8;">DATA</span></a> <span style="color:#FFB100;">"o3 b-4"</span>,<span style="color:#FFB100;">"o3 f16 e-16 f16 a-16"</span>,<span style="color:#FFB100;">"o2 d8 b-8"</span>
+<a href="/qb64wiki/index.php/DATA" title="DATA"><span style="color:#4593D8;">DATA</span></a> <span style="color:#FFB100;">"o3 p16 a16 b-16 &gt;e-16"</span>,<span style="color:#FFB100;">"o3 g16 f16 g16 b-16"</span>,<span style="color:#FFB100;">"o2 e-8 b-8"</span>
+<a href="/qb64wiki/index.php/DATA" title="DATA"><span style="color:#4593D8;">DATA</span></a> <span style="color:#FFB100;">"o4 &lt;b-16 a16 b-16 &gt;d16"</span>,<span style="color:#FFB100;">"o3 d16 c16 d16 b-16"</span>,<span style="color:#FFB100;">"o2 f8 b-8"</span>
+<a href="/qb64wiki/index.php/DATA" title="DATA"><span style="color:#4593D8;">DATA</span></a> <span style="color:#FFB100;">"o4 c4"</span>,<span style="color:#FFB100;">"o3 e-16 d16 e-16 b-16"</span>,<span style="color:#FFB100;">"o2 g8 b-8"</span>
+<a href="/qb64wiki/index.php/DATA" title="DATA"><span style="color:#4593D8;">DATA</span></a> <span style="color:#FFB100;">"o4 p16 g16 f16 e-16"</span>,<span style="color:#FFB100;">"o3 d4"</span>,<span style="color:#FFB100;">"o2 f8 b-8"</span>
+<a href="/qb64wiki/index.php/DATA" title="DATA"><span style="color:#4593D8;">DATA</span></a> <span style="color:#FFB100;">"o4 d16 b-16 a16 g16"</span>,<span style="color:#FFB100;">"o3 p16 &gt;d16 c16 &lt;b-16"</span>,<span style="color:#FFB100;">"o2 e-8 b-8"</span>
+<a href="/qb64wiki/index.php/DATA" title="DATA"><span style="color:#4593D8;">DATA</span></a> <span style="color:#FFB100;">"o4 f16 e-16 d16 c16"</span>,<span style="color:#FFB100;">"o3 a16 g16 f16 e-16"</span>,<span style="color:#FFB100;">"o2 f8 a8"</span>
+<a href="/qb64wiki/index.php/DATA" title="DATA"><span style="color:#4593D8;">DATA</span></a> <span style="color:#FFB100;">"o3 b-8 &gt;f8"</span>,<span style="color:#FFB100;">"o3 d16 b-16 a16 b-16"</span>,<span style="color:#FFB100;">"o1 b-4"</span>
+<a href="/qb64wiki/index.php/DATA" title="DATA"><span style="color:#4593D8;">DATA</span></a> <span style="color:#FFB100;">"o4 g8 f8"</span>,<span style="color:#FFB100;">"o3 e-16 b-16 d16 b-16"</span>,<span style="color:#FFB100;">"o1 p4"</span>
+<a href="/qb64wiki/index.php/DATA" title="DATA"><span style="color:#4593D8;">DATA</span></a> <span style="color:#FFB100;">"o4 g8 f8"</span>,<span style="color:#FFB100;">"o3 e-16 b-16 c16 b-16"</span>,<span style="color:#FFB100;">"o1 p4"</span>
+<a href="/qb64wiki/index.php/DATA" title="DATA"><span style="color:#4593D8;">DATA</span></a> <span style="color:#FFB100;">"o4 f16 b-16 a16 b-16"</span>,<span style="color:#FFB100;">"o3 d8 f8"</span>,<span style="color:#FFB100;">"o1 b-4"</span>
+<a href="/qb64wiki/index.php/DATA" title="DATA"><span style="color:#4593D8;">DATA</span></a> <span style="color:#FFB100;">"o4 e-16 b-16 d16 b-16"</span>,<span style="color:#FFB100;">"o3 g8 f8"</span>,<span style="color:#FFB100;">"o1 p4"</span>
+<a href="/qb64wiki/index.php/DATA" title="DATA"><span style="color:#4593D8;">DATA</span></a> <span style="color:#FFB100;">"o4 e-16 b-16 c16 b-16"</span>,<span style="color:#FFB100;">"o3 g8 e-8"</span>,<span style="color:#FFB100;">"o1 p4"</span>
+<a href="/qb64wiki/index.php/DATA" title="DATA"><span style="color:#4593D8;">DATA</span></a> <span style="color:#FFB100;">"o4 d4"</span>,<span style="color:#FFB100;">"o3 f16 &lt;b-16 &gt;c16 d16"</span>,<span style="color:#FFB100;">"o1 p8 &gt;f8"</span>
+<a href="/qb64wiki/index.php/DATA" title="DATA"><span style="color:#4593D8;">DATA</span></a> <span style="color:#FFB100;">"o4 p16 &lt;b-16 &gt;c16 d16"</span>,<span style="color:#FFB100;">"o3 e-4"</span>,<span style="color:#FFB100;">"o2 g8 f8"</span>
+<a href="/qb64wiki/index.php/DATA" title="DATA"><span style="color:#4593D8;">DATA</span></a> <span style="color:#FFB100;">"o4 e-16 f16 g16 a16"</span>,<span style="color:#FFB100;">"o3 p16 d16 e-16 c16"</span>,<span style="color:#FFB100;">"o2 g8 e-8"</span>
+<a href="/qb64wiki/index.php/DATA" title="DATA"><span style="color:#4593D8;">DATA</span></a> <span style="color:#FFB100;">"o4 b-8 &lt;b-8"</span>,<span style="color:#FFB100;">"o3 f8 d8"</span>,<span style="color:#FFB100;">"o2 d8 g8"</span>
+<a href="/qb64wiki/index.php/DATA" title="DATA"><span style="color:#4593D8;">DATA</span></a> <span style="color:#FFB100;">"o3 &gt;c8 p8"</span>,<span style="color:#FFB100;">"o3 e-8 p8"</span>,<span style="color:#FFB100;">"o2 e-8 p8"</span>
+<a href="/qb64wiki/index.php/DATA" title="DATA"><span style="color:#4593D8;">DATA</span></a> <span style="color:#FFB100;">"o4 &lt;a4"</span>,<span style="color:#FFB100;">"o3 c4"</span>,<span style="color:#FFB100;">"o2 f4"</span>
+<a href="/qb64wiki/index.php/DATA" title="DATA"><span style="color:#4593D8;">DATA</span></a> <span style="color:#FFB100;">"o3 mlb-4"</span>,<span style="color:#FFB100;">"o3 mld4"</span>,<span style="color:#FFB100;">"o1 mlb-4"</span>
+<a href="/qb64wiki/index.php/DATA" title="DATA"><span style="color:#4593D8;">DATA</span></a> <span style="color:#FFB100;">"o3 b-4"</span>,<span style="color:#FFB100;">"o3 d4"</span>,<span style="color:#FFB100;">"o1 b-4"</span>
+<a href="/qb64wiki/index.php/DATA" title="DATA"><span style="color:#4593D8;">DATA</span></a> <span style="color:#FFB100;">"o3 b-4"</span>,<span style="color:#FFB100;">"o3 d4"</span>,<span style="color:#FFB100;">"o1 b-4"</span>
+<a href="/qb64wiki/index.php/DATA" title="DATA"><span style="color:#4593D8;">DATA</span></a> <span style="color:#FFB100;">""</span>,<span style="color:#FFB100;">""</span>,<span style="color:#FFB100;">""</span>
+
+<a href="/qb64wiki/index.php/FUNCTION" title="FUNCTION"><span style="color:#4593D8;">FUNCTION</span></a> <span style="color:#55FF55;">DisplayVoiceStats%%</span>
+    <a href="/qb64wiki/index.php/DIM" title="DIM"><span style="color:#4593D8;">DIM</span></a> voiceTime(<span style="color:#F580B1;">0</span> <a href="/qb64wiki/index.php/TO" title="TO"><span style="color:#4593D8;">TO</span></a> <span style="color:#F580B1;">3</span>) <a href="/qb64wiki/index.php/AS" title="AS"><span style="color:#4593D8;">AS</span></a> <a href="/qb64wiki/index.php/INTEGER64" title="INTEGER64"><span style="color:#4593D8;">_INTEGER64</span></a>
+    <a href="/qb64wiki/index.php/DIM" title="DIM"><span style="color:#4593D8;">DIM</span></a> i <a href="/qb64wiki/index.php/AS" title="AS"><span style="color:#4593D8;">AS</span></a> <a href="/qb64wiki/index.php/LONG" title="LONG"><span style="color:#4593D8;">LONG</span></a>
+
+    <a href="/qb64wiki/index.php/FOR" title="FOR"><span style="color:#4593D8;">FOR</span></a> i = <span style="color:#F580B1;">0</span> <a href="/qb64wiki/index.php/TO" title="TO"><span style="color:#4593D8;">TO</span></a> <span style="color:#F580B1;">3</span>
+        voiceTime(i) = <a class="mw-selflink selflink"><span style="color:#4593D8;">PLAY</span></a>(i)
+        <a href="/qb64wiki/index.php/PRINT" title="PRINT"><span style="color:#4593D8;">PRINT</span></a> <span style="color:#FFB100;">"Voice"</span>; i; <span style="color:#FFB100;">":"</span>; voiceTime(i); <span style="color:#FFB100;">"seconds left"</span>; <a href="/qb64wiki/index.php/SPC" title="SPC"><span style="color:#4593D8;">SPC</span></a>(<span style="color:#F580B1;">10</span>)
+    <a href="/qb64wiki/index.php/NEXT" title="NEXT"><span style="color:#4593D8;">NEXT</span></a> i
+
+    <span style="color:#55FF55;">DisplayVoiceStats</span> = voiceTime(<span style="color:#F580B1;">0</span>) &gt; <span style="color:#F580B1;">0</span> <a href="/qb64wiki/index.php/ORELSE" title="ORELSE"><span style="color:#4593D8;">_ORELSE</span></a> voiceTime(<span style="color:#F580B1;">1</span>) &gt; <span style="color:#F580B1;">0</span> <a href="/qb64wiki/index.php/ORELSE" title="ORELSE"><span style="color:#4593D8;">_ORELSE</span></a> voiceTime(<span style="color:#F580B1;">2</span>) &gt; <span style="color:#F580B1;">0</span> <a href="/qb64wiki/index.php/ORELSE" title="ORELSE"><span style="color:#4593D8;">_ORELSE</span></a> voiceTime(<span style="color:#F580B1;">3</span>) &gt; <span style="color:#F580B1;">0</span>
+<a class="mw-redirect" href="/qb64wiki/index.php/END_FUNCTION" title="END FUNCTION"><span style="color:#4593D8;">END FUNCTION</span></a>
 </pre>
          </td>
         </tr>
@@ -411,13 +650,11 @@
         <a href="/qb64wiki/index.php/PLAY" title="PLAY">
          PLAY
         </a>
-       </li>
-       <li>
+        ,
         <a href="/qb64wiki/index.php/SOUND" title="SOUND">
          SOUND
         </a>
-       </li>
-       <li>
+        ,
         <a href="/qb64wiki/index.php/BEEP" title="BEEP">
          BEEP
         </a>
@@ -426,8 +663,7 @@
         <a href="/qb64wiki/index.php/SNDOPEN" title="SNDOPEN">
          _SNDOPEN
         </a>
-       </li>
-       <li>
+        ,
         <a href="/qb64wiki/index.php/SNDRAW" title="SNDRAW">
          _SNDRAW
         </a>
@@ -467,40 +703,40 @@
       </center>
       <!-- 
 NewPP limit report
-Cached time: 20240721212709
+Cached time: 20250124100700
 Cache expiry: 86400
 Reduced expiry: false
 Complications: [show‐toc]
-CPU time usage: 0.039 seconds
-Real time usage: 0.055 seconds
-Preprocessor visited node count: 264/1000000
-Post‐expand include size: 2269/2097152 bytes
-Template argument size: 568/2097152 bytes
+CPU time usage: 0.182 seconds
+Real time usage: 0.204 seconds
+Preprocessor visited node count: 4928/1000000
+Post‐expand include size: 34693/2097152 bytes
+Template argument size: 16089/2097152 bytes
 Highest expansion depth: 4/100
 Expensive parser function count: 0/100
 Unstrip recursion depth: 0/20
-Unstrip post‐expand size: 2649/5000000 bytes
+Unstrip post‐expand size: 11044/5000000 bytes
 -->
       <!--
 Transclusion expansion time report (%,ms,calls,template)
-100.00%   42.457      1 -total
- 16.99%    7.214      1 Template:CodeStart
-  7.66%    3.253      1 Template:PageExamples
-  5.61%    2.382     14 Template:Cl
-  5.26%    2.231      1 Template:PageSyntax
-  4.76%    2.022     13 Template:Text
-  4.25%    1.804      5 Template:Parameter
-  3.83%    1.627      1 Template:PageSeeAlso
-  3.77%    1.601      1 Template:CodeEnd
-  3.70%    1.572      1 Template:PageNavigation
+100.00%  109.740      1 -total
+ 20.95%   22.992    384 Template:Text
+  7.92%    8.692    162 Template:Cl
+  4.51%    4.953      1 Template:PageSeeAlso
+  3.19%    3.498      1 Template:PageSyntax
+  2.74%    3.008      1 Template:PageExamples
+  2.57%    2.819      1 Template:PageNavigation
+  2.51%    2.754      7 Template:Parameter
+  2.40%    2.629      2 Template:CodeStart
+  2.19%    2.402      2 Template:CodeEnd
 -->
-      <!-- Saved in parser cache with key qb64pnix_mw19894-mwmb_:pcache:idhash:965-0!canonical and timestamp 20240721212709 and revision id 8478.
+      <!-- Saved in parser cache with key qb64pnix_mw19894-mwmb_:pcache:idhash:965-0!canonical and timestamp 20250124100659 and revision id 9308.
  -->
      </div>
      <div class="printfooter" data-nosnippet="">
       Retrieved from "
-      <a dir="ltr" href="https://qb64phoenix.com/qb64wiki/index.php?title=PLAY_(function)&amp;oldid=8478">
-       https://qb64phoenix.com/qb64wiki/index.php?title=PLAY_(function)&amp;oldid=8478
+      <a dir="ltr" href="https://qb64phoenix.com/qb64wiki/index.php?title=PLAY_(function)&amp;oldid=9308">
+       https://qb64phoenix.com/qb64wiki/index.php?title=PLAY_(function)&amp;oldid=9308
       </a>
       "
      </div>
@@ -717,7 +953,7 @@ You can view its source [e]">
         </a>
        </li>
        <li class="mw-list-item" id="t-permalink">
-        <a href="/qb64wiki/index.php?title=PLAY_(function)&amp;oldid=8478" title="Permanent link to this revision of this page">
+        <a href="/qb64wiki/index.php?title=PLAY_(function)&amp;oldid=9308" title="Permanent link to this revision of this page">
          <span>
           Permanent link
          </span>
@@ -738,7 +974,7 @@ You can view its source [e]">
   <footer class="mw-footer" id="footer" role="contentinfo">
    <ul id="footer-info">
     <li id="footer-info-lastmod">
-     This page was last edited on 18 June 2023, at 16:36.
+     This page was last edited on 22 November 2024, at 14:21.
     </li>
    </ul>
    <ul id="footer-places">
@@ -767,7 +1003,7 @@ You can view its source [e]">
    </ul>
   </footer>
   <script>
-   (RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgPageParseReport":{"limitreport":{"cputime":"0.039","walltime":"0.055","ppvisitednodes":{"value":264,"limit":1000000},"postexpandincludesize":{"value":2269,"limit":2097152},"templateargumentsize":{"value":568,"limit":2097152},"expansiondepth":{"value":4,"limit":100},"expensivefunctioncount":{"value":0,"limit":100},"unstrip-depth":{"value":0,"limit":20},"unstrip-size":{"value":2649,"limit":5000000},"timingprofile":["100.00%   42.457      1 -total"," 16.99%    7.214      1 Template:CodeStart","  7.66%    3.253      1 Template:PageExamples","  5.61%    2.382     14 Template:Cl","  5.26%    2.231      1 Template:PageSyntax","  4.76%    2.022     13 Template:Text","  4.25%    1.804      5 Template:Parameter","  3.83%    1.627      1 Template:PageSeeAlso","  3.77%    1.601      1 Template:CodeEnd","  3.70%    1.572      1 Template:PageNavigation"]},"cachereport":{"timestamp":"20240721212709","ttl":86400,"transientcontent":false}}});mw.config.set({"wgBackendResponseTime":76});});
+   (RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgPageParseReport":{"limitreport":{"cputime":"0.182","walltime":"0.204","ppvisitednodes":{"value":4928,"limit":1000000},"postexpandincludesize":{"value":34693,"limit":2097152},"templateargumentsize":{"value":16089,"limit":2097152},"expansiondepth":{"value":4,"limit":100},"expensivefunctioncount":{"value":0,"limit":100},"unstrip-depth":{"value":0,"limit":20},"unstrip-size":{"value":11044,"limit":5000000},"timingprofile":["100.00%  109.740      1 -total"," 20.95%   22.992    384 Template:Text","  7.92%    8.692    162 Template:Cl","  4.51%    4.953      1 Template:PageSeeAlso","  3.19%    3.498      1 Template:PageSyntax","  2.74%    3.008      1 Template:PageExamples","  2.57%    2.819      1 Template:PageNavigation","  2.51%    2.754      7 Template:Parameter","  2.40%    2.629      2 Template:CodeStart","  2.19%    2.402      2 Template:CodeEnd"]},"cachereport":{"timestamp":"20250124100700","ttl":86400,"transientcontent":false}}});mw.config.set({"wgBackendResponseTime":82});});
   </script>
  </body>
 </html>

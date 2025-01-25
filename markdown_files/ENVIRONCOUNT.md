@@ -135,5 +135,5 @@ br ~ h5 {
 <blockquote>
 
 
-* [ENVIRON&dollar;](ENVIRON&dollar;.md) , [ENVIRON](ENVIRON.md)
+* [ENVIRON\$](ENVIRON\$.md) , [ENVIRON](ENVIRON.md)
 </blockquote>

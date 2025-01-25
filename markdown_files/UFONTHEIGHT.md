@@ -129,7 +129,7 @@ br ~ h5 {
 
 * Returns the height of the last font used if a handle is not designated.
 * If no font is set, it returns the current screen mode's text block height.
-* This is different from [_FONTHEIGHT](FONTHEIGHT.md) as it may return larger values when using scalable fonts.
+* This is different from _FONTHEIGHT as it may return larger values when using scalable fonts.
 
 </blockquote>
 
@@ -162,9 +162,9 @@ _UFONTHEIGHT = 32
 
 
 * Featured in our "Keyword of the Day" series
-* [_UPRINTWIDTH](UPRINTWIDTH.md) , [_ULINESPACING](ULINESPACING.md) , [_UPRINTSTRING](UPRINTSTRING.md) , [_UCHARPOS](UCHARPOS.md)
-* [_FONTWIDTH](FONTWIDTH.md) , [_FONTHEIGHT](FONTHEIGHT.md) , [_FONT](FONT.md)
-* [_PRINTWIDTH](PRINTWIDTH.md) , [_PRINTSTRING](PRINTSTRING.md)
-* [SCREEN](SCREEN.md) , [_LOADFONT](LOADFONT.md)
+* _UPRINTWIDTH , _ULINESPACING , _UPRINTSTRING , _UCHARPOS
+* _FONTWIDTH , _FONTHEIGHT , _FONT
+* _PRINTWIDTH , _PRINTSTRING
+* [SCREEN](SCREEN.md) , _LOADFONT
 * Text Using Graphics
 </blockquote>

@@ -121,7 +121,7 @@ br ~ h5 {
 
 * Used in an error handler to report the last line number used before the error.
 * If the program does not use line numbers, then [ERL](ERL.md) returns 0.
-* Use [_ERRORLINE](ERRORLINE.md) to return the actual code line position of an error in a QB64 program.
+* Use _ERRORLINE to return the actual code line position of an error in a QB64 program.
 
 </blockquote>
 
@@ -167,6 +167,6 @@ RESUME NEXT
 * [ERR](ERR.md)
 * [ERROR](ERROR.md)
 * [ON](ON.md) [ERROR](ERROR.md)
-* [_ERRORLINE](ERRORLINE.md) , [_INCLERRORLINE](INCLERRORLINE.md) , [_INCLERRORFILE&dollar;](INCLERRORFILE&dollar;.md)
+* _ERRORLINE , _INCLERRORLINE , _INCLERRORFILE$
 * [ERROR](ERROR.md) Codes
 </blockquote>

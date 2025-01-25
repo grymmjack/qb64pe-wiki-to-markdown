@@ -137,9 +137,9 @@ NEXT
 ##### Example 2: Reading the keyboard Scan Codes as an alternative to INKEY\$
 ```vb
 DO: SLEEP
-scancode% = INP(&H60)
-a$ = INKEY$ ' clears keyboard buffer
-PRINT scancode%;
+   scancode% = INP(&H60)
+   a$ = INKEY$ ' clears keyboard buffer
+   PRINT scancode%;
 LOOP UNTIL scancode% = 1 ' [ESC] keypress exit
 ```
   
@@ -227,7 +227,7 @@ END FUNCTION
 
 
 * [OUT](OUT.md) (write to register) , [PEEK](PEEK.md) (read memory)
-* [INKEY&dollar;](INKEY&dollar;.md) , [_KEYHIT](KEYHIT.md) , [_KEYDOWN](KEYDOWN.md)
+* [INKEY\$](INKEY\$.md) , _KEYHIT , _KEYDOWN
 * Bitmaps , Scancodes (keyboard)
 * Port Access Libraries (COM or LPT registers)
 </blockquote>

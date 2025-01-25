@@ -144,7 +144,7 @@ That angle in Radians is 1.047198
 <blockquote>
 
 
-* [_D2G](D2G.md) , [_D2R](D2R.md)
-* [_G2D](G2D.md) , [_G2R](G2R.md)
-* [_R2D](R2D.md) , [_R2G](R2G.md)
+* _D2G , _D2R
+* _G2D , _G2R
+* _R2D , _R2G
 </blockquote>

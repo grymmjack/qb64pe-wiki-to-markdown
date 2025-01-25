@@ -120,10 +120,10 @@ br ~ h5 {
 
 
 * QBasic Metacommands require a [REM](REM.md) or apostrophy (') before them and are normally placed at the start of the main module.
-* Static arrays cannot be resized. If a variable is used to size any array, it becomes [&dollar;DYNAMIC](&dollar;DYNAMIC.md) .
-* A [REDIM](REDIM.md) statement has no effect on [&dollar;STATIC](&dollar;STATIC.md) arrays except perhaps a duplicate definition error at the [REDIM](REDIM.md) statement.
+* Static arrays cannot be resized. If a variable is used to size any array, it becomes [\$DYNAMIC](\$DYNAMIC.md) .
+* A [REDIM](REDIM.md) statement has no effect on [\$STATIC](\$STATIC.md) arrays except perhaps a duplicate definition error at the [REDIM](REDIM.md) statement.
 * The array's type cannot be changed once [DIM](DIM.md) and a literal value sets the dimensions and element size.
-* [&dollar;STATIC](&dollar;STATIC.md) defined program arrays cannot be re-sized or use [_PRESERVE](PRESERVE.md) .
+* [\$STATIC](\$STATIC.md) defined program arrays cannot be re-sized or use _PRESERVE .
 
 </blockquote>
 
@@ -155,6 +155,6 @@ PRINT UBOUND(array)
 <blockquote>
 
 
-* [&dollar;DYNAMIC](&dollar;DYNAMIC.md) , [STATIC](STATIC.md)
-* Arrays , Metacommand
+* [\$DYNAMIC](\$DYNAMIC.md) , [STATIC](STATIC.md)
+* [Arrays](Arrays.md) , [Metacommand](Metacommand.md)
 </blockquote>

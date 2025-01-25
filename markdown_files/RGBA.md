@@ -145,11 +145,11 @@ END
 <blockquote>
 
 
-* [_RGB](RGB.md) , [_RGB32](RGB32.md) , [_RGBA32](RGBA32.md)
-* [_RED](RED.md) , [_GREEN](GREEN.md) , [_BLUE](BLUE.md)
-* [_LOADIMAGE](LOADIMAGE.md)
-* [_PRINTSTRING](PRINTSTRING.md)
-* [HEX&dollar;](HEX&dollar;.md) 32 Bit Values , [POINT](POINT.md)
+* _RGB , _RGB32 , _RGBA32
+* _RED , _GREEN , _BLUE
+* _LOADIMAGE
+* _PRINTSTRING
+* [HEX\$](HEX\$.md) 32 Bit Values , [POINT](POINT.md)
 * SaveImage [SUB](SUB.md)
 * Hexadecimal Color Values
 </blockquote>

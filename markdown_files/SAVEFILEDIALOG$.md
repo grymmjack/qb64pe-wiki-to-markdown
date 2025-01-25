@@ -142,11 +142,11 @@ br ~ h5 {
 
 ```vb
 IF NOT filesaved& THEN
-textfile$ = _SAVEFILEDIALOG$("Save File", "", "*.txt|*.doc", "Text files")
-IF textfile$ <> "" THEN
-filesaved& = -1
-_MESSAGEBOX "Information", "File will be saved to " + textfile$
-END IF
+   textfile$ = _SAVEFILEDIALOG$("Save File", "", "*.txt|*.doc", "Text files")
+   IF textfile$ <> "" THEN
+       filesaved& = -1
+       _MESSAGEBOX "Information", "File will be saved to " + textfile$
+   END IF
 END IF
 ```
   
@@ -160,11 +160,11 @@ END IF
 <blockquote>
 
 
-* [_NOTIFYPOPUP](NOTIFYPOPUP.md)
-* [_MESSAGEBOX](MESSAGEBOX.md)
-* [_MESSAGEBOX](MESSAGEBOX.md) (function)
-* [_INPUTBOX&dollar;](INPUTBOX&dollar;.md)
-* [_SELECTFOLDERDIALOG&dollar;](SELECTFOLDERDIALOG&dollar;.md)
-* [_COLORCHOOSERDIALOG](COLORCHOOSERDIALOG.md)
-* [_OPENFILEDIALOG&dollar;](OPENFILEDIALOG&dollar;.md)
+* _NOTIFYPOPUP
+* _MESSAGEBOX
+* _MESSAGEBOX (function)
+* _INPUTBOX$
+* _SELECTFOLDERDIALOG$
+* _COLORCHOOSERDIALOG
+* _OPENFILEDIALOG$
 </blockquote>

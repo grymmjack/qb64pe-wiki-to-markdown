@@ -143,6 +143,6 @@ br ~ h5 {
 * [DIM](DIM.md) , [REDIM](REDIM.md)
 * [CLEAR](CLEAR.md)
 * [STATIC](STATIC.md)
-* [&dollar;DYNAMIC](&dollar;DYNAMIC.md)
-* Arrays
+* [\$DYNAMIC](\$DYNAMIC.md)
+* [Arrays](Arrays.md)
 </blockquote>

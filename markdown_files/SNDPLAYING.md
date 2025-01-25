@@ -120,7 +120,7 @@ br ~ h5 {
 
 
 * Returns false (0) if a sound is not playing or true (-1) if it is.
-* If a sound is paused, [_SNDPLAYING](SNDPLAYING.md) returns 0.
+* If a sound is paused, _SNDPLAYING returns 0.
 
 </blockquote>
 
@@ -142,6 +142,6 @@ PRINT _SNDPLAYING(h&)
 <blockquote>
 
 
-* [_SNDPLAY](SNDPLAY.md) , [_SNDPAUSE](SNDPAUSE.md) , [_SNDSTOP](SNDSTOP.md)
-* [_SNDPAUSED](SNDPAUSED.md)
+* _SNDPLAY , _SNDPAUSE , _SNDSTOP
+* _SNDPAUSED
 </blockquote>

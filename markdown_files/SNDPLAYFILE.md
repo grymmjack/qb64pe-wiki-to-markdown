@@ -119,13 +119,13 @@ br ~ h5 {
 <blockquote>
 
 
-* Supported file formats are WAV, FLAC, OGG, MP3, MID, IT, XM, S3M, [MOD](MOD.md) or RAD (v2 only) . See [_SNDOPEN](SNDOPEN.md) .
+* Supported file formats are WAV, FLAC, OGG, MP3, MID, IT, XM, S3M, [MOD](MOD.md) or RAD (v2 only) . See _SNDOPEN .
 * ignored% is an optional parameter , accepted for historical reasons.
 * In versions prior to build 20170811/60 , ignored% identified if a sound was to be loaded with "SYNC" capabilities , (-1 for true, 0 for false). This is true for all sound files in the latest versions, making this parameter safe to be ignored.
 * volume! is a [SINGLE](SINGLE.md) value from 0 (silence) to 1 (full volume). If not used or outside this range, the sound will be played at full volume.
-* [_SNDPLAYFILE](SNDPLAYFILE.md) never creates an error. If the sound cannot be played it takes no further action.
+* _SNDPLAYFILE never creates an error. If the sound cannot be played it takes no further action.
 * The sound is closed automatically after it finishes playing.
-* When a sound will be used often, open the file with [_SNDOPEN](SNDOPEN.md) and use [_SNDPLAYCOPY](SNDPLAYCOPY.md) to play the handle instead to reduce the burden on the computer.
+* When a sound will be used often, open the file with _SNDOPEN and use _SNDPLAYCOPY to play the handle instead to reduce the burden on the computer.
 
 </blockquote>
 
@@ -150,6 +150,6 @@ _SNDPLAYFILE "dog.wav", , .5
 <blockquote>
 
 
-* [_SNDOPEN](SNDOPEN.md) , [_SNDPLAY](SNDPLAY.md)
-* [_SNDPLAYCOPY](SNDPLAYCOPY.md)
+* _SNDOPEN , _SNDPLAY
+* _SNDPLAYCOPY
 </blockquote>

@@ -124,7 +124,7 @@ br ~ h5 {
 * Assemble long text into one string variable value before using this statement.
 * Add CHR$(13) + CHR$(10) CRLF characters to move to a new clipboard line.
 * When copying text files, end line CRLF characters 13 and 10 do not have to be added.
-* Numerical values can be converted to strings using [STR&dollar;](STR&dollar;.md) , [_MK&dollar;](MK&dollar;.md) , [MKI&dollar;](MKI&dollar;.md) , [MKL&dollar;](MKL&dollar;.md) , [MKS&dollar;](MKS&dollar;.md) , [MKD&dollar;](MKD&dollar;.md) , [_BIN&dollar;](BIN&dollar;.md) , [HEX&dollar;](HEX&dollar;.md) or [OCT&dollar;](OCT&dollar;.md) .
+* Numerical values can be converted to strings using [STR\$](STR\$.md) , _MK$ , [MKI\$](MKI\$.md) , [MKL\$](MKL\$.md) , [MKS\$](MKS\$.md) , [MKD\$](MKD\$.md) , _BIN$ , [HEX\$](HEX\$.md) or [OCT\$](OCT\$.md) .
 * The clipboard can be used to copy, paste and communicate between running programs.
 
 </blockquote>
@@ -159,7 +159,7 @@ This is line 2
 
 
 * Featured in our "Keyword of the Day" series
-* [_CLIPBOARD&dollar;](CLIPBOARD&dollar;.md) (function)
-* [_CLIPBOARDIMAGE](CLIPBOARDIMAGE.md) (function) , [_CLIPBOARDIMAGE](CLIPBOARDIMAGE.md) (statement)
-* [CHR&dollar;](CHR&dollar;.md) , ASCII (code table)
+* _CLIPBOARD$ (function)
+* _CLIPBOARDIMAGE (function) , _CLIPBOARDIMAGE (statement)
+* [CHR\$](CHR\$.md) , [ASCII](ASCII.md) (code table)
 </blockquote>

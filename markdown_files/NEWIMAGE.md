@@ -134,8 +134,8 @@ br ~ h5 {
 * You can create any sized window (limited by the OS) in any emulated [SCREEN](SCREEN.md) mode or 32 bit using this function.
 * Default text block size in emulated [SCREEN](SCREEN.md) modes 1, 2, 7, 8 and 13 is 8 X 8; 9 and 10 is 8 X 14; 11, 12, 256 and 32 bit is 8 X 16. The text block pixel size will allow you to calculate the available text rows and columns in a custom sized screen.
 * To view the image page, just use [SCREEN](SCREEN.md) handle& . Even if another procedure changes the screen mode and clears the screen, the image can be restored later by using the same [SCREEN](SCREEN.md) handle mode.
-* Use the [_COPYIMAGE](COPYIMAGE.md) function to preserve a [SCREEN](SCREEN.md) handle value when changing to another screen mode to restore it later.
-* 32 bit screen surface backgrounds (black) have zero [_ALPHA](ALPHA.md) so that they are transparent when placed over other surfaces.
+* Use the _COPYIMAGE function to preserve a [SCREEN](SCREEN.md) handle value when changing to another screen mode to restore it later.
+* 32 bit screen surface backgrounds (black) have zero _ALPHA so that they are transparent when placed over other surfaces.
 
 </blockquote>
 
@@ -187,7 +187,7 @@ COLOR 13: LOCATE 16, 16: PRINT "First"
 _DEST mode1&  'work in main window
 LOCATE 5
 FOR c = 1 TO 248
-Color c: PRINT c;
+  Color c: PRINT c;
 NEXT
 COLOR 12: LOCATE 20, 44: PRINT "mode1& = "; mode1&
 COLOR 11: LOCATE 30, 34: PRINT "Press a key to goto Pop-up Window"
@@ -215,7 +215,7 @@ COLOR 14: LOCATE 16, 16: PRINT "LAST "
 
 
 * SaveImage [SUB](SUB.md)
-* [_PIXELSIZE](PIXELSIZE.md)
+* _PIXELSIZE
 </blockquote>
 
 #### SEE ALSO
@@ -223,12 +223,12 @@ COLOR 14: LOCATE 16, 16: PRINT "LAST "
 <blockquote>
 
 
-* [_COPYIMAGE](COPYIMAGE.md)
-* [_LOADIMAGE](LOADIMAGE.md)
-* [_SAVEIMAGE](SAVEIMAGE.md)
-* [_FREEIMAGE](FREEIMAGE.md)
-* [_PUTIMAGE](PUTIMAGE.md)
-* [_SCREENIMAGE](SCREENIMAGE.md)
-* [_CLIPBOARDIMAGE](CLIPBOARDIMAGE.md) (function)
+* _COPYIMAGE
+* _LOADIMAGE
+* _SAVEIMAGE
+* _FREEIMAGE
+* _PUTIMAGE
+* _SCREENIMAGE
+* _CLIPBOARDIMAGE (function)
 * [SCREEN](SCREEN.md)
 </blockquote>

@@ -120,9 +120,9 @@ br ~ h5 {
 
 
 * The current write page is where all drawing occurs by default.
-* The value returned is the same as the latest [SCREEN](SCREEN.md) 's handle when creating custom screen modes using [_NEWIMAGE](NEWIMAGE.md) .
-* Keep the [_NEWIMAGE](NEWIMAGE.md) handle values when you move to another [SCREEN](SCREEN.md) mode so that you can return to that screen later. You can go to another screen mode and return without having to redo the screen.
-* [_DEST](DEST.md) return values do not change in legacy screen modes. The value will not help restore them.
+* The value returned is the same as the latest [SCREEN](SCREEN.md) 's handle when creating custom screen modes using _NEWIMAGE .
+* Keep the _NEWIMAGE handle values when you move to another [SCREEN](SCREEN.md) mode so that you can return to that screen later. You can go to another screen mode and return without having to redo the screen.
+* _DEST return values do not change in legacy screen modes. The value will not help restore them.
 
 </blockquote>
 
@@ -138,7 +138,7 @@ br ~ h5 {
 <blockquote>
 
 
-* [_DEST](DEST.md)
-* [_SOURCE](SOURCE.md) (function)
+* _DEST
+* _SOURCE (function)
 * [SCREEN](SCREEN.md)
 </blockquote>

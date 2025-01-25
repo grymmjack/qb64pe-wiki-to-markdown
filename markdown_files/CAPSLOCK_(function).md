@@ -114,6 +114,15 @@ br ~ h5 {
 
 </blockquote>
 
+#### DESCRIPTION
+
+<blockquote>
+
+
+* Keyword not supported in Linux or macOS versions
+
+</blockquote>
+
 #### EXAMPLES
 
 <blockquote>
@@ -126,6 +135,6 @@ br ~ h5 {
 <blockquote>
 
 
-* [_NUMLOCK](NUMLOCK.md) (function) , [_SCROLLLOCK](SCROLLLOCK.md) (function)
-* [_CAPSLOCK](CAPSLOCK.md) (statement), [_NUMLOCK](NUMLOCK.md) (statement), [_SCROLLLOCK](SCROLLLOCK.md) (statement)
+* _NUMLOCK (function) , _SCROLLLOCK (function)
+* _CAPSLOCK (statement), _NUMLOCK (statement), _SCROLLLOCK (statement)
 </blockquote>

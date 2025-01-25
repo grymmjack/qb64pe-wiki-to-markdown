@@ -137,9 +137,9 @@ br ~ h5 {
 
 
 * [SUB](SUB.md) _GL
-* [_glBegin](glBegin.md) , [_glEnd](glEnd.md) , _glGet , [_glGetClipPlane](glGetClipPlane.md)
-* [_glGetError](glGetError.md) , _glGetLight , _glGetMap , _glGetMaterial
-* _glGetPixelMap , [_glGetPolygonStipple](glGetPolygonStipple.md) , [_glGetString](glGetString.md) , _glGetTexEnv
-* _glGetTexGen , [_glGetTexImage](glGetTexImage.md) , _glGetTexLevelParameter , _glGetTexParameter
-* [_glIsEnabled](glIsEnabled.md)
+* _glBegin , _glEnd , _glGet , _glGetClipPlane
+* _glGetError , _glGetLight , _glGetMap , _glGetMaterial
+* _glGetPixelMap , _glGetPolygonStipple , _glGetString , _glGetTexEnv
+* _glGetTexGen , _glGetTexImage , _glGetTexLevelParameter , _glGetTexParameter
+* _glIsEnabled
 </blockquote>

@@ -111,10 +111,10 @@ br ~ h5 {
 <blockquote>
 
 
-* [AS](AS.md) defines the variable or array type [AS](AS.md) [_BIT](BIT.md) , [_BYTE](BYTE.md) , [INTEGER](INTEGER.md) , [LONG](LONG.md) , [_INTEGER64](INTEGER64.md) , [SINGLE](SINGLE.md) , [DOUBLE](DOUBLE.md) , [_FLOAT](FLOAT.md) or [STRING](STRING.md) .
+* [AS](AS.md) defines the variable or array type [AS](AS.md) _BIT , _BYTE , [INTEGER](INTEGER.md) , [LONG](LONG.md) , _INTEGER64 , [SINGLE](SINGLE.md) , [DOUBLE](DOUBLE.md) , _FLOAT or [STRING](STRING.md) .
 * Specifies a variable's type in a declarative statement or parameter list using:
 * [DIM](DIM.md) or [REDIM](REDIM.md)
-* [DECLARE](DECLARE.md) [LIBRARY](LIBRARY.md)
+* DECLARE LIBRARY
 * [SUB](SUB.md)
 * [FUNCTION](FUNCTION.md)
 * [TYPE](TYPE.md)
@@ -137,7 +137,7 @@ br ~ h5 {
 
 
 * [DIM](DIM.md) , [REDIM](REDIM.md)
-* [_DEFINE](DEFINE.md)
+* _DEFINE
 * [BYVAL](BYVAL.md) , [TYPE](TYPE.md)
 * Variable Types
 </blockquote>

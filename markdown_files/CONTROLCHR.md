@@ -137,16 +137,16 @@ CLS
 _CONTROLCHR OFF
 i = 0
 DO
-PRINT CHR$(i);
-i = i + 1
-IF (i AND &HF) = 0 THEN PRINT
+   PRINT CHR$(i);
+   i = i + 1
+   IF (i AND &HF) = 0 THEN PRINT
 LOOP WHILE i
 LOCATE 1, 20
 DO
-COLOR i AND &HF OR (i AND &H80) \ &H8, (i AND &H70) \ &H10
-PRINT CHR$(i);
-i = i + 1
-IF (i AND &HF) = 0 THEN LOCATE 1 + i \ &H10, 20
+   COLOR i AND &HF OR (i AND &H80) \ &H8, (i AND &H70) \ &H10
+   PRINT CHR$(i);
+   i = i + 1
+   IF (i AND &HF) = 0 THEN LOCATE 1 + i \ &H10, 20
 LOOP WHILE i
 END
 ```
@@ -162,9 +162,9 @@ END
 
 
 * Featured in our "Keyword of the Day" series
-* [_CONTROLCHR](CONTROLCHR.md) (function)
-* [CHR&dollar;](CHR&dollar;.md) , [ASC](ASC.md) (function)
-* [INKEY&dollar;](INKEY&dollar;.md) , [_KEYHIT](KEYHIT.md)
-* ASCII
+* _CONTROLCHR (function)
+* [CHR\$](CHR\$.md) , [ASC](ASC.md) (function)
+* [INKEY\$](INKEY\$.md) , _KEYHIT
+* [ASCII](ASCII.md)
 * Control Characters
 </blockquote>

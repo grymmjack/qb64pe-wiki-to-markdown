@@ -163,5 +163,5 @@ WRITE a%, b$, c!   'displays commas between values, strings retain end quotes
 * [WRITE](WRITE.md) #
 * [INPUT](INPUT.md) #
 * [PRINT](PRINT.md) , [PRINT](PRINT.md) #
-* [PRINT](PRINT.md) [USING](USING.md)
+* [PRINT](PRINT.md) USING
 </blockquote>

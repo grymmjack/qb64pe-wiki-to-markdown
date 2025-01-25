@@ -174,15 +174,15 @@ Table 2: Relations between the OpenGL variable types vs. C/C++ and QB64.
 │              │                │         array element)                   │
 └──────────────┴────────────────┴──────────────────────────────────────────┘
 Note: If a parameter has an asterisk (*) in front, then it's a pointer to
-the designated OpenGL variable type, rather than a value of that type.
-Those must be passed using the _OFFSET(...) notation.
+      the designated OpenGL variable type, rather than a value of that type.
+      Those must be passed using the _OFFSET(...) notation.
 
 E.g.  GLuint *anyParam is actually the offset of a _UNSIGNED LONG (~&)
-variable or array, which must be passed as _OFFSET(anyVar~&) or
-_OFFSET(anyArr~&()) respectively.
+      variable or array, which must be passed as _OFFSET(anyVar~&) or
+      _OFFSET(anyArr~&()) respectively.
 
-(1)  This type is regularly only used for pointers (with asterisk (*)) to
-any byte sized memory data, hence _BYTE or fixed length strings.
+ (1)  This type is regularly only used for pointers (with asterisk (*)) to
+      any byte sized memory data, hence _BYTE or fixed length strings.
 ```
   
 <br>
@@ -196,7 +196,7 @@ any byte sized memory data, hence _BYTE or fixed length strings.
 
 
 * [SUB](SUB.md) _GL
-* [_glBegin](glBegin.md) , [_glCopyTexImage1D](glCopyTexImage1D.md) , [_glDrawPixels](glDrawPixels.md) , [_glEnd](glEnd.md)
+* _glBegin , _glCopyTexImage1D , _glDrawPixels , _glEnd
 * _glFog , _glPixelStore , _glPixelTransfer , _glTexEnv
-* _glTexGen , [_glTexImage1D](glTexImage1D.md) , [_glTexImage2D](glTexImage2D.md) , _glTexParameter
+* _glTexGen , _glTexImage1D , _glTexImage2D , _glTexParameter
 </blockquote>

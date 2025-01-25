@@ -137,6 +137,6 @@ br ~ h5 {
 <blockquote>
 
 
-* [_SNDRAW](SNDRAW.md)
-* [_SNDRAWLEN](SNDRAWLEN.md)
+* _SNDRAW
+* _SNDRAWLEN
 </blockquote>

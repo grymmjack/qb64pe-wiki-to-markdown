@@ -164,5 +164,5 @@ PRINT INT(-2.5)
 
 * [CINT](CINT.md) , [CLNG](CLNG.md) , [FIX](FIX.md)
 * [CSNG](CSNG.md) , [CDBL](CDBL.md)
-* [_ROUND](ROUND.md) , [_CEIL](CEIL.md)
+* _ROUND , _CEIL
 </blockquote>

@@ -120,7 +120,7 @@ br ~ h5 {
 
 
 * The attribute% is the palette index number of the color to set, ranging from 0 to 15 (4 bit) or 0 to 255 (8 bit) color modes.
-* The [LONG](LONG.md) newColor& is the new color value to set using [_RGB32](RGB32.md) or [_RGBA32](RGBA32.md) values or using [HEX&dollar;](HEX&dollar;.md) 32 Bit Values .
+* The [LONG](LONG.md) newColor& is the new color value to set using _RGB32 or _RGBA32 values or using [HEX\$](HEX\$.md) 32 Bit Values .
 * If destHandle& is omitted, destination is assumed to be the current write page or screen surface.
 * If attribute% is outside of image or screen mode attribute range (0 to 15 or 0 to 255), an illegal function call error will occur.
 * If destHandle& does not use a palette, an illegal function call error occurs. Will not work in 24/32 bit color palette modes.
@@ -134,7 +134,7 @@ br ~ h5 {
 
 ```vb
 Attribute        Description     Red   Green   Blue   32 HEX    HTML Name 
-0            Black            0      0       0    000000    Black
+        0            Black            0      0       0    000000    Black
         1            Dark Blue        0      0      42    00008B    DarkBlue
         2            Dark Green       0     42       0    006400    DarkGreen
         3            Dark Cyan        0     42      42    008B8B    DarkCyan
@@ -186,9 +186,9 @@ COLOR 2, 6: PRINT "ligher red on darker red"
 <blockquote>
 
 
-* [COLOR](COLOR.md) , [_RGB32](RGB32.md) , [_RGBA32](RGBA32.md)
-* [_PALETTECOLOR](PALETTECOLOR.md) (function)
+* [COLOR](COLOR.md) , _RGB32 , _RGBA32
+* _PALETTECOLOR (function)
 * [PALETTE](PALETTE.md) , [OUT](OUT.md) , [INP](INP.md)
 * Images
-* [HEX&dollar;](HEX&dollar;.md) 32 Bit Values
+* [HEX\$](HEX\$.md) 32 Bit Values
 </blockquote>

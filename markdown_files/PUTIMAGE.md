@@ -195,14 +195,14 @@ _PUTIMAGE ( dx1 , dy1 )-( dx2 , dy2 ), sourceHandle& , destHandle& ,( sx1 , sy1 
 * dy1 = the row coordinate at which the insertion of the source will begin (topmost); when larger than dy2 , inverts image.
 * dx2 = the column coordinate at which the insertion of the source will end (rightmost); further apart, widens image.
 * dy2 = the row coordinate at which the insertion of the source will end (bottommost); closer together, shrinks image
-* sourceHandle& = the [LONG](LONG.md) handle of the source image created with [_NEWIMAGE](NEWIMAGE.md) , [_LOADIMAGE](LOADIMAGE.md) or [_COPYIMAGE](COPYIMAGE.md) .
-* destHandle& = the [LONG](LONG.md) handle of the destination image may be created with [_NEWIMAGE](NEWIMAGE.md) , [SCREEN](SCREEN.md) or destination 0.
+* sourceHandle& = the [LONG](LONG.md) handle of the source image created with _NEWIMAGE , _LOADIMAGE or _COPYIMAGE .
+* destHandle& = the [LONG](LONG.md) handle of the destination image may be created with _NEWIMAGE , [SCREEN](SCREEN.md) or destination 0.
 * Coordinates sx and sy [GET](GET.md) the box area of the source image to transfer to the destination image, page or screen :
 * sx1 = the column coordinate of the left-most pixel to include of the source. When omitted, the entire image is used
 * sy1 = the row coordinate of the upper-most pixel to include of the source. When omitted, the entire image is used
 * sx2 = the column coordinate of the right-most pixel to include of the source. Can be omitted to get rest of image.
 * sy2 = the row coordinate of the bottom-most pixel to include of the source. Can be omitted to get rest of image.
-* [_SMOOTH](SMOOTH.md) applies linear filtering ( version 1.000 and up ).Note: The PUT options PSET, PRESET, AND, OR and XOR are not available with _PUTIMAGE. QB64 can use transparency of colors to achieve the same results.
+* _SMOOTH applies linear filtering ( version 1.000 and up ).Note: The PUT options PSET, PRESET, AND, OR and XOR are not available with _PUTIMAGE. QB64 can use transparency of colors to achieve the same results.
 
 </blockquote>
 
@@ -211,16 +211,16 @@ _PUTIMAGE ( dx1 , dy1 )-( dx2 , dy2 ), sourceHandle& , destHandle& ,( sx1 , sy1 
 <blockquote>
 
 
-* [_PUTIMAGE](PUTIMAGE.md) can be used without any handle parameters if the [_SOURCE](SOURCE.md) and/or [_DEST](DEST.md) are already defined.
+* _PUTIMAGE can be used without any handle parameters if the _SOURCE and/or _DEST are already defined.
 * If the area of the source is bigger or smaller than the area of the destination then the image is adjusted to fit that area.
-* Supports 32 bit alpha blending, color key transparency, true type fonts, stretching, mirroring/flipping, and a variety of graphics file formats including gif, png, bmp & jpg. 32 bit screen surface backgrounds (black) have zero [_ALPHA](ALPHA.md) and are transparent when placed over other surfaces. Use [CLS](CLS.md) or [_DONTBLEND](DONTBLEND.md) to make a new surface background [_ALPHA](ALPHA.md) 255 or opaque.
+* Supports 32 bit alpha blending, color key transparency, true type fonts, stretching, mirroring/flipping, and a variety of graphics file formats including gif, png, bmp & jpg. 32 bit screen surface backgrounds (black) have zero _ALPHA and are transparent when placed over other surfaces. Use [CLS](CLS.md) or _DONTBLEND to make a new surface background _ALPHA 255 or opaque.
 * All graphical surfaces, including screen pages, can be acted upon in the same manner, and are referred to as "images".
-* Hardware images (created using mode 33 via [_LOADIMAGE](LOADIMAGE.md) or [_COPYIMAGE](COPYIMAGE.md) ) can be used as the source or destination.
+* Hardware images (created using mode 33 via _LOADIMAGE or _COPYIMAGE ) can be used as the source or destination.
 * Handles are used to identify graphical surfaces. Positive values are used to refer to screen pages. -1 (negative one) indicates an invalid surface. It is recommended to store image handles in [LONG](LONG.md) variables. Passing an invalid handle generates an "Invalid handle" error.
 * When handles are not passed (or cannot be passed) to subs/functions then the default destination image or source image is referenced. These are set to the active page when the [SCREEN](SCREEN.md) statement is called, but can be changed to any image. So it is possible to read from one image using [POINT](POINT.md) and write to a different one with [PSET](PSET.md) .
-* PRINTed text cannot be transferred and positioned accurately. Use [_PRINTSTRING](PRINTSTRING.md) for graphical text or font placement.
-* Images are not deallocated when the [SUB](SUB.md) or [FUNCTION](FUNCTION.md) they are created in ends. Free them with [_FREEIMAGE](FREEIMAGE.md) .
-* It is important to free discarded or unused images with [_FREEIMAGE](FREEIMAGE.md) to prevent CPU memory overflow errors.
+* PRINTed text cannot be transferred and positioned accurately. Use _PRINTSTRING for graphical text or font placement.
+* Images are not deallocated when the [SUB](SUB.md) or [FUNCTION](FUNCTION.md) they are created in ends. Free them with _FREEIMAGE .
+* It is important to free discarded or unused images with _FREEIMAGE to prevent CPU memory overflow errors.
 
 </blockquote>
 
@@ -304,28 +304,28 @@ s& = _NEWIMAGE(1280, 720, 32)' program screen
 
 _DEST ws& 'create large image of random filled circles
 FOR i = 1 TO 50
-x = RND(1) * 2560
-y = RND(1) * 1440
-clr& = _RGB32(RND(1) * 255, RND(1) * 255, RND(1) * 255)
-CIRCLE (x, y), RND(1) * 300, clr&
-PAINT (x, y), clr&
+   x = RND(1) * 2560
+   y = RND(1) * 1440
+   clr& = _RGB32(RND(1) * 255, RND(1) * 255, RND(1) * 255)
+   CIRCLE (x, y), RND(1) * 300, clr&
+   PAINT (x, y), clr&
 NEXT
 PRINT "This is a demo of some screen scrolling.   Use the number pad keys to scroll.  4 goes left, 6 goes right.  8 up, 2 down. ESC key will close this program."
 x = 0: y = 0
 SCREEN s&
 
 DO
-CLS
-_PUTIMAGE (0, 0), ws&, 0, (x, y)-(x + 1279, y + 719)
-a$ = INKEY$
-SELECT CASE a$
-CASE "4": x = x - 10: IF x < 0 THEN x = 0
-CASE "6": x = x + 10: IF x > 1280 THEN x = 1280
-CASE "8": y = y - 10: IF y < 0 THEN y = 0
-CASE "2": y = y + 10: IF y > 720 THEN y = 720
-CASE CHR$(32): SYSTEM
-END SELECT
-_DISPLAY
+   CLS
+   _PUTIMAGE (0, 0), ws&, 0, (x, y)-(x + 1279, y + 719)
+   a$ = INKEY$
+   SELECT CASE a$
+       CASE "4": x = x - 10: IF x < 0 THEN x = 0
+       CASE "6": x = x + 10: IF x > 1280 THEN x = 1280
+       CASE "8": y = y - 10: IF y < 0 THEN y = 0
+       CASE "2": y = y + 10: IF y > 720 THEN y = 720
+       CASE CHR$(32): SYSTEM
+   END SELECT
+   _DISPLAY
 LOOP
 ```
   
@@ -365,10 +365,10 @@ END
 
 
 * Featured in our "Keyword of the Day" series
-* [_LOADIMAGE](LOADIMAGE.md) , [_NEWIMAGE](NEWIMAGE.md)
-* [_COPYIMAGE](COPYIMAGE.md) , [_SAVEIMAGE](SAVEIMAGE.md)
-* [_SCREENIMAGE](SCREENIMAGE.md)
-* [_MAPTRIANGLE](MAPTRIANGLE.md) , [STEP](STEP.md)
-* [_DEST](DEST.md) , [_SOURCE](SOURCE.md) , [_FREEIMAGE](FREEIMAGE.md)
+* _LOADIMAGE , _NEWIMAGE
+* _COPYIMAGE , _SAVEIMAGE
+* _SCREENIMAGE
+* _MAPTRIANGLE , [STEP](STEP.md)
+* _DEST , _SOURCE , _FREEIMAGE
 * Hardware images
 </blockquote>

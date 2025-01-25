@@ -149,16 +149,16 @@ PRINT "PI = 4 * ATN(1) ="; PI
 PRINT "COS(PI) = "; COS(PI)
 PRINT "SIN(PI) = "; SIN(PI)
 DO
-PRINT
-INPUT "Enter the degree angle (0 quits): ", DEGREES%
-RADIANS = DEGREES% * PI / 180
-PRINT "RADIANS = DEGREES% * PI / 180 = "; RADIANS
-PRINT "X = COS(RADIANS) = "; COS(RADIANS)
-PRINT "Y = SIN(RADIANS) = "; SIN(RADIANS)
-CIRCLE (400, 240), 2, 12
-LINE (400, 240)-(400 + (50 * SIN(RADIANS)), 240 + (50 * COS(RADIANS))), 11
-DEGREES% = RADIANS * 180 / PI
-PRINT "DEGREES% = RADIANS * 180 / PI ="; DEGREES%
+ PRINT
+ INPUT "Enter the degree angle (0 quits): ", DEGREES%
+ RADIANS = DEGREES% * PI / 180
+ PRINT "RADIANS = DEGREES% * PI / 180 = "; RADIANS
+ PRINT "X = COS(RADIANS) = "; COS(RADIANS)
+ PRINT "Y = SIN(RADIANS) = "; SIN(RADIANS)
+ CIRCLE (400, 240), 2, 12
+ LINE (400, 240)-(400 + (50 * SIN(RADIANS)), 240 + (50 * COS(RADIANS))), 11
+ DEGREES% = RADIANS * 180 / PI
+ PRINT "DEGREES% = RADIANS * 180 / PI ="; DEGREES%
 LOOP UNTIL DEGREES% = 0
 ```
   
@@ -189,17 +189,17 @@ SCREEN 9
 DIM SHARED Pi AS SINGLE
 Pi = 4 * ATN(1)
 DO
-FOR G = 0 TO Pi * 2 STEP Pi / 100
-CLS                                   'erase previous
-CALL GEARZ(160, 60, 40, 20, 4, G, 10)
-CALL GEARZ(240, 60, 40, 20, 4, -G, 11)
-CALL GEARZ(240, 140, 40, 20, 4, G, 12)
-CALL GEARZ(320, 140, 40, 20, 4, -G, 13)
-CALL GEARZ(320 + 57, 140 + 57, 40, 20, 4, G, 14)
-CALL GEARZ(320 + 100, 140 + 100, 20, 10, 4, -G * 2 - 15, 15)
-_DISPLAY
-_LIMIT 20                 'regulates gear speed and CPU usage
-NEXT G
+   FOR G = 0 TO Pi * 2 STEP Pi / 100
+       CLS                                   'erase previous
+       CALL GEARZ(160, 60, 40, 20, 4, G, 10)
+       CALL GEARZ(240, 60, 40, 20, 4, -G, 11)
+       CALL GEARZ(240, 140, 40, 20, 4, G, 12)
+       CALL GEARZ(320, 140, 40, 20, 4, -G, 13)
+       CALL GEARZ(320 + 57, 140 + 57, 40, 20, 4, G, 14)
+       CALL GEARZ(320 + 100, 140 + 100, 20, 10, 4, -G * 2 - 15, 15)
+       _DISPLAY
+       _LIMIT 20                 'regulates gear speed and CPU usage
+   NEXT G
 LOOP UNTIL INKEY$ <> ""
 END
 
@@ -210,10 +210,10 @@ y = YP + (RAD + TH * SIN(0)) * SIN(0)
 PRESET (x, y)
 m = Teeth * G
 FOR t = -Pi / 70 TO 2 * Pi STEP Pi / 70
-x = XP + (RAD + TH * SIN((Teeth * t + m)) ^ 3) * COS(t)
-y = YP + (RAD + TH * SIN((Teeth * t + m)) ^ 3) * SIN(t)
-LINE -(x, y), CLR
-IF INKEY$ <> "" THEN END
+   x = XP + (RAD + TH * SIN((Teeth * t + m)) ^ 3) * COS(t)
+   y = YP + (RAD + TH * SIN((Teeth * t + m)) ^ 3) * SIN(t)
+   LINE -(x, y), CLR
+   IF INKEY$ <> "" THEN END
 NEXT t
 PAINT (XP, YP), CLR            'gear colors optional
 END SUB
@@ -229,14 +229,14 @@ SCREEN 12
 Pi2! = 8 * ATN(1): sec! = Pi2! / 60  ' (2 * pi) / 60 movements per rotation
 CIRCLE (320, 240), 80, 1
 DO
-LOCATE 1, 1: PRINT TIME$
-Seconds% = VAL(RIGHT$(TIME$, 2)) - 15 ' update seconds
-S! = Seconds% * sec! ' radian from the TIME$ value
-Sx% = CINT(COS(S!) * 60)   ' pixel columns (60 = circular radius)
-Sy% = CINT(SIN(S!) * 60)   ' pixel rows
-LINE (320, 240)-(Sx% + 320, Sy% + 240), 12
-DO: Check% = VAL(RIGHT$(TIME$, 2)) - 15: LOOP UNTIL Check% <> Seconds%  ' wait loop
-LINE (320, 240)-(Sx% + 320, Sy% + 240), 0 ' erase previous line
+ LOCATE 1, 1: PRINT TIME$
+ Seconds% = VAL(RIGHT$(TIME$, 2)) - 15 ' update seconds
+ S! = Seconds% * sec! ' radian from the TIME$ value
+ Sx% = CINT(COS(S!) * 60)   ' pixel columns (60 = circular radius)
+ Sy% = CINT(SIN(S!) * 60)   ' pixel rows
+ LINE (320, 240)-(Sx% + 320, Sy% + 240), 12
+ DO: Check% = VAL(RIGHT$(TIME$, 2)) - 15: LOOP UNTIL Check% <> Seconds%  ' wait loop
+ LINE (320, 240)-(Sx% + 320, Sy% + 240), 0 ' erase previous line
 LOOP UNTIL INKEY$ = CHR$(27) ' escape keypress exits
 ```
   
@@ -250,7 +250,7 @@ LOOP UNTIL INKEY$ = CHR$(27) ' escape keypress exits
 <blockquote>
 
 
-* [_PI](PI.md)
+* _PI
 * [COS](COS.md)
 * [ATN](ATN.md)
 * [TAN](TAN.md)

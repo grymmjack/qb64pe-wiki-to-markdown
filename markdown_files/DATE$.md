@@ -137,18 +137,18 @@ day$ = MID$(DATE$, 4, 2): D = VAL(day$)
 day$ = STR$(D)                  ' eliminate any leading zeros
 year$ = RIGHT$(DATE$, 4): Y = VAL(year$)
 SELECT CASE M
-CASE 1: Moon$ = "January"
-CASE 2: Moon$ = "February"
-CASE 3: Moon$ = "March"
-CASE 4: Moon$ = "April"
-CASE 5: Moon$ = "May"
-CASE 6: Moon$ = "June"
-CASE 7: Moon$ = "July"
-CASE 8: Moon$ = "August"
-CASE 9: Moon$ = "September"
-CASE 10: Moon$ = "October"
-CASE 11: Moon$ = "November"
-CASE 12: Moon$ = "December"
+  CASE 1: Moon$ = "January"
+  CASE 2: Moon$ = "February"
+  CASE 3: Moon$ = "March"
+  CASE 4: Moon$ = "April"
+  CASE 5: Moon$ = "May"
+  CASE 6: Moon$ = "June"
+  CASE 7: Moon$ = "July"
+  CASE 8: Moon$ = "August"
+  CASE 9: Moon$ = "September"
+  CASE 10: Moon$ = "October"
+  CASE 11: Moon$ = "November"
+  CASE 12: Moon$ = "December"
 END SELECT
 PRINT "Today is " + WeekDay$(M, D, Y) + ", " + Moon$ + day$ + ", " + year$ + SPACE$(10)
 
@@ -162,13 +162,13 @@ S3 = 26 * (M + 1) \ 10               'days in months
 WkDay = (S1 + S2 + S3 + D) MOD 7     'weekday total remainder
 IF WkDay < 0 THEN WkDay = WkDay + 7  'Adjust negative results to 0 to 6
 SELECT CASE WkDay
-CASE 0: day$ = "Sunday"
-CASE 1: day$ = "Monday"
-CASE 2: day$ = "Tuesday"
-CASE 3: day$ = "Wednesday"
-CASE 4: day$ = "Thursday"
-CASE 5: day$ = "Friday"
-CASE 6: day$ = "Saturday"
+  CASE 0: day$ = "Sunday"
+  CASE 1: day$ = "Monday"
+  CASE 2: day$ = "Tuesday"
+  CASE 3: day$ = "Wednesday"
+  CASE 4: day$ = "Thursday"
+  CASE 5: day$ = "Friday"
+  CASE 6: day$ = "Saturday"
 END SELECT
 WeekDay$ = day$
 END FUNCTION
@@ -191,6 +191,6 @@ Today is Wednesday, June 2, 2010
 <blockquote>
 
 
-* [TIME&dollar;](TIME&dollar;.md) , IF...THEN
-* [VAL](VAL.md) , [STR&dollar;](STR&dollar;.md) , [MID&dollar;](MID&dollar;.md) (function) , [LEFT&dollar;](LEFT&dollar;.md) , [RIGHT&dollar;](RIGHT&dollar;.md)
+* [TIME\$](TIME\$.md) , [IF...THEN](IF...THEN.md)
+* [VAL](VAL.md) , [STR\$](STR\$.md) , [MID\$](MID\$.md) (function) , [LEFT\$](LEFT\$.md) , [RIGHT\$](RIGHT\$.md)
 </blockquote>

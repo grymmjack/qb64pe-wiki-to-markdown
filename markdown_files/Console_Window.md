@@ -140,7 +140,6 @@ PRINT "Copy this text by highlighting and right clicking!"
 <blockquote>
 
 
-* [&dollar;SCREENHIDE](&dollar;SCREENHIDE.md) , [&dollar;SCREENSHOW](&dollar;SCREENSHOW.md)
-* [&dollar;CONSOLE](&dollar;CONSOLE.md) , [_CONSOLE](CONSOLE.md) , [_DEST](DEST.md)
-* Console Library
+* [\$SCREENHIDE](\$SCREENHIDE.md) , [\$SCREENSHOW](\$SCREENSHOW.md)
+* [\$CONSOLE](\$CONSOLE.md) , _CONSOLE , _DEST
 </blockquote>

@@ -119,8 +119,8 @@ br ~ h5 {
 <blockquote>
 
 
-* number can be any [INTEGER](INTEGER.md) , [LONG](LONG.md) or [_INTEGER64](INTEGER64.md) value, positive or negative.
-* number can also be any [SINGLE](SINGLE.md) , [DOUBLE](DOUBLE.md) or [_FLOAT](FLOAT.md) value, but only the integer part of the value is converted in that case. That is, from the value -123.45 the function would convert the -123 only.
+* number can be any [INTEGER](INTEGER.md) , [LONG](LONG.md) or _INTEGER64 value, positive or negative.
+* number can also be any [SINGLE](SINGLE.md) , [DOUBLE](DOUBLE.md) or _FLOAT value, but only the integer part of the value is converted in that case. That is, from the value -123.45 the function would convert the -123 only.
 </blockquote>
 
 #### DESCRIPTION
@@ -129,7 +129,7 @@ br ~ h5 {
 
 
 * The function returns the base 16 (hexadecimal) representation of the given number as [STRING](STRING.md) .
-* Different from [STR&dollar;](STR&dollar;.md) , this function does not return a leading sign placeholder space, so no [LTRIM&dollar;](LTRIM&dollar;.md) to strip that space from positive numbers is necessary.
+* Different from [STR\$](STR\$.md) , this function does not return a leading sign placeholder space, so no [LTRIM\$](LTRIM\$.md) to strip that space from positive numbers is necessary.
 * [VAL](VAL.md) can convert the returned hex string value back to a decimal value by prefixing the string with " &H ".
 * Eg. decimal = [VAL](VAL.md) ("&H" + hexvalue$) .
 
@@ -147,7 +147,7 @@ tableout$ = "  \ \    |      \\     |   \\  |  \  \  " 'the PRINT USING template
 LOCATE 2, 10: PRINT tabletop$
 LOCATE 3, 10: PRINT tablesep$
 FOR n% = 0 TO 15
-LOCATE 4 + n%, 10: PRINT USING tableout$; STR$(n%); HEX$(n%); OCT$(n%); _BIN$(n%)
+   LOCATE 4 + n%, 10: PRINT USING tableout$; STR$(n%); HEX$(n%); OCT$(n%); _BIN$(n%)
 NEXT n%
 ```
   
@@ -155,23 +155,23 @@ NEXT n%
 
 ```vb
 Decimal | Hexadecimal | Octal | Binary
----------+-------------+-------+--------
-0     |      0      |   0   |  0
-1     |      1      |   1   |  1
-2     |      2      |   2   |  10
-3     |      3      |   3   |  11
-4     |      4      |   4   |  100
-5     |      5      |   5   |  101
-6     |      6      |   6   |  110
-7     |      7      |   7   |  111
-8     |      8      |   10  |  1000
-9     |      9      |   11  |  1001
-10    |      A      |   12  |  1010
-11    |      B      |   13  |  1011
-12    |      C      |   14  |  1100
-13    |      D      |   15  |  1101
-14    |      E      |   16  |  1110
-15    |      F      |   17  |  1111
+        ---------+-------------+-------+--------
+           0     |      0      |   0   |  0
+           1     |      1      |   1   |  1
+           2     |      2      |   2   |  10
+           3     |      3      |   3   |  11
+           4     |      4      |   4   |  100
+           5     |      5      |   5   |  101
+           6     |      6      |   6   |  110
+           7     |      7      |   7   |  111
+           8     |      8      |   10  |  1000
+           9     |      9      |   11  |  1001
+           10    |      A      |   12  |  1010
+           11    |      B      |   13  |  1011
+           12    |      C      |   14  |  1100
+           13    |      D      |   15  |  1101
+           14    |      E      |   16  |  1110
+           15    |      F      |   17  |  1111
 ```
   
 <br>
@@ -199,8 +199,8 @@ Converting Hex value to Decimal: 255
 <blockquote>
 
 
-* [_BIN&dollar;](BIN&dollar;.md) , [OCT&dollar;](OCT&dollar;.md) , [STR&dollar;](STR&dollar;.md)
+* _BIN$ , [OCT\$](OCT\$.md) , [STR\$](STR\$.md)
 * &B (binary), &H (hexadecimal), &O (octal), [VAL](VAL.md)
 * Base Comparisons
-* [HEX&dollar;](HEX&dollar;.md) 32 Bit Values
+* [HEX\$](HEX\$.md) 32 Bit Values
 </blockquote>

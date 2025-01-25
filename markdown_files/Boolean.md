@@ -116,7 +116,7 @@ Table 3: The relational operations for condition checking.
 In this table, A and B are the Expressions to compare. Both must represent
 the same general type, i.e. they must result into either numerical values
 or STRING values. If a test succeeds, then true (-1) is returned, false (0)
-if it fails, which both can be used in further Boolean evaluations.
+    if it fails, which both can be used in further Boolean evaluations.
 ┌─────────────────────────────────────────────────────────────────────────┐
 │                          Relational Operations                          │
 ├────────────┬───────────────────────────────────────────┬────────────────┤
@@ -134,21 +134,21 @@ if it fails, which both can be used in further Boolean evaluations.
 ├────────────┼───────────────────────────────────────────┼────────────────┤
 │   A >= B   │ Tests if A is greater than or equal to B. │ IF A >= B THEN │
 └────────────┴───────────────────────────────────────────┴────────────────┘
-The operations should be very obvious for numerical values. For strings
-be aware that all checks are done case sensitive (i.e. "Foo" <> "foo").
-The equal/not equal check is pretty much straight forward, but for the
-less/greater checks the ASCII value of the first different character is
-used for decision making:
+  The operations should be very obvious for numerical values. For strings
+  be aware that all checks are done case sensitive (i.e. "Foo" <> "foo").
+  The equal/not equal check is pretty much straight forward, but for the
+  less/greater checks the ASCII value of the first different character is
+                         used for decision making:
 
-E.g. "abc" is less than "abd", because in the first difference (the 3rd
-character) the "c" has a lower ASCII value than the "d".
+  E.g. "abc" is less than "abd", because in the first difference (the 3rd
+       character) the "c" has a lower ASCII value than the "d".
 
-This behavior may give you some subtle results, if you are not aware of
-the ASCII values and the written case:
+  This behavior may give you some subtle results, if you are not aware of
+                  the ASCII values and the written case:
 
-E.g. "abc" is greater than "abD", because the small letters have higher
-ASCII values than the capital letters, hence "c" > "D". You may use
-LCASE$ or UCASE$ to make sure both strings have the same case.
+  E.g. "abc" is greater than "abD", because the small letters have higher
+       ASCII values than the capital letters, hence "c" > "D". You may use
+       LCASE$ or UCASE$ to make sure both strings have the same case.
 ```
   
 <br>
@@ -156,32 +156,32 @@ LCASE$ or UCASE$ to make sure both strings have the same case.
 ```vb
 Table 4: The logical operations and its results.
 
-In this table, A and B are the Expressions to invert or combine.
-Both may be results of former Boolean evaluations.
-┌────────────────────────────────────────────────────────────────────────┐
-│                           Logical Operations                           │
-├───────┬───────┬───────┬─────────┬────────┬─────────┬─────────┬─────────┤
-│   A   │   B   │ NOT B │ A AND B │ A OR B │ A XOR B │ A EQV B │ A IMP B │
-├───────┼───────┼───────┼─────────┼────────┼─────────┼─────────┼─────────┤
-│ true  │ true  │ false │  true   │ true   │  false  │  true   │  true   │
-├───────┼───────┼───────┼─────────┼────────┼─────────┼─────────┼─────────┤
-│ true  │ false │ true  │  false  │ true   │  true   │  false  │  false  │
-├───────┼───────┼───────┼─────────┼────────┼─────────┼─────────┼─────────┤
-│ false │ true  │ false │  false  │ true   │  true   │  false  │  true   │
-├───────┼───────┼───────┼─────────┼────────┼─────────┼─────────┼─────────┤
-│ false │ false │ true  │  false  │ false  │  false  │  true   │  true   │
-└───────┴───────┴───────┴─────────┴────────┴─────────┴─────────┴─────────┘
-Note: In most BASIC languages incl. QB64 these are bitwise operations,
-hence the logic is performed for each corresponding bit in both
-operators, where true or false indicates whether a bit is set or
-not set. The outcome of each bit is then placed into the respective
-position to build the bit pattern of the final result value.
+      In this table, A and B are the Expressions to invert or combine.
+             Both may be results of former Boolean evaluations.
+ ┌────────────────────────────────────────────────────────────────────────┐
+ │                           Logical Operations                           │
+ ├───────┬───────┬───────┬─────────┬────────┬─────────┬─────────┬─────────┤
+ │   A   │   B   │ NOT B │ A AND B │ A OR B │ A XOR B │ A EQV B │ A IMP B │
+ ├───────┼───────┼───────┼─────────┼────────┼─────────┼─────────┼─────────┤
+ │ true  │ true  │ false │  true   │ true   │  false  │  true   │  true   │
+ ├───────┼───────┼───────┼─────────┼────────┼─────────┼─────────┼─────────┤
+ │ true  │ false │ true  │  false  │ true   │  true   │  false  │  false  │
+ ├───────┼───────┼───────┼─────────┼────────┼─────────┼─────────┼─────────┤
+ │ false │ true  │ false │  false  │ true   │  true   │  false  │  true   │
+ ├───────┼───────┼───────┼─────────┼────────┼─────────┼─────────┼─────────┤
+ │ false │ false │ true  │  false  │ false  │  false  │  true   │  true   │
+ └───────┴───────┴───────┴─────────┴────────┴─────────┴─────────┴─────────┘
+  Note: In most BASIC languages incl. QB64 these are bitwise operations,
+        hence the logic is performed for each corresponding bit in both
+        operators, where true or false indicates whether a bit is set or
+        not set. The outcome of each bit is then placed into the respective
+        position to build the bit pattern of the final result value.
 
-As all Relational Operations return negative one (-1, all bits set) for
-true and zero (0, no bits set) for false, this allows us to use these
-bitwise logical operations to invert or combine any relational checks,
-as the outcome is the same for each bit and so always results into a
-true (-1) or false (0) again for further evaluations.
+  As all Relational Operations return negative one (-1, all bits set) for
+   true and zero (0, no bits set) for false, this allows us to use these
+   bitwise logical operations to invert or combine any relational checks,
+   as the outcome is the same for each bit and so always results into a
+           true (-1) or false (0) again for further evaluations.
 ```
   
 <br>
@@ -219,18 +219,18 @@ cordx% = 40
 cordy% = 15
 
 DO
-oldcordx% = cordx%
-oldcordy% = cordy%
-p% = SCREEN(cordy%, cordx%) 'get ASCII character code at present position
-COLOR 14: LOCATE cordy%, cordx%: PRINT CHR$(178); 'print cursor character to position
+   oldcordx% = cordx%
+   oldcordy% = cordy%
+   p% = SCREEN(cordy%, cordx%) 'get ASCII character code at present position
+   COLOR 14: LOCATE cordy%, cordx%: PRINT CHR$(178); 'print cursor character to position
 
-WHILE cordx% = oldcordx% AND cordy% = oldcordy% AND k$ <> CHR$(27)
-k$ = INKEY$
-cordx% = cordx% + (k$ = (CHR$(0) + "K") AND cordx% > 1) + ABS(k$ = (CHR$(0) + "M") AND cordx% < 80)
-cordy% = cordy% + (k$ = (CHR$(0) + "H") AND cordy% > 1) + ABS(k$ = (CHR$(0) + "P") AND cordy% < 30)
-WEND
+   WHILE cordx% = oldcordx% AND cordy% = oldcordy% AND k$ <> CHR$(27)
+       k$ = INKEY$
+       cordx% = cordx% + (k$ = (CHR$(0) + "K") AND cordx% > 1) + ABS(k$ = (CHR$(0) + "M") AND cordx% < 80)
+       cordy% = cordy% + (k$ = (CHR$(0) + "H") AND cordy% > 1) + ABS(k$ = (CHR$(0) + "P") AND cordy% < 30)
+   WEND
 
-COLOR 7: LOCATE oldcordy%, oldcordx%: PRINT CHR$(p%); 'replace overwritten screen characters
+   COLOR 7: LOCATE oldcordy%, oldcordx%: PRINT CHR$(p%); 'replace overwritten screen characters
 
 LOOP UNTIL k$ = CHR$(27)
 ```
@@ -245,8 +245,9 @@ LOOP UNTIL k$ = CHR$(27)
 <blockquote>
 
 
-* IF...THEN , [SELECT](SELECT.md) [CASE](CASE.md)
+* Constants (_TRUE / _FALSE)
+* [IF...THEN](IF...THEN.md) , SELECT [CASE](CASE.md)
 * Binary , [ABS](ABS.md) , [SGN](SGN.md)
-* [AND](AND.md) , [OR](OR.md) , [XOR](XOR.md)
+* [AND](AND.md) , [OR](OR.md) , XOR
 * Bitwise Operations
 </blockquote>

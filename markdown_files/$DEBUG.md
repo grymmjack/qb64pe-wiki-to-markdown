@@ -119,14 +119,17 @@ br ~ h5 {
 <blockquote>
 
 
-* [&dollar;DEBUG](&dollar;DEBUG.md) injects extra code in the resulting binary, allowing the IDE to control the execution flow of your program.
-* When [&dollar;DEBUG](&dollar;DEBUG.md) is used, the IDE will connect to your running program using a local TCP/IP connection.
+* [\$DEBUG](\$DEBUG.md) injects extra code in the resulting binary, allowing the IDE to control the execution flow of your program.
+* When [\$DEBUG](\$DEBUG.md) is used, the IDE will connect to your running program using a local TCP/IP connection.
 * You may get a prompt from your Operating System regarding this, so it may be necessary to allow the IDE to receive connections.
 * No external connections are created, and your running program will only attempt to connect locally to the IDE.
 * The default TCP/IP port starts at 9001. Multiple running instances of the IDE will attempt to open ports 9002 and up.
 * You can change the base port in the Debug menu.
 * The metacommand is supposed to be removed once your program is ready for release, although leaving it in won't have any effect if your program isn't run from the IDE.
 * The only drawback of leaving the metacommand in is that your binary will end up being larger than required.
+* In newer versions a precompiler flag named _DEBUG_ is available (see Availability ):
+* The flag is one(1) if the program is compiled with [\$DEBUG](\$DEBUG.md) and zero(0) if compiled without it.
+* You may use it to include/exclude debugging related code using precompiler [\$IF](\$IF.md) .. [\$ELSE](\$ELSE.md) ... $END [IF](IF.md) blocks.
 
 </blockquote>
 
@@ -142,5 +145,6 @@ br ~ h5 {
 <blockquote>
 
 
+* Fellippes introduction to QB64 v2.0 and [\$DEBUG](\$DEBUG.md) in detail
 * Metacommands
 </blockquote>

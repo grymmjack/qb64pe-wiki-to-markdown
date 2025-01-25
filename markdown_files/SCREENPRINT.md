@@ -121,10 +121,10 @@ br ~ h5 {
 
 * Keyword not supported in Linux or macOS versions
 * text$ is the text to be typed into a focused program's text entry area, one character at a time.
-* Set the focus to a desktop program by using the [_SCREENIMAGE](SCREENIMAGE.md) handle as the [_SOURCE](SOURCE.md) . Use the image to map the desired area.
-* [_SCREENCLICK](SCREENCLICK.md) can also be used to set the focus to a program's text entry area on the desktop.
+* Set the focus to a desktop program by using the _SCREENIMAGE handle as the _SOURCE . Use the image to map the desired area.
+* _SCREENCLICK can also be used to set the focus to a program's text entry area on the desktop.
 * Note: If the focus is not set correctly, the text may be printed to the QB64 IDE, if open, or not printed at all.
-* Ctrl + letter key shortcuts can be simulated using the appropriate ASCII Control character codes 1 to 26 shown below:
+* Ctrl + letter key shortcuts can be simulated using the appropriate [ASCII](ASCII.md) Control character codes 1 to 26 shown below:
 
 </blockquote>
 
@@ -161,18 +161,18 @@ SHELL _DONTWAIT "START /MAX NotePad.exe"  'opens Notepad file "untitled.txt"
 'detect notepad open and maximized
 'condition: 80% or more of the screen is white
 DO                     'read the desktop screen image for maximized window
-s = _SCREENIMAGE
-_SOURCE s
-z = 0
-FOR y = 0 TO _HEIGHT(s) - 1   'scan for large white area
-FOR x = 0 TO _WIDTH(s) - 1
-c = POINT(x, y)
-IF c = _RGB32(255, 255, 255) THEN z = z + 1
-NEXT
-NEXT
-IF z / (_HEIGHT(s) * _WIDTH(s)) > 0.8 THEN EXIT DO 'when 80% of screen is white
-_FREEIMAGE s   'free desktop image
-_LIMIT 1       'scans 1 loop per second
+ s = _SCREENIMAGE
+ _SOURCE s
+ z = 0
+ FOR y = 0 TO _HEIGHT(s) - 1   'scan for large white area
+   FOR x = 0 TO _WIDTH(s) - 1
+      c = POINT(x, y)
+      IF c = _RGB32(255, 255, 255) THEN z = z + 1
+   NEXT
+ NEXT
+ IF z / (_HEIGHT(s) * _WIDTH(s)) > 0.8 THEN EXIT DO 'when 80% of screen is white
+ _FREEIMAGE s   'free desktop image
+ _LIMIT 1       'scans 1 loop per second
 PRINT ".";
 LOOP
 PRINT
@@ -207,7 +207,7 @@ END
 
 
 * Featured in our "Keyword of the Day" series
-* [_SCREENIMAGE](SCREENIMAGE.md) , [_SCREENCLICK](SCREENCLICK.md)
-* [_SCREENMOVE](SCREENMOVE.md) , [_SCREENX](SCREENX.md) , [_SCREENY](SCREENY.md)
-* ASCII
+* _SCREENIMAGE , _SCREENCLICK
+* _SCREENMOVE , _SCREENX , _SCREENY
+* [ASCII](ASCII.md)
 </blockquote>

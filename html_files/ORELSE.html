@@ -6,7 +6,7 @@
    _ORELSE - QB64 Phoenix Edition Wiki
   </title>
   <script>
-   document.documentElement.className="client-js";RLCONF={"wgBreakFrames":false,"wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgRequestId":"Zp2GtiSKw_M1BQgKFBbocgAAAxU","wgCSPNonce":false,"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"ORELSE","wgTitle":"ORELSE","wgCurRevisionId":8940,"wgRevisionId":8940,"wgArticleId":1237,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":[],"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgRelevantPageName":"ORELSE","wgRelevantArticleId":1237,"wgIsProbablyEditable":false,"wgRelevantPageIsProbablyEditable":false,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgVector2022PreviewPages":[]};RLSTATE={"site.styles":"ready","user.styles":"ready","user":"ready",
+   document.documentElement.className="client-js";RLCONF={"wgBreakFrames":false,"wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgRequestId":"Z5RiWwWKRwiE9zBBFH0a7QAAAKU","wgCSPNonce":false,"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"ORELSE","wgTitle":"ORELSE","wgCurRevisionId":9527,"wgRevisionId":9527,"wgArticleId":1237,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":[],"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgRelevantPageName":"ORELSE","wgRelevantArticleId":1237,"wgIsProbablyEditable":false,"wgRelevantPageIsProbablyEditable":false,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgVector2022PreviewPages":[]};RLSTATE={"site.styles":"ready","user.styles":"ready","user":"ready",
 "user.options":"loading","mediawiki.page.gallery.styles":"ready","skins.vector.styles.legacy":"ready"};RLPAGEMODULES=["site","mediawiki.page.ready","mediawiki.toc","skins.vector.legacy.js"];
   </script>
   <script>
@@ -59,9 +59,9 @@
     <div class="mw-body-content mw-content-ltr" dir="ltr" id="mw-content-text" lang="en">
      <div class="mw-parser-output">
       <p>
-       <a class="mw-selflink selflink">
+       <b>
         _ORELSE
-       </a>
+       </b>
        is a
        <a href="/qb64wiki/index.php/Boolean" title="Boolean">
         boolean
@@ -178,13 +178,46 @@
         A logical operation is said to be short-circuiting if the compiled code can bypass the evaluation of one expression depending on the result of another expression.
        </li>
        <li>
-        If the result of the first expression evaluated determines the final result of the operation, there is no need to evaluate the second expression, because it cannot change the final result.
+        Short-circuiting can improve performance if the bypassed expression is complex, or if it involves procedure (
+        <a href="/qb64wiki/index.php/SUB" title="SUB">
+         SUB
+        </a>
+        or
+        <a href="/qb64wiki/index.php/FUNCTION" title="FUNCTION">
+         FUNCTION
+        </a>
+        ) calls.
        </li>
        <li>
-        Short-circuiting can improve performance if the bypassed expression is complex, or if it involves procedure calls.
+        If the result of the first expression evaluated determines the final result of the operation, there is no need to evaluate the second expression, because it cannot change the final result. E.g. if the first expression is already true, then the second expression can't change the result anymore, it will always remain true, even if the second expression would be false. Hence, the second expression is irrelevant and never evaluated, if the first one is already true.
+        <ul>
+         <li>
+          <span style="color:red;">
+           <b>
+            Note
+           </b>
+          </span>
+          that any procedures involved in the second expression are
+          <b>
+           not called
+          </b>
+          , if the first expression is true. This behavior is intended and the reason for the better performance, but it may cause unexpected failures if you're not aware of it.
+         </li>
+         <li>
+          In fact, if any procedures in the second expression
+          <b>
+           must be called
+          </b>
+          regardless of the truth of the first expression, then you must use the regular
+          <a href="/qb64wiki/index.php/OR_(boolean)" title="OR (boolean)">
+           OR
+          </a>
+          instead.
+         </li>
+        </ul>
        </li>
        <li>
-        If either or both expressions evaluate to true, result is true.
+        If either or both expressions evaluate to true, the result is true.
        </li>
       </ul>
       <p>
@@ -308,12 +341,14 @@
         Examples
        </span>
       </h2>
-      <p>
-       <i>
-        Example:
-       </i>
-       OR versus _ORELSE
-      </p>
+      <dl>
+       <dt>
+        Example
+       </dt>
+       <dd>
+        OR versus _ORELSE
+       </dd>
+      </dl>
       <table cellpadding="15px" width="100%">
        <tbody>
         <tr>
@@ -376,6 +411,9 @@ Probably a strawberry.
         </tr>
        </tbody>
       </table>
+      <p>
+       <br/>
+      </p>
       <h2>
        <span class="mw-headline" id="See_also">
         See also
@@ -434,6 +472,10 @@ Probably a strawberry.
         <a href="/qb64wiki/index.php/NEGATE" title="NEGATE">
          _NEGATE
         </a>
+        ,
+        <a href="/qb64wiki/index.php/IIF" title="IIF">
+         _IIF
+        </a>
        </li>
        <li>
         <a href="/qb64wiki/index.php/Binary" title="Binary">
@@ -484,15 +526,15 @@ Probably a strawberry.
       </center>
       <!-- 
 NewPP limit report
-Cached time: 20240721212658
+Cached time: 20250124200734
 Cache expiry: 86400
 Reduced expiry: false
 Complications: [show‐toc]
-CPU time usage: 0.049 seconds
-Real time usage: 0.062 seconds
-Preprocessor visited node count: 578/1000000
-Post‐expand include size: 4556/2097152 bytes
-Template argument size: 1419/2097152 bytes
+CPU time usage: 0.062 seconds
+Real time usage: 0.083 seconds
+Preprocessor visited node count: 585/1000000
+Post‐expand include size: 4598/2097152 bytes
+Template argument size: 1432/2097152 bytes
 Highest expansion depth: 4/100
 Expensive parser function count: 0/100
 Unstrip recursion depth: 0/20
@@ -500,24 +542,24 @@ Unstrip post‐expand size: 2880/5000000 bytes
 -->
       <!--
 Transclusion expansion time report (%,ms,calls,template)
-100.00%   43.726      1 -total
-  6.62%    2.893     35 Template:Cl
-  6.50%    2.844     32 Template:Text
-  5.53%    2.420      1 Template:PageAvailability
-  5.17%    2.259      1 Template:PageDescription
-  4.77%    2.087      1 Template:CodeStart
-  4.76%    2.082      1 Template:PageSyntax
-  4.68%    2.048      1 Template:PageExamples
-  4.20%    1.838      3 Template:Parameter
-  4.12%    1.802      1 Template:CodeEnd
+100.00%   60.570      1 -total
+  7.63%    4.624      1 Template:PageSyntax
+  5.93%    3.589     33 Template:Text
+  5.25%    3.183     35 Template:Cl
+  4.37%    2.645      1 Template:PageExamples
+  4.11%    2.490      3 Template:Parameter
+  4.09%    2.479      1 Template:CodeEnd
+  3.82%    2.315      1 Template:PageAvailability
+  3.61%    2.186      1 Template:PageDescription
+  3.37%    2.042      1 Template:PageNavigation
 -->
-      <!-- Saved in parser cache with key qb64pnix_mw19894-mwmb_:pcache:idhash:1237-0!canonical and timestamp 20240721212657 and revision id 8940.
+      <!-- Saved in parser cache with key qb64pnix_mw19894-mwmb_:pcache:idhash:1237-0!canonical and timestamp 20250124200734 and revision id 9527.
  -->
      </div>
      <div class="printfooter" data-nosnippet="">
       Retrieved from "
-      <a dir="ltr" href="https://qb64phoenix.com/qb64wiki/index.php?title=ORELSE&amp;oldid=8940">
-       https://qb64phoenix.com/qb64wiki/index.php?title=ORELSE&amp;oldid=8940
+      <a dir="ltr" href="https://qb64phoenix.com/qb64wiki/index.php?title=ORELSE&amp;oldid=9527">
+       https://qb64phoenix.com/qb64wiki/index.php?title=ORELSE&amp;oldid=9527
       </a>
       "
      </div>
@@ -734,7 +776,7 @@ You can view its source [e]">
         </a>
        </li>
        <li class="mw-list-item" id="t-permalink">
-        <a href="/qb64wiki/index.php?title=ORELSE&amp;oldid=8940" title="Permanent link to this revision of this page">
+        <a href="/qb64wiki/index.php?title=ORELSE&amp;oldid=9527" title="Permanent link to this revision of this page">
          <span>
           Permanent link
          </span>
@@ -755,7 +797,7 @@ You can view its source [e]">
   <footer class="mw-footer" id="footer" role="contentinfo">
    <ul id="footer-info">
     <li id="footer-info-lastmod">
-     This page was last edited on 25 May 2024, at 22:37.
+     This page was last edited on 25 December 2024, at 14:23.
     </li>
    </ul>
    <ul id="footer-places">
@@ -784,7 +826,7 @@ You can view its source [e]">
    </ul>
   </footer>
   <script>
-   (RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgPageParseReport":{"limitreport":{"cputime":"0.049","walltime":"0.062","ppvisitednodes":{"value":578,"limit":1000000},"postexpandincludesize":{"value":4556,"limit":2097152},"templateargumentsize":{"value":1419,"limit":2097152},"expansiondepth":{"value":4,"limit":100},"expensivefunctioncount":{"value":0,"limit":100},"unstrip-depth":{"value":0,"limit":20},"unstrip-size":{"value":2880,"limit":5000000},"timingprofile":["100.00%   43.726      1 -total","  6.62%    2.893     35 Template:Cl","  6.50%    2.844     32 Template:Text","  5.53%    2.420      1 Template:PageAvailability","  5.17%    2.259      1 Template:PageDescription","  4.77%    2.087      1 Template:CodeStart","  4.76%    2.082      1 Template:PageSyntax","  4.68%    2.048      1 Template:PageExamples","  4.20%    1.838      3 Template:Parameter","  4.12%    1.802      1 Template:CodeEnd"]},"cachereport":{"timestamp":"20240721212658","ttl":86400,"transientcontent":false}}});mw.config.set({"wgBackendResponseTime":121});});
+   (RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgPageParseReport":{"limitreport":{"cputime":"0.062","walltime":"0.083","ppvisitednodes":{"value":585,"limit":1000000},"postexpandincludesize":{"value":4598,"limit":2097152},"templateargumentsize":{"value":1432,"limit":2097152},"expansiondepth":{"value":4,"limit":100},"expensivefunctioncount":{"value":0,"limit":100},"unstrip-depth":{"value":0,"limit":20},"unstrip-size":{"value":2880,"limit":5000000},"timingprofile":["100.00%   60.570      1 -total","  7.63%    4.624      1 Template:PageSyntax","  5.93%    3.589     33 Template:Text","  5.25%    3.183     35 Template:Cl","  4.37%    2.645      1 Template:PageExamples","  4.11%    2.490      3 Template:Parameter","  4.09%    2.479      1 Template:CodeEnd","  3.82%    2.315      1 Template:PageAvailability","  3.61%    2.186      1 Template:PageDescription","  3.37%    2.042      1 Template:PageNavigation"]},"cachereport":{"timestamp":"20250124200734","ttl":86400,"transientcontent":false}}});mw.config.set({"wgBackendResponseTime":118});});
   </script>
  </body>
 </html>

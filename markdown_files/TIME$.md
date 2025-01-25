@@ -123,7 +123,7 @@ br ~ h5 {
 * Uses 2 colon (:) separators between hours, minutes and seconds
 * Hour values range from "00" to "23" starting from midnite.
 * Minutes and seconds range from "00" to "59"
-* Continuous [TIME&dollar;](TIME&dollar;.md) calls may lag if a QBasic program is minimized to the taskbar!
+* Continuous [TIME\$](TIME\$.md) calls may lag if a QBasic program is minimized to the taskbar!
 
 </blockquote>
 
@@ -137,15 +137,15 @@ br ~ h5 {
 ```vb
 SCREEN 12
 DO
-CLS
-t$ = TIME$: h = VAL(t$): m = VAL(MID$(t$, 4, 2)): s = VAL(MID$(t$, 7, 2))
-PRINT t$
-CIRCLE STEP(0, 0), 200, 8
-DRAW "c12ta" + STR$((h MOD 12) * -30) + "nu133"
-DRAW "c14ta" + STR$(m * -6) + "nu200"
-DRAW "c9ta" + STR$(s * -6) + "nu200"
-_DISPLAY
-_LIMIT 1
+   CLS
+   t$ = TIME$: h = VAL(t$): m = VAL(MID$(t$, 4, 2)): s = VAL(MID$(t$, 7, 2))
+   PRINT t$
+   CIRCLE STEP(0, 0), 200, 8
+   DRAW "c12ta" + STR$((h MOD 12) * -30) + "nu133"
+   DRAW "c14ta" + STR$(m * -6) + "nu200"
+   DRAW "c9ta" + STR$(s * -6) + "nu200"
+   _DISPLAY
+   _LIMIT 1
 LOOP UNTIL INKEY$ = CHR$(27)
 ```
   
@@ -163,7 +163,7 @@ hour$ = LEFT$(TIME$, 2): H% = VAL(hour$)
 min$ = MID$(TIME$, 3, 3)
 IF H% >= 12 THEN ampm$ = " PM" ELSE ampm$ = " AM"
 IF H% > 12 THEN
-IF H% - 12 < 10 THEN hour$ = STR$(H% - 12) ELSE hour$ = LTRIM$(STR$(H% - 12))
+ IF H% - 12 < 10 THEN hour$ = STR$(H% - 12) ELSE hour$ = LTRIM$(STR$(H% - 12))
 ELSEIF H% = 0 THEN hour$ = "12"          ' midnight hour
 ELSE : IF H% < 10 THEN hour$ = STR$(H%)  ' eliminate leading zeros
 END IF
@@ -192,7 +192,7 @@ END FUNCTION
 
 
 * [TIMER](TIMER.md) (function)
-* [DATE&dollar;](DATE&dollar;.md) , IF...THEN
-* [VAL](VAL.md) , [STR&dollar;](STR&dollar;.md) , [MID&dollar;](MID&dollar;.md) (function)
-* [LEFT&dollar;](LEFT&dollar;.md) , [RIGHT&dollar;](RIGHT&dollar;.md)
+* [DATE\$](DATE\$.md) , [IF...THEN](IF...THEN.md)
+* [VAL](VAL.md) , [STR\$](STR\$.md) , [MID\$](MID\$.md) (function)
+* [LEFT\$](LEFT\$.md) , [RIGHT\$](RIGHT\$.md)
 </blockquote>

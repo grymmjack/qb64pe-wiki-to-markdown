@@ -119,10 +119,10 @@ br ~ h5 {
 <blockquote>
 
 
-* [SCREEN](SCREEN.md) 0 emulates the VGA palette with regular colors from 0 to 15 and blinking colors from 16-31 (these are the same colors as 0-15, except their blink attribute is set to on). [_BLINK](BLINK.md) [OFF](OFF.md) emulates writing to the video memory and disabling blinking for colors 16-31.
-* Using colors 16-31 for the foreground with [_BLINK](BLINK.md) set to [OFF](OFF.md) will produce high intensity background colors.
-* [_BLINK](BLINK.md) is only effective in [SCREEN](SCREEN.md) 0. It's ignored in graphic modes.
-* [IF](IF.md) [_DISPLAY](DISPLAY.md) is used, blinking is disabled, even if [_BLINK](BLINK.md) is ON, but high intensity backgrounds aren't enabled in this case.
+* [SCREEN](SCREEN.md) 0 emulates the VGA palette with regular colors from 0 to 15 and blinking colors from 16-31 (these are the same colors as 0-15, except their blink attribute is set to on). _BLINK [OFF](OFF.md) emulates writing to the video memory and disabling blinking for colors 16-31.
+* Using colors 16-31 for the foreground with _BLINK set to [OFF](OFF.md) will produce high intensity background colors.
+* _BLINK is only effective in [SCREEN](SCREEN.md) 0. It's ignored in graphic modes.
+* [IF](IF.md) _DISPLAY is used, blinking is disabled, even if _BLINK is ON, but high intensity backgrounds aren't enabled in this case.
 
 </blockquote>
 
@@ -150,7 +150,7 @@ PRINT "Now the same text is printed in black over bright white, because blinking
 
 
 * Featured in our "Keyword of the Day" series
-* [_BLINK](BLINK.md) (function)
+* _BLINK (function)
 * [OUT](OUT.md)
-* [_DISPLAY](DISPLAY.md)
+* _DISPLAY
 </blockquote>

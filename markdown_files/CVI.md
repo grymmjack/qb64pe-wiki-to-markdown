@@ -119,10 +119,10 @@ br ~ h5 {
 <blockquote>
 
 
-* CV functions ( [CVD](CVD.md) , [CVS](CVS.md) , [CVI](CVI.md) , [CVL](CVL.md) , [CVDMBF](CVDMBF.md) , [CVSMBF](CVSMBF.md) ) are used to convert values encoded by MK$ functions ( [MKD&dollar;](MKD&dollar;.md) , [MKS&dollar;](MKS&dollar;.md) , [MKI&dollar;](MKI&dollar;.md) , [MKL&dollar;](MKL&dollar;.md) , [MKDMBF&dollar;](MKDMBF&dollar;.md) , [MKSMBF&dollar;](MKSMBF&dollar;.md) ).
-* QB64 has [_CV](CV.md) and [_MK&dollar;](MK&dollar;.md) functions which can also deal with extended data types .
+* [CV](CV.md) functions ( [CVD](CVD.md) , [CVS](CVS.md) , [CVI](CVI.md) , [CVL](CVL.md) , [CVDMBF](CVDMBF.md) , [CVSMBF](CVSMBF.md) ) are used to convert values encoded by [MK\$](MK\$.md) functions ( [MKD\$](MKD\$.md) , [MKS\$](MKS\$.md) , [MKI\$](MKI\$.md) , [MKL\$](MKL\$.md) , [MKDMBF\$](MKDMBF\$.md) , [MKSMBF\$](MKSMBF\$.md) ).
+* QB64 has _CV and _MK$ functions which can also deal with extended data types .
 * [INTEGER](INTEGER.md) values can range from -32768 to 32767.
-* Doesn't return [_UNSIGNED](UNSIGNED.md) values.
+* Doesn't return _UNSIGNED values.
 
 </blockquote>
 
@@ -155,20 +155,20 @@ tmp3$ = "                                 &  "
 tmp4$ = "                     CVI Total = ##### "
 
 DO
-COLOR 14: LOCATE 13, 20: INPUT "Enter an Integer from 1 to 32767(0 quits): ", number%
-IF number% < 1 THEN EXIT DO
-CLS
-ASCII$ = MKI$(number%)     ' create the 2 byte character string
-COLOR 11
-_PRINTSTRING (152, 240), "MKI$ creates 2 byte ASCII string: " + Q + ASCII$ + Q ' displays character(s)
+ COLOR 14: LOCATE 13, 20: INPUT "Enter an Integer from 1 to 32767(0 quits): ", number%
+ IF number% < 1 THEN EXIT DO
+ CLS
+ ASCII$ = MKI$(number%)     ' create the 2 byte character string
+ COLOR 11
+ _PRINTSTRING (152, 240), "MKI$ creates 2 byte ASCII string: " + Q + ASCII$ + Q ' displays character(s)
 
-asc1% = ASC(ASCII$)        ' find the ASCII code values of each character
-asc2% = ASC(ASCII$, 2)     ' QB64 allows ASC to read specific characters in a string
+ asc1% = ASC(ASCII$)        ' find the ASCII code values of each character
+ asc2% = ASC(ASCII$, 2)     ' QB64 allows ASC to read specific characters in a string
 
-LOCATE 18, 20: PRINT USING tmp1$; asc1%; asc1%
-LOCATE 19, 20: PRINT USING tmp2$; asc2%; asc2% * 256
-LOCATE 20, 20: PRINT USING tmp3$; "-----"
-LOCATE 21, 20: PRINT USING tmp4$; asc1% + (256 * asc2%)
+ LOCATE 18, 20: PRINT USING tmp1$; asc1%; asc1%
+ LOCATE 19, 20: PRINT USING tmp2$; asc2%; asc2% * 256
+ LOCATE 20, 20: PRINT USING tmp3$; "-----"
+ LOCATE 21, 20: PRINT USING tmp4$; asc1% + (256 * asc2%)
 LOOP
 SYSTEM
 ```
@@ -184,7 +184,7 @@ SYSTEM
 
 
 * Featured in our "Keyword of the Day" series
-* [MKD&dollar;](MKD&dollar;.md) , [MKI&dollar;](MKI&dollar;.md) , [MKS&dollar;](MKS&dollar;.md) , [MKL&dollar;](MKL&dollar;.md) , [MKDMBF&dollar;](MKDMBF&dollar;.md) , [MKSMBF&dollar;](MKSMBF&dollar;.md)
+* [MKD\$](MKD\$.md) , [MKI\$](MKI\$.md) , [MKS\$](MKS\$.md) , [MKL\$](MKL\$.md) , [MKDMBF\$](MKDMBF\$.md) , [MKSMBF\$](MKSMBF\$.md)
 * [CVS](CVS.md) , [CVD](CVD.md) , [CVL](CVL.md) , [CVSMBF](CVSMBF.md) , [CVDMBF](CVDMBF.md)
-* [_CV](CV.md) , [_MK&dollar;](MK&dollar;.md)
+* _CV , _MK$
 </blockquote>

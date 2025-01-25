@@ -119,13 +119,13 @@ br ~ h5 {
 <blockquote>
 
 
-* [_CONSOLE](CONSOLE.md) [ON](ON.md) or [OFF](OFF.md) may be used to show or hide the console window at run time.
+* _CONSOLE [ON](ON.md) or [OFF](OFF.md) may be used to show or hide the console window at run time.
 * The :ONLY option can be used when only a console window is desired without a program window.
-* [_DEST](DEST.md) [_CONSOLE](CONSOLE.md) may be used to send screen output to the console window.
-* [_SCREENHIDE](SCREENHIDE.md) and [_SCREENSHOW](SCREENSHOW.md) can be used to hide or show the main program window.
-* [_DELAY](DELAY.md) or [SLEEP](SLEEP.md) can be used to allow the console window to be set in front of the main program window.
+* _DEST _CONSOLE may be used to send screen output to the console window.
+* _SCREENHIDE and _SCREENSHOW can be used to hide or show the main program window.
+* _DELAY or [SLEEP](SLEEP.md) can be used to allow the console window to be set in front of the main program window.
 * QB64 Metacommands are not commented out with ' or REM, unlike QuickBASIC metacommands
-* Change the title of the [&dollar;CONSOLE](&dollar;CONSOLE.md) windows created using [_CONSOLETITLE](CONSOLETITLE.md)
+* Change the title of the [\$CONSOLE](\$CONSOLE.md) windows created using _CONSOLETITLE
 * Note: Text can be copied partially or totally from console screens in Windows by highlighting and using the title bar menu.
 
 </blockquote>
@@ -206,9 +206,9 @@ Max hex _INTEGER64 = FFFFFFFFFFFFFFFF with 16 digits =-1
 <blockquote>
 
 
-* [_CLIPBOARD&dollar;](CLIPBOARD&dollar;.md) (function) , [_CLIPBOARD&dollar;](CLIPBOARD&dollar;.md) (statement)
-* [_CONSOLE](CONSOLE.md) , [_ECHO](ECHO.md)
-* [&dollar;SCREENHIDE](&dollar;SCREENHIDE.md) , [&dollar;SCREENSHOW](&dollar;SCREENSHOW.md) (QB64 Metacommands )
-* [_SCREENHIDE](SCREENHIDE.md) , [_SCREENSHOW](SCREENSHOW.md)
+* _CLIPBOARD$ (function) , _CLIPBOARD$ (statement)
+* _CONSOLE , _ECHO
+* [\$SCREENHIDE](\$SCREENHIDE.md) , [\$SCREENSHOW](\$SCREENSHOW.md) (QB64 Metacommands )
+* _SCREENHIDE , _SCREENSHOW
 * C Console Library
 </blockquote>

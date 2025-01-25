@@ -119,6 +119,6 @@ br ~ h5 {
 
 
 * [PRINT](PRINT.md)
-* Semicolon , Comma
+* [Semicolon](Semicolon.md) , [Comma](Comma.md)
 * Quotation mark
 </blockquote>

@@ -144,8 +144,8 @@ SCREEN _NEWIMAGE(800, 600, 32)
 
 DIM fh AS LONG: fh = _LOADFONT("LHANDW.TTF", 23)
 IF fh <= 0 THEN
-PRINT "Failed to load font file!"
-END
+   PRINT "Failed to load font file!"
+   END
 END IF
 
 _FONT fh
@@ -156,8 +156,8 @@ _PRINTMODE _KEEPBACKGROUND
 
 DIM l AS STRING, i AS LONG
 FOR i = 0 TO 4
-READ l
-_UPRINTSTRING (0, _ULINESPACING * i), l
+   READ l
+   _UPRINTSTRING (0, _ULINESPACING * i), l
 NEXT
 
 END
@@ -180,9 +180,9 @@ DATA "To strive,to seek,to find,and not to yield."
 
 
 * Featured in our "Keyword of the Day" series
-* [_UPRINTWIDTH](UPRINTWIDTH.md) , [_UFONTHEIGHT](UFONTHEIGHT.md) , [_UPRINTSTRING](UPRINTSTRING.md) , [_UCHARPOS](UCHARPOS.md)
-* [_FONTWIDTH](FONTWIDTH.md) , [_FONTHEIGHT](FONTHEIGHT.md) , [_FONT](FONT.md)
-* [_PRINTWIDTH](PRINTWIDTH.md) , [_PRINTSTRING](PRINTSTRING.md)
-* [SCREEN](SCREEN.md) , [_LOADFONT](LOADFONT.md)
+* _UPRINTWIDTH , _UFONTHEIGHT , _UPRINTSTRING , _UCHARPOS
+* _FONTWIDTH , _FONTHEIGHT , _FONT
+* _PRINTWIDTH , _PRINTSTRING
+* [SCREEN](SCREEN.md) , _LOADFONT
 * Text Using Graphics
 </blockquote>

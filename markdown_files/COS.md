@@ -148,16 +148,16 @@ PRINT "PI = 4 * ATN(1) ="; PI
 PRINT "COS(PI) = "; COS(PI)
 PRINT "SIN(PI) = "; SIN(PI)
 DO
-PRINT
-INPUT "Enter the degree angle (0 quits): ", DEGREES%
-RADIANS = DEGREES% * PI / 180
-PRINT "RADIANS = DEGREES% * PI / 180 = "; RADIANS
-PRINT "X = COS(RADIANS) = "; COS(RADIANS)
-PRINT "Y = SIN(RADIANS) = "; SIN(RADIANS)
-CIRCLE (400, 240), 2, 12
-LINE (400, 240)-(400 + (50 * SIN(RADIANS)), 240 + (50 * COS(RADIANS))), 11
-DEGREES% = RADIANS * 180 / PI
-PRINT "DEGREES% = RADIANS * 180 / PI ="; DEGREES%
+ PRINT
+ INPUT "Enter the degree angle (0 quits): ", DEGREES%
+ RADIANS = DEGREES% * PI / 180
+ PRINT "RADIANS = DEGREES% * PI / 180 = "; RADIANS
+ PRINT "X = COS(RADIANS) = "; COS(RADIANS)
+ PRINT "Y = SIN(RADIANS) = "; SIN(RADIANS)
+ CIRCLE (400, 240), 2, 12
+ LINE (400, 240)-(400 + (50 * SIN(RADIANS)), 240 + (50 * COS(RADIANS))), 11
+ DEGREES% = RADIANS * 180 / PI
+ PRINT "DEGREES% = RADIANS * 180 / PI ="; DEGREES%
 LOOP UNTIL DEGREES% = 0
 ```
   
@@ -188,10 +188,10 @@ PI2 = 8 * ATN(1)                  '2 * π
 arc! = PI2 / 12                          'arc interval between hour circles
 SCREEN 12
 FOR t! = 0 TO PI2 STEP arc!
-cx% = CINT(COS(t!) * 70) ' pixel columns (circular radius = 70)
-cy% = CINT(SIN(t!) * 70) ' pixel rows
-CIRCLE (cx% + 320, cy% + 240), 3, 12
-PAINT STEP(0, 0), 9, 12
+  cx% = CINT(COS(t!) * 70) ' pixel columns (circular radius = 70)
+  cy% = CINT(SIN(t!) * 70) ' pixel rows
+  CIRCLE (cx% + 320, cy% + 240), 3, 12
+  PAINT STEP(0, 0), 9, 12
 NEXT
 ```
   
@@ -204,23 +204,23 @@ NEXT
 SCREEN _NEWIMAGE(640, 480, 32)
 
 DO
-LINE (0, 0)-(640, 480), _RGB(0, 0, 0), BF
-j = j + 1
-PSET (320, 240)
-FOR i = 0 TO 100 STEP .1
-LINE -(.05 * i * i * COS(j + i) + 320, .05 * i * i * SIN(j + i) + 240)
-NEXT
-PSET (320, 240)
-FOR i = 0 TO 100 STEP .1
-LINE -(.05 * i * i * COS(j + i + 10) + 320, .05 * i * i * SIN(j + i + 10) + 240)
-NEXT
-PSET (320, 240)
-FOR i = 0 TO 100 STEP .1
-PAINT (.05 * i * i * COS(j + i + 5) + 320, .05 * i * i * SIN(j + i + 5) + 240)
-NEXT
+ LINE (0, 0)-(640, 480), _RGB(0, 0, 0), BF
+ j = j + 1
+ PSET (320, 240)
+ FOR i = 0 TO 100 STEP .1
+   LINE -(.05 * i * i * COS(j + i) + 320, .05 * i * i * SIN(j + i) + 240)
+ NEXT
+ PSET (320, 240)
+ FOR i = 0 TO 100 STEP .1
+   LINE -(.05 * i * i * COS(j + i + 10) + 320, .05 * i * i * SIN(j + i + 10) + 240)
+ NEXT
+ PSET (320, 240)
+ FOR i = 0 TO 100 STEP .1
+   PAINT (.05 * i * i * COS(j + i + 5) + 320, .05 * i * i * SIN(j + i + 5) + 240)
+ NEXT
 
-_DISPLAY
-_LIMIT 30
+ _DISPLAY
+ _LIMIT 30
 LOOP UNTIL INP(&H60) = 1 'escape exit
 ```
   
@@ -234,7 +234,7 @@ LOOP UNTIL INP(&H60) = 1 'escape exit
 <blockquote>
 
 
-* [_PI](PI.md) (QB64 function)
+* _PI (QB64 function)
 * [SIN](SIN.md) (sine)
 * [ATN](ATN.md) (arctangent)
 * [TAN](TAN.md) (tangent)

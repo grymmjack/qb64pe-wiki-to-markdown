@@ -119,7 +119,7 @@ br ~ h5 {
 <blockquote>
 
 
-* imageHandle& refers to an image in memory. If not specified, the current destination page (See [_DEST](DEST.md) ) is affected.
+* imageHandle& refers to an image in memory. If not specified, the current destination page (See _DEST ) is affected.
 </blockquote>
 
 #### DESCRIPTION
@@ -128,10 +128,10 @@ br ~ h5 {
 
 
 * Alpha blending is on by default when loading a .PNG image to a 32-bit surface.
-* Normally it is used to turn blending on after a previous [_DONTBLEND](DONTBLEND.md) call.
-* [_BLEND](BLEND.md) can only be used on 32-bit surfaces, otherwise it will produce the error Illegal Function Call .
-* Note: [_DONTBLEND](DONTBLEND.md) is faster than the default [_BLEND](BLEND.md) unless you really need to use it in 32 bit.
-* 32 bit screen surface backgrounds (black) have zero [_ALPHA](ALPHA.md) so that they are transparent when placed over other surfaces.
+* Normally it is used to turn blending on after a previous _DONTBLEND call.
+* _BLEND can only be used on 32-bit surfaces, otherwise it will produce the error Illegal Function Call .
+* Note: _DONTBLEND is faster than the default _BLEND unless you really need to use it in 32 bit.
+* 32 bit screen surface backgrounds (black) have zero _ALPHA so that they are transparent when placed over other surfaces.
 
 </blockquote>
 
@@ -180,6 +180,6 @@ PRINT _RED(m&), _GREEN(m&), _BLUE(m&), _ALPHA(m&)
 <blockquote>
 
 
-* [_DONTBLEND](DONTBLEND.md) , [_BLEND](BLEND.md) (function)
+* _DONTBLEND , _BLEND (function)
 * Images
 </blockquote>

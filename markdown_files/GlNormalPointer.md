@@ -174,15 +174,15 @@ Table 2: Relations between the OpenGL variable types vs. C/C++ and QB64.
 │              │                │         array element)                   │
 └──────────────┴────────────────┴──────────────────────────────────────────┘
 Note: If a parameter has an asterisk (*) in front, then it's a pointer to
-the designated OpenGL variable type, rather than a value of that type.
-Those must be passed using the _OFFSET(...) notation.
+      the designated OpenGL variable type, rather than a value of that type.
+      Those must be passed using the _OFFSET(...) notation.
 
 E.g.  GLuint *anyParam is actually the offset of a _UNSIGNED LONG (~&)
-variable or array, which must be passed as _OFFSET(anyVar~&) or
-_OFFSET(anyArr~&()) respectively.
+      variable or array, which must be passed as _OFFSET(anyVar~&) or
+      _OFFSET(anyArr~&()) respectively.
 
-(1)  This type is regularly only used for pointers (with asterisk (*)) to
-any byte sized memory data, hence _BYTE or fixed length strings.
+ (1)  This type is regularly only used for pointers (with asterisk (*)) to
+      any byte sized memory data, hence _BYTE or fixed length strings.
 ```
   
 <br>
@@ -196,8 +196,8 @@ any byte sized memory data, hence _BYTE or fixed length strings.
 
 
 * [SUB](SUB.md) _GL
-* [_glArrayElement](glArrayElement.md) , [_glColorPointer](glColorPointer.md) , [_glDrawElements](glDrawElements.md) , [_glDrawArrays](glDrawArrays.md)
-* [_glEnable](glEnable.md) , [_glEdgeFlagPointer](glEdgeFlagPointer.md) , [_glGetPointerv](glGetPointerv.md) , [_glIndexPointer](glIndexPointer.md)
-* [_glIsEnabled](glIsEnabled.md) , [_glInterleavedArrays](glInterleavedArrays.md) , [_glTexCoordPointer](glTexCoordPointer.md) , [_glVertexPointer](glVertexPointer.md)
-* [_glGetString](glGetString.md)
+* _glArrayElement , _glColorPointer , _glDrawElements , _glDrawArrays
+* _glEnable , _glEdgeFlagPointer , _glGetPointerv , _glIndexPointer
+* _glIsEnabled , _glInterleavedArrays , _glTexCoordPointer , _glVertexPointer
+* _glGetString
 </blockquote>

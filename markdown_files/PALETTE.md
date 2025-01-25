@@ -113,10 +113,10 @@ br ~ h5 {
 
 * red% , green% and blue% values can range from 0 to 63. Many color shades are possible in non- DAC color attributes.  (Valid for screens 11, 12, 13, and 256 only.)
 * If the red% , green% and blue% color intensity settings are all the same value the resulting color is a shade of grey.  (Valid for screens 11, 12, 13, and 256 only.)
-* A swap is often used with DAC color attributes that cannot change RGB settings. Only the RGB color settings are swapped from original existingAttribute% to newAttribute% . Screens 0 thru 9 support swaps.
-* [PALETTE](PALETTE.md) without any value sets any changed RGB settings back to the default color settings, including DAC colors.
-* [PALETTE](PALETTE.md) [USING](USING.md) can be used when color intensity values are stored in an array .
-* QB64 implements the [_PALETTECOLOR](PALETTECOLOR.md) statement to provide extended palette functionality.
+* A swap is often used with DAC color attributes that cannot change [RGB](RGB.md) settings. Only the [RGB](RGB.md) color settings are swapped from original existingAttribute% to newAttribute% . Screens 0 thru 9 support swaps.
+* [PALETTE](PALETTE.md) without any value sets any changed [RGB](RGB.md) settings back to the default color settings, including DAC colors.
+* [PALETTE](PALETTE.md) USING can be used when color intensity values are stored in an array .
+* QB64 implements the _PALETTECOLOR statement to provide extended palette functionality.
 
 </blockquote>
 
@@ -129,11 +129,11 @@ br ~ h5 {
 ##### Example: Displaying all 64 DAC color hues as backgrounds in SCREEN 9 using a PALETTE swap.
 ```vb
 SCREEN 9 ' background is default black
-LOCATE 20, 33: PRINT "Press any Key!"
-FOR i = 0 TO 63
-a$ = INPUT$(1) ' wait for a keypress
-PALETTE 0, i
-NEXT
+ LOCATE 20, 33: PRINT "Press any Key!"
+ FOR i = 0 TO 63
+  a$ = INPUT$(1) ' wait for a keypress
+  PALETTE 0, i
+ NEXT
 ```
   
 <br>
@@ -146,8 +146,8 @@ NEXT
 <blockquote>
 
 
-* [_PALETTECOLOR](PALETTECOLOR.md)
-* [PALETTE](PALETTE.md) [USING](USING.md)
+* _PALETTECOLOR
+* [PALETTE](PALETTE.md) USING
 * [COLOR](COLOR.md)
 * [OUT](OUT.md) , [INP](INP.md)
 * [SCREEN](SCREEN.md)

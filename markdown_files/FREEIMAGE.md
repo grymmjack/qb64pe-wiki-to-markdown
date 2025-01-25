@@ -123,11 +123,11 @@ br ~ h5 {
 * Freeing the destination image or source image will result in the display page being selected instead.
 * Invalid image handle values of -1 or 0 cannot be freed or an "Illegal Function" error will occur. Check the handle value first.
 * [SCREEN](SCREEN.md) modes in use cannot be freed or an "Illegal Function" error will occur. Change [SCREEN](SCREEN.md) modes before freeing.
-* Once a specific image handle is no longer used or referenced by your program, it can be freed with [_FREEIMAGE](FREEIMAGE.md) .
-* Images are not deallocated when the [SUB](SUB.md) or [FUNCTION](FUNCTION.md) they are created in ends. Free them with [_FREEIMAGE](FREEIMAGE.md) .
-* It is important to free unused or unneeded images with [_FREEIMAGE](FREEIMAGE.md) to prevent memory overflow errors.
+* Once a specific image handle is no longer used or referenced by your program, it can be freed with _FREEIMAGE .
+* Images are not deallocated when the [SUB](SUB.md) or [FUNCTION](FUNCTION.md) they are created in ends. Free them with _FREEIMAGE .
+* It is important to free unused or unneeded images with _FREEIMAGE to prevent memory overflow errors.
 * Do not try to free image handles currently being used as the active [SCREEN](SCREEN.md) . Change screen modes first.
-* Note that calling [_FREEIMAGE](FREEIMAGE.md) only frees the handle.  It does [NOT](NOT.md) reset the variable used to store the handle back to 0.  (This is because 0 is often used as a short cut value for the current display, such as with [_DEST](DEST.md) 0.)
+* Note that calling _FREEIMAGE only frees the handle.  It does [NOT](NOT.md) reset the variable used to store the handle back to 0.  (This is because 0 is often used as a short cut value for the current display, such as with _DEST 0.)
 
 </blockquote>
 
@@ -157,9 +157,9 @@ CLS
 <blockquote>
 
 
-* [_NEWIMAGE](NEWIMAGE.md)
-* [_LOADIMAGE](LOADIMAGE.md)
-* [_SCREENIMAGE](SCREENIMAGE.md)
-* [_COPYIMAGE](COPYIMAGE.md)
-* [_SAVEIMAGE](SAVEIMAGE.md)
+* _NEWIMAGE
+* _LOADIMAGE
+* _SCREENIMAGE
+* _COPYIMAGE
+* _SAVEIMAGE
 </blockquote>

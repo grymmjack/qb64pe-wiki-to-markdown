@@ -171,6 +171,6 @@ LOCAL APPLICATION DATA=C:\Documents and Settings\Administrator\Local Settings\Ap
 <blockquote>
 
 
-* [_CWD&dollar;](CWD&dollar;.md)
-* [_STARTDIR&dollar;](STARTDIR&dollar;.md)
+* _CWD$
+* _STARTDIR$
 </blockquote>

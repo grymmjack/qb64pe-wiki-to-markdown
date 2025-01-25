@@ -123,7 +123,7 @@ br ~ h5 {
 * If imageHandle& is designated being zero, the current software destination screen or image is copied.
 * If 1 is designated instead of an imageHandle& , it designates the last OpenGL hardware surface to copy.
 * Mode 32 can be used to convert 256 color images to 32 bit colors.
-* Mode 33 images are hardware accelerated in version 1.000 and up , and are created using [_LOADIMAGE](LOADIMAGE.md) or [_COPYIMAGE](COPYIMAGE.md) .
+* Mode 33 images are hardware accelerated in version 1.000 and up , and are created using _LOADIMAGE or _COPYIMAGE .
 </blockquote>
 
 #### DESCRIPTION
@@ -134,7 +134,7 @@ br ~ h5 {
 * The function copies any image or screen handle to a new and unique negative [LONG](LONG.md) handle value.
 * Valid copy handles are less than -1. Invalid handles return -1 or 0 if it was never created.
 * Every attribute of the passed image or program screen is copied to a new handle value in memory.
-* 32 bit screen surface backgrounds (black) have zero [_ALPHA](ALPHA.md) so that they are transparent when placed over other surfaces.
+* 32 bit screen surface backgrounds (black) have zero _ALPHA so that they are transparent when placed over other surfaces.
 
 </blockquote>
 
@@ -181,11 +181,11 @@ DO: _LIMIT 30: LOOP UNTIL INKEY$ <> ""
 <blockquote>
 
 
-* [_LOADIMAGE](LOADIMAGE.md) , [_NEWIMAGE](NEWIMAGE.md) , [_SAVEIMAGE](SAVEIMAGE.md)
-* [_PUTIMAGE](PUTIMAGE.md) , [_MAPTRIANGLE](MAPTRIANGLE.md)
-* [_SOURCE](SOURCE.md) , [_DEST](DEST.md)
-* [_FREEIMAGE](FREEIMAGE.md)
+* _LOADIMAGE , _NEWIMAGE , _SAVEIMAGE
+* _PUTIMAGE , _MAPTRIANGLE
+* _SOURCE , _DEST
+* _FREEIMAGE
 * _FILELIST$ (function) (Demo of _COPYIMAGE)
-* [_DISPLAYORDER](DISPLAYORDER.md)
+* _DISPLAYORDER
 * Hardware images
 </blockquote>

@@ -160,6 +160,6 @@ Tommy
 
 
 * Featured in our "Keyword of the Day" series
-* [_TRIM&dollar;](TRIM&dollar;.md) , [LTRIM&dollar;](LTRIM&dollar;.md) , [STR&dollar;](STR&dollar;.md)
+* _TRIM$ , [LTRIM\$](LTRIM\$.md) , [STR\$](STR\$.md)
 * [LSET](LSET.md) , [RSET](RSET.md)
 </blockquote>

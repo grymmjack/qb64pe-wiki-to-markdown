@@ -119,14 +119,14 @@ br ~ h5 {
 <blockquote>
 
 
-* Returns ASCII character string values in upper or lower cases. See: [UCASE&dollar;](UCASE&dollar;.md) and [LCASE&dollar;](LCASE&dollar;.md)
+* Returns [ASCII](ASCII.md) character string values in upper or lower cases. See: [UCASE\$](UCASE\$.md) and [LCASE\$](LCASE\$.md)
 * Returns "" if no key has been pressed since the last keyboard read.
-* Some control keys cannot be read by [INKEY&dollar;](INKEY&dollar;.md) or will return 2 byte ASCII codes.
-* [INKEY&dollar;](INKEY&dollar;.md) can also be used to clear a [SLEEP](SLEEP.md) key press or the keyboard buffer in a loop.
-* Assign the [INKEY&dollar;](INKEY&dollar;.md) return to a string variable to save the key entry.
-* [LOCATE](LOCATE.md) , , 1 displays the [INKEY&dollar;](INKEY&dollar;.md) cursor. Use [LOCATE](LOCATE.md) , , 0 to turn it off.
-* To receive input from a [&dollar;CONSOLE](&dollar;CONSOLE.md) window, use [_CINP](CINP.md) .
-* Returns can be evaluated as certain ASCII characters or codes.
+* Some control keys cannot be read by [INKEY\$](INKEY\$.md) or will return 2 byte [ASCII](ASCII.md) codes.
+* [INKEY\$](INKEY\$.md) can also be used to clear a [SLEEP](SLEEP.md) key press or the keyboard buffer in a loop.
+* Assign the [INKEY\$](INKEY\$.md) return to a string variable to save the key entry.
+* [LOCATE](LOCATE.md) , , 1 displays the [INKEY\$](INKEY\$.md) cursor. Use [LOCATE](LOCATE.md) , , 0 to turn it off.
+* To receive input from a [\$CONSOLE](\$CONSOLE.md) window, use _CINP .
+* Returns can be evaluated as certain [ASCII](ASCII.md) characters or codes.
 
 </blockquote>
 
@@ -164,42 +164,42 @@ br ~ h5 {
 ```vb
 Two Byte Characters        Key                 CHR$(0) + "?" 
 
-CHR$(0) + CHR$(16-50)      [Alt] + letter
-CHR$(0) + CHR$(59)         [F1]                 ";"
-CHR$(0) + CHR$(60)         [F2]                 "<"
-CHR$(0) + CHR$(61)         [F3]                 "="
-CHR$(0) + CHR$(62)         [F4]                 ">"
-CHR$(0) + CHR$(63)         [F5]                 "?"
-CHR$(0) + CHR$(64)         [F6]                 "@"
-CHR$(0) + CHR$(65)         [F7]                 "A"
-CHR$(0) + CHR$(66)         [F8]                 "B"
-CHR$(0) + CHR$(67)         [F9]                 "C"
-CHR$(0) + CHR$(68)         [F10]                "D"
-CHR$(0) + CHR$(71)         [Home]               "G"
-CHR$(0) + CHR$(72)         [↑] Arrow            "H"
-CHR$(0) + CHR$(73)         [Page Up]            "I"
-CHR$(0) + CHR$(75)         [←] Arrow            "K"
-CHR$(0) + CHR$(76)         [5 NumberPad]        "L" (NumLock off in QB64)
-CHR$(0) + CHR$(77)         [→] Arrow            "M"
-CHR$(0) + CHR$(79)         [End]                "O"
-CHR$(0) + CHR$(80)         [↓] Arrow            "P"
-CHR$(0) + CHR$(81)         [Page Down]          "Q"
-CHR$(0) + CHR$(82)         [Insert]             "R"
-CHR$(0) + CHR$(83)         [Delete]             "S"
-CHR$(0) + CHR$(84-93)      [Shift] + F1-10
-CHR$(0) + CHR$(94-103)     [Ctrl] + F1-10
-CHR$(0) + CHR$(104-113)    [Alt] + F1-10
-CHR$(0) + CHR$(114-119)    [Ctrl] + keypad
-CHR$(0) + CHR$(120-129)    [Alt] + number
-CHR$(0) + CHR$(130 or 131) [Alt] + _/- or +/=   "é" or "â"
-CHR$(0) + CHR$(133)        [F11]                "à"
-CHR$(0) + CHR$(134)        [F12]                "å"
-CHR$(0) + CHR$(135)        [Shift] + [F11]      "ç"
-CHR$(0) + CHR$(136)        [Shift] + [F12]      "ê"
-CHR$(0) + CHR$(137)        [Ctrl] + [F11]       "ë"
-CHR$(0) + CHR$(138)        [Ctrl] + [F12]       "è"
-CHR$(0) + CHR$(139)        [Alt] + [F11]        "ï"
-CHR$(0) + CHR$(140)        [Alt] + [F12]        "î"
+                   CHR$(0) + CHR$(16-50)      [Alt] + letter
+                   CHR$(0) + CHR$(59)         [F1]                 ";"
+                   CHR$(0) + CHR$(60)         [F2]                 "<"
+                   CHR$(0) + CHR$(61)         [F3]                 "="
+                   CHR$(0) + CHR$(62)         [F4]                 ">"
+                   CHR$(0) + CHR$(63)         [F5]                 "?"
+                   CHR$(0) + CHR$(64)         [F6]                 "@"
+                   CHR$(0) + CHR$(65)         [F7]                 "A"
+                   CHR$(0) + CHR$(66)         [F8]                 "B"
+                   CHR$(0) + CHR$(67)         [F9]                 "C"
+                   CHR$(0) + CHR$(68)         [F10]                "D"
+                   CHR$(0) + CHR$(71)         [Home]               "G"
+                   CHR$(0) + CHR$(72)         [↑] Arrow            "H"
+                   CHR$(0) + CHR$(73)         [Page Up]            "I"
+                   CHR$(0) + CHR$(75)         [←] Arrow            "K"
+                   CHR$(0) + CHR$(76)         [5 NumberPad]        "L" (NumLock off in QB64)
+                   CHR$(0) + CHR$(77)         [→] Arrow            "M"
+                   CHR$(0) + CHR$(79)         [End]                "O"
+                   CHR$(0) + CHR$(80)         [↓] Arrow            "P"
+                   CHR$(0) + CHR$(81)         [Page Down]          "Q"
+                   CHR$(0) + CHR$(82)         [Insert]             "R"
+                   CHR$(0) + CHR$(83)         [Delete]             "S"
+                   CHR$(0) + CHR$(84-93)      [Shift] + F1-10
+                   CHR$(0) + CHR$(94-103)     [Ctrl] + F1-10
+                   CHR$(0) + CHR$(104-113)    [Alt] + F1-10
+                   CHR$(0) + CHR$(114-119)    [Ctrl] + keypad
+                   CHR$(0) + CHR$(120-129)    [Alt] + number
+                   CHR$(0) + CHR$(130 or 131) [Alt] + _/- or +/=   "é" or "â"
+                   CHR$(0) + CHR$(133)        [F11]                "à"
+                   CHR$(0) + CHR$(134)        [F12]                "å"
+                   CHR$(0) + CHR$(135)        [Shift] + [F11]      "ç"
+                   CHR$(0) + CHR$(136)        [Shift] + [F12]      "ê"
+                   CHR$(0) + CHR$(137)        [Ctrl] + [F11]       "ë"
+                   CHR$(0) + CHR$(138)        [Ctrl] + [F12]       "è"
+                   CHR$(0) + CHR$(139)        [Alt] + [F11]        "ï"
+                   CHR$(0) + CHR$(140)        [Alt] + [F12]        "î"
 ```
   
 <br>
@@ -220,8 +220,8 @@ DO: K$ = INKEY$: PRINT K$: LOOP UNTIL K$ = ""
 ##### Example 2: Entering a Ctrl + letter keypress combination will print ASCII Control characters 1 to 26. .
 ```vb
 DO
-K$ = INKEY$
-IF K$ <> "" THEN PRINT K$; " ";
+   K$ = INKEY$
+   IF K$ <> "" THEN PRINT K$; " ";
 LOOP UNTIL K$ = CHR$(27) 'Esc key exit
 ```
   
@@ -232,11 +232,11 @@ LOOP UNTIL K$ = CHR$(27) 'Esc key exit
 ##### Example 3: Use UCASE\$ (INKEY\$) in a keyboard read loop looking for uppercase "Y" or "N" user inputs to avoid multiple IF statements.
 ```vb
 DO
-PRINT "Do you want to continue? (Y/N): ";  'semicolon saves position for user entry
-DO: K$ = UCASE$(INKEY$) 'change any user key press to uppercase
-LOOP UNTIL K$ = "Y" OR K$ = "N"
-PRINT K$  'print valid user entry
-IF K$ = "N" THEN END
+ PRINT "Do you want to continue? (Y/N): ";  'semicolon saves position for user entry
+ DO: K$ = UCASE$(INKEY$) 'change any user key press to uppercase
+ LOOP UNTIL K$ = "Y" OR K$ = "N"
+ PRINT K$  'print valid user entry
+ IF K$ = "N" THEN END
 LOOP
 ```
   
@@ -248,16 +248,16 @@ LOOP
 ```vb
 LOCATE 10, 10: PRINT "Enter a number value: ";
 DO: SLEEP
-K$ = INKEY$
-IF K$ >= CHR$(48) AND K$ <= CHR$(57) THEN entry$ = entry$ + K$ ' numbers only
-L = LEN(entry$) ' check entry length for possible backspace
-IF K$ = CHR$(46) AND flag = 0 THEN entry$ = entry$ + K$: flag = 1: mark = L ' decimal point
-IF K$ = CHR$(8) AND L > 0 THEN ' backspace pressed and entry has a length
-entry$ = MID$(entry$, 1, L - 1) ' remove one character from entry$
-IF LEN(entry$) < mark THEN flag = 0 ' allow decimal point entry if other was removed.
-LOCATE CSRLIN, POS(0) - 1: PRINT SPACE$(1); ' remove end character from screen
-END IF
-LOCATE 10, 32: PRINT entry$; ' display entry to user (semicolon required for correct POS)
+ K$ = INKEY$
+ IF K$ >= CHR$(48) AND K$ <= CHR$(57) THEN entry$ = entry$ + K$ ' numbers only
+ L = LEN(entry$) ' check entry length for possible backspace
+ IF K$ = CHR$(46) AND flag = 0 THEN entry$ = entry$ + K$: flag = 1: mark = L ' decimal point
+ IF K$ = CHR$(8) AND L > 0 THEN ' backspace pressed and entry has a length
+   entry$ = MID$(entry$, 1, L - 1) ' remove one character from entry$
+   IF LEN(entry$) < mark THEN flag = 0 ' allow decimal point entry if other was removed.
+   LOCATE CSRLIN, POS(0) - 1: PRINT SPACE$(1); ' remove end character from screen
+ END IF
+ LOCATE 10, 32: PRINT entry$; ' display entry to user (semicolon required for correct POS)
 LOOP UNTIL K$ = CHR$(13) AND L > 0 'assures something is entered
 ```
   
@@ -271,17 +271,17 @@ movey = 1: movex = 1 'text coordinates can never be 0
 at$ = "@"  'text sprite could be almost any ASCII character
 LOCATE movey, movex: PRINT at$;
 DO
-px = movex: py = movey 'previous positions
-B$ = INKEY$
-IF B$ = CHR$(0) + CHR$(72) AND movey > 1 THEN movey = movey - 1 'rows 1 to 23 only
-IF B$ = CHR$(0) + CHR$(80) AND movey < 23 THEN movey = movey + 1
-IF B$ = CHR$(0) + CHR$(75) AND movex > 1 THEN movex = movex - 1 'columns 1 to 80 only
-IF B$ = CHR$(0) + CHR$(77) AND movex < 80 THEN movex = movex + 1
+   px = movex: py = movey 'previous positions
+   B$ = INKEY$
+   IF B$ = CHR$(0) + CHR$(72) AND movey > 1 THEN movey = movey - 1 'rows 1 to 23 only
+   IF B$ = CHR$(0) + CHR$(80) AND movey < 23 THEN movey = movey + 1
+   IF B$ = CHR$(0) + CHR$(75) AND movex > 1 THEN movex = movex - 1 'columns 1 to 80 only
+   IF B$ = CHR$(0) + CHR$(77) AND movex < 80 THEN movex = movex + 1
 
-IF px <> movex OR py <> movey THEN 'only changes when needed
-LOCATE py, px: PRINT SPACE$(1); 'erase old sprite
-LOCATE movey, movex: PRINT at$; 'show new position
-END IF
+   IF px <> movex OR py <> movey THEN 'only changes when needed
+       LOCATE py, px: PRINT SPACE$(1); 'erase old sprite
+       LOCATE movey, movex: PRINT at$; 'show new position
+   END IF
 LOOP UNTIL B$ = CHR$(27) 'ESCape key exit
 END
 ```
@@ -304,23 +304,23 @@ y = 0
 image = _LOADIMAGE("QB64bee.png") 'Here I actually used the QB64 icon
 
 DO
-_PUTIMAGE (x, y), image
-DO
-Keypress = UCASE$(INKEY$)
-' ***** The following line detects the arrow keys *****
-IF LEN(Keypress) > 1 THEN Keypress = RIGHT$(Keypress, 1)
-LOOP UNTIL Keypress > ""
+ _PUTIMAGE (x, y), image
+ DO
+   Keypress = UCASE$(INKEY$)
+   ' ***** The following line detects the arrow keys *****
+   IF LEN(Keypress) > 1 THEN Keypress = RIGHT$(Keypress, 1)
+ LOOP UNTIL Keypress > ""
 
-CLS ' blank screen after valid key press to avoid smearing image on page
+ CLS ' blank screen after valid key press to avoid smearing image on page
 
-SELECT CASE Keypress
-CASE "W", "H": y = y - 10 'Up
-CASE "A", "K": x = x - 10 'Left
-CASE "S", "P": y = y + 10 'Down
-CASE "D", "M": x = x + 10 'Right
-CASE "Q", CHR$(27): END 'Q or Esc Ends prog.
-END SELECT
-_PUTIMAGE (x, y), image
+ SELECT CASE Keypress
+   CASE "W", "H": y = y - 10 'Up
+   CASE "A", "K": x = x - 10 'Left
+   CASE "S", "P": y = y + 10 'Down
+   CASE "D", "M": x = x + 10 'Right
+   CASE "Q", CHR$(27): END 'Q or Esc Ends prog.
+ END SELECT
+ _PUTIMAGE (x, y), image
 LOOP
 ```
   
@@ -331,16 +331,16 @@ LOOP
 ##### Example 7: Creating upper ASCII characters in a QB program using Alt + three number keys:
 ```vb
 DO
-A$ = "": WHILE A$ = "": A$ = INKEY$: WEND
-IF LEN(A$) = 2 THEN '2 byte INKEY$ return
-B$ = RIGHT$(A$, 1)  'read second byte
-b% = ASC(B$)        'read second byte code
-IF b% > 119 AND b% < 130 THEN ' Alt + number codes only
-C% = b% - 119  ' convert to actual number
-IF C% > 9 THEN C% = 0
-num$ = num$ + LTRIM$(STR$(C%))
-END IF
-END IF
+   A$ = "": WHILE A$ = "": A$ = INKEY$: WEND
+   IF LEN(A$) = 2 THEN '2 byte INKEY$ return
+       B$ = RIGHT$(A$, 1)  'read second byte
+       b% = ASC(B$)        'read second byte code
+       IF b% > 119 AND b% < 130 THEN ' Alt + number codes only
+          C% = b% - 119  ' convert to actual number
+          IF C% > 9 THEN C% = 0
+          num$ = num$ + LTRIM$(STR$(C%))
+       END IF
+   END IF
 LOOP UNTIL LEN(num$) = 3  ' 3 digit codes only
 
 PRINT num$
@@ -364,11 +364,11 @@ PRINT CHR$(VAL(num$)
 
 
 * Featured in our "Keyword of the Day" series
-* [_KEYHIT](KEYHIT.md) , [_KEYDOWN](KEYDOWN.md) , [_MAPUNICODE](MAPUNICODE.md)
-* [_KEYCLEAR](KEYCLEAR.md)
+* _KEYHIT , _KEYDOWN , _MAPUNICODE
+* _KEYCLEAR
 * [INPUT](INPUT.md) , [LINE](LINE.md) [INPUT](INPUT.md)
-* [INPUT&dollar;](INPUT&dollar;.md) , [INP](INP.md)
-* [CHR&dollar;](CHR&dollar;.md) , ASCII
+* [INPUT\$](INPUT\$.md) , [INP](INP.md)
+* [CHR\$](CHR\$.md) , [ASCII](ASCII.md)
 * [ASC](ASC.md) (function) , Scancodes (keyboard)
 * Windows hot keys
 </blockquote>

@@ -120,8 +120,12 @@ br ~ h5 {
 
 
 * This metacommand does not require a comment ' or [REM](REM.md) before it. There is no space between the metacommand name, the colon and the [CONSOLE](CONSOLE.md) parameter.
-* If this metacommand is used in a program and any of the set [_ASSERT](ASSERT.md) checkpoints will fail, then the program will stop with an [_ASSERT](ASSERT.md) failed error.
-* Detailed error messages passed to the [_ASSERT](ASSERT.md) statement will be displayed in the console window, but only if $ASSERTS:CONSOLE is used.
+* If this metacommand is used in a program and any of the set _ASSERT checkpoints will fail, then the program will stop with an _ASSERT failed error.
+* Detailed error messages passed to the _ASSERT statement will be displayed in the console window, but only if $ASSERTS:CONSOLE is used.
+* The [\$ASSERTS](\$ASSERTS.md) metacommand serves as main switch to enable debug tests during development. Later you just need to remove the metacommand while leaving all the _ASSERT statements in place for later debugging sessions, they are simply ignored without the metacommand.
+* In newer versions a precompiler flag named _ASSERTS_ is available (see Availability ):
+* The flag is one(1) if the program is compiled with [\$ASSERTS](\$ASSERTS.md) enabled and zero(0) if compiled without it.
+* You may use it to include/exclude debugging related code using precompiler [\$IF](\$IF.md) .. [\$ELSE](\$ELSE.md) ... $END [IF](IF.md) blocks.
 
 </blockquote>
 
@@ -133,19 +137,19 @@ br ~ h5 {
 $ASSERTS:CONSOLE
 
 DO
-a = INT(RND * 10)
-b$ = myFunc$(a)
-PRINT a, , b$
-_LIMIT 3
+   a = INT(RND * 10)
+   b$ = myFunc$(a)
+   PRINT a, , b$
+   _LIMIT 3
 LOOP UNTIL _KEYHIT
 END
 
 FUNCTION myFunc$ (value AS SINGLE)
-_ASSERT value > 0, "Value cannot be zero"
-_ASSERT value <= 10, "Value cannot exceed 10"
+   _ASSERT value > 0, "Value cannot be zero"
+   _ASSERT value <= 10, "Value cannot exceed 10"
 
-IF value > 1 THEN plural$ = "s"
-myFunc$ = STRING$(value, "*") + STR$(value) + " star" + plural$ + " :-)"
+   IF value > 1 THEN plural$ = "s"
+   myFunc$ = STRING$(value, "*") + STR$(value) + " star" + plural$ + " :-)"
 END FUNCTION
 ```
   
@@ -159,9 +163,9 @@ END FUNCTION
 <blockquote>
 
 
-* Metacommand
-* [_ASSERT](ASSERT.md)
-* [&dollar;CHECKING](&dollar;CHECKING.md)
+* [Metacommand](Metacommand.md)
+* _ASSERT
+* [\$CHECKING](\$CHECKING.md)
 * Relational Operations
 * [ERROR](ERROR.md) Codes
 </blockquote>

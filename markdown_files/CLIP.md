@@ -119,7 +119,7 @@ br ~ h5 {
 <blockquote>
 
 
-* [_CLIP](CLIP.md) should be placed immediately before the [PUT](PUT.md) action if used. [XOR](XOR.md) is default when not used.
+* _CLIP should be placed immediately before the [PUT](PUT.md) action if used. XOR is default when not used.
 * The offscreen portions of the image will be the omit color.
 * [GET](GET.md) can get portions of the images off screen in QB64 .
 

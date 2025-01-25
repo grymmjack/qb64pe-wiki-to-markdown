@@ -151,7 +151,7 @@ PRINT "Parent directory full path: "; _FULLPATH$("../")
 
 
 * Featured in our "Keyword of the Day" series
-* [_CWD&dollar;](CWD&dollar;.md) , [_STARTDIR&dollar;](STARTDIR&dollar;.md)
-* [FILES](FILES.md) , [_FILES&dollar;](FILES&dollar;.md)
-* [_DIREXISTS](DIREXISTS.md) , [_FILEEXISTS](FILEEXISTS.md)
+* _CWD$ , _STARTDIR$
+* [FILES](FILES.md) , _FILES$
+* _DIREXISTS , _FILEEXISTS
 </blockquote>

@@ -119,8 +119,8 @@ br ~ h5 {
 <blockquote>
 
 
-* numericalVariable is the variable to shift the bits of and can be of the following types: [_BYTE](BYTE.md) , [INTEGER](INTEGER.md) , [LONG](LONG.md) , or [_INTEGER64](INTEGER64.md) .
-* Integer values can be signed or [_UNSIGNED](UNSIGNED.md) .
+* numericalVariable is the variable to shift the bits of and can be of the following types: _BYTE , [INTEGER](INTEGER.md) , [LONG](LONG.md) , or _INTEGER64 .
+* Integer values can be signed or _UNSIGNED .
 * numericalValue is the number of places to rotate the bits.
 * While 0 is a valid value it will have no affect on the variable being rotated.
 </blockquote>
@@ -153,17 +153,17 @@ c = &B11111111111111110000000000000000
 d = &B1111111111111111111111111111111100000000000000000000000000000000
 
 DO
-a = _ROL(a, 1)
-b = _ROL(b, 1)
-c = _ROL(c, 1)
-d = _ROL(d, 1)
+   a = _ROL(a, 1)
+   b = _ROL(b, 1)
+   c = _ROL(c, 1)
+   d = _ROL(d, 1)
 
-LOCATE 1, 1: PRINT RIGHT$(STRING$(8, "0") + _BIN$(a), 8);
-LOCATE 2, 1: PRINT RIGHT$(STRING$(16, "0") + _BIN$(b), 16);
-LOCATE 3, 1: PRINT RIGHT$(STRING$(32, "0") + _BIN$(c), 32);
-LOCATE 4, 1: PRINT RIGHT$(STRING$(64, "0") + _BIN$(d), 64);
+   LOCATE 1, 1: PRINT RIGHT$(STRING$(8, "0") + _BIN$(a), 8);
+   LOCATE 2, 1: PRINT RIGHT$(STRING$(16, "0") + _BIN$(b), 16);
+   LOCATE 3, 1: PRINT RIGHT$(STRING$(32, "0") + _BIN$(c), 32);
+   LOCATE 4, 1: PRINT RIGHT$(STRING$(64, "0") + _BIN$(d), 64);
 
-_LIMIT 15
+   _LIMIT 15
 LOOP WHILE _KEYHIT <> 27
 ```
   
@@ -177,7 +177,7 @@ LOOP WHILE _KEYHIT <> 27
 <blockquote>
 
 
-* [_ROR](ROR.md) , [_SHL](SHL.md) , [_SHR](SHR.md)
-* [_BYTE](BYTE.md) , [INTEGER](INTEGER.md)
-* [LONG](LONG.md) , [_INTEGER64](INTEGER64.md)
+* _ROR , _SHL , _SHR
+* _BYTE , [INTEGER](INTEGER.md)
+* [LONG](LONG.md) , _INTEGER64
 </blockquote>

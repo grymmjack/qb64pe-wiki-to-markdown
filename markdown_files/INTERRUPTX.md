@@ -129,16 +129,16 @@ br ~ h5 {
 
 ```vb
 TYPE RegTypeX
-ax AS INTEGER
-bx AS INTEGER
-cx AS INTEGER
-dx AS INTEGER
-bp AS INTEGER
-si AS INTEGER
-di AS INTEGER
-flags AS INTEGER
-ds AS INTEGER
-es AS INTEGER
+  ax AS INTEGER
+  bx AS INTEGER
+  cx AS INTEGER
+  dx AS INTEGER
+  bp AS INTEGER
+  si AS INTEGER
+  di AS INTEGER
+  flags AS INTEGER
+  ds AS INTEGER
+  es AS INTEGER
 END TYPE
 ```
   
@@ -159,7 +159,7 @@ DIM SHARED inregs AS RegTypeX, outregs AS RegTypeX
 
 
 * $INCLUDE:
-* QB.BI , [CALL](CALL.md) [ABSOLUTE](ABSOLUTE.md)
+* QB.BI , [CALL](CALL.md) ABSOLUTE
 * [INTERRUPT](INTERRUPT.md)
 * Ethan Winer's free QBasic Book and Programs: WINER.ZIP
 </blockquote>

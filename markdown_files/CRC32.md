@@ -119,7 +119,7 @@ br ~ h5 {
 <blockquote>
 
 
-* chksum~& is the [_UNSIGNED](UNSIGNED.md) [LONG](LONG.md) checksum returned (zero (0), if the given dataString$ was empty).
+* chksum~& is the _UNSIGNED [LONG](LONG.md) checksum returned ( zero(0) , if the given dataString$ was empty).
 * dataString$ is any literal or variable [STRING](STRING.md) to build the checksum from.
 </blockquote>
 
@@ -128,7 +128,7 @@ br ~ h5 {
 <blockquote>
 
 
-* The Crc-32 checksum algorithm is slower than [_ADLER32](ADLER32.md) but is usually more resistant against random collisions, it has the following known properties:
+* The Crc-32 checksum algorithm is slower than _ADLER32 but is usually more resistant against random collisions, it has the following known properties:
 * All single bit flips will be detected.
 * All double bit flips will be detected.
 * All 32-bit bursts of errors will be detected.
@@ -161,10 +161,10 @@ END
 
 ```vb
 Correct Text: QB64 Phoenix Edition
-Crc-32 Sum: 691EE005
+ Crc-32 Sum: 691EE005
 
 Mangled Text: QB65 Phoenix Edition
-Crc-32 Sum: EEB82B46
+ Crc-32 Sum: EEB82B46
 ```
   
 <br>
@@ -178,6 +178,6 @@ Crc-32 Sum: EEB82B46
 
 
 * Featured in our "Keyword of the Day" series
-* [_DEFLATE&dollar;](DEFLATE&dollar;.md) , [_INFLATE&dollar;](INFLATE&dollar;.md)
-* [_ADLER32](ADLER32.md) , [_MD5&dollar;](MD5&dollar;.md)
+* _DEFLATE$ , _INFLATE$
+* _ADLER32 , _MD5$
 </blockquote>

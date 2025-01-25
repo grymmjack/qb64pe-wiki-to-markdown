@@ -6,7 +6,7 @@
    Keyword Reference - Alphabetical - QB64 Phoenix Edition Wiki
   </title>
   <script>
-   document.documentElement.className="client-js";RLCONF={"wgBreakFrames":false,"wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgRequestId":"Zp2GaYVyUtajyJ55joe7ugAAATo","wgCSPNonce":false,"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"Keyword_Reference_-_Alphabetical","wgTitle":"Keyword Reference - Alphabetical","wgCurRevisionId":9068,"wgRevisionId":9068,"wgArticleId":2,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":[],"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgRelevantPageName":"Keyword_Reference_-_Alphabetical","wgRelevantArticleId":2,"wgIsProbablyEditable":false,"wgRelevantPageIsProbablyEditable":false,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgVector2022PreviewPages":
+   document.documentElement.className="client-js";RLCONF={"wgBreakFrames":false,"wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgRequestId":"Z5RiLwWKRwiE9zBBFH0WjQAAALM","wgCSPNonce":false,"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"Keyword_Reference_-_Alphabetical","wgTitle":"Keyword Reference - Alphabetical","wgCurRevisionId":9464,"wgRevisionId":9464,"wgArticleId":2,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":[],"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgRelevantPageName":"Keyword_Reference_-_Alphabetical","wgRelevantArticleId":2,"wgIsProbablyEditable":false,"wgRelevantPageIsProbablyEditable":false,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgVector2022PreviewPages":
 []};RLSTATE={"site.styles":"ready","user.styles":"ready","user":"ready","user.options":"loading","skins.vector.styles.legacy":"ready"};RLPAGEMODULES=["site","mediawiki.page.ready","skins.vector.legacy.js"];
   </script>
   <script>
@@ -310,13 +310,6 @@
       </center>
       <center>
        Keywords beginning with underscores are QB64 specific.
-       <b>
-        To use them without the prefix, use
-        <a href="/qb64wiki/index.php/$NOPREFIX" title="$NOPREFIX">
-         $NOPREFIX
-        </a>
-        .
-       </b>
       </center>
       <center>
        Keywords without the underscore at the beginning should work with both QB 4.5 and QB64.
@@ -359,13 +352,6 @@
        <b>
         All QB64 specific keywords must use the underscore prefix as listed below.
        </b>
-      </center>
-      <center>
-       Use
-       <a href="/qb64wiki/index.php/$NOPREFIX" title="$NOPREFIX">
-        $NOPREFIX
-       </a>
-       to enable these to be used without the leading underscore.
       </center>
       <hr/>
       <h4>
@@ -692,6 +678,19 @@
         </span>
        </li>
        <li>
+        <a href="/qb64wiki/index.php/BRIGHTNESS32" title="BRIGHTNESS32">
+         _BRIGHTNESS32
+        </a>
+        (function)
+        <span style="color:#777777;">
+         returns the brightness value (HSB colorspace) of a given 32-bit
+         <i>
+          ARGB
+         </i>
+         color.
+        </span>
+       </li>
+       <li>
         <a href="/qb64wiki/index.php/BUTTON" title="BUTTON">
          _BUTTON
         </a>
@@ -753,6 +752,15 @@
         </span>
        </li>
        <li>
+        <a href="/qb64wiki/index.php/CAST" title="CAST">
+         _CAST
+        </a>
+        (function)
+        <span style="color:#777777;">
+         performs a C-like cast of a numerical value to a specified numerical type.
+        </span>
+       </li>
+       <li>
         <a href="/qb64wiki/index.php/$CHECKING" title="$CHECKING">
          $CHECKING
         </a>
@@ -777,6 +785,15 @@
         (function)
         <span style="color:#777777;">
          Returns a key code from $CONSOLE input
+        </span>
+       </li>
+       <li>
+        <a href="/qb64wiki/index.php/CLAMP" title="CLAMP">
+         _CLAMP
+        </a>
+        (function)
+        <span style="color:#777777;">
+         Forces the given numeric value into a specific range.
         </span>
        </li>
        <li>
@@ -928,6 +945,32 @@
           $CONSOLE
          </a>
          window to be read later (both mouse and keyboard)
+        </span>
+       </li>
+       <li>
+        <a href="/qb64wiki/index.php/CONSOLECURSOR" title="CONSOLECURSOR">
+         _CONSOLECURSOR
+        </a>
+        (statement)
+        <span style="color:#777777;">
+         is used to switch the text cursor in
+         <a href="/qb64wiki/index.php/Console_Window" title="Console Window">
+          Console Windows
+         </a>
+         off/on or change its size.
+        </span>
+       </li>
+       <li>
+        <a href="/qb64wiki/index.php/CONSOLEFONT" title="CONSOLEFONT">
+         _CONSOLEFONT
+        </a>
+        (statement)
+        <span style="color:#777777;">
+         is used to change the text font used in
+         <a href="/qb64wiki/index.php/Console_Window" title="Console Window">
+          Console Windows
+         </a>
+         or change its size.
         </span>
        </li>
        <li>
@@ -1119,6 +1162,15 @@
         (metacommand)
         <span style="color:#777777;">
          enables debugging features, allowing you to step through your code line by line.
+        </span>
+       </li>
+       <li>
+        <a href="/qb64wiki/index.php/DECODEURL$" title="DECODEURL$">
+         _DECODEURL$
+        </a>
+        (function)
+        <span style="color:#777777;">
+         returns the decoded plain text URL of the given encoded URL.
         </span>
        </li>
        <li>
@@ -1439,6 +1491,15 @@
         </span>
        </li>
        <li>
+        <a href="/qb64wiki/index.php/ENCODEURL$" title="ENCODEURL$">
+         _ENCODEURL$
+        </a>
+        (function)
+        <span style="color:#777777;">
+         returns the so called percent encoded representation of the given URL.
+        </span>
+       </li>
+       <li>
         <a href="/qb64wiki/index.php/ENVIRONCOUNT" title="ENVIRONCOUNT">
          _ENVIRONCOUNT
         </a>
@@ -1754,6 +1815,45 @@
         </span>
        </li>
        <li>
+        <a href="/qb64wiki/index.php/HSB32" title="HSB32">
+         _HSB32
+        </a>
+        (function)
+        <span style="color:#777777;">
+         returns the 32-bit
+         <i>
+          ARGB
+         </i>
+         color value equivalent to the specified HSB colorspace values.
+        </span>
+       </li>
+       <li>
+        <a href="/qb64wiki/index.php/HSBA32" title="HSBA32">
+         _HSBA32
+        </a>
+        (function)
+        <span style="color:#777777;">
+         returns the 32-bit
+         <i>
+          ARGB
+         </i>
+         color value equivalent to the specified HSB colorspace values + alpha channel.
+        </span>
+       </li>
+       <li>
+        <a href="/qb64wiki/index.php/HUE32" title="HUE32">
+         _HUE32
+        </a>
+        (function)
+        <span style="color:#777777;">
+         returns the hue value (HSB colorspace) of a given 32-bit
+         <i>
+          ARGB
+         </i>
+         color.
+        </span>
+       </li>
+       <li>
         <a href="/qb64wiki/index.php/HYPOT" title="HYPOT">
          _HYPOT
         </a>
@@ -1810,10 +1910,19 @@
         </span>
        </li>
        <li>
+        <a href="/qb64wiki/index.php/IIF" title="IIF">
+         _IIF
+        </a>
+        (function)
+        <span style="color:#777777;">
+         provides conditional evaluations similar to a ternary operator, with short-circuiting behavior.
+        </span>
+       </li>
+       <li>
         <a href="/qb64wiki/index.php/INCLERRORFILE$" title="INCLERRORFILE$">
          _INCLERRORFILE$
         </a>
-        {function)
+        (function)
         <span style="color:#777777;">
          returns the name of the original source code $INCLUDE module that caused the most recent error.
         </span>
@@ -1851,7 +1960,7 @@
         </a>
         (function)
         <span style="color:#777777;">
-         Displays a prompt in a dialog box, waits for the user to input text or click a button, and returns a string containing the contents of the text box.
+         displays a prompt in a dialog box, waits for the user to input text or click a button, and returns a string containing the contents of the text box.
         </span>
        </li>
        <li>
@@ -2024,6 +2133,51 @@
          designates an image file to load and returns a handle value.
         </span>
        </li>
+       <li>
+        <a href="/qb64wiki/index.php/LOGERROR" title="LOGERROR">
+         _LOGERROR
+        </a>
+        (statement)
+        <span style="color:#777777;">
+         writes a log message at the Error level with an accompanying stacktrace.
+        </span>
+       </li>
+       <li>
+        <a href="/qb64wiki/index.php/LOGINFO" title="LOGINFO">
+         _LOGINFO
+        </a>
+        (statement)
+        <span style="color:#777777;">
+         writes a log message at the Information level.
+        </span>
+       </li>
+       <li>
+        <a href="/qb64wiki/index.php/LOGMINLEVEL" title="LOGMINLEVEL">
+         _LOGMINLEVEL
+        </a>
+        (function)
+        <span style="color:#777777;">
+         returns the current minimum logging level that is being output.
+        </span>
+       </li>
+       <li>
+        <a href="/qb64wiki/index.php/LOGTRACE" title="LOGTRACE">
+         _LOGTRACE
+        </a>
+        (statement)
+        <span style="color:#777777;">
+         writes a log message at the Trace level.
+        </span>
+       </li>
+       <li>
+        <a href="/qb64wiki/index.php/LOGWARN" title="LOGWARN">
+         _LOGWARN
+        </a>
+        (statement)
+        <span style="color:#777777;">
+         writes a log message at the Warning level.
+        </span>
+       </li>
       </ul>
       <center>
        (
@@ -2081,6 +2235,15 @@
           ASCII
          </a>
          character code.
+        </span>
+       </li>
+       <li>
+        <a href="/qb64wiki/index.php/MAX" title="MAX">
+         _MAX
+        </a>
+        (function)
+        <span style="color:#777777;">
+         Returns the greater of two given numeric values.
         </span>
        </li>
        <li>
@@ -2277,13 +2440,26 @@
         <a href="/qb64wiki/index.php/$MIDISOUNDFONT" title="$MIDISOUNDFONT">
          $MIDISOUNDFONT
         </a>
-        (metacommand)
+        (metacommand) (
+        <span style="color:red;">
+         deprecated
+        </span>
+        )
         <span style="color:#777777;">
          enables the MIDI support for
          <a href="/qb64wiki/index.php/SNDOPEN" title="SNDOPEN">
           _SNDOPEN
          </a>
          .
+        </span>
+       </li>
+       <li>
+        <a href="/qb64wiki/index.php/MIN" title="MIN">
+         _MIN
+        </a>
+        (function)
+        <span style="color:#777777;">
+         Returns the lesser of two given numeric values.
         </span>
        </li>
        <li>
@@ -2309,6 +2485,15 @@
         (function)
         <span style="color:#777777;">
          returns the status of a designated mouse button.
+        </span>
+       </li>
+       <li>
+        <a href="/qb64wiki/index.php/MOUSEHIDDEN" title="MOUSEHIDDEN">
+         _MOUSEHIDDEN
+        </a>
+        (function)
+        <span style="color:#777777;">
+         returns the current state of the mouse pointer.
         </span>
        </li>
        <li>
@@ -2443,7 +2628,11 @@
         <a href="/qb64wiki/index.php/$NOPREFIX" title="$NOPREFIX">
          $NOPREFIX
         </a>
-        (metacommand)
+        (metacommand) (
+        <span style="color:red;">
+         deprecated
+        </span>
+        )
         <span style="color:#777777;">
          allows QB64-specific keywords to be used without the underscore prefix.
         </span>
@@ -3005,6 +3194,19 @@
       </h4>
       <ul>
        <li>
+        <a href="/qb64wiki/index.php/SATURATION32" title="SATURATION32">
+         _SATURATION32
+        </a>
+        (function)
+        <span style="color:#777777;">
+         returns the saturation value (HSB colorspace) of a given 32-bit
+         <i>
+          ARGB
+         </i>
+         color.
+        </span>
+       </li>
+       <li>
         <a href="/qb64wiki/index.php/SAVEFILEDIALOG$" title="SAVEFILEDIALOG$">
          _SAVEFILEDIALOG$
         </a>
@@ -3447,7 +3649,20 @@
         </a>
         (statement)
         <span style="color:#777777;">
-         creates mono or stereo sounds from calculated wave frequency values.
+         plays a mono or stereo sound sample frame.
+        </span>
+       </li>
+       <li>
+        <a href="/qb64wiki/index.php/SNDRAWBATCH" title="SNDRAWBATCH">
+         _SNDRAWBATCH
+        </a>
+        (statement)
+        <span style="color:#777777;">
+         plays a batch of mono or stereo sound sample frames from an
+         <a href="/qb64wiki/index.php/Arrays" title="Arrays">
+          array
+         </a>
+         .
         </span>
        </li>
        <li>
@@ -3626,6 +3841,23 @@
         </span>
        </li>
        <li>
+        <a href="/qb64wiki/index.php/TOSTR$" title="TOSTR$">
+         _TOSTR$
+        </a>
+        (function)
+        <span style="color:#777777;">
+         Returns the
+         <a href="/qb64wiki/index.php/STRING" title="STRING">
+          STRING
+         </a>
+         representation of a numerical value. It's a successor of the legacy
+         <a href="/qb64wiki/index.php/STR$" title="STR$">
+          STR$
+         </a>
+         function.
+        </span>
+       </li>
+       <li>
         <a href="/qb64wiki/index.php/TOTALDROPPEDFILES" title="TOTALDROPPEDFILES">
          _TOTALDROPPEDFILES
         </a>
@@ -3781,19 +4013,6 @@
          adds metadata to Windows only binaries for identification purposes across the OS.
         </span>
        </li>
-       <li>
-        <a href="/qb64wiki/index.php/$VIRTUALKEYBOARD" title="$VIRTUALKEYBOARD">
-         $VIRTUALKEYBOARD
-        </a>
-        (metacommand) (
-        <span style="color:red;">
-         deprecated
-        </span>
-        )
-        <span style="color:#777777;">
-         turns the virtual keyboard ON or OFF for use in touch-enabled devices.
-        </span>
-       </li>
       </ul>
       <center>
        (
@@ -3811,6 +4030,23 @@
        </span>
       </h4>
       <ul>
+       <li>
+        <a href="/qb64wiki/index.php/WAVE" title="WAVE">
+         _WAVE
+        </a>
+        (statement)
+        <span style="color:#777777;">
+         defines the waveform shape for a specified audio channel when used with
+         <a href="/qb64wiki/index.php/SOUND" title="SOUND">
+          SOUND
+         </a>
+         or
+         <a href="/qb64wiki/index.php/PLAY" title="PLAY">
+          PLAY
+         </a>
+         .
+        </span>
+       </li>
        <li>
         <a href="/qb64wiki/index.php/WHEEL" title="WHEEL">
          _WHEEL
@@ -7309,13 +7545,6 @@
        <b>
         All QB64 OpenGL keywords must use the underscore prefix as listed below.
        </b>
-      </center>
-      <center>
-       Use
-       <a href="/qb64wiki/index.php/$NOPREFIX" title="$NOPREFIX">
-        $NOPREFIX
-       </a>
-       to enable these to be used without the leading underscore.
       </center>
       <ul>
        <li>
@@ -11379,27 +11608,17 @@
         Pete's QBasic Downloads
        </a>
       </center>
-      <p>
-       <br/>
-      </p>
-      <center>
-       (
-       <a href="#toc">
-        Return to Table of Contents
-       </a>
-       )
-      </center>
       <!-- 
 NewPP limit report
-Cached time: 20240721213439
+Cached time: 20250124043935
 Cache expiry: 86400
 Reduced expiry: false
 Complications: []
-CPU time usage: 0.418 seconds
-Real time usage: 0.433 seconds
-Preprocessor visited node count: 8362/1000000
-Post‐expand include size: 84233/2097152 bytes
-Template argument size: 52524/2097152 bytes
+CPU time usage: 0.409 seconds
+Real time usage: 0.422 seconds
+Preprocessor visited node count: 8486/1000000
+Post‐expand include size: 87621/2097152 bytes
+Template argument size: 54066/2097152 bytes
 Highest expansion depth: 3/100
 Expensive parser function count: 0/100
 Unstrip recursion depth: 0/20
@@ -11407,16 +11626,17 @@ Unstrip post‐expand size: 0/5000000 bytes
 -->
       <!--
 Transclusion expansion time report (%,ms,calls,template)
-100.00%   79.273      1 -total
- 47.12%   37.357    881 Template:Text
+100.00%   80.882      1 -total
+ 46.71%   37.780    904 Template:Text
+  2.90%    2.347      1 Template:PageReferences
 -->
-      <!-- Saved in parser cache with key qb64pnix_mw19894-mwmb_:pcache:idhash:2-0!canonical and timestamp 20240721213438 and revision id 9068.
+      <!-- Saved in parser cache with key qb64pnix_mw19894-mwmb_:pcache:idhash:2-0!canonical and timestamp 20250124043935 and revision id 9464.
  -->
      </div>
      <div class="printfooter" data-nosnippet="">
       Retrieved from "
-      <a dir="ltr" href="https://qb64phoenix.com/qb64wiki/index.php?title=Keyword_Reference_-_Alphabetical&amp;oldid=9068">
-       https://qb64phoenix.com/qb64wiki/index.php?title=Keyword_Reference_-_Alphabetical&amp;oldid=9068
+      <a dir="ltr" href="https://qb64phoenix.com/qb64wiki/index.php?title=Keyword_Reference_-_Alphabetical&amp;oldid=9464">
+       https://qb64phoenix.com/qb64wiki/index.php?title=Keyword_Reference_-_Alphabetical&amp;oldid=9464
       </a>
       "
      </div>
@@ -11633,7 +11853,7 @@ You can view its source [e]">
         </a>
        </li>
        <li class="mw-list-item" id="t-permalink">
-        <a href="/qb64wiki/index.php?title=Keyword_Reference_-_Alphabetical&amp;oldid=9068" title="Permanent link to this revision of this page">
+        <a href="/qb64wiki/index.php?title=Keyword_Reference_-_Alphabetical&amp;oldid=9464" title="Permanent link to this revision of this page">
          <span>
           Permanent link
          </span>
@@ -11654,7 +11874,7 @@ You can view its source [e]">
   <footer class="mw-footer" id="footer" role="contentinfo">
    <ul id="footer-info">
     <li id="footer-info-lastmod">
-     This page was last edited on 21 July 2024, at 21:34.
+     This page was last edited on 8 December 2024, at 20:21.
     </li>
    </ul>
    <ul id="footer-places">
@@ -11683,7 +11903,7 @@ You can view its source [e]">
    </ul>
   </footer>
   <script>
-   (RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgPageParseReport":{"limitreport":{"cputime":"0.418","walltime":"0.433","ppvisitednodes":{"value":8362,"limit":1000000},"postexpandincludesize":{"value":84233,"limit":2097152},"templateargumentsize":{"value":52524,"limit":2097152},"expansiondepth":{"value":3,"limit":100},"expensivefunctioncount":{"value":0,"limit":100},"unstrip-depth":{"value":0,"limit":20},"unstrip-size":{"value":0,"limit":5000000},"timingprofile":["100.00%   79.273      1 -total"," 47.12%   37.357    881 Template:Text"]},"cachereport":{"timestamp":"20240721213439","ttl":86400,"transientcontent":false}}});mw.config.set({"wgBackendResponseTime":134});});
+   (RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgPageParseReport":{"limitreport":{"cputime":"0.409","walltime":"0.422","ppvisitednodes":{"value":8486,"limit":1000000},"postexpandincludesize":{"value":87621,"limit":2097152},"templateargumentsize":{"value":54066,"limit":2097152},"expansiondepth":{"value":3,"limit":100},"expensivefunctioncount":{"value":0,"limit":100},"unstrip-depth":{"value":0,"limit":20},"unstrip-size":{"value":0,"limit":5000000},"timingprofile":["100.00%   80.882      1 -total"," 46.71%   37.780    904 Template:Text","  2.90%    2.347      1 Template:PageReferences"]},"cachereport":{"timestamp":"20250124043935","ttl":86400,"transientcontent":false}}});mw.config.set({"wgBackendResponseTime":94});});
   </script>
  </body>
 </html>

@@ -121,7 +121,7 @@ br ~ h5 {
 
 * Returns -1 when scrolling up and 1 when scrolling down with 0 indicating no movement since last read.
 * After an event has been read, the value resets to 0 automatically so cumulative position values must be added.
-* If no movement on the wheel has occurred since the last [_MOUSEINPUT](MOUSEINPUT.md) read, [_MOUSEWHEEL](MOUSEWHEEL.md) returns 0.
+* If no movement on the wheel has occurred since the last _MOUSEINPUT read, _MOUSEWHEEL returns 0.
 
 </blockquote>
 
@@ -131,11 +131,11 @@ br ~ h5 {
 
 ```vb
 DO
-_LIMIT 50
-DO WHILE _MOUSEINPUT
-Scroll = Scroll + _MOUSEWHEEL
-LOCATE 10, 20: PRINT Scroll
-LOOP
+   _LIMIT 50
+   DO WHILE _MOUSEINPUT
+       Scroll = Scroll + _MOUSEWHEEL
+       LOCATE 10, 20: PRINT Scroll
+   LOOP
 LOOP UNTIL INKEY$ = CHR$(13) ' press Enter to quit
 ```
   
@@ -146,26 +146,26 @@ DIM Array$(100)
 LINE INPUT "Enter a file name with 100 or more lines of text: ", file$
 OPEN file$ FOR INPUT AS #1
 DO UNTIL EOF(1)
-inputcount = inputcount + 1
-LINE INPUT #1, Array$(inputcount)
-IF inputcount = 100 THEN EXIT DO
+   inputcount = inputcount + 1
+   LINE INPUT #1, Array$(inputcount)
+   IF inputcount = 100 THEN EXIT DO
 LOOP
 FOR n = 1 TO 21: PRINT Array$(n): NEXT
 CLOSE #1
 DO
-DO WHILE _MOUSEINPUT
-IF row >= 0 THEN row = row + _MOUSEWHEEL ELSE row = 0 'prevent under scrolling
-IF row > inputcount - 20 THEN row = inputcount - 20 'prevent over scrolling
-IF prevrow <> row THEN 'look for a change in row value
-IF row > 0 AND row <= inputcount - 20 THEN
-CLS: LOCATE 2, 1
-FOR n = row TO row + 20
-PRINT Array$(n)
-NEXT
-END IF
-END IF
-prevrow = row 'store previous row value
-LOOP
+   DO WHILE _MOUSEINPUT
+       IF row >= 0 THEN row = row + _MOUSEWHEEL ELSE row = 0 'prevent under scrolling
+       IF row > inputcount - 20 THEN row = inputcount - 20 'prevent over scrolling
+       IF prevrow <> row THEN 'look for a change in row value
+           IF row > 0 AND row <= inputcount - 20 THEN
+               CLS: LOCATE 2, 1
+               FOR n = row TO row + 20
+                   PRINT Array$(n)
+               NEXT
+           END IF
+       END IF
+       prevrow = row 'store previous row value
+   LOOP
 LOOP UNTIL INKEY$ > ""
 ```
   
@@ -180,8 +180,8 @@ LOOP UNTIL INKEY$ > ""
 
 
 * Featured in our "Keyword of the Day" series
-* [_MOUSEX](MOUSEX.md) , [_MOUSEY](MOUSEY.md) , [_MOUSEBUTTON](MOUSEBUTTON.md)
-* [_MOUSEINPUT](MOUSEINPUT.md) , [_MOUSEMOVE](MOUSEMOVE.md)
-* [_MOUSESHOW](MOUSESHOW.md) , [_MOUSEHIDE](MOUSEHIDE.md)
+* _MOUSEX , _MOUSEY , _MOUSEBUTTON
+* _MOUSEINPUT , _MOUSEMOVE
+* _MOUSESHOW , _MOUSEHIDE
 * Controller Devices
 </blockquote>

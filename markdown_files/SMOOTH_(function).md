@@ -119,8 +119,8 @@ br ~ h5 {
 <blockquote>
 
 
-* Use in conjunction with the [_FULLSCREEN](FULLSCREEN.md) function to determine the current full screen mode being used.
-* Use [_ALLOWFULLSCREEN](ALLOWFULLSCREEN.md) to limit which fullscreen modes are allowed with the key combo ALT+ENTER.
+* Use in conjunction with the _FULLSCREEN function to determine the current full screen mode being used.
+* Use _ALLOWFULLSCREEN to limit which fullscreen modes are allowed with the key combo ALT+ENTER.
 
 </blockquote>
 
@@ -136,6 +136,6 @@ br ~ h5 {
 <blockquote>
 
 
-* [_FULLSCREEN](FULLSCREEN.md) , [_FULLSCREEN](FULLSCREEN.md) (function)
-* [_ALLOWFULLSCREEN](ALLOWFULLSCREEN.md)
+* _FULLSCREEN , _FULLSCREEN (function)
+* _ALLOWFULLSCREEN
 </blockquote>

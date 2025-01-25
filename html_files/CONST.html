@@ -6,7 +6,7 @@
    CONST - QB64 Phoenix Edition Wiki
   </title>
   <script>
-   document.documentElement.className="client-js";RLCONF={"wgBreakFrames":false,"wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgRequestId":"Zp2FHF7aJfTIJkquv4AsTAAAAb4","wgCSPNonce":false,"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"CONST","wgTitle":"CONST","wgCurRevisionId":7244,"wgRevisionId":7244,"wgArticleId":419,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":[],"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgRelevantPageName":"CONST","wgRelevantArticleId":419,"wgIsProbablyEditable":false,"wgRelevantPageIsProbablyEditable":false,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgVector2022PreviewPages":[]};RLSTATE={"site.styles":"ready","user.styles":"ready","user":"ready",
+   document.documentElement.className="client-js";RLCONF={"wgBreakFrames":false,"wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgRequestId":"Z5RhcAWKRwiE9zBBFH3_mwAAAQI","wgCSPNonce":false,"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"CONST","wgTitle":"CONST","wgCurRevisionId":9449,"wgRevisionId":9449,"wgArticleId":419,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":[],"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgRelevantPageName":"CONST","wgRelevantArticleId":419,"wgIsProbablyEditable":false,"wgRelevantPageIsProbablyEditable":false,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgVector2022PreviewPages":[]};RLSTATE={"site.styles":"ready","user.styles":"ready","user":"ready",
 "user.options":"loading","skins.vector.styles.legacy":"ready"};RLPAGEMODULES=["site","mediawiki.page.ready","mediawiki.toc","skins.vector.legacy.js"];
   </script>
   <script>
@@ -62,9 +62,9 @@
      <div class="mw-parser-output">
       <p>
        The
-       <a class="mw-selflink selflink">
+       <b>
         CONST
-       </a>
+       </b>
        statement globally defines one or more named numeric or string values which will not change while the program is running.
       </p>
       <p>
@@ -229,32 +229,23 @@
         .
        </li>
        <li>
-        Constant values cannot reference a variable,
-        <a href="/qb64wiki/index.php/SUB" title="SUB">
-         SUB
-        </a>
-        or
+        Constant values cannot reference a variable or user
         <a href="/qb64wiki/index.php/FUNCTION" title="FUNCTION">
          FUNCTION
         </a>
-        return values when defined.
-        <ul>
-         <li>
-          The exception to the above are color functions
-          <a href="/qb64wiki/index.php/RGB32" title="RGB32">
-           _RGB32
-          </a>
-          and
-          <a href="/qb64wiki/index.php/RGBA32" title="RGBA32">
-           _RGBA32
-          </a>
-          , which can be used in a CONST statement. See
-          <i>
-           Example 2
-          </i>
-          below.
-         </li>
-        </ul>
+        return value when defined. However, other (already known) constants and most of the internal char, math or color functions can be used, such as
+        <a href="/qb64wiki/index.php/CHR$" title="CHR$">
+         CHR$
+        </a>
+        ,
+        <a href="/qb64wiki/index.php/EXP" title="EXP">
+         EXP
+        </a>
+        or
+        <a href="/qb64wiki/index.php/RGBA32" title="RGBA32">
+         _RGBA32
+        </a>
+        .
        </li>
        <li>
         Constants cannot be reassigned values. They retain the same value throughout all of the program procedures.
@@ -291,6 +282,17 @@
         </a>
         will not affect or change constant values.
        </li>
+       <li>
+        Since
+        <b>
+         QB64-PE v4.0.0
+        </b>
+        a huge list of preset
+        <a href="/qb64wiki/index.php/Constants" title="Constants">
+         Constants
+        </a>
+        is available in every program.
+       </li>
       </ul>
       <p>
        <br/>
@@ -300,31 +302,34 @@
         Examples
        </span>
       </h2>
-      <p>
-       <i>
-        Example 1:
-       </i>
-       Display the circumference and area of circles:
-      </p>
+      <dl>
+       <dt>
+        Example 1
+       </dt>
+       <dd>
+        Display the circumference and the area of circles:
+       </dd>
+      </dl>
       <table cellpadding="15px" width="100%">
        <tbody>
         <tr>
          <td>
-          <pre class="codeide">' Declare a numeric constant approximately equal to the ratio of a circle's
-' circumference to its diameter:
-<a class="mw-selflink selflink"><span style="color:#4593D8;">CONST</span></a> PI = 3.141593
+          <pre class="codeide"><span style="color:#919191;">' Declare a numeric constant approximately equal to the ratio of a circle's</span>
+<span style="color:#919191;">' circumference to its diameter:</span>
+<a class="mw-selflink selflink"><span style="color:#4593D8;">CONST</span></a> PI = <span style="color:#F580B1;">3.141593</span>
 
-' Declare some string constants:
-<a class="mw-selflink selflink"><span style="color:#4593D8;">CONST</span></a> circumferenceText = "The circumference of the circle is"
-<a class="mw-selflink selflink"><span style="color:#4593D8;">CONST</span></a> areaText = "The area of the circle is"
+<span style="color:#919191;">' Declare some string constants:</span>
+<a class="mw-selflink selflink"><span style="color:#4593D8;">CONST</span></a> circumferenceText = <span style="color:#FFB100;">"The circumference of the circle is"</span>
+<a class="mw-selflink selflink"><span style="color:#4593D8;">CONST</span></a> areaText = <span style="color:#FFB100;">"The area of the circle is"</span>
 
-<a href="/qb64wiki/index.php/DO...LOOP" title="DO...LOOP"><span style="color:#4593D8;">DO</span></a>
-    <a href="/qb64wiki/index.php/INPUT" title="INPUT"><span style="color:#4593D8;">INPUT</span></a> "Enter the radius of a circle or zero to quit"; radius
-    <a href="/qb64wiki/index.php/IF...THEN" title="IF...THEN"><span style="color:#4593D8;">IF</span></a> radius = 0 <a href="/qb64wiki/index.php/IF...THEN" title="IF...THEN"><span style="color:#4593D8;">THEN</span></a> <a href="/qb64wiki/index.php/END" title="END"><span style="color:#4593D8;">END</span></a>
-    <a href="/qb64wiki/index.php/PRINT" title="PRINT"><span style="color:#4593D8;">PRINT</span></a> circumferenceText; 2 * PI * radius
-    <a href="/qb64wiki/index.php/PRINT" title="PRINT"><span style="color:#4593D8;">PRINT</span></a> areaText; PI * radius * radius ' radius squared
+<a class="mw-redirect" href="/qb64wiki/index.php/DO" title="DO"><span style="color:#4593D8;">DO</span></a>
+    <a href="/qb64wiki/index.php/INPUT" title="INPUT"><span style="color:#4593D8;">INPUT</span></a> <span style="color:#FFB100;">"Enter the radius of a circle or zero to quit"</span>; radius
+    <a class="mw-redirect" href="/qb64wiki/index.php/IF" title="IF"><span style="color:#4593D8;">IF</span></a> radius = <span style="color:#F580B1;">0</span> <a href="/qb64wiki/index.php/THEN" title="THEN"><span style="color:#4593D8;">THEN</span></a> <a href="/qb64wiki/index.php/END" title="END"><span style="color:#4593D8;">END</span></a>
+    <a href="/qb64wiki/index.php/PRINT" title="PRINT"><span style="color:#4593D8;">PRINT</span></a> circumferenceText; <span style="color:#F580B1;">2</span> * PI * radius
+    <a href="/qb64wiki/index.php/PRINT" title="PRINT"><span style="color:#4593D8;">PRINT</span></a> areaText; PI * radius * radius <span style="color:#919191;">' radius squared</span>
     <a href="/qb64wiki/index.php/PRINT" title="PRINT"><span style="color:#4593D8;">PRINT</span></a>
-<a href="/qb64wiki/index.php/DO...LOOP" title="DO...LOOP"><span style="color:#4593D8;">LOOP</span></a>
+<a href="/qb64wiki/index.php/LOOP" title="LOOP"><span style="color:#4593D8;">LOOP</span></a>
+<a href="/qb64wiki/index.php/END" title="END"><span style="color:#4593D8;">END</span></a>
 </pre>
          </td>
         </tr>
@@ -340,7 +345,7 @@ The area of the circle is 314.1593
 
 Enter the radius of a circle or zero to quit? <i>123.456</i>
 The circumference of the circle is 775.697
-The area of the circle is 47882.23
+The area of the circle is 47882.226
 
 Enter the radius of a circle or zero to quit? <i>0</i>
 </pre>
@@ -348,29 +353,50 @@ Enter the radius of a circle or zero to quit? <i>0</i>
         </tr>
        </tbody>
       </table>
-      <dl>
-       <dd>
-        <i>
-         Explanation:
-        </i>
-        PI cannot change as it is a mathematical constant so it is fitting to define it as a constant. Trying to change PI will result in a calculation error.
-       </dd>
-      </dl>
-      <p>
-       <br/>
-       <i>
-        Example 2
-       </i>
-       : Using _RGB32 to set a constant's value.
-      </p>
       <table cellpadding="15px" width="100%">
        <tbody>
         <tr>
          <td>
-          <pre class="codeide"><a class="mw-selflink selflink"><span style="color:#4593D8;">CONST</span></a> Red = _RGB32(255,0,0)
+          <pre class="outputplain"><b>Explanation</b>
+ PI cannot change as it is a mathematical constant so it is fitting
+ to define it as a constant. Trying to change PI will result in a
+ calculation error.
+</pre>
+         </td>
+        </tr>
+       </tbody>
+      </table>
+      <hr/>
+      <dl>
+       <dt>
+        Example 2
+       </dt>
+       <dd>
+        Using _RGB32 to set a constant's value.
+       </dd>
+      </dl>
+      <table cellpadding="15px" width="100%">
+       <tbody>
+        <tr>
+         <td>
+          <pre class="codeide"><a href="/qb64wiki/index.php/SCREEN" title="SCREEN"><span style="color:#4593D8;">SCREEN</span></a> <a href="/qb64wiki/index.php/NEWIMAGE" title="NEWIMAGE"><span style="color:#4593D8;">_NEWIMAGE</span></a>(<span style="color:#F580B1;">640</span>, <span style="color:#F580B1;">400</span>, <span style="color:#F580B1;">32</span>)
+
+<a class="mw-selflink selflink"><span style="color:#4593D8;">CONST</span></a> Red = <a href="/qb64wiki/index.php/RGB32" title="RGB32"><span style="color:#4593D8;">_RGB32</span></a>(<span style="color:#F580B1;">255</span>, <span style="color:#F580B1;">0</span>, <span style="color:#F580B1;">0</span>)
 
 <a href="/qb64wiki/index.php/COLOR" title="COLOR"><span style="color:#4593D8;">COLOR</span></a> Red
-<a href="/qb64wiki/index.php/PRINT" title="PRINT"><span style="color:#4593D8;">PRINT</span></a> "Hello World"
+<a href="/qb64wiki/index.php/PRINT" title="PRINT"><span style="color:#4593D8;">PRINT</span></a> <span style="color:#FFB100;">"Hello World"</span>
+
+<a href="/qb64wiki/index.php/END" title="END"><span style="color:#4593D8;">END</span></a>
+</pre>
+         </td>
+        </tr>
+       </tbody>
+      </table>
+      <table cellpadding="15px" width="100%">
+       <tbody>
+        <tr>
+         <td>
+          <pre class="outputcrt0"><span style="background-color: #000000; color:red;">Hello World</span>
 </pre>
          </td>
         </tr>
@@ -404,17 +430,10 @@ Enter the radius of a circle or zero to quit? <i>0</i>
         </a>
        </li>
        <li>
-        <a href="/qb64wiki/index.php/PI" title="PI">
-         _PI
+        <a href="/qb64wiki/index.php/Constants" title="Constants">
+         Constants
         </a>
-        ,
-        <a href="/qb64wiki/index.php/RGB32" title="RGB32">
-         _RGB32
-        </a>
-        ,
-        <a href="/qb64wiki/index.php/RGBA32" title="RGBA32">
-         _RGBA32
-        </a>
+        (Defined by the Compiler)
        </li>
        <li>
         <a class="external text" href="http://doc.pcsoft.fr/en-US/?6510001" rel="nofollow">
@@ -456,40 +475,40 @@ Enter the radius of a circle or zero to quit? <i>0</i>
       </center>
       <!-- 
 NewPP limit report
-Cached time: 20240721211958
+Cached time: 20250125035840
 Cache expiry: 86400
 Reduced expiry: false
 Complications: [show‐toc]
-CPU time usage: 0.025 seconds
-Real time usage: 0.032 seconds
-Preprocessor visited node count: 176/1000000
-Post‐expand include size: 1722/2097152 bytes
-Template argument size: 239/2097152 bytes
-Highest expansion depth: 3/100
+CPU time usage: 0.044 seconds
+Real time usage: 0.068 seconds
+Preprocessor visited node count: 370/1000000
+Post‐expand include size: 3077/2097152 bytes
+Template argument size: 697/2097152 bytes
+Highest expansion depth: 4/100
 Expensive parser function count: 0/100
 Unstrip recursion depth: 0/20
-Unstrip post‐expand size: 0/5000000 bytes
+Unstrip post‐expand size: 277/5000000 bytes
 -->
       <!--
 Transclusion expansion time report (%,ms,calls,template)
-100.00%   20.654      1 -total
-  9.64%    1.990     15 Template:Cl
-  8.49%    1.754     10 Template:Parameter
-  8.41%    1.737      1 Template:PageSyntax
-  7.87%    1.625      1 Template:PageSeeAlso
-  7.68%    1.587      1 Template:PageParameters
-  7.30%    1.507      1 Template:PageDescription
-  7.11%    1.468      2 Template:CodeEnd
-  7.03%    1.451      1 Template:OutputEnd
-  6.99%    1.444      1 Template:OutputStart
+100.00%   39.610      1 -total
+  9.39%    3.719     20 Template:Cl
+  7.46%    2.957     17 Template:Text
+  6.61%    2.618      1 Template:Ot
+  5.91%    2.340      2 Template:OutputStart
+  5.82%    2.307      2 Template:OutputEnd
+  5.76%    2.283      1 Template:PageSyntax
+  5.70%    2.257      2 Template:CodeEnd
+  5.49%    2.174      1 Template:PageSeeAlso
+  5.47%    2.168      1 Template:PreStart
 -->
-      <!-- Saved in parser cache with key qb64pnix_mw19894-mwmb_:pcache:idhash:419-0!canonical and timestamp 20240721211958 and revision id 7244.
+      <!-- Saved in parser cache with key qb64pnix_mw19894-mwmb_:pcache:idhash:419-0!canonical and timestamp 20250125035840 and revision id 9449.
  -->
      </div>
      <div class="printfooter" data-nosnippet="">
       Retrieved from "
-      <a dir="ltr" href="https://qb64phoenix.com/qb64wiki/index.php?title=CONST&amp;oldid=7244">
-       https://qb64phoenix.com/qb64wiki/index.php?title=CONST&amp;oldid=7244
+      <a dir="ltr" href="https://qb64phoenix.com/qb64wiki/index.php?title=CONST&amp;oldid=9449">
+       https://qb64phoenix.com/qb64wiki/index.php?title=CONST&amp;oldid=9449
       </a>
       "
      </div>
@@ -706,7 +725,7 @@ You can view its source [e]">
         </a>
        </li>
        <li class="mw-list-item" id="t-permalink">
-        <a href="/qb64wiki/index.php?title=CONST&amp;oldid=7244" title="Permanent link to this revision of this page">
+        <a href="/qb64wiki/index.php?title=CONST&amp;oldid=9449" title="Permanent link to this revision of this page">
          <span>
           Permanent link
          </span>
@@ -727,7 +746,7 @@ You can view its source [e]">
   <footer class="mw-footer" id="footer" role="contentinfo">
    <ul id="footer-info">
     <li id="footer-info-lastmod">
-     This page was last edited on 29 January 2023, at 00:24.
+     This page was last edited on 8 December 2024, at 14:49.
     </li>
    </ul>
    <ul id="footer-places">
@@ -756,7 +775,7 @@ You can view its source [e]">
    </ul>
   </footer>
   <script>
-   (RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgPageParseReport":{"limitreport":{"cputime":"0.025","walltime":"0.032","ppvisitednodes":{"value":176,"limit":1000000},"postexpandincludesize":{"value":1722,"limit":2097152},"templateargumentsize":{"value":239,"limit":2097152},"expansiondepth":{"value":3,"limit":100},"expensivefunctioncount":{"value":0,"limit":100},"unstrip-depth":{"value":0,"limit":20},"unstrip-size":{"value":0,"limit":5000000},"timingprofile":["100.00%   20.654      1 -total","  9.64%    1.990     15 Template:Cl","  8.49%    1.754     10 Template:Parameter","  8.41%    1.737      1 Template:PageSyntax","  7.87%    1.625      1 Template:PageSeeAlso","  7.68%    1.587      1 Template:PageParameters","  7.30%    1.507      1 Template:PageDescription","  7.11%    1.468      2 Template:CodeEnd","  7.03%    1.451      1 Template:OutputEnd","  6.99%    1.444      1 Template:OutputStart"]},"cachereport":{"timestamp":"20240721211958","ttl":86400,"transientcontent":false}}});mw.config.set({"wgBackendResponseTime":104});});
+   (RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgPageParseReport":{"limitreport":{"cputime":"0.044","walltime":"0.068","ppvisitednodes":{"value":370,"limit":1000000},"postexpandincludesize":{"value":3077,"limit":2097152},"templateargumentsize":{"value":697,"limit":2097152},"expansiondepth":{"value":4,"limit":100},"expensivefunctioncount":{"value":0,"limit":100},"unstrip-depth":{"value":0,"limit":20},"unstrip-size":{"value":277,"limit":5000000},"timingprofile":["100.00%   39.610      1 -total","  9.39%    3.719     20 Template:Cl","  7.46%    2.957     17 Template:Text","  6.61%    2.618      1 Template:Ot","  5.91%    2.340      2 Template:OutputStart","  5.82%    2.307      2 Template:OutputEnd","  5.76%    2.283      1 Template:PageSyntax","  5.70%    2.257      2 Template:CodeEnd","  5.49%    2.174      1 Template:PageSeeAlso","  5.47%    2.168      1 Template:PreStart"]},"cachereport":{"timestamp":"20250125035840","ttl":86400,"transientcontent":false}}});mw.config.set({"wgBackendResponseTime":169});});
   </script>
  </body>
 </html>

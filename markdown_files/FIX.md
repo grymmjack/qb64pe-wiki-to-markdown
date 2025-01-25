@@ -166,7 +166,7 @@ PRINT MATHROUND(4.5)
 PRINT MATHROUND(5.5)
 
 FUNCTION MATHROUND(n)
-MATHROUND = FIX(n + 0.5 * SGN(n))
+   MATHROUND = FIX(n + 0.5 * SGN(n))
 END FUNCTION
 ```
   
@@ -191,9 +191,9 @@ END FUNCTION
 <blockquote>
 
 
-* [_CEIL](CEIL.md)
+* _CEIL
 * [INT](INT.md) , [CINT](CINT.md)
-* [CLNG](CLNG.md) , [_ROUND](ROUND.md)
+* [CLNG](CLNG.md) , _ROUND
 * [MOD](MOD.md) , Integer Division
 * Normal division
 </blockquote>

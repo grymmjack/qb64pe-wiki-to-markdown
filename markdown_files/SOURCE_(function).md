@@ -120,7 +120,7 @@ br ~ h5 {
 
 
 * Returns a handle value that is a [LONG](LONG.md) integer type.
-* Save the source handle to a [LONG](LONG.md) variable for later restoration using the [_SOURCE](SOURCE.md) statement.
+* Save the source handle to a [LONG](LONG.md) variable for later restoration using the _SOURCE statement.
 
 </blockquote>
 
@@ -136,6 +136,6 @@ br ~ h5 {
 <blockquote>
 
 
-* [_DEST](DEST.md) (function)
-* [_SOURCE](SOURCE.md) , [_DEST](DEST.md)
+* _DEST (function)
+* _SOURCE , _DEST
 </blockquote>

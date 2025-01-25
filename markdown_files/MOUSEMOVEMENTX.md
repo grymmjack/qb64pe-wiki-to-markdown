@@ -122,13 +122,13 @@ br ~ h5 {
 SCREEN 12
 PX = 320: PY = 240 'center position
 DO: _LIMIT 200
-DO WHILE _MOUSEINPUT
-PX = PX + _MOUSEMOVEMENTX
-PY = PY + _MOUSEMOVEMENTY
-LOOP
-CLS
-CIRCLE (PX, PY), 10, 10
-LOCATE 1, 1: PRINT PX, PY
+   DO WHILE _MOUSEINPUT
+       PX = PX + _MOUSEMOVEMENTX
+       PY = PY + _MOUSEMOVEMENTY
+   LOOP
+   CLS
+   CIRCLE (PX, PY), 10, 10
+   LOCATE 1, 1: PRINT PX, PY
 LOOP UNTIL INKEY$ = CHR$(27) 'escape key exit
 ```
   
@@ -137,15 +137,15 @@ LOOP UNTIL INKEY$ = CHR$(27) 'escape key exit
 ```vb
 SCREEN 13, , 1, 0
 DO: _LIMIT 200
-DO WHILE _MOUSEINPUT
-x = x + _MOUSEMOVEMENTX
-y = y + _MOUSEMOVEMENTY
-LOOP
-x = (x + 320) MOD 320 'keeps object on screen
-y = (y + 200) MOD 200 'remove if off screen moves are desired
-CLS
-CIRCLE (x, y), 20
-PCOPY 1, 0
+   DO WHILE _MOUSEINPUT
+       x = x + _MOUSEMOVEMENTX
+       y = y + _MOUSEMOVEMENTY
+   LOOP
+   x = (x + 320) MOD 320 'keeps object on screen
+   y = (y + 200) MOD 200 'remove if off screen moves are desired
+   CLS
+   CIRCLE (x, y), 20
+   PCOPY 1, 0
 LOOP UNTIL INKEY$ <> "" 'press any key to exit
 ```
   
@@ -159,11 +159,11 @@ LOOP UNTIL INKEY$ <> "" 'press any key to exit
 <blockquote>
 
 
-* [_MOUSEMOVEMENTY](MOUSEMOVEMENTY.md)
-* [_MOUSEINPUT](MOUSEINPUT.md) , [_MOUSEX](MOUSEX.md)
-* [_DEVICES](DEVICES.md) , [_DEVICEINPUT](DEVICEINPUT.md)
-* [_WHEEL](WHEEL.md) , [_LASTWHEEL](LASTWHEEL.md)
-* [_AXIS](AXIS.md) , [_LASTAXIS](LASTAXIS.md)
-* [_MOUSESHOW](MOUSESHOW.md) , [_MOUSEHIDE](MOUSEHIDE.md)
+* _MOUSEMOVEMENTY
+* _MOUSEINPUT , _MOUSEX
+* _DEVICES , _DEVICEINPUT
+* _WHEEL , _LASTWHEEL
+* _AXIS , _LASTAXIS
+* _MOUSESHOW , _MOUSEHIDE
 * Screen Saver Programs
 </blockquote>

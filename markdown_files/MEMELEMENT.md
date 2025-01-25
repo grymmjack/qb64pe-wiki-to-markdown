@@ -153,8 +153,8 @@ END
 <blockquote>
 
 
-* [_MEM](MEM.md)
-* [_MEMNEW](MEMNEW.md)
-* [_MEMGET](MEMGET.md) , [_MEMPUT](MEMPUT.md)
-* [_MEMFREE](MEMFREE.md)
+* _MEM
+* _MEMNEW
+* _MEMGET , _MEMPUT
+* _MEMFREE
 </blockquote>

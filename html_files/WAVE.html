@@ -1,0 +1,1076 @@
+<!DOCTYPE html>
+<html class="client-nojs" dir="ltr" lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <title>
+   _WAVE - QB64 Phoenix Edition Wiki
+  </title>
+  <script>
+   document.documentElement.className="client-js";RLCONF={"wgBreakFrames":false,"wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgRequestId":"Z5RipAWKRwiE9zBBFH0k5QAAAP8","wgCSPNonce":false,"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"WAVE","wgTitle":"WAVE","wgCurRevisionId":9334,"wgRevisionId":9334,"wgArticleId":1250,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":[],"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgRelevantPageName":"WAVE","wgRelevantArticleId":1250,"wgIsProbablyEditable":false,"wgRelevantPageIsProbablyEditable":false,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgVector2022PreviewPages":[]};RLSTATE={"site.styles":"ready","user.styles":"ready","user":"ready",
+"user.options":"loading","mediawiki.page.gallery.styles":"ready","skins.vector.styles.legacy":"ready"};RLPAGEMODULES=["site","mediawiki.page.ready","mediawiki.toc","skins.vector.legacy.js"];
+  </script>
+  <script>
+   (RLQ=window.RLQ||[]).push(function(){mw.loader.implement("user.options@12s5i",function($,jQuery,require,module){mw.user.tokens.set({"patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});});});
+  </script>
+  <link href="/qb64wiki/load.php?lang=en&amp;modules=mediawiki.page.gallery.styles%7Cskins.vector.styles.legacy&amp;only=styles&amp;skin=vector" rel="stylesheet"/>
+  <script async="" src="/qb64wiki/load.php?lang=en&amp;modules=startup&amp;only=scripts&amp;raw=1&amp;skin=vector">
+  </script>
+  <meta content="" name="ResourceLoaderDynamicStyles"/>
+  <link href="/qb64wiki/load.php?lang=en&amp;modules=site.styles&amp;only=styles&amp;skin=vector" rel="stylesheet"/>
+  <meta content="MediaWiki 1.39.3" name="generator"/>
+  <meta content="telephone=no" name="format-detection"/>
+  <meta content="width=1000" name="viewport"/>
+  <link href="/favicon.ico" rel="icon"/>
+  <link href="/qb64wiki/opensearch_desc.php" rel="search" title="QB64 Phoenix Edition Wiki (en)" type="application/opensearchdescription+xml"/>
+  <link href="https://qb64phoenix.com/qb64wiki/api.php?action=rsd" rel="EditURI" type="application/rsd+xml"/>
+  <link href="/qb64wiki/index.php?title=Special:RecentChanges&amp;feed=atom" rel="alternate" title="QB64 Phoenix Edition Wiki Atom feed" type="application/atom+xml"/>
+ </head>
+ <body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject page-WAVE rootpage-WAVE skin-vector action-view skin-vector-legacy vector-feature-language-in-header-enabled vector-feature-language-in-main-page-header-disabled vector-feature-language-alert-in-sidebar-disabled vector-feature-sticky-header-disabled vector-feature-sticky-header-edit-disabled vector-feature-table-of-contents-disabled vector-feature-visual-enhancement-next-disabled">
+  <div class="noprint" id="mw-page-base">
+  </div>
+  <div class="noprint" id="mw-head-base">
+  </div>
+  <div class="mw-body" id="content" role="main">
+   <a id="top">
+   </a>
+   <div id="siteNotice">
+   </div>
+   <div class="mw-indicators">
+   </div>
+   <h1 class="firstHeading mw-first-heading" id="firstHeading">
+    _WAVE
+   </h1>
+   <div class="vector-body" id="bodyContent">
+    <div class="noprint" id="siteSub">
+     From QB64 Phoenix Edition Wiki
+    </div>
+    <div id="contentSub">
+    </div>
+    <div id="contentSub2">
+    </div>
+    <div id="jump-to-nav">
+    </div>
+    <a class="mw-jump-link" href="#mw-head">
+     Jump to navigation
+    </a>
+    <a class="mw-jump-link" href="#searchInput">
+     Jump to search
+    </a>
+    <div class="mw-body-content mw-content-ltr" dir="ltr" id="mw-content-text" lang="en">
+     <div class="mw-parser-output">
+      <p>
+       <b>
+        _WAVE
+       </b>
+       defines the waveform shape for a specified audio channel when used with
+       <a href="/qb64wiki/index.php/SOUND" title="SOUND">
+        SOUND
+       </a>
+       or
+       <a href="/qb64wiki/index.php/PLAY" title="PLAY">
+        PLAY
+       </a>
+       .
+      </p>
+      <p>
+       <br/>
+      </p>
+      <table align="right" style="max-width:25%;">
+       <tbody>
+        <tr>
+         <td>
+          <div aria-labelledby="mw-toc-heading" class="toc" id="toc" role="navigation">
+           <input class="toctogglecheckbox" id="toctogglecheckbox" role="button" style="display:none" type="checkbox"/>
+           <div class="toctitle" dir="ltr" lang="en">
+            <h2 id="mw-toc-heading">
+             Contents
+            </h2>
+            <span class="toctogglespan">
+             <label class="toctogglelabel" for="toctogglecheckbox">
+             </label>
+            </span>
+           </div>
+           <ul>
+            <li class="toclevel-1">
+             <a href="#Syntax">
+              <span class="tocnumber">
+               1
+              </span>
+              <span class="toctext">
+               Syntax
+              </span>
+             </a>
+            </li>
+            <li class="toclevel-1">
+             <a href="#Parameters">
+              <span class="tocnumber">
+               2
+              </span>
+              <span class="toctext">
+               Parameters
+              </span>
+             </a>
+            </li>
+            <li class="toclevel-1">
+             <a href="#Description">
+              <span class="tocnumber">
+               3
+              </span>
+              <span class="toctext">
+               Description
+              </span>
+             </a>
+            </li>
+            <li class="toclevel-1">
+             <a href="#Availability">
+              <span class="tocnumber">
+               4
+              </span>
+              <span class="toctext">
+               Availability
+              </span>
+             </a>
+            </li>
+            <li class="toclevel-1">
+             <a href="#Examples">
+              <span class="tocnumber">
+               5
+              </span>
+              <span class="toctext">
+               Examples
+              </span>
+             </a>
+            </li>
+            <li class="toclevel-1">
+             <a href="#See_also">
+              <span class="tocnumber">
+               6
+              </span>
+              <span class="toctext">
+               See also
+              </span>
+             </a>
+            </li>
+           </ul>
+          </div>
+         </td>
+        </tr>
+       </tbody>
+      </table>
+      <h2>
+       <span class="mw-headline" id="Syntax">
+        Syntax
+       </span>
+      </h2>
+      <dl>
+       <dd>
+        <a class="mw-selflink selflink">
+         _WAVE
+        </a>
+        <i>
+         voice&amp;
+        </i>
+        ,
+        <i>
+         waveDefinition%%([index&amp;])
+        </i>
+        [,
+        <i>
+         frameCount&amp;
+        </i>
+        ]
+       </dd>
+      </dl>
+      <p>
+       <br/>
+      </p>
+      <h2>
+       <span class="mw-headline" id="Parameters">
+        Parameters
+       </span>
+      </h2>
+      <ul>
+       <li>
+        <i>
+         voice&amp;
+        </i>
+        specifies for which of the four audio channels the sound waveform shall be set.
+       </li>
+       <li>
+        <i>
+         waveDefinition%%([index&amp;])
+        </i>
+        defines the shape of the sound wave for the specified voice. This parameter must be the name of an array of
+        <a href="/qb64wiki/index.php/BYTE" title="BYTE">
+         _BYTEs
+        </a>
+        with at least 2 elements. Each element (sample frame) in the array must have a value in the range of -128 to 127. An optional index can be used to specify the starting point in the array.
+       </li>
+       <li>
+        <i>
+         frameCount&amp;
+        </i>
+        specifies the number of elements (sample frames) used to define the shape of the sound.
+       </li>
+      </ul>
+      <p>
+       <br/>
+      </p>
+      <h2>
+       <span class="mw-headline" id="Description">
+        Description
+       </span>
+      </h2>
+      <ul>
+       <li>
+        The
+        <b>
+         _WAVE
+        </b>
+        statement enhances the versatility of the
+        <a href="/qb64wiki/index.php/SOUND" title="SOUND">
+         SOUND
+        </a>
+        or
+        <a href="/qb64wiki/index.php/PLAY" title="PLAY">
+         PLAY
+        </a>
+        commands.
+       </li>
+       <li>
+        By using a numeric array to define the shape of a sound wave, you can produce more specific and unique types of sounds.
+       </li>
+       <li>
+        Each element of the array specifies a amplitude value. When combined, these values form a curve that represents the shape of the waveform.
+       </li>
+       <li>
+        Audio channels can be panned to the left, right, or center using
+        <a href="/qb64wiki/index.php/SOUND" title="SOUND">
+         SOUND
+        </a>
+        or
+        <a href="/qb64wiki/index.php/PLAY" title="PLAY">
+         PLAY
+        </a>
+        .
+       </li>
+       <li>
+        Waveforms specified with
+        <b>
+         _WAVE
+        </b>
+        have a waveform ID of
+        <b>
+         10
+        </b>
+        . See
+        <a href="/qb64wiki/index.php/SOUND" title="SOUND">
+         SOUND
+        </a>
+        and
+        <a href="/qb64wiki/index.php/PLAY" title="PLAY">
+         PLAY
+        </a>
+        for more details regarding waveforms.
+       </li>
+       <li>
+        By default, custom waveforms are initialized as a sine wave with
+        <b>
+         256
+        </b>
+        sample frames.
+       </li>
+       <li>
+        The
+        <b>
+         _WAVE
+        </b>
+        command was designed to resemble the
+        <b>
+         WAVE
+        </b>
+        command found in
+        <b>
+         AmigaBasic
+        </b>
+        .
+       </li>
+      </ul>
+      <p>
+       <br/>
+      </p>
+      <h2>
+       <span class="mw-headline" id="Availability">
+        Availability
+       </span>
+      </h2>
+      <ul class="gallery mw-gallery-nolines">
+       <li class="gallerybox" style="width: 53px">
+        <div style="width: 53px">
+         <div class="thumb" style="width: 48px;">
+          <div style="margin:0px auto;">
+           <a class="image" href="/qb64wiki/index.php/File:Qb64.png" title="none">
+            <img alt="none" decoding="async" height="48" src="/qb64wiki/images/9/91/Qb64.png" width="48"/>
+           </a>
+          </div>
+         </div>
+         <div class="gallerytext">
+          <p>
+           <b>
+            none
+           </b>
+          </p>
+         </div>
+        </div>
+       </li>
+       <li class="gallerybox" style="width: 53px">
+        <div style="width: 53px">
+         <div class="thumb" style="width: 48px;">
+          <div style="margin:0px auto;">
+           <a class="image" href="/qb64wiki/index.php/File:Qbpe.png" title="v4.0.0">
+            <img alt="v4.0.0" decoding="async" height="48" src="/qb64wiki/images/0/07/Qbpe.png" width="48"/>
+           </a>
+          </div>
+         </div>
+         <div class="gallerytext">
+          <p>
+           <b>
+            v4.0.0
+           </b>
+          </p>
+         </div>
+        </div>
+       </li>
+       <li class="gallerybox" style="width: 53px">
+        <div style="width: 53px">
+         <div class="thumb" style="width: 48px;">
+          <div style="margin:0px auto;">
+           <a class="image" href="/qb64wiki/index.php/File:Apix.png">
+            <img alt="Apix.png" decoding="async" height="48" src="/qb64wiki/images/5/5f/Apix.png" width="48"/>
+           </a>
+          </div>
+         </div>
+         <div class="gallerytext">
+         </div>
+        </div>
+       </li>
+       <li class="gallerybox" style="width: 53px">
+        <div style="width: 53px">
+         <div class="thumb" style="width: 48px;">
+          <div style="margin:0px auto;">
+           <a class="image" href="/qb64wiki/index.php/File:Win.png" title="yes">
+            <img alt="yes" decoding="async" height="48" src="/qb64wiki/images/2/29/Win.png" width="48"/>
+           </a>
+          </div>
+         </div>
+         <div class="gallerytext">
+          <p>
+           <b>
+            yes
+           </b>
+          </p>
+         </div>
+        </div>
+       </li>
+       <li class="gallerybox" style="width: 53px">
+        <div style="width: 53px">
+         <div class="thumb" style="width: 48px;">
+          <div style="margin:0px auto;">
+           <a class="image" href="/qb64wiki/index.php/File:Lnx.png" title="yes">
+            <img alt="yes" decoding="async" height="48" src="/qb64wiki/images/7/7a/Lnx.png" width="48"/>
+           </a>
+          </div>
+         </div>
+         <div class="gallerytext">
+          <p>
+           <b>
+            yes
+           </b>
+          </p>
+         </div>
+        </div>
+       </li>
+       <li class="gallerybox" style="width: 53px">
+        <div style="width: 53px">
+         <div class="thumb" style="width: 48px;">
+          <div style="margin:0px auto;">
+           <a class="image" href="/qb64wiki/index.php/File:Osx.png" title="yes">
+            <img alt="yes" decoding="async" height="48" src="/qb64wiki/images/2/22/Osx.png" width="48"/>
+           </a>
+          </div>
+         </div>
+         <div class="gallerytext">
+          <p>
+           <b>
+            yes
+           </b>
+          </p>
+         </div>
+        </div>
+       </li>
+      </ul>
+      <p>
+       <br/>
+      </p>
+      <h2>
+       <span class="mw-headline" id="Examples">
+        Examples
+       </span>
+      </h2>
+      <dl>
+       <dt>
+        Example 1
+       </dt>
+       <dd>
+        A QB64-PE port of the AmigaBasic Music/Graphic demo.
+       </dd>
+      </dl>
+      <table cellpadding="15px" width="100%">
+       <tbody>
+        <tr>
+         <td>
+          <pre class="codeide"><span style="color:#919191;">' Music - AmigaBasic Music/Graphic-Demo --- 20. July 1985</span>
+<a href="/qb64wiki/index.php/DEFLNG" title="DEFLNG"><span style="color:#4593D8;">DEFLNG</span></a> A-Z
+
+<a href="/qb64wiki/index.php/CONST" title="CONST"><span style="color:#4593D8;">CONST</span></a> VOLUME! = <span style="color:#F580B1;">0.25!</span>
+
+<a href="/qb64wiki/index.php/DIM" title="DIM"><span style="color:#4593D8;">DIM</span></a> F#(<span style="color:#F580B1;">88</span>), CF(<span style="color:#F580B1;">19</span>), CT#(<span style="color:#F580B1;">19</span>)
+
+<a href="/qb64wiki/index.php/GOSUB" title="GOSUB"><span style="color:#4593D8;">GOSUB</span></a> InitSound
+<a href="/qb64wiki/index.php/GOSUB" title="GOSUB"><span style="color:#4593D8;">GOSUB</span></a> InitGraphics
+
+<a class="mw-redirect" href="/qb64wiki/index.php/DO" title="DO"><span style="color:#4593D8;">DO</span></a>
+    <a href="/qb64wiki/index.php/SOUND" title="SOUND"><span style="color:#4593D8;">SOUND RESUME</span></a>
+    <a href="/qb64wiki/index.php/RESTORE" title="RESTORE"><span style="color:#4593D8;">RESTORE</span></a> Song
+    <a href="/qb64wiki/index.php/GOSUB" title="GOSUB"><span style="color:#4593D8;">GOSUB</span></a> PlaySong
+
+    <span style="color:#919191;">' This ensures all voices have played completely before playing the song again</span>
+    <a class="mw-redirect" href="/qb64wiki/index.php/WHILE" title="WHILE"><span style="color:#4593D8;">WHILE</span></a> <a href="/qb64wiki/index.php/PLAY_(function)" title="PLAY (function)"><span style="color:#4593D8;">PLAY</span></a>(<span style="color:#F580B1;">0</span>) &gt; <span style="color:#F580B1;">0</span> <a href="/qb64wiki/index.php/ORELSE" title="ORELSE"><span style="color:#4593D8;">_ORELSE</span></a> <a href="/qb64wiki/index.php/PLAY_(function)" title="PLAY (function)"><span style="color:#4593D8;">PLAY</span></a>(<span style="color:#F580B1;">1</span>) &gt; <span style="color:#F580B1;">0</span> <a href="/qb64wiki/index.php/ORELSE" title="ORELSE"><span style="color:#4593D8;">_ORELSE</span></a> <a href="/qb64wiki/index.php/PLAY_(function)" title="PLAY (function)"><span style="color:#4593D8;">PLAY</span></a>(<span style="color:#F580B1;">2</span>) &gt; <span style="color:#F580B1;">0</span> <a href="/qb64wiki/index.php/ORELSE" title="ORELSE"><span style="color:#4593D8;">_ORELSE</span></a> <a href="/qb64wiki/index.php/PLAY_(function)" title="PLAY (function)"><span style="color:#4593D8;">PLAY</span></a>(<span style="color:#F580B1;">3</span>) &gt; <span style="color:#F580B1;">0</span>
+        <a class="mw-redirect" href="/qb64wiki/index.php/IF" title="IF"><span style="color:#4593D8;">IF</span></a> <a href="/qb64wiki/index.php/KEYHIT" title="KEYHIT"><span style="color:#4593D8;">_KEYHIT</span></a> = <span style="color:#F580B1;">27</span> <a href="/qb64wiki/index.php/THEN" title="THEN"><span style="color:#4593D8;">THEN</span></a> <a href="/qb64wiki/index.php/END" title="END"><span style="color:#4593D8;">END</span></a>
+        <a href="/qb64wiki/index.php/LIMIT" title="LIMIT"><span style="color:#4593D8;">_LIMIT</span></a> <span style="color:#F580B1;">60</span>
+    <a class="mw-redirect" href="/qb64wiki/index.php/WEND" title="WEND"><span style="color:#4593D8;">WEND</span></a>
+<a href="/qb64wiki/index.php/LOOP" title="LOOP"><span style="color:#4593D8;">LOOP</span></a>
+
+InitGraphics:
+<a href="/qb64wiki/index.php/SCREEN" title="SCREEN"><span style="color:#4593D8;">SCREEN</span></a> <span style="color:#F580B1;">12</span>
+<a href="/qb64wiki/index.php/TITLE" title="TITLE"><span style="color:#4593D8;">_TITLE</span></a> <span style="color:#FFB100;">"AmigaBasic Music/Graphic Demo (QB64-PE port by a740g)"</span>
+iDraw = <span style="color:#F580B1;">30</span>
+iErase = <span style="color:#F580B1;">0</span>
+<a href="/qb64wiki/index.php/ON_TIMER(n)" title="ON TIMER(n)"><span style="color:#4593D8;">ON TIMER</span></a>(<span style="color:#F580B1;">1</span>) <a href="/qb64wiki/index.php/GOSUB" title="GOSUB"><span style="color:#4593D8;">GOSUB</span></a> TimeSlice
+<a href="/qb64wiki/index.php/TIMER" title="TIMER"><span style="color:#4593D8;">TIMER</span></a> <a href="/qb64wiki/index.php/ON" title="ON"><span style="color:#4593D8;">ON</span></a>
+<a href="/qb64wiki/index.php/RETURN" title="RETURN"><span style="color:#4593D8;">RETURN</span></a>
+
+TimeSlice:
+<a href="/qb64wiki/index.php/FOR" title="FOR"><span style="color:#4593D8;">FOR</span></a> linestep = <span style="color:#F580B1;">1</span> <a href="/qb64wiki/index.php/TO" title="TO"><span style="color:#4593D8;">TO</span></a> <span style="color:#F580B1;">15</span>
+    <span style="color:#55FF55;">DrawLine</span> iDraw, <span style="color:#F580B1;">1</span>
+    <span style="color:#55FF55;">DrawLine</span> iErase, <span style="color:#F580B1;">0</span>
+    <a href="/qb64wiki/index.php/LIMIT" title="LIMIT"><span style="color:#4593D8;">_LIMIT</span></a> <span style="color:#F580B1;">60</span>
+<a href="/qb64wiki/index.php/NEXT" title="NEXT"><span style="color:#4593D8;">NEXT</span></a> linestep
+<a href="/qb64wiki/index.php/RETURN" title="RETURN"><span style="color:#4593D8;">RETURN</span></a>
+
+PlaySong:
+<span style="color:#919191;">' Array VO contains the base octave for a voice.</span>
+<a href="/qb64wiki/index.php/FOR" title="FOR"><span style="color:#4593D8;">FOR</span></a> v = <span style="color:#F580B1;">0</span> <a href="/qb64wiki/index.php/TO" title="TO"><span style="color:#4593D8;">TO</span></a> <span style="color:#F580B1;">3</span>
+    <a href="/qb64wiki/index.php/READ" title="READ"><span style="color:#4593D8;">READ</span></a> VO(v)
+    VO(v) = <span style="color:#F580B1;">12</span> * VO(v) + <span style="color:#F580B1;">3</span>
+<a href="/qb64wiki/index.php/NEXT" title="NEXT"><span style="color:#4593D8;">NEXT</span></a> v
+
+<a class="mw-redirect" href="/qb64wiki/index.php/DO" title="DO"><span style="color:#4593D8;">DO</span></a>
+    <a href="/qb64wiki/index.php/SOUND" title="SOUND"><span style="color:#4593D8;">SOUND WAIT</span></a>
+    <a href="/qb64wiki/index.php/FOR" title="FOR"><span style="color:#4593D8;">FOR</span></a> v = <span style="color:#F580B1;">0</span> <a href="/qb64wiki/index.php/TO" title="TO"><span style="color:#4593D8;">TO</span></a> <span style="color:#F580B1;">3</span>
+        t# = VT#(v)
+        Fi = <span style="color:#F580B1;">-1</span>
+        <a href="/qb64wiki/index.php/READ" title="READ"><span style="color:#4593D8;">READ</span></a> p$
+        <a class="mw-redirect" href="/qb64wiki/index.php/IF" title="IF"><span style="color:#4593D8;">IF</span></a> p$ = <span style="color:#FFB100;">"x"</span> <a href="/qb64wiki/index.php/THEN" title="THEN"><span style="color:#4593D8;">THEN</span></a> <a href="/qb64wiki/index.php/RETURN" title="RETURN"><span style="color:#4593D8;">RETURN</span></a>
+        <a href="/qb64wiki/index.php/FOR" title="FOR"><span style="color:#4593D8;">FOR</span></a> I = <span style="color:#F580B1;">1</span> <a href="/qb64wiki/index.php/TO" title="TO"><span style="color:#4593D8;">TO</span></a> <a href="/qb64wiki/index.php/LEN" title="LEN"><span style="color:#4593D8;">LEN</span></a>(p$)
+            Ci = <a href="/qb64wiki/index.php/INSTR" title="INSTR"><span style="color:#4593D8;">INSTR</span></a>(C$, <a href="/qb64wiki/index.php/MID$_(function)" title="MID$ (function)"><span style="color:#4593D8;">MID$</span></a>(p$, I, <span style="color:#F580B1;">1</span>))
+            <a class="mw-redirect" href="/qb64wiki/index.php/IF" title="IF"><span style="color:#4593D8;">IF</span></a> Ci &lt;= <span style="color:#F580B1;">8</span> <a href="/qb64wiki/index.php/THEN" title="THEN"><span style="color:#4593D8;">THEN</span></a>
+                <a class="mw-redirect" href="/qb64wiki/index.php/IF" title="IF"><span style="color:#4593D8;">IF</span></a> Fi &gt;= <span style="color:#F580B1;">0</span> <a href="/qb64wiki/index.php/THEN" title="THEN"><span style="color:#4593D8;">THEN</span></a> <a href="/qb64wiki/index.php/SOUND" title="SOUND"><span style="color:#4593D8;">SOUND</span></a> F#(Fi), t#, VOLUME, , , , v: t# = VT#(v)
+                <a class="mw-redirect" href="/qb64wiki/index.php/IF" title="IF"><span style="color:#4593D8;">IF</span></a> Ci = <span style="color:#F580B1;">8</span> <a href="/qb64wiki/index.php/THEN" title="THEN"><span style="color:#4593D8;">THEN</span></a> Fi = <span style="color:#F580B1;">0</span> <a href="/qb64wiki/index.php/ELSE" title="ELSE"><span style="color:#4593D8;">ELSE</span></a> Fi = CF(Ci) + VO(v)
+            <a href="/qb64wiki/index.php/ELSEIF" title="ELSEIF"><span style="color:#4593D8;">ELSEIF</span></a> Ci &lt; <span style="color:#F580B1;">11</span> <a href="/qb64wiki/index.php/THEN" title="THEN"><span style="color:#4593D8;">THEN</span></a> <span style="color:#919191;">'# or -</span>
+                Fi = Fi + CF(Ci)
+            <a href="/qb64wiki/index.php/ELSEIF" title="ELSEIF"><span style="color:#4593D8;">ELSEIF</span></a> Ci &lt; <span style="color:#F580B1;">17</span> <a href="/qb64wiki/index.php/THEN" title="THEN"><span style="color:#4593D8;">THEN</span></a> <span style="color:#919191;">'1 through 8</span>
+                t# = CT#(Ci)
+            <a href="/qb64wiki/index.php/ELSEIF" title="ELSEIF"><span style="color:#4593D8;">ELSEIF</span></a> Ci &lt; <span style="color:#F580B1;">19</span> <a href="/qb64wiki/index.php/THEN" title="THEN"><span style="color:#4593D8;">THEN</span></a> <span style="color:#919191;">'&lt; or &gt;</span>
+                VO(v) = VO(v) + CF(Ci)
+            <a href="/qb64wiki/index.php/ELSE" title="ELSE"><span style="color:#4593D8;">ELSE</span></a> <span style="color:#919191;">'ln</span>
+                I = I + <span style="color:#F580B1;">1</span>
+                Ci = <a href="/qb64wiki/index.php/INSTR" title="INSTR"><span style="color:#4593D8;">INSTR</span></a>(C$, <a href="/qb64wiki/index.php/MID$_(function)" title="MID$ (function)"><span style="color:#4593D8;">MID$</span></a>(p$, I, <span style="color:#F580B1;">1</span>))
+                VT#(v) = CT#(Ci)
+                <a class="mw-redirect" href="/qb64wiki/index.php/IF" title="IF"><span style="color:#4593D8;">IF</span></a> Fi &lt; <span style="color:#F580B1;">0</span> <a href="/qb64wiki/index.php/THEN" title="THEN"><span style="color:#4593D8;">THEN</span></a> t# = VT#(v)
+            <a class="mw-redirect" href="/qb64wiki/index.php/END_IF" title="END IF"><span style="color:#4593D8;">END IF</span></a>
+        <a href="/qb64wiki/index.php/NEXT" title="NEXT"><span style="color:#4593D8;">NEXT</span></a> I
+        <a class="mw-redirect" href="/qb64wiki/index.php/IF" title="IF"><span style="color:#4593D8;">IF</span></a> Fi &gt;= <span style="color:#F580B1;">0</span> <a href="/qb64wiki/index.php/THEN" title="THEN"><span style="color:#4593D8;">THEN</span></a> <a href="/qb64wiki/index.php/SOUND" title="SOUND"><span style="color:#4593D8;">SOUND</span></a> F#(Fi), t#, VOLUME, , , , v
+    <a href="/qb64wiki/index.php/NEXT" title="NEXT"><span style="color:#4593D8;">NEXT</span></a> v
+    <a href="/qb64wiki/index.php/SOUND" title="SOUND"><span style="color:#4593D8;">SOUND RESUME</span></a>
+    <a class="mw-redirect" href="/qb64wiki/index.php/IF" title="IF"><span style="color:#4593D8;">IF</span></a> <a href="/qb64wiki/index.php/KEYHIT" title="KEYHIT"><span style="color:#4593D8;">_KEYHIT</span></a> = <span style="color:#F580B1;">27</span> <a href="/qb64wiki/index.php/THEN" title="THEN"><span style="color:#4593D8;">THEN</span></a> <a href="/qb64wiki/index.php/END" title="END"><span style="color:#4593D8;">END</span></a>
+    <a href="/qb64wiki/index.php/LIMIT" title="LIMIT"><span style="color:#4593D8;">_LIMIT</span></a> <span style="color:#F580B1;">60</span>
+<a href="/qb64wiki/index.php/LOOP" title="LOOP"><span style="color:#4593D8;">LOOP</span></a>
+
+InitSound:
+<span style="color:#919191;">' F#() contains frequencies of the chromatic scale.</span>
+<span style="color:#919191;">' Note A in octave 0 = F#(12) = 55 Hz.</span>
+Log2of27.5# = <a href="/qb64wiki/index.php/LOG" title="LOG"><span style="color:#4593D8;">LOG</span></a>(<span style="color:#F580B1;">27.5#</span>) / <a href="/qb64wiki/index.php/LOG" title="LOG"><span style="color:#4593D8;">LOG</span></a>(<span style="color:#F580B1;">2#</span>)
+<a href="/qb64wiki/index.php/FOR" title="FOR"><span style="color:#4593D8;">FOR</span></a> x = <span style="color:#F580B1;">1</span> <a href="/qb64wiki/index.php/TO" title="TO"><span style="color:#4593D8;">TO</span></a> <span style="color:#F580B1;">88</span>
+    F#(x) = <span style="color:#F580B1;">2</span> ^ (Log2of27.5# + x / <span style="color:#F580B1;">12#</span>)
+<a href="/qb64wiki/index.php/NEXT" title="NEXT"><span style="color:#4593D8;">NEXT</span></a> x
+
+<span style="color:#919191;">' Create the waveform of tones,</span>
+<span style="color:#919191;">' determines timbre.</span>
+<a href="/qb64wiki/index.php/DIM" title="DIM"><span style="color:#4593D8;">DIM</span></a> Timbre(<span style="color:#F580B1;">255</span>) <a href="/qb64wiki/index.php/AS" title="AS"><span style="color:#4593D8;">AS</span></a> <a href="/qb64wiki/index.php/BYTE" title="BYTE"><span style="color:#4593D8;">_BYTE</span></a>
+<a href="/qb64wiki/index.php/FOR" title="FOR"><span style="color:#4593D8;">FOR</span></a> I = <span style="color:#F580B1;">0</span> <a href="/qb64wiki/index.php/TO" title="TO"><span style="color:#4593D8;">TO</span></a> <span style="color:#F580B1;">255</span>
+    <a href="/qb64wiki/index.php/READ" title="READ"><span style="color:#4593D8;">READ</span></a> Timbre(I)
+<a href="/qb64wiki/index.php/NEXT" title="NEXT"><span style="color:#4593D8;">NEXT</span></a> I
+
+<span style="color:#919191;">' The following DATA rows were created using the following formula.</span>
+<span style="color:#919191;">' Reading from these DATAs is faster than calculating the sine 1024 times.</span>
+<span style="color:#919191;">'  K# = 2 * 3.14159265/256</span>
+<span style="color:#919191;">'  FOR I = 0 TO 255</span>
+<span style="color:#919191;">'    Timbre(I) = 31 * (SIN(I * K#) + SIN(2 * I * K#) + SIN(3 * I * K#) + SIN( 4 * I * K#))</span>
+<span style="color:#919191;">'  NEXT I</span>
+<a href="/qb64wiki/index.php/DATA" title="DATA"><span style="color:#4593D8;">DATA</span></a> <span style="color:#F580B1;">0</span>,<span style="color:#F580B1;">8</span>,<span style="color:#F580B1;">15</span>,<span style="color:#F580B1;">23</span>,<span style="color:#F580B1;">30</span>,<span style="color:#F580B1;">37</span>,<span style="color:#F580B1;">44</span>,<span style="color:#F580B1;">51</span>,<span style="color:#F580B1;">57</span>,<span style="color:#F580B1;">63</span>,<span style="color:#F580B1;">69</span>,<span style="color:#F580B1;">74</span>,<span style="color:#F580B1;">79</span>,<span style="color:#F580B1;">83</span>,<span style="color:#F580B1;">87</span>,<span style="color:#F580B1;">91</span>
+<a href="/qb64wiki/index.php/DATA" title="DATA"><span style="color:#4593D8;">DATA</span></a> <span style="color:#F580B1;">93</span>,<span style="color:#F580B1;">96</span>,<span style="color:#F580B1;">98</span>,<span style="color:#F580B1;">99</span>,<span style="color:#F580B1;">100</span>,<span style="color:#F580B1;">100</span>,<span style="color:#F580B1;">100</span>,<span style="color:#F580B1;">99</span>,<span style="color:#F580B1;">98</span>,<span style="color:#F580B1;">97</span>,<span style="color:#F580B1;">95</span>,<span style="color:#F580B1;">92</span>,<span style="color:#F580B1;">89</span>,<span style="color:#F580B1;">86</span>,<span style="color:#F580B1;">83</span>,<span style="color:#F580B1;">79</span>
+<a href="/qb64wiki/index.php/DATA" title="DATA"><span style="color:#4593D8;">DATA</span></a> <span style="color:#F580B1;">75</span>,<span style="color:#F580B1;">71</span>,<span style="color:#F580B1;">66</span>,<span style="color:#F580B1;">62</span>,<span style="color:#F580B1;">57</span>,<span style="color:#F580B1;">52</span>,<span style="color:#F580B1;">48</span>,<span style="color:#F580B1;">43</span>,<span style="color:#F580B1;">39</span>,<span style="color:#F580B1;">34</span>,<span style="color:#F580B1;">30</span>,<span style="color:#F580B1;">25</span>,<span style="color:#F580B1;">21</span>,<span style="color:#F580B1;">18</span>,<span style="color:#F580B1;">14</span>,<span style="color:#F580B1;">11</span>
+<a href="/qb64wiki/index.php/DATA" title="DATA"><span style="color:#4593D8;">DATA</span></a> <span style="color:#F580B1;">8</span>,<span style="color:#F580B1;">5</span>,<span style="color:#F580B1;">3</span>,<span style="color:#F580B1;">0</span>,<span style="color:#F580B1;">-1</span>,<span style="color:#F580B1;">-3</span>,<span style="color:#F580B1;">-4</span>,<span style="color:#F580B1;">-5</span>,<span style="color:#F580B1;">-5</span>,<span style="color:#F580B1;">-6</span>,<span style="color:#F580B1;">-6</span>,<span style="color:#F580B1;">-5</span>,<span style="color:#F580B1;">-5</span>,<span style="color:#F580B1;">-4</span>,<span style="color:#F580B1;">-3</span>,<span style="color:#F580B1;">-1</span>
+<a href="/qb64wiki/index.php/DATA" title="DATA"><span style="color:#4593D8;">DATA</span></a> <span style="color:#F580B1;">0</span>,<span style="color:#F580B1;">2</span>,<span style="color:#F580B1;">3</span>,<span style="color:#F580B1;">5</span>,<span style="color:#F580B1;">7</span>,<span style="color:#F580B1;">9</span>,<span style="color:#F580B1;">11</span>,<span style="color:#F580B1;">13</span>,<span style="color:#F580B1;">15</span>,<span style="color:#F580B1;">17</span>,<span style="color:#F580B1;">18</span>,<span style="color:#F580B1;">20</span>,<span style="color:#F580B1;">21</span>,<span style="color:#F580B1;">23</span>,<span style="color:#F580B1;">24</span>,<span style="color:#F580B1;">25</span>
+<a href="/qb64wiki/index.php/DATA" title="DATA"><span style="color:#4593D8;">DATA</span></a> <span style="color:#F580B1;">26</span>,<span style="color:#F580B1;">26</span>,<span style="color:#F580B1;">27</span>,<span style="color:#F580B1;">27</span>,<span style="color:#F580B1;">27</span>,<span style="color:#F580B1;">27</span>,<span style="color:#F580B1;">27</span>,<span style="color:#F580B1;">26</span>,<span style="color:#F580B1;">25</span>,<span style="color:#F580B1;">24</span>,<span style="color:#F580B1;">23</span>,<span style="color:#F580B1;">22</span>,<span style="color:#F580B1;">20</span>,<span style="color:#F580B1;">18</span>,<span style="color:#F580B1;">17</span>,<span style="color:#F580B1;">15</span>
+<a href="/qb64wiki/index.php/DATA" title="DATA"><span style="color:#4593D8;">DATA</span></a> <span style="color:#F580B1;">13</span>,<span style="color:#F580B1;">11</span>,<span style="color:#F580B1;">9</span>,<span style="color:#F580B1;">7</span>,<span style="color:#F580B1;">5</span>,<span style="color:#F580B1;">3</span>,<span style="color:#F580B1;">1</span>,<span style="color:#F580B1;">-1</span>,<span style="color:#F580B1;">-3</span>,<span style="color:#F580B1;">-5</span>,<span style="color:#F580B1;">-6</span>,<span style="color:#F580B1;">-8</span>,<span style="color:#F580B1;">-9</span>,<span style="color:#F580B1;">-10</span>,<span style="color:#F580B1;">-11</span>,<span style="color:#F580B1;">-12</span>
+<a href="/qb64wiki/index.php/DATA" title="DATA"><span style="color:#4593D8;">DATA</span></a> <span style="color:#F580B1;">-12</span>,<span style="color:#F580B1;">-13</span>,<span style="color:#F580B1;">-13</span>,<span style="color:#F580B1;">-13</span>,<span style="color:#F580B1;">-13</span>,<span style="color:#F580B1;">-13</span>,<span style="color:#F580B1;">-12</span>,<span style="color:#F580B1;">-11</span>,<span style="color:#F580B1;">-11</span>,<span style="color:#F580B1;">-10</span>,<span style="color:#F580B1;">-8</span>,<span style="color:#F580B1;">-7</span>,<span style="color:#F580B1;">-6</span>,<span style="color:#F580B1;">-4</span>,<span style="color:#F580B1;">-3</span>,<span style="color:#F580B1;">-2</span>
+<a href="/qb64wiki/index.php/DATA" title="DATA"><span style="color:#4593D8;">DATA</span></a> <span style="color:#F580B1;">0</span>,<span style="color:#F580B1;">2</span>,<span style="color:#F580B1;">3</span>,<span style="color:#F580B1;">4</span>,<span style="color:#F580B1;">6</span>,<span style="color:#F580B1;">7</span>,<span style="color:#F580B1;">8</span>,<span style="color:#F580B1;">10</span>,<span style="color:#F580B1;">11</span>,<span style="color:#F580B1;">11</span>,<span style="color:#F580B1;">12</span>,<span style="color:#F580B1;">13</span>,<span style="color:#F580B1;">13</span>,<span style="color:#F580B1;">13</span>,<span style="color:#F580B1;">13</span>,<span style="color:#F580B1;">13</span>
+<a href="/qb64wiki/index.php/DATA" title="DATA"><span style="color:#4593D8;">DATA</span></a> <span style="color:#F580B1;">12</span>,<span style="color:#F580B1;">12</span>,<span style="color:#F580B1;">11</span>,<span style="color:#F580B1;">10</span>,<span style="color:#F580B1;">9</span>,<span style="color:#F580B1;">8</span>,<span style="color:#F580B1;">6</span>,<span style="color:#F580B1;">5</span>,<span style="color:#F580B1;">3</span>,<span style="color:#F580B1;">1</span>,<span style="color:#F580B1;">-1</span>,<span style="color:#F580B1;">-3</span>,<span style="color:#F580B1;">-5</span>,<span style="color:#F580B1;">-7</span>,<span style="color:#F580B1;">-9</span>,<span style="color:#F580B1;">-11</span>
+<a href="/qb64wiki/index.php/DATA" title="DATA"><span style="color:#4593D8;">DATA</span></a> <span style="color:#F580B1;">-13</span>,<span style="color:#F580B1;">-15</span>,<span style="color:#F580B1;">-17</span>,<span style="color:#F580B1;">-18</span>,<span style="color:#F580B1;">-20</span>,<span style="color:#F580B1;">-22</span>,<span style="color:#F580B1;">-23</span>,<span style="color:#F580B1;">-24</span>,<span style="color:#F580B1;">-25</span>,<span style="color:#F580B1;">-26</span>,<span style="color:#F580B1;">-27</span>,<span style="color:#F580B1;">-27</span>,<span style="color:#F580B1;">-27</span>,<span style="color:#F580B1;">-27</span>,<span style="color:#F580B1;">-27</span>,<span style="color:#F580B1;">-26</span>
+<a href="/qb64wiki/index.php/DATA" title="DATA"><span style="color:#4593D8;">DATA</span></a> <span style="color:#F580B1;">-26</span>,<span style="color:#F580B1;">-25</span>,<span style="color:#F580B1;">-24</span>,<span style="color:#F580B1;">-23</span>,<span style="color:#F580B1;">-21</span>,<span style="color:#F580B1;">-20</span>,<span style="color:#F580B1;">-18</span>,<span style="color:#F580B1;">-17</span>,<span style="color:#F580B1;">-15</span>,<span style="color:#F580B1;">-13</span>,<span style="color:#F580B1;">-11</span>,<span style="color:#F580B1;">-9</span>,<span style="color:#F580B1;">-7</span>,<span style="color:#F580B1;">-5</span>,<span style="color:#F580B1;">-3</span>,<span style="color:#F580B1;">-2</span>
+<a href="/qb64wiki/index.php/DATA" title="DATA"><span style="color:#4593D8;">DATA</span></a> <span style="color:#F580B1;">0</span>,<span style="color:#F580B1;">1</span>,<span style="color:#F580B1;">3</span>,<span style="color:#F580B1;">4</span>,<span style="color:#F580B1;">5</span>,<span style="color:#F580B1;">5</span>,<span style="color:#F580B1;">6</span>,<span style="color:#F580B1;">6</span>,<span style="color:#F580B1;">5</span>,<span style="color:#F580B1;">5</span>,<span style="color:#F580B1;">4</span>,<span style="color:#F580B1;">3</span>,<span style="color:#F580B1;">1</span>,<span style="color:#F580B1;">0</span>,<span style="color:#F580B1;">-3</span>,<span style="color:#F580B1;">-5</span>
+<a href="/qb64wiki/index.php/DATA" title="DATA"><span style="color:#4593D8;">DATA</span></a> <span style="color:#F580B1;">-8</span>,<span style="color:#F580B1;">-11</span>,<span style="color:#F580B1;">-14</span>,<span style="color:#F580B1;">-18</span>,<span style="color:#F580B1;">-21</span>,<span style="color:#F580B1;">-25</span>,<span style="color:#F580B1;">-30</span>,<span style="color:#F580B1;">-34</span>,<span style="color:#F580B1;">-39</span>,<span style="color:#F580B1;">-43</span>,<span style="color:#F580B1;">-48</span>,<span style="color:#F580B1;">-52</span>,<span style="color:#F580B1;">-57</span>,<span style="color:#F580B1;">-62</span>,<span style="color:#F580B1;">-66</span>,<span style="color:#F580B1;">-71</span>
+<a href="/qb64wiki/index.php/DATA" title="DATA"><span style="color:#4593D8;">DATA</span></a> <span style="color:#F580B1;">-75</span>,<span style="color:#F580B1;">-79</span>,<span style="color:#F580B1;">-83</span>,<span style="color:#F580B1;">-86</span>,<span style="color:#F580B1;">-89</span>,<span style="color:#F580B1;">-92</span>,<span style="color:#F580B1;">-95</span>,<span style="color:#F580B1;">-97</span>,<span style="color:#F580B1;">-98</span>,<span style="color:#F580B1;">-99</span>,<span style="color:#F580B1;">-100</span>,<span style="color:#F580B1;">-100</span>,<span style="color:#F580B1;">-100</span>,<span style="color:#F580B1;">-99</span>,<span style="color:#F580B1;">-98</span>,<span style="color:#F580B1;">-96</span>
+<a href="/qb64wiki/index.php/DATA" title="DATA"><span style="color:#4593D8;">DATA</span></a> <span style="color:#F580B1;">-93</span>,<span style="color:#F580B1;">-91</span>,<span style="color:#F580B1;">-87</span>,<span style="color:#F580B1;">-83</span>,<span style="color:#F580B1;">-79</span>,<span style="color:#F580B1;">-74</span>,<span style="color:#F580B1;">-69</span>,<span style="color:#F580B1;">-63</span>,<span style="color:#F580B1;">-57</span>,<span style="color:#F580B1;">-51</span>,<span style="color:#F580B1;">-44</span>,<span style="color:#F580B1;">-37</span>,<span style="color:#F580B1;">-30</span>,<span style="color:#F580B1;">-23</span>,<span style="color:#F580B1;">-15</span>,<span style="color:#F580B1;">-8</span>
+
+<span style="color:#919191;">' Set AMIGA PAULA like panning (well mostly)</span>
+<a href="/qb64wiki/index.php/SOUND" title="SOUND"><span style="color:#4593D8;">SOUND</span></a> <span style="color:#F580B1;">0</span>, <span style="color:#F580B1;">0</span>, , <span style="color:#F580B1;">-0.75!</span>, <span style="color:#F580B1;">10</span>, , <span style="color:#F580B1;">0</span> <span style="color:#919191;">' pan left</span>
+<a href="/qb64wiki/index.php/SOUND" title="SOUND"><span style="color:#4593D8;">SOUND</span></a> <span style="color:#F580B1;">0</span>, <span style="color:#F580B1;">0</span>, , <span style="color:#F580B1;">0.75!</span>, <span style="color:#F580B1;">10</span>, , <span style="color:#F580B1;">1</span> <span style="color:#919191;">' pan right</span>
+<a href="/qb64wiki/index.php/SOUND" title="SOUND"><span style="color:#4593D8;">SOUND</span></a> <span style="color:#F580B1;">0</span>, <span style="color:#F580B1;">0</span>, , <span style="color:#F580B1;">0.75!</span>, <span style="color:#F580B1;">10</span>, , <span style="color:#F580B1;">2</span> <span style="color:#919191;">' pan right</span>
+<a href="/qb64wiki/index.php/SOUND" title="SOUND"><span style="color:#4593D8;">SOUND</span></a> <span style="color:#F580B1;">0</span>, <span style="color:#F580B1;">0</span>, , <span style="color:#F580B1;">-0.75!</span>, <span style="color:#F580B1;">10</span>, , <span style="color:#F580B1;">3</span> <span style="color:#919191;">' pan left</span>
+
+<a class="mw-selflink selflink"><span style="color:#4593D8;">_WAVE</span></a> <span style="color:#F580B1;">0</span>, Timbre()
+<a class="mw-selflink selflink"><span style="color:#4593D8;">_WAVE</span></a> <span style="color:#F580B1;">1</span>, Timbre()
+<a class="mw-selflink selflink"><span style="color:#4593D8;">_WAVE</span></a> <span style="color:#F580B1;">2</span>, Timbre()
+<a class="mw-selflink selflink"><span style="color:#4593D8;">_WAVE</span></a> <span style="color:#F580B1;">3</span>, Timbre()
+
+<span style="color:#919191;">' Array CF maps MML commands to frequency indices.</span>
+C$ = <span style="color:#FFB100;">"cdefgabp#-123468&lt;&gt;l"</span>
+<a href="/qb64wiki/index.php/FOR" title="FOR"><span style="color:#4593D8;">FOR</span></a> I = <span style="color:#F580B1;">1</span> <a href="/qb64wiki/index.php/TO" title="TO"><span style="color:#4593D8;">TO</span></a> <span style="color:#F580B1;">19</span>
+    <a href="/qb64wiki/index.php/READ" title="READ"><span style="color:#4593D8;">READ</span></a> CF(I)
+<a href="/qb64wiki/index.php/NEXT" title="NEXT"><span style="color:#4593D8;">NEXT</span></a> I
+<a href="/qb64wiki/index.php/DATA" title="DATA"><span style="color:#4593D8;">DATA</span></a> <span style="color:#F580B1;">0</span>,<span style="color:#F580B1;">2</span>,<span style="color:#F580B1;">4</span>,<span style="color:#F580B1;">5</span>,<span style="color:#F580B1;">7</span>,<span style="color:#F580B1;">9</span>,<span style="color:#F580B1;">11</span>,<span style="color:#F580B1;">0</span>,<span style="color:#F580B1;">1</span>,<span style="color:#F580B1;">-1</span>,<span style="color:#F580B1;">0</span>,<span style="color:#F580B1;">0</span>,<span style="color:#F580B1;">0</span>,<span style="color:#F580B1;">0</span>,<span style="color:#F580B1;">0</span>,<span style="color:#F580B1;">0</span>,<span style="color:#F580B1;">-12</span>,<span style="color:#F580B1;">12</span>,<span style="color:#F580B1;">0</span>
+
+<span style="color:#919191;">' Array CT# assigns note lengths to MML commands.</span>
+<a href="/qb64wiki/index.php/FOR" title="FOR"><span style="color:#4593D8;">FOR</span></a> I = <span style="color:#F580B1;">1</span> <a href="/qb64wiki/index.php/TO" title="TO"><span style="color:#4593D8;">TO</span></a> <span style="color:#F580B1;">18</span>
+    <a href="/qb64wiki/index.php/READ" title="READ"><span style="color:#4593D8;">READ</span></a> CT#(I)
+<a href="/qb64wiki/index.php/NEXT" title="NEXT"><span style="color:#4593D8;">NEXT</span></a> I
+<span style="color:#919191;">' MML commands p1,p2,p3,p4,p6,p8 correspond to pause times 36.4 ... 4.55 units</span>
+<a href="/qb64wiki/index.php/DATA" title="DATA"><span style="color:#4593D8;">DATA</span></a> <span style="color:#F580B1;">0</span>,<span style="color:#F580B1;">0</span>,<span style="color:#F580B1;">0</span>,<span style="color:#F580B1;">0</span>,<span style="color:#F580B1;">0</span>,<span style="color:#F580B1;">0</span>,<span style="color:#F580B1;">0</span>,<span style="color:#F580B1;">0</span>,<span style="color:#F580B1;">0</span>,<span style="color:#F580B1;">0</span>,<span style="color:#F580B1;">36.4</span>,<span style="color:#F580B1;">18.2</span>,<span style="color:#F580B1;">12.133333</span>,<span style="color:#F580B1;">9.1</span>,<span style="color:#F580B1;">6.0666667</span>,<span style="color:#F580B1;">4.55</span>,<span style="color:#F580B1;">0</span>,<span style="color:#F580B1;">0</span>,<span style="color:#F580B1;">0</span>
+<a href="/qb64wiki/index.php/RETURN" title="RETURN"><span style="color:#4593D8;">RETURN</span></a>
+
+<span style="color:#919191;">' The music is written in special commands (MML), but as per the Wiki page</span>
+<span style="color:#919191;">' below MML not fully implemented here, missing o, v and t commands:</span>
+<span style="color:#919191;">' https://en.wikipedia.org/wiki/Music_Macro_Language#Modern_MML</span>
+
+<span style="color:#919191;">' The first 4 numbers are the base octaves (0-7) for each voice.</span>
+<span style="color:#919191;">' ln     - sets note length for the following notes of this voice:</span>
+<span style="color:#919191;">'           l1 = whole note, l2 = half note, l4 = quarter note, etc.</span>
+<span style="color:#919191;">' &gt;      - selects the next higher octave for this voice.</span>
+<span style="color:#919191;">' &lt;      - selects the next lower octave for this voice.</span>
+<span style="color:#919191;">' a to g - play the respective note,</span>
+<span style="color:#919191;">'           # (sharp) or - (flat) may follow directly.</span>
+<span style="color:#919191;">'          It may also follow a number to determine the duration of this note.</span>
+<span style="color:#919191;">' pn     - make a rest/pause length as for note length (ln) above.</span>
+
+Song:
+<a href="/qb64wiki/index.php/DATA" title="DATA"><span style="color:#4593D8;">DATA</span></a> <span style="color:#F580B1;">1</span>,<span style="color:#F580B1;">3</span>,<span style="color:#F580B1;">3</span>,<span style="color:#F580B1;">3</span>
+<a href="/qb64wiki/index.php/DATA" title="DATA"><span style="color:#4593D8;">DATA</span></a> l2g&gt;ge,l2p2de,l2p2l6g3f#g3a,l6p6gab&gt;dcced
+<a href="/qb64wiki/index.php/DATA" title="DATA"><span style="color:#4593D8;">DATA</span></a> &lt;b&gt;e&lt;e,ge&lt;b,b3ab3ge3d,dgf#gd&lt;bgab
+<a href="/qb64wiki/index.php/DATA" title="DATA"><span style="color:#4593D8;">DATA</span></a> ab&gt;c,a&gt;dc,e3f#g3de3&lt;b,&gt;cdedc&lt;babg
+<a href="/qb64wiki/index.php/DATA" title="DATA"><span style="color:#4593D8;">DATA</span></a> df#d,c&lt;a&gt;f#,a3&gt;da3ga3f#,f#gadf#a&gt;c&lt;ba
+<a href="/qb64wiki/index.php/DATA" title="DATA"><span style="color:#4593D8;">DATA</span></a> gec,g&lt;g&gt;e,d3f#g3f#g3a,bgab&gt;dcced
+<a href="/qb64wiki/index.php/DATA" title="DATA"><span style="color:#4593D8;">DATA</span></a> &lt;b&gt;ed,ge&lt;b,b3ab3ge3g,dgf#gd&lt;bgab
+<a href="/qb64wiki/index.php/DATA" title="DATA"><span style="color:#4593D8;">DATA</span></a> cc#d,&gt;ced,a3f#g3e&lt;a3&gt;c,e&gt;dc&lt;bagdgf#
+<a href="/qb64wiki/index.php/DATA" title="DATA"><span style="color:#4593D8;">DATA</span></a> &lt;gp3&gt;g6d3&lt;b6,dp2b3g6,&lt;b3&gt;gb3&gt;dg3d,gb&gt;dgd&lt;bgb&gt;d
+<a href="/qb64wiki/index.php/DATA" title="DATA"><span style="color:#4593D8;">DATA</span></a> g&gt;f#e,d&lt;gg,l2&lt;g1g,l2&lt;b1&gt;c
+<a href="/qb64wiki/index.php/DATA" title="DATA"><span style="color:#4593D8;">DATA</span></a> f#ed,agf#,a1b,d1d
+<a href="/qb64wiki/index.php/DATA" title="DATA"><span style="color:#4593D8;">DATA</span></a> ef#g,gag,bag,c1&lt;b
+<a href="/qb64wiki/index.php/DATA" title="DATA"><span style="color:#4593D8;">DATA</span></a> dp3d6d3d6,f#a3a6&gt;d3d6,al6d3ef#3g,l6adef#aga&gt;c&lt;b
+<a href="/qb64wiki/index.php/DATA" title="DATA"><span style="color:#4593D8;">DATA</span></a> &lt;d&gt;p3d6d3d6,f#3a6f#3d6&lt;a3&gt;d6,a3&gt;c&lt;a3f#d3f#,&gt;c&lt;af#df#a&gt;c&lt;ba
+<a href="/qb64wiki/index.php/DATA" title="DATA"><span style="color:#4593D8;">DATA</span></a> gf#e,dde,g3dg3f#g3a,bgab&gt;dcced
+<a href="/qb64wiki/index.php/DATA" title="DATA"><span style="color:#4593D8;">DATA</span></a> b&lt;b&gt;e,gd&lt;b,b3ag3f#e3g,dgf#gd&lt;bgab
+<a href="/qb64wiki/index.php/DATA" title="DATA"><span style="color:#4593D8;">DATA</span></a> cd&lt;d,l4&gt;c&lt;a&gt;d&lt;b&gt;c&lt;al2,a3gf#3ga3c,e&gt;dc&lt;bagdgf#
+<a href="/qb64wiki/index.php/DATA" title="DATA"><span style="color:#4593D8;">DATA</span></a> g&gt;ge,b&gt;de,&lt;b3&gt;dg3f#g3a,gbab&gt;dcced
+<a href="/qb64wiki/index.php/DATA" title="DATA"><span style="color:#4593D8;">DATA</span></a> &lt;b&gt;e&lt;e,ge&lt;b,b3ab3ge3d,dgf#gd&lt;bgab
+<a href="/qb64wiki/index.php/DATA" title="DATA"><span style="color:#4593D8;">DATA</span></a> ab&gt;c,a&gt;dc,e3f#g3de3&lt;b,&gt;cdedc&lt;babg
+<a href="/qb64wiki/index.php/DATA" title="DATA"><span style="color:#4593D8;">DATA</span></a> df#d,c&lt;a&gt;f#,a3&gt;f#a3ga3f#,f#gadf#a&gt;c&lt;ba
+<a href="/qb64wiki/index.php/DATA" title="DATA"><span style="color:#4593D8;">DATA</span></a> gec,g&lt;g&gt;e,d3f#g3f#g3a,bgab&gt;dcced
+<a href="/qb64wiki/index.php/DATA" title="DATA"><span style="color:#4593D8;">DATA</span></a> &lt;b&gt;ed,ge&lt;b,b3ab3ge3g,dgf#gd&lt;bgab
+<a href="/qb64wiki/index.php/DATA" title="DATA"><span style="color:#4593D8;">DATA</span></a> cc#d,&gt;ced,a3f#g3e&lt;a3&gt;c,e&gt;dc&lt;bagdgf#
+<a href="/qb64wiki/index.php/DATA" title="DATA"><span style="color:#4593D8;">DATA</span></a> &lt;g&gt;f#e,d&lt;gg,l2b1&gt;c,l2g1g
+<a href="/qb64wiki/index.php/DATA" title="DATA"><span style="color:#4593D8;">DATA</span></a> f#ed,agf#,d1d,a1b
+<a href="/qb64wiki/index.php/DATA" title="DATA"><span style="color:#4593D8;">DATA</span></a> ef#g,gag,c1&lt;b,bag
+<a href="/qb64wiki/index.php/DATA" title="DATA"><span style="color:#4593D8;">DATA</span></a> dp3d6d3d6,f#l6a3a&gt;d3d,al6d3ef#3g,l6ddef#aga&gt;c&lt;b
+<a href="/qb64wiki/index.php/DATA" title="DATA"><span style="color:#4593D8;">DATA</span></a> &lt;dp3&gt;d6d3d6,f#3af#3d&lt;a3&gt;d,a3&gt;c&lt;a3f#d3f#,&gt;c&lt;af#df#a&gt;c&lt;ba
+<a href="/qb64wiki/index.php/DATA" title="DATA"><span style="color:#4593D8;">DATA</span></a> gf#e,l2dde,l2b1&gt;c,bgab&gt;dcced
+<a href="/qb64wiki/index.php/DATA" title="DATA"><span style="color:#4593D8;">DATA</span></a> b&lt;b&gt;e,gd&lt;b,d1&lt;b,dgf#gd&lt;bgab
+<a href="/qb64wiki/index.php/DATA" title="DATA"><span style="color:#4593D8;">DATA</span></a> cd&lt;d,l4&gt;c&lt;a&gt;d&lt;b&gt;c&lt;a,a4b8&gt;c8&lt;ba,e&gt;dc&lt;bagdgf#
+<a href="/qb64wiki/index.php/DATA" title="DATA"><span style="color:#4593D8;">DATA</span></a> g&gt;ge,l2b&gt;de,l6g3dg3f#g3a,gbab&gt;dcced
+<a href="/qb64wiki/index.php/DATA" title="DATA"><span style="color:#4593D8;">DATA</span></a> &lt;b&gt;e&lt;e,ge&lt;b,b3ab3ge3d,dgf#gd&lt;bgab
+<a href="/qb64wiki/index.php/DATA" title="DATA"><span style="color:#4593D8;">DATA</span></a> ab&gt;c,a&gt;dc,e3f#g3de3&lt;b,&gt;cdedc&lt;babg
+<a href="/qb64wiki/index.php/DATA" title="DATA"><span style="color:#4593D8;">DATA</span></a> df#d,c&lt;a&gt;f#,a3&gt;da3ga3f#,f#gadf#a&gt;c&lt;ba
+<a href="/qb64wiki/index.php/DATA" title="DATA"><span style="color:#4593D8;">DATA</span></a> gec,g&lt;g&gt;e,d3f#g3f#g3a,bgab&gt;dcced
+<a href="/qb64wiki/index.php/DATA" title="DATA"><span style="color:#4593D8;">DATA</span></a> &lt;b&gt;ed,ge&lt;b,b3ab3ge3g,dgf#gd&lt;bgab
+<a href="/qb64wiki/index.php/DATA" title="DATA"><span style="color:#4593D8;">DATA</span></a> cc#d,&gt;ced,a3f#g3e&lt;a3&gt;c,e&gt;dc&lt;bagdgf#
+<a href="/qb64wiki/index.php/DATA" title="DATA"><span style="color:#4593D8;">DATA</span></a> &lt;gp3&gt;g6f#3e6,dp3g6d3e6,&lt;b3&gt;gb3&gt;dg3&lt;g,gb&gt;dgd&lt;bdb&gt;c#
+<a href="/qb64wiki/index.php/DATA" title="DATA"><span style="color:#4593D8;">DATA</span></a> dc&lt;b,f#dd,l2a1b,d&lt;def#ag#g#ba
+<a href="/qb64wiki/index.php/DATA" title="DATA"><span style="color:#4593D8;">DATA</span></a> a&gt;a4g4f4e4,e&lt;a&gt;a,&gt;c1c,a&gt;c&lt;b&gt;c&lt;aecde
+<a href="/qb64wiki/index.php/DATA" title="DATA"><span style="color:#4593D8;">DATA</span></a> d&lt;b&gt;e,aag#,&lt;bb4&gt;c8d8&lt;b,f&gt;dcd&lt;bg#ef#g#
+<a href="/qb64wiki/index.php/DATA" title="DATA"><span style="color:#4593D8;">DATA</span></a> a&gt;fd,e&lt;a&gt;f#,al6a3g#a3b,a&gt;c&lt;b&gt;ceddfe
+<a href="/qb64wiki/index.php/DATA" title="DATA"><span style="color:#4593D8;">DATA</span></a> cfe,afc,&gt;c3&lt;b&gt;c3&lt;af3a,eag#aec&lt;ab&gt;c
+<a href="/qb64wiki/index.php/DATA" title="DATA"><span style="color:#4593D8;">DATA</span></a> dd#e,df#e,a3g#a3f#&lt;b3&gt;d,fedc&lt;baeag#
+<a href="/qb64wiki/index.php/DATA" title="DATA"><span style="color:#4593D8;">DATA</span></a> &lt;a&gt;ab,c&lt;ag,&gt;l2c1d,a&gt;ceap3l2d
+<a href="/qb64wiki/index.php/DATA" title="DATA"><span style="color:#4593D8;">DATA</span></a> &gt;c&lt;ae,&gt;cag,e1e,l6ecdegfgb-a
+<a href="/qb64wiki/index.php/DATA" title="DATA"><span style="color:#4593D8;">DATA</span></a> fdg,df#g,dd4e8f8d,a&gt;c&lt;b&gt;c&lt;afdef
+<a href="/qb64wiki/index.php/DATA" title="DATA"><span style="color:#4593D8;">DATA</span></a> cec,geg,l6c3&lt;g&gt;c3&lt;ge3d,egfgec&lt;gab-
+<a href="/qb64wiki/index.php/DATA" title="DATA"><span style="color:#4593D8;">DATA</span></a> fdg,fag,c3ef3ab3&gt;d,a&gt;c&lt;b&gt;c&lt;afdef
+<a href="/qb64wiki/index.php/DATA" title="DATA"><span style="color:#4593D8;">DATA</span></a> cp3c6&lt;b3&gt;d6,gp3d6d3d6,c3&lt;g&gt;c3&lt;a&gt;d3&lt;f#,ecdegf#gba
+<a href="/qb64wiki/index.php/DATA" title="DATA"><span style="color:#4593D8;">DATA</span></a> &lt;g&gt;ge,dde,l2b1&gt;c,bgab&gt;dcced
+<a href="/qb64wiki/index.php/DATA" title="DATA"><span style="color:#4593D8;">DATA</span></a> &lt;b&gt;e&lt;e,ge&lt;b,d1d,dgf#gd&lt;bgab
+<a href="/qb64wiki/index.php/DATA" title="DATA"><span style="color:#4593D8;">DATA</span></a> ab&gt;c,a&gt;dc,c&lt;b1,&gt;cdedc&lt;babg
+<a href="/qb64wiki/index.php/DATA" title="DATA"><span style="color:#4593D8;">DATA</span></a> dp3d6d3d6,cl6&lt;a3a&gt;d3d,l6a3c#d3ef#3g,f#def#aga&gt;c&lt;b
+<a href="/qb64wiki/index.php/DATA" title="DATA"><span style="color:#4593D8;">DATA</span></a> &lt;dp3&gt;d6d3d6,f#3af#3d&lt;a3&gt;d,a3&gt;c&lt;a3f#d3f#,&gt;c&lt;af#df#a&gt;c&lt;ba
+<a href="/qb64wiki/index.php/DATA" title="DATA"><span style="color:#4593D8;">DATA</span></a> gf#e,l2dde,l2b1&gt;c,bgab&gt;dcced
+<a href="/qb64wiki/index.php/DATA" title="DATA"><span style="color:#4593D8;">DATA</span></a> b&lt;b&gt;e,gd&lt;b,d1&lt;b,dgf#gd&lt;bgab
+<a href="/qb64wiki/index.php/DATA" title="DATA"><span style="color:#4593D8;">DATA</span></a> cd&lt;d,l4&gt;c&lt;a&gt;d&lt;b&gt;c&lt;a,a4b8&gt;c8&lt;ba,e&gt;dc&lt;bagdgf#
+<a href="/qb64wiki/index.php/DATA" title="DATA"><span style="color:#4593D8;">DATA</span></a> g1g2,l2gp3&gt;g6d3g6,gl6&lt;b3&gt;dg3d,gb&gt;dgd&lt;bgb&gt;a
+<a href="/qb64wiki/index.php/DATA" title="DATA"><span style="color:#4593D8;">DATA</span></a> g1g2,dp3g6e3c6,&lt;b3g&gt;d3b&gt;c2,fd&lt;bgb&gt;ded&lt;a
+<a href="/qb64wiki/index.php/DATA" title="DATA"><span style="color:#4593D8;">DATA</span></a> g1g2,&lt;ap3&gt;d6&lt;b3&gt;e6,c3&lt;ab2b3g,f#a&gt;cd&lt;bgegb
+<a href="/qb64wiki/index.php/DATA" title="DATA"><span style="color:#4593D8;">DATA</span></a> g1g2,&lt;e3a6f#3&gt;a6f#3d6,a2a3f#d3f#,&gt;c&lt;af#df#a&gt;c&lt;ba
+<a href="/qb64wiki/index.php/DATA" title="DATA"><span style="color:#4593D8;">DATA</span></a> g&gt;ge,dde,g3dg3f#g3a,bgab&gt;dcced
+<a href="/qb64wiki/index.php/DATA" title="DATA"><span style="color:#4593D8;">DATA</span></a> &lt;b&gt;e&lt;e,ge&lt;b,b3ab3ge3d,dgf#gd&lt;bgab
+<a href="/qb64wiki/index.php/DATA" title="DATA"><span style="color:#4593D8;">DATA</span></a> ab&gt;c,a&gt;d&lt;c,e3f#g3de3&lt;b,&gt;cdedc&lt;babg
+<a href="/qb64wiki/index.php/DATA" title="DATA"><span style="color:#4593D8;">DATA</span></a> df#d,c&lt;a&gt;f#,a3&gt;da3ga3f#,f#gadf#a&gt;c&lt;ba
+<a href="/qb64wiki/index.php/DATA" title="DATA"><span style="color:#4593D8;">DATA</span></a> gec,g&lt;g&gt;e,d3f#g3f#g3a,bgab&gt;dcced
+<a href="/qb64wiki/index.php/DATA" title="DATA"><span style="color:#4593D8;">DATA</span></a> &lt;b&gt;ed,ge&lt;d,b3ab3ge3g,dgf#gd&lt;bgab
+<a href="/qb64wiki/index.php/DATA" title="DATA"><span style="color:#4593D8;">DATA</span></a> cc#d,d1d2,a3f#g3e&lt;a3&gt;c,e&gt;dc&lt;bagdgf#
+<a href="/qb64wiki/index.php/DATA" title="DATA"><span style="color:#4593D8;">DATA</span></a> &lt;g1g2,p2,&lt;b1b2,g1g2
+<a href="/qb64wiki/index.php/DATA" title="DATA"><span style="color:#4593D8;">DATA</span></a> p1,p1,p1,p1
+<a href="/qb64wiki/index.php/DATA" title="DATA"><span style="color:#4593D8;">DATA</span></a> x
+
+<a href="/qb64wiki/index.php/SUB" title="SUB"><span style="color:#4593D8;">SUB</span></a> <span style="color:#55FF55;">DrawLine</span> (iStep, hue) <a href="/qb64wiki/index.php/STATIC" title="STATIC"><span style="color:#4593D8;">STATIC</span></a>
+    winWidth = <a href="/qb64wiki/index.php/WIDTH_(function)" title="WIDTH (function)"><span style="color:#4593D8;">_WIDTH</span></a>
+    winHeight = <a href="/qb64wiki/index.php/HEIGHT" title="HEIGHT"><span style="color:#4593D8;">_HEIGHT</span></a>
+    iStep = (iStep + <span style="color:#F580B1;">1</span>) <a href="/qb64wiki/index.php/MOD" title="MOD"><span style="color:#4593D8;">MOD</span></a> <span style="color:#F580B1;">60</span>
+    side = iStep \ <span style="color:#F580B1;">15</span>
+    I! = (iStep <a href="/qb64wiki/index.php/MOD" title="MOD"><span style="color:#4593D8;">MOD</span></a> <span style="color:#F580B1;">15</span>) / <span style="color:#F580B1;">15!</span>
+    i1! = <span style="color:#F580B1;">1!</span> - I!
+
+    <a href="/qb64wiki/index.php/ON" title="ON"><span style="color:#4593D8;">ON</span></a> side + <span style="color:#F580B1;">1</span> <a href="/qb64wiki/index.php/GOSUB" title="GOSUB"><span style="color:#4593D8;">GOSUB</span></a> dl_top, dl_left, dl_bottom, dl_right
+
+    <a href="/qb64wiki/index.php/EXIT_SUB" title="EXIT SUB"><span style="color:#4593D8;">EXIT SUB</span></a>
+
+    dl_top:
+    <a href="/qb64wiki/index.php/LINE" title="LINE"><span style="color:#4593D8;">LINE</span></a> (winWidth * I!, <span style="color:#F580B1;">0</span>)-(winWidth, winHeight * I!), hue
+    <a href="/qb64wiki/index.php/RETURN" title="RETURN"><span style="color:#4593D8;">RETURN</span></a>
+
+    dl_left:
+    <a href="/qb64wiki/index.php/LINE" title="LINE"><span style="color:#4593D8;">LINE</span></a> (winWidth, winHeight * I!)-(winWidth * i1!, winHeight), hue
+    <a href="/qb64wiki/index.php/RETURN" title="RETURN"><span style="color:#4593D8;">RETURN</span></a>
+
+    dl_bottom:
+    <a href="/qb64wiki/index.php/LINE" title="LINE"><span style="color:#4593D8;">LINE</span></a> (winWidth * i1!, winHeight)-(<span style="color:#F580B1;">0</span>, winHeight * i1!), hue
+    <a href="/qb64wiki/index.php/RETURN" title="RETURN"><span style="color:#4593D8;">RETURN</span></a>
+
+    dl_right:
+    <a href="/qb64wiki/index.php/LINE" title="LINE"><span style="color:#4593D8;">LINE</span></a> (<span style="color:#F580B1;">0</span>, winHeight * i1!)-(winWidth * I!, <span style="color:#F580B1;">0</span>), hue
+    <a href="/qb64wiki/index.php/RETURN" title="RETURN"><span style="color:#4593D8;">RETURN</span></a>
+<a href="/qb64wiki/index.php/END_SUB" title="END SUB"><span style="color:#4593D8;">END SUB</span></a>
+</pre>
+         </td>
+        </tr>
+       </tbody>
+      </table>
+      <center>
+       <span style="font-family: Courier New, Courier, monospace; font-size: 0.80em; line-height: 50%;">
+        QB64-PE port of an old AmigaBasic example by a740g.
+       </span>
+      </center>
+      <p>
+       <br/>
+      </p>
+      <h2>
+       <span class="mw-headline" id="See_also">
+        See also
+       </span>
+      </h2>
+      <ul>
+       <li>
+        <a href="/qb64wiki/index.php/PLAY_(function)" title="PLAY (function)">
+         PLAY (function)
+        </a>
+       </li>
+       <li>
+        <a href="/qb64wiki/index.php/PLAY" title="PLAY">
+         PLAY
+        </a>
+        ,
+        <a href="/qb64wiki/index.php/SOUND" title="SOUND">
+         SOUND
+        </a>
+        ,
+        <a href="/qb64wiki/index.php/BEEP" title="BEEP">
+         BEEP
+        </a>
+       </li>
+       <li>
+        <a href="/qb64wiki/index.php/SNDOPEN" title="SNDOPEN">
+         _SNDOPEN
+        </a>
+        ,
+        <a href="/qb64wiki/index.php/SNDRAW" title="SNDRAW">
+         _SNDRAW
+        </a>
+       </li>
+      </ul>
+      <p>
+       <br/>
+      </p>
+      <hr/>
+      <center>
+       <b>
+        Navigation:
+       </b>
+      </center>
+      <center>
+       <a href="/qb64wiki/index.php/Main_Page" title="Main Page">
+        Main Page with Articles and Tutorials
+       </a>
+      </center>
+      <center>
+       <a href="/qb64wiki/index.php/Keyword_Reference_-_Alphabetical" title="Keyword Reference - Alphabetical">
+        Keyword Reference - Alphabetical
+       </a>
+      </center>
+      <center>
+       <a href="/qb64wiki/index.php/Keyword_Reference_-_By_usage" title="Keyword Reference - By usage">
+        Keyword Reference - By usage
+       </a>
+      </center>
+      <center>
+       <b>
+        <a class="external text" href="https://qb64phoenix.com/forum/showthread.php?tid=2800" rel="nofollow">
+         Report a broken link
+        </a>
+       </b>
+       <br/>
+      </center>
+      <!-- 
+NewPP limit report
+Cached time: 20250124160147
+Cache expiry: 86400
+Reduced expiry: false
+Complications: [show‐toc]
+CPU time usage: 0.173 seconds
+Real time usage: 0.195 seconds
+Preprocessor visited node count: 4790/1000000
+Post‐expand include size: 29957/2097152 bytes
+Template argument size: 7312/2097152 bytes
+Highest expansion depth: 4/100
+Expensive parser function count: 0/100
+Unstrip recursion depth: 0/20
+Unstrip post‐expand size: 4115/5000000 bytes
+-->
+      <!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%  105.050      1 -total
+ 19.47%   20.453    434 Template:Text
+ 11.11%   11.667    224 Template:Cl
+  2.41%    2.529      1 Template:CodeEnd
+  2.32%    2.432      1 Template:PageSeeAlso
+  2.30%    2.420      1 Template:PageSyntax
+  2.24%    2.350      1 Template:PageExamples
+  2.24%    2.348      1 Template:PageNavigation
+  2.09%    2.192      6 Template:Parameter
+  1.81%    1.905      1 Template:Small
+-->
+      <!-- Saved in parser cache with key qb64pnix_mw19894-mwmb_:pcache:idhash:1250-0!canonical and timestamp 20250124160147 and revision id 9334.
+ -->
+     </div>
+     <div class="printfooter" data-nosnippet="">
+      Retrieved from "
+      <a dir="ltr" href="https://qb64phoenix.com/qb64wiki/index.php?title=WAVE&amp;oldid=9334">
+       https://qb64phoenix.com/qb64wiki/index.php?title=WAVE&amp;oldid=9334
+      </a>
+      "
+     </div>
+    </div>
+    <div class="catlinks catlinks-allhidden" data-mw="interface" id="catlinks">
+    </div>
+   </div>
+  </div>
+  <div id="mw-navigation">
+   <h2>
+    Navigation menu
+   </h2>
+   <div id="mw-head">
+    <nav aria-labelledby="p-personal-label" class="vector-menu mw-portlet mw-portlet-personal vector-user-menu-legacy" id="p-personal" role="navigation">
+     <h3 class="vector-menu-heading" id="p-personal-label">
+      <span class="vector-menu-heading-label">
+       Personal tools
+      </span>
+     </h3>
+     <div class="vector-menu-content">
+      <ul class="vector-menu-content-list">
+       <li class="mw-list-item" id="pt-login">
+        <a accesskey="o" href="/qb64wiki/index.php?title=Special:UserLogin&amp;returnto=WAVE" title="You are encouraged to log in; however, it is not mandatory [o]">
+         <span>
+          Log in
+         </span>
+        </a>
+       </li>
+      </ul>
+     </div>
+    </nav>
+    <div id="left-navigation">
+     <nav aria-labelledby="p-namespaces-label" class="vector-menu mw-portlet mw-portlet-namespaces vector-menu-tabs vector-menu-tabs-legacy" id="p-namespaces" role="navigation">
+      <h3 class="vector-menu-heading" id="p-namespaces-label">
+       <span class="vector-menu-heading-label">
+        Namespaces
+       </span>
+      </h3>
+      <div class="vector-menu-content">
+       <ul class="vector-menu-content-list">
+        <li class="selected mw-list-item" id="ca-nstab-main">
+         <a accesskey="c" href="/qb64wiki/index.php/WAVE" title="View the content page [c]">
+          <span>
+           Page
+          </span>
+         </a>
+        </li>
+        <li class="new mw-list-item" id="ca-talk">
+         <a accesskey="t" href="/qb64wiki/index.php?title=Talk:WAVE&amp;action=edit&amp;redlink=1" rel="discussion" title="Discussion about the content page (page does not exist) [t]">
+          <span>
+           Discussion
+          </span>
+         </a>
+        </li>
+       </ul>
+      </div>
+     </nav>
+     <nav aria-labelledby="p-variants-label" class="vector-menu mw-portlet mw-portlet-variants emptyPortlet vector-menu-dropdown" id="p-variants" role="navigation">
+      <input aria-haspopup="true" aria-labelledby="p-variants-label" class="vector-menu-checkbox" data-event-name="ui.dropdown-p-variants" id="p-variants-checkbox" role="button" type="checkbox"/>
+      <label aria-label="Change language variant" class="vector-menu-heading" id="p-variants-label">
+       <span class="vector-menu-heading-label">
+        English
+       </span>
+      </label>
+      <div class="vector-menu-content">
+       <ul class="vector-menu-content-list">
+       </ul>
+      </div>
+     </nav>
+    </div>
+    <div id="right-navigation">
+     <nav aria-labelledby="p-views-label" class="vector-menu mw-portlet mw-portlet-views vector-menu-tabs vector-menu-tabs-legacy" id="p-views" role="navigation">
+      <h3 class="vector-menu-heading" id="p-views-label">
+       <span class="vector-menu-heading-label">
+        Views
+       </span>
+      </h3>
+      <div class="vector-menu-content">
+       <ul class="vector-menu-content-list">
+        <li class="selected mw-list-item" id="ca-view">
+         <a href="/qb64wiki/index.php/WAVE">
+          <span>
+           Read
+          </span>
+         </a>
+        </li>
+        <li class="mw-list-item" id="ca-viewsource">
+         <a accesskey="e" href="/qb64wiki/index.php?title=WAVE&amp;action=edit" title="This page is protected.
+You can view its source [e]">
+          <span>
+           View source
+          </span>
+         </a>
+        </li>
+        <li class="mw-list-item" id="ca-history">
+         <a accesskey="h" href="/qb64wiki/index.php?title=WAVE&amp;action=history" title="Past revisions of this page [h]">
+          <span>
+           View history
+          </span>
+         </a>
+        </li>
+       </ul>
+      </div>
+     </nav>
+     <nav aria-labelledby="p-cactions-label" class="vector-menu mw-portlet mw-portlet-cactions emptyPortlet vector-menu-dropdown" id="p-cactions" role="navigation" title="More options">
+      <input aria-haspopup="true" aria-labelledby="p-cactions-label" class="vector-menu-checkbox" data-event-name="ui.dropdown-p-cactions" id="p-cactions-checkbox" role="button" type="checkbox"/>
+      <label class="vector-menu-heading" id="p-cactions-label">
+       <span class="vector-menu-heading-label">
+        More
+       </span>
+      </label>
+      <div class="vector-menu-content">
+       <ul class="vector-menu-content-list">
+       </ul>
+      </div>
+     </nav>
+     <div class="vector-search-box-vue vector-search-box-show-thumbnail vector-search-box-auto-expand-width vector-search-box" id="p-search" role="search">
+      <div>
+       <h3>
+        <label for="searchInput">
+         Search
+        </label>
+       </h3>
+       <form action="/qb64wiki/index.php" class="vector-search-box-form" id="searchform">
+        <div class="vector-search-box-inner" data-search-loc="header-navigation" id="simpleSearch">
+         <input accesskey="f" aria-label="Search QB64 Phoenix Edition Wiki" autocapitalize="sentences" class="vector-search-box-input" id="searchInput" name="search" placeholder="Search QB64 Phoenix Edition Wiki" title="Search QB64 Phoenix Edition Wiki [f]" type="search"/>
+         <input name="title" type="hidden" value="Special:Search"/>
+         <input class="searchButton mw-fallbackSearchButton" id="mw-searchButton" name="fulltext" title="Search the pages for this text" type="submit" value="Search"/>
+         <input class="searchButton" id="searchButton" name="go" title="Go to a page with this exact name if it exists" type="submit" value="Go"/>
+        </div>
+       </form>
+      </div>
+     </div>
+    </div>
+   </div>
+   <div id="mw-panel">
+    <div id="p-logo" role="banner">
+     <a class="mw-wiki-logo" href="/qb64wiki/index.php/Main_Page" title="Visit the main page">
+     </a>
+    </div>
+    <nav aria-labelledby="p-navigation-label" class="vector-menu mw-portlet mw-portlet-navigation vector-menu-portal portal" id="p-navigation" role="navigation">
+     <h3 class="vector-menu-heading" id="p-navigation-label">
+      <span class="vector-menu-heading-label">
+       Navigation
+      </span>
+     </h3>
+     <div class="vector-menu-content">
+      <ul class="vector-menu-content-list">
+       <li class="mw-list-item" id="n-mainpage-description">
+        <a accesskey="z" href="/qb64wiki/index.php/Main_Page" title="Visit the main page [z]">
+         <span>
+          Main page
+         </span>
+        </a>
+       </li>
+       <li class="mw-list-item" id="n-recentchanges">
+        <a accesskey="r" href="/qb64wiki/index.php/Special:RecentChanges" title="A list of recent changes in the wiki [r]">
+         <span>
+          Recent changes
+         </span>
+        </a>
+       </li>
+       <li class="mw-list-item" id="n-randompage">
+        <a accesskey="x" href="/qb64wiki/index.php/Special:Random" title="Load a random page [x]">
+         <span>
+          Random page
+         </span>
+        </a>
+       </li>
+       <li class="mw-list-item" id="n-help-mediawiki">
+        <a href="https://www.mediawiki.org/wiki/Special:MyLanguage/Help:Contents">
+         <span>
+          Help about MediaWiki
+         </span>
+        </a>
+       </li>
+      </ul>
+     </div>
+    </nav>
+    <nav aria-labelledby="p-tb-label" class="vector-menu mw-portlet mw-portlet-tb vector-menu-portal portal" id="p-tb" role="navigation">
+     <h3 class="vector-menu-heading" id="p-tb-label">
+      <span class="vector-menu-heading-label">
+       Tools
+      </span>
+     </h3>
+     <div class="vector-menu-content">
+      <ul class="vector-menu-content-list">
+       <li class="mw-list-item" id="t-whatlinkshere">
+        <a accesskey="j" href="/qb64wiki/index.php/Special:WhatLinksHere/WAVE" title="A list of all wiki pages that link here [j]">
+         <span>
+          What links here
+         </span>
+        </a>
+       </li>
+       <li class="mw-list-item" id="t-recentchangeslinked">
+        <a accesskey="k" href="/qb64wiki/index.php/Special:RecentChangesLinked/WAVE" rel="nofollow" title="Recent changes in pages linked from this page [k]">
+         <span>
+          Related changes
+         </span>
+        </a>
+       </li>
+       <li class="mw-list-item" id="t-specialpages">
+        <a accesskey="q" href="/qb64wiki/index.php/Special:SpecialPages" title="A list of all special pages [q]">
+         <span>
+          Special pages
+         </span>
+        </a>
+       </li>
+       <li class="mw-list-item" id="t-print">
+        <a accesskey="p" href="javascript:print();" rel="alternate" title="Printable version of this page [p]">
+         <span>
+          Printable version
+         </span>
+        </a>
+       </li>
+       <li class="mw-list-item" id="t-permalink">
+        <a href="/qb64wiki/index.php?title=WAVE&amp;oldid=9334" title="Permanent link to this revision of this page">
+         <span>
+          Permanent link
+         </span>
+        </a>
+       </li>
+       <li class="mw-list-item" id="t-info">
+        <a href="/qb64wiki/index.php?title=WAVE&amp;action=info" title="More information about this page">
+         <span>
+          Page information
+         </span>
+        </a>
+       </li>
+      </ul>
+     </div>
+    </nav>
+   </div>
+  </div>
+  <footer class="mw-footer" id="footer" role="contentinfo">
+   <ul id="footer-info">
+    <li id="footer-info-lastmod">
+     This page was last edited on 23 November 2024, at 18:25.
+    </li>
+   </ul>
+   <ul id="footer-places">
+    <li id="footer-places-privacy">
+     <a href="/qb64wiki/index.php/QB64_Phoenix_Edition_Wiki:Privacy_policy">
+      Privacy policy
+     </a>
+    </li>
+    <li id="footer-places-about">
+     <a href="/qb64wiki/index.php/QB64_Phoenix_Edition_Wiki:About">
+      About QB64 Phoenix Edition Wiki
+     </a>
+    </li>
+    <li id="footer-places-disclaimer">
+     <a href="/qb64wiki/index.php/QB64_Phoenix_Edition_Wiki:General_disclaimer">
+      Disclaimers
+     </a>
+    </li>
+   </ul>
+   <ul class="noprint" id="footer-icons">
+    <li id="footer-poweredbyico">
+     <a href="https://www.mediawiki.org/">
+      <img alt="Powered by MediaWiki" height="31" loading="lazy" src="/qb64wiki/resources/assets/poweredby_mediawiki_88x31.png" srcset="/qb64wiki/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /qb64wiki/resources/assets/poweredby_mediawiki_176x62.png 2x" width="88"/>
+     </a>
+    </li>
+   </ul>
+  </footer>
+  <script>
+   (RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgPageParseReport":{"limitreport":{"cputime":"0.173","walltime":"0.195","ppvisitednodes":{"value":4790,"limit":1000000},"postexpandincludesize":{"value":29957,"limit":2097152},"templateargumentsize":{"value":7312,"limit":2097152},"expansiondepth":{"value":4,"limit":100},"expensivefunctioncount":{"value":0,"limit":100},"unstrip-depth":{"value":0,"limit":20},"unstrip-size":{"value":4115,"limit":5000000},"timingprofile":["100.00%  105.050      1 -total"," 19.47%   20.453    434 Template:Text"," 11.11%   11.667    224 Template:Cl","  2.41%    2.529      1 Template:CodeEnd","  2.32%    2.432      1 Template:PageSeeAlso","  2.30%    2.420      1 Template:PageSyntax","  2.24%    2.350      1 Template:PageExamples","  2.24%    2.348      1 Template:PageNavigation","  2.09%    2.192      6 Template:Parameter","  1.81%    1.905      1 Template:Small"]},"cachereport":{"timestamp":"20250124160147","ttl":86400,"transientcontent":false}}});mw.config.set({"wgBackendResponseTime":80});});
+  </script>
+ </body>
+</html>

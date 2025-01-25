@@ -186,11 +186,11 @@ value2$ = "m"
 value3$ = "z"
 
 SELECT CASE value$
-CASE value1$: PRINT "A only"
-CASE value1$ TO value2$: PRINT "B to m" 'A is already evaluated
-CASE value1$, value2$, value3$: PRINT "z only" 'A and m are already evaluated
-CASE IS > value2$: PRINT "greater than m but not z" 'z is already evaluated
-CASE ELSE: PRINT "other value" 'key entry below A including all numbers
+ CASE value1$: PRINT "A only"
+ CASE value1$ TO value2$: PRINT "B to m" 'A is already evaluated
+ CASE value1$, value2$, value3$: PRINT "z only" 'A and m are already evaluated
+ CASE IS > value2$: PRINT "greater than m but not z" 'z is already evaluated
+ CASE ELSE: PRINT "other value" 'key entry below A including all numbers
 END SELECT
 ```
   
@@ -205,15 +205,15 @@ END SELECT
 
 
 * [DIM](DIM.md) , [DEFSTR](DEFSTR.md)
-* [CHR&dollar;](CHR&dollar;.md) , [ASC](ASC.md) (function)
-* [LEFT&dollar;](LEFT&dollar;.md) , [RIGHT&dollar;](RIGHT&dollar;.md) , [MID&dollar;](MID&dollar;.md) (function)
-* [LTRIM&dollar;](LTRIM&dollar;.md) , [RTRIM&dollar;](RTRIM&dollar;.md)
-* [LCASE&dollar;](LCASE&dollar;.md) , [UCASE&dollar;](UCASE&dollar;.md)
-* [STR&dollar;](STR&dollar;.md)
-* [HEX&dollar;](HEX&dollar;.md)
-* [MKI&dollar;](MKI&dollar;.md) , [MKL&dollar;](MKL&dollar;.md) , [MKS&dollar;](MKS&dollar;.md) , [MKD&dollar;](MKD&dollar;.md) , [_MK&dollar;](MK&dollar;.md)
-* [CVI](CVI.md) , [CVL](CVL.md) , [CVS](CVS.md) , [CVD](CVD.md) , [_CV](CV.md)
+* [CHR\$](CHR\$.md) , [ASC](ASC.md) (function)
+* [LEFT\$](LEFT\$.md) , [RIGHT\$](RIGHT\$.md) , [MID\$](MID\$.md) (function)
+* [LTRIM\$](LTRIM\$.md) , [RTRIM\$](RTRIM\$.md)
+* [LCASE\$](LCASE\$.md) , [UCASE\$](UCASE\$.md)
+* [STR\$](STR\$.md)
+* [HEX\$](HEX\$.md)
+* [MKI\$](MKI\$.md) , [MKL\$](MKL\$.md) , [MKS\$](MKS\$.md) , [MKD\$](MKD\$.md) , _MK$
+* [CVI](CVI.md) , [CVL](CVL.md) , [CVS](CVS.md) , [CVD](CVD.md) , _CV
 * [LEN](LEN.md) , [VAL](VAL.md)
-* ASCII , [DRAW](DRAW.md)
-* [PRINT](PRINT.md) , [PRINT](PRINT.md) [USING](USING.md) , [WRITE](WRITE.md)
+* [ASCII](ASCII.md) , [DRAW](DRAW.md)
+* [PRINT](PRINT.md) , [PRINT](PRINT.md) USING , [WRITE](WRITE.md)
 </blockquote>

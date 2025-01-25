@@ -119,7 +119,7 @@ br ~ h5 {
 <blockquote>
 
 
-* QB64 allows a code number to be used after [SYSTEM](SYSTEM.md) to be read in another program module by the [SHELL](SHELL.md) or [_SHELLHIDE](SHELLHIDE.md) functions.
+* QB64 allows a code number to be used after [SYSTEM](SYSTEM.md) to be read in another program module by the [SHELL](SHELL.md) or _SHELLHIDE functions.
 </blockquote>
 
 #### EXAMPLES
@@ -135,6 +135,6 @@ br ~ h5 {
 
 
 * [SHELL](SHELL.md) (function)
-* [_SHELLHIDE](SHELLHIDE.md)
-* [_EXIT](EXIT.md) (function) , [END](END.md)
+* _SHELLHIDE
+* _EXIT (function) , [END](END.md)
 </blockquote>

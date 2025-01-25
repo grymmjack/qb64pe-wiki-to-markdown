@@ -121,9 +121,9 @@ br ~ h5 {
 
 * Space characters are printed until the print cursor reaches the designated column% , overwriting existing characters.
 * If a subsequent [TAB](TAB.md) column% is less than the current position, [TAB](TAB.md) moves the next print to that column on the next row.
-* ASCII [CHR&dollar;](CHR&dollar;.md) (9) can be substituted for sequencial 9 space column moves.
-* Comma [PRINT](PRINT.md) spacing is up to 15 column places (IE: TAB(15)) to a maximum column of 57.
-* When printing to a file, a carriage return( [CHR&dollar;](CHR&dollar;.md) (13)) and linefeed( [CHR&dollar;](CHR&dollar;.md) (10)) character are output when it moves to the next row.
+* [ASCII](ASCII.md) [CHR\$](CHR\$.md) (9) can be substituted for sequencial 9 space column moves.
+* [Comma](Comma.md) [PRINT](PRINT.md) spacing is up to 15 column places (IE: TAB(15)) to a maximum column of 57.
+* When printing to a file, a carriage return( [CHR\$](CHR\$.md) (13)) and linefeed( [CHR\$](CHR\$.md) (10)) character are output when it moves to the next row.
 * Note: QBasic did not allow a [TAB](TAB.md) to be added to a string value. In [PRINT](PRINT.md) statements the plus would be changed to a semicolon .
 
 </blockquote>
@@ -149,12 +149,12 @@ PRINT TAB(15); "T", TAB(20); "A"; TAB(15); "B" 'comma moves column position beyo
 
 ```vb
 T
-T
-T    A
-B
-T
-A
-B
+             T
+             T    A
+             B
+             T
+                  A
+             B
 ```
   
 <br>
@@ -168,7 +168,7 @@ B
 
 
 * [PRINT](PRINT.md) , [LPRINT](LPRINT.md)
-* [SPC](SPC.md) , [SPACE&dollar;](SPACE&dollar;.md)
-* [STRING&dollar;](STRING&dollar;.md)
-* [CHR&dollar;](CHR&dollar;.md) , ASCII
+* [SPC](SPC.md) , [SPACE\$](SPACE\$.md)
+* [STRING\$](STRING\$.md)
+* [CHR\$](CHR\$.md) , [ASCII](ASCII.md)
 </blockquote>

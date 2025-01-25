@@ -119,7 +119,7 @@ br ~ h5 {
 <blockquote>
 
 
-* Handle is the handle returned from [_OPENCLIENT](OPENCLIENT.md) when making an HTTP request.
+* Handle is the handle returned from _OPENCLIENT when making an HTTP request.
 * String is a regular [STRING](STRING.md) variable.
 * Fixed-Length-Variable is any variable with a type that has a fixed size.
 </blockquote>
@@ -143,12 +143,12 @@ $UNSTABLE:HTTP
 h& = _OPENCLIENT("HTTP:https://httpbin.org/json")
 
 WHILE NOT EOF(h&)
-_LIMIT 100 ' Hitting GET too fast will simply slow down the download
+   _LIMIT 100 ' Hitting GET too fast will simply slow down the download
 
-GET #h&, , s$
+   GET #h&, , s$
 
-' Combine all the data we get from 'GET' into a single string containing the full response
-Content$ = Content$ + s$
+   ' Combine all the data we get from 'GET' into a single string containing the full response
+   Content$ = Content$ + s$
 WEND
 
 CLOSE h&
@@ -161,25 +161,25 @@ PRINT Content$
 
 ```vb
 {
-"slideshow": {
-"author": "Yours Truly",
-"date": "date of publication",
-"slides": [
-{
-"title": "Wake up to WonderWidgets!",
-"type": "all"
-},
-{
-"items": [
-"Why WonderWidgets are great",
-"Who buys WonderWidgets"
-],
-"title": "Overview",
-"type": "all"
-}
-],
-"title": "Sample Slide Show"
-}
+ "slideshow": {
+   "author": "Yours Truly",
+   "date": "date of publication",
+   "slides": [
+     {
+       "title": "Wake up to WonderWidgets!",
+       "type": "all"
+     },
+     {
+       "items": [
+         "Why WonderWidgets are great",
+         "Who buys WonderWidgets"
+       ],
+       "title": "Overview",
+       "type": "all"
+     }
+   ],
+   "title": "Sample Slide Show"
+ }
 }
 ```
   

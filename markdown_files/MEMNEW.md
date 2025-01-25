@@ -128,11 +128,11 @@ br ~ h5 {
 
 
 * The memoryBlock value created holds the elements .OFFSET, .SIZE, .TYPE and .ELEMENTSIZE.
-* [_MEMNEW](MEMNEW.md) does not clear the data previously in the memory block it allocates, for speed purposes.
-* To clear previous data from a new memory block, use [_MEMFILL](MEMFILL.md) with a byte value of 0.
+* _MEMNEW does not clear the data previously in the memory block it allocates, for speed purposes.
+* To clear previous data from a new memory block, use _MEMFILL with a byte value of 0.
 * When a new memory block is created the memory .TYPE value will be 0.
 * If the read only memory block .SIZE is 0, the memory block was not created.
-* All values created by memory functions must be freed using [_MEMFREE](MEMFREE.md) with a valid [_MEM](MEM.md) variable.
+* All values created by memory functions must be freed using _MEMFREE with a valid _MEM variable.
 
 </blockquote>
 
@@ -180,7 +180,7 @@ f = Doggy 5
 <blockquote>
 
 
-* [_MEM](MEM.md) , [_MEMPUT](MEMPUT.md)
-* [_MEMGET](MEMGET.md) , [_MEMGET](MEMGET.md) (function)
-* [_MEMFILL](MEMFILL.md) , [_MEMFREE](MEMFREE.md)
+* _MEM , _MEMPUT
+* _MEMGET , _MEMGET (function)
+* _MEMFILL , _MEMFREE
 </blockquote>

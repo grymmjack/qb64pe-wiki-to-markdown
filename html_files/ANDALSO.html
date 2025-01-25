@@ -6,7 +6,7 @@
    _ANDALSO - QB64 Phoenix Edition Wiki
   </title>
   <script>
-   document.documentElement.className="client-js";RLCONF={"wgBreakFrames":false,"wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgRequestId":"Zp2E5CSKw_M1BQgKFBbOsQAAAwM","wgCSPNonce":false,"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"ANDALSO","wgTitle":"ANDALSO","wgCurRevisionId":8939,"wgRevisionId":8939,"wgArticleId":1236,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":[],"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgRelevantPageName":"ANDALSO","wgRelevantArticleId":1236,"wgIsProbablyEditable":false,"wgRelevantPageIsProbablyEditable":false,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgVector2022PreviewPages":[]};RLSTATE={"site.styles":"ready","user.styles":"ready","user":
+   document.documentElement.className="client-js";RLCONF={"wgBreakFrames":false,"wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgRequestId":"Z5RhUDqafTy_MWwYEqvDPQAAAG8","wgCSPNonce":false,"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"ANDALSO","wgTitle":"ANDALSO","wgCurRevisionId":9509,"wgRevisionId":9509,"wgArticleId":1236,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":[],"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgRelevantPageName":"ANDALSO","wgRelevantArticleId":1236,"wgIsProbablyEditable":false,"wgRelevantPageIsProbablyEditable":false,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgVector2022PreviewPages":[]};RLSTATE={"site.styles":"ready","user.styles":"ready","user":
 "ready","user.options":"loading","mediawiki.page.gallery.styles":"ready","skins.vector.styles.legacy":"ready"};RLPAGEMODULES=["site","mediawiki.page.ready","mediawiki.toc","skins.vector.legacy.js"];
   </script>
   <script>
@@ -59,9 +59,9 @@
     <div class="mw-body-content mw-content-ltr" dir="ltr" id="mw-content-text" lang="en">
      <div class="mw-parser-output">
       <p>
-       <a class="mw-selflink selflink">
+       <b>
         _ANDALSO
-       </a>
+       </b>
        is a
        <a href="/qb64wiki/index.php/Boolean" title="Boolean">
         boolean
@@ -178,13 +178,46 @@
         A logical operation is said to be short-circuiting if the compiled code can bypass the evaluation of one expression depending on the result of another expression.
        </li>
        <li>
-        If the result of the first expression evaluated determines the final result of the operation, there is no need to evaluate the second expression, because it cannot change the final result.
+        Short-circuiting can improve performance if the bypassed expression is complex, or if it involves procedure (
+        <a href="/qb64wiki/index.php/SUB" title="SUB">
+         SUB
+        </a>
+        or
+        <a href="/qb64wiki/index.php/FUNCTION" title="FUNCTION">
+         FUNCTION
+        </a>
+        ) calls.
        </li>
        <li>
-        Short-circuiting can improve performance if the bypassed expression is complex, or if it involves procedure calls.
+        If the result of the first expression evaluated determines the final result of the operation, there is no need to evaluate the second expression, because it cannot change the final result. E.g. if the first expression is already false, then the second expression can't change the result anymore, it will always remain false, even if the second expression would be true. Hence, the second expression is irrelevant and never evaluated, if the first one is already false.
+        <ul>
+         <li>
+          <span style="color:red;">
+           <b>
+            Note
+           </b>
+          </span>
+          that any procedures involved in the second expression are
+          <b>
+           not called
+          </b>
+          , if the first expression is false. This behavior is intended and the reason for the better performance, but it may cause unexpected failures if you're not aware of it.
+         </li>
+         <li>
+          In fact, if any procedures in the second expression
+          <b>
+           must be called
+          </b>
+          regardless of the truth of the first expression, then you must use the regular
+          <a href="/qb64wiki/index.php/AND_(boolean)" title="AND (boolean)">
+           AND
+          </a>
+          instead.
+         </li>
+        </ul>
        </li>
        <li>
-        If both expressions evaluate to true, result is true.
+        Only if both expressions evaluate to true, then the result is true too.
        </li>
       </ul>
       <p>
@@ -308,12 +341,14 @@
         Examples
        </span>
       </h2>
-      <p>
-       <i>
-        Example:
-       </i>
-       AND versus _ANDALSO
-      </p>
+      <dl>
+       <dt>
+        Example
+       </dt>
+       <dd>
+        AND versus _ANDALSO
+       </dd>
+      </dl>
       <table cellpadding="15px" width="100%">
        <tbody>
         <tr>
@@ -417,6 +452,10 @@
         <a href="/qb64wiki/index.php/NEGATE" title="NEGATE">
          _NEGATE
         </a>
+        ,
+        <a href="/qb64wiki/index.php/IIF" title="IIF">
+         _IIF
+        </a>
        </li>
        <li>
         <a href="/qb64wiki/index.php/Binary" title="Binary">
@@ -467,15 +506,15 @@
       </center>
       <!-- 
 NewPP limit report
-Cached time: 20240721211903
+Cached time: 20250124171713
 Cache expiry: 86400
 Reduced expiry: false
 Complications: [show‐toc]
-CPU time usage: 0.070 seconds
-Real time usage: 0.086 seconds
-Preprocessor visited node count: 494/1000000
-Post‐expand include size: 3807/2097152 bytes
-Template argument size: 932/2097152 bytes
+CPU time usage: 0.062 seconds
+Real time usage: 0.077 seconds
+Preprocessor visited node count: 501/1000000
+Post‐expand include size: 3849/2097152 bytes
+Template argument size: 945/2097152 bytes
 Highest expansion depth: 4/100
 Expensive parser function count: 0/100
 Unstrip recursion depth: 0/20
@@ -483,24 +522,24 @@ Unstrip post‐expand size: 2766/5000000 bytes
 -->
       <!--
 Transclusion expansion time report (%,ms,calls,template)
-100.00%   58.602      1 -total
-  7.73%    4.531      1 Template:PageExamples
-  7.53%    4.410     36 Template:Cl
-  6.00%    3.515     24 Template:Text
-  5.02%    2.941      1 Template:PageSyntax
-  4.47%    2.622      3 Template:Parameter
-  4.46%    2.612      1 Template:CodeEnd
-  4.15%    2.434      1 Template:PageSeeAlso
-  4.14%    2.427      1 Template:PageNavigation
-  4.14%    2.425      1 Template:PageDescription
+100.00%   53.322      1 -total
+  8.36%    4.460     36 Template:Cl
+  7.20%    3.838     25 Template:Text
+  5.50%    2.931      1 Template:PageAvailability
+  5.45%    2.908      1 Template:CodeEnd
+  5.21%    2.776      1 Template:PageExamples
+  4.93%    2.629      1 Template:PageSyntax
+  4.38%    2.335      1 Template:PageNavigation
+  4.36%    2.323      1 Template:CodeStart
+  4.27%    2.275      3 Template:Parameter
 -->
-      <!-- Saved in parser cache with key qb64pnix_mw19894-mwmb_:pcache:idhash:1236-0!canonical and timestamp 20240721211903 and revision id 8939.
+      <!-- Saved in parser cache with key qb64pnix_mw19894-mwmb_:pcache:idhash:1236-0!canonical and timestamp 20250124171713 and revision id 9509.
  -->
      </div>
      <div class="printfooter" data-nosnippet="">
       Retrieved from "
-      <a dir="ltr" href="https://qb64phoenix.com/qb64wiki/index.php?title=ANDALSO&amp;oldid=8939">
-       https://qb64phoenix.com/qb64wiki/index.php?title=ANDALSO&amp;oldid=8939
+      <a dir="ltr" href="https://qb64phoenix.com/qb64wiki/index.php?title=ANDALSO&amp;oldid=9509">
+       https://qb64phoenix.com/qb64wiki/index.php?title=ANDALSO&amp;oldid=9509
       </a>
       "
      </div>
@@ -717,7 +756,7 @@ You can view its source [e]">
         </a>
        </li>
        <li class="mw-list-item" id="t-permalink">
-        <a href="/qb64wiki/index.php?title=ANDALSO&amp;oldid=8939" title="Permanent link to this revision of this page">
+        <a href="/qb64wiki/index.php?title=ANDALSO&amp;oldid=9509" title="Permanent link to this revision of this page">
          <span>
           Permanent link
          </span>
@@ -738,7 +777,7 @@ You can view its source [e]">
   <footer class="mw-footer" id="footer" role="contentinfo">
    <ul id="footer-info">
     <li id="footer-info-lastmod">
-     This page was last edited on 25 May 2024, at 22:36.
+     This page was last edited on 25 December 2024, at 14:19.
     </li>
    </ul>
    <ul id="footer-places">
@@ -767,7 +806,7 @@ You can view its source [e]">
    </ul>
   </footer>
   <script>
-   (RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgPageParseReport":{"limitreport":{"cputime":"0.070","walltime":"0.086","ppvisitednodes":{"value":494,"limit":1000000},"postexpandincludesize":{"value":3807,"limit":2097152},"templateargumentsize":{"value":932,"limit":2097152},"expansiondepth":{"value":4,"limit":100},"expensivefunctioncount":{"value":0,"limit":100},"unstrip-depth":{"value":0,"limit":20},"unstrip-size":{"value":2766,"limit":5000000},"timingprofile":["100.00%   58.602      1 -total","  7.73%    4.531      1 Template:PageExamples","  7.53%    4.410     36 Template:Cl","  6.00%    3.515     24 Template:Text","  5.02%    2.941      1 Template:PageSyntax","  4.47%    2.622      3 Template:Parameter","  4.46%    2.612      1 Template:CodeEnd","  4.15%    2.434      1 Template:PageSeeAlso","  4.14%    2.427      1 Template:PageNavigation","  4.14%    2.425      1 Template:PageDescription"]},"cachereport":{"timestamp":"20240721211903","ttl":86400,"transientcontent":false}}});mw.config.set({"wgBackendResponseTime":161});});
+   (RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgPageParseReport":{"limitreport":{"cputime":"0.062","walltime":"0.077","ppvisitednodes":{"value":501,"limit":1000000},"postexpandincludesize":{"value":3849,"limit":2097152},"templateargumentsize":{"value":945,"limit":2097152},"expansiondepth":{"value":4,"limit":100},"expensivefunctioncount":{"value":0,"limit":100},"unstrip-depth":{"value":0,"limit":20},"unstrip-size":{"value":2766,"limit":5000000},"timingprofile":["100.00%   53.322      1 -total","  8.36%    4.460     36 Template:Cl","  7.20%    3.838     25 Template:Text","  5.50%    2.931      1 Template:PageAvailability","  5.45%    2.908      1 Template:CodeEnd","  5.21%    2.776      1 Template:PageExamples","  4.93%    2.629      1 Template:PageSyntax","  4.38%    2.335      1 Template:PageNavigation","  4.36%    2.323      1 Template:CodeStart","  4.27%    2.275      3 Template:Parameter"]},"cachereport":{"timestamp":"20250124171713","ttl":86400,"transientcontent":false}}});mw.config.set({"wgBackendResponseTime":92});});
   </script>
  </body>
 </html>

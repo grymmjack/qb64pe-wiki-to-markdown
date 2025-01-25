@@ -122,7 +122,7 @@ br ~ h5 {
 * [ABS](ABS.md) always returns positive numerical values. The value can be any numerical type.
 * Often used to keep a value positive when necessary in a program.
 * Use [SGN](SGN.md) to determine a value's sign when necessary.
-* QB64 allows programs to return only positive [_UNSIGNED](UNSIGNED.md) variable values using a [DIM](DIM.md) or [_DEFINE](DEFINE.md) statement.
+* QB64 allows programs to return only positive _UNSIGNED variable values using a [DIM](DIM.md) or _DEFINE statement.
 
 </blockquote>
 
@@ -160,7 +160,7 @@ PRINT a, b, c
 
 
 * [SGN](SGN.md) , [DIM](DIM.md)
-* [_UNSIGNED](UNSIGNED.md)
-* [_DEFINE](DEFINE.md)
+* _UNSIGNED
+* _DEFINE
 * Mathematical Operations
 </blockquote>

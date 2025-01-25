@@ -120,11 +120,11 @@ br ~ h5 {
 
 
 * If imageHandle& is omitted, it's assumed to be the handle of the current [SCREEN](SCREEN.md) or write page.
-* To get the width of the current program screen window use zero for the handle value or nothing: columns& = [_WIDTH](WIDTH.md) (0) or columns& = [_WIDTH](WIDTH.md)
+* To get the width of the current program screen window use zero for the handle value or nothing: columns& = _WIDTH (0) or columns& = _WIDTH
 * If the image specified by imageHandle& is in text only( [SCREEN](SCREEN.md) 0) mode, the number of characters per row is returned.
 * If the image specified by imageHandle& is in graphics mode, the number of pixels per row is returned.
 * If imageHandle& is an invalid handle, then an invalid handle error is returned.
-* The last visible pixel coordinate of a program screen is [_WIDTH](WIDTH.md) - 1 .
+* The last visible pixel coordinate of a program screen is _WIDTH - 1 .
 
 </blockquote>
 
@@ -141,10 +141,10 @@ SCREEN s&
 Align 15, 5, s&, "This text is centered on the screen!"
 
 SUB Align (Tcolor, Trow, mode&, txt$)
-center& = _WIDTH (mode&) \ 2     'returns pixels in graphic modes
-MaxCol = (center& \ 8) + 1              'screen text width = 8 pixels
-Tcol = MaxCol - (LEN(txt$) \ 2)
-COLOR Tcolor: LOCATE Trow, Tcol: PRINT txt$;
+  center& = _WIDTH (mode&) \ 2     'returns pixels in graphic modes
+  MaxCol = (center& \ 8) + 1              'screen text width = 8 pixels
+  Tcol = MaxCol - (LEN(txt$) \ 2)
+  COLOR Tcolor: LOCATE Trow, Tcol: PRINT txt$;
 END SUB
 ```
   
@@ -158,7 +158,7 @@ END SUB
 <blockquote>
 
 
-* [_HEIGHT](HEIGHT.md) , [_LOADIMAGE](LOADIMAGE.md) , [_NEWIMAGE](NEWIMAGE.md)
+* _HEIGHT , _LOADIMAGE , _NEWIMAGE
 * [WIDTH](WIDTH.md)
 * Bitmaps
 </blockquote>

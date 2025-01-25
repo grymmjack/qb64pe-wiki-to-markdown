@@ -110,7 +110,7 @@ br ~ h5 {
 
 <blockquote>
 
-`result$ = _DEFLATE$ ( stringToCompress$ )`
+`result$ = _DEFLATE$ ( stringToCompress$ [, compressionLevel& ])`
 
 </blockquote>
 
@@ -120,7 +120,8 @@ br ~ h5 {
 
 
 * result$ will contain the compressed version of stringToCompress$ .
-* To decompress the resulting string, use [_INFLATE&dollar;](INFLATE&dollar;.md) .
+* compressionLevel& is an optional compression level (0 - 10), where 10 is the highest level and 0 is no compression.
+* To decompress the resulting string, use _INFLATE$ .
 
 </blockquote>
 
@@ -135,7 +136,7 @@ br ~ h5 {
 a$ = "The quick brown fox jumps over the lazy dog. "
 PRINT "Original string (a$): "; a$
 FOR i = 1 TO 15
-a$ = a$ + a$
+   a$ = a$ + a$
 NEXT
 
 PRINT "After concatenating it into itself several times, LEN(a$) ="; LEN(a$)
@@ -167,5 +168,5 @@ After using _INFLATE$ to decompress it, LEN = 1474560
 <blockquote>
 
 
-* [_INFLATE&dollar;](INFLATE&dollar;.md)
+* _INFLATE$
 </blockquote>

@@ -119,8 +119,8 @@ br ~ h5 {
 <blockquote>
 
 
-* memoryBlock is a [_MEM](MEM.md) variable type memory block name created by [_MEMNEW](MEMNEW.md) or the [_MEM](MEM.md) function.
-* bytePosition is the memoryBlock . OFFSET start position plus any bytes needed to read specific values.
+* memoryBlock is a _MEM variable type memory block name created by _MEMNEW or the _MEM function.
+* bytePosition is the memoryBlock . [OFFSET](OFFSET.md) start position plus any bytes needed to read specific values.
 * The sourceVariable type designates the size and bytePosition it should be written to. It can be a variable, array or user defined type.
 * bytePosition can be converted [AS](AS.md) a specific variable type before being written to the memoryBlock as bytes.
 </blockquote>
@@ -130,8 +130,8 @@ br ~ h5 {
 <blockquote>
 
 
-* The [_MEMPUT](MEMPUT.md) statement is similar to the [PUT](PUT.md) file statement, but bytePosition is required.
-* The memoryBlock . OFFSET returns the starting byte position of the block. Add bytes to move into the block.
+* The _MEMPUT statement is similar to the [PUT](PUT.md) file statement, but bytePosition is required.
+* The memoryBlock . [OFFSET](OFFSET.md) returns the starting byte position of the block. Add bytes to move into the block.
 * The variable type held in the memory block can determine the next byte position to write a value.
 * [LEN](LEN.md) can be used to determine the byte size of numerical or user defined Variable Types regardless of the value held.
 * [STRING](STRING.md) values should be of a defined length. Variable length strings can actually move around in memory and not be found.
@@ -164,8 +164,8 @@ PRINT d& 'print 768 because the 2nd byte of d& has been set to 3 or 3 * 256
 <blockquote>
 
 
-* [_MEMGET](MEMGET.md) , [_MEMGET](MEMGET.md) (function)
-* [_MEM](MEM.md) , [_MEM](MEM.md) (function)
-* [_MEMIMAGE](MEMIMAGE.md) , [_MEMNEW](MEMNEW.md)
-* [_MEMFREE](MEMFREE.md) , [_MEMCOPY](MEMCOPY.md)
+* _MEMGET , _MEMGET (function)
+* _MEM , _MEM (function)
+* _MEMIMAGE , _MEMNEW
+* _MEMFREE , _MEMCOPY
 </blockquote>

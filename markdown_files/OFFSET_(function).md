@@ -120,12 +120,12 @@ br ~ h5 {
 
 
 * The variable parameter can be any type of numerical or string variable name.
-* API [LIBRARY](LIBRARY.md) parameter or type names may include lp, ptr or p which designates them as a pointer type.
-* [_OFFSET](OFFSET.md) function return values should be stored in [_OFFSET](OFFSET.md) type variables. As no other variable type is 'elastic' like [_OFFSET](OFFSET.md) , there can be no guarantee that any other variable type can hold the value of an _OFFSET.
+* API LIBRARY parameter or type names may include lp, ptr or p which designates them as a pointer type.
+* _OFFSET function return values should be stored in _OFFSET type variables. As no other variable type is 'elastic' like _OFFSET , there can be no guarantee that any other variable type can hold the value of an _OFFSET.
 * Returns the memory offset of variables, user-defined-types & elements, arrays & indices and the base offset of STRINGs .
-* Offset values are currently only useful when used in conjunction with [_MEM](MEM.md) or [DECLARE](DECLARE.md) [LIBRARY](LIBRARY.md) procedures.
-* OFFSET values are used as a part of the [_MEM](MEM.md) variable type in QB64; variable .OFFSET returns or sets the current position in memory.
-* Warning: QB64 variable length strings can move about in memory at any time. If you get the [_OFFSET](OFFSET.md) of a variable length sting on one line and use it on the next it may not be there anymore. To be safe, move variable length strings into fixed length strings first.
+* Offset values are currently only useful when used in conjunction with _MEM or DECLARE LIBRARY procedures.
+* [OFFSET](OFFSET.md) values are used as a part of the _MEM variable type in QB64; variable .OFFSET returns or sets the current position in memory.
+* Warning: QB64 variable length strings can move about in memory at any time. If you get the _OFFSET of a variable length sting on one line and use it on the next it may not be there anymore. To be safe, move variable length strings into fixed length strings first.
 
 </blockquote>
 
@@ -138,7 +138,7 @@ br ~ h5 {
 ##### Example: Using memcpy with the _OFFSET function values as parameters.
 ```vb
 DECLARE CUSTOMTYPE LIBRARY
-SUB memcpy (BYVAL dest AS _OFFSET, BYVAL source AS _OFFSET, BYVAL bytes AS LONG)
+   SUB memcpy (BYVAL dest AS _OFFSET, BYVAL source AS _OFFSET, BYVAL bytes AS LONG)
 END DECLARE
 
 a$ = "1234567890"
@@ -164,8 +164,8 @@ PRINT a$
 <blockquote>
 
 
-* [_OFFSET](OFFSET.md)
-* [DECLARE](DECLARE.md) [LIBRARY](LIBRARY.md)
-* [DECLARE](DECLARE.md) [LIBRARY](LIBRARY.md)
-* Using [_OFFSET](OFFSET.md)
+* _OFFSET
+* DECLARE LIBRARY
+* DECLARE LIBRARY
+* Using _OFFSET
 </blockquote>

@@ -119,12 +119,12 @@ br ~ h5 {
 <blockquote>
 
 
-* [REDIM](REDIM.md) or the [&dollar;DYNAMIC](&dollar;DYNAMIC.md) metacommand must be used when the array is first created to be able to resize and preserve.
-* If [_PRESERVE](PRESERVE.md) is not used, the current contents of the array are cleared by [REDIM](REDIM.md) .
+* [REDIM](REDIM.md) or the [\$DYNAMIC](\$DYNAMIC.md) metacommand must be used when the array is first created to be able to resize and preserve.
+* If _PRESERVE is not used, the current contents of the array are cleared by [REDIM](REDIM.md) .
 * All element values of an array are preserved if the array size is increased.
 * The remaining elements of the array are preserved if the array size is decreased.
 * If the new index range is different from the original, all values will be moved to the new corresponding indices.
-* [REDIM](REDIM.md) [_PRESERVE](PRESERVE.md) cannot change the number of array dimensions, but can change the number of elements.
+* [REDIM](REDIM.md) _PRESERVE cannot change the number of array dimensions, but can change the number of elements.
 * Always use the same array [TYPE](TYPE.md) suffix ( [AS](AS.md) type) or a new array type with the same name may be created.
 
 </blockquote>
@@ -153,13 +153,13 @@ REDIM Array$(1)                'create a dynamic string array
 filename$ = "Readme.txt"       'QB64 information text file
 OPEN filename$ FOR INPUT AS #1
 DO UNTIL EOF(1)
-count = count + 1
-IF count > UBOUND(Array$) THEN
-REDIM _PRESERVE Array$(count * 3 / 2)'increase array's size by 50% without losing data
-END IF
+ count = count + 1
+ IF count > UBOUND(Array$) THEN
+   REDIM _PRESERVE Array$(count * 3 / 2)'increase array's size by 50% without losing data
+ END IF
 
-LINE INPUT #1, textline$
-Array$(count) = textline$
+ LINE INPUT #1, textline$
+ Array$(count) = textline$
 LOOP
 CLOSE #1
 FOR c = 1 TO count
@@ -181,6 +181,6 @@ END
 
 * Featured in our "Keyword of the Day" series
 * [REDIM](REDIM.md)
-* [&dollar;DYNAMIC](&dollar;DYNAMIC.md)
-* Arrays
+* [\$DYNAMIC](\$DYNAMIC.md)
+* [Arrays](Arrays.md)
 </blockquote>

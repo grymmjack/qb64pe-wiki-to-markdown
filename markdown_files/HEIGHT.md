@@ -120,11 +120,11 @@ br ~ h5 {
 
 
 * If imageHandle& is omitted, it's assumed to be the handle of the current [SCREEN](SCREEN.md) or write page.
-* To get the height of the current program screen window use zero for the handle value or nothing: lines& = [_HEIGHT](HEIGHT.md) (0) or lines& = [_HEIGHT](HEIGHT.md)
+* To get the height of the current program screen window use zero for the handle value or nothing: lines& = _HEIGHT (0) or lines& = _HEIGHT
 * If the image specified by imageHandle& is in text only( [SCREEN](SCREEN.md) 0) mode, the number of lines of rows of characters are returned.
 * If the image specified by imageHandle& is in graphics mode, the number rows of pixels is returned.
 * If imageHandle& is an invalid handle, then an invalid handle error is returned.
-* The last visible pixel coordinate of a program screen is [_HEIGHT](HEIGHT.md) - 1 .
+* The last visible pixel coordinate of a program screen is _HEIGHT - 1 .
 
 </blockquote>
 
@@ -140,6 +140,6 @@ br ~ h5 {
 <blockquote>
 
 
-* [_WIDTH](WIDTH.md) (function) , [_LOADIMAGE](LOADIMAGE.md) , [_NEWIMAGE](NEWIMAGE.md)
+* _WIDTH (function) , _LOADIMAGE , _NEWIMAGE
 * Bitmaps
 </blockquote>

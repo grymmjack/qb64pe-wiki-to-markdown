@@ -6,13 +6,13 @@
    _MEMSOUND - QB64 Phoenix Edition Wiki
   </title>
   <script>
-   document.documentElement.className="client-js";RLCONF={"wgBreakFrames":false,"wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgRequestId":"Zp2GjhpdvGGeVdK1DlhpLwAAAic","wgCSPNonce":false,"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"MEMSOUND","wgTitle":"MEMSOUND","wgCurRevisionId":8569,"wgRevisionId":8569,"wgArticleId":830,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":[],"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgRelevantPageName":"MEMSOUND","wgRelevantArticleId":830,"wgIsProbablyEditable":false,"wgRelevantPageIsProbablyEditable":false,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgVector2022PreviewPages":[]};RLSTATE={"site.styles":"ready","user.styles":"ready","user":
-"ready","user.options":"loading","skins.vector.styles.legacy":"ready"};RLPAGEMODULES=["site","mediawiki.page.ready","mediawiki.toc","skins.vector.legacy.js"];
+   document.documentElement.className="client-js";RLCONF={"wgBreakFrames":false,"wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgRequestId":"Z5RiQwWKRwiE9zBBFH0YsgAAAKU","wgCSPNonce":false,"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"MEMSOUND","wgTitle":"MEMSOUND","wgCurRevisionId":9341,"wgRevisionId":9341,"wgArticleId":830,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":[],"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgRelevantPageName":"MEMSOUND","wgRelevantArticleId":830,"wgIsProbablyEditable":false,"wgRelevantPageIsProbablyEditable":false,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgVector2022PreviewPages":[]};RLSTATE={"site.styles":"ready","user.styles":"ready","user":
+"ready","user.options":"loading","mediawiki.page.gallery.styles":"ready","skins.vector.styles.legacy":"ready"};RLPAGEMODULES=["site","mediawiki.page.ready","mediawiki.toc","skins.vector.legacy.js"];
   </script>
   <script>
    (RLQ=window.RLQ||[]).push(function(){mw.loader.implement("user.options@12s5i",function($,jQuery,require,module){mw.user.tokens.set({"patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});});});
   </script>
-  <link href="/qb64wiki/load.php?lang=en&amp;modules=skins.vector.styles.legacy&amp;only=styles&amp;skin=vector" rel="stylesheet"/>
+  <link href="/qb64wiki/load.php?lang=en&amp;modules=mediawiki.page.gallery.styles%7Cskins.vector.styles.legacy&amp;only=styles&amp;skin=vector" rel="stylesheet"/>
   <script async="" src="/qb64wiki/load.php?lang=en&amp;modules=startup&amp;only=scripts&amp;raw=1&amp;skin=vector">
   </script>
   <meta content="" name="ResourceLoaderDynamicStyles"/>
@@ -229,19 +229,11 @@
           <b>
            bytes-per-sample
           </b>
-          the audio contains.
-          <ul>
-           <li>
-            Can return 1 (8-bit mono), 2 (8-bit stereo), 2 (16-bit mono), 4 (16-bit stereo), 4 (32-bit mono) or 8 (32-bit stereo).
-           </li>
-           <li>
-            Use
-            <b>
-             .TYPE
-            </b>
-            to determine the data type of the sample data.
-           </li>
-          </ul>
+          the audio contains. Can return 1 (8-bit mono), 2 (8-bit stereo), 2 (16-bit mono), 4 (16-bit stereo), 4 (32-bit mono) or 8 (32-bit stereo). Use
+          <b>
+           .TYPE
+          </b>
+          to determine the data type of the sample data.
          </li>
          <li>
           <b>
@@ -317,6 +309,24 @@
         </i>
         - 1 (left channel/mono) or 2 (right channel; for stereo files) was supported on the old OpenAL backend. For the new miniaudio backend, this must be 0.
        </li>
+       <li>
+        <b>
+         _MEMSOUND
+        </b>
+        does not work for sounds loaded with
+        <a href="/qb64wiki/index.php/SNDOPEN" title="SNDOPEN">
+         _SNDOPEN
+        </a>
+        when using the
+        <b>
+         STREAM
+        </b>
+        or
+        <b>
+         NODECODE
+        </b>
+        flags.
+       </li>
       </ul>
       <p>
        <br/>
@@ -326,16 +336,109 @@
         Availability
        </span>
       </h2>
-      <ul>
-       <li>
-        <b>
-         QB64 v1.5 and up
-        </b>
+      <ul class="gallery mw-gallery-nolines">
+       <li class="gallerybox" style="width: 53px">
+        <div style="width: 53px">
+         <div class="thumb" style="width: 48px;">
+          <div style="margin:0px auto;">
+           <a class="image" href="/qb64wiki/index.php/File:Qb64.png" title="v1.5">
+            <img alt="v1.5" decoding="async" height="48" src="/qb64wiki/images/9/91/Qb64.png" width="48"/>
+           </a>
+          </div>
+         </div>
+         <div class="gallerytext">
+          <p>
+           <b>
+            v1.5
+           </b>
+          </p>
+         </div>
+        </div>
        </li>
-       <li>
-        <b>
-         QB64-PE all versions
-        </b>
+       <li class="gallerybox" style="width: 53px">
+        <div style="width: 53px">
+         <div class="thumb" style="width: 48px;">
+          <div style="margin:0px auto;">
+           <a class="image" href="/qb64wiki/index.php/File:Qbpe.png" title="all">
+            <img alt="all" decoding="async" height="48" src="/qb64wiki/images/0/07/Qbpe.png" width="48"/>
+           </a>
+          </div>
+         </div>
+         <div class="gallerytext">
+          <p>
+           <b>
+            all
+           </b>
+          </p>
+         </div>
+        </div>
+       </li>
+       <li class="gallerybox" style="width: 53px">
+        <div style="width: 53px">
+         <div class="thumb" style="width: 48px;">
+          <div style="margin:0px auto;">
+           <a class="image" href="/qb64wiki/index.php/File:Apix.png">
+            <img alt="Apix.png" decoding="async" height="48" src="/qb64wiki/images/5/5f/Apix.png" width="48"/>
+           </a>
+          </div>
+         </div>
+         <div class="gallerytext">
+         </div>
+        </div>
+       </li>
+       <li class="gallerybox" style="width: 53px">
+        <div style="width: 53px">
+         <div class="thumb" style="width: 48px;">
+          <div style="margin:0px auto;">
+           <a class="image" href="/qb64wiki/index.php/File:Win.png" title="yes">
+            <img alt="yes" decoding="async" height="48" src="/qb64wiki/images/2/29/Win.png" width="48"/>
+           </a>
+          </div>
+         </div>
+         <div class="gallerytext">
+          <p>
+           <b>
+            yes
+           </b>
+          </p>
+         </div>
+        </div>
+       </li>
+       <li class="gallerybox" style="width: 53px">
+        <div style="width: 53px">
+         <div class="thumb" style="width: 48px;">
+          <div style="margin:0px auto;">
+           <a class="image" href="/qb64wiki/index.php/File:Lnx.png" title="yes">
+            <img alt="yes" decoding="async" height="48" src="/qb64wiki/images/7/7a/Lnx.png" width="48"/>
+           </a>
+          </div>
+         </div>
+         <div class="gallerytext">
+          <p>
+           <b>
+            yes
+           </b>
+          </p>
+         </div>
+        </div>
+       </li>
+       <li class="gallerybox" style="width: 53px">
+        <div style="width: 53px">
+         <div class="thumb" style="width: 48px;">
+          <div style="margin:0px auto;">
+           <a class="image" href="/qb64wiki/index.php/File:Osx.png" title="yes">
+            <img alt="yes" decoding="async" height="48" src="/qb64wiki/images/2/22/Osx.png" width="48"/>
+           </a>
+          </div>
+         </div>
+         <div class="gallerytext">
+          <p>
+           <b>
+            yes
+           </b>
+          </p>
+         </div>
+        </div>
        </li>
       </ul>
       <p>
@@ -358,80 +461,65 @@
        <tbody>
         <tr>
          <td>
-          <pre class="codeide"><a href="/qb64wiki/index.php/OPTION_EXPLICIT" title="OPTION EXPLICIT"><span style="color:#4593D8;">OPTION _EXPLICIT</span></a>
+          <pre class="codeide"><a href="/qb64wiki/index.php/OPTION" title="OPTION"><span style="color:#4593D8;">OPTION</span></a> <a class="mw-redirect" href="/qb64wiki/index.php/EXPLICIT" title="EXPLICIT"><span style="color:#4593D8;">_EXPLICIT</span></a>
 
-<a href="/qb64wiki/index.php/PRINT" title="PRINT"><span style="color:#4593D8;">PRINT</span></a> "Loading...";
+<a href="/qb64wiki/index.php/CONST" title="CONST"><span style="color:#4593D8;">CONST</span></a> FILE_FILTER = <span style="color:#FFB100;">"*.wav|*.aiff|*.aifc|*.flac|*.ogg|*.mp3|*.it|*.xm|*.s3m|*.mod|*.rad|*.ahx|*.hvl|*.mus|*.hmi|*.hmp|*.hmq|*.kar|*.lds|*.mds|*.mids|*.rcp|*.r36|*.g18|*.g36|*.rmi|*.mid|*.midi|*.xfm|*.xmi|*.qoa"</span>
+
+<a href="/qb64wiki/index.php/PRINT" title="PRINT"><span style="color:#4593D8;">PRINT</span></a> <span style="color:#FFB100;">"Loading..."</span>;
 <a href="/qb64wiki/index.php/DIM" title="DIM"><span style="color:#4593D8;">DIM</span></a> Song <a href="/qb64wiki/index.php/AS" title="AS"><span style="color:#4593D8;">AS</span></a> <a href="/qb64wiki/index.php/LONG" title="LONG"><span style="color:#4593D8;">LONG</span></a>
-Song = <a href="/qb64wiki/index.php/SNDOPEN" title="SNDOPEN"><span style="color:#4593D8;">_SNDOPEN</span></a>("onward_ride1.flac") ' Replace file name with your sound file
-<a class="mw-redirect" href="/qb64wiki/index.php/IF" title="IF"><span style="color:#4593D8;">IF</span></a> Song &lt; 1 <a href="/qb64wiki/index.php/THEN" title="THEN"><span style="color:#4593D8;">THEN</span></a>
-    <a href="/qb64wiki/index.php/PRINT" title="PRINT"><span style="color:#4593D8;">PRINT</span></a> "Failed to load sound!"
+Song = <a href="/qb64wiki/index.php/SNDOPEN" title="SNDOPEN"><span style="color:#4593D8;">_SNDOPEN</span></a>(<a href="/qb64wiki/index.php/OPENFILEDIALOG$" title="OPENFILEDIALOG$"><span style="color:#4593D8;">_OPENFILEDIALOG$</span></a>(<span style="color:#FFB100;">"Open audio file"</span>, , FILE_FILTER))
+<a class="mw-redirect" href="/qb64wiki/index.php/IF" title="IF"><span style="color:#4593D8;">IF</span></a> Song &lt; <span style="color:#F580B1;">1</span> <a href="/qb64wiki/index.php/THEN" title="THEN"><span style="color:#4593D8;">THEN</span></a>
+    <a href="/qb64wiki/index.php/PRINT" title="PRINT"><span style="color:#4593D8;">PRINT</span></a> <span style="color:#FFB100;">"Failed to load sound!"</span>
     <a href="/qb64wiki/index.php/END" title="END"><span style="color:#4593D8;">END</span></a>
 <a class="mw-redirect" href="/qb64wiki/index.php/END_IF" title="END IF"><span style="color:#4593D8;">END IF</span></a>
-<a href="/qb64wiki/index.php/PRINT" title="PRINT"><span style="color:#4593D8;">PRINT</span></a> "Done!"
+<a href="/qb64wiki/index.php/PRINT" title="PRINT"><span style="color:#4593D8;">PRINT</span></a> <span style="color:#FFB100;">"Done!"</span>
 
-<a href="/qb64wiki/index.php/DIM" title="DIM"><span style="color:#4593D8;">DIM</span></a> Channels <a href="/qb64wiki/index.php/AS" title="AS"><span style="color:#4593D8;">AS</span></a> <a href="/qb64wiki/index.php/UNSIGNED" title="UNSIGNED"><span style="color:#4593D8;">_UNSIGNED</span></a> <a href="/qb64wiki/index.php/BYTE" title="BYTE"><span style="color:#4593D8;">_BYTE</span></a>
-Channels = SndChannels(Song)
+<a href="/qb64wiki/index.php/DIM" title="DIM"><span style="color:#4593D8;">DIM</span></a> channels <a href="/qb64wiki/index.php/AS" title="AS"><span style="color:#4593D8;">AS</span></a> <a href="/qb64wiki/index.php/UNSIGNED" title="UNSIGNED"><span style="color:#4593D8;">_UNSIGNED</span></a> <a href="/qb64wiki/index.php/BYTE" title="BYTE"><span style="color:#4593D8;">_BYTE</span></a>: channels = <span style="color:#55FF55;">SndChannels</span>(Song)
 
-<a class="mw-redirect" href="/qb64wiki/index.php/IF" title="IF"><span style="color:#4593D8;">IF</span></a> Channels = 2 <a href="/qb64wiki/index.php/THEN" title="THEN"><span style="color:#4593D8;">THEN</span></a>
-    <a href="/qb64wiki/index.php/PRINT" title="PRINT"><span style="color:#4593D8;">PRINT</span></a> "This file is STEREO"
-<a href="/qb64wiki/index.php/ELSEIF" title="ELSEIF"><span style="color:#4593D8;">ELSEIF</span></a> Channels = 1 <a href="/qb64wiki/index.php/THEN" title="THEN"><span style="color:#4593D8;">THEN</span></a>
-    <a href="/qb64wiki/index.php/PRINT" title="PRINT"><span style="color:#4593D8;">PRINT</span></a> "This file is MONO"
+<a class="mw-redirect" href="/qb64wiki/index.php/IF" title="IF"><span style="color:#4593D8;">IF</span></a> channels <a href="/qb64wiki/index.php/THEN" title="THEN"><span style="color:#4593D8;">THEN</span></a>
+    <a href="/qb64wiki/index.php/PRINT" title="PRINT"><span style="color:#4593D8;">PRINT</span></a> <span style="color:#FFB100;">"This sound data has"</span>; channels; <span style="color:#FFB100;">"channels."</span>
 <a href="/qb64wiki/index.php/ELSE" title="ELSE"><span style="color:#4593D8;">ELSE</span></a>
-    <a href="/qb64wiki/index.php/PRINT" title="PRINT"><span style="color:#4593D8;">PRINT</span></a> "An error occurred."
+    <a href="/qb64wiki/index.php/PRINT" title="PRINT"><span style="color:#4593D8;">PRINT</span></a> <span style="color:#FFB100;">"An error occurred."</span>
 <a class="mw-redirect" href="/qb64wiki/index.php/END_IF" title="END IF"><span style="color:#4593D8;">END IF</span></a>
 
-<a href="/qb64wiki/index.php/SNDCLOSE" title="SNDCLOSE"><span style="color:#4593D8;">_SNDCLOSE</span></a> Song 'closing the sound releases the mem blocks
+<a href="/qb64wiki/index.php/SNDCLOSE" title="SNDCLOSE"><span style="color:#4593D8;">_SNDCLOSE</span></a> Song
 
 <a href="/qb64wiki/index.php/END" title="END"><span style="color:#4593D8;">END</span></a>
 
+<span style="color:#919191;">' This function returns the number of sound channels for a valid sound handle</span>
+<a href="/qb64wiki/index.php/FUNCTION" title="FUNCTION"><span style="color:#4593D8;">FUNCTION</span></a> <span style="color:#55FF55;">SndChannels~%%</span> (handle <a href="/qb64wiki/index.php/AS" title="AS"><span style="color:#4593D8;">AS</span></a> <a href="/qb64wiki/index.php/LONG" title="LONG"><span style="color:#4593D8;">LONG</span></a>)
+    <a href="/qb64wiki/index.php/DECLARE_LIBRARY" title="DECLARE LIBRARY"><span style="color:#4593D8;">DECLARE LIBRARY</span></a>
+        <span style="color:#919191;">' This is needed to convert _OFFSET to LONG / _INTEGER64</span>
+        <a href="/qb64wiki/index.php/$IF" title="$IF"><span style="color:#55FF55;">$IF</span></a> <span style="color:#F580B1;">32BIT</span> <a href="/qb64wiki/index.php/THEN" title="THEN"><span style="color:#55FF55;">THEN</span></a>
+            <a href="/qb64wiki/index.php/FUNCTION" title="FUNCTION"><span style="color:#4593D8;">FUNCTION</span></a> <span style="color:#55FF55;">SndChannels.CLngPtr~&amp;</span> <a href="/qb64wiki/index.php/ALIAS" title="ALIAS"><span style="color:#4593D8;">ALIAS</span></a> <span style="color:#FFB100;">"uintptr_t"</span> (<a class="mw-redirect" href="/qb64wiki/index.php/BYVAL" title="BYVAL"><span style="color:#4593D8;">BYVAL</span></a> o <a href="/qb64wiki/index.php/AS" title="AS"><span style="color:#4593D8;">AS</span></a> <a href="/qb64wiki/index.php/UNSIGNED" title="UNSIGNED"><span style="color:#4593D8;">_UNSIGNED</span></a> <a href="/qb64wiki/index.php/OFFSET_(function)" title="OFFSET (function)"><span style="color:#4593D8;">_OFFSET</span></a>)
+        <a class="mw-redirect" href="/qb64wiki/index.php/$ELSE" title="$ELSE"><span style="color:#55FF55;">$ELSE</span></a>
+            <a href="/qb64wiki/index.php/FUNCTION" title="FUNCTION"><span style="color:#4593D8;">FUNCTION</span></a> <span style="color:#55FF55;">SndChannels.CLngPtr~&amp;&amp;</span> <a href="/qb64wiki/index.php/ALIAS" title="ALIAS"><span style="color:#4593D8;">ALIAS</span></a> <span style="color:#FFB100;">"uintptr_t"</span> (<a class="mw-redirect" href="/qb64wiki/index.php/BYVAL" title="BYVAL"><span style="color:#4593D8;">BYVAL</span></a> o <a href="/qb64wiki/index.php/AS" title="AS"><span style="color:#4593D8;">AS</span></a> <a href="/qb64wiki/index.php/UNSIGNED" title="UNSIGNED"><span style="color:#4593D8;">_UNSIGNED</span></a> <a href="/qb64wiki/index.php/OFFSET_(function)" title="OFFSET (function)"><span style="color:#4593D8;">_OFFSET</span></a>)
+        <a class="mw-redirect" href="/qb64wiki/index.php/$END_IF" title="$END IF"><span style="color:#55FF55;">$END IF</span></a> 
+    <a class="mw-redirect" href="/qb64wiki/index.php/END_DECLARE" title="END DECLARE"><span style="color:#4593D8;">END DECLARE</span></a>
 
-' This function returns the number of sound channels for a valid sound "handle"
-' 2 = stereo, 1 = mono, 0 = error
-<a href="/qb64wiki/index.php/FUNCTION" title="FUNCTION"><span style="color:#4593D8;">FUNCTION</span></a> SndChannels~%% (handle <a href="/qb64wiki/index.php/AS" title="AS"><span style="color:#4593D8;">AS</span></a> <a href="/qb64wiki/index.php/LONG" title="LONG"><span style="color:#4593D8;">LONG</span></a>)
-    <a href="/qb64wiki/index.php/DIM" title="DIM"><span style="color:#4593D8;">DIM</span></a> SampleData <a href="/qb64wiki/index.php/AS" title="AS"><span style="color:#4593D8;">AS</span></a> <a href="/qb64wiki/index.php/MEM" title="MEM"><span style="color:#4593D8;">_MEM</span></a>
+    <a href="/qb64wiki/index.php/DIM" title="DIM"><span style="color:#4593D8;">DIM</span></a> soundData <a href="/qb64wiki/index.php/AS" title="AS"><span style="color:#4593D8;">AS</span></a> <a href="/qb64wiki/index.php/MEM" title="MEM"><span style="color:#4593D8;">_MEM</span></a>: soundData = <a class="mw-selflink selflink"><span style="color:#4593D8;">_MEMSOUND</span></a>(handle)
 
-    SndChannels = 0 ' Assume failure
+    <a class="mw-redirect" href="/qb64wiki/index.php/IF" title="IF"><span style="color:#4593D8;">IF</span></a> soundData.SIZE <a href="/qb64wiki/index.php/THEN" title="THEN"><span style="color:#4593D8;">THEN</span></a>
+        <span style="color:#919191;">' See https://qb64phoenix.com/qb64wiki/index.php/MEM for details</span>
+        <a href="/qb64wiki/index.php/SELECT_CASE" title="SELECT CASE"><span style="color:#4593D8;">SELECT CASE</span></a> soundData.TYPE
+            <a class="mw-redirect" href="/qb64wiki/index.php/CASE" title="CASE"><span style="color:#4593D8;">CASE</span></a> <span style="color:#F580B1;">260</span> <span style="color:#919191;">' 32-bit floating point</span>
+                <span style="color:#55FF55;">SndChannels</span> = <span style="color:#55FF55;">SndChannels.CLngPtr</span>(soundData.ELEMENTSIZE) \ _SIZE_OF_SINGLE
 
-    ' Check if the sound is valid
-    SampleData = <a class="mw-selflink selflink"><span style="color:#4593D8;">_MEMSOUND</span></a>(handle, 0)
-    <a class="mw-redirect" href="/qb64wiki/index.php/IF" title="IF"><span style="color:#4593D8;">IF</span></a> SampleData.SIZE = 0 <a href="/qb64wiki/index.php/THEN" title="THEN"><span style="color:#4593D8;">THEN</span></a>
-        <a href="/qb64wiki/index.php/EXIT_FUNCTION" title="EXIT FUNCTION"><span style="color:#4593D8;">EXIT FUNCTION</span></a>
+            <a class="mw-redirect" href="/qb64wiki/index.php/CASE" title="CASE"><span style="color:#4593D8;">CASE</span></a> <span style="color:#F580B1;">132</span> <span style="color:#919191;">' 32-bit signed integer</span>
+                <span style="color:#55FF55;">SndChannels</span> = <span style="color:#55FF55;">SndChannels.CLngPtr</span>(soundData.ELEMENTSIZE) \ _SIZE_OF_LONG
+
+            <a class="mw-redirect" href="/qb64wiki/index.php/CASE" title="CASE"><span style="color:#4593D8;">CASE</span></a> <span style="color:#F580B1;">130</span> <span style="color:#919191;">' 16-bit signed integer</span>
+                <span style="color:#55FF55;">SndChannels</span> = <span style="color:#55FF55;">SndChannels.CLngPtr</span>(soundData.ELEMENTSIZE) \ _SIZE_OF_INTEGER
+
+            <a class="mw-redirect" href="/qb64wiki/index.php/CASE" title="CASE"><span style="color:#4593D8;">CASE</span></a> <span style="color:#F580B1;">1153</span> <span style="color:#919191;">' 8-bit unsigned integer</span>
+                <span style="color:#55FF55;">SndChannels</span> = <span style="color:#55FF55;">SndChannels.CLngPtr</span>(soundData.ELEMENTSIZE) \ _SIZE_OF_BYTE
+
+            <a class="mw-redirect" href="/qb64wiki/index.php/CASE_ELSE" title="CASE ELSE"><span style="color:#4593D8;">CASE ELSE</span></a> <span style="color:#919191;">' unknown format</span>
+                <span style="color:#55FF55;">SndChannels</span> = <span style="color:#F580B1;">1</span>
+        <a href="/qb64wiki/index.php/END_SELECT" title="END SELECT"><span style="color:#4593D8;">END SELECT</span></a>
     <a class="mw-redirect" href="/qb64wiki/index.php/END_IF" title="END IF"><span style="color:#4593D8;">END IF</span></a>
 
-    ' Check the data type and then decide if the sound is stereo or mono
-    <a class="mw-redirect" href="/qb64wiki/index.php/IF" title="IF"><span style="color:#4593D8;">IF</span></a> SampleData.TYPE = 260 <a href="/qb64wiki/index.php/THEN" title="THEN"><span style="color:#4593D8;">THEN</span></a> ' 32-bit floating point
-        <a class="mw-redirect" href="/qb64wiki/index.php/IF" title="IF"><span style="color:#4593D8;">IF</span></a> SampleData.ELEMENTSIZE = 4 <a href="/qb64wiki/index.php/THEN" title="THEN"><span style="color:#4593D8;">THEN</span></a>
-            SndChannels = 1
-        <a href="/qb64wiki/index.php/ELSEIF" title="ELSEIF"><span style="color:#4593D8;">ELSEIF</span></a> SampleData.ELEMENTSIZE = 8 <a href="/qb64wiki/index.php/THEN" title="THEN"><span style="color:#4593D8;">THEN</span></a>
-            SndChannels = 2
-        <a class="mw-redirect" href="/qb64wiki/index.php/END_IF" title="END IF"><span style="color:#4593D8;">END IF</span></a>
-    <a href="/qb64wiki/index.php/ELSEIF" title="ELSEIF"><span style="color:#4593D8;">ELSEIF</span></a> SampleData.TYPE = 132 <a href="/qb64wiki/index.php/THEN" title="THEN"><span style="color:#4593D8;">THEN</span></a> ' 32-bit integer
-        <a class="mw-redirect" href="/qb64wiki/index.php/IF" title="IF"><span style="color:#4593D8;">IF</span></a> SampleData.ELEMENTSIZE = 4 <a href="/qb64wiki/index.php/THEN" title="THEN"><span style="color:#4593D8;">THEN</span></a>
-            SndChannels = 1
-        <a href="/qb64wiki/index.php/ELSEIF" title="ELSEIF"><span style="color:#4593D8;">ELSEIF</span></a> SampleData.ELEMENTSIZE = 8 <a href="/qb64wiki/index.php/THEN" title="THEN"><span style="color:#4593D8;">THEN</span></a>
-            SndChannels = 2
-        <a class="mw-redirect" href="/qb64wiki/index.php/END_IF" title="END IF"><span style="color:#4593D8;">END IF</span></a>
-    <a href="/qb64wiki/index.php/ELSEIF" title="ELSEIF"><span style="color:#4593D8;">ELSEIF</span></a> SampleData.TYPE = 130 <a href="/qb64wiki/index.php/THEN" title="THEN"><span style="color:#4593D8;">THEN</span></a> ' 16-bit integer
-        <a class="mw-redirect" href="/qb64wiki/index.php/IF" title="IF"><span style="color:#4593D8;">IF</span></a> SampleData.ELEMENTSIZE = 2 <a href="/qb64wiki/index.php/THEN" title="THEN"><span style="color:#4593D8;">THEN</span></a>
-            SndChannels = 1
-        <a href="/qb64wiki/index.php/ELSEIF" title="ELSEIF"><span style="color:#4593D8;">ELSEIF</span></a> SampleData.ELEMENTSIZE = 4 <a href="/qb64wiki/index.php/THEN" title="THEN"><span style="color:#4593D8;">THEN</span></a>
-            SndChannels = 2
-        <a class="mw-redirect" href="/qb64wiki/index.php/END_IF" title="END IF"><span style="color:#4593D8;">END IF</span></a>
-    <a href="/qb64wiki/index.php/ELSEIF" title="ELSEIF"><span style="color:#4593D8;">ELSEIF</span></a> SampleData.TYPE = 1153 <a href="/qb64wiki/index.php/THEN" title="THEN"><span style="color:#4593D8;">THEN</span></a> ' 8-bit unsigned integer
-        <a class="mw-redirect" href="/qb64wiki/index.php/IF" title="IF"><span style="color:#4593D8;">IF</span></a> SampleData.ELEMENTSIZE = 1 <a href="/qb64wiki/index.php/THEN" title="THEN"><span style="color:#4593D8;">THEN</span></a>
-            SndChannels = 1
-        <a href="/qb64wiki/index.php/ELSEIF" title="ELSEIF"><span style="color:#4593D8;">ELSEIF</span></a> SampleData.ELEMENTSIZE = 2 <a href="/qb64wiki/index.php/THEN" title="THEN"><span style="color:#4593D8;">THEN</span></a>
-            SndChannels = 2
-        <a class="mw-redirect" href="/qb64wiki/index.php/END_IF" title="END IF"><span style="color:#4593D8;">END IF</span></a>
-    <a href="/qb64wiki/index.php/ELSEIF" title="ELSEIF"><span style="color:#4593D8;">ELSEIF</span></a> SampleData.TYPE = 0 <a href="/qb64wiki/index.php/THEN" title="THEN"><span style="color:#4593D8;">THEN</span></a> ' This means this is an OpenAL sound handle
-        <a href="/qb64wiki/index.php/DIM" title="DIM"><span style="color:#4593D8;">DIM</span></a> RightChannel <a href="/qb64wiki/index.php/AS" title="AS"><span style="color:#4593D8;">AS</span></a> <a href="/qb64wiki/index.php/MEM" title="MEM"><span style="color:#4593D8;">_MEM</span></a>
-        RightChannel = <a class="mw-selflink selflink"><span style="color:#4593D8;">_MEMSOUND</span></a>(handle, 2)
-        <a class="mw-redirect" href="/qb64wiki/index.php/IF" title="IF"><span style="color:#4593D8;">IF</span></a> RightChannel.SIZE &gt; 0 <a href="/qb64wiki/index.php/THEN" title="THEN"><span style="color:#4593D8;">THEN</span></a>
-            SndChannels = 2
-        <a href="/qb64wiki/index.php/ELSE" title="ELSE"><span style="color:#4593D8;">ELSE</span></a>
-            SndChannels = 1
-        <a class="mw-redirect" href="/qb64wiki/index.php/END_IF" title="END IF"><span style="color:#4593D8;">END IF</span></a>
-    <a class="mw-redirect" href="/qb64wiki/index.php/END_IF" title="END IF"><span style="color:#4593D8;">END IF</span></a>
+    <a class="mw-redirect" href="/qb64wiki/index.php/IF" title="IF"><span style="color:#4593D8;">IF</span></a> soundData.SOUND = handle <a href="/qb64wiki/index.php/THEN" title="THEN"><span style="color:#4593D8;">THEN</span></a> <a href="/qb64wiki/index.php/MEMFREE" title="MEMFREE"><span style="color:#4593D8;">_MEMFREE</span></a> soundData
 <a class="mw-redirect" href="/qb64wiki/index.php/END_FUNCTION" title="END FUNCTION"><span style="color:#4593D8;">END FUNCTION</span></a>
 </pre>
          </td>
@@ -453,65 +541,79 @@ Channels = SndChannels(Song)
          <td>
           <pre class="codeide"><a href="/qb64wiki/index.php/OPTION" title="OPTION"><span style="color:#4593D8;">OPTION</span></a> <a class="mw-redirect" href="/qb64wiki/index.php/EXPLICIT" title="EXPLICIT"><span style="color:#4593D8;">_EXPLICIT</span></a>
 
+<a href="/qb64wiki/index.php/CONST" title="CONST"><span style="color:#4593D8;">CONST</span></a> FILE_FILTER = <span style="color:#FFB100;">"*.wav|*.aiff|*.aifc|*.flac|*.ogg|*.mp3|*.it|*.xm|*.s3m|*.mod|*.rad|*.ahx|*.hvl|*.mus|*.hmi|*.hmp|*.hmq|*.kar|*.lds|*.mds|*.mids|*.rcp|*.r36|*.g18|*.g36|*.rmi|*.mid|*.midi|*.xfm|*.xmi|*.qoa"</span>
+
 <a href="/qb64wiki/index.php/DECLARE_LIBRARY" title="DECLARE LIBRARY"><span style="color:#4593D8;">DECLARE LIBRARY</span></a>
+    <span style="color:#919191;">' This is needed to convert _OFFSET to LONG / _INTEGER64</span>
     <a href="/qb64wiki/index.php/$IF" title="$IF"><span style="color:#55FF55;">$IF</span></a> <span style="color:#F580B1;">32BIT</span> <a href="/qb64wiki/index.php/THEN" title="THEN"><span style="color:#55FF55;">THEN</span></a>
-        <a href="/qb64wiki/index.php/FUNCTION" title="FUNCTION"><span style="color:#4593D8;">FUNCTION</span></a> <span style="color:#55FF55;">ConvertOffset~&amp;</span> <a href="/qb64wiki/index.php/ALIAS" title="ALIAS"><span style="color:#4593D8;">ALIAS</span></a> <span style="color:#FFB100;">"uintptr_t"</span> (<a class="mw-redirect" href="/qb64wiki/index.php/BYVAL" title="BYVAL"><span style="color:#4593D8;">BYVAL</span></a> o <a href="/qb64wiki/index.php/AS" title="AS"><span style="color:#4593D8;">AS</span></a> <a href="/qb64wiki/index.php/UNSIGNED" title="UNSIGNED"><span style="color:#4593D8;">_UNSIGNED</span></a> <a href="/qb64wiki/index.php/OFFSET_(function)" title="OFFSET (function)"><span style="color:#4593D8;">_OFFSET</span></a>)
+        <a href="/qb64wiki/index.php/FUNCTION" title="FUNCTION"><span style="color:#4593D8;">FUNCTION</span></a> <span style="color:#55FF55;">CLngPtr~&amp;</span> <a href="/qb64wiki/index.php/ALIAS" title="ALIAS"><span style="color:#4593D8;">ALIAS</span></a> <span style="color:#FFB100;">"uintptr_t"</span> (<a class="mw-redirect" href="/qb64wiki/index.php/BYVAL" title="BYVAL"><span style="color:#4593D8;">BYVAL</span></a> o <a href="/qb64wiki/index.php/AS" title="AS"><span style="color:#4593D8;">AS</span></a> <a href="/qb64wiki/index.php/UNSIGNED" title="UNSIGNED"><span style="color:#4593D8;">_UNSIGNED</span></a> <a href="/qb64wiki/index.php/OFFSET_(function)" title="OFFSET (function)"><span style="color:#4593D8;">_OFFSET</span></a>)
     <a class="mw-redirect" href="/qb64wiki/index.php/$ELSE" title="$ELSE"><span style="color:#55FF55;">$ELSE</span></a>
-        <a href="/qb64wiki/index.php/FUNCTION" title="FUNCTION"><span style="color:#4593D8;">FUNCTION</span></a> <span style="color:#55FF55;">ConvertOffset~&amp;&amp;</span> <a href="/qb64wiki/index.php/ALIAS" title="ALIAS"><span style="color:#4593D8;">ALIAS</span></a> <span style="color:#FFB100;">"uintptr_t"</span> (<a class="mw-redirect" href="/qb64wiki/index.php/BYVAL" title="BYVAL"><span style="color:#4593D8;">BYVAL</span></a> o <a href="/qb64wiki/index.php/AS" title="AS"><span style="color:#4593D8;">AS</span></a> <a href="/qb64wiki/index.php/UNSIGNED" title="UNSIGNED"><span style="color:#4593D8;">_UNSIGNED</span></a> <a href="/qb64wiki/index.php/OFFSET_(function)" title="OFFSET (function)"><span style="color:#4593D8;">_OFFSET</span></a>)
+        <a href="/qb64wiki/index.php/FUNCTION" title="FUNCTION"><span style="color:#4593D8;">FUNCTION</span></a> <span style="color:#55FF55;">CLngPtr~&amp;&amp;</span> <a href="/qb64wiki/index.php/ALIAS" title="ALIAS"><span style="color:#4593D8;">ALIAS</span></a> <span style="color:#FFB100;">"uintptr_t"</span> (<a class="mw-redirect" href="/qb64wiki/index.php/BYVAL" title="BYVAL"><span style="color:#4593D8;">BYVAL</span></a> o <a href="/qb64wiki/index.php/AS" title="AS"><span style="color:#4593D8;">AS</span></a> <a href="/qb64wiki/index.php/UNSIGNED" title="UNSIGNED"><span style="color:#4593D8;">_UNSIGNED</span></a> <a href="/qb64wiki/index.php/OFFSET_(function)" title="OFFSET (function)"><span style="color:#4593D8;">_OFFSET</span></a>)
     <a class="mw-redirect" href="/qb64wiki/index.php/$END_IF" title="$END IF"><span style="color:#55FF55;">$END IF</span></a> 
 <a class="mw-redirect" href="/qb64wiki/index.php/END_DECLARE" title="END DECLARE"><span style="color:#4593D8;">END DECLARE</span></a>
 
 <a href="/qb64wiki/index.php/SCREEN" title="SCREEN"><span style="color:#4593D8;">SCREEN</span></a> <a href="/qb64wiki/index.php/NEWIMAGE" title="NEWIMAGE"><span style="color:#4593D8;">_NEWIMAGE</span></a>(<span style="color:#F580B1;">800</span>, <span style="color:#F580B1;">327</span>, <span style="color:#F580B1;">32</span>)
 
 <a href="/qb64wiki/index.php/PRINT" title="PRINT"><span style="color:#4593D8;">PRINT</span></a> <span style="color:#FFB100;">"Loading..."</span>;
-<a href="/qb64wiki/index.php/DIM" title="DIM"><span style="color:#4593D8;">DIM</span></a> Song <a href="/qb64wiki/index.php/AS" title="AS"><span style="color:#4593D8;">AS</span></a> <a href="/qb64wiki/index.php/LONG" title="LONG"><span style="color:#4593D8;">LONG</span></a>: Song = <a href="/qb64wiki/index.php/SNDOPEN" title="SNDOPEN"><span style="color:#4593D8;">_SNDOPEN</span></a>(<span style="color:#FFB100;">"OPL3 Groove.rad"</span>) <span style="color:#919191;">' replace this with your (WAV, AIFF, AIFC, FLAC, OGG, MP3, MID, IT, XM, S3M, MOD, RAD, AHX, HVL, QOA) sound file</span>
+<a href="/qb64wiki/index.php/DIM" title="DIM"><span style="color:#4593D8;">DIM</span></a> Song <a href="/qb64wiki/index.php/AS" title="AS"><span style="color:#4593D8;">AS</span></a> <a href="/qb64wiki/index.php/LONG" title="LONG"><span style="color:#4593D8;">LONG</span></a>
+Song = <a href="/qb64wiki/index.php/SNDOPEN" title="SNDOPEN"><span style="color:#4593D8;">_SNDOPEN</span></a>(<a href="/qb64wiki/index.php/OPENFILEDIALOG$" title="OPENFILEDIALOG$"><span style="color:#4593D8;">_OPENFILEDIALOG$</span></a>(<span style="color:#FFB100;">"Open audio file"</span>, , FILE_FILTER))
 <a class="mw-redirect" href="/qb64wiki/index.php/IF" title="IF"><span style="color:#4593D8;">IF</span></a> Song &lt; <span style="color:#F580B1;">1</span> <a href="/qb64wiki/index.php/THEN" title="THEN"><span style="color:#4593D8;">THEN</span></a>
-    <a href="/qb64wiki/index.php/PRINT" title="PRINT"><span style="color:#4593D8;">PRINT</span></a> <span style="color:#FFB100;">"Failed to load song!"</span>
+    <a href="/qb64wiki/index.php/PRINT" title="PRINT"><span style="color:#4593D8;">PRINT</span></a> <span style="color:#FFB100;">"Failed to load sound!"</span>
     <a href="/qb64wiki/index.php/END" title="END"><span style="color:#4593D8;">END</span></a>
 <a class="mw-redirect" href="/qb64wiki/index.php/END_IF" title="END IF"><span style="color:#4593D8;">END IF</span></a>
 <a href="/qb64wiki/index.php/PRINT" title="PRINT"><span style="color:#4593D8;">PRINT</span></a> <span style="color:#FFB100;">"Done!"</span>
 
 <a href="/qb64wiki/index.php/SNDPLAY" title="SNDPLAY"><span style="color:#4593D8;">_SNDPLAY</span></a> Song
 
-<a href="/qb64wiki/index.php/DIM" title="DIM"><span style="color:#4593D8;">DIM</span></a> SampleData <a href="/qb64wiki/index.php/AS" title="AS"><span style="color:#4593D8;">AS</span></a> <a href="/qb64wiki/index.php/MEM" title="MEM"><span style="color:#4593D8;">_MEM</span></a>: SampleData = <a class="mw-selflink selflink"><span style="color:#4593D8;">_MEMSOUND</span></a>(Song, <span style="color:#F580B1;">0</span>)
-<a class="mw-redirect" href="/qb64wiki/index.php/IF" title="IF"><span style="color:#4593D8;">IF</span></a> SampleData.SIZE = <span style="color:#F580B1;">0</span> <a href="/qb64wiki/index.php/THEN" title="THEN"><span style="color:#4593D8;">THEN</span></a>
+<a href="/qb64wiki/index.php/DIM" title="DIM"><span style="color:#4593D8;">DIM</span></a> soundData <a href="/qb64wiki/index.php/AS" title="AS"><span style="color:#4593D8;">AS</span></a> <a href="/qb64wiki/index.php/MEM" title="MEM"><span style="color:#4593D8;">_MEM</span></a>: soundData = <a class="mw-selflink selflink"><span style="color:#4593D8;">_MEMSOUND</span></a>(Song, <span style="color:#F580B1;">0</span>)
+
+<a class="mw-redirect" href="/qb64wiki/index.php/IF" title="IF"><span style="color:#4593D8;">IF</span></a> soundData.SIZE = <span style="color:#F580B1;">0</span> <a href="/qb64wiki/index.php/THEN" title="THEN"><span style="color:#4593D8;">THEN</span></a>
     <a href="/qb64wiki/index.php/PRINT" title="PRINT"><span style="color:#4593D8;">PRINT</span></a> <span style="color:#FFB100;">"Failed to access sound sample data."</span>
     <a href="/qb64wiki/index.php/END" title="END"><span style="color:#4593D8;">END</span></a>
 <a class="mw-redirect" href="/qb64wiki/index.php/END_IF" title="END IF"><span style="color:#4593D8;">END IF</span></a>
 
-<a href="/qb64wiki/index.php/DIM" title="DIM"><span style="color:#4593D8;">DIM</span></a> sz <a href="/qb64wiki/index.php/AS" title="AS"><span style="color:#4593D8;">AS</span></a> <a href="/qb64wiki/index.php/UNSIGNED" title="UNSIGNED"><span style="color:#4593D8;">_UNSIGNED</span></a> <a href="/qb64wiki/index.php/INTEGER64" title="INTEGER64"><span style="color:#4593D8;">_INTEGER64</span></a>: sz = <span style="color:#55FF55;">ConvertOffset</span>(SampleData.ELEMENTSIZE) <span style="color:#919191;">' sz is the total size of the sound in bytes</span>
+<a href="/qb64wiki/index.php/DIM" title="DIM"><span style="color:#4593D8;">DIM</span></a> sz <a href="/qb64wiki/index.php/AS" title="AS"><span style="color:#4593D8;">AS</span></a> <a href="/qb64wiki/index.php/UNSIGNED" title="UNSIGNED"><span style="color:#4593D8;">_UNSIGNED</span></a> <a href="/qb64wiki/index.php/INTEGER64" title="INTEGER64"><span style="color:#4593D8;">_INTEGER64</span></a>: sz = <span style="color:#55FF55;">CLngPtr</span>(soundData.ELEMENTSIZE)
 <a href="/qb64wiki/index.php/DIM" title="DIM"><span style="color:#4593D8;">DIM</span></a> x <a href="/qb64wiki/index.php/AS" title="AS"><span style="color:#4593D8;">AS</span></a> <a href="/qb64wiki/index.php/LONG" title="LONG"><span style="color:#4593D8;">LONG</span></a>, i <a href="/qb64wiki/index.php/AS" title="AS"><span style="color:#4593D8;">AS</span></a> <a href="/qb64wiki/index.php/UNSIGNED" title="UNSIGNED"><span style="color:#4593D8;">_UNSIGNED</span></a> <a href="/qb64wiki/index.php/INTEGER64" title="INTEGER64"><span style="color:#4593D8;">_INTEGER64</span></a>
 
-<a href="/qb64wiki/index.php/DO...LOOP" title="DO...LOOP"><span style="color:#4593D8;">DO UNTIL</span></a> <a href="/qb64wiki/index.php/KEYHIT" title="KEYHIT"><span style="color:#4593D8;">_KEYHIT</span></a> = <span style="color:#F580B1;">27</span> <a href="/qb64wiki/index.php/OR_(boolean)" title="OR (boolean)"><span style="color:#4593D8;">OR</span></a> <a href="/qb64wiki/index.php/NOT" title="NOT"><span style="color:#4593D8;">NOT</span></a> <a href="/qb64wiki/index.php/SNDPLAYING" title="SNDPLAYING"><span style="color:#4593D8;">_SNDPLAYING</span></a>(Song) <a href="/qb64wiki/index.php/OR_(boolean)" title="OR (boolean)"><span style="color:#4593D8;">OR</span></a> i + (<a href="/qb64wiki/index.php/WIDTH_(function)" title="WIDTH (function)"><span style="color:#4593D8;">_WIDTH</span></a> * sz) &gt; SampleData.SIZE
+<a href="/qb64wiki/index.php/DO...LOOP" title="DO...LOOP"><span style="color:#4593D8;">DO UNTIL</span></a> <a href="/qb64wiki/index.php/KEYHIT" title="KEYHIT"><span style="color:#4593D8;">_KEYHIT</span></a> = <span style="color:#F580B1;">27</span> <a href="/qb64wiki/index.php/OR_(boolean)" title="OR (boolean)"><span style="color:#4593D8;">OR</span></a> <a href="/qb64wiki/index.php/NOT" title="NOT"><span style="color:#4593D8;">NOT</span></a> <a href="/qb64wiki/index.php/SNDPLAYING" title="SNDPLAYING"><span style="color:#4593D8;">_SNDPLAYING</span></a>(Song) <a href="/qb64wiki/index.php/OR_(boolean)" title="OR (boolean)"><span style="color:#4593D8;">OR</span></a> i + (<a href="/qb64wiki/index.php/WIDTH_(function)" title="WIDTH (function)"><span style="color:#4593D8;">_WIDTH</span></a> * sz) &gt; soundData.SIZE
     <a href="/qb64wiki/index.php/CLS" title="CLS"><span style="color:#4593D8;">CLS</span></a>
-    <a href="/qb64wiki/index.php/LOCATE" title="LOCATE"><span style="color:#4593D8;">LOCATE</span></a> <span style="color:#F580B1;">1</span>, <span style="color:#F580B1;">1</span>: <a href="/qb64wiki/index.php/PRINT" title="PRINT"><span style="color:#4593D8;">PRINT</span></a> i; <span style="color:#FFB100;">"/"</span>; SampleData.SIZE, <span style="color:#FFB100;">"Frame Size ="</span>; sz, <span style="color:#FFB100;">"Data Type ="</span>; SampleData.TYPE
+    <a href="/qb64wiki/index.php/LOCATE" title="LOCATE"><span style="color:#4593D8;">LOCATE</span></a> <span style="color:#F580B1;">1</span>, <span style="color:#F580B1;">1</span>: <a href="/qb64wiki/index.php/PRINT" title="PRINT"><span style="color:#4593D8;">PRINT</span></a> i; <span style="color:#FFB100;">"/"</span>; soundData.SIZE, <span style="color:#FFB100;">"Frame Size ="</span>; sz, <span style="color:#FFB100;">"Data Type ="</span>; soundData.TYPE
 
-    <a href="/qb64wiki/index.php/$CHECKING" title="$CHECKING"><span style="color:#55FF55;">$CHECKING</span></a>:<a href="/qb64wiki/index.php/OFF" title="OFF"><span style="color:#4593D8;">OFF</span></a>
-    <a class="mw-redirect" href="/qb64wiki/index.php/IF" title="IF"><span style="color:#4593D8;">IF</span></a> SampleData.TYPE = <span style="color:#F580B1;">130</span> <a href="/qb64wiki/index.php/THEN" title="THEN"><span style="color:#4593D8;">THEN</span></a> <span style="color:#919191;">' 128 OR 2: integer stereo or mono</span>
-        <a href="/qb64wiki/index.php/FOR" title="FOR"><span style="color:#4593D8;">FOR</span></a> x = <span style="color:#F580B1;">0</span> <a href="/qb64wiki/index.php/TO" title="TO"><span style="color:#4593D8;">TO</span></a> <a href="/qb64wiki/index.php/WIDTH_(function)" title="WIDTH (function)"><span style="color:#4593D8;">_WIDTH</span></a> - <span style="color:#F580B1;">1</span>
-            <a href="/qb64wiki/index.php/DIM" title="DIM"><span style="color:#4593D8;">DIM</span></a> si <a href="/qb64wiki/index.php/AS" title="AS"><span style="color:#4593D8;">AS</span></a> <a href="/qb64wiki/index.php/INTEGER" title="INTEGER"><span style="color:#4593D8;">INTEGER</span></a>: si = <a href="/qb64wiki/index.php/MEMGET_(function)" title="MEMGET (function)"><span style="color:#4593D8;">_MEMGET</span></a>(SampleData, SampleData.OFFSET + i + x * sz, <a href="/qb64wiki/index.php/INTEGER" title="INTEGER"><span style="color:#4593D8;">INTEGER</span></a>) <span style="color:#919191;">' get sound data</span>
-            <a href="/qb64wiki/index.php/LINE" title="LINE"><span style="color:#4593D8;">LINE</span></a> (x, <a href="/qb64wiki/index.php/HEIGHT" title="HEIGHT"><span style="color:#4593D8;">_HEIGHT</span></a> / <span style="color:#F580B1;">2</span>)-<a href="/qb64wiki/index.php/STEP" title="STEP"><span style="color:#4593D8;">STEP</span></a>(<span style="color:#F580B1;">0</span>, <span style="color:#F580B1;">300</span> * si / <span style="color:#F580B1;">32768</span>), <a href="/qb64wiki/index.php/RGB32" title="RGB32"><span style="color:#4593D8;">_RGB32</span></a>(<span style="color:#F580B1;">0</span>, <span style="color:#F580B1;">111</span>, <span style="color:#F580B1;">0</span>) <span style="color:#919191;">'plot wave</span>
-        <a href="/qb64wiki/index.php/NEXT" title="NEXT"><span style="color:#4593D8;">NEXT</span></a>
-    <a href="/qb64wiki/index.php/ELSEIF" title="ELSEIF"><span style="color:#4593D8;">ELSEIF</span></a> SampleData.TYPE = <span style="color:#F580B1;">260</span> <a href="/qb64wiki/index.php/THEN" title="THEN"><span style="color:#4593D8;">THEN</span></a> <span style="color:#919191;">' 256 OR 4: floating point stereo or mono</span>
-        <a href="/qb64wiki/index.php/FOR" title="FOR"><span style="color:#4593D8;">FOR</span></a> x = <span style="color:#F580B1;">0</span> <a href="/qb64wiki/index.php/TO" title="TO"><span style="color:#4593D8;">TO</span></a> <a href="/qb64wiki/index.php/WIDTH_(function)" title="WIDTH (function)"><span style="color:#4593D8;">_WIDTH</span></a> - <span style="color:#F580B1;">1</span>
-            <a href="/qb64wiki/index.php/DIM" title="DIM"><span style="color:#4593D8;">DIM</span></a> sf <a href="/qb64wiki/index.php/AS" title="AS"><span style="color:#4593D8;">AS</span></a> <a href="/qb64wiki/index.php/SINGLE" title="SINGLE"><span style="color:#4593D8;">SINGLE</span></a>: sf = <a href="/qb64wiki/index.php/MEMGET_(function)" title="MEMGET (function)"><span style="color:#4593D8;">_MEMGET</span></a>(SampleData, SampleData.OFFSET + i + x * sz, <a href="/qb64wiki/index.php/SINGLE" title="SINGLE"><span style="color:#4593D8;">SINGLE</span></a>) <span style="color:#919191;">' get sound data</span>
-            <a href="/qb64wiki/index.php/LINE" title="LINE"><span style="color:#4593D8;">LINE</span></a> (x, <a href="/qb64wiki/index.php/HEIGHT" title="HEIGHT"><span style="color:#4593D8;">_HEIGHT</span></a> / <span style="color:#F580B1;">2</span>)-<a href="/qb64wiki/index.php/STEP" title="STEP"><span style="color:#4593D8;">STEP</span></a>(<span style="color:#F580B1;">0</span>, sf * <span style="color:#F580B1;">300</span>), <a href="/qb64wiki/index.php/RGB32" title="RGB32"><span style="color:#4593D8;">_RGB32</span></a>(<span style="color:#F580B1;">0</span>, <span style="color:#F580B1;">111</span>, <span style="color:#F580B1;">0</span>) <span style="color:#919191;">'plot wave</span>
-        <a href="/qb64wiki/index.php/NEXT" title="NEXT"><span style="color:#4593D8;">NEXT</span></a>
-    <a href="/qb64wiki/index.php/ELSEIF" title="ELSEIF"><span style="color:#4593D8;">ELSEIF</span></a> SampleData.TYPE = <span style="color:#F580B1;">1153</span> <a href="/qb64wiki/index.php/THEN" title="THEN"><span style="color:#4593D8;">THEN</span></a> <span style="color:#919191;">' 128 OR 1 OR 1024: unsigned byte stereo or mono</span>
-        <a href="/qb64wiki/index.php/FOR" title="FOR"><span style="color:#4593D8;">FOR</span></a> x = <span style="color:#F580B1;">0</span> <a href="/qb64wiki/index.php/TO" title="TO"><span style="color:#4593D8;">TO</span></a> <a href="/qb64wiki/index.php/WIDTH_(function)" title="WIDTH (function)"><span style="color:#4593D8;">_WIDTH</span></a> - <span style="color:#F580B1;">1</span>
-            <a href="/qb64wiki/index.php/DIM" title="DIM"><span style="color:#4593D8;">DIM</span></a> sb <a href="/qb64wiki/index.php/AS" title="AS"><span style="color:#4593D8;">AS</span></a> <a href="/qb64wiki/index.php/BYTE" title="BYTE"><span style="color:#4593D8;">_BYTE</span></a>: sb = <a href="/qb64wiki/index.php/MEMGET_(function)" title="MEMGET (function)"><span style="color:#4593D8;">_MEMGET</span></a>(SampleData, SampleData.OFFSET + i + x * sz, <a href="/qb64wiki/index.php/UNSIGNED" title="UNSIGNED"><span style="color:#4593D8;">_UNSIGNED</span></a> <a href="/qb64wiki/index.php/BYTE" title="BYTE"><span style="color:#4593D8;">_BYTE</span></a>) <a class="mw-redirect" href="/qb64wiki/index.php/XOR" title="XOR"><span style="color:#4593D8;">XOR</span></a> <span style="color:#F580B1;">&amp;H80</span> <span style="color:#919191;">' get sound data and convert to signed</span>
-            <a href="/qb64wiki/index.php/LINE" title="LINE"><span style="color:#4593D8;">LINE</span></a> (x, <a href="/qb64wiki/index.php/HEIGHT" title="HEIGHT"><span style="color:#4593D8;">_HEIGHT</span></a> / <span style="color:#F580B1;">2</span>)-<a href="/qb64wiki/index.php/STEP" title="STEP"><span style="color:#4593D8;">STEP</span></a>(<span style="color:#F580B1;">0</span>, <span style="color:#F580B1;">300</span> * sb / <span style="color:#F580B1;">128</span>), <a href="/qb64wiki/index.php/RGB32" title="RGB32"><span style="color:#4593D8;">_RGB32</span></a>(<span style="color:#F580B1;">0</span>, <span style="color:#F580B1;">111</span>, <span style="color:#F580B1;">0</span>) <span style="color:#919191;">' plot wave</span>
-        <a href="/qb64wiki/index.php/NEXT" title="NEXT"><span style="color:#4593D8;">NEXT</span></a>
-    <a class="mw-redirect" href="/qb64wiki/index.php/END_IF" title="END IF"><span style="color:#4593D8;">END IF</span></a>
-    <a href="/qb64wiki/index.php/$CHECKING" title="$CHECKING"><span style="color:#55FF55;">$CHECKING</span></a>:<a href="/qb64wiki/index.php/ON" title="ON"><span style="color:#4593D8;">ON</span></a>
+    <span style="color:#919191;">' See https://qb64phoenix.com/qb64wiki/index.php/MEM for details</span>
+    <a href="/qb64wiki/index.php/SELECT_CASE" title="SELECT CASE"><span style="color:#4593D8;">SELECT CASE</span></a> soundData.TYPE
+        <a class="mw-redirect" href="/qb64wiki/index.php/CASE" title="CASE"><span style="color:#4593D8;">CASE</span></a> <span style="color:#F580B1;">130</span> <span style="color:#919191;">' integer stereo or mono</span>
+            <a href="/qb64wiki/index.php/FOR" title="FOR"><span style="color:#4593D8;">FOR</span></a> x = <span style="color:#F580B1;">0</span> <a href="/qb64wiki/index.php/TO" title="TO"><span style="color:#4593D8;">TO</span></a> <a href="/qb64wiki/index.php/WIDTH_(function)" title="WIDTH (function)"><span style="color:#4593D8;">_WIDTH</span></a> - <span style="color:#F580B1;">1</span>
+                <a href="/qb64wiki/index.php/DIM" title="DIM"><span style="color:#4593D8;">DIM</span></a> si <a href="/qb64wiki/index.php/AS" title="AS"><span style="color:#4593D8;">AS</span></a> <a href="/qb64wiki/index.php/INTEGER" title="INTEGER"><span style="color:#4593D8;">INTEGER</span></a>: si = <a href="/qb64wiki/index.php/MEMGET_(function)" title="MEMGET (function)"><span style="color:#4593D8;">_MEMGET</span></a>(soundData, soundData.OFFSET + i + x * sz, <a href="/qb64wiki/index.php/INTEGER" title="INTEGER"><span style="color:#4593D8;">INTEGER</span></a>) <span style="color:#919191;">' get sound data</span>
+                <a href="/qb64wiki/index.php/LINE" title="LINE"><span style="color:#4593D8;">LINE</span></a> (x, <a href="/qb64wiki/index.php/HEIGHT" title="HEIGHT"><span style="color:#4593D8;">_HEIGHT</span></a> \ <span style="color:#F580B1;">2</span>)-<a href="/qb64wiki/index.php/STEP" title="STEP"><span style="color:#4593D8;">STEP</span></a>(<span style="color:#F580B1;">0</span>, <span style="color:#F580B1;">300!</span> * si / <span style="color:#F580B1;">32768!</span>), <a href="/qb64wiki/index.php/RGB32" title="RGB32"><span style="color:#4593D8;">_RGB32</span></a>(<span style="color:#F580B1;">0</span>, <span style="color:#F580B1;">111</span>, <span style="color:#F580B1;">0</span>) <span style="color:#919191;">'plot wave</span>
+            <a href="/qb64wiki/index.php/NEXT" title="NEXT"><span style="color:#4593D8;">NEXT</span></a>
+
+        <a class="mw-redirect" href="/qb64wiki/index.php/CASE" title="CASE"><span style="color:#4593D8;">CASE</span></a> <span style="color:#F580B1;">132</span> <span style="color:#919191;">' long stereo or mono</span>
+            <a href="/qb64wiki/index.php/FOR" title="FOR"><span style="color:#4593D8;">FOR</span></a> x = <span style="color:#F580B1;">0</span> <a href="/qb64wiki/index.php/TO" title="TO"><span style="color:#4593D8;">TO</span></a> <a href="/qb64wiki/index.php/WIDTH_(function)" title="WIDTH (function)"><span style="color:#4593D8;">_WIDTH</span></a> - <span style="color:#F580B1;">1</span>
+                <a href="/qb64wiki/index.php/DIM" title="DIM"><span style="color:#4593D8;">DIM</span></a> sl <a href="/qb64wiki/index.php/AS" title="AS"><span style="color:#4593D8;">AS</span></a> <a href="/qb64wiki/index.php/LONG" title="LONG"><span style="color:#4593D8;">LONG</span></a>: sl = <a href="/qb64wiki/index.php/MEMGET_(function)" title="MEMGET (function)"><span style="color:#4593D8;">_MEMGET</span></a>(soundData, soundData.OFFSET + i + x * sz, <a href="/qb64wiki/index.php/LONG" title="LONG"><span style="color:#4593D8;">LONG</span></a>) <span style="color:#919191;">' get sound data</span>
+                <a href="/qb64wiki/index.php/LINE" title="LINE"><span style="color:#4593D8;">LINE</span></a> (x, <a href="/qb64wiki/index.php/HEIGHT" title="HEIGHT"><span style="color:#4593D8;">_HEIGHT</span></a> \ <span style="color:#F580B1;">2</span>)-<a href="/qb64wiki/index.php/STEP" title="STEP"><span style="color:#4593D8;">STEP</span></a>(<span style="color:#F580B1;">0</span>, <span style="color:#F580B1;">300!</span> * sl / <span style="color:#F580B1;">2147483648!</span>), <a href="/qb64wiki/index.php/RGB32" title="RGB32"><span style="color:#4593D8;">_RGB32</span></a>(<span style="color:#F580B1;">0</span>, <span style="color:#F580B1;">111</span>, <span style="color:#F580B1;">0</span>) <span style="color:#919191;">'plot wave</span>
+            <a href="/qb64wiki/index.php/NEXT" title="NEXT"><span style="color:#4593D8;">NEXT</span></a>
+
+        <a class="mw-redirect" href="/qb64wiki/index.php/CASE" title="CASE"><span style="color:#4593D8;">CASE</span></a> <span style="color:#F580B1;">260</span> <span style="color:#919191;">' floating point stereo or mono</span>
+            <a href="/qb64wiki/index.php/FOR" title="FOR"><span style="color:#4593D8;">FOR</span></a> x = <span style="color:#F580B1;">0</span> <a href="/qb64wiki/index.php/TO" title="TO"><span style="color:#4593D8;">TO</span></a> <a href="/qb64wiki/index.php/WIDTH_(function)" title="WIDTH (function)"><span style="color:#4593D8;">_WIDTH</span></a> - <span style="color:#F580B1;">1</span>
+                <a href="/qb64wiki/index.php/DIM" title="DIM"><span style="color:#4593D8;">DIM</span></a> sf <a href="/qb64wiki/index.php/AS" title="AS"><span style="color:#4593D8;">AS</span></a> <a href="/qb64wiki/index.php/SINGLE" title="SINGLE"><span style="color:#4593D8;">SINGLE</span></a>: sf = <a href="/qb64wiki/index.php/MEMGET_(function)" title="MEMGET (function)"><span style="color:#4593D8;">_MEMGET</span></a>(soundData, soundData.OFFSET + i + x * sz, <a href="/qb64wiki/index.php/SINGLE" title="SINGLE"><span style="color:#4593D8;">SINGLE</span></a>) <span style="color:#919191;">' get sound data</span>
+                <a href="/qb64wiki/index.php/LINE" title="LINE"><span style="color:#4593D8;">LINE</span></a> (x, <a href="/qb64wiki/index.php/HEIGHT" title="HEIGHT"><span style="color:#4593D8;">_HEIGHT</span></a> \ <span style="color:#F580B1;">2</span>)-<a href="/qb64wiki/index.php/STEP" title="STEP"><span style="color:#4593D8;">STEP</span></a>(<span style="color:#F580B1;">0</span>, sf * <span style="color:#F580B1;">300!</span>), <a href="/qb64wiki/index.php/RGB32" title="RGB32"><span style="color:#4593D8;">_RGB32</span></a>(<span style="color:#F580B1;">0</span>, <span style="color:#F580B1;">111</span>, <span style="color:#F580B1;">0</span>) <span style="color:#919191;">'plot wave</span>
+            <a href="/qb64wiki/index.php/NEXT" title="NEXT"><span style="color:#4593D8;">NEXT</span></a>
+
+        <a class="mw-redirect" href="/qb64wiki/index.php/CASE" title="CASE"><span style="color:#4593D8;">CASE</span></a> <span style="color:#F580B1;">1153</span> <span style="color:#919191;">' unsigned byte stereo or mono</span>
+            <a href="/qb64wiki/index.php/FOR" title="FOR"><span style="color:#4593D8;">FOR</span></a> x = <span style="color:#F580B1;">0</span> <a href="/qb64wiki/index.php/TO" title="TO"><span style="color:#4593D8;">TO</span></a> <a href="/qb64wiki/index.php/WIDTH_(function)" title="WIDTH (function)"><span style="color:#4593D8;">_WIDTH</span></a> - <span style="color:#F580B1;">1</span>
+                <a href="/qb64wiki/index.php/DIM" title="DIM"><span style="color:#4593D8;">DIM</span></a> sb <a href="/qb64wiki/index.php/AS" title="AS"><span style="color:#4593D8;">AS</span></a> <a href="/qb64wiki/index.php/BYTE" title="BYTE"><span style="color:#4593D8;">_BYTE</span></a>: sb = <a href="/qb64wiki/index.php/MEMGET_(function)" title="MEMGET (function)"><span style="color:#4593D8;">_MEMGET</span></a>(soundData, soundData.OFFSET + i + x * sz, <a href="/qb64wiki/index.php/UNSIGNED" title="UNSIGNED"><span style="color:#4593D8;">_UNSIGNED</span></a> <a href="/qb64wiki/index.php/BYTE" title="BYTE"><span style="color:#4593D8;">_BYTE</span></a>) <a class="mw-redirect" href="/qb64wiki/index.php/XOR" title="XOR"><span style="color:#4593D8;">XOR</span></a> <span style="color:#F580B1;">&amp;H80</span> <span style="color:#919191;">' get sound data and convert to signed</span>
+                <a href="/qb64wiki/index.php/LINE" title="LINE"><span style="color:#4593D8;">LINE</span></a> (x, <a href="/qb64wiki/index.php/HEIGHT" title="HEIGHT"><span style="color:#4593D8;">_HEIGHT</span></a> \ <span style="color:#F580B1;">2</span>)-<a href="/qb64wiki/index.php/STEP" title="STEP"><span style="color:#4593D8;">STEP</span></a>(<span style="color:#F580B1;">0</span>, <span style="color:#F580B1;">300!</span> * sb / <span style="color:#F580B1;">128!</span>), <a href="/qb64wiki/index.php/RGB32" title="RGB32"><span style="color:#4593D8;">_RGB32</span></a>(<span style="color:#F580B1;">0</span>, <span style="color:#F580B1;">111</span>, <span style="color:#F580B1;">0</span>) <span style="color:#919191;">' plot wave</span>
+            <a href="/qb64wiki/index.php/NEXT" title="NEXT"><span style="color:#4593D8;">NEXT</span></a>
+    <a href="/qb64wiki/index.php/END_SELECT" title="END SELECT"><span style="color:#4593D8;">END SELECT</span></a>
 
     <a href="/qb64wiki/index.php/DISPLAY" title="DISPLAY"><span style="color:#4593D8;">_DISPLAY</span></a>
+
     <a href="/qb64wiki/index.php/LIMIT" title="LIMIT"><span style="color:#4593D8;">_LIMIT</span></a> <span style="color:#F580B1;">60</span>
 
     i = <a href="/qb64wiki/index.php/FIX" title="FIX"><span style="color:#4593D8;">FIX</span></a>(<a href="/qb64wiki/index.php/SNDGETPOS" title="SNDGETPOS"><span style="color:#4593D8;">_SNDGETPOS</span></a>(Song) * <a href="/qb64wiki/index.php/SNDRATE" title="SNDRATE"><span style="color:#4593D8;">_SNDRATE</span></a>) * sz <span style="color:#919191;">' calculate the new sample frame position</span>
 <a href="/qb64wiki/index.php/LOOP" title="LOOP"><span style="color:#4593D8;">LOOP</span></a>
 
-<a href="/qb64wiki/index.php/SNDCLOSE" title="SNDCLOSE"><span style="color:#4593D8;">_SNDCLOSE</span></a> Song <span style="color:#919191;">' closing the sound releases the mem blocks</span>
+<a href="/qb64wiki/index.php/SNDCLOSE" title="SNDCLOSE"><span style="color:#4593D8;">_SNDCLOSE</span></a> Song
 <a href="/qb64wiki/index.php/AUTODISPLAY" title="AUTODISPLAY"><span style="color:#4593D8;">_AUTODISPLAY</span></a>
 <a href="/qb64wiki/index.php/END" title="END"><span style="color:#4593D8;">END</span></a>
 </pre>
@@ -607,40 +709,40 @@ Channels = SndChannels(Song)
       </center>
       <!-- 
 NewPP limit report
-Cached time: 20240721081340
+Cached time: 20250124043751
 Cache expiry: 86400
 Reduced expiry: false
 Complications: [show‐toc]
-CPU time usage: 0.109 seconds
-Real time usage: 0.138 seconds
-Preprocessor visited node count: 2006/1000000
-Post‐expand include size: 14668/2097152 bytes
-Template argument size: 3621/2097152 bytes
+CPU time usage: 0.125 seconds
+Real time usage: 0.140 seconds
+Preprocessor visited node count: 2420/1000000
+Post‐expand include size: 17521/2097152 bytes
+Template argument size: 5077/2097152 bytes
 Highest expansion depth: 4/100
 Expensive parser function count: 0/100
 Unstrip recursion depth: 0/20
-Unstrip post‐expand size: 611/5000000 bytes
+Unstrip post‐expand size: 3720/5000000 bytes
 -->
       <!--
 Transclusion expansion time report (%,ms,calls,template)
-100.00%   81.455      1 -total
- 16.39%   13.352     67 Template:Text
- 16.22%   13.210    196 Template:Cl
-  7.97%    6.495      1 Template:PageSyntax
-  5.43%    4.425      1 Template:PageAvailability
-  4.65%    3.785      6 Template:Cm
-  4.47%    3.641      2 Template:CodeEnd
-  4.03%    3.286      6 Template:Parameter
-  3.82%    3.115      2 Template:CodeStart
-  3.69%    3.009      1 Template:PageExamples
+100.00%   80.766      1 -total
+ 12.60%   10.175    192 Template:Cl
+  9.19%    7.423    118 Template:Text
+  3.62%    2.926      6 Template:Parameter
+  3.61%    2.918      1 Template:PageSeeAlso
+  3.36%    2.718      8 Template:Cm
+  3.36%    2.717      1 Template:PageSyntax
+  3.04%    2.456      2 Template:CodeEnd
+  2.96%    2.391      1 Template:PageAvailability
+  2.83%    2.284      1 Template:PageParameters
 -->
-      <!-- Saved in parser cache with key qb64pnix_mw19894-mwmb_:pcache:idhash:830-0!canonical and timestamp 20240721081340 and revision id 8569.
+      <!-- Saved in parser cache with key qb64pnix_mw19894-mwmb_:pcache:idhash:830-0!canonical and timestamp 20250124043751 and revision id 9341.
  -->
      </div>
      <div class="printfooter" data-nosnippet="">
       Retrieved from "
-      <a dir="ltr" href="https://qb64phoenix.com/qb64wiki/index.php?title=MEMSOUND&amp;oldid=8569">
-       https://qb64phoenix.com/qb64wiki/index.php?title=MEMSOUND&amp;oldid=8569
+      <a dir="ltr" href="https://qb64phoenix.com/qb64wiki/index.php?title=MEMSOUND&amp;oldid=9341">
+       https://qb64phoenix.com/qb64wiki/index.php?title=MEMSOUND&amp;oldid=9341
       </a>
       "
      </div>
@@ -857,7 +959,7 @@ You can view its source [e]">
         </a>
        </li>
        <li class="mw-list-item" id="t-permalink">
-        <a href="/qb64wiki/index.php?title=MEMSOUND&amp;oldid=8569" title="Permanent link to this revision of this page">
+        <a href="/qb64wiki/index.php?title=MEMSOUND&amp;oldid=9341" title="Permanent link to this revision of this page">
          <span>
           Permanent link
          </span>
@@ -878,7 +980,7 @@ You can view its source [e]">
   <footer class="mw-footer" id="footer" role="contentinfo">
    <ul id="footer-info">
     <li id="footer-info-lastmod">
-     This page was last edited on 24 September 2023, at 23:11.
+     This page was last edited on 25 November 2024, at 16:54.
     </li>
    </ul>
    <ul id="footer-places">
@@ -907,7 +1009,7 @@ You can view its source [e]">
    </ul>
   </footer>
   <script>
-   (RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgPageParseReport":{"limitreport":{"cputime":"0.109","walltime":"0.138","ppvisitednodes":{"value":2006,"limit":1000000},"postexpandincludesize":{"value":14668,"limit":2097152},"templateargumentsize":{"value":3621,"limit":2097152},"expansiondepth":{"value":4,"limit":100},"expensivefunctioncount":{"value":0,"limit":100},"unstrip-depth":{"value":0,"limit":20},"unstrip-size":{"value":611,"limit":5000000},"timingprofile":["100.00%   81.455      1 -total"," 16.39%   13.352     67 Template:Text"," 16.22%   13.210    196 Template:Cl","  7.97%    6.495      1 Template:PageSyntax","  5.43%    4.425      1 Template:PageAvailability","  4.65%    3.785      6 Template:Cm","  4.47%    3.641      2 Template:CodeEnd","  4.03%    3.286      6 Template:Parameter","  3.82%    3.115      2 Template:CodeStart","  3.69%    3.009      1 Template:PageExamples"]},"cachereport":{"timestamp":"20240721081340","ttl":86400,"transientcontent":false}}});mw.config.set({"wgBackendResponseTime":195});});
+   (RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgPageParseReport":{"limitreport":{"cputime":"0.125","walltime":"0.140","ppvisitednodes":{"value":2420,"limit":1000000},"postexpandincludesize":{"value":17521,"limit":2097152},"templateargumentsize":{"value":5077,"limit":2097152},"expansiondepth":{"value":4,"limit":100},"expensivefunctioncount":{"value":0,"limit":100},"unstrip-depth":{"value":0,"limit":20},"unstrip-size":{"value":3720,"limit":5000000},"timingprofile":["100.00%   80.766      1 -total"," 12.60%   10.175    192 Template:Cl","  9.19%    7.423    118 Template:Text","  3.62%    2.926      6 Template:Parameter","  3.61%    2.918      1 Template:PageSeeAlso","  3.36%    2.718      8 Template:Cm","  3.36%    2.717      1 Template:PageSyntax","  3.04%    2.456      2 Template:CodeEnd","  2.96%    2.391      1 Template:PageAvailability","  2.83%    2.284      1 Template:PageParameters"]},"cachereport":{"timestamp":"20250124043751","ttl":86400,"transientcontent":false}}});mw.config.set({"wgBackendResponseTime":97});});
   </script>
  </body>
 </html>

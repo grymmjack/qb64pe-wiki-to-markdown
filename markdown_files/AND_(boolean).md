@@ -138,7 +138,7 @@ Table 3: The relational operations for condition checking.
 In this table, A and B are the Expressions to compare. Both must represent
 the same general type, i.e. they must result into either numerical values
 or STRING values. If a test succeeds, then true (-1) is returned, false (0)
-if it fails, which both can be used in further Boolean evaluations.
+    if it fails, which both can be used in further Boolean evaluations.
 ┌─────────────────────────────────────────────────────────────────────────┐
 │                          Relational Operations                          │
 ├────────────┬───────────────────────────────────────────┬────────────────┤
@@ -156,21 +156,21 @@ if it fails, which both can be used in further Boolean evaluations.
 ├────────────┼───────────────────────────────────────────┼────────────────┤
 │   A >= B   │ Tests if A is greater than or equal to B. │ IF A >= B THEN │
 └────────────┴───────────────────────────────────────────┴────────────────┘
-The operations should be very obvious for numerical values. For strings
-be aware that all checks are done case sensitive (i.e. "Foo" <> "foo").
-The equal/not equal check is pretty much straight forward, but for the
-less/greater checks the ASCII value of the first different character is
-used for decision making:
+  The operations should be very obvious for numerical values. For strings
+  be aware that all checks are done case sensitive (i.e. "Foo" <> "foo").
+  The equal/not equal check is pretty much straight forward, but for the
+  less/greater checks the ASCII value of the first different character is
+                         used for decision making:
 
-E.g. "abc" is less than "abd", because in the first difference (the 3rd
-character) the "c" has a lower ASCII value than the "d".
+  E.g. "abc" is less than "abd", because in the first difference (the 3rd
+       character) the "c" has a lower ASCII value than the "d".
 
-This behavior may give you some subtle results, if you are not aware of
-the ASCII values and the written case:
+  This behavior may give you some subtle results, if you are not aware of
+                  the ASCII values and the written case:
 
-E.g. "abc" is greater than "abD", because the small letters have higher
-ASCII values than the capital letters, hence "c" > "D". You may use
-LCASE$ or UCASE$ to make sure both strings have the same case.
+  E.g. "abc" is greater than "abD", because the small letters have higher
+       ASCII values than the capital letters, hence "c" > "D". You may use
+       LCASE$ or UCASE$ to make sure both strings have the same case.
 ```
   
 <br>
@@ -227,6 +227,6 @@ True
 
 
 * [AND](AND.md) , [OR](OR.md) (logical operators)
-* [OR](OR.md) (boolean) , [XOR](XOR.md) (boolean)
-* IF...THEN
+* [OR](OR.md) (boolean) , XOR (boolean)
+* [IF...THEN](IF...THEN.md)
 </blockquote>

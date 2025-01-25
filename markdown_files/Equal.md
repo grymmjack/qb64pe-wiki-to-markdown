@@ -120,7 +120,7 @@ br ~ h5 {
 
 
 * Statements will evaluate as True or -1 when two values are equal or False or 0 when not equal.
-* More than one = symbol in a numerical statement will create a Boolean evaluation of the ensuing numerical pairs.
+* More than one = symbol in a numerical statement will create a [Boolean](Boolean.md) evaluation of the ensuing numerical pairs.
 
 </blockquote>
 

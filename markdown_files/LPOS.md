@@ -139,18 +139,18 @@ INPUT "How many teams"; TEAMS
 INPUT "How many players per team";PPT
 PRINT
 FOR T = 1 TO TEAMS
-INPUT "Team name: ", TEAM$
-FOR P = 1 TO PPT
-INPUT "   Enter player name: ", PLAYER$
-LPRINT PLAYER$;
-IF P < PPT THEN
-IF LPOS(0) > 55 THEN ' Print a new line if print head past column 55.
-LPRINT : LPRINT SPACE$(5);
-ELSE
-LPRINT ", ";         'Otherwise, print a comma.
-END IF
-END IF
-NEXT P
+   INPUT "Team name: ", TEAM$
+   FOR P = 1 TO PPT
+       INPUT "   Enter player name: ", PLAYER$
+       LPRINT PLAYER$;
+       IF P < PPT THEN
+           IF LPOS(0) > 55 THEN ' Print a new line if print head past column 55.
+               LPRINT : LPRINT SPACE$(5);
+           ELSE
+               LPRINT ", ";         'Otherwise, print a comma.
+           END IF
+       END IF
+   NEXT P
 LPRINT STRING$(80 - LPOS(0) - LEN(TEAM$),"."); TEAM$
 NEXT T
 ```

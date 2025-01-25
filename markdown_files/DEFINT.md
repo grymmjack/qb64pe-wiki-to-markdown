@@ -123,7 +123,7 @@ br ~ h5 {
 * You can also use commas for specific undefined variable first letters.
 * Variables DIMensioned as another variable type or that use type suffixes are not affected by [DEFINT](DEFINT.md) .
 * [DEFINT](DEFINT.md) sets the type of all variable names with the starting letter(s) or letter ranges when encountered in the progression of the program (even in conditional statement blocks not executed and subsequent [SUB](SUB.md) procedures).
-* For [_UNSIGNED](UNSIGNED.md) [INTEGER](INTEGER.md) , use [_DEFINE](DEFINE.md)
+* For _UNSIGNED [INTEGER](INTEGER.md) , use _DEFINE
 * Warning: QBasic keyword names cannot be used as numerical variable names with or without the type suffix.
 
 </blockquote>
@@ -151,5 +151,5 @@ DEFINT A, F-H, M
 
 
 * [DEFSNG](DEFSNG.md) , [DEFLNG](DEFLNG.md) , [DEFDBL](DEFDBL.md) , [DEFSTR](DEFSTR.md)
-* [_DEFINE](DEFINE.md)
+* _DEFINE
 </blockquote>

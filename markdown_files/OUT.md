@@ -133,8 +133,8 @@ br ~ h5 {
 * Some settings may be set in a specific order to gain access to settings and [INP](INP.md) reads.
 * [SCREEN](SCREEN.md) modes determine the number of available color palette attributes from 2 to 256 in [SCREEN](SCREEN.md) 13.
 * Windows NT may block access to Parallel printer and Serial ports. See Port Access Libraries or other DLLs.
-* [_PALETTECOLOR](PALETTECOLOR.md) can also be used to set RGB intensity values using 32 bit color values.
-* [OUT](OUT.md) can toggle the blinking attribute of [SCREEN](SCREEN.md) 0 color 16-31 for legacy code. [_BLINK](BLINK.md) is the preferred method. (starting with build 20170816/61).
+* _PALETTECOLOR can also be used to set [RGB](RGB.md) intensity values using 32 bit color values.
+* [OUT](OUT.md) can toggle the blinking attribute of [SCREEN](SCREEN.md) 0 color 16-31 for legacy code. _BLINK is the preferred method. (starting with build 20170816/61).
 
 </blockquote>
 
@@ -190,7 +190,7 @@ OUT &H3C0, 2 ^ 3 'reenables blinking and disables high intensity backgrounds  (c
 SCREEN 12
 OUT &H3C8, 0 ' set color port for output at attribute 0
 FOR i = 0 TO 47 ' 48 RGB values is (3 * 16) -1 color attributes from 0 in screen 12
-OUT &H3C9, Image%(i) ' changes to next attribute after 3 RGB loops
+  OUT &H3C9, Image%(i) ' changes to next attribute after 3 RGB loops
 NEXT
 PUT(clm, row), Image(48) PSET
 ```
@@ -205,12 +205,12 @@ PUT(clm, row), Image(48) PSET
 <blockquote>
 
 
-* [PALETTE](PALETTE.md) , [_PALETTECOLOR](PALETTECOLOR.md)
+* [PALETTE](PALETTE.md) , _PALETTECOLOR
 * [INP](INP.md)
 * [PEEK](PEEK.md)
 * [POKE](POKE.md)
 * [COLOR](COLOR.md) , [SCREEN](SCREEN.md)
 * [BSAVE](BSAVE.md) , [BLOAD](BLOAD.md)
-* [_BLINK](BLINK.md) , [_BLINK](BLINK.md) (function)
+* _BLINK , _BLINK (function)
 * Port Access Libraries
 </blockquote>

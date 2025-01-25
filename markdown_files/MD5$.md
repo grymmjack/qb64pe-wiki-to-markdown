@@ -158,10 +158,10 @@ END
 
 ```vb
 Correct Text: QB64 Phoenix Edition
-MD5 hash: E512ECA19E9487D7C2F564E848314238
+   MD5 hash: E512ECA19E9487D7C2F564E848314238
 
 Mangled Text: QB65 Phoenix Edition
-MD5 hash: 3EF03E7B0DB46F7D1FA6B9626563C10B
+   MD5 hash: 3EF03E7B0DB46F7D1FA6B9626563C10B
 ```
   
 <br>
@@ -175,6 +175,6 @@ MD5 hash: 3EF03E7B0DB46F7D1FA6B9626563C10B
 
 
 * Featured in our "Keyword of the Day" series
-* [_DEFLATE&dollar;](DEFLATE&dollar;.md) , [_INFLATE&dollar;](INFLATE&dollar;.md)
-* [_ADLER32](ADLER32.md) , [_CRC32](CRC32.md)
+* _DEFLATE$ , _INFLATE$
+* _ADLER32 , _CRC32
 </blockquote>

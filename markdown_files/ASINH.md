@@ -126,14 +126,14 @@ br ~ h5 {
 <blockquote>
 
 
-* [_D2G](D2G.md) (degree to gradient , [_D2R](D2R.md) (degree to radian)
-* [_G2D](G2D.md) (gradient to degree) , [_G2R](G2R.md) (gradient to degree)
-* [_R2D](R2D.md) (radian to degree) , [_R2G](R2G.md) (radian to gradient)
+* _D2G (degree to gradient , _D2R (degree to radian)
+* _G2D (gradient to degree) , _G2R (gradient to degree)
+* _R2D (radian to degree) , _R2G (radian to gradient)
 * [COS](COS.md) (cosine) , [SIN](SIN.md) (sine) , [TAN](TAN.md) (tangent)
-* [_ACOS](ACOS.md) (arc cosine) , [_ASIN](ASIN.md) (arc sine) , [ATN](ATN.md) (arc tangent)
-* [_ACOSH](ACOSH.md) (arc hyperbolic  cosine) , [_ATANH](ATANH.md) (arc hyperbolic  tangent)
-* [_ATAN2](ATAN2.md) (Compute arc tangent with two parameters)
-* [_HYPOT](HYPOT.md) (hypotenuse)
+* _ACOS (arc cosine) , _ASIN (arc sine) , [ATN](ATN.md) (arc tangent)
+* _ACOSH (arc hyperbolic  cosine) , _ATANH (arc hyperbolic  tangent)
+* _ATAN2 (Compute arc tangent with two parameters)
+* _HYPOT (hypotenuse)
 * Mathematical Operations
 * Derived Mathematical Functions
 </blockquote>

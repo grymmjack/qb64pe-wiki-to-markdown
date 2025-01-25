@@ -119,7 +119,7 @@ br ~ h5 {
 <blockquote>
 
 
-* [INTEGER](INTEGER.md) buttoNumber designates the mouse button to read (See [_DEVICES](DEVICES.md) for more than 3).
+* [INTEGER](INTEGER.md) buttoNumber designates the mouse button to read (See _DEVICES for more than 3).
 * 1 = Left mouse button
 * 2 = Right mouse button
 * 3 = Center or scroll button
@@ -131,11 +131,11 @@ br ~ h5 {
 
 
 * Returns -1 if the corresponding buttoNumber is pressed or zero when released.
-* Read [_MOUSEINPUT](MOUSEINPUT.md) first to return the current button up or down status. (See Example 2)
+* Read _MOUSEINPUT first to return the current button up or down status. (See Example 2)
 * Button clicks and mouse movements will be remembered and should be cleared after an [INPUT](INPUT.md) statement or other interruption.
-* To clear unread mouse input, use a [_MOUSEINPUT](MOUSEINPUT.md) loop that loops until it returns 0.
-* Use [_DEVICE&dollar;](DEVICE&dollar;.md) to find the "[MOUSE]" [_DEVICES](DEVICES.md) number to find the number of buttons available using [_LASTBUTTON](LASTBUTTON.md) .
-* Note: The center mouse button can also be read as [_BUTTON](BUTTON.md) (2) on [_DEVICEINPUT](DEVICEINPUT.md) (2) when a mouse is present.
+* To clear unread mouse input, use a _MOUSEINPUT loop that loops until it returns 0.
+* Use _DEVICE$ to find the "[MOUSE]" _DEVICES number to find the number of buttons available using _LASTBUTTON .
+* Note: The center mouse button can also be read as _BUTTON (2) on _DEVICEINPUT (2) when a mouse is present.
 
 </blockquote>
 
@@ -148,8 +148,8 @@ br ~ h5 {
 ##### Example 1: Finding the number of mouse buttons available in QB64. This could also be used for other controller devices.
 ```vb
 FOR d = 1 TO _DEVICES  'number of input devices found
-dev$ = _DEVICE$(d)
-IF INSTR(dev$, "[MOUSE]") THEN buttons = _LASTBUTTON(d): EXIT FOR
+ dev$ = _DEVICE$(d)
+ IF INSTR(dev$, "[MOUSE]") THEN buttons = _LASTBUTTON(d): EXIT FOR
 NEXT
 PRINT buttons; "mouse buttons available"
 ```
@@ -162,11 +162,11 @@ PRINT buttons; "mouse buttons available"
 ```vb
 PRINT "Hold down the left mouse button until you want to quit!"
 DO
-i = _MOUSEINPUT ' read #1
-IF _MOUSEBUTTON(1) THEN PRINT "Left button down!": EXIT DO
+   i = _MOUSEINPUT ' read #1
+   IF _MOUSEBUTTON(1) THEN PRINT "Left button down!": EXIT DO
 LOOP
 DO '                                                      need to wait
-i = _MOUSEINPUT '  read #2                         until the mouse
+   i = _MOUSEINPUT '  read #2                         until the mouse
 LOOP UNTIL NOT _MOUSEBUTTON(1) '                       button is released
 
 PRINT "DONE!"
@@ -180,24 +180,24 @@ PRINT "DONE!"
 ```vb
 DO  'main program loop
 
-DO WHILE _MOUSEINPUT                'check mouse status
-buttondown = _MOUSEBUTTON(1)
-LOOP
-DO WHILE buttondown                 'check for button release
-i = _MOUSEINPUT
-buttondown = _MOUSEBUTTON(1)
-Click = 1
-LOOP
+ DO WHILE _MOUSEINPUT                'check mouse status
+   buttondown = _MOUSEBUTTON(1)
+ LOOP
+ DO WHILE buttondown                 'check for button release
+   i = _MOUSEINPUT
+   buttondown = _MOUSEBUTTON(1)
+   Click = 1
+ LOOP
 
-IF Click = 1 THEN                   'if button was pressed and released
-t = TIMER + .3
-DO WHILE TIMER < t      'check for a second press within .3 seconds
-i = _MOUSEINPUT
-IF _MOUSEBUTTON(1) THEN Click = 2: EXIT DO
-LOOP
-IF Click = 2 THEN PRINT "Double click" ELSE PRINT "Click"
-END IF
-Click = 0: buttondown = 0            'reset where needed
+ IF Click = 1 THEN                   'if button was pressed and released
+   t = TIMER + .3
+   DO WHILE TIMER < t      'check for a second press within .3 seconds
+     i = _MOUSEINPUT
+     IF _MOUSEBUTTON(1) THEN Click = 2: EXIT DO
+   LOOP
+   IF Click = 2 THEN PRINT "Double click" ELSE PRINT "Click"
+ END IF
+ Click = 0: buttondown = 0            'reset where needed
 LOOP UNTIL INKEY$ = CHR$(27)
 ```
   
@@ -211,16 +211,16 @@ SCREEN 12
 LINE (250, 250)-(300, 300), 14, BF
 
 DO
-Mouser mx, my, mb
-IF mb THEN
-IF mx >= 250 AND my >= 250 AND mx <= 300 AND my <= 300 THEN 'button down
-DO WHILE mb 'wait for button release
-Mouser mx, my, mb
-LOOP
-'verify mouse still in box area
-IF mx >= 250 AND my >= 250 AND mx <= 300 AND my <= 300 THEN PRINT "Click verified on yellow box!"
-END IF
-END IF
+ Mouser mx, my, mb
+ IF mb THEN
+   IF mx >= 250 AND my >= 250 AND mx <= 300 AND my <= 300 THEN 'button down
+     DO WHILE mb 'wait for button release
+       Mouser mx, my, mb
+     LOOP
+     'verify mouse still in box area
+     IF mx >= 250 AND my >= 250 AND mx <= 300 AND my <= 300 THEN PRINT "Click verified on yellow box!"
+   END IF
+ END IF
 LOOP
 
 SUB Mouser (x, y, b)
@@ -246,50 +246,50 @@ END SUB
 ##### Example 5: Combining mouse button or keyboard selections in a menu or test:
 ```vb
 DO 'main program loop in demo only
-LOCATE 10, 10: PRINT "A" 'position A, B & C in same position on every question
-LOCATE 12, 10: PRINT "B"
-LOCATE 14, 10: PRINT "C" 'demo only
+ LOCATE 10, 10: PRINT "A" 'position A, B & C in same position on every question
+ LOCATE 12, 10: PRINT "B"
+ LOCATE 14, 10: PRINT "C" 'demo only
 
-DO: _LIMIT 10 'get user answer loop
-DO WHILE _MOUSEINPUT: LOOP 'read mouse
-K$ = UCASE$(INKEY$) 'read keypresses also
-x% = _MOUSEX
-y% = _MOUSEY
-Lclick = _MOUSEBUTTON(1)
+ DO: _LIMIT 10 'get user answer loop
+   DO WHILE _MOUSEINPUT: LOOP 'read mouse
+   K$ = UCASE$(INKEY$) 'read keypresses also
+   x% = _MOUSEX
+   y% = _MOUSEY
+   Lclick = _MOUSEBUTTON(1)
 
-LOCATE 20, 10: PRINT x%, y%, Lclick 'only used to find mouse coordinates
-IF x% = 10 AND y% = 10 AND Lclick THEN 'position clicked
-DO
-i = _MOUSEINPUT
-x% = _MOUSEX
-y% = _MOUSEY
-LOOP WHILE _MOUSEBUTTON(1)
-IF x% = 10 AND y% = 10 THEN K$ = "A" 'position released
-END IF
-IF x% = 10 AND y% = 12 AND Lclick THEN 'position clicked
-DO
-i = _MOUSEINPUT
-x% = _MOUSEX
-y% = _MOUSEY
-LOOP WHILE _MOUSEBUTTON(1)
-IF x% = 10 AND y% = 12 THEN K$ = "B" 'position released
-END IF
-IF x% = 10 AND y% = 14 AND Lclick THEN 'position clicked
-DO
-i = _MOUSEINPUT
-x% = _MOUSEX
-y% = _MOUSEY
-LOOP WHILE _MOUSEBUTTON(1)
-IF x% = 10 AND y% = 14 THEN K$ = "C" 'position released
-END IF
-LOOP UNTIL K$ = "A" OR K$ = "B" OR K$ = "C" 'GOTO next question
+   LOCATE 20, 10: PRINT x%, y%, Lclick 'only used to find mouse coordinates
+   IF x% = 10 AND y% = 10 AND Lclick THEN 'position clicked
+     DO
+       i = _MOUSEINPUT
+       x% = _MOUSEX
+       y% = _MOUSEY
+     LOOP WHILE _MOUSEBUTTON(1)
+     IF x% = 10 AND y% = 10 THEN K$ = "A" 'position released
+   END IF
+   IF x% = 10 AND y% = 12 AND Lclick THEN 'position clicked
+     DO
+       i = _MOUSEINPUT
+       x% = _MOUSEX
+       y% = _MOUSEY
+     LOOP WHILE _MOUSEBUTTON(1)
+     IF x% = 10 AND y% = 12 THEN K$ = "B" 'position released
+   END IF
+   IF x% = 10 AND y% = 14 AND Lclick THEN 'position clicked
+     DO
+       i = _MOUSEINPUT
+       x% = _MOUSEX
+       y% = _MOUSEY
+     LOOP WHILE _MOUSEBUTTON(1)
+     IF x% = 10 AND y% = 14 THEN K$ = "C" 'position released
+   END IF
+ LOOP UNTIL K$ = "A" OR K$ = "B" OR K$ = "C" 'GOTO next question
 
-IF LEN(K$) THEN 'DEMO ONLY
-LOCATE 22, 35: PRINT "  Answer = "; K$ 'display user answer at location
-_DELAY 2 'allow time for user to view answer
-LOCATE 22, 35: PRINT "SELECT AGAIN"
-K$ = "" 'reset K$
-END IF
+ IF LEN(K$) THEN 'DEMO ONLY
+   LOCATE 22, 35: PRINT "  Answer = "; K$ 'display user answer at location
+   _DELAY 2 'allow time for user to view answer
+   LOCATE 22, 35: PRINT "SELECT AGAIN"
+   K$ = "" 'reset K$
+ END IF
 LOOP 'DEMO only loop use red X box to quit
 ```
   
@@ -303,10 +303,10 @@ LOOP 'DEMO only loop use red X box to quit
 <blockquote>
 
 
-* [_MOUSEX](MOUSEX.md) , [_MOUSEY](MOUSEY.md) , [_MOUSEWHEEL](MOUSEWHEEL.md)
-* [_MOUSEINPUT](MOUSEINPUT.md) , [_MOUSEMOVE](MOUSEMOVE.md)
-* [_MOUSESHOW](MOUSESHOW.md) , [_MOUSEHIDE](MOUSEHIDE.md)
-* [_DEVICES](DEVICES.md) , [_DEVICE&dollar;](DEVICE&dollar;.md) , [_LASTBUTTON](LASTBUTTON.md)
-* [_BUTTON](BUTTON.md) , [_BUTTONCHANGE](BUTTONCHANGE.md)
+* _MOUSEX , _MOUSEY , _MOUSEWHEEL
+* _MOUSEINPUT , _MOUSEMOVE
+* _MOUSESHOW , _MOUSEHIDE
+* _DEVICES , _DEVICE$ , _LASTBUTTON
+* _BUTTON , _BUTTONCHANGE
 * Controller Devices
 </blockquote>

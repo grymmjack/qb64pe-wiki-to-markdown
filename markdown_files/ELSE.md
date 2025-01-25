@@ -114,7 +114,7 @@ br ~ h5 {
 * [ELSE](ELSE.md) is used in a [IF](IF.md) block statement to cover any remaining conditions not covered in the main block by [IF](IF.md) or [ELSEIF](ELSEIF.md) .
 * [CASE](CASE.md) [ELSE](ELSE.md) covers any remaining conditions not covered by the other [CASE](CASE.md) statements.
 * [ELSE](ELSE.md) can also be used as a false comparison to a true [IF](IF.md) statement when a condition will only be true or false.
-* Other IF...THEN statements can be inside of an [ELSE](ELSE.md) statement.
+* Other [IF...THEN](IF...THEN.md) statements can be inside of an [ELSE](ELSE.md) statement.
 
 </blockquote>
 
@@ -136,7 +136,7 @@ IF x = 100 THEN PRINT "100" ELSE PRINT "Not 100"
 ##### Example 2: Multiple line IF statement block
 ```vb
 IF x = 100 THEN ' code executed MUST be on next statement line!
-PRINT "100"
+  PRINT "100"
 ELSE PRINT "Not 100"
 END IF
 ```
@@ -161,5 +161,5 @@ IF a = 3 THEN a = 5 ELSE a = 3
 
 
 * [ELSEIF](ELSEIF.md)
-* IF...THEN
+* [IF...THEN](IF...THEN.md)
 </blockquote>

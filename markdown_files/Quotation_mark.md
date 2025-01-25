@@ -119,5 +119,5 @@ br ~ h5 {
 
 
 * [STRING](STRING.md) , [PRINT](PRINT.md) , [WRITE](WRITE.md)
-* [CHR&dollar;](CHR&dollar;.md) , [LINE](LINE.md) [INPUT](INPUT.md)
+* [CHR\$](CHR\$.md) , [LINE](LINE.md) [INPUT](INPUT.md)
 </blockquote>

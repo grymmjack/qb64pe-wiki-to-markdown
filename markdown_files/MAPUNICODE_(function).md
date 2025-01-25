@@ -121,8 +121,8 @@ br ~ h5 {
 
 * UTF-32 values have 4-byte encoding so the return variable should be [LONG](LONG.md) .
 * The asciiCode% can be any [INTEGER](INTEGER.md) value from 0 to 255.
-* Returns can be used to verify or catalog the present Unicode mapping.
-* The function returns Unicode values for the control characters, CHR$(127) and extended characters without mapping them first.
+* Returns can be used to verify or catalog the present [Unicode](Unicode.md) mapping.
+* The function returns [Unicode](Unicode.md) values for the control characters, CHR$(127) and extended characters without mapping them first.
 
 </blockquote>
 
@@ -157,8 +157,8 @@ END
 
 
 * Featured in our "Keyword of the Day" series
-* [_MAPUNICODE](MAPUNICODE.md)
-* Unicode , Code Pages
-* ASCII , [CHR&dollar;](CHR&dollar;.md) , [ASC](ASC.md) (function)
+* _MAPUNICODE
+* [Unicode](Unicode.md) , Code Pages
+* [ASCII](ASCII.md) , [CHR\$](CHR\$.md) , [ASC](ASC.md) (function)
 * Text Using Graphics
 </blockquote>

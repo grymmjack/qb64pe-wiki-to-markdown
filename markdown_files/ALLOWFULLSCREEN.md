@@ -119,13 +119,13 @@ br ~ h5 {
 <blockquote>
 
 
-* Calling the statement with no parameters enables all four possible full screen modes (and is the default state when a program is started): both [_STRETCH](STRETCH.md) ( [_SMOOTH](SMOOTH.md) and [_OFF](OFF.md) ) and [_SQUAREPIXELS](SQUAREPIXELS.md) ( [_SMOOTH](SMOOTH.md) and [_OFF](OFF.md) ).
-* Using [_ALLOWFULLSCREEN](ALLOWFULLSCREEN.md) [_ALL](ALL.md) , [_ALL](ALL.md) has the same effect.
-* [_ALLOWFULLSCREEN](ALLOWFULLSCREEN.md) only affects the behavior of ALT+ENTER. The [_FULLSCREEN](FULLSCREEN.md) statement is not bound by [_ALLOWFULLSCREEN](ALLOWFULLSCREEN.md) 's settings so all modes can be accessed programmatically.
-* To limit just the mode but allow both [_SMOOTH](SMOOTH.md) + [_OFF](OFF.md) antialiasing modes, pass just the first parameter: Example: [_ALLOWFULLSCREEN](ALLOWFULLSCREEN.md) [_SQUAREPIXELS](SQUAREPIXELS.md)
-* To allow multiple modes with [_SMOOTH](SMOOTH.md) or [_OFF](OFF.md) as default, pass just the second parameter. Example: [_ALLOWFULLSCREEN](ALLOWFULLSCREEN.md) , [_SMOOTH](SMOOTH.md)
+* Calling the statement with no parameters enables all four possible full screen modes (and is the default state when a program is started): both _STRETCH ( _SMOOTH and _OFF ) and _SQUAREPIXELS ( _SMOOTH and _OFF ).
+* Using _ALLOWFULLSCREEN _ALL , _ALL has the same effect.
+* _ALLOWFULLSCREEN only affects the behavior of ALT+ENTER. The _FULLSCREEN statement is not bound by _ALLOWFULLSCREEN 's settings so all modes can be accessed programmatically.
+* To limit just the mode but allow both _SMOOTH + _OFF antialiasing modes, pass just the first parameter: Example: _ALLOWFULLSCREEN _SQUAREPIXELS
+* To allow multiple modes with _SMOOTH or _OFF as default, pass just the second parameter. Example: _ALLOWFULLSCREEN , _SMOOTH
 * Any possible permutation of the parameters is allowed.
-* With [_ALLOWFULLSCREEN](ALLOWFULLSCREEN.md) [_OFF](OFF.md) you can trap Alt+Enter manually in your program and reassign it. See example 2 below.
+* With _ALLOWFULLSCREEN _OFF you can trap Alt+Enter manually in your program and reassign it. See example 2 below.
 
 </blockquote>
 
@@ -147,42 +147,42 @@ _ALLOWFULLSCREEN _SQUAREPIXELS , OFF
 ##### Example 2: Disabling _FULLSCREEN with Alt+ENTER so the combo can be manually trapped:
 ```vb
 DO
-CLS
+   CLS
 
-LOCATE 7
-PRINT "    - Press ALT+ENTER to test trapping the combo..."
-PRINT "    _ Press SPACEBAR to allow fullscreen again..."
+   LOCATE 7
+   PRINT "    - Press ALT+ENTER to test trapping the combo..."
+   PRINT "    _ Press SPACEBAR to allow fullscreen again..."
 
-k& = _KEYHIT
+   k& = _KEYHIT
 
-IF k& = 13 THEN
-IF _KEYDOWN(100307) OR _KEYDOWN(100308) THEN
-altEnter = altEnter + 1
-END IF
-ELSEIF k& = 32 THEN
-fullscreenEnabled = NOT fullscreenEnabled
-END IF
+   IF k& = 13 THEN
+       IF _KEYDOWN(100307) OR _KEYDOWN(100308) THEN
+           altEnter = altEnter + 1
+       END IF
+   ELSEIF k& = 32 THEN
+       fullscreenEnabled = NOT fullscreenEnabled
+   END IF
 
-LOCATE 14
-IF fullscreenEnabled THEN
-_ALLOWFULLSCREEN _ALL , _ALL
-altEnter = 0
-PRINT "_ALLOWFULLSCREEN _ALL, _ALL"
+   LOCATE 14
+   IF fullscreenEnabled THEN
+       _ALLOWFULLSCREEN _ALL , _ALL
+       altEnter = 0
+       PRINT "_ALLOWFULLSCREEN _ALL, _ALL"
 
-LOCATE 18
-PRINT "ALT+ENTER will trigger all four fullscreen modes now."
-ELSE
-_ALLOWFULLSCREEN OFF
-PRINT "_ALLOWFULLSCREEN OFF"
-END IF
+       LOCATE 18
+       PRINT "ALT+ENTER will trigger all four fullscreen modes now."
+   ELSE
+       _ALLOWFULLSCREEN OFF
+       PRINT "_ALLOWFULLSCREEN OFF"
+   END IF
 
-IF altEnter THEN
-LOCATE 18
-PRINT "ALT+ENTER manually trapped"; altEnter; "times."
-END IF
+   IF altEnter THEN
+       LOCATE 18
+       PRINT "ALT+ENTER manually trapped"; altEnter; "times."
+   END IF
 
-_DISPLAY
-_LIMIT 30
+   _DISPLAY
+   _LIMIT 30
 LOOP
 ```
   
@@ -196,5 +196,5 @@ LOOP
 <blockquote>
 
 
-* [_FULLSCREEN](FULLSCREEN.md) , [_SMOOTH](SMOOTH.md) (function)
+* _FULLSCREEN , _SMOOTH (function)
 </blockquote>

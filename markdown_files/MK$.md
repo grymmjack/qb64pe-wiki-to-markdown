@@ -119,8 +119,8 @@ br ~ h5 {
 <blockquote>
 
 
-* numericalType is any QB64 numerical type: [INTEGER](INTEGER.md) , [LONG](LONG.md) , [SINGLE](SINGLE.md) , [DOUBLE](DOUBLE.md) , [_INTEGER64](INTEGER64.md) , [_BYTE](BYTE.md) or [_BIT](BIT.md) .
-* Whole integer values can be signed or [_UNSIGNED](UNSIGNED.md) .
+* numericalType is any QB64 numerical type: [INTEGER](INTEGER.md) , [LONG](LONG.md) , [SINGLE](SINGLE.md) , [DOUBLE](DOUBLE.md) , _INTEGER64 , _BYTE or _BIT .
+* Whole integer values can be signed or _UNSIGNED .
 * numericalValue must match the numericalType used.
 </blockquote>
 
@@ -130,7 +130,7 @@ br ~ h5 {
 
 
 * Supports converting any QBasic or QB64 numerical value into a string value.
-* Some resulting ASCII string characters might not be able to be printed to the screen.
+* Some resulting [ASCII](ASCII.md) string characters might not be able to be printed to the screen.
 
 </blockquote>
 
@@ -146,12 +146,12 @@ br ~ h5 {
 <blockquote>
 
 
-* [_CV](CV.md)
-* [MKI&dollar;](MKI&dollar;.md) , [CVI](CVI.md) , [INTEGER](INTEGER.md)
-* [MKL&dollar;](MKL&dollar;.md) , [CVL](CVL.md) , [LONG](LONG.md)
-* [MKS&dollar;](MKS&dollar;.md) , [CVS](CVS.md) , [SINGLE](SINGLE.md)
-* [MKD&dollar;](MKD&dollar;.md) , [CVD](CVD.md) , [DOUBLE](DOUBLE.md)
-* [MKSMBF&dollar;](MKSMBF&dollar;.md) , [CVSMBF](CVSMBF.md)
-* [MKDMBF&dollar;](MKDMBF&dollar;.md) , [CVDMBF](CVDMBF.md)
+* _CV
+* [MKI\$](MKI\$.md) , [CVI](CVI.md) , [INTEGER](INTEGER.md)
+* [MKL\$](MKL\$.md) , [CVL](CVL.md) , [LONG](LONG.md)
+* [MKS\$](MKS\$.md) , [CVS](CVS.md) , [SINGLE](SINGLE.md)
+* [MKD\$](MKD\$.md) , [CVD](CVD.md) , [DOUBLE](DOUBLE.md)
+* [MKSMBF\$](MKSMBF\$.md) , [CVSMBF](CVSMBF.md)
+* [MKDMBF\$](MKDMBF\$.md) , [CVDMBF](CVDMBF.md)
 * CURRENCY
 </blockquote>

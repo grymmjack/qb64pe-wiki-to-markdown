@@ -182,11 +182,11 @@ Start aqua and end blue.
 <blockquote>
 
 
-* [_PRINTMODE](PRINTMODE.md) , [_PRINTSTRING](PRINTSTRING.md) , [PRINT](PRINT.md) [USING](USING.md)
-* [SPC](SPC.md) , [TAB](TAB.md) , [SPACE&dollar;](SPACE&dollar;.md) , [SCREEN](SCREEN.md)
+* _PRINTMODE , _PRINTSTRING , [PRINT](PRINT.md) USING
+* [SPC](SPC.md) , [TAB](TAB.md) , [SPACE\$](SPACE\$.md) , [SCREEN](SCREEN.md)
 * [CSRLIN](CSRLIN.md) , [POS](POS.md) , [SCREEN](SCREEN.md) (function)
 * [COLOR](COLOR.md) , [LOCATE](LOCATE.md) , [VIEW](VIEW.md) [PRINT](PRINT.md)
-* [INPUT](INPUT.md) , [STR&dollar;](STR&dollar;.md) , [CHR&dollar;](CHR&dollar;.md)
-* ASCII , [_CONTROLCHR](CONTROLCHR.md)
+* [INPUT](INPUT.md) , [STR\$](STR\$.md) , [CHR\$](CHR\$.md)
+* [ASCII](ASCII.md) , _CONTROLCHR
 * Text Using Graphics
 </blockquote>

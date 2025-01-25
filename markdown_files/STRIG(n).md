@@ -116,7 +116,7 @@ br ~ h5 {
 * When no parameters are used QB64 enables, disables or suspends the reading of ALL button events.
 * [ON](ON.md) specifies that event trapping is turned on for the specified button.
 * [OFF](OFF.md) specifies that event trapping is turned off for the specified button.
-* If [STOP](STOP.md) is specified, event trapping is suspended for the specified button. Further joystick button events are remembered and trapped, in order, after the next STRIG(n) [ON](ON.md) statement is used.
+* If [STOP](STOP.md) is specified, event trapping is suspended for the specified button. Further joystick button events are remembered and trapped, in order, after the next [STRIG(n)](STRIG(n).md) [ON](ON.md) statement is used.
 
 </blockquote>
 
@@ -132,16 +132,16 @@ ON STRIG(0) GOSUB 10
 STRIG(0)ON
 
 DO
-PRINT ".";
-_LIMIT 30
+   PRINT ".";
+   _LIMIT 30
 LOOP UNTIL INKEY$ <> ""
 END
 
 10
 a$ = "[STRIG 0 EVENT]"
 FOR x = 1 TO LEN(a$)
-PRINT MID$(a$, x, 1);
-_DELAY 0.02
+   PRINT MID$(a$, x, 1);
+   _DELAY 0.02
 NEXT
 RETURN
 ```
@@ -156,7 +156,7 @@ RETURN
 <blockquote>
 
 
-* [ON](ON.md) STRIG(n)
+* [ON](ON.md) [STRIG(n)](STRIG(n).md)
 * [STRIG](STRIG.md) , [STICK](STICK.md)
 * Single and Dual Stick Controllers
 </blockquote>

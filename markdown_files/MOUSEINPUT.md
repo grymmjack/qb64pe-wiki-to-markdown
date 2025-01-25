@@ -122,7 +122,7 @@ br ~ h5 {
 * Returns -1 if new mouse information is available, otherwise it returns 0.
 * Must be called before reading any of the other mouse functions. The function will not miss any mouse input even during an [INPUT](INPUT.md) entry.
 * Use in a loop to monitor the mouse buttons, scroll wheel and coordinate positions.
-* To clear all previous mouse data, use [_MOUSEINPUT](MOUSEINPUT.md) in a loop until it returns 0.
+* To clear all previous mouse data, use _MOUSEINPUT in a loop until it returns 0.
 
 </blockquote>
 
@@ -135,9 +135,9 @@ br ~ h5 {
 ##### Example 1: Mouse coordinate, click and scroll events are returned sequentially inside of a _MOUSEINPUT loop.
 ```vb
 DO
-DO WHILE _MOUSEINPUT '      Check the mouse status
-PRINT _MOUSEX, _MOUSEY, _MOUSEBUTTON(1), _MOUSEWHEEL
-LOOP
+ DO WHILE _MOUSEINPUT '      Check the mouse status
+   PRINT _MOUSEX, _MOUSEY, _MOUSEBUTTON(1), _MOUSEWHEEL
+ LOOP
 LOOP UNTIL INKEY$ <> ""
 ```
   
@@ -151,20 +151,20 @@ SCREEN 12
 
 DO ' main program loop
 
-' your program code
+ ' your program code
 
-DO WHILE _MOUSEINPUT'mouse status changes only
-x = _MOUSEX
-y = _MOUSEY
-IF x > 0 AND x < 640 AND y > 0 AND y < 480 THEN
-IF _MOUSEBUTTON(2) THEN
-PSET (x, y), 15
-LOCATE 1, 1: PRINT x, y
-END IF
-END IF
-LOOP
+ DO WHILE _MOUSEINPUT'mouse status changes only
+   x = _MOUSEX
+   y = _MOUSEY
+   IF x > 0 AND x < 640 AND y > 0 AND y < 480 THEN
+     IF _MOUSEBUTTON(2) THEN
+       PSET (x, y), 15
+       LOCATE 1, 1: PRINT x, y
+     END IF
+   END IF
+ LOOP
 
-' your program code
+ ' your program code
 
 LOOP UNTIL INKEY$ = CHR$(27)
 ```
@@ -177,15 +177,15 @@ LOOP UNTIL INKEY$ = CHR$(27)
 ```vb
 PRINT "Press I to enter input! Press Q to quit"
 DO
-K$ = UCASE$(INKEY$)
-DO
-IF _MOUSEBUTTON(1) = -1 THEN PRINT "*"    'indicates a mouse click event
-LOOP WHILE _MOUSEINPUT
-IF K$ = "Q" THEN END
-IF K$ = "I" THEN                                          'press I to enter text
-INPUT "Click the mouse and enter something: ", entry$   'enter some text
-GOSUB Clickcheck                                        'clear mouse data
-END IF
+ K$ = UCASE$(INKEY$)
+ DO
+   IF _MOUSEBUTTON(1) = -1 THEN PRINT "*"    'indicates a mouse click event
+ LOOP WHILE _MOUSEINPUT
+ IF K$ = "Q" THEN END
+ IF K$ = "I" THEN                                          'press I to enter text
+   INPUT "Click the mouse and enter something: ", entry$   'enter some text
+   GOSUB Clickcheck                                        'clear mouse data
+ END IF
 LOOP
 
 END
@@ -193,7 +193,7 @@ END
 Clickcheck:
 count = 0
 DO
-count = count + 1
+ count = count + 1
 LOOP WHILE _MOUSEINPUT
 PRINT count        'returns the number of loops before mouse data is cleared
 RETURN
@@ -210,7 +210,7 @@ RETURN
 
 
 * Featured in our "Keyword of the Day" series
-* [_MOUSEX](MOUSEX.md) , [_MOUSEY](MOUSEY.md) , [_MOUSEBUTTON](MOUSEBUTTON.md) , [_MOUSEWHEEL](MOUSEWHEEL.md)
-* [_MOUSESHOW](MOUSESHOW.md) , [_MOUSEHIDE](MOUSEHIDE.md) , [_MOUSEMOVE](MOUSEMOVE.md)
+* _MOUSEX , _MOUSEY , _MOUSEBUTTON , _MOUSEWHEEL
+* _MOUSESHOW , _MOUSEHIDE , _MOUSEMOVE
 * Controller Devices
 </blockquote>

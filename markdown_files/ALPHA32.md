@@ -119,10 +119,10 @@ br ~ h5 {
 <blockquote>
 
 
-* color32& is the [_UNSIGNED](UNSIGNED.md) [LONG](LONG.md) 32 bit color value used to retrieve the alpha level.
-* Color values that are set as a [_CLEARCOLOR](CLEARCOLOR.md) always have an alpha level of 0 (transparent).
-* [_SETALPHA](SETALPHA.md) can set any alpha level from 0 (or fully transparent) to 255 (or opaque).
-* Normal color values that are set by [_RGB](RGB.md) or [_RGB32](RGB32.md) always have an alpha level of 255 (opaque).
+* color32& is the _UNSIGNED [LONG](LONG.md) 32 bit color value used to retrieve the alpha level.
+* Color values that are set as a _CLEARCOLOR always have an alpha level of 0 (transparent).
+* _SETALPHA can set any alpha level from 0 (or fully transparent) to 255 (or opaque).
+* Normal color values that are set by _RGB or _RGB32 always have an alpha level of 255 (opaque).
 </blockquote>
 
 #### DESCRIPTION
@@ -131,8 +131,8 @@ br ~ h5 {
 
 
 * In 4-bit (16 colors) or 8-bit (256 colors) palette screens the function will return 0.
-* [_RED32](RED32.md) , [_GREEN32](GREEN32.md) , [_BLUE32](BLUE32.md) and [_ALPHA32](ALPHA32.md) are all equivalent to [_RED](RED.md) , [_GREEN](GREEN.md) , [_BLUE](BLUE.md) and [_ALPHA](ALPHA.md) but they are highly optimized and only accept a 32-bit color (RGBA) value. Using these in your code (opposed to dividing then ANDing 32-bit color values) makes code easy to read.
-* NOTE: 32 bit [_NEWIMAGE](NEWIMAGE.md) screen page backgrounds are transparent black or [_ALPHA](ALPHA.md) 0. Use [_DONTBLEND](DONTBLEND.md) or [CLS](CLS.md) for opaque!
+* _RED32 , _GREEN32 , _BLUE32 and _ALPHA32 are all equivalent to _RED , _GREEN , _BLUE and _ALPHA but they are highly optimized and only accept a 32-bit color (RGBA) value. Using these in your code (opposed to dividing then ANDing 32-bit color values) makes code easy to read.
+* NOTE: 32 bit _NEWIMAGE screen page backgrounds are transparent black or _ALPHA 0. Use _DONTBLEND or [CLS](CLS.md) for opaque!
 
 </blockquote>
 
@@ -173,10 +173,10 @@ Alpha32: 192
 
 
 * Featured in our "Keyword of the Day" series
-* [_ALPHA](ALPHA.md) , [_SETALPHA](SETALPHA.md)
-* [_RGBA](RGBA.md) , [_RGBA32](RGBA32.md) (set color with alpha)
-* [_RED](RED.md) , [_GREEN](GREEN.md) , [_BLUE](BLUE.md)
-* [_RED32](RED32.md) , [_GREEN32](GREEN32.md) . [_BLUE32](BLUE32.md)
-* [_CLEARCOLOR](CLEARCOLOR.md) , [_CLEARCOLOR](CLEARCOLOR.md) (function)
+* _ALPHA , _SETALPHA
+* _RGBA , _RGBA32 (set color with alpha)
+* _RED , _GREEN , _BLUE
+* _RED32 , _GREEN32 . _BLUE32
+* _CLEARCOLOR , _CLEARCOLOR (function)
 * Images
 </blockquote>

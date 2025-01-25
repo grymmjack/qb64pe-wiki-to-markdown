@@ -137,7 +137,7 @@ br ~ h5 {
 <blockquote>
 
 
-* [_LIMIT](LIMIT.md)
+* _LIMIT
 * [TIMER](TIMER.md)
 * [ON](ON.md) TIMER(n)
 </blockquote>

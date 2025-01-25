@@ -119,7 +119,7 @@ br ~ h5 {
 <blockquote>
 
 
-* Predefined and user defined [KEY](KEY.md) event number assignments to use with KEY(n):
+* Predefined and user defined KEY event number assignments to use with KEY(n):
 
 </blockquote>
 
@@ -129,9 +129,9 @@ br ~ h5 {
 
 ```vb
 1 to 10.............Reserved F1 to F10 function keys only.
-11, 12, 13 and 14...Reserved Up, Left, Right and Down numeric keypad arrows only
-15 to 29............user-defined keys using value: CHR$(keyflag)  + CHR$(scancode)
-30 and 31...........Reserved F11 and F12 function keys only.
+    11, 12, 13 and 14...Reserved Up, Left, Right and Down numeric keypad arrows only
+    15 to 29............user-defined keys using value: CHR$(keyflag)  + CHR$(scancode)
+    30 and 31...........Reserved F11 and F12 function keys only.
 ```
   
 <br>
@@ -189,7 +189,7 @@ SLEEP
 <blockquote>
 
 
-* [ON](ON.md) KEY(n) , [KEY](KEY.md) n (softkeys)
-* [_KEYHIT](KEYHIT.md) , [_KEYDOWN](KEYDOWN.md)
+* [ON](ON.md) [KEY(n)](KEY(n).md) , KEY n (softkeys)
+* _KEYHIT , _KEYDOWN
 * Keyboard scancodes
 </blockquote>

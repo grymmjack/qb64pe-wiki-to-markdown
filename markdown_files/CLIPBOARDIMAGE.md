@@ -119,9 +119,9 @@ br ~ h5 {
 <blockquote>
 
 
-* existingImageHandle& is a valid handle to a graphic QB64 image in memory, created with [_NEWIMAGE](NEWIMAGE.md) , [_LOADIMAGE](LOADIMAGE.md) or [_COPYIMAGE](COPYIMAGE.md) .
-* You can pass [_SOURCE](SOURCE.md) , [_DEST](DEST.md) or [_DISPLAY](DISPLAY.md) to copy the current source, destination or active display pages, as long as they are valid graphic images.
-* [SCREEN](SCREEN.md) 0 handles (created either with [_NEWIMAGE](NEWIMAGE.md) or passed using [_DEST](DEST.md) while in a text screen) are not valid and will create an Illegal Function Call or Invalid Handle error.
+* existingImageHandle& is a valid handle to a graphic QB64 image in memory, created with _NEWIMAGE , _LOADIMAGE or _COPYIMAGE .
+* You can pass _SOURCE , _DEST or _DISPLAY to copy the current source, destination or active display pages, as long as they are valid graphic images.
+* [SCREEN](SCREEN.md) 0 handles (created either with _NEWIMAGE or passed using _DEST while in a text screen) are not valid and will create an Illegal Function Call or Invalid Handle error.
 
 </blockquote>
 
@@ -139,7 +139,7 @@ _DEST canvas&
 'Draw some random rectangles:
 RANDOMIZE TIMER
 FOR i = 1 TO 100
-LINE (-100 + RND * _WIDTH, -100 + RND * _HEIGHT)-STEP(RND * 150, RND * 150), _RGB(RND * 255, RND * 255, RND * 255), BF
+   LINE (-100 + RND * _WIDTH, -100 + RND * _HEIGHT)-STEP(RND * 150, RND * 150), _RGB(RND * 255, RND * 255, RND * 255), BF
 NEXT
 LINE (0, 0)-(_WIDTH - 1, _HEIGHT - 1), _RGB(255, 255, 255), B
 COLOR _RGB(0, 0, 0), _RGB(255, 255, 255)
@@ -167,6 +167,6 @@ PRINT "Image copied to clipboard."
 <blockquote>
 
 
-* [_CLIPBOARDIMAGE](CLIPBOARDIMAGE.md) (function - used to paste an image from the clipboard)
-* [_CLIPBOARD&dollar;](CLIPBOARD&dollar;.md) , [_CLIPBOARD&dollar;](CLIPBOARD&dollar;.md) (function) (used to copy/paste text)
+* _CLIPBOARDIMAGE (function - used to paste an image from the clipboard)
+* _CLIPBOARD$ , _CLIPBOARD$ (function) (used to copy/paste text)
 </blockquote>

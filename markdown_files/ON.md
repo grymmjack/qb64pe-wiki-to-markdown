@@ -118,7 +118,7 @@ br ~ h5 {
 <blockquote>
 
 
-* ON...GOSUB , ON...GOTO
-* [OFF](OFF.md) , [STOP](STOP.md) , [KEY](KEY.md)
-* [&dollar;CHECKING](&dollar;CHECKING.md)
+* [ON...GOSUB](ON...GOSUB.md) , [ON...GOTO](ON...GOTO.md)
+* [OFF](OFF.md) , [STOP](STOP.md) , KEY
+* [\$CHECKING](\$CHECKING.md)
 </blockquote>

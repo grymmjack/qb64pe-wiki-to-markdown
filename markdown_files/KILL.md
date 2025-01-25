@@ -134,5 +134,5 @@ KILL "C:\QBasic\data\2000data.dat"
 
 * [RMDIR](RMDIR.md) , [FILES](FILES.md) , [SHELL](SHELL.md) , [OPEN](OPEN.md)
 * [CHDIR](CHDIR.md) , [MKDIR](MKDIR.md) , [NAME](NAME.md)
-* [_FILEEXISTS](FILEEXISTS.md) , [_DIREXISTS](DIREXISTS.md)
+* _FILEEXISTS , _DIREXISTS
 </blockquote>

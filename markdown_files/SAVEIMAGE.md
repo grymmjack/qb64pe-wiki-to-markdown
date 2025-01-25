@@ -139,8 +139,8 @@ br ~ h5 {
 
 * fileName$ extension name takes precedence over requirements$
 * If no file extension is specified in fileName$ and no format is specified in requirements$ , then the PNG format is used by default.
-* If imageHandle& is omitted then the image handle returned by [_DISPLAY](DISPLAY.md) (function) is used.
-* Efforts are made to save the image in the highest quality possible using 32-bit RGBA format, ensuring that alpha channel information is retained whenever the format permits.
+* If imageHandle& is omitted then the image handle returned by _DISPLAY (function) is used.
+* Efforts are made to save the image in the highest quality possible using 32-bit [RGBA](RGBA.md) format, ensuring that alpha channel information is retained whenever the format permits.
 * Due to the inherent limitations of GIFs, these images are stored in an 8-bit indexed format, which results in a reduction of quality and color detail.
 * Windows ICO files utilize the PNG specification, which enables the storage of images exceeding 256x256 pixels in size.
 * [SCREEN](SCREEN.md) 0 (text mode) screens and "images" can be saved. Text surfaces are rendered internally using the master QB64-PE VGA fonts prior to saving.
@@ -171,25 +171,25 @@ DIM maxX AS LONG: maxX = w - 1
 DIM maxY AS LONG: maxY = h - 1
 
 DIM y AS LONG: FOR y = 0 TO maxY
-DIM x AS LONG: FOR x = 0 TO maxX
-DIM cx AS SINGLE: cx = X_MIN + (x / w) * (X_MAX - X_MIN)
-DIM cy AS SINGLE: cy = Y_MIN + (y / h) * (Y_MAX - Y_MIN)
+   DIM x AS LONG: FOR x = 0 TO maxX
+       DIM cx AS SINGLE: cx = X_MIN + (x / w) * (X_MAX - X_MIN)
+       DIM cy AS SINGLE: cy = Y_MIN + (y / h) * (Y_MAX - Y_MIN)
 
-DIM zx AS SINGLE: zx = 0
-DIM zy AS SINGLE: zy = 0
-DIM i AS LONG: i = 0
+       DIM zx AS SINGLE: zx = 0
+       DIM zy AS SINGLE: zy = 0
+       DIM i AS LONG: i = 0
 
-DO UNTIL zx * zx + zy * zy >= 4 OR i >= MAX_ITER
-DIM temp AS SINGLE: temp = zx * zx - zy * zy + cx
-zy = 2 * zx * zy + cy
-zx = temp
-i = i + 1
-LOOP
+       DO UNTIL zx * zx + zy * zy >= 4 OR i >= MAX_ITER
+           DIM temp AS SINGLE: temp = zx * zx - zy * zy + cx
+           zy = 2 * zx * zy + cy
+           zx = temp
+           i = i + 1
+       LOOP
 
-COLOR i MOD 16
+       COLOR i MOD 16
 
-_PRINTSTRING (x + 1, y + 1), CHR$(PIX_CHAR)
-NEXT x
+       _PRINTSTRING (x + 1, y + 1), CHR$(PIX_CHAR)
+   NEXT x
 NEXT y
 
 _SAVEIMAGE "TextMandelbrot!.jpg"
@@ -217,23 +217,23 @@ DIM maxX AS LONG: maxX = w - 1
 DIM maxY AS LONG: maxY = h - 1
 
 DIM y AS LONG: FOR y = 0 TO maxY
-DIM x AS LONG: FOR x = 0 TO maxX
-DIM cx AS SINGLE: cx = X_MIN + (x / maxX) * (X_MAX - X_MIN)
-DIM cy AS SINGLE: cy = Y_MIN + (y / maxY) * (Y_MAX - Y_MIN)
+   DIM x AS LONG: FOR x = 0 TO maxX
+       DIM cx AS SINGLE: cx = X_MIN + (x / maxX) * (X_MAX - X_MIN)
+       DIM cy AS SINGLE: cy = Y_MIN + (y / maxY) * (Y_MAX - Y_MIN)
 
-DIM zx AS SINGLE: zx = 0
-DIM zy AS SINGLE: zy = 0
-DIM i AS LONG: i = 0
+       DIM zx AS SINGLE: zx = 0
+       DIM zy AS SINGLE: zy = 0
+       DIM i AS LONG: i = 0
 
-DO UNTIL zx * zx + zy * zy >= 4 OR i >= MAX_ITER
-DIM temp AS SINGLE: temp = zx * zx - zy * zy + cx
-zy = 2 * zx * zy + cy
-zx = temp
-i = i + 1
-LOOP
+       DO UNTIL zx * zx + zy * zy >= 4 OR i >= MAX_ITER
+           DIM temp AS SINGLE: temp = zx * zx - zy * zy + cx
+           zy = 2 * zx * zy + cy
+           zx = temp
+           i = i + 1
+       LOOP
 
-PSET (x, y), (i MOD 16) * 16 + (i MOD 8)
-NEXT x
+       PSET (x, y), (i MOD 16) * 16 + (i MOD 8)
+   NEXT x
 NEXT y
 
 _SAVEIMAGE "Mandelbrot", img
@@ -255,12 +255,12 @@ END
 
 
 * Featured in our "Keyword of the Day" series
-* [_LOADIMAGE](LOADIMAGE.md) , [_ICON](ICON.md) , [&dollar;EXEICON](&dollar;EXEICON.md)
+* _LOADIMAGE , _ICON , [\$EXEICON](\$EXEICON.md)
 * [SCREEN](SCREEN.md)
-* [TYPE](TYPE.md) , [MKI&dollar;](MKI&dollar;.md) , [MKL&dollar;](MKL&dollar;.md)
+* [TYPE](TYPE.md) , [MKI\$](MKI\$.md) , [MKL\$](MKL\$.md)
 * Program ScreenShots
 * ThirtyTwoBit [SUB](SUB.md)
-* ThirtyTwoBit MEM [SUB](SUB.md)
+* ThirtyTwoBit [MEM](MEM.md) [SUB](SUB.md)
 * SaveIcon32
 * Bitmaps , Icons and Cursors
 * Text Using Graphics

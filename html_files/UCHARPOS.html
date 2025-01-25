@@ -6,7 +6,7 @@
    _UCHARPOS - QB64 Phoenix Edition Wiki
   </title>
   <script>
-   document.documentElement.className="client-js";RLCONF={"wgBreakFrames":false,"wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgRequestId":"Zp2HPoVyUtajyJ55jofC4gAAAVM","wgCSPNonce":false,"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"UCHARPOS","wgTitle":"UCHARPOS","wgCurRevisionId":9015,"wgRevisionId":9015,"wgArticleId":1219,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":[],"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgRelevantPageName":"UCHARPOS","wgRelevantArticleId":1219,"wgIsProbablyEditable":false,"wgRelevantPageIsProbablyEditable":false,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgVector2022PreviewPages":[]};RLSTATE={"site.styles":"ready","user.styles":"ready","user":
+   document.documentElement.className="client-js";RLCONF={"wgBreakFrames":false,"wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgRequestId":"Z5RinQWKRwiE9zBBFH0kXwAAAKo","wgCSPNonce":false,"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"UCHARPOS","wgTitle":"UCHARPOS","wgCurRevisionId":9311,"wgRevisionId":9311,"wgArticleId":1219,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":[],"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgRelevantPageName":"UCHARPOS","wgRelevantArticleId":1219,"wgIsProbablyEditable":false,"wgRelevantPageIsProbablyEditable":false,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgVector2022PreviewPages":[]};RLSTATE={"site.styles":"ready","user.styles":"ready","user":
 "ready","user.options":"loading","mediawiki.page.gallery.styles":"ready","skins.vector.styles.legacy":"ready"};RLPAGEMODULES=["site","mediawiki.page.ready","mediawiki.toc","skins.vector.legacy.js"];
   </script>
   <script>
@@ -182,7 +182,7 @@
         </i>
         [,
         <i>
-         posArray&amp;()
+         posArray&amp;([index&amp;])
         </i>
         ][,
         <i>
@@ -216,7 +216,7 @@
        </li>
        <li>
         <i>
-         posArray&amp;()
+         posArray&amp;([index&amp;])
         </i>
         is a
         <a href="/qb64wiki/index.php/LONG" title="LONG">
@@ -226,7 +226,7 @@
         <b>
          _UCHARPOS
         </b>
-        .
+        . An optional index can be used to specify the starting point in the array.
        </li>
        <li>
         <i>
@@ -259,7 +259,7 @@
         <i>
          posArray&amp;()
         </i>
-        is omitted, then the function simply returns the number of characters in the text
+        is omitted, then the function returns the number of characters in the text
         <a href="/qb64wiki/index.php/STRING" title="STRING">
          string
         </a>
@@ -297,16 +297,10 @@
         ) will hold the (ending pixel position of the last character) + 1.
        </li>
        <li>
-        All multi-byte UTF encodings are expected in little-endian.
+        This can be useful when the positions of every character in a string are required (e.g. when underlining text or drawing a text cursor). This can be especially helpful when using variable width fonts.
        </li>
        <li>
-        Unicode byte order mark (BOM) is not processed and must be handled by user code.
-       </li>
-       <li>
-        This can be useful when the positions of every character in a string is required (e.g., when underling text or drawing a text cursor). This can be especially helpful when using variable width fonts.
-       </li>
-       <li>
-        When working with Unicode excoded text, instead of calling the function twice (first time to get the array size and then a second time to get the pixel positions), call it once with a large enough array (0
+        When working with Unicode encoded text, instead of calling the function twice (first time to get the array size and then a second time to get the pixel positions), call it once with a large enough array (0
         <a href="/qb64wiki/index.php/TO" title="TO">
          TO
         </a>
@@ -445,6 +439,15 @@
           </p>
          </div>
         </div>
+       </li>
+      </ul>
+      <ul>
+       <li>
+        Since
+        <b>
+         QB64-PE v3.14.0
+        </b>
+        it supports both, little-endian and big-endian UTF-16 encodings and also correctly handles the UTF-16 byte order mark (BOM) now.
        </li>
       </ul>
       <p>
@@ -597,15 +600,15 @@
       </center>
       <!-- 
 NewPP limit report
-Cached time: 20240721221006
+Cached time: 20250124133225
 Cache expiry: 86400
 Reduced expiry: false
 Complications: [show‐toc]
-CPU time usage: 0.056 seconds
-Real time usage: 0.075 seconds
+CPU time usage: 0.059 seconds
+Real time usage: 0.071 seconds
 Preprocessor visited node count: 448/1000000
-Post‐expand include size: 3327/2097152 bytes
-Template argument size: 778/2097152 bytes
+Post‐expand include size: 3343/2097152 bytes
+Template argument size: 794/2097152 bytes
 Highest expansion depth: 4/100
 Expensive parser function count: 0/100
 Unstrip recursion depth: 0/20
@@ -613,24 +616,24 @@ Unstrip post‐expand size: 2407/5000000 bytes
 -->
       <!--
 Transclusion expansion time report (%,ms,calls,template)
-100.00%   54.026      1 -total
- 14.86%    8.026      1 Template:PageSyntax
-  7.92%    4.279     18 Template:Parameter
-  6.48%    3.502     32 Template:Cl
-  4.40%    2.377      1 Template:PageParameters
-  4.20%    2.270     15 Template:Text
-  3.96%    2.138      1 Template:PageExamples
-  3.95%    2.136      1 Template:CodeEnd
-  3.61%    1.948      1 Template:PageSeeAlso
-  3.29%    1.775      1 Template:CodeStart
+100.00%   45.974      1 -total
+  6.07%    2.790     32 Template:Cl
+  5.83%    2.678     15 Template:Text
+  5.77%    2.651      1 Template:PageNavigation
+  5.41%    2.485      1 Template:PageSeeAlso
+  5.30%    2.437      1 Template:PageExamples
+  4.93%    2.266      1 Template:CodeEnd
+  4.60%    2.117      1 Template:PageSyntax
+  4.43%    2.035     18 Template:Parameter
+  4.08%    1.876      1 Template:CodeStart
 -->
-      <!-- Saved in parser cache with key qb64pnix_mw19894-mwmb_:pcache:idhash:1219-0!canonical and timestamp 20240721221006 and revision id 9015.
+      <!-- Saved in parser cache with key qb64pnix_mw19894-mwmb_:pcache:idhash:1219-0!canonical and timestamp 20250124133225 and revision id 9311.
  -->
      </div>
      <div class="printfooter" data-nosnippet="">
       Retrieved from "
-      <a dir="ltr" href="https://qb64phoenix.com/qb64wiki/index.php?title=UCHARPOS&amp;oldid=9015">
-       https://qb64phoenix.com/qb64wiki/index.php?title=UCHARPOS&amp;oldid=9015
+      <a dir="ltr" href="https://qb64phoenix.com/qb64wiki/index.php?title=UCHARPOS&amp;oldid=9311">
+       https://qb64phoenix.com/qb64wiki/index.php?title=UCHARPOS&amp;oldid=9311
       </a>
       "
      </div>
@@ -847,7 +850,7 @@ You can view its source [e]">
         </a>
        </li>
        <li class="mw-list-item" id="t-permalink">
-        <a href="/qb64wiki/index.php?title=UCHARPOS&amp;oldid=9015" title="Permanent link to this revision of this page">
+        <a href="/qb64wiki/index.php?title=UCHARPOS&amp;oldid=9311" title="Permanent link to this revision of this page">
          <span>
           Permanent link
          </span>
@@ -868,7 +871,7 @@ You can view its source [e]">
   <footer class="mw-footer" id="footer" role="contentinfo">
    <ul id="footer-info">
     <li id="footer-info-lastmod">
-     This page was last edited on 26 June 2024, at 08:47.
+     This page was last edited on 22 November 2024, at 17:45.
     </li>
    </ul>
    <ul id="footer-places">
@@ -897,7 +900,7 @@ You can view its source [e]">
    </ul>
   </footer>
   <script>
-   (RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgPageParseReport":{"limitreport":{"cputime":"0.056","walltime":"0.075","ppvisitednodes":{"value":448,"limit":1000000},"postexpandincludesize":{"value":3327,"limit":2097152},"templateargumentsize":{"value":778,"limit":2097152},"expansiondepth":{"value":4,"limit":100},"expensivefunctioncount":{"value":0,"limit":100},"unstrip-depth":{"value":0,"limit":20},"unstrip-size":{"value":2407,"limit":5000000},"timingprofile":["100.00%   54.026      1 -total"," 14.86%    8.026      1 Template:PageSyntax","  7.92%    4.279     18 Template:Parameter","  6.48%    3.502     32 Template:Cl","  4.40%    2.377      1 Template:PageParameters","  4.20%    2.270     15 Template:Text","  3.96%    2.138      1 Template:PageExamples","  3.95%    2.136      1 Template:CodeEnd","  3.61%    1.948      1 Template:PageSeeAlso","  3.29%    1.775      1 Template:CodeStart"]},"cachereport":{"timestamp":"20240721221006","ttl":86400,"transientcontent":false}}});mw.config.set({"wgBackendResponseTime":189});});
+   (RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgPageParseReport":{"limitreport":{"cputime":"0.059","walltime":"0.071","ppvisitednodes":{"value":448,"limit":1000000},"postexpandincludesize":{"value":3343,"limit":2097152},"templateargumentsize":{"value":794,"limit":2097152},"expansiondepth":{"value":4,"limit":100},"expensivefunctioncount":{"value":0,"limit":100},"unstrip-depth":{"value":0,"limit":20},"unstrip-size":{"value":2407,"limit":5000000},"timingprofile":["100.00%   45.974      1 -total","  6.07%    2.790     32 Template:Cl","  5.83%    2.678     15 Template:Text","  5.77%    2.651      1 Template:PageNavigation","  5.41%    2.485      1 Template:PageSeeAlso","  5.30%    2.437      1 Template:PageExamples","  4.93%    2.266      1 Template:CodeEnd","  4.60%    2.117      1 Template:PageSyntax","  4.43%    2.035     18 Template:Parameter","  4.08%    1.876      1 Template:CodeStart"]},"cachereport":{"timestamp":"20250124133225","ttl":86400,"transientcontent":false}}});mw.config.set({"wgBackendResponseTime":87});});
   </script>
  </body>
 </html>

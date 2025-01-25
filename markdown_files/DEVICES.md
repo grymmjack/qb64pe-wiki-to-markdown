@@ -119,7 +119,7 @@ br ~ h5 {
 <blockquote>
 
 
-* Returns the number of devices that can be listed separately with the [_DEVICE&dollar;](DEVICE&dollar;.md) function by the device number.
+* Returns the number of devices that can be listed separately with the _DEVICE$ function by the device number.
 * Devices include keyboard, mouse, joysticks, game pads and multiple stick game controllers.
 
 </blockquote>
@@ -132,8 +132,8 @@ br ~ h5 {
 devices% = _DEVICES 'MUST be read in order for other 2 device functions to work!
 PRINT "Number of input devices found ="; devices%
 FOR i% = 1 TO devices%
-PRINT _DEVICE$(i%)
-PRINT "Buttons:"; _LASTBUTTON(i%)
+   PRINT _DEVICE$(i%)
+   PRINT "Buttons:"; _LASTBUTTON(i%)
 NEXT i%
 END
 ```
@@ -158,12 +158,12 @@ Buttons: 3
 <blockquote>
 
 
-* [_DEVICE&dollar;](DEVICE&dollar;.md) , [_DEVICEINPUT](DEVICEINPUT.md)
-* [_LASTBUTTON](LASTBUTTON.md) , [_LASTAXIS](LASTAXIS.md) , [_LASTWHEEL](LASTWHEEL.md)
-* [_BUTTON](BUTTON.md) , [_BUTTONCHANGE](BUTTONCHANGE.md)
-* [_AXIS](AXIS.md) , [_WHEEL](WHEEL.md)
-* [_MOUSEINPUT](MOUSEINPUT.md) , [_MOUSEX](MOUSEX.md) , [_MOUSEBUTTON](MOUSEBUTTON.md)
+* _DEVICE$ , _DEVICEINPUT
+* _LASTBUTTON , _LASTAXIS , _LASTWHEEL
+* _BUTTON , _BUTTONCHANGE
+* _AXIS , _WHEEL
+* _MOUSEINPUT , _MOUSEX , _MOUSEBUTTON
 * [STRIG](STRIG.md) , [STICK](STICK.md)
-* [ON](ON.md) STRIG(n) , STRIG(n)
+* [ON](ON.md) [STRIG(n)](STRIG(n).md) , [STRIG(n)](STRIG(n).md)
 * Controller Devices
 </blockquote>

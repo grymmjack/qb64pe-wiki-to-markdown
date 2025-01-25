@@ -123,7 +123,7 @@ br ~ h5 {
 * Normally used to clear all program variable and array values where numerical values become zero and string values become empty ("").
 * It does not clear constant values.
 * Closes all opened files.
-* [&dollar;DYNAMIC](&dollar;DYNAMIC.md) or [REDIM](REDIM.md) arrays will need to be redimensioned or an error will occur when referenced because they are removed.
+* [\$DYNAMIC](\$DYNAMIC.md) or [REDIM](REDIM.md) arrays will need to be redimensioned or an error will occur when referenced because they are removed.
 
 </blockquote>
 
@@ -158,6 +158,6 @@ PRINT array(5)
 
 * Featured in our "Keyword of the Day" series
 * [ERASE](ERASE.md)
-* [REDIM](REDIM.md) , [_PRESERVE](PRESERVE.md)
-* Arrays
+* [REDIM](REDIM.md) , _PRESERVE
+* [Arrays](Arrays.md)
 </blockquote>

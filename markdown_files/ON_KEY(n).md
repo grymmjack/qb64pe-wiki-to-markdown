@@ -119,7 +119,7 @@ br ~ h5 {
 <blockquote>
 
 
-* Predefined and user defined [KEY](KEY.md) event number assignments to use with [ON](ON.md) KEY(n):
+* Predefined and user defined KEY event number assignments to use with [ON](ON.md) KEY(n):
 
 </blockquote>
 
@@ -129,9 +129,9 @@ br ~ h5 {
 
 ```vb
 1 to 10.............Reserved F1 to F10 function keys only.
-11, 12, 13 and 14...Reserved Up, Left, Right and Down numeric keypad arrows only
-15 to 29............user-defined keys using value: CHR$(keyflag) + CHR$(scancode)
-30 and 31...........Reserved F11 and F12 function keys only.
+    11, 12, 13 and 14...Reserved Up, Left, Right and Down numeric keypad arrows only
+    15 to 29............user-defined keys using value: CHR$(keyflag) + CHR$(scancode)
+    30 and 31...........Reserved F11 and F12 function keys only.
 ```
   
 <br>
@@ -158,9 +158,9 @@ RETURN
 ##### Example 2: Setting multiple ON KEY statements to send different values to a SUB procedure.
 ```vb
 FOR n = 1 TO 10
-KEY n, STR$(n)  '   assigns soft key as a numerical string
-ON KEY(n) Funct n  'designate SUB procedure and parameter value passed
-KEY(n) ON '         turns each key event monitor on
+ KEY n, STR$(n)  '   assigns soft key as a numerical string
+ ON KEY(n) Funct n  'designate SUB procedure and parameter value passed
+ KEY(n) ON '         turns each key event monitor on
 NEXT
 KEY ON  'displays F1 to F10 soft key assignments at bottom of screen
 
@@ -184,7 +184,7 @@ END SUB
 <blockquote>
 
 
-* KEY(n) , [KEY](KEY.md) n
-* ON...GOSUB , Scancodes
-* [_KEYHIT](KEYHIT.md) , [_KEYDOWN](KEYDOWN.md)
+* [KEY(n)](KEY(n).md) , KEY n
+* [ON...GOSUB](ON...GOSUB.md) , Scancodes
+* _KEYHIT , _KEYDOWN
 </blockquote>

@@ -133,17 +133,17 @@ br ~ h5 {
 ##### Example: Detecting if the current program has focus. Windows and Linux-only.
 ```vb
 DO
-IF _WINDOWHASFOCUS THEN
-COLOR 15, 6
-CLS
-PRINT "*** Hi there! ***"
-ELSE
-COLOR 0, 7
-CLS
-PRINT "(ain't nobody looking...)"
-END IF
-_DISPLAY
-_LIMIT 30
+   IF _WINDOWHASFOCUS THEN
+       COLOR 15, 6
+       CLS
+       PRINT "*** Hi there! ***"
+   ELSE
+       COLOR 0, 7
+       CLS
+       PRINT "(ain't nobody looking...)"
+   END IF
+   _DISPLAY
+   _LIMIT 30
 LOOP
 ```
   
@@ -158,6 +158,6 @@ LOOP
 
 
 * Featured in our "Keyword of the Day" series
-* [_WINDOWHANDLE](WINDOWHANDLE.md)
-* [_SCREENEXISTS](SCREENEXISTS.md)
+* _WINDOWHANDLE
+* _SCREENEXISTS
 </blockquote>

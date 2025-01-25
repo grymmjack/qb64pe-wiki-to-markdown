@@ -137,6 +137,6 @@ br ~ h5 {
 
 
 * [SUB](SUB.md) _GL
-* [_glBegin](glBegin.md) , [_glCallList](glCallList.md) , [_glCallLists](glCallLists.md) , [_glDeleteLists](glDeleteLists.md)
-* [_glEnd](glEnd.md) , [_glGenLists](glGenLists.md) , [_glIsList](glIsList.md) , [_glNewList](glNewList.md)
+* _glBegin , _glCallList , _glCallLists , _glDeleteLists
+* _glEnd , _glGenLists , _glIsList , _glNewList
 </blockquote>

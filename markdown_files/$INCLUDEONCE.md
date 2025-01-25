@@ -122,8 +122,8 @@ br ~ h5 {
 * As QB64 metacommand it does not require a comment ' or [REM](REM.md) before it.
 * It can be placed everywhere in an include file, but must be the only thing in the line, hence without additional whitespace or comments.
 * Even if placed in the middle or the end of the file, it always designates the entire file contents.
-* If placed in the main program, [&dollar;INCLUDEONCE](&dollar;INCLUDEONCE.md) does nothing and is simply ignored without error.
-* [&dollar;INCLUDEONCE](&dollar;INCLUDEONCE.md) will not work when placed inside pre-compiler [&dollar;IF](&dollar;IF.md) .. [&dollar;ELSE](&dollar;ELSE.md) ... [&dollar;END](&dollar;END.md) [IF](IF.md) blocks.
+* If placed in the main program, [\$INCLUDEONCE](\$INCLUDEONCE.md) does nothing and is simply ignored without error.
+* [\$INCLUDEONCE](\$INCLUDEONCE.md) will not work when placed inside pre-compiler [\$IF](\$IF.md) .. [\$ELSE](\$ELSE.md) ... $END [IF](IF.md) blocks.
 
 </blockquote>
 
@@ -198,6 +198,6 @@ of the $INCLUDEONCE metacommand.
 
 
 * Featured in our "Keyword of the Day" series
-* [&dollar;INCLUDE](&dollar;INCLUDE.md)
-* Metacommand
+* [\$INCLUDE](\$INCLUDE.md)
+* [Metacommand](Metacommand.md)
 </blockquote>

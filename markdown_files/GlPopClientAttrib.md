@@ -137,8 +137,8 @@ br ~ h5 {
 
 
 * [SUB](SUB.md) _GL
-* [_glColorPointer](glColorPointer.md) , [_glDisableClientState](glDisableClientState.md) , [_glEdgeFlagPointer](glEdgeFlagPointer.md) , [_glEnableClientState](glEnableClientState.md)
-* _glGet , [_glGetError](glGetError.md) , [_glIndexPointer](glIndexPointer.md) , [_glNormalPointer](glNormalPointer.md)
-* [_glNewList](glNewList.md) , _glPixelStore , [_glPushAttrib](glPushAttrib.md) , [_glTexCoordPointer](glTexCoordPointer.md)
-* [_glVertexPointer](glVertexPointer.md)
+* _glColorPointer , _glDisableClientState , _glEdgeFlagPointer , _glEnableClientState
+* _glGet , _glGetError , _glIndexPointer , _glNormalPointer
+* _glNewList , _glPixelStore , _glPushAttrib , _glTexCoordPointer
+* _glVertexPointer
 </blockquote>

@@ -127,15 +127,15 @@ _FONT _LOADFONT("C:\windows\fonts\cour.ttf", 20, "MONOSPACE")
 
 RESTORE Microsoft_pc_cpMIK
 FOR ASCIIcode = 128 TO 255
-READ unicode
-_MAPUNICODE Unicode TO ASCIIcode
+ READ unicode
+ _MAPUNICODE Unicode TO ASCIIcode
 NEXT
 
 
 FOR i = 128 TO 255
-PRINT CHR$(i) + " ";
-cnt = cnt + 1
-IF cnt MOD 16 = 0 THEN PRINT
+ PRINT CHR$(i) + " ";
+ cnt = cnt + 1
+ IF cnt MOD 16 = 0 THEN PRINT
 NEXT
 END
 
@@ -161,10 +161,10 @@ DATA 8801,177,8805,8804,8992,8993,247,8776,176,8729,183,8730,8319,178,9632,160
 
 
 * Featured in our "Keyword of the Day" series
-* [_MAPUNICODE](MAPUNICODE.md) (function)
-* ASCII , Unicode , [_FONT](FONT.md)
-* [_KEYHIT](KEYHIT.md) , [_KEYDOWN](KEYDOWN.md)
-* [ASC](ASC.md) , [INKEY&dollar;](INKEY&dollar;.md) , [CHR&dollar;](CHR&dollar;.md)
+* _MAPUNICODE (function)
+* [ASCII](ASCII.md) , [Unicode](Unicode.md) , _FONT
+* _KEYHIT , _KEYDOWN
+* [ASC](ASC.md) , [INKEY\$](INKEY\$.md) , [CHR\$](CHR\$.md)
 * Code Pages
 * Text Using Graphics
 </blockquote>

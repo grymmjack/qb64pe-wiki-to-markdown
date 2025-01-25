@@ -151,8 +151,8 @@ COLOR 12: LOCATE 4, 1: WRITE value1, value2, value3
 <blockquote>
 
 
-* Semicolon , Colon
-* [TAB](TAB.md) , [SPC](SPC.md) , [SPACE&dollar;](SPACE&dollar;.md)
-* [PRINT](PRINT.md) , [PRINT](PRINT.md) [USING](USING.md)
+* [Semicolon](Semicolon.md) , [Colon](Colon.md)
+* [TAB](TAB.md) , [SPC](SPC.md) , [SPACE\$](SPACE\$.md)
+* [PRINT](PRINT.md) , [PRINT](PRINT.md) USING
 * [WRITE](WRITE.md) , [INPUT](INPUT.md) , [LINE](LINE.md) [INPUT](INPUT.md)
 </blockquote>

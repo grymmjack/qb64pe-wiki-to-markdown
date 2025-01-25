@@ -119,8 +119,8 @@ br ~ h5 {
 <blockquote>
 
 
-* numericalVariable is the variable to shift the bits of and can be of the following types: [INTEGER](INTEGER.md) , [LONG](LONG.md) , [_INTEGER64](INTEGER64.md) , or [_BYTE](BYTE.md) .
-* Integer values can be signed or [_UNSIGNED](UNSIGNED.md) .
+* numericalVariable is the variable to shift the bits of and can be of the following types: [INTEGER](INTEGER.md) , [LONG](LONG.md) , _INTEGER64 , or _BYTE .
+* Integer values can be signed or _UNSIGNED .
 * numericalValue is the number of places to shift the bits.
 * While 0 is a valid value it will have no affect on the variable being shifted.
 </blockquote>
@@ -167,7 +167,7 @@ PRINT B~%%
 ```vb
 A~%% = 1
 FOR I%% = 0 TO 8
-PRINT _SHL(A~%%, I%%)
+   PRINT _SHL(A~%%, I%%)
 NEXT I%%
 ```
   
@@ -175,12 +175,12 @@ NEXT I%%
 
 ```vb
 1
-2
-4
-8
-16
-32
-64
+  2
+  4
+  8
+ 16
+ 32
+ 64
 128
 256
 ```
@@ -195,7 +195,7 @@ NEXT I%%
 <blockquote>
 
 
-* [_SHR](SHR.md) , [_ROL](ROL.md) , [_ROR](ROR.md)
-* [_BYTE](BYTE.md) , [INTEGER](INTEGER.md)
-* [LONG](LONG.md) , [_INTEGER64](INTEGER64.md)
+* _SHR , _ROL , _ROR
+* _BYTE , [INTEGER](INTEGER.md)
+* [LONG](LONG.md) , _INTEGER64
 </blockquote>

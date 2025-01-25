@@ -122,8 +122,8 @@ br ~ h5 {
 * textToPrint$ is any literal or variable [STRING](STRING.md) value.
 * If the destinationHandle& is omitted, the current destination image or screen page is used.
 * Useful to find the width of the font print string before actually printing it.
-* Can be used with variable-width fonts or built-in fonts, unlike [_FONTWIDTH](FONTWIDTH.md) which requires a MONOSPACE font handle.
-* In [SCREEN](SCREEN.md) 0, [_PRINTWIDTH](PRINTWIDTH.md) returns the character length of a text string, exactly as [LEN](LEN.md) ( textToPrint$ ) ( version 1.000 and up ).
+* Can be used with variable-width fonts or built-in fonts, unlike _FONTWIDTH which requires a MONOSPACE font handle.
+* In [SCREEN](SCREEN.md) 0, _PRINTWIDTH returns the character length of a text string, exactly as [LEN](LEN.md) ( textToPrint$ ) ( version 1.000 and up ).
 
 </blockquote>
 
@@ -136,8 +136,8 @@ br ~ h5 {
 ##### Example: SUB returns font or screen mode's text block size using _PRINTWIDTH and _FONTHEIGHT without a handle parameter.
 ```vb
 DO
-INPUT "Enter Screen mode 1, 2 or 7 to 13: ", scr$
-mode% = VAL(scr$)
+ INPUT "Enter Screen mode 1, 2 or 7 to 13: ", scr$
+ mode% = VAL(scr$)
 LOOP UNTIL mode% > 0
 SCREEN mode%
 INPUT "Enter first name of TTF font to use or hit enter for text size: ", TTFont$
@@ -167,8 +167,8 @@ END SUB
 <blockquote>
 
 
-* [_FONTWIDTH](FONTWIDTH.md) , [_FONTHEIGHT](FONTHEIGHT.md)
-* [_NEWIMAGE](NEWIMAGE.md) , [_LOADFONT](LOADFONT.md)
-* [_PRINTSTRING](PRINTSTRING.md) , [_FONT](FONT.md)
+* _FONTWIDTH , _FONTHEIGHT
+* _NEWIMAGE , _LOADFONT
+* _PRINTSTRING , _FONT
 * Text Using Graphics
 </blockquote>

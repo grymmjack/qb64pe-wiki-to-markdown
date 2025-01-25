@@ -120,9 +120,11 @@ br ~ h5 {
 
 
 * A logical operation is said to be short-circuiting if the compiled code can bypass the evaluation of one expression depending on the result of another expression.
-* If the result of the first expression evaluated determines the final result of the operation, there is no need to evaluate the second expression, because it cannot change the final result.
-* Short-circuiting can improve performance if the bypassed expression is complex, or if it involves procedure calls.
-* If either or both expressions evaluate to true, result is true.
+* Short-circuiting can improve performance if the bypassed expression is complex, or if it involves procedure ( [SUB](SUB.md) or [FUNCTION](FUNCTION.md) ) calls.
+* If the result of the first expression evaluated determines the final result of the operation, there is no need to evaluate the second expression, because it cannot change the final result. E.g. if the first expression is already true, then the second expression can't change the result anymore, it will always remain true, even if the second expression would be false. Hence, the second expression is irrelevant and never evaluated, if the first one is already true.
+* Note that any procedures involved in the second expression are not called , if the first expression is true. This behavior is intended and the reason for the better performance, but it may cause unexpected failures if you're not aware of it.
+* In fact, if any procedures in the second expression must be called regardless of the truth of the first expression, then you must use the regular [OR](OR.md) instead.
+* If either or both expressions evaluate to true, the result is true.
 
 </blockquote>
 
@@ -130,17 +132,14 @@ br ~ h5 {
 
 <blockquote>
 
-
-
-##### Example: OR versus _ORELSE
 ```vb
 PRINT "Trying _ORELSE"
 
 ' _ORELSE performs short-circuiting logical conjunction and hence for "strawberry", only isFruit() is called
 IF isFruit("strawberry") _ORELSE isRed("strawberry") _ORELSE isSeasonal("strawberry") THEN
-PRINT "Probably a strawberry."
+   PRINT "Probably a strawberry."
 ELSE
-PRINT "Certainly not a strawberry."
+   PRINT "Certainly not a strawberry."
 END IF
 
 PRINT
@@ -148,26 +147,26 @@ PRINT "Trying OR"
 
 ' OR does not performs short-circuiting logical conjunction and hence all is***() functions are called
 IF isFruit("strawberry") OR isRed("strawberry") OR isSeasonal("strawberry") THEN
-PRINT "Probably a strawberry."
+   PRINT "Probably a strawberry."
 ELSE
-PRINT "Certainly not a strawberry."
+   PRINT "Certainly not a strawberry."
 END IF
 
 END
 
 FUNCTION isFruit%% (fruit AS STRING)
-PRINT "isFruit() called!"
-isFruit = (fruit = "strawberry")
+   PRINT "isFruit() called!"
+   isFruit = (fruit = "strawberry")
 END FUNCTION
 
 FUNCTION isRed%% (fruit AS STRING)
-PRINT "isRed() called!"
-isRed = (fruit = "strawberry")
+   PRINT "isRed() called!"
+   isRed = (fruit = "strawberry")
 END FUNCTION
 
 FUNCTION isSeasonal%% (fruit AS STRING)
-PRINT "isSeasonal() called!"
-isSeasonal = (fruit = "strawberry")
+   PRINT "isSeasonal() called!"
+   isSeasonal = (fruit = "strawberry")
 END FUNCTION
 ```
   
@@ -196,10 +195,10 @@ Probably a strawberry.
 
 
 * Featured in our "Keyword of the Day" series
-* [_BIT](BIT.md) , &B , [_BYTE](BYTE.md)
-* [AND](AND.md) , [XOR](XOR.md) , [OR](OR.md)
-* [AND](AND.md) (boolean) , [XOR](XOR.md) (boolean) , [OR](OR.md) (boolean)
-* [_ANDALSO](ANDALSO.md) , [_NEGATE](NEGATE.md)
-* Binary , Boolean
+* _BIT , &B , _BYTE
+* [AND](AND.md) , XOR , [OR](OR.md)
+* [AND](AND.md) (boolean) , XOR (boolean) , [OR](OR.md) (boolean)
+* _ANDALSO , _NEGATE , _IIF
+* Binary , [Boolean](Boolean.md)
 * Mathematical Operations
 </blockquote>

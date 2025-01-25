@@ -121,10 +121,10 @@ br ~ h5 {
 ```vb
 The QB64 Virtual Key constant values used: 
 
-0-255: ASCII and Extended code values (Refer to CP437)
+        0-255: ASCII and Extended code values (Refer to CP437)
 
-256-65535: ASCII 2-byte character codes (unaffected by SHIFT/ALT/CTRL modifiers)
-Use CVI to convert ASCII 2-byte codes to _KEYDOWN values.
+        256-65535: ASCII 2-byte character codes (unaffected by SHIFT/ALT/CTRL modifiers)
+                 Use CVI to convert ASCII 2-byte codes to _KEYDOWN values.
 
 '                                _KEYDOWN Keyboard Values
 '
@@ -154,63 +154,63 @@ Use CVI to convert ASCII 2-byte codes to _KEYDOWN values.
 ```vb
 65536-&H40000000: QB64-specific Virtual Key codes:
 
-CONST KEY_PAUSE& = 100019
-CONST KEY_NUMLOCK& = 100300
-CONST KEY_CAPSLOCK& = 100301
-CONST KEY_SCROLLOCK& = 100302
-CONST KEY_RSHIFT& = 100303
-CONST KEY_LSHIFT& = 100304
-CONST KEY_RCTRL& = 100305
-CONST KEY_LCTRL& = 100306
-CONST KEY_RALT& = 100307
-CONST KEY_LALT& = 100308
-CONST KEY_RMETA& = 100309 'Left 'Apple' key (macOS)
-CONST KEY_LMETA& = 100310 'Right 'Apple' key (macOS)
-CONST KEY_LSUPER& = 100311 'Left "Windows" key
-CONST KEY_RSUPER& = 100312 'Right "Windows"key
-CONST KEY_MODE& = 100313 '"AltGr" key
-CONST KEY_COMPOSE& = 100314
-CONST KEY_HELP& = 100315
-CONST KEY_PRINT& = 100316
-CONST KEY_SYSREQ& = 100317
-CONST KEY_BREAK& = 100318
-CONST KEY_MENU& = 100319
-CONST KEY_POWER& = 100320
-CONST KEY_EURO& = 100321
-CONST KEY_UNDO& = 100322
-CONST KEY_KP0& = 100256
-CONST KEY_KP1& = 100257
-CONST KEY_KP2& = 100258
-CONST KEY_KP3& = 100259
-CONST KEY_KP4& = 100260
-CONST KEY_KP5& = 100261
-CONST KEY_KP6& = 100262
-CONST KEY_KP7& = 100263
-CONST KEY_KP8& = 100264
-CONST KEY_KP9& = 100265
-CONST KEY_KP_PERIOD& = 100266
-CONST KEY_KP_DIVIDE& = 100267
-CONST KEY_KP_MULTIPLY& = 100268
-CONST KEY_KP_MINUS& = 100269
-CONST KEY_KP_PLUS& = 100270
-CONST KEY_KP_ENTER& = 100271
-CONST KEY_KP_INSERT& = 200000
-CONST KEY_KP_END& = 200001
-CONST KEY_KP_DOWN& = 200002
-CONST KEY_KP_PAGE_DOWN& = 200003
-CONST KEY_KP_LEFT& = 200004
-CONST KEY_KP_MIDDLE& = 200005
-CONST KEY_KP_RIGHT& = 200006
-CONST KEY_KP_HOME& = 200007
-CONST KEY_KP_UP& = 200008
-CONST KEY_KP_PAGE_UP& = 200009
-CONST KEY_KP_DELETE& = 200010
-CONST KEY_SCROLL_LOCK_MODE& = 200011
-CONST KEY_INSERT_MODE& = 200012
+                       CONST KEY_PAUSE& = 100019
+                       CONST KEY_NUMLOCK& = 100300
+                       CONST KEY_CAPSLOCK& = 100301
+                       CONST KEY_SCROLLOCK& = 100302
+                       CONST KEY_RSHIFT& = 100303
+                       CONST KEY_LSHIFT& = 100304
+                       CONST KEY_RCTRL& = 100305
+                       CONST KEY_LCTRL& = 100306
+                       CONST KEY_RALT& = 100307
+                       CONST KEY_LALT& = 100308
+                       CONST KEY_RMETA& = 100309 'Left 'Apple' key (macOS)
+                       CONST KEY_LMETA& = 100310 'Right 'Apple' key (macOS)
+                       CONST KEY_LSUPER& = 100311 'Left "Windows" key
+                       CONST KEY_RSUPER& = 100312 'Right "Windows"key
+                       CONST KEY_MODE& = 100313 '"AltGr" key
+                       CONST KEY_COMPOSE& = 100314
+                       CONST KEY_HELP& = 100315
+                       CONST KEY_PRINT& = 100316
+                       CONST KEY_SYSREQ& = 100317
+                       CONST KEY_BREAK& = 100318
+                       CONST KEY_MENU& = 100319
+                       CONST KEY_POWER& = 100320
+                       CONST KEY_EURO& = 100321
+                       CONST KEY_UNDO& = 100322
+                       CONST KEY_KP0& = 100256
+                       CONST KEY_KP1& = 100257
+                       CONST KEY_KP2& = 100258
+                       CONST KEY_KP3& = 100259
+                       CONST KEY_KP4& = 100260
+                       CONST KEY_KP5& = 100261
+                       CONST KEY_KP6& = 100262
+                       CONST KEY_KP7& = 100263
+                       CONST KEY_KP8& = 100264
+                       CONST KEY_KP9& = 100265
+                       CONST KEY_KP_PERIOD& = 100266
+                       CONST KEY_KP_DIVIDE& = 100267
+                       CONST KEY_KP_MULTIPLY& = 100268
+                       CONST KEY_KP_MINUS& = 100269
+                       CONST KEY_KP_PLUS& = 100270
+                       CONST KEY_KP_ENTER& = 100271
+                       CONST KEY_KP_INSERT& = 200000
+                       CONST KEY_KP_END& = 200001
+                       CONST KEY_KP_DOWN& = 200002
+                       CONST KEY_KP_PAGE_DOWN& = 200003
+                       CONST KEY_KP_LEFT& = 200004
+                       CONST KEY_KP_MIDDLE& = 200005
+                       CONST KEY_KP_RIGHT& = 200006
+                       CONST KEY_KP_HOME& = 200007
+                       CONST KEY_KP_UP& = 200008
+                       CONST KEY_KP_PAGE_UP& = 200009
+                       CONST KEY_KP_DELETE& = 200010
+                       CONST KEY_SCROLL_LOCK_MODE& = 200011
+                       CONST KEY_INSERT_MODE& = 200012
 
-&H40000000 up: Unicode using the cyberbit.ttf font when available.
+        &H40000000 up: Unicode using the cyberbit.ttf font when available.
 
-Use _KEYHIT to find the key codes to be monitored by _KEYDOWN!
+             Use _KEYHIT to find the key codes to be monitored by _KEYDOWN!
 ```
   
 <br>
@@ -222,17 +222,17 @@ Use _KEYHIT to find the key codes to be monitored by _KEYDOWN!
 CONST RSHIFT& = 100303
 CONST LSHIFT& = 100304
 DO
-x = _KEYHIT
-IF x = CVI(CHR$(0) + CHR$(59)) THEN
-IF _KEYDOWN(LSHIFT&) OR _KEYDOWN(RSHIFT&) THEN
-PRINT "KEYHIT: SHIFT + F1"
-ELSE
-PRINT "KEYHIT: F1"
-END IF
-END IF
-k$ = INKEY$         'compare key press return values
-IF k$ = CHR$(0) + CHR$(59) THEN PRINT "INKEY$: F1"
-IF k$ = CHR$(0) + CHR$(84) THEN PRINT "INKEY$: SHIFT+F1"
+   x = _KEYHIT
+   IF x = CVI(CHR$(0) + CHR$(59)) THEN
+       IF _KEYDOWN(LSHIFT&) OR _KEYDOWN(RSHIFT&) THEN
+           PRINT "KEYHIT: SHIFT + F1"
+       ELSE
+           PRINT "KEYHIT: F1"
+       END IF
+   END IF
+   k$ = INKEY$         'compare key press return values
+   IF k$ = CHR$(0) + CHR$(59) THEN PRINT "INKEY$: F1"
+   IF k$ = CHR$(0) + CHR$(84) THEN PRINT "INKEY$: SHIFT+F1"
 LOOP UNTIL k$ = CHR$(27)     'escape key exit
 ```
   
@@ -249,18 +249,18 @@ col = _RGB(255, 0, 0)
 radius = 20
 
 DO
-CLS
-LOCATE 1, 1: PRINT "Use the arrow keys to move the circle."
-CIRCLE (x, y), radius, col
-PAINT (x, y), col
+   CLS
+   LOCATE 1, 1: PRINT "Use the arrow keys to move the circle."
+   CIRCLE (x, y), radius, col
+   PAINT (x, y), col
 
-IF _KEYDOWN(CVI(CHR$(0) + "P")) THEN y = y + 1   '_KEYDOWN(20480)
-IF _KEYDOWN(CVI(CHR$(0) + "H")) THEN y = y - 1   '_KEYDOWN(18432)
-IF _KEYDOWN(CVI(CHR$(0) + "K")) THEN x = x - 1   '_KEYDOWN(19200)
-IF _KEYDOWN(CVI(CHR$(0) + "M")) THEN x = x + 1   '_KEYDOWN(19712)
+   IF _KEYDOWN(CVI(CHR$(0) + "P")) THEN y = y + 1   '_KEYDOWN(20480)
+   IF _KEYDOWN(CVI(CHR$(0) + "H")) THEN y = y - 1   '_KEYDOWN(18432)
+   IF _KEYDOWN(CVI(CHR$(0) + "K")) THEN x = x - 1   '_KEYDOWN(19200)
+   IF _KEYDOWN(CVI(CHR$(0) + "M")) THEN x = x + 1   '_KEYDOWN(19712)
 
-_DISPLAY
-_LIMIT 100 'limit to 100 frames per second
+   _DISPLAY
+   _LIMIT 100 'limit to 100 frames per second
 LOOP
 ```
   
@@ -274,10 +274,10 @@ LOOP
 <blockquote>
 
 
-* [_KEYHIT](KEYHIT.md) , Unicode , Code Pages (by region)
-* [_MAPUNICODE](MAPUNICODE.md) , [_MAPUNICODE](MAPUNICODE.md) (function)
-* [INKEY&dollar;](INKEY&dollar;.md) , ASCII , [CVI](CVI.md)
+* _KEYHIT , [Unicode](Unicode.md) , Code Pages (by region)
+* _MAPUNICODE , _MAPUNICODE (function)
+* [INKEY\$](INKEY\$.md) , [ASCII](ASCII.md) , [CVI](CVI.md)
 * [INP](INP.md) (&H60), Scancodes
-* [ON](ON.md) KEY(n) , KEY(n) , [KEY](KEY.md) n
+* [ON](ON.md) [KEY(n)](KEY(n).md) , [KEY(n)](KEY(n).md) , KEY n
 * Windows hot keys
 </blockquote>

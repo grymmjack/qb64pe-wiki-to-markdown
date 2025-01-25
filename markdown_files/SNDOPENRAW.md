@@ -120,7 +120,7 @@ br ~ h5 {
 
 
 * You can manage multiple dynamically generated sounds at once without having to worry about mixing.
-* Use [_SNDCLOSE](SNDCLOSE.md) to remove the pipe sound handles from memory.
+* Use _SNDCLOSE to remove the pipe sound handles from memory.
 
 </blockquote>
 
@@ -136,8 +136,8 @@ a = _SNDOPENRAW
 b = _SNDOPENRAW
 
 FOR x = 1 TO 100000
-_SNDRAW SIN(x / 10), , a 'fill with a tone
-_SNDRAW RND * 1 - 0.5, , b 'fill with static
+   _SNDRAW SIN(x / 10), , a 'fill with a tone
+   _SNDRAW RND * 1 - 0.5, , b 'fill with static
 NEXT
 
 _SNDCLOSE a
@@ -154,7 +154,7 @@ _SNDCLOSE b
 <blockquote>
 
 
-* [_SNDRAWDONE](SNDRAWDONE.md)
-* [_SNDRAW](SNDRAW.md)
-* [_SNDCLOSE](SNDCLOSE.md)
+* _SNDRAWDONE
+* _SNDRAW
+* _SNDCLOSE
 </blockquote>

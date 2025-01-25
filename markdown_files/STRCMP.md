@@ -120,7 +120,7 @@ br ~ h5 {
 
 
 * Function returns -1 when string1$ is less than string2$ , 0 when equal or 1 when string1$ is greater than string2$ .
-* Upper case letters are valued less than lower case letters in the ASCII evaluation.
+* Upper case letters are valued less than lower case letters in the [ASCII](ASCII.md) evaluation.
 
 </blockquote>
 
@@ -137,8 +137,8 @@ br ~ h5 {
 
 
 * Featured in our "Keyword of the Day" series
-* [_STRICMP](STRICMP.md)
-* [STR&dollar;](STR&dollar;.md)
+* _STRICMP
+* [STR\$](STR\$.md)
 * [STRING](STRING.md)
-* ASCII
+* [ASCII](ASCII.md)
 </blockquote>

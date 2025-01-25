@@ -164,8 +164,8 @@ _CONSOLETITLE "secondone"
 <blockquote>
 
 
-* [&dollar;CONSOLE](&dollar;CONSOLE.md) , [_CONSOLETITLE](CONSOLETITLE.md)
-* [&dollar;SCREENHIDE](&dollar;SCREENHIDE.md) , [&dollar;SCREENSHOW](&dollar;SCREENSHOW.md) (QB64 Metacommands )
-* [_SCREENHIDE](SCREENHIDE.md) , [_SCREENSHOW](SCREENSHOW.md)
-* [_DEST](DEST.md) , [_ECHO](ECHO.md)
+* [\$CONSOLE](\$CONSOLE.md) , _CONSOLETITLE
+* [\$SCREENHIDE](\$SCREENHIDE.md) , [\$SCREENSHOW](\$SCREENSHOW.md) (QB64 Metacommands )
+* _SCREENHIDE , _SCREENSHOW
+* _DEST , _ECHO
 </blockquote>

@@ -122,7 +122,7 @@ br ~ h5 {
 * The [STEP](STEP.md) keyword make column and row coordinates relative to the previously coordinates set by any graphic statement.
 * The optional parameters ( column1 , row1 ) set the line's starting point.
 * The dash and second coordinate parameters ( column2 , row2 ) must be designated to complete the line or box.
-* The [INTEGER](INTEGER.md) color attribute or [LONG](LONG.md) [_RGB32](RGB32.md) 32 bit color value sets the drawing color.  If omitted, the current destination page's [_DEFAULTCOLOR](DEFAULTCOLOR.md) is used.
+* The [INTEGER](INTEGER.md) color attribute or [LONG](LONG.md) _RGB32 32 bit color value sets the drawing color.  If omitted, the current destination page's _DEFAULTCOLOR is used.
 * Optional B keyword creates a rectangle ( b ox) using the start and end coordinates as diagonal corners. BF creates a b ox f illed.
 * The style% signed [INTEGER](INTEGER.md) value sets a dotted pattern to draw the line or rectangle outline.
 </blockquote>
@@ -182,16 +182,16 @@ SCREEN 13
 _FULLSCREEN 'required in QB64 only
 _DELAY 5
 FOR i% = 1 TO 2 ^ 15 'use exponential value instead of -32768
-COLOR 15:LOCATE 10, 5: PRINT i%;
-LINE (10, 60)-(300, 60), 0 'erase previous lines
-LINE (10, 60)-(300, 60), 12, , i%
-tmp$ = ""
-FOR b% = 15 TO 0 STEP -1 'create binary text value showing bits on as █, off as space
-IF i% AND 2 ^ b% THEN tmp$ = tmp$ + CHR$(219) ELSE tmp$ = tmp$ + SPACE$(1)
-NEXT
-COLOR 12:LOCATE 10, 20: PRINT tmp$;
-IF INKEY$ <> "" THEN EXIT FOR 'any key exit
-_DELAY .001 'set delay time as required
+   COLOR 15:LOCATE 10, 5: PRINT i%;
+   LINE (10, 60)-(300, 60), 0 'erase previous lines
+   LINE (10, 60)-(300, 60), 12, , i%
+   tmp$ = ""
+   FOR b% = 15 TO 0 STEP -1 'create binary text value showing bits on as █, off as space
+       IF i% AND 2 ^ b% THEN tmp$ = tmp$ + CHR$(219) ELSE tmp$ = tmp$ + SPACE$(1)
+   NEXT
+   COLOR 12:LOCATE 10, 20: PRINT tmp$;
+   IF INKEY$ <> "" THEN EXIT FOR 'any key exit
+   _DELAY .001 'set delay time as required
 NEXT
 ```
   

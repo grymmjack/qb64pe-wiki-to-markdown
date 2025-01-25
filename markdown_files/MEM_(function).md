@@ -129,9 +129,9 @@ br ~ h5 {
 <blockquote>
 
 
-* The memoryBlock [_MEM](MEM.md) type variable holds the following read-only elements: OFFSET, SIZE, [TYPE](TYPE.md) and ELEMENTSIZE.
-* All values created by memory functions MUST be freed using [_MEMFREE](MEMFREE.md) with a valid [_MEM](MEM.md) variable type.
-* [_MEM](MEM.md) function cannot reference variable length [STRING](STRING.md) variable values. String values must be designated as a fixed- length string.
+* The memoryBlock _MEM type variable holds the following read-only elements: OFFSET, SIZE, [TYPE](TYPE.md) and ELEMENTSIZE.
+* All values created by memory functions MUST be freed using _MEMFREE with a valid _MEM variable type.
+* _MEM function cannot reference variable length [STRING](STRING.md) variable values. String values must be designated as a fixed- length string.
 
 </blockquote>
 
@@ -187,8 +187,8 @@ END SUB
 <blockquote>
 
 
-* [_MEM](MEM.md)
-* [_MEMNEW](MEMNEW.md) , [_MEMCOPY](MEMCOPY.md) , [_MEMFREE](MEMFREE.md)
-* [_MEMGET](MEMGET.md) , [_MEMPUT](MEMPUT.md) , [_MEMFILL](MEMFILL.md)
-* [_MEMIMAGE](MEMIMAGE.md) , [_MEMSOUND](MEMSOUND.md)
+* _MEM
+* _MEMNEW , _MEMCOPY , _MEMFREE
+* _MEMGET , _MEMPUT , _MEMFILL
+* _MEMIMAGE , _MEMSOUND
 </blockquote>

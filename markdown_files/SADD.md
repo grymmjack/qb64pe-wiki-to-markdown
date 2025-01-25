@@ -126,5 +126,5 @@ br ~ h5 {
 <blockquote>
 
 
-* [VARSEG](VARSEG.md) , [VARPTR](VARPTR.md) , [DEF](DEF.md) [SEG](SEG.md)
+* [VARSEG](VARSEG.md) , [VARPTR](VARPTR.md) , DEF SEG
 </blockquote>

@@ -133,22 +133,22 @@ br ~ h5 {
 ##### Example: Finding the font or text block size of printed string characters in graphic SCREEN modes.
 ```vb
 DO
-INPUT "Enter Screen mode 1, 2 or 7 to 13 or 256, 32 for _NEWIMAGE: ", scr$
-mode% = VAL(scr$)
+   INPUT "Enter Screen mode 1, 2 or 7 to 13 or 256, 32 for _NEWIMAGE: ", scr$
+   mode% = VAL(scr$)
 LOOP UNTIL mode% > 0
 SELECT CASE mode%
-CASE 1, 2, 7 TO 13: SCREEN mode%
-CASE 256, 32: SCREEN _NEWIMAGE(800, 600, mode%)
-CASE ELSE: PRINT "Invalid mode selected!": END
+   CASE 1, 2, 7 TO 13: SCREEN mode%
+   CASE 256, 32: SCREEN _NEWIMAGE(800, 600, mode%)
+   CASE ELSE: PRINT "Invalid mode selected!": END
 END SELECT
 
 INPUT "Enter first name of TTF font to use or hit enter for text block size: ", TTFont$
 IF LEN(TTFont$) THEN INPUT "Enter font height: ", hi$
 height& = VAL(hi$)
 IF height& > 0 THEN
-fnt& = _LOADFONT("C:\Windows\Fonts\" + TTFont$ + ".ttf", height&, style$)
-IF fnt& <= 0 THEN PRINT "Invalid Font handle!": END
-_FONT fnt&
+   fnt& = _LOADFONT("C:\Windows\Fonts\" + TTFont$ + ".ttf", height&, style$)
+   IF fnt& <= 0 THEN PRINT "Invalid Font handle!": END
+   _FONT fnt&
 END IF
 
 TextSize wide&, high& 'get the font or current screen mode's text block pixel size
@@ -158,8 +158,8 @@ _PRINTSTRING (20, 100), "Block size = " + CHR$(1) + STR$(wide&) + " X" + STR$(hi
 END
 
 SUB TextSize (TextWidth&, TextHeight&)
-TextWidth& = _PRINTWIDTH("W") 'measure width of one font or text character
-TextHeight& = _FONTHEIGHT 'can measure normal text block heights also
+   TextWidth& = _PRINTWIDTH("W") 'measure width of one font or text character
+   TextHeight& = _FONTHEIGHT 'can measure normal text block heights also
 END SUB
 ```
   
@@ -174,8 +174,8 @@ END SUB
 
 
 * Featured in our "Keyword of the Day" series
-* [_FONTWIDTH](FONTWIDTH.md) , [_FONT](FONT.md)
-* [_PRINTWIDTH](PRINTWIDTH.md) , [_PRINTSTRING](PRINTSTRING.md)
-* [SCREEN](SCREEN.md) , [_LOADFONT](LOADFONT.md)
+* _FONTWIDTH , _FONT
+* _PRINTWIDTH , _PRINTSTRING
+* [SCREEN](SCREEN.md) , _LOADFONT
 * Text Using Graphics (Demo)
 </blockquote>

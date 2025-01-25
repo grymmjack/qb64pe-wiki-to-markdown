@@ -163,8 +163,8 @@ second line
 
 
 * [GOSUB](GOSUB.md) , [ON](ON.md) [ERROR](ERROR.md)
-* ON...GOTO , ON...GOSUB
-* DO...LOOP , FOR...NEXT
-* IF...THEN , [SELECT](SELECT.md) [CASE](CASE.md)
+* [ON...GOTO](ON...GOTO.md) , [ON...GOSUB](ON...GOSUB.md)
+* [DO...LOOP](DO...LOOP.md) , [FOR...NEXT](FOR...NEXT.md)
+* [IF...THEN](IF...THEN.md) , SELECT [CASE](CASE.md)
 * Line numbers and labels
 </blockquote>

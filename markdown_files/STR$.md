@@ -128,9 +128,9 @@ br ~ h5 {
 
 
 * Returns any type number value with leading sign(space/minus) or decimal point when one exists in the numerical value.
-* If number is positive, the [STRING](STRING.md) value returned will have a leading space character which can be removed using [LTRIM&dollar;](LTRIM&dollar;.md) .
-* If number is negative, the minus sign will precede the number instead of a space which [LTRIM&dollar;](LTRIM&dollar;.md) will not remove.
-* Trimming a [STR&dollar;](STR&dollar;.md) string number using [RTRIM&dollar;](RTRIM&dollar;.md) is not required as [PRINT](PRINT.md) creates the undocumented trailing number space.
+* If number is positive, the [STRING](STRING.md) value returned will have a leading space character which can be removed using [LTRIM\$](LTRIM\$.md) .
+* If number is negative, the minus sign will precede the number instead of a space which [LTRIM\$](LTRIM\$.md) will not remove.
+* Trimming a [STR\$](STR\$.md) string number using [RTRIM\$](RTRIM\$.md) is not required as [PRINT](PRINT.md) creates the undocumented trailing number space.
 
 </blockquote>
 
@@ -175,8 +175,7 @@ PRINT STR$(a) + "10" + "1" + "who" + STR$(a) + STR$(a) + LTRIM$(STR$(a))
 <blockquote>
 
 
-* [VAL](VAL.md) , [STRING](STRING.md)
-* [LTRIM&dollar;](LTRIM&dollar;.md) , [MID&dollar;](MID&dollar;.md) (function)
-* [RIGHT&dollar;](RIGHT&dollar;.md) , [LEFT&dollar;](LEFT&dollar;.md)
-* [HEX&dollar;](HEX&dollar;.md) , [OCT&dollar;](OCT&dollar;.md)
+* [VAL](VAL.md) , _TOSTR$
+* [LTRIM\$](LTRIM\$.md) , [MID\$](MID\$.md) (function)
+* _BIN$ , [HEX\$](HEX\$.md) , [OCT\$](OCT\$.md)
 </blockquote>

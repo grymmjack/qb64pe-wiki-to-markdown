@@ -187,9 +187,9 @@ _FLOAT = 32 bytes
 ##### Example 4: Opening a RANDOM file using LEN to calculate and LEN = to designate the file record size.
 ```vb
 TYPE variabletype
-x AS INTEGER'       '2 bytes
-y AS STRING * 10'  '10 bytes
-z AS LONG'          '4 bytes
+ x AS INTEGER'       '2 bytes
+ y AS STRING * 10'  '10 bytes
+ z AS LONG'          '4 bytes
 END TYPE'            '16 bytes total
 DIM record AS variabletype
 DIM newrec AS variabletype
@@ -248,8 +248,8 @@ PRINT "Element size ="; LEN(d$3(1)), "Overall size ="; LEN(d$3()) '5 elements * 
 
 'and it also works for TYPE arrays
 TYPE t
-a AS LONG '4 bytes
-b AS INTEGER '2 bytes
+   a AS LONG '4 bytes
+   b AS INTEGER '2 bytes
 END TYPE
 DIM e(1 TO 5) AS t 'type is 6 bytes long
 PRINT "Element size ="; LEN(e(1)), "Overall size ="; LEN(e()) '5 elements * 6 bytes = 30 bytes

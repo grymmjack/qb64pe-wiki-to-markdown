@@ -125,8 +125,8 @@ br ~ h5 {
 devices = _DEVICES  'MUST be read in order for other 2 device functions to work!
 PRINT "Number of input devices found ="; devices
 FOR i = 1 TO devices
-PRINT _DEVICE$(i)
-PRINT "Buttons:"; _LASTBUTTON(i)
+ PRINT _DEVICE$(i)
+ PRINT "Buttons:"; _LASTBUTTON(i)
 NEXT
 ```
   
@@ -150,11 +150,11 @@ Buttons: 3
 <blockquote>
 
 
-* [_LASTAXIS](LASTAXIS.md) , [_LASTWHEEL](LASTWHEEL.md)
-* [_AXIS](AXIS.md) , [_BUTTON](BUTTON.md) , [_WHEEL](WHEEL.md)
-* [_DEVICES](DEVICES.md) , [_DEVICE&dollar;](DEVICE&dollar;.md)
-* [_DEVICEINPUT](DEVICEINPUT.md)
-* [_MOUSEBUTTON](MOUSEBUTTON.md)
+* _LASTAXIS , _LASTWHEEL
+* _AXIS , _BUTTON , _WHEEL
+* _DEVICES , _DEVICE$
+* _DEVICEINPUT
+* _MOUSEBUTTON
 * [STRIG](STRIG.md) , [STICK](STICK.md)
-* [ON](ON.md) STRIG(n) , STRIG(n)
+* [ON](ON.md) [STRIG(n)](STRIG(n).md) , [STRIG(n)](STRIG(n).md)
 </blockquote>

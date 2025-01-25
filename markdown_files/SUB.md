@@ -133,12 +133,12 @@ br ~ h5 {
 * [SUB](SUB.md) procedures can return multiple values through the parameters unlike functions.
 * [SUB](SUB.md) procedures return to the next code statement after the call in the main or other procedures.
 * [EXIT](EXIT.md) [SUB](SUB.md) can be used to exit early or to exit before [GOSUB](GOSUB.md) procedures using [RETURN](RETURN.md) .
-* [TYPE](TYPE.md) and [DECLARE](DECLARE.md) [LIBRARY](LIBRARY.md) declarations can be made inside of [SUB](SUB.md) procedures in QB64 only.
+* [TYPE](TYPE.md) and DECLARE LIBRARY declarations can be made inside of [SUB](SUB.md) procedures in QB64 only.
 * [SUB](SUB.md) procedures can save program memory as all memory used in a [SUB](SUB.md) is released on procedure exit except for [STATIC](STATIC.md) values.
-* [_DEFINE](DEFINE.md) can be used to define all new or old QB64 variable [TYPE](TYPE.md) definitions instead of DEF***.
-* [&dollar;INCLUDE](&dollar;INCLUDE.md) text library files with needed [SUB](SUB.md) and [FUNCTION](FUNCTION.md) procedures can be included in programs after all sub-procedures.
-* QB64 ignores all procedural [DECLARE](DECLARE.md) statements. Define all parameter TYPEs in the [SUB](SUB.md) procedure.
-* Images are not deallocated when the [SUB](SUB.md) or [FUNCTION](FUNCTION.md) they are created in ends. Free them with [_FREEIMAGE](FREEIMAGE.md) .
+* _DEFINE can be used to define all new or old QB64 variable [TYPE](TYPE.md) definitions instead of DEF***.
+* [\$INCLUDE](\$INCLUDE.md) text library files with needed [SUB](SUB.md) and [FUNCTION](FUNCTION.md) procedures can be included in programs after all sub-procedures.
+* QB64 ignores all procedural DECLARE statements. Define all parameter TYPEs in the [SUB](SUB.md) procedure.
+* Images are not deallocated when the [SUB](SUB.md) or [FUNCTION](FUNCTION.md) they are created in ends. Free them with _FREEIMAGE .
 
 </blockquote>
 

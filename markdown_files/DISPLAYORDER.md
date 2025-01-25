@@ -119,9 +119,9 @@ br ~ h5 {
 <blockquote>
 
 
-* [_SOFTWARE](SOFTWARE.md) refers to software created surfaces or SCREENs .
-* [_HARDWARE](HARDWARE.md) and [_HARDWARE1](HARDWARE1.md) refer to surfaces created by OpenGL hardware acceleration.
-* [_GLRENDER](GLRENDER.md) refers to OpenGL code rendering order
+* _SOFTWARE refers to software created surfaces or SCREENs .
+* _HARDWARE and _HARDWARE1 refer to surfaces created by OpenGL hardware acceleration.
+* _GLRENDER refers to OpenGL code rendering order
 </blockquote>
 
 #### DESCRIPTION
@@ -129,11 +129,11 @@ br ~ h5 {
 <blockquote>
 
 
-* The default on program start is: [_DISPLAYORDER](DISPLAYORDER.md) _SOFTWARE, _HARDWARE, _GLRENDER, [_HARDWARE1](HARDWARE1.md)
+* The default on program start is: _DISPLAYORDER _SOFTWARE, _HARDWARE, _GLRENDER, _HARDWARE1
 * Any content or combination order is allowed, except listing the same content twice consecutively.
-* Simply using [_DISPLAYORDER](DISPLAYORDER.md) [_HARDWARE](HARDWARE.md) will render hardware surfaces only.
+* Simply using _DISPLAYORDER _HARDWARE will render hardware surfaces only.
 * Use an underscore to continue a code line on a new text row in the IDE.
-* After [_DISPLAYORDER](DISPLAYORDER.md) has been used, it must be used to make any changes, even to default.
+* After _DISPLAYORDER has been used, it must be used to make any changes, even to default.
 
 </blockquote>
 
@@ -149,9 +149,9 @@ br ~ h5 {
 <blockquote>
 
 
-* [_DISPLAY](DISPLAY.md)
-* [_PUTIMAGE](PUTIMAGE.md)
-* [_LOADIMAGE](LOADIMAGE.md)
-* [_COPYIMAGE](COPYIMAGE.md)
+* _DISPLAY
+* _PUTIMAGE
+* _LOADIMAGE
+* _COPYIMAGE
 * Hardware images
 </blockquote>

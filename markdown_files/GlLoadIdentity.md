@@ -137,6 +137,6 @@ br ~ h5 {
 
 
 * [SUB](SUB.md) _GL
-* [_glBegin](glBegin.md) , [_glEnd](glEnd.md) , _glLoadMatrix , [_glMatrixMode](glMatrixMode.md)
-* _glMultMatrix , [_glPushMatrix](glPushMatrix.md)
+* _glBegin , _glEnd , _glLoadMatrix , _glMatrixMode
+* _glMultMatrix , _glPushMatrix
 </blockquote>

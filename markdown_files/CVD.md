@@ -119,9 +119,9 @@ br ~ h5 {
 <blockquote>
 
 
-* CV functions ( [CVD](CVD.md) , [CVS](CVS.md) , [CVI](CVI.md) , [CVL](CVL.md) , [CVDMBF](CVDMBF.md) , [CVSMBF](CVSMBF.md) ) are used to convert values encoded by MK$ functions ( [MKD&dollar;](MKD&dollar;.md) , [MKS&dollar;](MKS&dollar;.md) , [MKI&dollar;](MKI&dollar;.md) , [MKL&dollar;](MKL&dollar;.md) , [MKDMBF&dollar;](MKDMBF&dollar;.md) , [MKSMBF&dollar;](MKSMBF&dollar;.md) ).
+* [CV](CV.md) functions ( [CVD](CVD.md) , [CVS](CVS.md) , [CVI](CVI.md) , [CVL](CVL.md) , [CVDMBF](CVDMBF.md) , [CVSMBF](CVSMBF.md) ) are used to convert values encoded by [MK\$](MK\$.md) functions ( [MKD\$](MKD\$.md) , [MKS\$](MKS\$.md) , [MKI\$](MKI\$.md) , [MKL\$](MKL\$.md) , [MKDMBF\$](MKDMBF\$.md) , [MKSMBF\$](MKSMBF\$.md) ).
 * Variables of numerical types are also encoded when [PUT](PUT.md) to a [RANDOM](RANDOM.md) or [BINARY](BINARY.md) -access file.
-* QB64 has [_CV](CV.md) and [_MK&dollar;](MK&dollar;.md) functions which can also deal with extended data types .
+* QB64 has _CV and _MK$ functions which can also deal with extended data types .
 * [DOUBLE](DOUBLE.md) values can range up to 15 decimal point digits. Decimal point accuracy depends on whole value places taken.
 
 </blockquote>

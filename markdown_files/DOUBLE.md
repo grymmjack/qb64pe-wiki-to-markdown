@@ -102,15 +102,7 @@ br ~ h5 {
 ---
 <blockquote>
 
-### DOUBLE type floating point numerical values use 8 bytes per value.
-
-</blockquote>
-
-#### SYNTAX
-
-<blockquote>
-
-`DIM variable AS DOUBLE`
+### DOUBLE variables are 64-bits floating point numerical values up to sixteen digits precision ( see IEEE 754 Double precision ).
 
 </blockquote>
 
@@ -119,14 +111,12 @@ br ~ h5 {
 <blockquote>
 
 
-* Literal or variable values can range up to 15 decimal point places.
-* The variable suffix type is # .
-* Use [DOUBLE](DOUBLE.md) and [_FLOAT](FLOAT.md) variables sparingly as they use a lot of program memory.
-* Values returned may be expressed using exponential or scientific notation using E for [SINGLE](SINGLE.md) or D for [DOUBLE](DOUBLE.md) precision.
-* Floating decimal point numerical values cannot be [_UNSIGNED](UNSIGNED.md) .
-* Values can be converted to 8 byte ASCII string values using _MKD$ and back with _CVD .
-* When a variable has not been defined or has no type suffix, the value defaults to [SINGLE](SINGLE.md) .
-* Warning: QBasic keyword names cannot be used as numerical variable names with or without the type suffix.
+* Values can range up to 16 digits. Decimal point accuracy depends on whole value places taken.
+* The suffix # can also be placed after a literal numerical value to designate the value as [DOUBLE](DOUBLE.md) .
+* Values may be given as real number ( 123.456 ) or scientific notation using D as exponent marker ( 1.23456D+2 ).
+* [PRINT](PRINT.md) usually takes the shorter of both notations (depending on the value) to output the numbers. In alternative you may use [PRINT](PRINT.md) USING to designate your desired output format.
+* Floating decimal point numerical values cannot be _UNSIGNED .
+* Values can be converted to 8-bytes [STRING](STRING.md) values using _MKD$ and back to numbers with _CVD .
 
 </blockquote>
 
@@ -142,9 +132,9 @@ br ~ h5 {
 <blockquote>
 
 
-* [DIM](DIM.md) , [DEFDBL](DEFDBL.md)
-* [MKD&dollar;](MKD&dollar;.md) , [CVD](CVD.md)
-* [SINGLE](SINGLE.md) , [_FLOAT](FLOAT.md)
-* [LEN](LEN.md)
+* [SINGLE](SINGLE.md) , _FLOAT
+* [DIM](DIM.md) , [DEFDBL](DEFDBL.md) , _DEFINE
+* [MKD\$](MKD\$.md) , [CVD](CVD.md) , _MK$ , _CV
+* [LEN](LEN.md) , Constants
 * Variable Types
 </blockquote>

@@ -126,7 +126,7 @@ br ~ h5 {
 <blockquote>
 
 
-* [DIM](DIM.md) , FOR...NEXT
-* [_MAPUNICODE](MAPUNICODE.md)
-* [_SETALPHA](SETALPHA.md)
+* [DIM](DIM.md) , [FOR...NEXT](FOR...NEXT.md)
+* _MAPUNICODE
+* _SETALPHA
 </blockquote>

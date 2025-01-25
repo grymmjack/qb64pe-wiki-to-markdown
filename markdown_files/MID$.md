@@ -135,11 +135,11 @@ text$ = "The cats and dogs were playing, even though dogs don't like cats."
 PRINT text$
 start% = 1          ' start cannot be 0 when used in the INSTR function!
 DO
-position% = INSTR(start%, text$, "dog")
-IF position% THEN            ' when position is a value greater than 0
-MID$(text$, position%, 3) = "rat"   ' changes "dog" to "rat" when found
-start% = position% + 1     ' advance one position to search rest of string
-END IF
+  position% = INSTR(start%, text$, "dog")
+  IF position% THEN            ' when position is a value greater than 0
+    MID$(text$, position%, 3) = "rat"   ' changes "dog" to "rat" when found
+    start% = position% + 1     ' advance one position to search rest of string
+  END IF
 LOOP UNTIL position% = 0       ' no other matches found
 PRINT text$
 ```
@@ -161,9 +161,9 @@ The cats and rats were playing, even though rats don't like cats.
 <blockquote>
 
 
-* [MID&dollar;](MID&dollar;.md) (function)
+* [MID\$](MID\$.md) (function)
 * [ASC](ASC.md) , [ASC](ASC.md) (function)
-* [LEFT&dollar;](LEFT&dollar;.md) , [RIGHT&dollar;](RIGHT&dollar;.md)
-* [INSTR](INSTR.md) , ASCII , [STR&dollar;](STR&dollar;.md) , [HEX&dollar;](HEX&dollar;.md) , Bitmaps
-* [MKI&dollar;](MKI&dollar;.md) , [MKL&dollar;](MKL&dollar;.md) , [MKS&dollar;](MKS&dollar;.md) , [MKD&dollar;](MKD&dollar;.md)
+* [LEFT\$](LEFT\$.md) , [RIGHT\$](RIGHT\$.md)
+* [INSTR](INSTR.md) , [ASCII](ASCII.md) , [STR\$](STR\$.md) , [HEX\$](HEX\$.md) , Bitmaps
+* [MKI\$](MKI\$.md) , [MKL\$](MKL\$.md) , [MKS\$](MKS\$.md) , [MKD\$](MKD\$.md)
 </blockquote>

@@ -123,7 +123,7 @@ br ~ h5 {
 * [SCREEN](SCREEN.md) mode 10 has only 3 white foreground attributes including flashing.
 * To change the background& color only, use a comma and the desired color. Ex: [COLOR](COLOR.md) , background&
 * Graphic drawing statements like [PSET](PSET.md) , [PRESET](PRESET.md) , [LINE](LINE.md) , etc, also use the colors set by the [COLOR](COLOR.md) statement if no color is passed when they are called.
-* The [&dollar;COLOR](&dollar;COLOR.md) metacommand adds named color constants for both text and 32-bit modes.
+* The [\$COLOR](\$COLOR.md) metacommand adds named color constants for both text and 32-bit modes.
 
 </blockquote>
 
@@ -138,17 +138,17 @@ PRINT "Attribute = Hex value      Red          Green         Blue "
 PRINT
 COLOR 7
 FOR attribute = 1 TO 15
-OUT &H3C7, attribute 'set color attribute to read
-red$ = HEX$(INP(&H3C9) * 255 / 63) 'convert port setting to 32 bit values
-grn$ = HEX$(INP(&H3C9) * 255 / 63)
-blu$ = HEX$(INP(&H3C9) * 255 / 63)
-IF LEN(red$) = 1 THEN red$ = "0" + red$ '2 hex digits required
-IF LEN(grn$) = 1 THEN grn$ = "0" + grn$ 'for low or zero hex values
-IF LEN(blu$) = 1 THEN blu$ = "0" + blu$
-hex32$ = "&H" + alpha$ + red$ + grn$ + blu$
-_PALETTECOLOR attribute, VAL(hex32$) 'VAL converts hex string to a LONG 32 bit value
-IF attribute THEN COLOR attribute 'exclude black color print
-PRINT "COLOR" + STR$(attribute) + " = " + hex32$, red$, grn$, blu$ 'returns closest attribute
+ OUT &H3C7, attribute 'set color attribute to read
+ red$ = HEX$(INP(&H3C9) * 255 / 63) 'convert port setting to 32 bit values
+ grn$ = HEX$(INP(&H3C9) * 255 / 63)
+ blu$ = HEX$(INP(&H3C9) * 255 / 63)
+ IF LEN(red$) = 1 THEN red$ = "0" + red$ '2 hex digits required
+ IF LEN(grn$) = 1 THEN grn$ = "0" + grn$ 'for low or zero hex values
+ IF LEN(blu$) = 1 THEN blu$ = "0" + blu$
+ hex32$ = "&H" + alpha$ + red$ + grn$ + blu$
+ _PALETTECOLOR attribute, VAL(hex32$) 'VAL converts hex string to a LONG 32 bit value
+ IF attribute THEN COLOR attribute 'exclude black color print
+ PRINT "COLOR" + STR$(attribute) + " = " + hex32$, red$, grn$, blu$ 'returns closest attribute
 NEXT
 ```
   
@@ -288,18 +288,18 @@ WORLD
 <blockquote>
 
 
-* [&dollar;COLOR](&dollar;COLOR.md) (metacommand)
-* [_RGB](RGB.md) , [_RGBA](RGBA.md) , [_RGB32](RGB32.md) , RGBA32 .
-* [_RED](RED.md) , [_GREEN](GREEN.md) , [_BLUE](BLUE.md)
-* [_RED32](RED32.md) , [_GREEN32](GREEN32.md) , [_BLUE32](BLUE32.md)
-* [_ALPHA](ALPHA.md) , [_ALPHA32](ALPHA32.md) , [_CLEARCOLOR](CLEARCOLOR.md)
+* [\$COLOR](\$COLOR.md) (metacommand)
+* _RGB , _RGBA , _RGB32 , [RGBA32](RGBA32.md) .
+* _RED , _GREEN , _BLUE
+* _RED32 , _GREEN32 , _BLUE32
+* _ALPHA , _ALPHA32 , _CLEARCOLOR
 * [PRINT](PRINT.md) , [LOCATE](LOCATE.md) , [SCREEN](SCREEN.md)
 * [POINT](POINT.md) , [SCREEN](SCREEN.md) (function)
 * [OUT](OUT.md) , [INP](INP.md) , [PALETTE](PALETTE.md)
-* [_BLINK](BLINK.md)
-* [_DEFAULTCOLOR](DEFAULTCOLOR.md)
-* [_BACKGROUNDCOLOR](BACKGROUNDCOLOR.md)
-* [_PALETTECOLOR](PALETTECOLOR.md)
+* _BLINK
+* _DEFAULTCOLOR
+* _BACKGROUNDCOLOR
+* _PALETTECOLOR
 * Color Dialog Box
 * $COLOR:0 Name Table
 * $COLOR:32 Name Table

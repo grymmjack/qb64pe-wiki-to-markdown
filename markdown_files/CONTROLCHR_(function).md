@@ -120,7 +120,7 @@ br ~ h5 {
 
 
 * The function requires no parameters.
-* Default return is 0 when the [_CONTROLCHR](CONTROLCHR.md) statement has never been used previous to a function read.
+* Default return is 0 when the _CONTROLCHR statement has never been used previous to a function read.
 * When the statement has been use to turn [OFF](OFF.md) control characters, the characters can be printed as text without screen formatting.
 
 </blockquote>
@@ -138,8 +138,8 @@ br ~ h5 {
 
 
 * Featured in our "Keyword of the Day" series
-* [_CONTROLCHR](CONTROLCHR.md)
-* [CHR&dollar;](CHR&dollar;.md) , [ASC](ASC.md) (function)
-* [INKEY&dollar;](INKEY&dollar;.md) , [_KEYHIT](KEYHIT.md)
-* ASCII (codes)
+* _CONTROLCHR
+* [CHR\$](CHR\$.md) , [ASC](ASC.md) (function)
+* [INKEY\$](INKEY\$.md) , _KEYHIT
+* [ASCII](ASCII.md) (codes)
 </blockquote>

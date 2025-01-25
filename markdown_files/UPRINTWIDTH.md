@@ -132,10 +132,10 @@ br ~ h5 {
 * If the utfEncoding& is omitted, then it is assumed to be 0 (ASCII).
 * If fontHandle& is omitted, then the current write page font is used.
 * All multi-byte UTF encodings are expected in little-endian.
-* Unicode byte order mark (BOM) is not processed and must be handled by user code.
+* [Unicode](Unicode.md) byte order mark (BOM) is not processed and must be handled by user code.
 * This can be useful to find the width of the font print string before actually printing it.
-* Can be used with variable-width fonts or built-in fonts, unlike [_FONTWIDTH](FONTWIDTH.md) which requires a MONOSPACE font handle.
-* Unlike [_PRINTWIDTH](PRINTWIDTH.md) , [_UPRINTWIDTH](UPRINTWIDTH.md) always returns the width of the text string in pixels.
+* Can be used with variable-width fonts or built-in fonts, unlike _FONTWIDTH which requires a MONOSPACE font handle.
+* Unlike _PRINTWIDTH , _UPRINTWIDTH always returns the width of the text string in pixels.
 
 </blockquote>
 
@@ -150,8 +150,8 @@ SCREEN _NEWIMAGE(800, 600, 32)
 
 DIM fh AS LONG: fh = _LOADFONT("cyberbit.ttf", 21)
 IF fh <= 0 THEN
-PRINT "Failed to load font file!"
-END
+   PRINT "Failed to load font file!"
+   END
 END IF
 
 _FONT fh
@@ -171,20 +171,20 @@ DATA D0,B5,D1,80,D0,B5,D0,B7,20,D0,BB,D0,B5,D0,BD,D0,B8,D0,B2,D1,83,D1,8E,20,D1
 DATA 81,D0,BE,D0,B1,D0,B0,D0,BA,D1,83,2E
 
 FUNCTION LoadUData$
-DIM AS _UNSIGNED LONG i, s
-DIM d AS STRING
-DIM buffer AS STRING
+   DIM AS _UNSIGNED LONG i, s
+   DIM d AS STRING
+   DIM buffer AS STRING
 
-READ d
-s = VAL("&h" + d)
-buffer = SPACE$(s)
+   READ d
+   s = VAL("&h" + d)
+   buffer = SPACE$(s)
 
-FOR i = 1 TO s
-READ d
-ASC(buffer, i) = VAL("&h" + d)
-NEXT
+   FOR i = 1 TO s
+       READ d
+       ASC(buffer, i) = VAL("&h" + d)
+   NEXT
 
-LoadUData = buffer
+   LoadUData = buffer
 END FUNCTION
 ```
   
@@ -199,9 +199,9 @@ END FUNCTION
 
 
 * Featured in our "Keyword of the Day" series
-* [_UFONTHEIGHT](UFONTHEIGHT.md) , [_ULINESPACING](ULINESPACING.md) , [_UPRINTSTRING](UPRINTSTRING.md) , [_UCHARPOS](UCHARPOS.md)
-* [_FONTWIDTH](FONTWIDTH.md) , [_FONTHEIGHT](FONTHEIGHT.md) , [_PRINTWIDTH](PRINTWIDTH.md)
-* [_NEWIMAGE](NEWIMAGE.md) , [_LOADFONT](LOADFONT.md)
-* [_PRINTSTRING](PRINTSTRING.md) , [_FONT](FONT.md)
+* _UFONTHEIGHT , _ULINESPACING , _UPRINTSTRING , _UCHARPOS
+* _FONTWIDTH , _FONTHEIGHT , _PRINTWIDTH
+* _NEWIMAGE , _LOADFONT
+* _PRINTSTRING , _FONT
 * Text Using Graphics
 </blockquote>

@@ -138,8 +138,8 @@ PRINT thestring
 
 ```vb
 12345678901234567890
-Hello!
-Hello Again!
+   Hello!
+       Hello Again!
 Over ten c
 ```
   
@@ -153,7 +153,7 @@ Over ten c
 <blockquote>
 
 
-* [RTRIM&dollar;](RTRIM&dollar;.md) , [FIELD](FIELD.md)
-* [LSET](LSET.md) , [LTRIM&dollar;](LTRIM&dollar;.md)
+* [RTRIM\$](RTRIM\$.md) , [FIELD](FIELD.md)
+* [LSET](LSET.md) , [LTRIM\$](LTRIM\$.md)
 * [PUT](PUT.md) , [GET](GET.md)
 </blockquote>

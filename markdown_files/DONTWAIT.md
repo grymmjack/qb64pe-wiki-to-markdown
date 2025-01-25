@@ -134,8 +134,8 @@ br ~ h5 {
 SHELL _DONTWAIT "notepad " + filename$
 
 FOR x = 1 TO 5
-_LIMIT 1
-PRINT x
+   _LIMIT 1
+   PRINT x
 NEXT
 ```
   
@@ -159,5 +159,5 @@ NEXT
 <blockquote>
 
 
-* [SHELL](SHELL.md) , [_HIDE](HIDE.md)
+* [SHELL](SHELL.md) , _HIDE
 </blockquote>

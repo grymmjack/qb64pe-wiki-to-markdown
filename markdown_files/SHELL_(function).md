@@ -136,7 +136,7 @@ CONST SM_CXSCREEN = 0
 CONST SM_CYSCREEN = 1
 
 DECLARE LIBRARY
-FUNCTION GetSystemMetrics& (BYVAL n AS LONG)
+   FUNCTION GetSystemMetrics& (BYVAL n AS LONG)
 END DECLARE
 
 PRINT trimstr$(GetSystemMetrics(SM_CXSCREEN)); "X"; trimstr$(GetSystemMetrics(SM_CYSCREEN))
@@ -177,8 +177,8 @@ END
 <blockquote>
 
 
-* [_SHELLHIDE](SHELLHIDE.md)
-* [SHELL](SHELL.md) , [_HIDE](HIDE.md)
-* [_CONSOLE](CONSOLE.md) , [&dollar;CONSOLE](&dollar;CONSOLE.md)
+* _SHELLHIDE
+* [SHELL](SHELL.md) , _HIDE
+* _CONSOLE , [\$CONSOLE](\$CONSOLE.md)
 * [SYSTEM](SYSTEM.md) , [END](END.md)
 </blockquote>

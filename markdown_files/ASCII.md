@@ -125,7 +125,7 @@ CTRL + U = CHR$(21)  §  NegativeACK (NAK)    CTRL + V = CHR$(22)  ▬  Synchron
 CTRL + W = CHR$(23)  ↨  EndTXBlock  (ETB)    CTRL + X = CHR$(24)  ↑  Cancel            (CAN)
 CTRL + Y = CHR$(25)  ↓  EndMedium   (EM)     CTRL + Z = CHR$(26)  →  End Of File(SUB)  (EOF)
 
-Red symbols will format text and not PRINT the symbol. _PRINTSTRING can print in QB64
+  Red symbols will format text and not PRINT the symbol. _PRINTSTRING can print in QB64
 ```
   
 <br>
@@ -134,11 +134,11 @@ Red symbols will format text and not PRINT the symbol. _PRINTSTRING can print in
 SCREEN 12
 COLOR 14: PRINT "Press Control + letter key combinations."
 DO
-K$ = INKEY$
-IF LEN(K$) THEN
-code = ASC(K$)
-IF code < 32 THEN _PRINTSTRING (220, 100), "Ctrl + " + CHR$(code + 64) + " = " + K$ + " "
-END IF
+   K$ = INKEY$
+   IF LEN(K$) THEN
+       code = ASC(K$)
+       IF code < 32 THEN _PRINTSTRING (220, 100), "Ctrl + " + CHR$(code + 64) + " = " + K$ + " "
+   END IF
 LOOP UNTIL K$ = CHR$(27)
 
 END
@@ -175,12 +175,12 @@ END
 ```vb
 '             Demo displays all ASCII codes and 2 byte code combinations
 DO: K$ = INKEY$
-IF K$ <> "" THEN 'ASC will return an error if an empty string is read!
-IF ASC(K$) > 0 THEN
-PRINT "CHR$(" + LTRIM$(STR$(ASC(K$))) + ")" 'display normal keypress codes
-ELSE PRINT "CHR$(0) + CHR$(" + LTRIM$(STR$(ASC(K$, 2))) + ")" 'display 2 byte codes
-END IF
-END IF
+   IF K$ <> "" THEN 'ASC will return an error if an empty string is read!
+       IF ASC(K$) > 0 THEN
+           PRINT "CHR$(" + LTRIM$(STR$(ASC(K$))) + ")" 'display normal keypress codes
+       ELSE PRINT "CHR$(0) + CHR$(" + LTRIM$(STR$(ASC(K$, 2))) + ")" 'display 2 byte codes
+       END IF
+   END IF
 LOOP UNTIL K$ = CHR$(27) 'escape key press exits
 ```
   
@@ -189,42 +189,42 @@ LOOP UNTIL K$ = CHR$(27) 'escape key press exits
 ```vb
 Two Byte Character Codes       Key                 CHR$(0) + "?" 
 
-CHR$(0) + CHR$(16-50)      [Alt] + letter
-CHR$(0) + CHR$(59)         [F1]                 ";"
-CHR$(0) + CHR$(60)         [F2]                 "<"
-CHR$(0) + CHR$(61)         [F3]                 "="
-CHR$(0) + CHR$(62)         [F4]                 ">"
-CHR$(0) + CHR$(63)         [F5]                 "?"
-CHR$(0) + CHR$(64)         [F6]                 "@"
-CHR$(0) + CHR$(65)         [F7]                 "A"
-CHR$(0) + CHR$(66)         [F8]                 "B"
-CHR$(0) + CHR$(67)         [F9]                 "C"
-CHR$(0) + CHR$(68)         [F10]                "D"
-CHR$(0) + CHR$(71)         [Home]               "G"
-CHR$(0) + CHR$(72)         [↑] Up Arrow         "H"
-CHR$(0) + CHR$(73)         [Page Up]            "I"
-CHR$(0) + CHR$(75)         [←] Left Arrow       "K"
-CHR$(0) + CHR$(76)         [5 NumberPad]        "L" (NumLock off in QB64)
-CHR$(0) + CHR$(77)         [→] Right Arrow      "M"
-CHR$(0) + CHR$(79)         [End]                "O"
-CHR$(0) + CHR$(80)         [↓] Down Arrow       "P"
-CHR$(0) + CHR$(81)         [Page Down]          "Q"
-CHR$(0) + CHR$(82)         [Insert]             "R"
-CHR$(0) + CHR$(83)         [Delete]             "S"
-CHR$(0) + CHR$(84-93)      [Shift] + F1-10
-CHR$(0) + CHR$(94-103)     [Ctrl] + F1-10
-CHR$(0) + CHR$(104-113)    [Alt] + F1-10
-CHR$(0) + CHR$(114-119)    [Ctrl] + keypad
-CHR$(0) + CHR$(120-129)    [Alt] + number
-CHR$(0) + CHR$(130 or 131) [Alt] + _/- or +/=   "é" or "â"
-CHR$(0) + CHR$(133)        [F11]                "à"
-CHR$(0) + CHR$(134)        [F12]                "å"
-CHR$(0) + CHR$(135)        [Shift] + [F11]      "ç"
-CHR$(0) + CHR$(136)        [Shift] + [F12]      "ê"
-CHR$(0) + CHR$(137)        [Ctrl] + [F11]       "ë"
-CHR$(0) + CHR$(138)        [Ctrl] + [F12]       "è"
-CHR$(0) + CHR$(139)        [Alt] + [F11]        "ï"
-CHR$(0) + CHR$(140)        [Alt] + [F12]        "î"
+                   CHR$(0) + CHR$(16-50)      [Alt] + letter
+                   CHR$(0) + CHR$(59)         [F1]                 ";"
+                   CHR$(0) + CHR$(60)         [F2]                 "<"
+                   CHR$(0) + CHR$(61)         [F3]                 "="
+                   CHR$(0) + CHR$(62)         [F4]                 ">"
+                   CHR$(0) + CHR$(63)         [F5]                 "?"
+                   CHR$(0) + CHR$(64)         [F6]                 "@"
+                   CHR$(0) + CHR$(65)         [F7]                 "A"
+                   CHR$(0) + CHR$(66)         [F8]                 "B"
+                   CHR$(0) + CHR$(67)         [F9]                 "C"
+                   CHR$(0) + CHR$(68)         [F10]                "D"
+                   CHR$(0) + CHR$(71)         [Home]               "G"
+                   CHR$(0) + CHR$(72)         [↑] Up Arrow         "H"
+                   CHR$(0) + CHR$(73)         [Page Up]            "I"
+                   CHR$(0) + CHR$(75)         [←] Left Arrow       "K"
+                   CHR$(0) + CHR$(76)         [5 NumberPad]        "L" (NumLock off in QB64)
+                   CHR$(0) + CHR$(77)         [→] Right Arrow      "M"
+                   CHR$(0) + CHR$(79)         [End]                "O"
+                   CHR$(0) + CHR$(80)         [↓] Down Arrow       "P"
+                   CHR$(0) + CHR$(81)         [Page Down]          "Q"
+                   CHR$(0) + CHR$(82)         [Insert]             "R"
+                   CHR$(0) + CHR$(83)         [Delete]             "S"
+                   CHR$(0) + CHR$(84-93)      [Shift] + F1-10
+                   CHR$(0) + CHR$(94-103)     [Ctrl] + F1-10
+                   CHR$(0) + CHR$(104-113)    [Alt] + F1-10
+                   CHR$(0) + CHR$(114-119)    [Ctrl] + keypad
+                   CHR$(0) + CHR$(120-129)    [Alt] + number
+                   CHR$(0) + CHR$(130 or 131) [Alt] + _/- or +/=   "é" or "â"
+                   CHR$(0) + CHR$(133)        [F11]                "à"
+                   CHR$(0) + CHR$(134)        [F12]                "å"
+                   CHR$(0) + CHR$(135)        [Shift] + [F11]      "ç"
+                   CHR$(0) + CHR$(136)        [Shift] + [F12]      "ê"
+                   CHR$(0) + CHR$(137)        [Ctrl] + [F11]       "ë"
+                   CHR$(0) + CHR$(138)        [Ctrl] + [F12]       "è"
+                   CHR$(0) + CHR$(139)        [Alt] + [F11]        "ï"
+                   CHR$(0) + CHR$(140)        [Alt] + [F12]        "î"
 ```
   
 <br>
@@ -237,17 +237,17 @@ movey = 1: movex = 1 'text coordinates can never be 0
 at$ = "@" 'text sprite could be almost any ASCII character
 LOCATE movey, movex: PRINT at$;
 DO
-px = movex: py = movey 'previous positions
-B$ = INKEY$
-IF B$ = CHR$(0) + CHR$(72) AND movey > 1 THEN movey = movey - 1 'rows 1 to 23 only
-IF B$ = CHR$(0) + CHR$(80) AND movey < 23 THEN movey = movey + 1
-IF B$ = CHR$(0) + CHR$(75) AND movex > 1 THEN movex = movex - 1 'columns 1 to 80 only
-IF B$ = CHR$(0) + CHR$(77) AND movex < 80 THEN movex = movex + 1
+   px = movex: py = movey 'previous positions
+   B$ = INKEY$
+   IF B$ = CHR$(0) + CHR$(72) AND movey > 1 THEN movey = movey - 1 'rows 1 to 23 only
+   IF B$ = CHR$(0) + CHR$(80) AND movey < 23 THEN movey = movey + 1
+   IF B$ = CHR$(0) + CHR$(75) AND movex > 1 THEN movex = movex - 1 'columns 1 to 80 only
+   IF B$ = CHR$(0) + CHR$(77) AND movex < 80 THEN movex = movex + 1
 
-IF px <> movex OR py <> movey THEN 'only changes when needed
-LOCATE py, px: PRINT SPACE$(1); 'erase old sprite
-LOCATE movey, movex: PRINT at$; 'show new position
-END IF
+   IF px <> movex OR py <> movey THEN 'only changes when needed
+       LOCATE py, px: PRINT SPACE$(1); 'erase old sprite
+       LOCATE movey, movex: PRINT at$; 'show new position
+   END IF
 LOOP UNTIL B$ = CHR$(27) 'ESCape key exit
 END
 ```
@@ -277,73 +277,73 @@ COLOR 4: LOCATE 24, 10: PRINT "To Quit hit the TAB key";
 
 COLOR 9
 DO
-DO: SLEEP: A$ = INKEY$: LOOP UNTIL A$ <> "" 'legal ASC read keys
-IF ASC(A$) > 0 THEN ' normal key codes
-code% = ASC(A$)
-SELECT CASE code%
-CASE 7: Key$ = "Beep"
-CASE 8: Key$ = "Backspace"
-CASE 9: Key$ = "Tab Key"
-CASE 10: Key$ = "Line Feed"
-CASE 12: Key$ = "Form Feed"
-CASE 13: Key$ = "Enter"
-CASE 27: Key$ = "Escape"
-CASE 32: Key$ = "Space Bar"
-CASE 48 TO 57: Key$ = "Number"
-CASE 65 TO 90: Key$ = "Uppercase"
-CASE 97 TO 122: Key$ = "Lowercase"
-CASE ELSE: Key$ = ""
-END SELECT
-SELECT CASE code% 'check for unprintable control combo characters
-CASE 10 TO 13: Kcode% = 32
-CASE ELSE: Kcode% = code%
-END SELECT
-COLOR 9: LOCATE 10, 5: PRINT USING tmp$; code%; CHR$(Kcode%); Key$;
-END IF
-IF ASC(A$) = 0 THEN 'two byte key codes
-code% = ASC(RIGHT$(A$, 1)) 'QBasic code
-'code% = ASC(A$, 2)        'QB64 code alternative
-SELECT CASE code%
-CASE 16 TO 50: Key$ = "Alt+ letter"
-CASE 72: Key$ = CHR$(24) + " Arrow"
-CASE 75: Key$ = CHR$(27) + " Arrow"
-CASE 77: Key$ = CHR$(26) + " Arrow"
-CASE 80: Key$ = CHR$(25) + " Arrow"
-CASE 83: Key$ = "Delete"
-CASE 59: Key$ = "F1"
-CASE 60: Key$ = "F2"
-CASE 61: Key$ = "F3"
-CASE 62: Key$ = "F4"
-CASE 63: Key$ = "F5"
-CASE 64: Key$ = "F6"
-CASE 65: Key$ = "F7"
-CASE 66: Key$ = "F8"
-CASE 67: Key$ = "F9"
-CASE 68: Key$ = "F10"
-CASE 71: Key$ = "Home"
-CASE 73: Key$ = "Page " + CHR$(24)
-CASE 79: Key$ = "End"
-CASE 81: Key$ = "Page " + CHR$(25)
-CASE 82: Key$ = "Insert"
-CASE 83: Key$ = "Delete"
-CASE 84 TO 93: Key$ = "Shift+ F"
-CASE 94 TO 103: Key$ = "Ctrl+ F"
-CASE 104 TO 113: Key$ = "Alt+ F"
-CASE 114 TO 119: Key$ = "Ctrl + pad"
-CASE 120 TO 129: Key$ = "Alt+ number"
-CASE 132: Key$ = "Ctrl + pad"
-CASE 133: Key$ = "F11"
-CASE 134: Key$ = "F12"
-CASE 135: Key$ = "Shift+ F11"
-CASE 136: Key$ = "Shift+ F12"
-CASE 137: Key$ = "Ctrl+ F11"
-CASE 138: Key$ = "Ctrl+ F12"
-CASE 139: Key$ = "Alt+ F11"
-CASE 140: Key$ = "Alt+ F12"
-CASE ELSE: Key$ = ""
-END SELECT
-LOCATE 10, 5: PRINT USING tmp2$; code%; Key$
-END IF
+   DO: SLEEP: A$ = INKEY$: LOOP UNTIL A$ <> "" 'legal ASC read keys
+   IF ASC(A$) > 0 THEN ' normal key codes
+       code% = ASC(A$)
+       SELECT CASE code%
+           CASE 7: Key$ = "Beep"
+           CASE 8: Key$ = "Backspace"
+           CASE 9: Key$ = "Tab Key"
+           CASE 10: Key$ = "Line Feed"
+           CASE 12: Key$ = "Form Feed"
+           CASE 13: Key$ = "Enter"
+           CASE 27: Key$ = "Escape"
+           CASE 32: Key$ = "Space Bar"
+           CASE 48 TO 57: Key$ = "Number"
+           CASE 65 TO 90: Key$ = "Uppercase"
+           CASE 97 TO 122: Key$ = "Lowercase"
+           CASE ELSE: Key$ = ""
+       END SELECT
+       SELECT CASE code% 'check for unprintable control combo characters
+           CASE 10 TO 13: Kcode% = 32
+           CASE ELSE: Kcode% = code%
+       END SELECT
+       COLOR 9: LOCATE 10, 5: PRINT USING tmp$; code%; CHR$(Kcode%); Key$;
+   END IF
+   IF ASC(A$) = 0 THEN 'two byte key codes
+       code% = ASC(RIGHT$(A$, 1)) 'QBasic code
+       'code% = ASC(A$, 2)        'QB64 code alternative
+       SELECT CASE code%
+           CASE 16 TO 50: Key$ = "Alt+ letter"
+           CASE 72: Key$ = CHR$(24) + " Arrow"
+           CASE 75: Key$ = CHR$(27) + " Arrow"
+           CASE 77: Key$ = CHR$(26) + " Arrow"
+           CASE 80: Key$ = CHR$(25) + " Arrow"
+           CASE 83: Key$ = "Delete"
+           CASE 59: Key$ = "F1"
+           CASE 60: Key$ = "F2"
+           CASE 61: Key$ = "F3"
+           CASE 62: Key$ = "F4"
+           CASE 63: Key$ = "F5"
+           CASE 64: Key$ = "F6"
+           CASE 65: Key$ = "F7"
+           CASE 66: Key$ = "F8"
+           CASE 67: Key$ = "F9"
+           CASE 68: Key$ = "F10"
+           CASE 71: Key$ = "Home"
+           CASE 73: Key$ = "Page " + CHR$(24)
+           CASE 79: Key$ = "End"
+           CASE 81: Key$ = "Page " + CHR$(25)
+           CASE 82: Key$ = "Insert"
+           CASE 83: Key$ = "Delete"
+           CASE 84 TO 93: Key$ = "Shift+ F"
+           CASE 94 TO 103: Key$ = "Ctrl+ F"
+           CASE 104 TO 113: Key$ = "Alt+ F"
+           CASE 114 TO 119: Key$ = "Ctrl + pad"
+           CASE 120 TO 129: Key$ = "Alt+ number"
+           CASE 132: Key$ = "Ctrl + pad"
+           CASE 133: Key$ = "F11"
+           CASE 134: Key$ = "F12"
+           CASE 135: Key$ = "Shift+ F11"
+           CASE 136: Key$ = "Shift+ F12"
+           CASE 137: Key$ = "Ctrl+ F11"
+           CASE 138: Key$ = "Ctrl+ F12"
+           CASE 139: Key$ = "Alt+ F11"
+           CASE 140: Key$ = "Alt+ F12"
+           CASE ELSE: Key$ = ""
+       END SELECT
+       LOCATE 10, 5: PRINT USING tmp2$; code%; Key$
+   END IF
 LOOP UNTIL A$ = CHR$(9)
 SOUND 400, 4
 SLEEP 3
@@ -360,17 +360,17 @@ SYSTEM
 <blockquote>
 
 
-* [_KEYHIT](KEYHIT.md) , [_KEYDOWN](KEYDOWN.md)
-* [_MAPUNICODE](MAPUNICODE.md) , [_MAPUNICODE](MAPUNICODE.md) (function)
+* _KEYHIT , _KEYDOWN
+* _MAPUNICODE , _MAPUNICODE (function)
 * Code Pages
 * [ASC](ASC.md) , [ASC](ASC.md) (function)
-* [MID&dollar;](MID&dollar;.md) , [MID&dollar;](MID&dollar;.md) (function)
-* [INSTR](INSTR.md) , [CHR&dollar;](CHR&dollar;.md) , [INKEY&dollar;](INKEY&dollar;.md)
-* [LEFT&dollar;](LEFT&dollar;.md) , [RIGHT&dollar;](RIGHT&dollar;.md)
+* [MID\$](MID\$.md) , [MID\$](MID\$.md) (function)
+* [INSTR](INSTR.md) , [CHR\$](CHR\$.md) , [INKEY\$](INKEY\$.md)
+* [LEFT\$](LEFT\$.md) , [RIGHT\$](RIGHT\$.md)
 * [PRINT](PRINT.md) , [SCREEN](SCREEN.md)
-* [MKI&dollar;](MKI&dollar;.md) , [MKL&dollar;](MKL&dollar;.md) , [MKS&dollar;](MKS&dollar;.md) , [MKD&dollar;](MKD&dollar;.md) , [_MK&dollar;](MK&dollar;.md)
-* [_PRINTSTRING](PRINTSTRING.md) , [_SCREENPRINT](SCREENPRINT.md)
-* [_CONTROLCHR](CONTROLCHR.md)
-* Scancodes , Unicode
+* [MKI\$](MKI\$.md) , [MKL\$](MKL\$.md) , [MKS\$](MKS\$.md) , [MKD\$](MKD\$.md) , _MK$
+* _PRINTSTRING , _SCREENPRINT
+* _CONTROLCHR
+* Scancodes , [Unicode](Unicode.md)
 * Text Using Graphics
 </blockquote>

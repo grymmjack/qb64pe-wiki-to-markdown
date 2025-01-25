@@ -120,9 +120,9 @@ br ~ h5 {
 
 
 * Returns a value of the variableType designated. The holding variable must match that [TYPE](TYPE.md) .
-* memoryBlock is a [_MEM](MEM.md) variable type memory block name created by [_MEMNEW](MEMNEW.md) or the [_MEM](MEM.md) function.
-* bytePosition is the memoryBlock . OFFSET memory start position plus any bytes to move into the block.
-* variableType is a variable [TYPE](TYPE.md) like [_BYTE](BYTE.md) , [INTEGER](INTEGER.md) , [SINGLE](SINGLE.md) , [DOUBLE](DOUBLE.md) , etc.
+* memoryBlock is a _MEM variable type memory block name created by _MEMNEW or the _MEM function.
+* bytePosition is the memoryBlock . [OFFSET](OFFSET.md) memory start position plus any bytes to move into the block.
+* variableType is a variable [TYPE](TYPE.md) like _BYTE , [INTEGER](INTEGER.md) , [SINGLE](SINGLE.md) , [DOUBLE](DOUBLE.md) , etc.
 </blockquote>
 
 #### DESCRIPTION
@@ -130,11 +130,11 @@ br ~ h5 {
 <blockquote>
 
 
-* memoryBlock . OFFSET returns the starting byte position of the block. Add bytes to move into the block.
+* memoryBlock . [OFFSET](OFFSET.md) returns the starting byte position of the block. Add bytes to move into the block.
 * The variable type held in the memory block can determine the next bytePosition to read.
 * [LEN](LEN.md) can be used to determine the byte size of numerical or user defined Variable Types regardless of the value held.
 * [STRING](STRING.md) values should be of a defined length. Variable length strings can actually move around in memory and not be found.
-* [_MEMGET](MEMGET.md) variable values that are assigned a variable type other than a memory type do not need to be freed.
+* _MEMGET variable values that are assigned a variable type other than a memory type do not need to be freed.
 
 </blockquote>
 
@@ -165,8 +165,8 @@ _MEMFREE o
 <blockquote>
 
 
-* [_MEM](MEM.md) , MEM (function)
-* [_MEMGET](MEMGET.md) , [_MEMPUT](MEMPUT.md)
-* [_MEMNEW](MEMNEW.md) , [_MEMFILL](MEMFILL.md)
-* [_MEMCOPY](MEMCOPY.md)
+* _MEM , [MEM](MEM.md) (function)
+* _MEMGET , _MEMPUT
+* _MEMNEW , _MEMFILL
+* _MEMCOPY
 </blockquote>

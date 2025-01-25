@@ -144,14 +144,14 @@ br ~ h5 {
 
 * Image file formats JPG, PNG, TGA, BMP, PSD, GIF, HDR, PIC, PNM, PCX, SVG, ICO, CUR and QOI are supported. A path can also be given.
 * The mode& parameter can be 32, 33, 256 or 257. Omit to use the current graphic screen settings.
-* Mode 33 images are hardware accelerated and are created using [_LOADIMAGE](LOADIMAGE.md) or [_COPYIMAGE](COPYIMAGE.md) ( version 1.000 and up ).
+* Mode 33 images are hardware accelerated and are created using _LOADIMAGE or _COPYIMAGE ( version 1.000 and up ).
 * Mode 256 images are loaded using the QB64-PE master VGA palette. This is the same palette that is used for 256 color screens like [SCREEN](SCREEN.md) 13.
 * Mode 257 images are loaded using an adaptive palette making these images look better than mode 256 when used with 32-bit color screens ( version 3.1.0 and up ).
-* Loaded images can be read invisibly using [POINT](POINT.md) . Image coordinates start at 0 up to the [_WIDTH](WIDTH.md) - 1 and [_HEIGHT](HEIGHT.md) - 1.
-* Images can be made into a program [SCREEN](SCREEN.md) or page adopting the size and palette settings or placed using [_PUTIMAGE](PUTIMAGE.md) .
+* Loaded images can be read invisibly using [POINT](POINT.md) . Image coordinates start at 0 up to the _WIDTH - 1 and _HEIGHT - 1.
+* Images can be made into a program [SCREEN](SCREEN.md) or page adopting the size and palette settings or placed using _PUTIMAGE .
 * Returns -1 as an invalid handle if it can't load the image. Valid [LONG](LONG.md) handle returns are less than -1 ( handle& < -1).
 * Valid images only need to be loaded once. The handle can be used repeatedly until freed.
-* Images are not deallocated when the [SUB](SUB.md) or [FUNCTION](FUNCTION.md) they are created in ends. Free them with [_FREEIMAGE](FREEIMAGE.md) .
+* Images are not deallocated when the [SUB](SUB.md) or [FUNCTION](FUNCTION.md) they are created in ends. Free them with _FREEIMAGE .
 * Use the various pixel scalers to scale and load extremely low resolution (retro) graphics without blurring.
 
 </blockquote>
@@ -177,17 +177,17 @@ RET$ = "BD BL" + STR$(wide%) 'return to left side of image
 _SOURCE img&
 _DEST 0
 DO
-FOR angle% = 0 TO 360 STEP 15
-CLS
-DRAW "BM400, 300" + "TA=" + VARPTR$(angle%) + TLC$
-FOR y = 0 TO deep% - 1
-FOR x = 0 TO wide% - 1
-DRAW "C" + STR$(POINT(x, y)) + "R1" 'color and DRAW each pixel
-NEXT
-DRAW RET$
-NEXT
-_DISPLAY 'NOTE: CPU usage will be HIGH!
-NEXT
+   FOR angle% = 0 TO 360 STEP 15
+       CLS
+       DRAW "BM400, 300" + "TA=" + VARPTR$(angle%) + TLC$
+       FOR y = 0 TO deep% - 1
+           FOR x = 0 TO wide% - 1
+               DRAW "C" + STR$(POINT(x, y)) + "R1" 'color and DRAW each pixel
+           NEXT
+           DRAW RET$
+       NEXT
+       _DISPLAY 'NOTE: CPU usage will be HIGH!
+   NEXT
 LOOP UNTIL INKEY$ > ""
 ```
   
@@ -256,30 +256,30 @@ DATA 9ax4lEHYWNtbPTxyKu5fF0s/3Q==
 
 ' Convert a base64 string to a normal string
 FUNCTION DecodeBase64$ (s AS STRING)
-CONST BASE64_CHARACTERS = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/"
+   CONST BASE64_CHARACTERS = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/"
 
-DIM AS STRING buffer, result
-DIM AS _UNSIGNED LONG i
-DIM AS _UNSIGNED _BYTE char1, char2, char3, char4
+   DIM AS STRING buffer, result
+   DIM AS _UNSIGNED LONG i
+   DIM AS _UNSIGNED _BYTE char1, char2, char3, char4
 
-FOR i = 1 TO LEN(s) STEP 4
-char1 = INSTR(BASE64_CHARACTERS, CHR$(ASC(s, i))) - 1
-char2 = INSTR(BASE64_CHARACTERS, CHR$(ASC(s, i + 1))) - 1
-char3 = INSTR(BASE64_CHARACTERS, CHR$(ASC(s, i + 2))) - 1
-char4 = INSTR(BASE64_CHARACTERS, CHR$(ASC(s, i + 3))) - 1
-buffer = CHR$(_SHL(char1, 2) OR _SHR(char2, 4)) + CHR$(_SHL(char2 AND 15, 4) OR _SHR(char3, 2)) + CHR$(_SHL(char3 AND 3, 6) OR char4)
+   FOR i = 1 TO LEN(s) STEP 4
+       char1 = INSTR(BASE64_CHARACTERS, CHR$(ASC(s, i))) - 1
+       char2 = INSTR(BASE64_CHARACTERS, CHR$(ASC(s, i + 1))) - 1
+       char3 = INSTR(BASE64_CHARACTERS, CHR$(ASC(s, i + 2))) - 1
+       char4 = INSTR(BASE64_CHARACTERS, CHR$(ASC(s, i + 3))) - 1
+       buffer = CHR$(_SHL(char1, 2) OR _SHR(char2, 4)) + CHR$(_SHL(char2 AND 15, 4) OR _SHR(char3, 2)) + CHR$(_SHL(char3 AND 3, 6) OR char4)
 
-result = result + buffer
-NEXT
+       result = result + buffer
+   NEXT
 
-' Remove padding
-IF RIGHT$(s, 2) = "==" THEN
-result = LEFT$(result, LEN(result) - 2)
-ELSEIF RIGHT$(s, 1) = "=" THEN
-result = LEFT$(result, LEN(result) - 1)
-END IF
+   ' Remove padding
+   IF RIGHT$(s, 2) = "==" THEN
+       result = LEFT$(result, LEN(result) - 2)
+   ELSEIF RIGHT$(s, 1) = "=" THEN
+       result = LEFT$(result, LEN(result) - 1)
+   END IF
 
-DecodeBase64 = result
+   DecodeBase64 = result
 END FUNCTION
 
 
@@ -292,30 +292,30 @@ END FUNCTION
 '       Dim buffer As String
 '       buffer = LoadResource   ' buffer will now hold the contents of the file
 FUNCTION LoadResource$
-DIM AS _UNSIGNED LONG ogSize, resize
-DIM AS _BYTE isCompressed
+   DIM AS _UNSIGNED LONG ogSize, resize
+   DIM AS _BYTE isCompressed
 
-READ ogSize, resize, isCompressed ' read the header
+   READ ogSize, resize, isCompressed ' read the header
 
-DIM AS STRING buffer, result
+   DIM AS STRING buffer, result
 
-' Read the whole resource data
-DO WHILE LEN(result) < resize
-READ buffer
-result = result + buffer
-LOOP
+   ' Read the whole resource data
+   DO WHILE LEN(result) < resize
+       READ buffer
+       result = result + buffer
+   LOOP
 
-' Decode the data
-buffer = DecodeBase64(result)
+   ' Decode the data
+   buffer = DecodeBase64(result)
 
-' Expand the data if needed
-IF isCompressed THEN
-result = _INFLATE$(buffer, ogSize)
-ELSE
-result = buffer
-END IF
+   ' Expand the data if needed
+   IF isCompressed THEN
+       result = _INFLATE$(buffer, ogSize)
+   ELSE
+       result = buffer
+   END IF
 
-LoadResource = result
+   LoadResource = result
 END FUNCTION
 ```
   
@@ -330,8 +330,8 @@ RESTORE svg_data
 DIM AS STRING svg, buffer
 
 DO
-READ buffer
-svg = svg + buffer
+   READ buffer
+   svg = svg + buffer
 LOOP WHILE LEN(buffer) > 0
 
 DIM img AS LONG: img = _LOADIMAGE(svg, 32, "memory")
@@ -384,13 +384,13 @@ DATA ""
 <blockquote>
 
 
-* [_FREEIMAGE](FREEIMAGE.md)
-* [_PUTIMAGE](PUTIMAGE.md) , [_MAPTRIANGLE](MAPTRIANGLE.md)
-* [_NEWIMAGE](NEWIMAGE.md) , [_COPYIMAGE](COPYIMAGE.md)
-* [_PRINTIMAGE](PRINTIMAGE.md) (printer)
-* [_PALETTECOLOR](PALETTECOLOR.md) (function) , [_COPYPALETTE](COPYPALETTE.md) , [_ICON](ICON.md)
+* _FREEIMAGE
+* _PUTIMAGE , _MAPTRIANGLE
+* _NEWIMAGE , _COPYIMAGE
+* _PRINTIMAGE (printer)
+* _PALETTECOLOR (function) , _COPYPALETTE , _ICON
 * [SCREEN](SCREEN.md)
-* [_SAVEIMAGE](SAVEIMAGE.md)
+* _SAVEIMAGE
 * Hardware images
 * Bitmaps , Icons and Cursors , GIF Images
 </blockquote>

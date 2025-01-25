@@ -166,6 +166,6 @@ abc   123
 
 
 * [PRINT](PRINT.md) , [PRINT](PRINT.md) #
-* [LPRINT](LPRINT.md) , [STRING&dollar;](STRING&dollar;.md)
-* [TAB](TAB.md) , [SPACE&dollar;](SPACE&dollar;.md)
+* [LPRINT](LPRINT.md) , [STRING\$](STRING\$.md)
+* [TAB](TAB.md) , [SPACE\$](SPACE\$.md)
 </blockquote>

@@ -119,9 +119,9 @@ br ~ h5 {
 <blockquote>
 
 
-* [_AUTODISPLAY](AUTODISPLAY.md) is on by default and displays the screen at around 30 frames per second (normal vertical retrace speed).
-* [_DISPLAY](DISPLAY.md) disables automatic graphic displays, but it also eliminates having to use [PCOPY](PCOPY.md) or page flipping when used correctly. Placing [_DISPLAY](DISPLAY.md) after screen draws or other screen changes assures completion of the changes before they are displayed. The speed of QB64 code execution makes this a viable option.
-* The [_AUTODISPLAY](AUTODISPLAY.md) (function) can be used to detect the current display behavior.
+* _AUTODISPLAY is on by default and displays the screen at around 30 frames per second (normal vertical retrace speed).
+* _DISPLAY disables automatic graphic displays, but it also eliminates having to use [PCOPY](PCOPY.md) or page flipping when used correctly. Placing _DISPLAY after screen draws or other screen changes assures completion of the changes before they are displayed. The speed of QB64 code execution makes this a viable option.
+* The _AUTODISPLAY (function) can be used to detect the current display behavior.
 
 </blockquote>
 
@@ -137,6 +137,6 @@ br ~ h5 {
 <blockquote>
 
 
-* [_DISPLAY](DISPLAY.md)
-* [_AUTODISPLAY](AUTODISPLAY.md) (function)
+* _DISPLAY
+* _AUTODISPLAY (function)
 </blockquote>

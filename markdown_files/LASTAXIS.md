@@ -119,10 +119,10 @@ br ~ h5 {
 <blockquote>
 
 
-* Returns the number of axis that can be read on a specified device number within the number of [_DEVICES](DEVICES.md) found.
-* A valid number can be sent to the [_AXIS](AXIS.md) function to find any relative axis movements.
-* The devices are listed in a numerical order determined by the OS and can be read by the DEVICE$ function.
-* The [_DEVICES](DEVICES.md) function must be read before using [_LASTAXIS](LASTAXIS.md) or an "Illegal Function Call" error will occur.
+* Returns the number of axis that can be read on a specified device number within the number of _DEVICES found.
+* A valid number can be sent to the _AXIS function to find any relative axis movements.
+* The devices are listed in a numerical order determined by the OS and can be read by the [DEVICE\$](DEVICE\$.md) function.
+* The _DEVICES function must be read before using _LASTAXIS or an "Illegal Function Call" error will occur.
 * Devices include keyboard(1), mouse(2), joysticks, game pads and multiple stick game controllers.
 
 </blockquote>
@@ -138,8 +138,8 @@ br ~ h5 {
 devices = _DEVICES  'MUST be read in order for other 2 device functions to work!
 PRINT "Number of input devices found ="; devices
 FOR i = 1 TO devices
-PRINT _DEVICE$(i)
-IF INSTR(_DEVICE$(i), "[AXIS]") THEN PRINT "Axis:"; _LASTAXIS(i)
+ PRINT _DEVICE$(i)
+ IF INSTR(_DEVICE$(i), "[AXIS]") THEN PRINT "Axis:"; _LASTAXIS(i)
 NEXT
 ```
   
@@ -162,10 +162,10 @@ Axis: 2
 <blockquote>
 
 
-* [_LASTBUTTON](LASTBUTTON.md) , [_LASTWHEEL](LASTWHEEL.md)
-* [_AXIS](AXIS.md) , [_BUTTON](BUTTON.md) , [_WHEEL](WHEEL.md)
-* [_DEVICE&dollar;](DEVICE&dollar;.md) , [_DEVICES](DEVICES.md)
-* [_MOUSEBUTTON](MOUSEBUTTON.md)
+* _LASTBUTTON , _LASTWHEEL
+* _AXIS , _BUTTON , _WHEEL
+* _DEVICE$ , _DEVICES
+* _MOUSEBUTTON
 * [STRIG](STRIG.md) , [STICK](STICK.md)
-* [ON](ON.md) STRIG(n) , STRIG(n)
+* [ON](ON.md) [STRIG(n)](STRIG(n).md) , [STRIG(n)](STRIG(n).md)
 </blockquote>

@@ -137,12 +137,12 @@ ON TIMER(t1, .05) MouseClick
 TIMER(t1) ON
 
 DO
-LOCATE 1, 1
-IF Button THEN
-PRINT "Mouse button"; Button; "is pressed.";
-ELSE PRINT SPACE$(70)
-END IF
-_DISPLAY
+ LOCATE 1, 1
+ IF Button THEN
+   PRINT "Mouse button"; Button; "is pressed.";
+ ELSE PRINT SPACE$(70)
+ END IF
+ _DISPLAY
 LOOP UNTIL INKEY$ = CHR$(27)
 TIMER(t1) OFF
 TIMER(t1) FREE 'release timer
@@ -150,12 +150,12 @@ END
 
 SUB MouseClick
 DO WHILE _MOUSEINPUT
-IF _MOUSEBUTTON(1) THEN
-COLOR 10: Button = 1
-ELSEIF _MOUSEBUTTON(2) THEN
-COLOR 12: Button = 2
-ELSE Button = 0
-END IF
+ IF _MOUSEBUTTON(1) THEN
+   COLOR 10: Button = 1
+ ELSEIF _MOUSEBUTTON(2) THEN
+   COLOR 12: Button = 2
+ ELSE Button = 0
+ END IF
 LOOP
 END SUB
 ```
@@ -170,7 +170,7 @@ END SUB
 <blockquote>
 
 
-* [_FREETIMER](FREETIMER.md) , [TIMER](TIMER.md)
-* [_DELAY](DELAY.md) , [_LIMIT](LIMIT.md)
-* [&dollar;CHECKING](&dollar;CHECKING.md)
+* _FREETIMER , [TIMER](TIMER.md)
+* _DELAY , _LIMIT
+* [\$CHECKING](\$CHECKING.md)
 </blockquote>

@@ -119,7 +119,7 @@ br ~ h5 {
 <blockquote>
 
 
-* Simply use the statement whenever [_MOUSEHIDE](MOUSEHIDE.md) has been used previously.
+* Simply use the statement whenever _MOUSEHIDE has been used previously.
 * In version 1.000 and up the following cursorShape$ can be displayed:
 
 </blockquote>
@@ -152,11 +152,11 @@ _MOUSESHOW "topright_bottomleft": _DELAY 0.5
 <blockquote>
 
 
-* [_MOUSEHIDE](MOUSEHIDE.md)
-* [_MOUSEINPUT](MOUSEINPUT.md)
-* [_MOUSEMOVE](MOUSEMOVE.md)
-* [_MOUSEX](MOUSEX.md) , [_MOUSEY](MOUSEY.md)
-* [_MOUSEBUTTON](MOUSEBUTTON.md)
-* [_MOUSEMOVEMENTX](MOUSEMOVEMENTX.md) , [_MOUSEMOVEMENTY](MOUSEMOVEMENTY.md)
-* [_DEVICES](DEVICES.md) , [_DEVICE&dollar;](DEVICE&dollar;.md)
+* _MOUSEHIDE
+* _MOUSEINPUT
+* _MOUSEMOVE
+* _MOUSEX , _MOUSEY
+* _MOUSEBUTTON
+* _MOUSEMOVEMENTX , _MOUSEMOVEMENTY
+* _DEVICES , _DEVICE$
 </blockquote>

@@ -119,7 +119,7 @@ br ~ h5 {
 <blockquote>
 
 
-* condition is the condition that must be met in order to consider the [_ASSERT](ASSERT.md) valid.
+* condition is the condition that must be met in order to consider the _ASSERT valid.
 * Optional errorMessage$ is the message to be displayed in the console window if $ASSERTS:CONSOLE is used.
 * If the condition is not met (that is, if it evaluates to 0), an error occurs ("_ASSERT failed on line #") and program execution stops.
 
@@ -136,19 +136,19 @@ br ~ h5 {
 $ASSERTS:CONSOLE
 
 DO
-a = INT(RND * 10)
-b$ = myFunc$(a)
-PRINT a, , b$
-_LIMIT 3
+   a = INT(RND * 10)
+   b$ = myFunc$(a)
+   PRINT a, , b$
+   _LIMIT 3
 LOOP UNTIL _KEYHIT
 END
 
 FUNCTION myFunc$ (value AS SINGLE)
-_ASSERT value > 0, "Value cannot be zero"
-_ASSERT value <= 10, "Value cannot exceed 10"
+   _ASSERT value > 0, "Value cannot be zero"
+   _ASSERT value <= 10, "Value cannot exceed 10"
 
-IF value > 1 THEN plural$ = "s"
-myFunc$ = STRING$(value, "*") + STR$(value) + " star" + plural$ + " :-)"
+   IF value > 1 THEN plural$ = "s"
+   myFunc$ = STRING$(value, "*") + STR$(value) + " star" + plural$ + " :-)"
 END FUNCTION
 ```
   
@@ -162,7 +162,7 @@ END FUNCTION
 <blockquote>
 
 
-* [&dollar;ASSERTS](&dollar;ASSERTS.md)
-* [&dollar;CHECKING](&dollar;CHECKING.md)
+* [\$ASSERTS](\$ASSERTS.md)
+* [\$CHECKING](\$CHECKING.md)
 * Relational Operations
 </blockquote>

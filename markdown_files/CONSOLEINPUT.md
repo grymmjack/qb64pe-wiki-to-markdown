@@ -120,8 +120,9 @@ br ~ h5 {
 
 
 * Returns 1 if new keyboard information is available, 2 if mouse information is available, otherwise it returns 0.
-* Must be called before reading any of the other mouse functions and before reading [_CINP](CINP.md) .
-* To clear all previous input data, read [_CONSOLEINPUT](CONSOLEINPUT.md) in a loop until it returns 0.
+* Must be called before reading any of the other mouse functions and before reading _CINP .
+* To clear all previous input data, read _CONSOLEINPUT in a loop until it returns 0.
+* To capture mouse input, turn off Quick Edit in the settings of command prompt and use _SOURCE _CONSOLE or $CONSOLE:ONLY .
 * Keyword not supported in Linux or macOS versions
 
 </blockquote>
@@ -130,22 +131,18 @@ br ~ h5 {
 
 <blockquote>
 
-
-
-##### Example 1: Reading individual key strokes from a console window (Windows).
 ```vb
 $CONSOLE:ONLY
-_DEST _CONSOLE: _SOURCE _CONSOLE
 
 PRINT "Press any key, and I'll give you the scan code for it.  <ESC> quits the demo."
 PRINT
 PRINT
 DO
-x = _CONSOLEINPUT
-IF x = 1 THEN 'read only keyboard input ( = 1)
-c = _CINP
-PRINT c;
-END IF
+   x = _CONSOLEINPUT
+   IF x = 1 THEN 'read only keyboard input ( = 1)
+       c = _CINP
+       PRINT c;
+   END IF
 LOOP UNTIL c = 1
 END
 ```
@@ -160,7 +157,7 @@ END
 <blockquote>
 
 
-* [&dollar;CONSOLE](&dollar;CONSOLE.md) , [_CONSOLE](CONSOLE.md)
-* [_CINP](CINP.md) , Scan Codes
-* [_MOUSEX](MOUSEX.md) , [_MOUSEY](MOUSEY.md) , [_MOUSEBUTTON](MOUSEBUTTON.md) , [_MOUSEWHEEL](MOUSEWHEEL.md)
+* [\$CONSOLE](\$CONSOLE.md) , _CONSOLE
+* _CINP , Scan Codes
+* _MOUSEX , _MOUSEY , _MOUSEBUTTON , _MOUSEWHEEL
 </blockquote>

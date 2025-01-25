@@ -119,7 +119,7 @@ br ~ h5 {
 <blockquote>
 
 
-* The optional pipeHandle& parameter refers to the sound pipe opened using [_SNDOPENRAW](SNDOPENRAW.md) .
+* The optional pipeHandle& parameter refers to the sound pipe opened using _SNDOPENRAW .
 </blockquote>
 
 #### DESCRIPTION
@@ -127,7 +127,7 @@ br ~ h5 {
 <blockquote>
 
 
-* Use to force playing small buffers of [_SNDRAW](SNDRAW.md) data.
+* Use to force playing small buffers of _SNDRAW data.
 
 </blockquote>
 
@@ -143,8 +143,8 @@ br ~ h5 {
 <blockquote>
 
 
-* [_SNDOPENRAW](SNDOPENRAW.md)
-* [_SNDRAW](SNDRAW.md)
-* [_SNDRAWLEN](SNDRAWLEN.md)
-* [_SNDRATE](SNDRATE.md)
+* _SNDOPENRAW
+* _SNDRAW
+* _SNDRAWLEN
+* _SNDRATE
 </blockquote>

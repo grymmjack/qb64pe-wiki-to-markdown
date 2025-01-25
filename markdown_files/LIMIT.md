@@ -124,9 +124,9 @@ br ~ h5 {
 ```vb
 PRINT "To Quit press ESC key!"
 DO
-_LIMIT 30
-PRINT CHR$(26);
-IF INKEY$ = CHR$(27) THEN EXIT DO
+   _LIMIT 30
+   PRINT CHR$(26);
+   IF INKEY$ = CHR$(27) THEN EXIT DO
 LOOP
 ```
   
@@ -147,7 +147,7 @@ To Quit press ESC key!
 <blockquote>
 
 
-* [_DELAY](DELAY.md)
+* _DELAY
 * [TIMER](TIMER.md) , [ON](ON.md) TIMER(n)
 * [SLEEP](SLEEP.md)
 </blockquote>

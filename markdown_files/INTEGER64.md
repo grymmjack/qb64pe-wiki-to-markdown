@@ -121,9 +121,9 @@ br ~ h5 {
 
 * Can be used in 32 bit and 64 bit systems.
 * Signed numerical values can range from -9223372036854775808 to 9223372036854775807.
-* [_UNSIGNED](UNSIGNED.md) [_INTEGER64](INTEGER64.md) values range from 0 to 18446744073709551615.
-* Variable type suffix is && or ~&& for [_UNSIGNED](UNSIGNED.md) . Suffix can also be placed after a literal or hexadecimal numerical value.
-* Values can be converted to 8 byte ASCII character strings using [_MK&dollar;](MK&dollar;.md) and back using [_CV](CV.md) .
+* _UNSIGNED _INTEGER64 values range from 0 to 18446744073709551615.
+* Variable type suffix is && or ~&& for _UNSIGNED . Suffix can also be placed after a literal or hexadecimal numerical value.
+* Values can be converted to 8 byte [ASCII](ASCII.md) character strings using _MK$ and back using _CV .
 * When a variable has not been assigned or has no type suffix, the value defaults to [SINGLE](SINGLE.md) .
 
 </blockquote>
@@ -141,9 +141,9 @@ br ~ h5 {
 
 
 * [INTEGER](INTEGER.md) , [LONG](LONG.md)
-* [_DEFINE](DEFINE.md) , [DIM](DIM.md)
-* [_UNSIGNED](UNSIGNED.md)
-* [_CV](CV.md) , [_MK&dollar;](MK&dollar;.md)
+* _DEFINE , [DIM](DIM.md)
+* _UNSIGNED
+* _CV , _MK$
 * CURRENCY
 * Variable Types
 </blockquote>

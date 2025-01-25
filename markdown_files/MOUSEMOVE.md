@@ -119,8 +119,8 @@ br ~ h5 {
 <blockquote>
 
 
-* column% is the horizontal pixel coordinate to place the mouse pointer and can be any value from 0 to [_WIDTH](WIDTH.md) (0) - 1.
-* row% is the vertical pixel position to place the mouse pointer and can be any value from 0 to [_HEIGHT](HEIGHT.md) (0) - 1
+* column% is the horizontal pixel coordinate to place the mouse pointer and can be any value from 0 to _WIDTH (0) - 1.
+* row% is the vertical pixel position to place the mouse pointer and can be any value from 0 to _HEIGHT (0) - 1
 </blockquote>
 
 #### DESCRIPTION
@@ -128,10 +128,10 @@ br ~ h5 {
 <blockquote>
 
 
-* Maximum coordinate values are based on a program's current [SCREEN](SCREEN.md) mode resolution or the pixel size set by [_NEWIMAGE](NEWIMAGE.md) .
+* Maximum coordinate values are based on a program's current [SCREEN](SCREEN.md) mode resolution or the pixel size set by _NEWIMAGE .
 * [SCREEN](SCREEN.md) 0 uses text block coordinates. Coordinates off the screen area will create an "Illegal Function Call" [ERROR](ERROR.md)
 * Can be used to position the pointer to a default dialog button or move the cursor away from a button so it is not clicked twice.
-* Does not require [_MOUSEINPUT](MOUSEINPUT.md) to be used, but all moves will be remembered and can be read by mouse functions.
+* Does not require _MOUSEINPUT to be used, but all moves will be remembered and can be read by mouse functions.
 
 </blockquote>
 
@@ -149,12 +149,12 @@ PRINT
 INPUT "Move the mouse pointer and make a few clicks, then press Enter!", dummy$
 _MOUSEMOVE 1, 1
 DO: _LIMIT 30
-count = count + 1
-i = _MOUSEINPUT
-x = _MOUSEX: y = _MOUSEY
-b = _MOUSEBUTTON(1)
-PRINT count, x, y, b
-_MOUSEMOVE x, y
+   count = count + 1
+   i = _MOUSEINPUT
+   x = _MOUSEX: y = _MOUSEY
+   b = _MOUSEBUTTON(1)
+   PRINT count, x, y, b
+   _MOUSEMOVE x, y
 LOOP UNTIL i = 0 OR INKEY$ > ""
 PRINT "Done!"
 ```
@@ -170,6 +170,6 @@ PRINT "Done!"
 
 
 * Featured in our "Keyword of the Day" series
-* [_MOUSEX](MOUSEX.md) , [_MOUSEY](MOUSEY.md)
-* [_NEWIMAGE](NEWIMAGE.md) , [_SCREENIMAGE](SCREENIMAGE.md)
+* _MOUSEX , _MOUSEY
+* _NEWIMAGE , _SCREENIMAGE
 </blockquote>

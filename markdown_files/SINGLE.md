@@ -102,15 +102,7 @@ br ~ h5 {
 ---
 <blockquote>
 
-### SINGLE variables are 4 byte floating decimal point numerical values up to seven digits in length.
-
-</blockquote>
-
-#### SYNTAX
-
-<blockquote>
-
-`DIM variable AS SINGLE`
+### SINGLE variables are 32-bits floating point numerical values up to seven digits precision ( see IEEE 754 Single precision ).
 
 </blockquote>
 
@@ -120,12 +112,11 @@ br ~ h5 {
 
 
 * Values can range up to 7 digits. Decimal point accuracy depends on whole value places taken.
-* Single is the default variable type assigned to undefined variables without a type suffix.
-* Variable suffix type designation is ! . Suffix can also be placed after a literal numerical value by user or automatically by the IDE.
-* Values returned may be expressed using exponential or scientific notation using E for [SINGLE](SINGLE.md) or D for [DOUBLE](DOUBLE.md) precision.
-* Floating decimal point numerical values cannot be [_UNSIGNED](UNSIGNED.md) !
-* Values can be converted to 4 byte ASCII string values using _MKS$ and back with _CVS .
-* Warning: QBasic keyword names cannot be used as numerical variable names with or without the type suffix!
+* The suffix ! can also be placed after a literal numerical value to designate the value as [SINGLE](SINGLE.md) .
+* Values may be given as real number ( 123.456 ) or scientific notation using E as exponent marker ( 1.23456E+2 ).
+* [PRINT](PRINT.md) usually takes the shorter of both notations (depending on the value) to output the numbers. In alternative you may use [PRINT](PRINT.md) USING to designate your desired output format.
+* Floating decimal point numerical values cannot be _UNSIGNED .
+* Values can be converted to 4-bytes [STRING](STRING.md) values using _MKS$ and back to numbers with _CVS .
 
 </blockquote>
 
@@ -141,9 +132,9 @@ br ~ h5 {
 <blockquote>
 
 
-* [DIM](DIM.md) , [DEFSNG](DEFSNG.md)
-* [MKS&dollar;](MKS&dollar;.md) , [CVS](CVS.md)
-* [DOUBLE](DOUBLE.md) , [_FLOAT](FLOAT.md)
-* [LEN](LEN.md)
+* [DOUBLE](DOUBLE.md) , _FLOAT
+* [DIM](DIM.md) , [DEFSNG](DEFSNG.md) , _DEFINE
+* [MKS\$](MKS\$.md) , [CVS](CVS.md) , _MK$ , _CV
+* [LEN](LEN.md) , Constants
 * Variable Types
 </blockquote>

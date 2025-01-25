@@ -6,7 +6,7 @@
    _LOADFONT - QB64 Phoenix Edition Wiki
   </title>
   <script>
-   document.documentElement.className="client-js";RLCONF={"wgBreakFrames":false,"wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgRequestId":"Zp2GdoVyUtajyJ55joe8NQAAAYY","wgCSPNonce":false,"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"LOADFONT","wgTitle":"LOADFONT","wgCurRevisionId":8869,"wgRevisionId":8869,"wgArticleId":169,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":[],"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgRelevantPageName":"LOADFONT","wgRelevantArticleId":169,"wgIsProbablyEditable":false,"wgRelevantPageIsProbablyEditable":false,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgVector2022PreviewPages":[]};RLSTATE={"site.styles":"ready","user.styles":"ready","user":
+   document.documentElement.className="client-js";RLCONF={"wgBreakFrames":false,"wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgRequestId":"Z5RiNAWKRwiE9zBBFH0XHQAAAOs","wgCSPNonce":false,"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"LOADFONT","wgTitle":"LOADFONT","wgCurRevisionId":9340,"wgRevisionId":9340,"wgArticleId":169,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":[],"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgRelevantPageName":"LOADFONT","wgRelevantArticleId":169,"wgIsProbablyEditable":false,"wgRelevantPageIsProbablyEditable":false,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgVector2022PreviewPages":[]};RLSTATE={"site.styles":"ready","user.styles":"ready","user":
 "ready","user.options":"loading","mediawiki.page.gallery.styles":"ready","skins.vector.styles.legacy":"ready"};RLPAGEMODULES=["site","mediawiki.page.ready","mediawiki.toc","skins.vector.legacy.js"];
   </script>
   <script>
@@ -60,9 +60,9 @@
      <div class="mw-parser-output">
       <p>
        The
-       <a class="mw-selflink selflink">
+       <b>
         _LOADFONT
-       </a>
+       </b>
        function loads a FreeType supported font file in a specific size and style and returns a
        <a href="/qb64wiki/index.php/LONG" title="LONG">
         LONG
@@ -248,43 +248,35 @@
         <ul>
          <li>
           <b>
-           "MONOSPACE"
+           MONOSPACE
           </b>
           loads a font with all characters occupying the same width. Results may be too spaced out for fonts that aren't designed for monospace use.
          </li>
          <li>
           <b>
-           "BOLD", "ITALIC"
+           BOLD, ITALIC
           </b>
           or
           <b>
-           "UNDERLINE"
+           UNDERLINE
           </b>
-          create bold, italic or underlined fonts when available in font.
-          <ul>
-           <li>
-            (valid for QB64 versions prior to 1.000).
-           </li>
-           <li>
-            For
-            <b>
-             QB64 1.000 or later
-            </b>
-            , you must specify the proper file name according to the desired attributes. For example, Courier New is in font
-            <b>
-             cour.ttf
-            </b>
-            while Courier New Bold is in font
-            <b>
-             courbd.ttf
-            </b>
-            , as shipped with Windows.
-           </li>
-          </ul>
+          create bold, italic or underlined fonts when available in font (only valid before
+          <b>
+           QB64 v0.960
+          </b>
+          , later you must specify the proper file name according to the desired attributes, e.g.
+          <i>
+           cour.ttf
+          </i>
+          for normal,
+          <i>
+           courbd.ttf
+          </i>
+          for bold etc.).
          </li>
          <li>
           <b>
-           "UNICODE"
+           UNICODE
           </b>
           loads Unicode fonts such as
           <i>
@@ -294,7 +286,7 @@
          </li>
          <li>
           <b>
-           "DONTBLEND"
+           DONTBLEND
           </b>
           turns off
           <a href="/qb64wiki/index.php/ALPHA" title="ALPHA">
@@ -308,7 +300,7 @@
          </li>
          <li>
           <b>
-           "MEMORY"
+           MEMORY
           </b>
           will treat
           <i>
@@ -318,11 +310,11 @@
          </li>
          <li>
           <b>
-           "AUTOMONO"
+           AUTOMONO
           </b>
           will automatically detect monospace fonts and set the
           <b>
-           "MONOSPACE"
+           MONOSPACE
           </b>
           flag if
           <i>
@@ -403,8 +395,9 @@
         </a>
         can only measure monospaced fonts.
         <b>
-         "MONOSPACE" can be used to load a variable width font as a monospace font.
+         MONOSPACE
         </b>
+        can be used to load a variable width font as a monospace font.
        </li>
        <li>
         <a href="/qb64wiki/index.php/PRINTWIDTH" title="PRINTWIDTH">
@@ -555,6 +548,9 @@
         .
        </li>
       </ul>
+      <p>
+       <br/>
+      </p>
       <h2>
        <span class="mw-headline" id="Availability">
         Availability
@@ -565,15 +561,15 @@
         <div style="width: 53px">
          <div class="thumb" style="width: 48px;">
           <div style="margin:0px auto;">
-           <a class="image" href="/qb64wiki/index.php/File:Qb64.png" title="v1.3">
-            <img alt="v1.3" decoding="async" height="48" src="/qb64wiki/images/9/91/Qb64.png" width="48"/>
+           <a class="image" href="/qb64wiki/index.php/File:Qb64.png" title="v0.800">
+            <img alt="v0.800" decoding="async" height="48" src="/qb64wiki/images/9/91/Qb64.png" width="48"/>
            </a>
           </div>
          </div>
          <div class="gallerytext">
           <p>
            <b>
-            v1.3
+            v0.800
            </b>
           </p>
          </div>
@@ -677,24 +673,21 @@
         </i>
         was introduced in
         <b>
-         QB64-PE
+         QB64-PE v3.7.0
         </b>
-        <i>
-         v3.7.0
-        </i>
         .
        </li>
        <li>
         The capability to auto-detect monospaced fonts was introduced in
         <b>
-         QB64-PE
+         QB64-PE v3.13.1
         </b>
-        <i>
-         v3.13.1
-        </i>
         .
        </li>
       </ul>
+      <p>
+       <br/>
+      </p>
       <h2>
        <span class="mw-headline" id="Examples">
         Examples
@@ -734,9 +727,9 @@ f&amp; = <a class="mw-selflink selflink"><span style="color:#4593D8;">_LOADFONT<
        </tbody>
       </table>
       <p>
-       <i>
+       <b>
         Note:
-       </i>
+       </b>
        30 means each row of text (including vertical spacing) will be exactly 30 pixels high. This may make some program screens larger. If you don't want a style listed just use style$ = "" if using a
        <a href="/qb64wiki/index.php/STRING" title="STRING">
         STRING
@@ -777,14 +770,12 @@ f&amp; = <a class="mw-selflink selflink"><span style="color:#4593D8;">_LOADFONT<
         </tr>
        </tbody>
       </table>
-      <dl>
-       <dd>
-        <i>
-         Note:
-        </i>
-        You can load a fixed width font file without using the "monospace" option and it will be treated as variable width. This can be useful because LOCATE treats the horizontal position as an offset in pixels for variable width fonts.
-       </dd>
-      </dl>
+      <p>
+       <b>
+        Note:
+       </b>
+       You can load a fixed width font file without using the "monospace" option and it will be treated as variable width. This can be useful because LOCATE treats the horizontal position as an offset in pixels for variable width fonts.
+      </p>
       <hr/>
       <dl>
        <dt>
@@ -946,40 +937,40 @@ Result = <span style="color:#55FF55;">GetModuleFileNameW</span>(<span style="col
       </center>
       <!-- 
 NewPP limit report
-Cached time: 20240721160641
+Cached time: 20250125023444
 Cache expiry: 86400
 Reduced expiry: false
 Complications: [show‐toc]
-CPU time usage: 0.081 seconds
-Real time usage: 0.107 seconds
+CPU time usage: 0.080 seconds
+Real time usage: 0.096 seconds
 Preprocessor visited node count: 1061/1000000
 Post‐expand include size: 7756/2097152 bytes
 Template argument size: 2142/2097152 bytes
 Highest expansion depth: 4/100
 Expensive parser function count: 0/100
 Unstrip recursion depth: 0/20
-Unstrip post‐expand size: 2723/5000000 bytes
+Unstrip post‐expand size: 2729/5000000 bytes
 -->
       <!--
 Transclusion expansion time report (%,ms,calls,template)
-100.00%   63.718      1 -total
- 15.94%   10.157      1 Template:PageSyntax
-  6.60%    4.206     68 Template:Cl
-  6.25%    3.980     62 Template:Text
-  4.05%    2.578      1 Template:PageSeeAlso
-  3.53%    2.250      1 Template:PageExamples
-  3.47%    2.208     13 Template:Parameter
-  3.36%    2.142      3 Template:CodeStart
-  3.26%    2.075      2 Template:OutputEnd
-  3.12%    1.989      1 Template:PageNavigation
+100.00%   59.604      1 -total
+ 10.03%    5.977     62 Template:Text
+  7.81%    4.653     68 Template:Cl
+  5.21%    3.103      1 Template:PageExamples
+  4.38%    2.612      3 Template:CodeStart
+  4.14%    2.465      1 Template:PageSyntax
+  3.93%    2.340     13 Template:Parameter
+  3.66%    2.180      1 Template:PageSeeAlso
+  3.45%    2.057      1 Template:PageDescription
+  3.41%    2.033      1 Template:PageAvailability
 -->
-      <!-- Saved in parser cache with key qb64pnix_mw19894-mwmb_:pcache:idhash:169-0!canonical and timestamp 20240721160641 and revision id 8869.
+      <!-- Saved in parser cache with key qb64pnix_mw19894-mwmb_:pcache:idhash:169-0!canonical and timestamp 20250125023444 and revision id 9340.
  -->
      </div>
      <div class="printfooter" data-nosnippet="">
       Retrieved from "
-      <a dir="ltr" href="https://qb64phoenix.com/qb64wiki/index.php?title=LOADFONT&amp;oldid=8869">
-       https://qb64phoenix.com/qb64wiki/index.php?title=LOADFONT&amp;oldid=8869
+      <a dir="ltr" href="https://qb64phoenix.com/qb64wiki/index.php?title=LOADFONT&amp;oldid=9340">
+       https://qb64phoenix.com/qb64wiki/index.php?title=LOADFONT&amp;oldid=9340
       </a>
       "
      </div>
@@ -1196,7 +1187,7 @@ You can view its source [e]">
         </a>
        </li>
        <li class="mw-list-item" id="t-permalink">
-        <a href="/qb64wiki/index.php?title=LOADFONT&amp;oldid=8869" title="Permanent link to this revision of this page">
+        <a href="/qb64wiki/index.php?title=LOADFONT&amp;oldid=9340" title="Permanent link to this revision of this page">
          <span>
           Permanent link
          </span>
@@ -1217,7 +1208,7 @@ You can view its source [e]">
   <footer class="mw-footer" id="footer" role="contentinfo">
    <ul id="footer-info">
     <li id="footer-info-lastmod">
-     This page was last edited on 21 May 2024, at 20:19.
+     This page was last edited on 25 November 2024, at 16:52.
     </li>
    </ul>
    <ul id="footer-places">
@@ -1246,7 +1237,7 @@ You can view its source [e]">
    </ul>
   </footer>
   <script>
-   (RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgPageParseReport":{"limitreport":{"cputime":"0.081","walltime":"0.107","ppvisitednodes":{"value":1061,"limit":1000000},"postexpandincludesize":{"value":7756,"limit":2097152},"templateargumentsize":{"value":2142,"limit":2097152},"expansiondepth":{"value":4,"limit":100},"expensivefunctioncount":{"value":0,"limit":100},"unstrip-depth":{"value":0,"limit":20},"unstrip-size":{"value":2723,"limit":5000000},"timingprofile":["100.00%   63.718      1 -total"," 15.94%   10.157      1 Template:PageSyntax","  6.60%    4.206     68 Template:Cl","  6.25%    3.980     62 Template:Text","  4.05%    2.578      1 Template:PageSeeAlso","  3.53%    2.250      1 Template:PageExamples","  3.47%    2.208     13 Template:Parameter","  3.36%    2.142      3 Template:CodeStart","  3.26%    2.075      2 Template:OutputEnd","  3.12%    1.989      1 Template:PageNavigation"]},"cachereport":{"timestamp":"20240721160641","ttl":86400,"transientcontent":false}}});mw.config.set({"wgBackendResponseTime":111});});
+   (RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgPageParseReport":{"limitreport":{"cputime":"0.080","walltime":"0.096","ppvisitednodes":{"value":1061,"limit":1000000},"postexpandincludesize":{"value":7756,"limit":2097152},"templateargumentsize":{"value":2142,"limit":2097152},"expansiondepth":{"value":4,"limit":100},"expensivefunctioncount":{"value":0,"limit":100},"unstrip-depth":{"value":0,"limit":20},"unstrip-size":{"value":2729,"limit":5000000},"timingprofile":["100.00%   59.604      1 -total"," 10.03%    5.977     62 Template:Text","  7.81%    4.653     68 Template:Cl","  5.21%    3.103      1 Template:PageExamples","  4.38%    2.612      3 Template:CodeStart","  4.14%    2.465      1 Template:PageSyntax","  3.93%    2.340     13 Template:Parameter","  3.66%    2.180      1 Template:PageSeeAlso","  3.45%    2.057      1 Template:PageDescription","  3.41%    2.033      1 Template:PageAvailability"]},"cachereport":{"timestamp":"20250125023444","ttl":86400,"transientcontent":false}}});mw.config.set({"wgBackendResponseTime":87});});
   </script>
  </body>
 </html>

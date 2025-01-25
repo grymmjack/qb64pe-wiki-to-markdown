@@ -128,9 +128,9 @@ br ~ h5 {
 
 * [DIM](DIM.md) , [DEFLNG](DEFLNG.md)
 * [LEN](LEN.md) , [CLNG](CLNG.md)
-* [MKL&dollar;](MKL&dollar;.md) , [CVL](CVL.md)
-* [INTEGER](INTEGER.md) , [_INTEGER64](INTEGER64.md)
+* [MKL\$](MKL\$.md) , [CVL](CVL.md)
+* [INTEGER](INTEGER.md) , _INTEGER64
 * [SINGLE](SINGLE.md) , [DOUBLE](DOUBLE.md)
-* [_DEFINE](DEFINE.md) , [_UNSIGNED](UNSIGNED.md)
+* _DEFINE , _UNSIGNED
 * Variable Types
 </blockquote>

@@ -157,8 +157,8 @@ RESUME NEXT ' moves program to code following the error.
 
 
 * [ON](ON.md) [ERROR](ERROR.md)
-* [_ERRORLINE](ERRORLINE.md)
-* [_INCLERRORLINE](INCLERRORLINE.md) , [_INCLERRORFILE&dollar;](INCLERRORFILE&dollar;.md)
+* _ERRORLINE
+* _INCLERRORLINE , _INCLERRORFILE$
 * [ERR](ERR.md) , [ERL](ERL.md)
 * [ERROR](ERROR.md)
 * [ERROR](ERROR.md) Codes

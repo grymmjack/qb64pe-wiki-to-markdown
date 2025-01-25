@@ -119,10 +119,10 @@ br ~ h5 {
 <blockquote>
 
 
-* Signed [_BYTE](BYTE.md) values can range from -128 to 127.
-* [_UNSIGNED](UNSIGNED.md) _BYTEs can hold values from 0 to 255. [_UNSIGNED](UNSIGNED.md) expands the range of positive values.
-* Can be defined in a QB64 [_DEFINE](DEFINE.md) statement using a starting letter range of variable names.
-* Also can be used in a subroutine parameter [AS](AS.md) [_BYTE](BYTE.md) variable definitions.
+* Signed _BYTE values can range from -128 to 127.
+* _UNSIGNED _BYTEs can hold values from 0 to 255. _UNSIGNED expands the range of positive values.
+* Can be defined in a QB64 _DEFINE statement using a starting letter range of variable names.
+* Also can be used in a subroutine parameter [AS](AS.md) _BYTE variable definitions.
 * Define a byte using the suffix %% after the variable name: variable%% = -54
 * Define an unsigned byte by adding the suffix ~%% after the variable name: variable~%% = 54
 * When a variable has not been assigned or has no type suffix, the value defaults to [SINGLE](SINGLE.md) .
@@ -135,8 +135,8 @@ br ~ h5 {
 
 ```vb
 Offset or Position:    0    1   2   3   4   5   6   7      Example: 11110000
-----------------------------------             --------
-Big-Endian Bit On Value:   128  64  32  16   8   4   2   1                 240
+                             ----------------------------------             --------
+   Big-Endian Bit On Value:   128  64  32  16   8   4   2   1                 240
 Little-Endian Bit On Value:    1    2   4   8  16  32  64  128                 15
 ```
   
@@ -144,10 +144,10 @@ Little-Endian Bit On Value:    1    2   4   8  16  32  64  128                 1
 
 ```vb
 16 BIT INTEGER OR REGISTER
-AH (High Byte Bits)                         AL (Low Byte Bits)
-BIT:    15    14   13   12   11   10   9   8  |   7   6    5   4    3    2   1    0
----------------------------------------|--------------------------------------
-HEX:   8000  4000 2000 1000  800 400  200 100 |  80   40  20   10   8    4   2    1
+             AH (High Byte Bits)                         AL (Low Byte Bits)
+  BIT:    15    14   13   12   11   10   9   8  |   7   6    5   4    3    2   1    0
+         ---------------------------------------|--------------------------------------
+  HEX:   8000  4000 2000 1000  800 400  200 100 |  80   40  20   10   8    4   2    1
 ```
   
 <br>
@@ -205,10 +205,10 @@ The most significant bit is furthest to the left.
 <blockquote>
 
 
-* [_BIT](BIT.md) , &B
-* [_DEFINE](DEFINE.md) , [DIM](DIM.md)
-* [_UNSIGNED](UNSIGNED.md)
-* [_SHL](SHL.md) , [_SHR](SHR.md)
+* _BIT , &B
+* _DEFINE , [DIM](DIM.md)
+* _UNSIGNED
+* _SHL , _SHR
 * Mathematical Operations
 * Screen Memory
 * Variable Types

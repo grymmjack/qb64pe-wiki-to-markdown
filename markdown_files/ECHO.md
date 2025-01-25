@@ -119,8 +119,8 @@ br ~ h5 {
 <blockquote>
 
 
-* [_ECHO](ECHO.md) is a shorthand to saving current [_DEST](DEST.md) , switching to [_DEST](DEST.md) [_CONSOLE](CONSOLE.md) , PRINTing , then switching back to the previous [_DEST](DEST.md) .
-* To output numbers, use the [STR&dollar;](STR&dollar;.md) function.
+* _ECHO is a shorthand to saving current _DEST , switching to _DEST _CONSOLE , PRINTing , then switching back to the previous _DEST .
+* To output numbers, use the [STR\$](STR\$.md) function.
 
 </blockquote>
 
@@ -144,7 +144,7 @@ _ECHO "this will show in the console"
 <blockquote>
 
 
-* [_DEST](DEST.md)
-* [&dollar;CONSOLE](&dollar;CONSOLE.md) , [_CONSOLE](CONSOLE.md)
-* [STR&dollar;](STR&dollar;.md)
+* _DEST
+* [\$CONSOLE](\$CONSOLE.md) , _CONSOLE
+* [STR\$](STR\$.md)
 </blockquote>

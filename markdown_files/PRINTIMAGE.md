@@ -144,16 +144,16 @@ GOSUB PrintText
 
 INPUT "Preview (Y/N)?", i$                      'print preview of screen (optional)
 IF UCASE$(i$) = "Y" THEN
-Prev& = _NEWIMAGE(600, 900, 32)               'print preview smaller image
-_PUTIMAGE , Page&, Prev&
-SCREEN Prev&
-DO: LOOP UNTIL INKEY$ <> ""
-SCREEN 0
+ Prev& = _NEWIMAGE(600, 900, 32)               'print preview smaller image
+ _PUTIMAGE , Page&, Prev&
+ SCREEN Prev&
+ DO: LOOP UNTIL INKEY$ <> ""
+ SCREEN 0
 END IF
 
 INPUT "Print on printer (Y/N)?", i$             'print screen page on printer
 IF UCASE$(i$) = "Y" THEN
-_PRINTIMAGE Page&
+ _PRINTIMAGE Page&
 END IF
 
 END
@@ -188,38 +188,38 @@ PRINT STRING$(80, 223)
 COLOR 40
 PRINT " ";
 FOR i% = 0 TO 13
-PRINT i%;: SetCHR CSRLIN, POS(0), 40, i%
-LOCATE CSRLIN, POS(0) + 1
+ PRINT i%;: SetCHR CSRLIN, POS(0), 40, i%
+ LOCATE CSRLIN, POS(0) + 1
 NEXT i%
 FOR i% = 14 TO 16
-PRINT i%; CHR$(i%);
+ PRINT i%; CHR$(i%);
 NEXT
 LOCATE CSRLIN + 1, 2
 FOR i = 17 TO 27
-PRINT i; CHR$(i);
+ PRINT i; CHR$(i);
 NEXT
 FOR i% = 28 TO 31
-PRINT i%;: SetCHR CSRLIN, POS(0), 40, i%
-LOCATE CSRLIN, POS(0) + 1
+ PRINT i%;: SetCHR CSRLIN, POS(0), 40, i%
+ LOCATE CSRLIN, POS(0) + 1
 NEXT i%
 LOCATE CSRLIN + 1, 2
 COLOR 2: PRINT 32; CHR$(32);
 FOR i% = 33 TO 255
-SELECT CASE i%
-CASE 45, 58, 71, 84: LOCATE CSRLIN + 1, 1
-CASE IS > 96: IF (i% - 97) MOD 11 = 0 THEN LOCATE CSRLIN + 1, 1
-END SELECT
-SELECT CASE i%
-CASE 48 TO 57: COLOR 9 'denotes number keys 48 to 57
-CASE 65 TO 90: COLOR 5 ' A to Z keys 65 to 90
-CASE 97 TO 122: COLOR 36 'a to z keys 97 to 122
-CASE 127 TO 175: COLOR 42
-CASE 176 TO 223: COLOR 6 'drawing characters 176 to 223
-CASE IS > 223: COLOR 42
-CASE ELSE: COLOR 2
-END SELECT
-IF i% = 98 OR i% = 99 OR i% = 100 THEN PRINT SPACE$(1);
-PRINT " "; i%; CHR$(i%);
+ SELECT CASE i%
+   CASE 45, 58, 71, 84: LOCATE CSRLIN + 1, 1
+   CASE IS > 96: IF (i% - 97) MOD 11 = 0 THEN LOCATE CSRLIN + 1, 1
+ END SELECT
+ SELECT CASE i%
+   CASE 48 TO 57: COLOR 9 'denotes number keys 48 to 57
+   CASE 65 TO 90: COLOR 5 ' A to Z keys 65 to 90
+   CASE 97 TO 122: COLOR 36 'a to z keys 97 to 122
+   CASE 127 TO 175: COLOR 42
+   CASE 176 TO 223: COLOR 6 'drawing characters 176 to 223
+   CASE IS > 223: COLOR 42
+   CASE ELSE: COLOR 2
+ END SELECT
+ IF i% = 98 OR i% = 99 OR i% = 100 THEN PRINT SPACE$(1);
+ PRINT " "; i%; CHR$(i%);
 NEXT i%
 COLOR 3: PRINT "= NBSP(Non-Breaking Space)"
 COLOR 8: PRINT STRING$(80, CHR$(220))
@@ -232,9 +232,9 @@ Align 13, 29, "Press Ctrl + P to PRINT!"
 DO: SLEEP: K$ = INKEY$: LOOP UNTIL K$ <> ""
 Align 13, 29, SPACE$(50)
 IF K$ = CHR$(16) THEN
-_PRINTIMAGE 0              '<<<<<<<<<<<< to PRINTER
-Align 11, 29, "Use the ASCII Table for a reference of the codes!"
-SOUND 700, 4
+ _PRINTIMAGE 0              '<<<<<<<<<<<< to PRINTER
+ Align 11, 29, "Use the ASCII Table for a reference of the codes!"
+ SOUND 700, 4
 END IF
 K$ = INPUT$(1)
 SYSTEM
@@ -247,8 +247,8 @@ END SUB
 SUB Border (clr%)
 COLOR clr%
 FOR row = 1 TO 30
-LOCATE row, 1: PRINT CHR$(179);
-LOCATE row, 80: PRINT CHR$(179);
+ LOCATE row, 1: PRINT CHR$(179);
+ LOCATE row, 80: PRINT CHR$(179);
 NEXT row
 LOCATE 1, 1: PRINT STRING$(80, 196);
 LOCATE 30, 1: PRINT STRING$(80, 196);
@@ -274,8 +274,8 @@ END SUB
 <blockquote>
 
 
-* [_LOADIMAGE](LOADIMAGE.md) , [_NEWIMAGE](NEWIMAGE.md)
-* [_COPYIMAGE](COPYIMAGE.md) , [_SAVEIMAGE](SAVEIMAGE.md)
+* _LOADIMAGE , _NEWIMAGE
+* _COPYIMAGE , _SAVEIMAGE
 * [LPRINT](LPRINT.md)
 * Windows Printer Settings
 </blockquote>

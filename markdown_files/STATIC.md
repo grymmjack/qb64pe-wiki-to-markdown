@@ -132,14 +132,14 @@ END
 FUNCTION BinStr$ (n&) STATIC 'comment out STATIC to see what happens!
 DIM p%, s$
 IF 2 ^ p% > n& THEN
-p% = 0
+ p% = 0
 ELSE
-IF n& AND 2 ^ p% THEN s$ = "1" + s$ ELSE s$ = "0" + s$
-IF n& > 2 ^ p% THEN
-p% = p% + 1
-s$ = BinStr$(n&) 'recursive call to itself
-ELSE: p% = 0
-END IF
+ IF n& AND 2 ^ p% THEN s$ = "1" + s$ ELSE s$ = "0" + s$
+ IF n& > 2 ^ p% THEN
+   p% = p% + 1
+   s$ = BinStr$(n&) 'recursive call to itself
+ ELSE: p% = 0
+ END IF
 END IF
 IF s$ = "" THEN BinStr$ = "0" ELSE BinStr$ = s$
 END FUNCTION
@@ -156,32 +156,32 @@ PRINT Factorial(5)
 PRINT Factorial(50
 
 FUNCTION Factorial# ( n AS DOUBLE )
-CONST maxNToCache = 50
-STATIC resultCache() AS DOUBLE
-STATIC firstCall AS INTEGER
+   CONST maxNToCache = 50
+   STATIC resultCache() AS DOUBLE
+   STATIC firstCall AS INTEGER
 
-' The lookup table is initially empty, so re-size it..
-IF firstCall = 0 THEN
-firstCall = -1
-REDIM resultCache(maxNToCache) AS DOUBLE
+   ' The lookup table is initially empty, so re-size it..
+   IF firstCall = 0 THEN
+       firstCall = -1
+       REDIM resultCache(maxNToCache) AS DOUBLE
 
-' ..and pre-calculate some factorials.
-resultCache(0) = 1
-resultCache(1) = 1
-resultCache(2) = 2
-END IF
+       ' ..and pre-calculate some factorials.
+       resultCache(0) = 1
+       resultCache(1) = 1
+       resultCache(2) = 2
+   END IF
 
-' See if we have the result cached. If so, we're done.
-IF n <= maxNToCache THEN
-IF resultCache(n) <> 0 THEN
-Factorial = resultCache(n)
-EXIT FUNCTION
-END IF
-END IF
+   ' See if we have the result cached. If so, we're done.
+   IF n <= maxNToCache THEN
+       IF resultCache(n) <> 0 THEN
+           Factorial = resultCache(n)
+           EXIT FUNCTION
+       END IF
+   END IF
 
-' If not, we use recursion to calculate the result, then cache it for later use:
-resultCache(n) = INT(n) * Factorial(INT(n) - 1)
-Factorial = resultCache(n)
+   ' If not, we use recursion to calculate the result, then cache it for later use:
+   resultCache(n) = INT(n) * Factorial(INT(n) - 1)
+   Factorial = resultCache(n)
 END FUNCTION
 ```
   
@@ -205,8 +205,8 @@ END FUNCTION
 
 * [DIM](DIM.md) , [REDIM](REDIM.md) , [COMMON](COMMON.md)
 * [SUB](SUB.md) , [FUNCTION](FUNCTION.md)
-* [DECLARE](DECLARE.md) [LIBRARY](LIBRARY.md)
-* [TYPE](TYPE.md) , Arrays
-* [&dollar;STATIC](&dollar;STATIC.md) , [&dollar;DYNAMIC](&dollar;DYNAMIC.md)
+* DECLARE LIBRARY
+* [TYPE](TYPE.md) , [Arrays](Arrays.md)
+* [\$STATIC](\$STATIC.md) , [\$DYNAMIC](\$DYNAMIC.md)
 * Data types
 </blockquote>

@@ -129,15 +129,15 @@ br ~ h5 {
 <blockquote>
 
 
-* The starting coordinate sets the top left corner of the text to be printed. Use [_FONTHEIGHT](FONTHEIGHT.md) to calculate that text or font position
-* The [_FONT](FONT.md) size can affect the screen and row heights.
-* Custom fonts are not required. [_PRINTSTRING](PRINTSTRING.md) can print all ASCII characters.
-* [_PRINTWIDTH](PRINTWIDTH.md) can be used to determine how wide a text print will be so that the screen width is not exceeded.
+* The starting coordinate sets the top left corner of the text to be printed. Use _FONTHEIGHT to calculate that text or font position
+* The _FONT size can affect the screen and row heights.
+* Custom fonts are not required. _PRINTSTRING can print all [ASCII](ASCII.md) characters.
+* _PRINTWIDTH can be used to determine how wide a text print will be so that the screen width is not exceeded.
 * If the imageHandle& is omitted, the current image, page or screen destination is used.
-* Can use the current font alpha blending with a designated image background. See the [_RGBA](RGBA.md) function example.
-* Use the [_PRINTMODE](PRINTMODE.md) statement before printing to set how the background is rendered.
-* Use the [_PRINTMODE](PRINTMODE.md) (function) to find the current [_PRINTMODE](PRINTMODE.md) setting.
-* In [SCREEN](SCREEN.md) 0 (text only), [_PRINTSTRING](PRINTSTRING.md) works as one-line replacement for [LOCATE](LOCATE.md) x, y: [PRINT](PRINT.md) text$ , without changing the current cursor position.
+* Can use the current font alpha blending with a designated image background. See the _RGBA function example.
+* Use the _PRINTMODE statement before printing to set how the background is rendered.
+* Use the _PRINTMODE (function) to find the current _PRINTMODE setting.
+* In [SCREEN](SCREEN.md) 0 (text only), _PRINTSTRING works as one-line replacement for [LOCATE](LOCATE.md) x, y: [PRINT](PRINT.md) text$ , without changing the current cursor position.
 
 </blockquote>
 
@@ -152,7 +152,7 @@ br ~ h5 {
 SCREEN _NEWIMAGE(800, 600, 256)
 
 FOR code = 0 TO 31
-chrstr$ = chrstr$ + CHR$(code) + SPACE$(1)
+ chrstr$ = chrstr$ + CHR$(code) + SPACE$(1)
 NEXT
 
 _FONT _LOADFONT("C:\Windows\Fonts\Cour.ttf", 20, "MONOSPACE") 'select monospace font
@@ -214,16 +214,16 @@ xrot = 6: yrot = 60: scale = 4
 row = 1
 CIRCLE (320, 240), 15, 9: PAINT STEP(0, 0), 9
 DO
-FOR i = cstart TO cend STEP .04
-x = 300 + (scale * 40 - (row * xrot)) * COS(i)
-y = 200 + (scale * 40 - (row * yrot)) * SIN(i)
-cnt = cnt + 1
-COLOR 7: _PRINTSTRING (x, y), "HELLO WORLD!", 0  'display
-IF cnt = LEN(text$) * 8 THEN cnt = 0: EXIT DO
-_DISPLAY
-COLOR 0: _PRINTSTRING (x, y), "HELLO WORLD!", 0  'erase
-_DELAY 0.02
-NEXT
+ FOR i = cstart TO cend STEP .04
+   x = 300 + (scale * 40 - (row * xrot)) * COS(i)
+   y = 200 + (scale * 40 - (row * yrot)) * SIN(i)
+   cnt = cnt + 1
+   COLOR 7: _PRINTSTRING (x, y), "HELLO WORLD!", 0  'display
+   IF cnt = LEN(text$) * 8 THEN cnt = 0: EXIT DO
+   _DISPLAY
+   COLOR 0: _PRINTSTRING (x, y), "HELLO WORLD!", 0  'erase
+   _DELAY 0.02
+ NEXT
 LOOP UNTIL INKEY$ = CHR$(27) 'escape key exit
 COLOR 15
 END
@@ -239,9 +239,9 @@ END
 <blockquote>
 
 
-* [_NEWIMAGE](NEWIMAGE.md) , [_PRINTWIDTH](PRINTWIDTH.md) , [_PRINTMODE](PRINTMODE.md)
-* [_CONTROLCHR](CONTROLCHR.md)
-* [_FONT](FONT.md) , [_LOADFONT](LOADFONT.md) , [_FONTHEIGHT](FONTHEIGHT.md) , [_FONTWIDTH](FONTWIDTH.md)
-* [_SCREENIMAGE](SCREENIMAGE.md) , [_SCREENPRINT](SCREENPRINT.md)
+* _NEWIMAGE , _PRINTWIDTH , _PRINTMODE
+* _CONTROLCHR
+* _FONT , _LOADFONT , _FONTHEIGHT , _FONTWIDTH
+* _SCREENIMAGE , _SCREENPRINT
 * Text Using Graphics
 </blockquote>

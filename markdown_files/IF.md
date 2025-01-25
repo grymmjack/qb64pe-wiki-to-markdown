@@ -117,12 +117,12 @@ br ~ h5 {
 * [IF](IF.md) statements can also have alternative evaluations using [ELSEIF](ELSEIF.md) and [ELSE](ELSE.md) conditions.
 * When the [IF](IF.md) statement and/or code to be run is more than code line, an [END](END.md) [IF](IF.md) statement must be used.
 * With multiple code lines to run, end the [IF](IF.md) statement with [THEN](THEN.md) and place all of the code on lines below that line.
-* Multiple code line block statements require that the IF...THEN , [ELSEIF](ELSEIF.md) , [ELSE](ELSE.md) and [END](END.md) [IF](IF.md) be on separate lines.
-* The IDE may return an error of [NEXT](NEXT.md) without [FOR](FOR.md) or [LOOP](LOOP.md) without [DO](DO.md) when [END](END.md) [IF](IF.md) does not end a statement block.
+* Multiple code line block statements require that the [IF...THEN](IF...THEN.md) , [ELSEIF](ELSEIF.md) , [ELSE](ELSE.md) and [END](END.md) [IF](IF.md) be on separate lines.
+* The IDE may return an error of [NEXT](NEXT.md) without FOR or LOOP without DO when [END](END.md) [IF](IF.md) does not end a statement block.
 * The QB64 IDE will indicate an error in the [IF](IF.md) statement line until [END](END.md) [IF](IF.md) closes the statement block.
 * Use colons to execute multiple statements in a single-line [IF](IF.md) statement.
 * An underscore can be used anywhere after the code on a single-line to continue it to the next line in QB64 .
-* NOTE: [STRING](STRING.md) values can only be evaluated in an [IF](IF.md) statement if a value is compared to a literal or [CHR&dollar;](CHR&dollar;.md) string value. QB64 may not compile literal [IF](IF.md) string statements or indicate an IDE coding error. Use [LEN](LEN.md) or [ASC](ASC.md) to compare strings numerically.
+* NOTE: [STRING](STRING.md) values can only be evaluated in an [IF](IF.md) statement if a value is compared to a literal or [CHR\$](CHR\$.md) string value. QB64 may not compile literal [IF](IF.md) string statements or indicate an IDE coding error. Use [LEN](LEN.md) or [ASC](ASC.md) to compare strings numerically.
 
 </blockquote>
 
@@ -136,7 +136,7 @@ Table 3: The relational operations for condition checking.
 In this table, A and B are the Expressions to compare. Both must represent
 the same general type, i.e. they must result into either numerical values
 or STRING values. If a test succeeds, then true (-1) is returned, false (0)
-if it fails, which both can be used in further Boolean evaluations.
+    if it fails, which both can be used in further Boolean evaluations.
 ┌─────────────────────────────────────────────────────────────────────────┐
 │                          Relational Operations                          │
 ├────────────┬───────────────────────────────────────────┬────────────────┤
@@ -154,21 +154,21 @@ if it fails, which both can be used in further Boolean evaluations.
 ├────────────┼───────────────────────────────────────────┼────────────────┤
 │   A >= B   │ Tests if A is greater than or equal to B. │ IF A >= B THEN │
 └────────────┴───────────────────────────────────────────┴────────────────┘
-The operations should be very obvious for numerical values. For strings
-be aware that all checks are done case sensitive (i.e. "Foo" <> "foo").
-The equal/not equal check is pretty much straight forward, but for the
-less/greater checks the ASCII value of the first different character is
-used for decision making:
+  The operations should be very obvious for numerical values. For strings
+  be aware that all checks are done case sensitive (i.e. "Foo" <> "foo").
+  The equal/not equal check is pretty much straight forward, but for the
+  less/greater checks the ASCII value of the first different character is
+                         used for decision making:
 
-E.g. "abc" is less than "abd", because in the first difference (the 3rd
-character) the "c" has a lower ASCII value than the "d".
+  E.g. "abc" is less than "abd", because in the first difference (the 3rd
+       character) the "c" has a lower ASCII value than the "d".
 
-This behavior may give you some subtle results, if you are not aware of
-the ASCII values and the written case:
+  This behavior may give you some subtle results, if you are not aware of
+                  the ASCII values and the written case:
 
-E.g. "abc" is greater than "abD", because the small letters have higher
-ASCII values than the capital letters, hence "c" > "D". You may use
-LCASE$ or UCASE$ to make sure both strings have the same case.
+  E.g. "abc" is greater than "abD", because the small letters have higher
+       ASCII values than the capital letters, hence "c" > "D". You may use
+       LCASE$ or UCASE$ to make sure both strings have the same case.
 ```
   
 <br>
@@ -176,32 +176,32 @@ LCASE$ or UCASE$ to make sure both strings have the same case.
 ```vb
 Table 4: The logical operations and its results.
 
-In this table, A and B are the Expressions to invert or combine.
-Both may be results of former Boolean evaluations.
-┌────────────────────────────────────────────────────────────────────────┐
-│                           Logical Operations                           │
-├───────┬───────┬───────┬─────────┬────────┬─────────┬─────────┬─────────┤
-│   A   │   B   │ NOT B │ A AND B │ A OR B │ A XOR B │ A EQV B │ A IMP B │
-├───────┼───────┼───────┼─────────┼────────┼─────────┼─────────┼─────────┤
-│ true  │ true  │ false │  true   │ true   │  false  │  true   │  true   │
-├───────┼───────┼───────┼─────────┼────────┼─────────┼─────────┼─────────┤
-│ true  │ false │ true  │  false  │ true   │  true   │  false  │  false  │
-├───────┼───────┼───────┼─────────┼────────┼─────────┼─────────┼─────────┤
-│ false │ true  │ false │  false  │ true   │  true   │  false  │  true   │
-├───────┼───────┼───────┼─────────┼────────┼─────────┼─────────┼─────────┤
-│ false │ false │ true  │  false  │ false  │  false  │  true   │  true   │
-└───────┴───────┴───────┴─────────┴────────┴─────────┴─────────┴─────────┘
-Note: In most BASIC languages incl. QB64 these are bitwise operations,
-hence the logic is performed for each corresponding bit in both
-operators, where true or false indicates whether a bit is set or
-not set. The outcome of each bit is then placed into the respective
-position to build the bit pattern of the final result value.
+      In this table, A and B are the Expressions to invert or combine.
+             Both may be results of former Boolean evaluations.
+ ┌────────────────────────────────────────────────────────────────────────┐
+ │                           Logical Operations                           │
+ ├───────┬───────┬───────┬─────────┬────────┬─────────┬─────────┬─────────┤
+ │   A   │   B   │ NOT B │ A AND B │ A OR B │ A XOR B │ A EQV B │ A IMP B │
+ ├───────┼───────┼───────┼─────────┼────────┼─────────┼─────────┼─────────┤
+ │ true  │ true  │ false │  true   │ true   │  false  │  true   │  true   │
+ ├───────┼───────┼───────┼─────────┼────────┼─────────┼─────────┼─────────┤
+ │ true  │ false │ true  │  false  │ true   │  true   │  false  │  false  │
+ ├───────┼───────┼───────┼─────────┼────────┼─────────┼─────────┼─────────┤
+ │ false │ true  │ false │  false  │ true   │  true   │  false  │  true   │
+ ├───────┼───────┼───────┼─────────┼────────┼─────────┼─────────┼─────────┤
+ │ false │ false │ true  │  false  │ false  │  false  │  true   │  true   │
+ └───────┴───────┴───────┴─────────┴────────┴─────────┴─────────┴─────────┘
+  Note: In most BASIC languages incl. QB64 these are bitwise operations,
+        hence the logic is performed for each corresponding bit in both
+        operators, where true or false indicates whether a bit is set or
+        not set. The outcome of each bit is then placed into the respective
+        position to build the bit pattern of the final result value.
 
-As all Relational Operations return negative one (-1, all bits set) for
-true and zero (0, no bits set) for false, this allows us to use these
-bitwise logical operations to invert or combine any relational checks,
-as the outcome is the same for each bit and so always results into a
-true (-1) or false (0) again for further evaluations.
+  As all Relational Operations return negative one (-1, all bits set) for
+   true and zero (0, no bits set) for false, this allows us to use these
+   bitwise logical operations to invert or combine any relational checks,
+   as the outcome is the same for each bit and so always results into a
+           true (-1) or false (0) again for further evaluations.
 ```
   
 <br>
@@ -223,9 +223,9 @@ IF x > 100 THEN REM PRINT x  '
 ```vb
 INPUT "Enter a number over or under 100: ", x
 IF x > 100 THEN
-y = 200
-PRINT y
-PRINT x
+ y = 200
+ PRINT y
+ PRINT x
 END IF
 ```
   
@@ -294,6 +294,6 @@ IF x# + y# = z# THEN PRINT "equal" ELSE PRINT "unequal"
 * [ELSEIF](ELSEIF.md) , [ELSE](ELSE.md)
 * [AND](AND.md) (boolean) , [OR](OR.md) (boolean)
 * [NOT](NOT.md) , [GOTO](GOTO.md)
-* [SELECT](SELECT.md) [CASE](CASE.md)
-* Boolean (numerical comparisons return a true or false value)
+* SELECT [CASE](CASE.md)
+* [Boolean](Boolean.md) (numerical comparisons return a true or false value)
 </blockquote>

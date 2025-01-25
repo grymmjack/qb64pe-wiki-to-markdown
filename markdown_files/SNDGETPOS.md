@@ -139,7 +139,7 @@ SoundFile& = _SNDOPEN("YourSoundFile.mp3") '<<< your MP3 sound file here!
 _SNDSETPOS SoundFile&, 5.5   'set to play sound 5 1/2 seconds into music
 _SNDPLAY SoundFile&  'play sound
 Do: _LIMIT 60
-LOCATE 5, 2: PRINT "Current play position> "; _SNDGETPOS(SoundFile&)
+  LOCATE 5, 2: PRINT "Current play position> "; _SNDGETPOS(SoundFile&)
 LOOP UNTIL _KEYDOWN(27) OR NOT _SNDPLAYING(SoundFile&) 'ESC or end of sound exit
 ```
   
@@ -153,6 +153,6 @@ LOOP UNTIL _KEYDOWN(27) OR NOT _SNDPLAYING(SoundFile&) 'ESC or end of sound exit
 <blockquote>
 
 
-* [_SNDSETPOS](SNDSETPOS.md)
-* [_SNDOPEN](SNDOPEN.md)
+* _SNDSETPOS
+* _SNDOPEN
 </blockquote>

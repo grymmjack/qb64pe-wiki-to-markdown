@@ -135,7 +135,7 @@ br ~ h5 {
 * The start% position is useful when making multiple searches in the same string. See the example below.
 * The searchString$ should be smaller or equal in length to the baseString$ , or 0 is returned.
 * Non-zero position% return values can be used as a new start position by adding 1 to re-search the base string. See the example below.
-* In a loop, [INSTR](INSTR.md) can search an entire file for occurences of certain words. See the [MID&dollar;](MID&dollar;.md) statement example.
+* In a loop, [INSTR](INSTR.md) can search an entire file for occurences of certain words. See the [MID\$](MID\$.md) statement example.
 
 </blockquote>
 
@@ -149,8 +149,8 @@ br ~ h5 {
 ```vb
 text$ = "The cats and dogs where playing, even though dogs don't like cats."
 DO
-findcats% = INSTR(findcats% + 1, text$, "cats") ' find another occurance after
-IF findcats% THEN PRINT "There is 'cats' in the string at position:"; findcats%
+ findcats% = INSTR(findcats% + 1, text$, "cats") ' find another occurance after
+ IF findcats% THEN PRINT "There is 'cats' in the string at position:"; findcats%
 LOOP UNTIL findcats% = 0
 
 findmonkey% = INSTR(text$, "monkeys")  ' find any occurance?
@@ -175,8 +175,8 @@ There is 'cats' in the string at position: 62
 <blockquote>
 
 
-* [_INSTRREV](INSTRREV.md) , [MID&dollar;](MID&dollar;.md) (function)
-* [LEFT&dollar;](LEFT&dollar;.md) , [RIGHT&dollar;](RIGHT&dollar;.md)
-* [LCASE&dollar;](LCASE&dollar;.md) , [UCASE&dollar;](UCASE&dollar;.md)
+* _INSTRREV , [MID\$](MID\$.md) (function)
+* [LEFT\$](LEFT\$.md) , [RIGHT\$](RIGHT\$.md)
+* [LCASE\$](LCASE\$.md) , [UCASE\$](UCASE\$.md)
 * [STRING](STRING.md) , [INTEGER](INTEGER.md)
 </blockquote>

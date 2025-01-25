@@ -123,24 +123,24 @@ br ~ h5 {
 ##### Example 1: Reading multiple controller device buttons, axis and wheels.
 ```vb
 FOR i = 1 TO _DEVICES
-PRINT STR$(i) + ") " + _DEVICE$(i) + " Buttons:"; _LASTBUTTON(i); ",Axis:"; _LASTAXIS(i); ",Wheel:"; _LASTWHEEL(i)
+ PRINT STR$(i) + ") " + _DEVICE$(i) + " Buttons:"; _LASTBUTTON(i); ",Axis:"; _LASTAXIS(i); ",Wheel:"; _LASTWHEEL(i)
 NEXT
 
 DO
-d& = _DEVICEINPUT
-IF d& THEN '             the device number cannot be zero!
-PRINT "Found"; d&;
-FOR b = 1 TO _LASTBUTTON(d&)
-PRINT _BUTTONCHANGE(b); _BUTTON(b);
-NEXT
-FOR a = 1 TO _LASTAXIS(d&)
-PRINT _AXIS(a);
-NEXT
-FOR w = 1 TO _LASTWHEEL(d&)
-PRINT _WHEEL(w);
-NEXT
-PRINT
-END IF
+ d& = _DEVICEINPUT
+ IF d& THEN '             the device number cannot be zero!
+   PRINT "Found"; d&;
+   FOR b = 1 TO _LASTBUTTON(d&)
+     PRINT _BUTTONCHANGE(b); _BUTTON(b);
+   NEXT
+   FOR a = 1 TO _LASTAXIS(d&)
+     PRINT _AXIS(a);
+   NEXT
+   FOR w = 1 TO _LASTWHEEL(d&)
+     PRINT _WHEEL(w);
+   NEXT
+   PRINT
+ END IF
 LOOP UNTIL INKEY$ = CHR$(27) 'escape key exit
 
 END
@@ -158,9 +158,9 @@ PRINT "Move your mouse and/or your mouse wheel (ESC to exit)"
 
 d = _DEVICES '  always read number of devices to enable device input
 DO: _LIMIT 30  'main loop
-DO WHILE _DEVICEINPUT(2) 'loop only runs during a device 2 mouse event
-PRINT _WHEEL(1), _WHEEL(2), _WHEEL(3)
-LOOP
+ DO WHILE _DEVICEINPUT(2) 'loop only runs during a device 2 mouse event
+       PRINT _WHEEL(1), _WHEEL(2), _WHEEL(3)
+ LOOP
 LOOP UNTIL INKEY$ = CHR$(27)
 ```
   
@@ -174,10 +174,10 @@ LOOP UNTIL INKEY$ = CHR$(27)
 <blockquote>
 
 
-* [_MOUSEWHEEL](MOUSEWHEEL.md)
-* [_LASTWHEEL](LASTWHEEL.md) , [_LASTBUTTON](LASTBUTTON.md) , [_LASTAXIS](LASTAXIS.md)
-* [_AXIS](AXIS.md) , [_BUTTON](BUTTON.md) , [_BUTTONCHANGE](BUTTONCHANGE.md)
-* [_DEVICES](DEVICES.md) , [_DEVICE&dollar;](DEVICE&dollar;.md) , [_DEVICEINPUT](DEVICEINPUT.md)
-* [_MOUSEMOVEMENTX](MOUSEMOVEMENTX.md) , [_MOUSEMOVEMENTY](MOUSEMOVEMENTY.md)
+* _MOUSEWHEEL
+* _LASTWHEEL , _LASTBUTTON , _LASTAXIS
+* _AXIS , _BUTTON , _BUTTONCHANGE
+* _DEVICES , _DEVICE$ , _DEVICEINPUT
+* _MOUSEMOVEMENTX , _MOUSEMOVEMENTY
 * Controller Devices
 </blockquote>

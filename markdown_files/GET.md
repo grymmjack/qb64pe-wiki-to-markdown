@@ -136,8 +136,8 @@ br ~ h5 {
 
 ```vb
 DO UNTIL EOF(1)
-GET #1, , value%
-IF NOT(EOF(1)) THEN PUT #2, , value%
+  GET #1, , value%
+  IF NOT(EOF(1)) THEN PUT #2, , value%
 LOOP
 ```
   
@@ -148,9 +148,9 @@ LOOP
 ##### Example 1: Opening a RANDOM file using LEN to calculate and LEN = to designate the file record size.
 ```vb
 TYPE variabletype
-x AS INTEGER'       '2 bytes
-y AS STRING * 10'  '10 bytes
-z AS LONG'          '4 bytes
+ x AS INTEGER'       '2 bytes
+ y AS STRING * 10'  '10 bytes
+ z AS LONG'          '4 bytes
 END TYPE'            '16 bytes total
 DIM record AS variabletype
 DIM newrec AS variabletype
@@ -200,7 +200,7 @@ END
 DIM SHARED array(100) AS INTEGER
 
 FOR i = 1 TO 100
-array(i) = i
+ array(i) = i
 NEXT
 showme  'display array contents
 
@@ -221,7 +221,7 @@ END
 
 SUB showme
 FOR i = 1 TO 100
-PRINT array(i);
+ PRINT array(i);
 NEXT
 PRINT "done"
 END SUB

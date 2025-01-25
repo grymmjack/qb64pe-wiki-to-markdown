@@ -192,8 +192,8 @@ It returned to IF a = 1
 <blockquote>
 
 
-* ON...GOSUB
-* ON...GOTO , [GOTO](GOTO.md)
+* [ON...GOSUB](ON...GOSUB.md)
+* [ON...GOTO](ON...GOTO.md) , [GOTO](GOTO.md)
 * [ON](ON.md) [ERROR](ERROR.md) , [RESUME](RESUME.md)
 * [ON](ON.md) TIMER(n)
 * Line number

@@ -137,7 +137,7 @@ br ~ h5 {
 
 
 * [SUB](SUB.md) _GL
-* [_glBegin](glBegin.md) , [_glCallLists](glCallLists.md) , _glColor , [_glEdgeFlag](glEdgeFlag.md)
+* _glBegin , _glCallLists , _glColor , _glEdgeFlag
 * _glEvalCoord , _glEvalPoint , _glIndex , _glMaterial
 * _glNormal , _glTexCoord , _glVertex
 </blockquote>

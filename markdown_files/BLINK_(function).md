@@ -125,9 +125,9 @@ COLOR 16, 7
 '_BLINK OFF
 
 IF _BLINK THEN
-PRINT "I'm blinking"
+   PRINT "I'm blinking"
 ELSE
-PRINT "I'm not blinking"
+   PRINT "I'm not blinking"
 END IF
 ```
   
@@ -142,6 +142,6 @@ END IF
 
 
 * Featured in our "Keyword of the Day" series
-* [_BLINK](BLINK.md) (statement)
+* _BLINK (statement)
 * [OUT](OUT.md)
 </blockquote>

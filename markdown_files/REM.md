@@ -122,7 +122,7 @@ br ~ h5 {
 * Comments cannot be read by QBasic correctly and may cause syntax and other errors without REM!
 * Instead of [REM](REM.md) you can use the ' symbol which can be put anywhere.
 * Code can also be commented out for program testing purposes.
-* QBasic Metacommands such as [&dollar;DYNAMIC](&dollar;DYNAMIC.md) and [&dollar;INCLUDE](&dollar;INCLUDE.md) require the use of [REM](REM.md) or the apostrophe.
+* QBasic Metacommands such as [\$DYNAMIC](\$DYNAMIC.md) and [\$INCLUDE](\$INCLUDE.md) require the use of [REM](REM.md) or the apostrophe.
 
 </blockquote>
 
@@ -152,6 +152,6 @@ END IF
 
 
 * Featured in our "Keyword of the Day" series
-* Apostrophe
-* [&dollar;DYNAMIC](&dollar;DYNAMIC.md) , [&dollar;STATIC](&dollar;STATIC.md) , [&dollar;INCLUDE](&dollar;INCLUDE.md)
+* [Apostrophe](Apostrophe.md)
+* [\$DYNAMIC](\$DYNAMIC.md) , [\$STATIC](\$STATIC.md) , [\$INCLUDE](\$INCLUDE.md)
 </blockquote>

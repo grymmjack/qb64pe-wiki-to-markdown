@@ -119,13 +119,13 @@ br ~ h5 {
 <blockquote>
 
 
-* [_OFFSET](OFFSET.md) types can be created as signed or [_UNSIGNED](UNSIGNED.md) at the programmer's discretion.
-* The type suffix for [_OFFSET](OFFSET.md) is %& which designates the integer value's flexible size.
-* Offset values are only useful when used in conjunction with [_MEM](MEM.md) or [DECLARE](DECLARE.md) [LIBRARY](LIBRARY.md) procedures.
-* OFFSET values are used as a part of the [_MEM](MEM.md) variable type in QB64. Variable.OFFSET returns or sets the current position in memory.
-* API [LIBRARY](LIBRARY.md) parameter or type names may include lp, ptr or p which designates them as a pointer type.
-* Warning: [_OFFSET](OFFSET.md) values cannot be cast to other variable type values reliably.
-* Warning: Variable length [STRING](STRING.md) values can move about in memory at any time. If you get the [_OFFSET](OFFSET.md) of a variable length sting on one code line and use it on the next it may not be there anymore. To be safe, move variable length strings into fixed length strings first.
+* _OFFSET types can be created as signed or _UNSIGNED at the programmer's discretion.
+* The type suffix for _OFFSET is %& which designates the integer value's flexible size.
+* Offset values are only useful when used in conjunction with _MEM or DECLARE LIBRARY procedures.
+* [OFFSET](OFFSET.md) values are used as a part of the _MEM variable type in QB64. Variable.OFFSET returns or sets the current position in memory.
+* API LIBRARY parameter or type names may include lp, ptr or p which designates them as a pointer type.
+* Warning: _OFFSET values cannot be cast to other variable type values reliably.
+* Warning: Variable length [STRING](STRING.md) values can move about in memory at any time. If you get the _OFFSET of a variable length sting on one code line and use it on the next it may not be there anymore. To be safe, move variable length strings into fixed length strings first.
 
 </blockquote>
 
@@ -138,26 +138,26 @@ br ~ h5 {
 ##### Example: The SHBrowseForFolder function receives information about the folder selected by the user in Windows XP and 7.
 ```vb
 DECLARE CUSTOMTYPE LIBRARY
-FUNCTION FindWindow& (BYVAL ClassName AS _OFFSET, WindowName$)
+   FUNCTION FindWindow& (BYVAL ClassName AS _OFFSET, WindowName$)
 END DECLARE
 
 _TITLE "Super Window"
 hwnd& = FindWindow(0, "Super Window" + CHR$(0))
 
 TYPE BROWSEINFO  'typedef struct _browseinfo 'Microsoft MSDN
-hwndOwner AS LONG '              '  HWND
-pidlRoot AS _OFFSET '            '  PCIDLIST_ABSOLUTE
-pszDisplayName AS _OFFSET '      '  LPTSTR
-lpszTitle AS _OFFSET '           '  LPCTSTR
-ulFlags AS _UNSIGNED LONG        '  UINT
-lpfn AS _OFFSET '                '  BFFCALLBACK
-lParam AS _OFFSET '              '  LPARAM
-iImage AS LONG '                 '  int
+ hwndOwner AS LONG '              '  HWND
+ pidlRoot AS _OFFSET '            '  PCIDLIST_ABSOLUTE
+ pszDisplayName AS _OFFSET '      '  LPTSTR
+ lpszTitle AS _OFFSET '           '  LPCTSTR
+ ulFlags AS _UNSIGNED LONG        '  UINT
+ lpfn AS _OFFSET '                '  BFFCALLBACK
+ lParam AS _OFFSET '              '  LPARAM
+ iImage AS LONG '                 '  int
 END TYPE  'BROWSEINFO, *PBROWSEINFO, *LPBROWSEINFO;
 
 DECLARE DYNAMIC LIBRARY "shell32"
-FUNCTION SHBrowseForFolder%& (x AS BROWSEINFO) 'Microsoft MSDN
-SUB SHGetPathFromIDList (BYVAL lpItem AS _OFFSET, BYVAL szDir AS _OFFSET) 'Microsoft MSDN
+ FUNCTION SHBrowseForFolder%& (x AS BROWSEINFO) 'Microsoft MSDN
+ SUB SHGetPathFromIDList (BYVAL lpItem AS _OFFSET, BYVAL szDir AS _OFFSET) 'Microsoft MSDN
 END DECLARE
 
 DIM b AS BROWSEINFO
@@ -169,12 +169,12 @@ b.lpszTitle = _OFFSET(a$)
 DIM o AS _OFFSET
 o = SHBrowseForFolder(b)
 IF o THEN
-PRINT LEFT$(s$, INSTR(s$, CHR$(0)) - 1)
-DIM s2 AS STRING * 1024
-SHGetPathFromIDList o, _OFFSET(s2$)
-PRINT LEFT$(s2$, INSTR(s2$, CHR$(0)) - 1)
+   PRINT LEFT$(s$, INSTR(s$, CHR$(0)) - 1)
+   DIM s2 AS STRING * 1024
+   SHGetPathFromIDList o, _OFFSET(s2$)
+   PRINT LEFT$(s2$, INSTR(s2$, CHR$(0)) - 1)
 ELSE
-PRINT "Cancel?"
+   PRINT "Cancel?"
 END IF
 ```
   
@@ -188,10 +188,10 @@ END IF
 <blockquote>
 
 
-* [_WINDOWHANDLE](WINDOWHANDLE.md)
-* Using [_OFFSET](OFFSET.md)
-* [_OFFSET](OFFSET.md) (function) , [_MEM](MEM.md)
-* [DECLARE](DECLARE.md) [LIBRARY](LIBRARY.md)
-* [DECLARE](DECLARE.md) [LIBRARY](LIBRARY.md)
+* _WINDOWHANDLE
+* Using _OFFSET
+* _OFFSET (function) , _MEM
+* DECLARE LIBRARY
+* DECLARE LIBRARY
 * Variable Types
 </blockquote>

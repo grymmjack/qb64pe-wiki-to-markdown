@@ -121,7 +121,7 @@ br ~ h5 {
 
 * Function returns true (-1) once a program screen is available to use or change.
 * Can be used to avoid program errors because a screen was not ready for input or alterations.
-* Use before [_TITLE](TITLE.md) , [_SCREENMOVE](SCREENMOVE.md) and other functions that require the output window to have been created.
+* Use before _TITLE , _SCREENMOVE and other functions that require the output window to have been created.
 
 </blockquote>
 
@@ -145,8 +145,8 @@ _TITLE "My Title"
 <blockquote>
 
 
-* [_FULLSCREEN](FULLSCREEN.md)
-* [_SCREENIMAGE](SCREENIMAGE.md)
-* [&dollar;CONSOLE](&dollar;CONSOLE.md)
-* [&dollar;RESIZE](&dollar;RESIZE.md)
+* _FULLSCREEN
+* _SCREENIMAGE
+* [\$CONSOLE](\$CONSOLE.md)
+* [\$RESIZE](\$RESIZE.md)
 </blockquote>

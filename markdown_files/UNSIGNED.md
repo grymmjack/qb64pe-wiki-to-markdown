@@ -119,11 +119,11 @@ br ~ h5 {
 <blockquote>
 
 
-* Datatype can be any of the following: [INTEGER](INTEGER.md) , [LONG](LONG.md) , [_BIT](BIT.md) , [_BYTE](BYTE.md) , [_INTEGER64](INTEGER64.md) , [_OFFSET](OFFSET.md)
-* [SINGLE](SINGLE.md) , [DOUBLE](DOUBLE.md) and [_FLOAT](FLOAT.md) variable types cannot be _UNSIGNED.
-* [_UNSIGNED](UNSIGNED.md) can be used in a [_DEFINE](DEFINE.md) statement to set undefined variable name first letters as all positive-only values.
+* Datatype can be any of the following: [INTEGER](INTEGER.md) , [LONG](LONG.md) , _BIT , _BYTE , _INTEGER64 , _OFFSET
+* [SINGLE](SINGLE.md) , [DOUBLE](DOUBLE.md) and _FLOAT variable types cannot be _UNSIGNED.
+* _UNSIGNED can be used in a _DEFINE statement to set undefined variable name first letters as all positive-only values.
 * Can also be used in [DIM](DIM.md) statements or subprocedure parameter definitions following [AS](AS.md) .
-* [_UNSIGNED](UNSIGNED.md) allows larger positive numerical variable value limits than signed ones.
+* _UNSIGNED allows larger positive numerical variable value limits than signed ones.
 * The unsigned variable type suffix used is the tilde (~) , right before the number's own type suffix: variableName~&
 
 </blockquote>
@@ -134,10 +134,10 @@ br ~ h5 {
 
 ```vb
 00000001 - unsigned & signed are both 1
-01111111 - unsigned & signed are both 127
-11111111 - unsigned is 255 but signed is -1
-11111110 - unsigned is 254 but signed is -2
-11111101 - unsigned is 253 but signed is -3
+                       01111111 - unsigned & signed are both 127
+                       11111111 - unsigned is 255 but signed is -1
+                       11111110 - unsigned is 254 but signed is -2
+                       11111101 - unsigned is 253 but signed is -3
 ```
   
 <br>
@@ -185,11 +185,11 @@ DIM n AS _UNSIGNED INTEGER
 DIM pn AS _UNSIGNED INTEGER
 LOCATE 3, 6: PRINT "Press Esc to exit loop"
 FOR n = 1 TO 80000
-_LIMIT 10000 ' 6.5 second loop
-LOCATE 12, 37: PRINT n ' display current value
-IF n > 0 THEN pn = n ' find highest value
-IF n = 0 THEN Count = Count + 1: LOCATE 14, 37: PRINT "Count:"; Count; "Max:"; pn
-IF INP(&H60) = 1 THEN EXIT FOR ' escape key exit
+ _LIMIT 10000 ' 6.5 second loop
+ LOCATE 12, 37: PRINT n ' display current value
+ IF n > 0 THEN pn = n ' find highest value
+ IF n = 0 THEN Count = Count + 1: LOCATE 14, 37: PRINT "Count:"; Count; "Max:"; pn
+ IF INP(&H60) = 1 THEN EXIT FOR ' escape key exit
 NEXT n
 END
 ```
@@ -202,9 +202,9 @@ Press Esc to exit loop
 
 
 
-65462
+                          65462
 
-Count: 13 Max: 65535
+                         Count: 13 Max: 65535
 ```
   
 <br>
@@ -218,9 +218,9 @@ Count: 13 Max: 65535
 
 
 * DECLARE, [SUB](SUB.md) , [FUNCTION](FUNCTION.md)
-* [DIM](DIM.md) , [_DEFINE](DEFINE.md)
+* [DIM](DIM.md) , _DEFINE
 * [DEFSTR](DEFSTR.md) , [DEFLNG](DEFLNG.md) , [DEFINT](DEFINT.md) , [DEFSNG](DEFSNG.md) , [DEFDBL](DEFDBL.md)
-* [INTEGER](INTEGER.md) , [LONG](LONG.md) , [_INTEGER64](INTEGER64.md)
+* [INTEGER](INTEGER.md) , [LONG](LONG.md) , _INTEGER64
 * [ABS](ABS.md) , [SGN](SGN.md)
 * Variable Types
 </blockquote>

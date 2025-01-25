@@ -120,7 +120,7 @@ br ~ h5 {
 
 
 * Function returns the current program window's upper left corner column position on the desktop.
-* Use [_DESKTOPWIDTH](DESKTOPWIDTH.md) and [_DESKTOPHEIGHT](DESKTOPHEIGHT.md) to find the current Windows desktop resolution to adjust the position with [_SCREENMOVE](SCREENMOVE.md) .
+* Use _DESKTOPWIDTH and _DESKTOPHEIGHT to find the current Windows desktop resolution to adjust the position with _SCREENMOVE .
 * Keyword not supported in Linux or macOS versions
 
 </blockquote>
@@ -148,9 +148,9 @@ PRINT "Hello window!"
 <blockquote>
 
 
-* [_SCREENY](SCREENY.md)
-* [_SCREENIMAGE](SCREENIMAGE.md)
-* [_SCREENCLICK](SCREENCLICK.md)
-* [_SCREENPRINT](SCREENPRINT.md)
-* [_SCREENMOVE](SCREENMOVE.md)
+* _SCREENY
+* _SCREENIMAGE
+* _SCREENCLICK
+* _SCREENPRINT
+* _SCREENMOVE
 </blockquote>

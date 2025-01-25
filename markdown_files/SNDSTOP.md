@@ -119,7 +119,7 @@ br ~ h5 {
 <blockquote>
 
 
-* Sounds can be resumed using [_SNDPLAY](SNDPLAY.md) with the correct handle.
+* Sounds can be resumed using _SNDPLAY with the correct handle.
 
 </blockquote>
 
@@ -144,5 +144,5 @@ _SNDSTOP h&
 <blockquote>
 
 
-* [_SNDPAUSE](SNDPAUSE.md)
+* _SNDPAUSE
 </blockquote>

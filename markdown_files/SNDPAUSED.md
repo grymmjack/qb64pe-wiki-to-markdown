@@ -141,6 +141,6 @@ PRINT _SNDPAUSED(h&)
 <blockquote>
 
 
-* [_SNDPAUSE](SNDPAUSE.md) , [_SNDPLAY](SNDPLAY.md)
-* [_SNDSTOP](SNDSTOP.md)
+* _SNDPAUSE , _SNDPLAY
+* _SNDSTOP
 </blockquote>

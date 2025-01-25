@@ -119,16 +119,16 @@ br ~ h5 {
 <blockquote>
 
 
-* The value returned is a 32-bit [_UNSIGNED](UNSIGNED.md) [LONG](LONG.md) color value.
-* Return variable types must be [_UNSIGNED](UNSIGNED.md) [LONG](LONG.md) or resulting color may lose the [_BLUE](BLUE.md) value.
+* The value returned is a 32-bit _UNSIGNED [LONG](LONG.md) color value.
+* Return variable types must be _UNSIGNED [LONG](LONG.md) or resulting color may lose the _BLUE value.
 * red& specifies the red component intensity from 0 to 255.
 * green& specifies the green component intensity from 0 to 255.
 * blue& specifies the blue component intensity from 0 to 255.
 * alpha& specifies the alpha component transparency value from 0 (fully transparent) to 255 (opaque).
 * Alpha or intensity values outside of the valid range of 0 to 255 are clipped.
-* Returns [LONG](LONG.md) 32-bit hexadecimal values from &H00 00 00 00 to &HFF FF FF FF with varying [_ALPHA](ALPHA.md) transparency.
-* When [LONG](LONG.md) values are [PUT](PUT.md) to file, the ARGB values become BGRA. Use [LEFT&dollar;](LEFT&dollar;.md) ( [MKL&dollar;](MKL&dollar;.md) ( color32value~& ), 3) to place 3 colors.
-* NOTE: Default 32-bit backgrounds are clear black or [_RGBA](RGBA.md) (0, 0, 0, 0). Use [CLS](CLS.md) to make the black opaque.
+* Returns [LONG](LONG.md) 32-bit hexadecimal values from &H00 00 00 00 to &HFF FF FF FF with varying _ALPHA transparency.
+* When [LONG](LONG.md) values are [PUT](PUT.md) to file, the ARGB values become BGRA. Use [LEFT\$](LEFT\$.md) ( [MKL\$](MKL\$.md) ( color32value~& ), 3) to place 3 colors.
+* NOTE: Default 32-bit backgrounds are clear black or _RGBA (0, 0, 0, 0). Use [CLS](CLS.md) to make the black opaque.
 
 </blockquote>
 
@@ -148,18 +148,18 @@ _DISPLAY
 
 ' Fade in
 FOR i% = 255 TO 0 STEP -5
-_LIMIT 20                          'control fade speed
-_PUTIMAGE (0, 0)-(600, 400), img&
-LINE (0, 0)-(600, 400), _RGBA(0, 0, 0, i%), BF 'decrease black box transparency
-_DISPLAY
+ _LIMIT 20                          'control fade speed
+ _PUTIMAGE (0, 0)-(600, 400), img&
+ LINE (0, 0)-(600, 400), _RGBA(0, 0, 0, i%), BF 'decrease black box transparency
+ _DISPLAY
 NEXT
 
 ' Fade out
 FOR i% = 0 TO 255 STEP 5
-_LIMIT 20                          'control fade speed
-_PUTIMAGE (0, 0)-(600, 400), img&
-LINE (0, 0)-(600, 400), _RGBA(0, 0, 0, i%), BF 'increase black box transparency
-_DISPLAY
+ _LIMIT 20                          'control fade speed
+ _PUTIMAGE (0, 0)-(600, 400), img&
+ LINE (0, 0)-(600, 400), _RGBA(0, 0, 0, i%), BF 'increase black box transparency
+ _DISPLAY
 NEXT
 END
 ```
@@ -174,9 +174,9 @@ END
 <blockquote>
 
 
-* [_RGB32](RGB32.md) , [_RGBA](RGBA.md) , [_RGB](RGB.md)
-* [_RED32](RED32.md) , [_GREEN32](GREEN32.md) , [_BLUE32](BLUE32.md)
-* [HEX&dollar;](HEX&dollar;.md) 32 Bit Values , [POINT](POINT.md)
+* _RGB32 , _RGBA , _RGB
+* _RED32 , _GREEN32 , _BLUE32
+* [HEX\$](HEX\$.md) 32 Bit Values , [POINT](POINT.md)
 * SaveImage [SUB](SUB.md)
 * Hexadecimal Color Values
 </blockquote>

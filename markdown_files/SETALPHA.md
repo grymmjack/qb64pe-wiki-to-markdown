@@ -121,7 +121,7 @@ br ~ h5 {
 
 * alpha& is the new alpha level to set, ranging from 0 (transparent) to 255 (opaque).
 * color1& designates the 32-bit [LONG](LONG.md) color value or range of color values color1& [TO](TO.md) colour2& to set the transparency.
-* If no color value or range of colors is given, the entire image's alpha is changed, including any [_CLEARCOLOR](CLEARCOLOR.md) settings.
+* If no color value or range of colors is given, the entire image's alpha is changed, including any _CLEARCOLOR settings.
 * If imageHandle& is omitted, it is assumed to be the current write page or destination image.
 </blockquote>
 
@@ -133,11 +133,11 @@ br ~ h5 {
 * In the first syntax, the alpha level of all pixels is set to alpha& .
 * In the second syntax, the alpha level of all pixels matching the color color1& is set to alpha& .
 * In the third syntax, the alpha level of all pixels with red, green, blue and alpha channels in the range [ color1& [TO](TO.md) color2& ] are set.
-* The [_ALPHA](ALPHA.md) setting makes a 32-bit color transparent, opaque or something in between. Zero is clear and 255 totally blocks underlying images. Use it to see through backgrounds or image colors.
+* The _ALPHA setting makes a 32-bit color transparent, opaque or something in between. Zero is clear and 255 totally blocks underlying images. Use it to see through backgrounds or image colors.
 * If alpha& is outside that range, an illegal function call error will occur.
 * If the image specified by imageHandle& uses a palette, an invalid handle error will occur.
 * If imageHandle& is an invalid handle, an illegal function call error will occur.
-* NOTE: 32-bit [_NEWIMAGE](NEWIMAGE.md) screen page backgrounds are transparent black or [_ALPHA](ALPHA.md) 0. Use [_DONTBLEND](DONTBLEND.md) or [CLS](CLS.md) for opaque.
+* NOTE: 32-bit _NEWIMAGE screen page backgrounds are transparent black or _ALPHA 0. Use _DONTBLEND or [CLS](CLS.md) for opaque.
 
 </blockquote>
 
@@ -164,14 +164,14 @@ _DEST main
 a& = 0
 d = 1
 DO
-_LIMIT 10 'regulate speed of fade in and out
-CLS ', _RGB(255, 0, 0)
-a& = a& + d
-IF a& = 255 THEN d = -d
-_SETALPHA a&, 0 TO topclr~&, Image1& 'affects all colors below bright white
-_PUTIMAGE (0, 342), Image1&
-LOCATE 1, 1: PRINT "Alpha: "; a&
-_DISPLAY
+ _LIMIT 10 'regulate speed of fade in and out
+ CLS ', _RGB(255, 0, 0)
+ a& = a& + d
+ IF a& = 255 THEN d = -d
+ _SETALPHA a&, 0 TO topclr~&, Image1& 'affects all colors below bright white
+ _PUTIMAGE (0, 342), Image1&
+ LOCATE 1, 1: PRINT "Alpha: "; a&
+ _DISPLAY
 LOOP UNTIL a& = 0
 ```
   
@@ -185,10 +185,10 @@ LOOP UNTIL a& = 0
 <blockquote>
 
 
-* [_ALPHA](ALPHA.md) , [_ALPHA32](ALPHA32.md)
-* [_RGBA](RGBA.md) , [_RGBA32](RGBA32.md)
-* [_CLEARCOLOR](CLEARCOLOR.md)
-* [_CLEARCOLOR](CLEARCOLOR.md) (function)
-* [_BLEND](BLEND.md) , [_DONTBLEND](DONTBLEND.md)
+* _ALPHA , _ALPHA32
+* _RGBA , _RGBA32
+* _CLEARCOLOR
+* _CLEARCOLOR (function)
+* _BLEND , _DONTBLEND
 * [COLOR](COLOR.md) , Images
 </blockquote>

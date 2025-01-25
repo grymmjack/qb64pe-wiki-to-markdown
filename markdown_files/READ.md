@@ -124,10 +124,10 @@ br ~ h5 {
 ```vb
 DIM A(10) AS SINGLE
 FOR I = 1 TO 10
-READ A(I)
+  READ A(I)
 NEXT I
 FOR J = 1 TO 10
-PRINT A(J);
+  PRINT A(J);
 NEXT
 END
 
@@ -152,7 +152,7 @@ DATA 5.08, 5.55, 4.00, 3.16, 3.37
 ```vb
 PRINT " CITY ", " STATE  ", " ZIP"
 PRINT STRING$(30, "-")  'divider
-READ C$, S$, Z&
+  READ C$, S$, Z&
 PRINT C$, S$, Z&
 
 DATA "DENVER,", COLORADO, 80211
@@ -177,5 +177,5 @@ DENVER,     COLORADO     80211
 
 
 * [DATA](DATA.md) , [RESTORE](RESTORE.md)
-* [&dollar;EMBED](&dollar;EMBED.md) . [_EMBEDDED&dollar;](EMBEDDED&dollar;.md)
+* [\$EMBED](\$EMBED.md) . _EMBEDDED$
 </blockquote>

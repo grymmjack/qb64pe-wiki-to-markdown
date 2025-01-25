@@ -149,8 +149,8 @@ br ~ h5 {
 <blockquote>
 
 
-* [OPEN](OPEN.md) , [OPEN](OPEN.md) [COM](COM.md)
-* [_OPENCLIENT](OPENCLIENT.md) , [_OPENHOST](OPENHOST.md)
-* [_OPENCONNECTION](OPENCONNECTION.md)
-* [_SNDCLOSE](SNDCLOSE.md)
+* [OPEN](OPEN.md) , [OPEN](OPEN.md) COM
+* _OPENCLIENT , _OPENHOST
+* _OPENCONNECTION
+* _SNDCLOSE
 </blockquote>

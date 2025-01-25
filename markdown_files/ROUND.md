@@ -119,7 +119,7 @@ br ~ h5 {
 <blockquote>
 
 
-* Can round [SINGLE](SINGLE.md) , [DOUBLE](DOUBLE.md) or [_FLOAT](FLOAT.md) floating decimal point parameter values.
+* Can round [SINGLE](SINGLE.md) , [DOUBLE](DOUBLE.md) or _FLOAT floating decimal point parameter values.
 * Can be used when numerical values exceed the limits of [CINT](CINT.md) or [CLNG](CLNG.md) .
 * Rounding is done to the closest even integer value. The same as QBasic does with integer division .
 

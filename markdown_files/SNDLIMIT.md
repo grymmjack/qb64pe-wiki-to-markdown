@@ -119,7 +119,7 @@ br ~ h5 {
 <blockquote>
 
 
-* The handle& variable name is created using the [_SNDOPEN](SNDOPEN.md) function from a loaded sound file.
+* The handle& variable name is created using the _SNDOPEN function from a loaded sound file.
 * numberOfSeconds! is a [SINGLE](SINGLE.md) value of seconds that the sound will play.
 </blockquote>
 
@@ -152,5 +152,5 @@ _SNDLIMIT h&, 5.5
 <blockquote>
 
 
-* [_SNDOPEN](SNDOPEN.md) , [_SNDLEN](SNDLEN.md)
+* _SNDOPEN , _SNDLEN
 </blockquote>

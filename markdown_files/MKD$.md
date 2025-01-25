@@ -119,10 +119,10 @@ br ~ h5 {
 <blockquote>
 
 
-* doublePrecisionVariableOrLiteral# is converted to eight ASCII characters. To see this in action, try [PRINT](PRINT.md) MKD$(12345678) .
+* doublePrecisionVariableOrLiteral# is converted to eight [ASCII](ASCII.md) characters. To see this in action, try [PRINT](PRINT.md) MKD$(12345678) .
 * [DOUBLE](DOUBLE.md) values can range up to 15 decimal point digits. Decimal point accuracy depends on whole value places taken.
 * The string value can be converted back to a [DOUBLE](DOUBLE.md) numerical value using [CVD](CVD.md) .
-* [DOUBLE](DOUBLE.md) numerical variable values [PUT](PUT.md) into a [BINARY](BINARY.md) file are automatically placed as an [MKD&dollar;](MKD&dollar;.md) ASCII string value.
+* [DOUBLE](DOUBLE.md) numerical variable values [PUT](PUT.md) into a [BINARY](BINARY.md) file are automatically placed as an [MKD\$](MKD\$.md) [ASCII](ASCII.md) string value.
 
 </blockquote>
 
@@ -138,7 +138,7 @@ br ~ h5 {
 <blockquote>
 
 
-* [MKI&dollar;](MKI&dollar;.md) , [MKS&dollar;](MKS&dollar;.md) , [MKL&dollar;](MKL&dollar;.md)
+* [MKI\$](MKI\$.md) , [MKS\$](MKS\$.md) , [MKL\$](MKL\$.md)
 * [CVD](CVD.md) , [CVI](CVI.md) , [CVS](CVS.md) , [CVL](CVL.md)
-* [_MK&dollar;](MK&dollar;.md) , [_CV](CV.md)
+* _MK$ , _CV
 </blockquote>

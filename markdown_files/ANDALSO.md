@@ -120,9 +120,11 @@ br ~ h5 {
 
 
 * A logical operation is said to be short-circuiting if the compiled code can bypass the evaluation of one expression depending on the result of another expression.
-* If the result of the first expression evaluated determines the final result of the operation, there is no need to evaluate the second expression, because it cannot change the final result.
-* Short-circuiting can improve performance if the bypassed expression is complex, or if it involves procedure calls.
-* If both expressions evaluate to true, result is true.
+* Short-circuiting can improve performance if the bypassed expression is complex, or if it involves procedure ( [SUB](SUB.md) or [FUNCTION](FUNCTION.md) ) calls.
+* If the result of the first expression evaluated determines the final result of the operation, there is no need to evaluate the second expression, because it cannot change the final result. E.g. if the first expression is already false, then the second expression can't change the result anymore, it will always remain false, even if the second expression would be true. Hence, the second expression is irrelevant and never evaluated, if the first one is already false.
+* Note that any procedures involved in the second expression are not called , if the first expression is false. This behavior is intended and the reason for the better performance, but it may cause unexpected failures if you're not aware of it.
+* In fact, if any procedures in the second expression must be called regardless of the truth of the first expression, then you must use the regular [AND](AND.md) instead.
+* Only if both expressions evaluate to true, then the result is true too.
 
 </blockquote>
 
@@ -130,14 +132,11 @@ br ~ h5 {
 
 <blockquote>
 
-
-
-##### Example: AND versus _ANDALSO
 ```vb
 DIM AS LONG index, values(1 TO 10), v
 
 FOR index = 1 TO 10
-values(index) = RND * 255
+   values(index) = RND * 255
 NEXT index
 
 ' value of index is now > 10
@@ -146,9 +145,9 @@ PRINT "Trying _ANDALSO"
 
 ' _ANDALSO performs short-circuiting logical conjunction and hence the GetArrayValue check is completely bypassed
 IF index >= 1 _ANDALSO index <= 10 _ANDALSO GetArrayValue(values(), index, v) THEN
-PRINT "_ANDALSO: Value ="; v
+   PRINT "_ANDALSO: Value ="; v
 ELSE
-PRINT "_ANDALSO: Outside range."
+   PRINT "_ANDALSO: Outside range."
 END IF
 
 PRINT
@@ -156,16 +155,16 @@ PRINT "Trying AND"
 
 ' AND does not performs short-circuiting logical conjunction and hence QB64-PE will throw a runtime error: Subscript out of range
 IF index >= 1 AND index <= 10 AND GetArrayValue(values(), index, v) THEN
-PRINT "AND: Value ="; v
+   PRINT "AND: Value ="; v
 ELSE
-PRINT "AND: Outside range."
+   PRINT "AND: Outside range."
 END IF
 
 END
 
 FUNCTION GetArrayValue%% (arr() AS LONG, idx AS LONG, value AS LONG)
-value = arr(idx)
-GetArrayValue = -1 ' return true
+   value = arr(idx)
+   GetArrayValue = -1 ' return true
 END FUNCTION
 ```
   
@@ -180,10 +179,10 @@ END FUNCTION
 
 
 * Featured in our "Keyword of the Day" series
-* [_BIT](BIT.md) , &B , [_BYTE](BYTE.md)
-* [AND](AND.md) , [XOR](XOR.md) , [OR](OR.md)
-* [AND](AND.md) (boolean) , [XOR](XOR.md) (boolean) , [OR](OR.md) (boolean)
-* [_ORELSE](ORELSE.md) , [_NEGATE](NEGATE.md)
-* Binary , Boolean
+* _BIT , &B , _BYTE
+* [AND](AND.md) , XOR , [OR](OR.md)
+* [AND](AND.md) (boolean) , XOR (boolean) , [OR](OR.md) (boolean)
+* _ORELSE , _NEGATE , _IIF
+* Binary , [Boolean](Boolean.md)
 * Mathematical Operations
 </blockquote>

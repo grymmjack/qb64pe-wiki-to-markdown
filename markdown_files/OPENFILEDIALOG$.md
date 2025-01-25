@@ -102,7 +102,7 @@ br ~ h5 {
 ---
 <blockquote>
 
-### The _OPENFILEDIALOG$ function displays a standard dialog box that prompts the user to open a file. The returned string is an empty string ( "" ) if the user cancelled. The returned string will contain file paths delimited using "|" if allowMultipleSelects& is passed as -1 (true) and multiple files are selected by the user.
+### The _OPENFILEDIALOG$ function displays a standard dialog box that prompts the user to open a file. The returned string is an empty string ( "" ) if the user cancelled. The returned string will contain file paths delimited using "|" if allowMultipleSelects& is passed as true(-1) and multiple files are selected by the user.
 
 </blockquote>
 
@@ -123,7 +123,7 @@ br ~ h5 {
 * defaultPathAndFile$ is the default path that will be used by the dialog box if not changed by the user
 * filterPatterns$ are the file filters separated using "|" (e.g., "*.png|*.jpg|*.gif")
 * singleFilterDescription$ is the single filter description (e.g., "Image files")
-* allowMultipleSelects& can be 0 (false) or -1 (true) if multiple file selection is to be allowed. If omitted, then this defaults to 0 (false)
+* allowMultipleSelects& can be false(0) or true(-1) if multiple file selection is to be allowed. If omitted, then this defaults to false(0)
 </blockquote>
 
 #### DESCRIPTION
@@ -156,11 +156,11 @@ IF audiofiles$ <> "" THEN _MESSAGEBOX "Information", "You selected " + audiofile
 <blockquote>
 
 
-* [_NOTIFYPOPUP](NOTIFYPOPUP.md)
-* [_MESSAGEBOX](MESSAGEBOX.md)
-* [_MESSAGEBOX](MESSAGEBOX.md) (function)
-* [_INPUTBOX&dollar;](INPUTBOX&dollar;.md)
-* [_SELECTFOLDERDIALOG&dollar;](SELECTFOLDERDIALOG&dollar;.md)
-* [_COLORCHOOSERDIALOG](COLORCHOOSERDIALOG.md)
-* [_SAVEFILEDIALOG&dollar;](SAVEFILEDIALOG&dollar;.md)
+* _NOTIFYPOPUP
+* _MESSAGEBOX
+* _MESSAGEBOX (function)
+* _INPUTBOX$
+* _SELECTFOLDERDIALOG$
+* _COLORCHOOSERDIALOG
+* _SAVEFILEDIALOG$
 </blockquote>

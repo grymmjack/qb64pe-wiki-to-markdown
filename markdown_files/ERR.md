@@ -144,9 +144,9 @@ handler:
 PRINT ERR, _ERRORLINE
 BEEP
 IF ERR = 9 THEN
-PRINT "The program has encountered an error and needs to close! Press a key!"
-K$ = INPUT$(1)
-SYSTEM
+ PRINT "The program has encountered an error and needs to close! Press a key!"
+ K$ = INPUT$(1)
+ SYSTEM
 END IF
 RESUME NEXT               'RESUME can only be used in error handlers
 ```
@@ -163,7 +163,7 @@ RESUME NEXT               'RESUME can only be used in error handlers
 
 * [ON](ON.md) [ERROR](ERROR.md) , [RESUME](RESUME.md)
 * [ERL](ERL.md)
-* [_ERRORLINE](ERRORLINE.md) , [_INCLERRORLINE](INCLERRORLINE.md) , [_INCLERRORFILE&dollar;](INCLERRORFILE&dollar;.md)
+* _ERRORLINE , _INCLERRORLINE , _INCLERRORFILE$
 * [ERROR](ERROR.md)
 * [ERROR](ERROR.md) Codes
 </blockquote>

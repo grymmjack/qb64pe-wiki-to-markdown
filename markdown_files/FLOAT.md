@@ -102,15 +102,7 @@ br ~ h5 {
 ---
 <blockquote>
 
-### _FLOAT numerical values offer the maximum floating-point decimal precision available using QB64 .
-
-</blockquote>
-
-#### SYNTAX
-
-<blockquote>
-
-`DIM variable AS _FLOAT`
+### _FLOAT variables are 80-bits floating point numerical values up to nineteen digits precision ( see IEEE 754 Extended precision ). This variable type is new to QB64(PE), it is not available in QuickBASIC/QBasic.
 
 </blockquote>
 
@@ -119,15 +111,12 @@ br ~ h5 {
 <blockquote>
 
 
-* QB64 always allocates 32 bytes to store this value.
-* It is safe to assume this value is at least as precise as [DOUBLE](DOUBLE.md) .
-* Under the current implementation it is stored in a 10-byte floating point variable.
-* [_FLOAT](FLOAT.md) variables can also use the ## variable name type suffix.
-* Values returned may be expressed using exponential or scientific notation using E for [SINGLE](SINGLE.md) or D for [DOUBLE](DOUBLE.md) precision.
-* According to IEEE-754 this can store a value of up to 1.1897E+4932 compared to a [DOUBLE](DOUBLE.md) which goes up to 1.7976E+308.
-* Floating decimal point numerical values cannot be [_UNSIGNED](UNSIGNED.md) .
-* Values can be converted to 32 byte ASCII strings using [_MK&dollar;](MK&dollar;.md) and back with [_CV](CV.md) .
-* When a variable has not been assigned or has no type suffix, the value defaults to [SINGLE](SINGLE.md) .
+* Values can range up to 19 digits. Decimal point accuracy depends on whole value places taken.
+* The suffix ## can also be placed after a literal numerical value to designate the value as _FLOAT .
+* Values may be given as real number ( 123.456 ) or scientific notation using F as exponent marker ( 1.23456F+2 ).
+* [PRINT](PRINT.md) usually takes the shorter of both notations (depending on the value) to output the numbers. In alternative you may use [PRINT](PRINT.md) USING to designate your desired output format.
+* Floating decimal point numerical values cannot be _UNSIGNED .
+* Values can be converted to 32-bytes [STRING](STRING.md) values using _MK$ ( _FLOAT , value) and back to numbers with _CV ( _FLOAT , value$).
 
 </blockquote>
 
@@ -143,9 +132,9 @@ br ~ h5 {
 <blockquote>
 
 
-* [DOUBLE](DOUBLE.md) , [SINGLE](SINGLE.md)
-* [_MK&dollar;](MK&dollar;.md) , [_CV](CV.md)
-* [_DEFINE](DEFINE.md) , [DIM](DIM.md)
-* CURRENCY
+* [SINGLE](SINGLE.md) , [DOUBLE](DOUBLE.md)
+* [DIM](DIM.md) , _DEFINE
+* _MK$ , _CV
+* [LEN](LEN.md) , Constants
 * Variable Types
 </blockquote>

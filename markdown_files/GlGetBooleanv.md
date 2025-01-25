@@ -174,15 +174,15 @@ Table 2: Relations between the OpenGL variable types vs. C/C++ and QB64.
 │              │                │         array element)                   │
 └──────────────┴────────────────┴──────────────────────────────────────────┘
 Note: If a parameter has an asterisk (*) in front, then it's a pointer to
-the designated OpenGL variable type, rather than a value of that type.
-Those must be passed using the _OFFSET(...) notation.
+      the designated OpenGL variable type, rather than a value of that type.
+      Those must be passed using the _OFFSET(...) notation.
 
 E.g.  GLuint *anyParam is actually the offset of a _UNSIGNED LONG (~&)
-variable or array, which must be passed as _OFFSET(anyVar~&) or
-_OFFSET(anyArr~&()) respectively.
+      variable or array, which must be passed as _OFFSET(anyVar~&) or
+      _OFFSET(anyArr~&()) respectively.
 
-(1)  This type is regularly only used for pointers (with asterisk (*)) to
-any byte sized memory data, hence _BYTE or fixed length strings.
+ (1)  This type is regularly only used for pointers (with asterisk (*)) to
+      any byte sized memory data, hence _BYTE or fixed length strings.
 ```
   
 <br>
@@ -196,23 +196,23 @@ any byte sized memory data, hence _BYTE or fixed length strings.
 
 
 * [SUB](SUB.md) _GL
-* [_glAccum](glAccum.md) , [_glAlphaFunc](glAlphaFunc.md) , [_glBegin](glBegin.md) , [_glBlendFunc](glBlendFunc.md)
-* [_glCallList](glCallList.md) , [_glClearAccum](glClearAccum.md) , [_glClearColor](glClearColor.md) , [_glClearDepth](glClearDepth.md)
-* [_glClearIndex](glClearIndex.md) , [_glClearStencil](glClearStencil.md) , [_glClipPlane](glClipPlane.md) , _glColor
-* [_glColorMask](glColorMask.md) , [_glColorMaterial](glColorMaterial.md) , [_glCullFace](glCullFace.md) , [_glDepthFunc](glDepthFunc.md)
-* [_glDepthMask](glDepthMask.md) , [_glDepthRange](glDepthRange.md) , [_glDrawBuffer](glDrawBuffer.md) , [_glEdgeFlag](glEdgeFlag.md)
-* [_glEnd](glEnd.md) , _glFog , [_glFrontFace](glFrontFace.md) , [_glGetClipPlane](glGetClipPlane.md)
-* [_glGetError](glGetError.md) , _glGetLight , _glGetMap , _glGetMaterial
-* _glGetPixelMap , [_glGetPolygonStipple](glGetPolygonStipple.md) , [_glGetString](glGetString.md) , _glGetTexEnv
-* _glGetTexGen , [_glGetTexImage](glGetTexImage.md) , _glGetTexLevelParameter , _glGetTexParameter
-* [_glHint](glHint.md) , _glIndex , [_glIndexMask](glIndexMask.md) , [_glIsEnabled](glIsEnabled.md)
-* _glLight , _glLightModel , [_glLineStipple](glLineStipple.md) , [_glLineWidth](glLineWidth.md)
-* [_glListBase](glListBase.md) , [_glLogicOp](glLogicOp.md) , _glMap1 , _glMap2
-* _glMapGrid , [_glMatrixMode](glMatrixMode.md) , [_glNewList](glNewList.md) , _glNormal
-* _glPixelMap , _glPixelStore , _glPixelTransfer , [_glPixelZoom](glPixelZoom.md)
-* [_glPointSize](glPointSize.md) , [_glPolygonMode](glPolygonMode.md) , [_glPolygonStipple](glPolygonStipple.md) , [_glPushAttrib](glPushAttrib.md)
-* [_glPushMatrix](glPushMatrix.md) , [_glPushName](glPushName.md) , _glRasterPos , [_glReadPixels](glReadPixels.md)
-* [_glScissor](glScissor.md) , [_glShadeModel](glShadeModel.md) , [_glStencilFunc](glStencilFunc.md) , [_glStencilMask](glStencilMask.md)
-* [_glStencilOp](glStencilOp.md) , _glTexCoord , _glTexEnv , _glTexGen
-* [_glTexImage1D](glTexImage1D.md) , [_glTexImage2D](glTexImage2D.md) , [_glViewport](glViewport.md)
+* _glAccum , _glAlphaFunc , _glBegin , _glBlendFunc
+* _glCallList , _glClearAccum , _glClearColor , _glClearDepth
+* _glClearIndex , _glClearStencil , _glClipPlane , _glColor
+* _glColorMask , _glColorMaterial , _glCullFace , _glDepthFunc
+* _glDepthMask , _glDepthRange , _glDrawBuffer , _glEdgeFlag
+* _glEnd , _glFog , _glFrontFace , _glGetClipPlane
+* _glGetError , _glGetLight , _glGetMap , _glGetMaterial
+* _glGetPixelMap , _glGetPolygonStipple , _glGetString , _glGetTexEnv
+* _glGetTexGen , _glGetTexImage , _glGetTexLevelParameter , _glGetTexParameter
+* _glHint , _glIndex , _glIndexMask , _glIsEnabled
+* _glLight , _glLightModel , _glLineStipple , _glLineWidth
+* _glListBase , _glLogicOp , _glMap1 , _glMap2
+* _glMapGrid , _glMatrixMode , _glNewList , _glNormal
+* _glPixelMap , _glPixelStore , _glPixelTransfer , _glPixelZoom
+* _glPointSize , _glPolygonMode , _glPolygonStipple , _glPushAttrib
+* _glPushMatrix , _glPushName , _glRasterPos , _glReadPixels
+* _glScissor , _glShadeModel , _glStencilFunc , _glStencilMask
+* _glStencilOp , _glTexCoord , _glTexEnv , _glTexGen
+* _glTexImage1D , _glTexImage2D , _glViewport
 </blockquote>

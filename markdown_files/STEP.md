@@ -123,7 +123,7 @@ br ~ h5 {
 ##### Example: Stepping down 2 in a FOR counter loop.
 ```vb
 FOR...NEXT i = 10 TO 0 STEP -2
-PRINT i;
+ PRINT i;
 NEXT
 ```
   
@@ -157,7 +157,7 @@ PAINT STEP(0, 0), 13, 12
 <blockquote>
 
 
-* FOR...NEXT
+* [FOR...NEXT](FOR...NEXT.md)
 * [DRAW](DRAW.md)
 * [LINE](LINE.md) , [CIRCLE](CIRCLE.md) , [PSET](PSET.md) , [PAINT](PAINT.md)
 </blockquote>

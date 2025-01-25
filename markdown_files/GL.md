@@ -139,17 +139,17 @@ DIM allowGL AS _BYTE
 allowGL = -1 'sets allowGL to true so SUB _GL can run
 
 DO
-_LIMIT 1 'runs the main loop at 1 cycle per second
-'notice how the main loop doesn't do anything, as SUB _GL will be running
-'continuously.
+   _LIMIT 1 'runs the main loop at 1 cycle per second
+   'notice how the main loop doesn't do anything, as SUB _GL will be running
+   'continuously.
 LOOP
 
 SUB _GL
-IF NOT allowGL THEN EXIT SUB 'used to bypass running the code below until
-'                             startup routines are done in the main module
+   IF NOT allowGL THEN EXIT SUB 'used to bypass running the code below until
+   '                             startup routines are done in the main module
 
-'OpenGL code starts here
-'The code in this area will be run automatically at ~60fps
+   'OpenGL code starts here
+   'The code in this area will be run automatically at ~60fps
 END SUB
 ```
   
@@ -164,6 +164,6 @@ END SUB
 
 
 * List of OpenGL commands All commands in the list are valid. For those without a wiki page, usage follows OpenGL standards.
-* [_GLRENDER](GLRENDER.md)
+* _GLRENDER
 * [SUB](SUB.md)
 </blockquote>

@@ -120,9 +120,9 @@ br ~ h5 {
 
 
 * [SCREEN](SCREEN.md) 0 returns the [INTEGER](INTEGER.md) vertical text row position (from build 20170817/62 onward); older versions return a [SINGLE](SINGLE.md) vertical text row position. Use [INTEGER](INTEGER.md) variables to avoid floating decimal returns.
-* Graphic screen modes 1, 2 and 7 to 13 and [_NEWIMAGE](NEWIMAGE.md) 32 bit return the [INTEGER](INTEGER.md) pixel columns.
-* To calculate text rows in graphic modes divide the return by 16 or the [_FONTHEIGHT](FONTHEIGHT.md) of [_FONT](FONT.md) characters.
-* [_MOUSEINPUT](MOUSEINPUT.md) must be used to detect any changes in the mouse position and is required for any coordinate returns.
+* Graphic screen modes 1, 2 and 7 to 13 and _NEWIMAGE 32 bit return the [INTEGER](INTEGER.md) pixel columns.
+* To calculate text rows in graphic modes divide the return by 16 or the _FONTHEIGHT of _FONT characters.
+* _MOUSEINPUT must be used to detect any changes in the mouse position and is required for any coordinate returns.
 
 </blockquote>
 
@@ -138,29 +138,29 @@ minX = 20: maxX = 60: minY = 10: maxY = 24
 selection = 0 'the screen Y coordinate of the previously highlighted item
 FOR i% = 1 TO 25: LOCATE i%, 40: PRINT i%;: NEXT
 DO: _LIMIT 100
-IF _MOUSEINPUT THEN
-'Un-highlight any selected row
-IF selection THEN selectRow selection, minX, maxX, 0
-x = _MOUSEX
-y = _MOUSEY
-IF x >= minX AND x <= maxX AND y >= minY AND y <= maxY THEN
-selection = y
-ELSE
-selection = 0
-END IF
-'Highlight any selected row
-IF selection THEN SelectRow selection, minX, maxX, 2
-IF _MOUSEBUTTON(1) THEN LOCATE 1, 2: PRINT x, y, selection
-END IF
+ IF _MOUSEINPUT THEN
+   'Un-highlight any selected row
+   IF selection THEN selectRow selection, minX, maxX, 0
+   x = _MOUSEX
+   y = _MOUSEY
+   IF x >= minX AND x <= maxX AND y >= minY AND y <= maxY THEN
+     selection = y
+   ELSE
+     selection = 0
+   END IF
+   'Highlight any selected row
+   IF selection THEN SelectRow selection, minX, maxX, 2
+   IF _MOUSEBUTTON(1) THEN LOCATE 1, 2: PRINT x, y, selection
+ END IF
 LOOP UNTIL INKEY$ <> ""
 
 SUB SelectRow (y, x1, x2, col)
 DEF SEG = &HB800
 addr& = (x1 - 1 + (y - 1) * _WIDTH) * 2 + 1
 FOR x = x1 TO x2
-oldCol = PEEK(addr&) AND &B10001111   ' Mask foreground color and blink bit
-POKE addr&, oldCol OR ((col AND &B111) * &B10000) ' Apply background color
-addr& = addr& + 2
+ oldCol = PEEK(addr&) AND &B10001111   ' Mask foreground color and blink bit
+ POKE addr&, oldCol OR ((col AND &B111) * &B10000) ' Apply background color
+ addr& = addr& + 2
 NEXT
 END SUB
 ```
@@ -175,9 +175,9 @@ END SUB
 <blockquote>
 
 
-* [_MOUSEX](MOUSEX.md) , [_MOUSEBUTTON](MOUSEBUTTON.md) , [_MOUSEWHEEL](MOUSEWHEEL.md)
-* [_MOUSEINPUT](MOUSEINPUT.md) , [_MOUSEMOVE](MOUSEMOVE.md)
-* [_MOUSESHOW](MOUSESHOW.md) , [_MOUSEHIDE](MOUSEHIDE.md)
-* [_MOUSEMOVEMENTX](MOUSEMOVEMENTX.md) , [_MOUSEMOVEMENTY](MOUSEMOVEMENTY.md)
+* _MOUSEX , _MOUSEBUTTON , _MOUSEWHEEL
+* _MOUSEINPUT , _MOUSEMOVE
+* _MOUSESHOW , _MOUSEHIDE
+* _MOUSEMOVEMENTX , _MOUSEMOVEMENTY
 * Controller Devices
 </blockquote>

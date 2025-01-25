@@ -124,10 +124,10 @@ br ~ h5 {
 <blockquote>
 
 
-* Comma
-* [PRINT](PRINT.md) , [PRINT](PRINT.md) [USING](USING.md)
+* [Comma](Comma.md)
+* [PRINT](PRINT.md) , [PRINT](PRINT.md) USING
 * [WRITE](WRITE.md)
 * [INPUT](INPUT.md) , [LINE](LINE.md) [INPUT](INPUT.md)
-* [STR&dollar;](STR&dollar;.md)
+* [STR\$](STR\$.md)
 * [VAL](VAL.md)
 </blockquote>

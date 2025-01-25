@@ -119,8 +119,8 @@ br ~ h5 {
 <blockquote>
 
 
-* rgbaColor& is the 32-bit RGBA color value to retrieve the green component intensity value from.
-* RGBA color values are returned by the [_PALETTECOLOR](PALETTECOLOR.md) , [POINT](POINT.md) , [_RGB](RGB.md) , [_RGB32](RGB32.md) , [_RGBA](RGBA.md) or [_RGBA32](RGBA32.md) functions.
+* rgbaColor& is the 32-bit [RGBA](RGBA.md) color value to retrieve the green component intensity value from.
+* [RGBA](RGBA.md) color values are returned by the _PALETTECOLOR , [POINT](POINT.md) , _RGB , _RGB32 , _RGBA or _RGBA32 functions.
 * [LONG](LONG.md) intensity values returned range from 0 (no intensity, not present) to 255 (full intensity).
 
 </blockquote>
@@ -138,6 +138,6 @@ br ~ h5 {
 
 
 * Featured in our "Keyword of the Day" series
-* [_RED32](RED32.md) , [_BLUE32](BLUE32.md)
-* [_RGB32](RGB32.md) , [_GREEN](GREEN.md)
+* _RED32 , _BLUE32
+* _RGB32 , _GREEN
 </blockquote>

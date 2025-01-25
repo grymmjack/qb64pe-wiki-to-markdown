@@ -120,8 +120,8 @@ br ~ h5 {
 
 
 * The function returns -1 if a program screen resize was attempted by the user.
-* After the function returns -1, [_RESIZEWIDTH](RESIZEWIDTH.md) and [_RESIZEHEIGHT](RESIZEHEIGHT.md) can return the new requested dimensions in pixels.
-* The [&dollar;RESIZE](&dollar;RESIZE.md) :ON metacommand must be used so the program is created with a user resizable window.
+* After the function returns -1, _RESIZEWIDTH and _RESIZEHEIGHT can return the new requested dimensions in pixels.
+* The [\$RESIZE](\$RESIZE.md) :ON metacommand must be used so the program is created with a user resizable window.
 
 </blockquote>
 
@@ -141,21 +141,21 @@ SCREEN s&
 bee& = _LOADIMAGE("qb64_trans.png") 'any image
 
 DO
-IF _RESIZE THEN
-oldimage& = s&
-s& = _NEWIMAGE(_RESIZEWIDTH, _RESIZEHEIGHT, 32)
-SCREEN s&
-_FREEIMAGE oldimage&
-END IF
+   IF _RESIZE THEN
+       oldimage& = s&
+       s& = _NEWIMAGE(_RESIZEWIDTH, _RESIZEHEIGHT, 32)
+       SCREEN s&
+       _FREEIMAGE oldimage&
+   END IF
 
-CLS
+   CLS
 
-'Center the QB64 bee image:
-x = _WIDTH / 2 - _WIDTH(bee&) / 2
-y = _HEIGHT / 2 - _HEIGHT(bee&) / 2
-_PUTIMAGE (x, y), bee&
-_DISPLAY
-_LIMIT 30
+   'Center the QB64 bee image:
+   x = _WIDTH / 2 - _WIDTH(bee&) / 2
+   y = _HEIGHT / 2 - _HEIGHT(bee&) / 2
+   _PUTIMAGE (x, y), bee&
+   _DISPLAY
+   _LIMIT 30
 LOOP
 ```
   
@@ -169,7 +169,7 @@ LOOP
 <blockquote>
 
 
-* [&dollar;RESIZE](&dollar;RESIZE.md)
-* [_RESIZE](RESIZE.md)
-* [_RESIZEWIDTH](RESIZEWIDTH.md) , [_RESIZEHEIGHT](RESIZEHEIGHT.md)
+* [\$RESIZE](\$RESIZE.md)
+* _RESIZE
+* _RESIZEWIDTH , _RESIZEHEIGHT
 </blockquote>

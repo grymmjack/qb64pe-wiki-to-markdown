@@ -114,7 +114,7 @@ br ~ h5 {
 * Allows programmer comments or temporary code removal.
 * [REM](REM.md) can also be used to "comment out" a line.
 * QBasic metacommands must be commented either with an apostrophe or [REM](REM.md) .
-* [&dollar;INCLUDE](&dollar;INCLUDE.md) requires an apostrophe before and after the included file name.
+* [\$INCLUDE](\$INCLUDE.md) requires an apostrophe before and after the included file name.
 
 </blockquote>
 
@@ -142,6 +142,6 @@ Print this....
 <blockquote>
 
 
-* Comma , Semicolon
+* [Comma](Comma.md) , [Semicolon](Semicolon.md)
 * [REM](REM.md)
 </blockquote>

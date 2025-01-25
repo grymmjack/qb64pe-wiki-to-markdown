@@ -120,7 +120,7 @@ br ~ h5 {
 
 
 * When resizing is turned [OFF](OFF.md) no method is listed.
-* When resizing is turned [ON](ON.md) or left empty, a [_STRETCH](STRETCH.md) or [_SMOOTH](SMOOTH.md) method can be used.
+* When resizing is turned [ON](ON.md) or left empty, a _STRETCH or _SMOOTH method can be used.
 </blockquote>
 
 #### DESCRIPTION
@@ -128,7 +128,7 @@ br ~ h5 {
 <blockquote>
 
 
-* Before this statement can be used, you must add the [&dollar;RESIZE](&dollar;RESIZE.md) :ON metacommand to your program.
+* Before this statement can be used, you must add the [\$RESIZE](\$RESIZE.md) :ON metacommand to your program.
 
 </blockquote>
 
@@ -144,8 +144,8 @@ br ~ h5 {
 <blockquote>
 
 
-* [&dollar;RESIZE](&dollar;RESIZE.md)
-* [_RESIZE](RESIZE.md) (function)
-* [_RESIZEHEIGHT](RESIZEHEIGHT.md)
-* [_RESIZEWIDTH](RESIZEWIDTH.md)
+* [\$RESIZE](\$RESIZE.md)
+* _RESIZE (function)
+* _RESIZEHEIGHT
+* _RESIZEWIDTH
 </blockquote>

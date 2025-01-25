@@ -123,12 +123,12 @@ br ~ h5 {
 <blockquote>
 
 
-* The value returned is always a 32-bit [_UNSIGNED](UNSIGNED.md) [LONG](LONG.md) color value, as is the [POINT](POINT.md) value.
-* Return variable types must be [_UNSIGNED](UNSIGNED.md) [LONG](LONG.md) or [LONG](LONG.md) , otherwise resulting color may lose the [_BLUE](BLUE.md) value.
+* The value returned is always a 32-bit _UNSIGNED [LONG](LONG.md) color value, as is the [POINT](POINT.md) value.
+* Return variable types must be _UNSIGNED [LONG](LONG.md) or [LONG](LONG.md) , otherwise resulting color may lose the _BLUE value.
 * Parameter values outside of the 0 to 255 range are clipped.
 * Returns [LONG](LONG.md) 32 bit hexadecimal values from &H00 00 00 00 to &HFF FF FF FF .
-* When [LONG](LONG.md) values are [PUT](PUT.md) to file, the ARGB values become BGRA. Use [LEFT&dollar;](LEFT&dollar;.md) ( [MKL&dollar;](MKL&dollar;.md) ( color32value~& ), 3) to place 3 colors.
-* NOTE: Default 32-bit backgrounds are clear black or [_RGB32](RGB32.md) (0, 0). Use [CLS](CLS.md) to make the black opaque.
+* When [LONG](LONG.md) values are [PUT](PUT.md) to file, the ARGB values become BGRA. Use [LEFT\$](LEFT\$.md) ( [MKL\$](MKL\$.md) ( color32value~& ), 3) to place 3 colors.
+* NOTE: Default 32-bit backgrounds are clear black or _RGB32 (0, 0). Use [CLS](CLS.md) to make the black opaque.
 
 </blockquote>
 
@@ -143,13 +143,13 @@ br ~ h5 {
 SCREEN 12
 DIM hex32$(15)
 FOR attribute = 1 TO 15
-OUT &H3C7, attribute      'set color attribute to read
-red = INP(&H3C9) * 4      'multiply by 4 to convert intensity to 0 to 255 RGB values
-grn = INP(&H3C9) * 4
-blu = INP(&H3C9) * 4
-hex32$(attribute) = "&H" + HEX$(_RGB32(red, grn, blu))   'always returns the 32 bit value
-COLOR attribute
-PRINT "COLOR" + STR$(_RGB(red, grn, blu)) + " = " + hex32$(attribute)  'closest attribute
+ OUT &H3C7, attribute      'set color attribute to read
+ red = INP(&H3C9) * 4      'multiply by 4 to convert intensity to 0 to 255 RGB values
+ grn = INP(&H3C9) * 4
+ blu = INP(&H3C9) * 4
+ hex32$(attribute) = "&H" + HEX$(_RGB32(red, grn, blu))   'always returns the 32 bit value
+ COLOR attribute
+ PRINT "COLOR" + STR$(_RGB(red, grn, blu)) + " = " + hex32$(attribute)  'closest attribute
 NEXT
 ```
   
@@ -196,7 +196,7 @@ SLEEP 'Just so we can see our pretty background before we print anything on it.
 COLOR _RGB32(255, 255, 255), 0 'White on NO BACKGROUND
 
 FOR i = 1 TO 10
-PRINT "This is just a whole bunch of happy nothing!  Happy World!!"
+   PRINT "This is just a whole bunch of happy nothing!  Happy World!!"
 NEXT
 PRINT: PRINT: PRINT:
 
@@ -252,10 +252,10 @@ PRINT "Magenta too, 110 alpha - but with less typing"
 <blockquote>
 
 
-* [_RGBA32](RGBA32.md) , [_RGB](RGB.md) , [_RGBA](RGBA.md)
-* [_RED32](RED32.md) , [_GREEN32](GREEN32.md) , [_BLUE32](BLUE32.md)
-* [_PALETTECOLOR](PALETTECOLOR.md)
-* [HEX&dollar;](HEX&dollar;.md) 32 Bit Values
+* _RGBA32 , _RGB , _RGBA
+* _RED32 , _GREEN32 , _BLUE32
+* _PALETTECOLOR
+* [HEX\$](HEX\$.md) 32 Bit Values
 * SaveImage [SUB](SUB.md)
 * Hexadecimal Color Values
 </blockquote>

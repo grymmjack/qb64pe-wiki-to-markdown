@@ -196,29 +196,29 @@ offset = VARPTR(array(0)) 'program designated offset element
 ```vb
 TWO DIMENSIONAL ARRAY TABLES
 
-Setting up a car sales Database: The sales for each month as represented in an array.
+   Setting up a car sales Database: The sales for each month as represented in an array.
 
-DIM Vehicle%(12, 4)       ' Vehicle%(month%, type%)
+                    DIM Vehicle%(12, 4)       ' Vehicle%(month%, type%)
 
-Jan Feb Mar Apr May Jun Jul Aug Sep Oct Nov Dec
-   1   2   3   4   5   6   7   8   9   10  11  12  ← Month index
-Type index ↓  -----------------------------------------------
-Cars     1:  5  10  15  20  30   19  17  12  24  20  33  30
-Trucks   2:  3   8   7  10  15    9  11   8  15  10  16  11
-Vans     3:  4   6   8   9   7   10   9   7   9   8  10   7
-SUV      4: 10   8   8   5  10    8   6   8  10  11   9   8
+                      Jan Feb Mar Apr May Jun Jul Aug Sep Oct Nov Dec
+                       1   2   3   4   5   6   7   8   9   10  11  12  ← Month index
+        Type index ↓  -----------------------------------------------
+          Cars     1:  5  10  15  20  30   19  17  12  24  20  33  30
+          Trucks   2:  3   8   7  10  15    9  11   8  15  10  16  11
+          Vans     3:  4   6   8   9   7   10   9   7   9   8  10   7
+          SUV      4: 10   8   8   5  10    8   6   8  10  11   9   8
 
-To find monthly and yearly totals you could do something like this:
+            To find monthly and yearly totals you could do something like this:
 
-FOR month% = 1 TO 12
-FOR type% = 1 TO 4
-MonthlySales% = MonthlySales% + Vehicle%(month%, type%)
-NEXT
-YearlySales% = YearlySales% + MonthlySales%
-PRINT "Monthly =", MonthlySales%; " Yearly ="; YearlySales%; "   "
-INPUT$(1)               'stop to view each month
-MonthlySales% = 0       'zero month sales for next months total
-NEXT
+               FOR month% = 1 TO 12
+                  FOR type% = 1 TO 4
+                     MonthlySales% = MonthlySales% + Vehicle%(month%, type%)
+                  NEXT
+                  YearlySales% = YearlySales% + MonthlySales%
+                  PRINT "Monthly =", MonthlySales%; " Yearly ="; YearlySales%; "   "
+                  INPUT$(1)               'stop to view each month
+                  MonthlySales% = 0       'zero month sales for next months total
+               NEXT
 ```
   
 <br>
@@ -243,8 +243,8 @@ DIM Array(1 TO 12, 1 TO 10) ' 2 dimensions can hold 120 data values
 
 ```vb
 DO
-INPUT "Enter your age: ", howold$
-age% = VAL(howold$)
+   INPUT "Enter your age: ", howold$
+   age% = VAL(howold$)
 LOOP UNTIL age% > 0
 
 Playerage%(user%) = age% 'saves the players age to an indexed player number
@@ -262,7 +262,7 @@ DIM array(wide& * deep&) AS INTEGER
 LINE (0, 0)-(wide& - 1, deep& - 1), 12, B 'the box border is all that you need to color.
 GET (0, 0)-(wide& - 1, deep& - 1), array(0)
 FOR s& = wide& * deep& TO 0 STEP -1
-IF array(s&) THEN arraysize& = s&: EXIT FOR
+   IF array(s&) THEN arraysize& = s&: EXIT FOR
 NEXT
 PRINT arraysize&
 END
@@ -272,14 +272,14 @@ END
 
 ```vb
 FUNCTION ScanKey% (scancode%)
-STATIC Ready%, keyflags%()
-IF NOT Ready% THEN REDIM keyflags%(0 TO 127): Ready% = -1
-i% = INP(&H60) 'read keyboard states
-IF (i% AND 128) THEN keyflags%(i% XOR 128) = 0
-IF (i% AND 128) = 0 THEN keyflags%(i%) = -1
-K$ = INKEY$
-ScanKey% = keyflags%(scancode%)
-IF scancode% = 0 THEN Ready% = 0 'allows program to reset all values to 0 with a REDIM
+   STATIC Ready%, keyflags%()
+   IF NOT Ready% THEN REDIM keyflags%(0 TO 127): Ready% = -1
+   i% = INP(&H60) 'read keyboard states
+   IF (i% AND 128) THEN keyflags%(i% XOR 128) = 0
+   IF (i% AND 128) = 0 THEN keyflags%(i%) = -1
+   K$ = INKEY$
+   ScanKey% = keyflags%(scancode%)
+   IF scancode% = 0 THEN Ready% = 0 'allows program to reset all values to 0 with a REDIM
 END FUNCTION
 ```
   

@@ -120,6 +120,7 @@ br ~ h5 {
 
 
 * The text$ used can be a literal or variable [STRING](STRING.md) value.
+* Keyword not supported in Linux or macOS versions
 
 </blockquote>
 
@@ -127,9 +128,6 @@ br ~ h5 {
 
 <blockquote>
 
-
-
-##### Example: Hiding the main program window while displaying the console window with a title.
 ```vb
 $SCREENHIDE
 _DELAY 4
@@ -143,6 +141,14 @@ END
   
 <br>
 
+```vb
+Note:
+You can also use SHELL "title consoletitle" to set the title of the
+console window. However, recommended is to use _CONSOLETITLE.
+```
+  
+<br>
+
 
 </blockquote>
 
@@ -151,7 +157,7 @@ END
 <blockquote>
 
 
-* [&dollar;CONSOLE](&dollar;CONSOLE.md) , [_CONSOLE](CONSOLE.md)
-* [&dollar;SCREENHIDE](&dollar;SCREENHIDE.md) , [&dollar;SCREENSHOW](&dollar;SCREENSHOW.md)
-* [_SCREENHIDE](SCREENHIDE.md) , [_SCREENSHOW](SCREENSHOW.md)
+* [\$CONSOLE](\$CONSOLE.md) , _CONSOLE
+* [\$SCREENHIDE](\$SCREENHIDE.md) , [\$SCREENSHOW](\$SCREENSHOW.md)
+* _SCREENHIDE , _SCREENSHOW
 </blockquote>

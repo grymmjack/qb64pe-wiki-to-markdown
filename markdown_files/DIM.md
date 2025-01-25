@@ -120,7 +120,7 @@ br ~ h5 {
 
 
 * Sets the [INTEGER](INTEGER.md) range of elements (indices) of a [STATIC](STATIC.md) array. If only one number is used, the lowest boundary is 0 by default.
-* When used before an array is dimensioned, [OPTION](OPTION.md) [BASE](BASE.md) 1 can set the default lower boundary of arrays to 1.
+* When used before an array is dimensioned, OPTION BASE 1 can set the default lower boundary of arrays to 1.
 * [DIM](DIM.md) [SHARED](SHARED.md) shares variable values with sub-procedures without passing the value in a parameter.
 * Use the [AS](AS.md) keyword to define a variable or array type [AS](AS.md) ...
 * [INTEGER](INTEGER.md) (or use variable suffix % )
@@ -130,22 +130,22 @@ br ~ h5 {
 * [STRING](STRING.md) (or use variable suffix $ ). An [AS](AS.md) multiplier can set the string length . Ex: [DIM](DIM.md) variable [AS](AS.md) [STRING](STRING.md) 
 * 8
 * QB64 variable types:
-* [_BIT](BIT.md) (or use variable suffix &grave; ). An [AS](AS.md) multiplier can be used for multiple bits. Ex: [DIM](DIM.md) variable [AS](AS.md) [_BIT](BIT.md) 
+* _BIT (or use variable suffix &grave; ). An [AS](AS.md) multiplier can be used for multiple bits. Ex: [DIM](DIM.md) variable [AS](AS.md) _BIT 
 * 8
-* [_BYTE](BYTE.md) (or use variable suffix %% )
-* [_INTEGER64](INTEGER64.md) (or use variable suffix && )
-* [_FLOAT](FLOAT.md) (or use variable suffix ## )
-* [_OFFSET](OFFSET.md) (or use variable suffix %& )
-* [DIM](DIM.md) [AS](AS.md) [_MEM](MEM.md) (the [_MEM](MEM.md) type has no type suffix).
+* _BYTE (or use variable suffix %% )
+* _INTEGER64 (or use variable suffix && )
+* _FLOAT (or use variable suffix ## )
+* _OFFSET (or use variable suffix %& )
+* [DIM](DIM.md) [AS](AS.md) _MEM (the _MEM type has no type suffix).
 * Note: When a variable has not been defined or has no type suffix, the type defaults to [SINGLE](SINGLE.md) .
 * When using the [AS](AS.md) type variable-list syntax, type symbols cannot be used.
-* When the [&dollar;DYNAMIC](&dollar;DYNAMIC.md) metacommand or [REDIM](REDIM.md) is used, array element sizes are changeable (not [&dollar;STATIC](&dollar;STATIC.md) ).
-* Use [REDIM](REDIM.md) instead of [DIM](DIM.md) to dimension arrays as dynamic without the [&dollar;DYNAMIC](&dollar;DYNAMIC.md) metacommand.
-* Use [REDIM](REDIM.md) [_PRESERVE](PRESERVE.md) in QB64 to retain previous array values when changing the size of an array.
-* [REDIM](REDIM.md) [_PRESERVE](PRESERVE.md) cannot change the number of array dimensions. An error will occur.
+* When the [\$DYNAMIC](\$DYNAMIC.md) metacommand or [REDIM](REDIM.md) is used, array element sizes are changeable (not [\$STATIC](\$STATIC.md) ).
+* Use [REDIM](REDIM.md) instead of [DIM](DIM.md) to dimension arrays as dynamic without the [\$DYNAMIC](\$DYNAMIC.md) metacommand.
+* Use [REDIM](REDIM.md) _PRESERVE in QB64 to retain previous array values when changing the size of an array.
+* [REDIM](REDIM.md) _PRESERVE cannot change the number of array dimensions. An error will occur.
 * Dynamic arrays MUST be REDIMensioned if [ERASE](ERASE.md) or [CLEAR](CLEAR.md) are used, as the arrays are completely removed.
-* All numerical variable types except [SINGLE](SINGLE.md) , [DOUBLE](DOUBLE.md) and [_FLOAT](FLOAT.md) can be dimensioned as [_UNSIGNED](UNSIGNED.md) (suffix ~) or positive only.
-* NOTE: Many QBasic keyword variable names can be used with a [STRING](STRING.md) suffix ($). You cannot use them without the suffix, use a numerical suffix or use DIM, [REDIM](REDIM.md) , [_DEFINE](DEFINE.md) , [BYVAL](BYVAL.md) or [TYPE](TYPE.md) variable [AS](AS.md) statements. Although possible, it's recommended to avoid using reserved names.
+* All numerical variable types except [SINGLE](SINGLE.md) , [DOUBLE](DOUBLE.md) and _FLOAT can be dimensioned as _UNSIGNED (suffix ~) or positive only.
+* NOTE: Many QBasic keyword variable names can be used with a [STRING](STRING.md) suffix ($). You cannot use them without the suffix, use a numerical suffix or use DIM, [REDIM](REDIM.md) , _DEFINE , [BYVAL](BYVAL.md) or [TYPE](TYPE.md) variable [AS](AS.md) statements. Although possible, it's recommended to avoid using reserved names.
 * Warning: Do not use negative array upper bound index values, or OS access or "Out of Memory" errors will occur.
 
 </blockquote>
@@ -241,11 +241,11 @@ DIM AS SINGLE x, y, z               'all of these variables are created as type 
 <blockquote>
 
 
-* [_DEFINE](DEFINE.md) , [_PRESERVE](PRESERVE.md)
+* _DEFINE , _PRESERVE
 * [REDIM](REDIM.md) , [TYPE](TYPE.md)
 * [ERASE](ERASE.md) , [CLEAR](CLEAR.md)
 * [DEFINT](DEFINT.md) , [DEFSNG](DEFSNG.md) , [DEFLNG](DEFLNG.md) , [DEFDBL](DEFDBL.md) , [DEFSTR](DEFSTR.md)
-* Mathematical Operations , Arrays
+* Mathematical Operations , [Arrays](Arrays.md)
 * Variable Types
-* [OPTION](OPTION.md) [_EXPLICIT](EXPLICIT.md)
+* OPTION _EXPLICIT
 </blockquote>

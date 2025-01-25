@@ -119,8 +119,8 @@ br ~ h5 {
 <blockquote>
 
 
-* [BEEP](BEEP.md) can be placed anywhere to alert the user that there is something to do or an error has occurred.
-* QB64 produces the actual "beep" sound through the PC's sound card, to emulate QBasic's beeping through the PC speaker .
+* The [BEEP](BEEP.md) statement can be used anywhere in the code to alert the user that there is something to attend to or an error has occurred.
+* QB64 produces the actual "beep" sound through the PC's sound card, emulating QBasic's beeping through the PC speaker .
 
 </blockquote>
 
@@ -137,6 +137,5 @@ br ~ h5 {
 
 
 * [SOUND](SOUND.md) , [PLAY](PLAY.md)
-* [_SNDPLAY](SNDPLAY.md) (play sound files)
-* [_SNDRAW](SNDRAW.md) (play frequency waves)
+* _SNDPLAY , _SNDRAW
 </blockquote>

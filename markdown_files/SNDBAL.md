@@ -119,7 +119,7 @@ br ~ h5 {
 <blockquote>
 
 
-* handle& is a valid sound handle created by the [_SNDOPEN](SNDOPEN.md) function.
+* handle& is a valid sound handle created by the _SNDOPEN function.
 * x! distance values go from left (negative) to right (positive).
 * y! distance values go from below (negative) to above (positive).
 * z! distance values go from behind (negative) to in front (positive).
@@ -154,23 +154,23 @@ br ~ h5 {
 ' This examples load, plays and then bounces the sound between the left and right channels
 Laff& = _SNDOPEN("KONGlaff.ogg", "stream") 'load sound file and get LONG handle value
 IF Laff& > 0 THEN
-_SNDPLAY Laff& 'play sound
+   _SNDPLAY Laff& 'play sound
 ELSE
-PRINT "Failed to load sound file."
-END
+   PRINT "Failed to load sound file."
+   END
 END IF
 
 PRINT "Press ESC to stop."
 dir = 0.01
 DO
-IF laffx! <= -1 THEN dir = 0.01
-IF laffx! >= 1 THEN dir = -0.01
-laffx! = laffx! + dir
+   IF laffx! <= -1 THEN dir = 0.01
+   IF laffx! >= 1 THEN dir = -0.01
+   laffx! = laffx! + dir
 
-LOCATE , 1: PRINT USING "Balance = ##.##"; laffx!;
-_SNDBAL Laff&, laffx! 'balance sound to left or right speaker
+   LOCATE , 1: PRINT USING "Balance = ##.##"; laffx!;
+   _SNDBAL Laff&, laffx! 'balance sound to left or right speaker
 
-_LIMIT 60
+   _LIMIT 60
 LOOP WHILE _SNDPLAYING(Laff&) AND _KEYHIT <> 27
 ```
   
@@ -189,52 +189,52 @@ _SNDLOOP s&
 xleft = -1
 xright = 1
 DO
-k$ = INKEY$
-SELECT CASE k$
-CASE "f"
-xleft = xleft - 0.1
-_SNDBAL s&, xleft, , , 1
-CASE "g"
-xleft = xleft + 0.1
-_SNDBAL s&, xleft, , , 1
-CASE "h"
-xright = xright - 0.1
-_SNDBAL s&, xright, , , 2
-CASE "j"
-xright = xright + 0.1
-_SNDBAL s&, xright, , , 2
-CASE "n"
-volume = volume - 0.1
-_SNDVOL s&, volume
-CASE "m"
-volume = volume + 0.1
-_SNDVOL s&, volume
-CASE "p"
-_SNDPAUSE s&
-CASE " "
-_SNDPLAY s&
-CASE "i"
-PRINT _SNDPLAYING(s&)
-PRINT _SNDPAUSED(s&)
-SLEEP
-CASE "b"
-_SNDSETPOS s&, 110
-CASE "l"
-_SNDLIMIT s&, 10
-PRINT "LIM"
-SLEEP
-CASE "k"
-_SNDSTOP s&
-CASE "c"
-_SNDCLOSE s&
-SLEEP
-s2& = _SNDOPEN("song.ogg")
-CASE "d"
-s2& = _SNDCOPY(s&)
-_SNDPLAY s2&
-END SELECT
-LOCATE 1, 1
-PRINT xleft, xright, volume, _SNDGETPOS(s&); "   "
+   k$ = INKEY$
+   SELECT CASE k$
+       CASE "f"
+           xleft = xleft - 0.1
+           _SNDBAL s&, xleft, , , 1
+       CASE "g"
+           xleft = xleft + 0.1
+           _SNDBAL s&, xleft, , , 1
+       CASE "h"
+           xright = xright - 0.1
+           _SNDBAL s&, xright, , , 2
+       CASE "j"
+           xright = xright + 0.1
+           _SNDBAL s&, xright, , , 2
+       CASE "n"
+           volume = volume - 0.1
+           _SNDVOL s&, volume
+       CASE "m"
+           volume = volume + 0.1
+           _SNDVOL s&, volume
+       CASE "p"
+           _SNDPAUSE s&
+       CASE " "
+           _SNDPLAY s&
+       CASE "i"
+           PRINT _SNDPLAYING(s&)
+           PRINT _SNDPAUSED(s&)
+           SLEEP
+       CASE "b"
+           _SNDSETPOS s&, 110
+       CASE "l"
+           _SNDLIMIT s&, 10
+           PRINT "LIM"
+           SLEEP
+       CASE "k"
+           _SNDSTOP s&
+       CASE "c"
+           _SNDCLOSE s&
+           SLEEP
+           s2& = _SNDOPEN("song.ogg")
+       CASE "d"
+           s2& = _SNDCOPY(s&)
+           _SNDPLAY s2&
+   END SELECT
+   LOCATE 1, 1
+   PRINT xleft, xright, volume, _SNDGETPOS(s&); "   "
 LOOP
 ```
   
@@ -248,6 +248,6 @@ LOOP
 <blockquote>
 
 
-* [_SNDOPEN](SNDOPEN.md) , [_SNDOPENRAW](SNDOPENRAW.md)
-* [_SNDVOL](SNDVOL.md) , [_SNDLIMIT](SNDLIMIT.md)
+* _SNDOPEN , _SNDOPENRAW
+* _SNDVOL , _SNDLIMIT
 </blockquote>

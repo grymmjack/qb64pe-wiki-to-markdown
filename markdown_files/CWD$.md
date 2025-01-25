@@ -120,10 +120,10 @@ br ~ h5 {
 
 
 * By default, the initial working directory path is usually the same as the directory of the executable file run.
-* The current working directory can be changed with the [CHDIR](CHDIR.md) or [SHELL](SHELL.md) command; [CHDIR](CHDIR.md) sets it, [_CWD&dollar;](CWD&dollar;.md) returns it.
+* The current working directory can be changed with the [CHDIR](CHDIR.md) or [SHELL](SHELL.md) command; [CHDIR](CHDIR.md) sets it, _CWD$ returns it.
 * Path returns will change only when the working path has changed.  When in C:\ and run QB64\cwd.exe, it will still return C:\
 * The current working directory string can be used in [OPEN](OPEN.md) statements and [SHELL](SHELL.md) commands that deal with files.
-* Works in Windows, macOS and Linux. [_OS&dollar;](OS&dollar;.md) can be used by a program to predict the proper slash separations in different OS's.
+* Works in Windows, macOS and Linux. _OS$ can be used by a program to predict the proper slash separations in different OS's.
 
 </blockquote>
 
@@ -167,6 +167,6 @@ And now we're back in C:\QB64
 * [RMDIR](RMDIR.md) (Remove a directory in the file system)
 * [KILL](KILL.md) (Delete a file in the file system)
 * [MKDIR](MKDIR.md) (Create a directory in the file system)
-* [_OS&dollar;](OS&dollar;.md) (returns current OS to program)
-* [_STARTDIR&dollar;](STARTDIR&dollar;.md) (returns path the user called program from)
+* _OS$ (returns current OS to program)
+* _STARTDIR$ (returns path the user called program from)
 </blockquote>

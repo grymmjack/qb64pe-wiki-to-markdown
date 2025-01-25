@@ -119,8 +119,8 @@ br ~ h5 {
 <blockquote>
 
 
-* The function returns true (-1) if [_AUTODISPLAY](AUTODISPLAY.md) is enabled. This is the default state and indicates that every screen change (text or graphics) is displayed immediately to the user.
-* If [_DISPLAY](DISPLAY.md) is used, then [_AUTODISPLAY](AUTODISPLAY.md) returns 0, to indicate that screen changes (text or graphics) are only displayed per request, by calling [_DISPLAY](DISPLAY.md) again to refresh the screen.
+* The function returns true (-1) if _AUTODISPLAY is enabled. This is the default state and indicates that every screen change (text or graphics) is displayed immediately to the user.
+* If _DISPLAY is used, then _AUTODISPLAY returns 0, to indicate that screen changes (text or graphics) are only displayed per request, by calling _DISPLAY again to refresh the screen.
 
 </blockquote>
 
@@ -136,6 +136,6 @@ br ~ h5 {
 <blockquote>
 
 
-* [_AUTODISPLAY](AUTODISPLAY.md)
-* [_DISPLAY](DISPLAY.md)
+* _AUTODISPLAY
+* _DISPLAY
 </blockquote>

@@ -180,8 +180,8 @@ END
 <blockquote>
 
 
-* [SPC](SPC.md) , [SPACE&dollar;](SPACE&dollar;.md) , [TAB](TAB.md)
-* [PRINT](PRINT.md) #, [USING](USING.md)
+* [SPC](SPC.md) , [SPACE\$](SPACE\$.md) , [TAB](TAB.md)
+* [PRINT](PRINT.md) #, USING
 * [PRINT](PRINT.md)
 * [WRITE](WRITE.md) # , [INPUT](INPUT.md) #
 * [LINE](LINE.md) [INPUT](INPUT.md) #

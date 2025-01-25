@@ -132,7 +132,7 @@ br ~ h5 {
 * When the bytes% value is not passed, the function returns the remainder of the string from the starting character position.
 * Number of character bytes% should be within the string's length from the start position, but will only return the string's remainder when exceeded.
 * If the bytes% value is 0 or the startPosition% is 0 or greater than the length of the string, an empty string is returned (no error is triggered).
-* In QB64 , the [ASC](ASC.md) (function) reads string byte positions about 5 times faster than [MID&dollar;](MID&dollar;.md) when parsing strings character wise. See Example 2 below.
+* In QB64 , the [ASC](ASC.md) (function) reads string byte positions about 5 times faster than [MID\$](MID\$.md) when parsing strings character wise. See Example 2 below.
 
 </blockquote>
 
@@ -167,22 +167,22 @@ Limit = 100000 'the size of the string
 LoopCount = 1000 'the number of times we want to deconstruct it
 
 FOR i = 1 TO Limit
-t$ = t$ + CHR$(RND * 255)
+ t$ = t$ + CHR$(RND * 255)
 NEXT
 
 'now for some times
 
 t1# = TIMER
 FOR j = 1 TO LoopCount
-FOR i = 1 TO Limit
-m$ = MID$(t$, i, 1)
-NEXT
+ FOR i = 1 TO Limit
+   m$ = MID$(t$, i, 1)
+ NEXT
 NEXT
 t2# = TIMER
 FOR j = 1 TO LoopCount
-FOR i = 1 TO Limit
-m = ASC(t$, i)
-NEXT
+ FOR i = 1 TO Limit
+   m = ASC(t$, i)
+ NEXT
 NEXT
 
 t3# = TIMER
@@ -191,15 +191,15 @@ DIM m AS _MEM, m1 AS STRING * 1, m2 AS _UNSIGNED _BYTE
 m = _MEMNEW(Limit) 'create new memory space for string
 _MEMPUT m, m.OFFSET, t$ 'put string t$ into memory space
 FOR j = 1 TO LoopCount
-FOR i = 1 TO Limit
-_MEMGET m, m.OFFSET + i - 1, m1
-NEXT
+ FOR i = 1 TO Limit
+   _MEMGET m, m.OFFSET + i - 1, m1
+ NEXT
 NEXT
 t4# = TIMER
 FOR j = 1 TO LoopCount
-FOR i = 1 TO Limit
-_MEMGET m, m.OFFSET + i - 1, m2
-NEXT
+ FOR i = 1 TO Limit
+   _MEMGET m, m.OFFSET + i - 1, m2
+ NEXT
 NEXT
 t5# = TIMER
 
@@ -230,10 +230,10 @@ PRINT USING "##.###### seconds for _MEMGET Byte"; t5# - t4#
 <blockquote>
 
 
-* [MID&dollar;](MID&dollar;.md)
+* [MID\$](MID\$.md)
 * [ASC](ASC.md) , [ASC](ASC.md) (function)
-* [LEFT&dollar;](LEFT&dollar;.md) , [RIGHT&dollar;](RIGHT&dollar;.md)
-* [LTRIM&dollar;](LTRIM&dollar;.md) , [RTRIM&dollar;](RTRIM&dollar;.md)
+* [LEFT\$](LEFT\$.md) , [RIGHT\$](RIGHT\$.md)
+* [LTRIM\$](LTRIM\$.md) , [RTRIM\$](RTRIM\$.md)
 * [INSTR](INSTR.md) , [LEN](LEN.md)
-* [_MEMPUT](MEMPUT.md) , [_MEMGET](MEMGET.md)
+* _MEMPUT , _MEMGET
 </blockquote>

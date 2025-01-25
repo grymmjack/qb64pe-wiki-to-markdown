@@ -6,13 +6,13 @@
    ON ERROR - QB64 Phoenix Edition Wiki
   </title>
   <script>
-   document.documentElement.className="client-js";RLCONF={"wgBreakFrames":false,"wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgRequestId":"Zp2GrRpdvGGeVdK1DlhqsAAAAjE","wgCSPNonce":false,"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"ON_ERROR","wgTitle":"ON ERROR","wgCurRevisionId":7630,"wgRevisionId":7630,"wgArticleId":312,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":[],"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgRelevantPageName":"ON_ERROR","wgRelevantArticleId":312,"wgIsProbablyEditable":false,"wgRelevantPageIsProbablyEditable":false,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgVector2022PreviewPages":[]};RLSTATE={"site.styles":"ready","user.styles":"ready","user":
-"ready","user.options":"loading","skins.vector.styles.legacy":"ready"};RLPAGEMODULES=["site","mediawiki.page.ready","mediawiki.toc","skins.vector.legacy.js"];
+   document.documentElement.className="client-js";RLCONF={"wgBreakFrames":false,"wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgRequestId":"Z5RiVQWKRwiE9zBBFH0aagAAAMo","wgCSPNonce":false,"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"ON_ERROR","wgTitle":"ON ERROR","wgCurRevisionId":9526,"wgRevisionId":9526,"wgArticleId":312,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":[],"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgRelevantPageName":"ON_ERROR","wgRelevantArticleId":312,"wgIsProbablyEditable":false,"wgRelevantPageIsProbablyEditable":false,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgVector2022PreviewPages":[]};RLSTATE={"site.styles":"ready","user.styles":"ready","user":
+"ready","user.options":"loading","mediawiki.page.gallery.styles":"ready","skins.vector.styles.legacy":"ready"};RLPAGEMODULES=["site","mediawiki.page.ready","mediawiki.toc","skins.vector.legacy.js"];
   </script>
   <script>
    (RLQ=window.RLQ||[]).push(function(){mw.loader.implement("user.options@12s5i",function($,jQuery,require,module){mw.user.tokens.set({"patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});});});
   </script>
-  <link href="/qb64wiki/load.php?lang=en&amp;modules=skins.vector.styles.legacy&amp;only=styles&amp;skin=vector" rel="stylesheet"/>
+  <link href="/qb64wiki/load.php?lang=en&amp;modules=mediawiki.page.gallery.styles%7Cskins.vector.styles.legacy&amp;only=styles&amp;skin=vector" rel="stylesheet"/>
   <script async="" src="/qb64wiki/load.php?lang=en&amp;modules=startup&amp;only=scripts&amp;raw=1&amp;skin=vector">
   </script>
   <meta content="" name="ResourceLoaderDynamicStyles"/>
@@ -61,10 +61,11 @@
     <div class="mw-body-content mw-content-ltr" dir="ltr" id="mw-content-text" lang="en">
      <div class="mw-parser-output">
       <p>
-       <a class="mw-selflink selflink">
+       The
+       <b>
         ON ERROR
-       </a>
-       is used with
+       </b>
+       statement is used in conjunction with
        <a href="/qb64wiki/index.php/GOTO" title="GOTO">
         GOTO
        </a>
@@ -100,9 +101,19 @@
              </a>
             </li>
             <li class="toclevel-1">
-             <a href="#Description">
+             <a href="#Parameters">
               <span class="tocnumber">
                2
+              </span>
+              <span class="toctext">
+               Parameters
+              </span>
+             </a>
+            </li>
+            <li class="toclevel-1">
+             <a href="#Description">
+              <span class="tocnumber">
+               3
               </span>
               <span class="toctext">
                Description
@@ -110,9 +121,19 @@
              </a>
             </li>
             <li class="toclevel-1">
+             <a href="#Availability">
+              <span class="tocnumber">
+               4
+              </span>
+              <span class="toctext">
+               Availability
+              </span>
+             </a>
+            </li>
+            <li class="toclevel-1">
              <a href="#Examples">
               <span class="tocnumber">
-               3
+               5
               </span>
               <span class="toctext">
                Examples
@@ -122,7 +143,7 @@
             <li class="toclevel-1">
              <a href="#See_also">
               <span class="tocnumber">
-               4
+               6
               </span>
               <span class="toctext">
                See also
@@ -141,6 +162,9 @@
        </span>
       </h2>
       <dl>
+       <dt>
+        Legacy QuickBASIC/QBasic
+       </dt>
        <dd>
         <a class="mw-selflink selflink">
          ON ERROR
@@ -150,15 +174,78 @@
         </a>
         {
         <i>
-         lineNumber
+         lineNumberOrLabel
         </i>
-        |
+        <b>
+         |
+        </b>
         <i>
-         lineLabel
+         0
+        </i>
+        }
+       </dd>
+       <dt>
+        QB64-PE extension
+       </dt>
+       <dd>
+        <a class="mw-selflink selflink">
+         ON ERROR
+        </a>
+        <a href="/qb64wiki/index.php/GOTO" title="GOTO">
+         GOTO
+        </a>
+        {
+        <b>
+         _LASTHANDLER | _NEWHANDLER
+        </b>
+        <i>
+         lineNumberOrLabel
         </i>
         }
        </dd>
       </dl>
+      <p>
+       <br/>
+      </p>
+      <h2>
+       <span class="mw-headline" id="Parameters">
+        Parameters
+       </span>
+      </h2>
+      <ul>
+       <li>
+        <i>
+         lineNumberOrLabel
+        </i>
+        must be a line number or program label in the main part of your program usually placed after the
+        <a href="/qb64wiki/index.php/END" title="END">
+         END
+        </a>
+        or
+        <a href="/qb64wiki/index.php/SYSTEM" title="SYSTEM">
+         SYSTEM
+        </a>
+        statement. Line numbers or labels inside of
+        <a href="/qb64wiki/index.php/SUB" title="SUB">
+         SUB
+        </a>
+        or
+        <a href="/qb64wiki/index.php/FUNCTION" title="FUNCTION">
+         FUNCTION
+        </a>
+        blocks are not allowed.
+       </li>
+       <li>
+        <i>
+         0
+        </i>
+        (zero) will disable all program based error handling, i.e. errors remain
+        <i>
+         unhandled
+        </i>
+        .
+       </li>
+      </ul>
       <p>
        <br/>
       </p>
@@ -171,22 +258,22 @@
        <li>
         An
         <i>
-         untreated error
+         unhandled error
         </i>
-        in a program will cause execution to stop and an error message is displayed to the user, who can choose to continue (ignore the error - which could have unexpected results) or end the program.
+        in a program will cause execution to stop and an error message box is displayed to the user, who can choose to continue (ignore the error - which could have unexpected results) or end the program.
        </li>
        <li>
         Use
-        <a class="mw-selflink selflink">
+        <b>
          ON ERROR
-        </a>
+        </b>
         when your program performs operations that are likely to generate errors, like file access operations.
        </li>
        <li>
-        <a class="mw-selflink selflink">
+        <b>
          ON ERROR
-        </a>
-        statements can be in the main module code or in
+        </b>
+        statements can be in the main code section or in
         <a href="/qb64wiki/index.php/SUB" title="SUB">
          SUB
         </a>
@@ -194,26 +281,23 @@
         <a href="/qb64wiki/index.php/FUNCTION" title="FUNCTION">
          FUNCTION
         </a>
-        procedures.
+        procedures, but the line number or label must always be in the main code section.
        </li>
        <li>
-        <a class="mw-selflink selflink">
+        <b>
          ON ERROR
-        </a>
-        statements take precedence in the order they are encountered. It will also handle any subroutine errors.
+        </b>
+        statements take precedence in the order they are encountered, i.e. the most recently set handler is used. Subsequent
+        <b>
+         ON ERROR
+        </b>
+        statements will override the previous one.
        </li>
        <li>
         <b>
          ON ERROR GOTO 0
         </b>
-        can be used to disable custom
-        <a class="mw-selflink selflink">
-         ON ERROR
-        </a>
-        trapping and give default error messages.
-       </li>
-       <li>
-        A subsequent ON ERROR statement will override the previous one.
+        can be used to disable program based error trapping and give default error message boxes.
        </li>
        <li>
         <a href="/qb64wiki/index.php/GOTO" title="GOTO">
@@ -226,21 +310,266 @@
         .
        </li>
        <li>
-        Comment out
-        <a class="mw-selflink selflink">
-         ON ERROR
-        </a>
-        to find specific error locations. QB64 can return the file line position with
-        <a href="/qb64wiki/index.php/ERRORLINE" title="ERRORLINE">
-         _ERRORLINE
-        </a>
-       </li>
-       <li>
-        Note: QB64 does not support the PDS (QuickBASIC 7)
-        <b>
-         ON ERROR RESUME NEXT
-        </b>
+        QB64 and QB64-PE do not support the PDS (QuickBASIC 7)
+        <span style="border: 2px solid #87cefa; border-radius: 4px; padding: 4px; font-family: Courier New, monospace, Courier; font-size: 16px; white-space: nowrap; background: #082080; color: #e2e2e2;">
+         <a class="mw-selflink selflink">
+          <span style="color:#4593D8;">
+           ON ERROR
+          </span>
+         </a>
+         <a href="/qb64wiki/index.php/RESUME" title="RESUME">
+          <span style="color:#4593D8;">
+           RESUME
+          </span>
+         </a>
+         <a href="/qb64wiki/index.php/NEXT" title="NEXT">
+          <span style="color:#4593D8;">
+           NEXT
+          </span>
+         </a>
+        </span>
         statement.
+       </li>
+      </ul>
+      <hr/>
+      <ul>
+       <li>
+        Since QB64-PE v3.14.1 the
+        <b>
+         _NEWHANDLER
+        </b>
+        and
+        <b>
+         _LASTHANDLER
+        </b>
+        keywords can be used to build up a history chain of the used error handlers. This is especially useful inside
+        <a href="/qb64wiki/index.php/SUB" title="SUB">
+         SUB
+        </a>
+        or
+        <a href="/qb64wiki/index.php/FUNCTION" title="FUNCTION">
+         FUNCTION
+        </a>
+        code provided in external libraries, when the handlers are unknown (see Example 3).
+        <ul>
+         <li>
+          Works also over several nested or recursive sub-/function calls, but care must be taken for correct exit conditions to avoid crashes due to extensive memory usage. Each use of
+          <b>
+           _NEWHANDLER
+          </b>
+          should have a matching use of
+          <b>
+           _LASTHANDLER
+          </b>
+          .
+         </li>
+         <li>
+          Organize your code so that
+          <b>
+           _NEWHANDLER
+          </b>
+          is not executed 1000s of times in a tight loop, best use is at the entry point of a
+          <a href="/qb64wiki/index.php/SUB" title="SUB">
+           SUB
+          </a>
+          or
+          <a href="/qb64wiki/index.php/FUNCTION" title="FUNCTION">
+           FUNCTION
+          </a>
+          . Place
+          <b>
+           _LASTHANDLER
+          </b>
+          at the end point, but make sure it's also called when using
+          <a href="/qb64wiki/index.php/EXIT_SUB" title="EXIT SUB">
+           EXIT SUB
+          </a>
+          or
+          <a href="/qb64wiki/index.php/EXIT_FUNCTION" title="EXIT FUNCTION">
+           EXIT FUNCTION
+          </a>
+          .
+         </li>
+         <li>
+          Memory crashes
+          <span style="color:red;">
+           may only happen on unbalanced use
+          </span>
+          of
+          <b>
+           _NEW-/_LASTHANDLER
+          </b>
+          , if you have much more (several 10000s)
+          <b>
+           _NEWHANDLER
+          </b>
+          than
+          <b>
+           _LASTHANDLER
+          </b>
+          executions, so if you take the care and follow given recommendations, then everything will just work fine.
+         </li>
+         <li>
+          The use of
+          <b>
+           _LASTHANDLER
+          </b>
+          is always save. If the history chain has no more enries, then it is synonymous to the
+          <i>
+           zero(0)
+          </i>
+          parameter of the legacy syntax, i.e. disabling program based error trapping.
+         </li>
+         <li>
+          The use of the legacy
+          <span style="border: 2px solid #87cefa; border-radius: 4px; padding: 4px; font-family: Courier New, monospace, Courier; font-size: 16px; white-space: nowrap; background: #082080; color: #e2e2e2;">
+           <a class="mw-selflink selflink">
+            <span style="color:#4593D8;">
+             ON ERROR
+            </span>
+           </a>
+           <a href="/qb64wiki/index.php/GOTO" title="GOTO">
+            <span style="color:#4593D8;">
+             GOTO
+            </span>
+           </a>
+           <span style="color:#F580B1;">
+            0
+           </span>
+          </span>
+          will also completly reset/clear the handler history chain.
+         </li>
+        </ul>
+       </li>
+      </ul>
+      <p>
+       <br/>
+      </p>
+      <h2>
+       <span class="mw-headline" id="Availability">
+        Availability
+       </span>
+      </h2>
+      <ul class="gallery mw-gallery-nolines">
+       <li class="gallerybox" style="width: 53px">
+        <div style="width: 53px">
+         <div class="thumb" style="width: 48px;">
+          <div style="margin:0px auto;">
+           <a class="image" href="/qb64wiki/index.php/File:Qb64.png" title="v0.610">
+            <img alt="v0.610" decoding="async" height="48" src="/qb64wiki/images/9/91/Qb64.png" width="48"/>
+           </a>
+          </div>
+         </div>
+         <div class="gallerytext">
+          <p>
+           <b>
+            v0.610
+           </b>
+          </p>
+         </div>
+        </div>
+       </li>
+       <li class="gallerybox" style="width: 53px">
+        <div style="width: 53px">
+         <div class="thumb" style="width: 48px;">
+          <div style="margin:0px auto;">
+           <a class="image" href="/qb64wiki/index.php/File:Qbpe.png" title="all">
+            <img alt="all" decoding="async" height="48" src="/qb64wiki/images/0/07/Qbpe.png" width="48"/>
+           </a>
+          </div>
+         </div>
+         <div class="gallerytext">
+          <p>
+           <b>
+            all
+           </b>
+          </p>
+         </div>
+        </div>
+       </li>
+       <li class="gallerybox" style="width: 53px">
+        <div style="width: 53px">
+         <div class="thumb" style="width: 48px;">
+          <div style="margin:0px auto;">
+           <a class="image" href="/qb64wiki/index.php/File:Apix.png">
+            <img alt="Apix.png" decoding="async" height="48" src="/qb64wiki/images/5/5f/Apix.png" width="48"/>
+           </a>
+          </div>
+         </div>
+         <div class="gallerytext">
+         </div>
+        </div>
+       </li>
+       <li class="gallerybox" style="width: 53px">
+        <div style="width: 53px">
+         <div class="thumb" style="width: 48px;">
+          <div style="margin:0px auto;">
+           <a class="image" href="/qb64wiki/index.php/File:Win.png" title="yes">
+            <img alt="yes" decoding="async" height="48" src="/qb64wiki/images/2/29/Win.png" width="48"/>
+           </a>
+          </div>
+         </div>
+         <div class="gallerytext">
+          <p>
+           <b>
+            yes
+           </b>
+          </p>
+         </div>
+        </div>
+       </li>
+       <li class="gallerybox" style="width: 53px">
+        <div style="width: 53px">
+         <div class="thumb" style="width: 48px;">
+          <div style="margin:0px auto;">
+           <a class="image" href="/qb64wiki/index.php/File:Lnx.png" title="yes">
+            <img alt="yes" decoding="async" height="48" src="/qb64wiki/images/7/7a/Lnx.png" width="48"/>
+           </a>
+          </div>
+         </div>
+         <div class="gallerytext">
+          <p>
+           <b>
+            yes
+           </b>
+          </p>
+         </div>
+        </div>
+       </li>
+       <li class="gallerybox" style="width: 53px">
+        <div style="width: 53px">
+         <div class="thumb" style="width: 48px;">
+          <div style="margin:0px auto;">
+           <a class="image" href="/qb64wiki/index.php/File:Osx.png" title="yes">
+            <img alt="yes" decoding="async" height="48" src="/qb64wiki/images/2/22/Osx.png" width="48"/>
+           </a>
+          </div>
+         </div>
+         <div class="gallerytext">
+          <p>
+           <b>
+            yes
+           </b>
+          </p>
+         </div>
+        </div>
+       </li>
+      </ul>
+      <ul>
+       <li>
+        The
+        <i>
+         _NEWHANDLER
+        </i>
+        and
+        <i>
+         _LASTHANDLER
+        </i>
+        functionality is introduced in
+        <b>
+         QB64-PE v3.14.1
+        </b>
+        .
        </li>
       </ul>
       <p>
@@ -251,112 +580,219 @@
         Examples
        </span>
       </h2>
-      <p>
-       <i>
-        Example 1:
-       </i>
-       Using an error handler that ignores any error.
-      </p>
-      <table cellpadding="15px" width="100%">
-       <tbody>
-        <tr>
-         <td>
-          <pre class="codeide"> <a class="mw-selflink selflink"><span style="color:#4593D8;">ON ERROR</span></a> <a href="/qb64wiki/index.php/GOTO" title="GOTO"><span style="color:#4593D8;">GOTO</span></a> Errhandler
-   ' Main module program error simulation code
- <a href="/qb64wiki/index.php/ERROR" title="ERROR"><span style="color:#4593D8;">ERROR</span></a> 7           ' simulate an Out of Memory Error
- PRINT "Error handled...ending program"
- <a href="/qb64wiki/index.php/SLEEP" title="SLEEP"><span style="color:#4593D8;">SLEEP</span></a> 4
- <a href="/qb64wiki/index.php/SYSTEM" title="SYSTEM"><span style="color:#4593D8;">SYSTEM</span></a>            ' end of program code
-
- Errhandler:              'error handler sub program line label
-  PRINT "Error"; <a href="/qb64wiki/index.php/ERR" title="ERR"><span style="color:#4593D8;">ERR</span></a>; "on program file line"; <a href="/qb64wiki/index.php/ERRORLINE" title="ERRORLINE"><span style="color:#4593D8;">_ERRORLINE</span></a>
-  <a href="/qb64wiki/index.php/BEEP" title="BEEP"><span style="color:#4593D8;">BEEP</span></a>             ' warning beep
- <a href="/qb64wiki/index.php/RESUME" title="RESUME"><span style="color:#4593D8;">RESUME</span></a> NEXT       ' moves program to code following the error.
-</pre>
-         </td>
-        </tr>
-       </tbody>
-      </table>
-      <table cellpadding="15px" width="100%">
-       <tbody>
-        <tr>
-         <td>
-          <pre class="outputcrt0">Error 7 on program file line 3
-Error handled...ending program
-</pre>
-         </td>
-        </tr>
-       </tbody>
-      </table>
       <dl>
+       <dt>
+        Example 1
+       </dt>
        <dd>
-        <i>
-         Explanation:
-        </i>
-        The ON ERROR statement is normally placed at the beginning of the main module code.  Errhandle is the line label sub referred to in the statement. The handler prints the error code and attempts to use the next line of code using
-        <a href="/qb64wiki/index.php/RESUME" title="RESUME">
-         RESUME
-        </a>
-        NEXT which is only used in error handling procedures.
-        <a href="/qb64wiki/index.php/ERRORLINE" title="ERRORLINE">
-         _ERRORLINE
-        </a>
-        returns the program file's actual text line count found in the IDE.
+        Using an error handler that prints the error and then continues with the next program line.
        </dd>
       </dl>
-      <p>
-       <br/>
-       <i>
-        Example 2:
-       </i>
-       Using an error handler in a
-       <a href="/qb64wiki/index.php/SUB" title="SUB">
-        SUB
-       </a>
-       procedure.
-      </p>
       <table cellpadding="15px" width="100%">
        <tbody>
         <tr>
          <td>
-          <pre class="codeide">s
+          <pre class="codeide"><span style="color:#919191;">'install our own error handler</span>
+<a class="mw-selflink selflink"><span style="color:#4593D8;">ON ERROR</span></a> <a href="/qb64wiki/index.php/GOTO" title="GOTO"><span style="color:#4593D8;">GOTO</span></a> errHandler
+<span style="color:#919191;">'now simulate an "Out of Memory" error</span>
+<a href="/qb64wiki/index.php/ERROR" title="ERROR"><span style="color:#4593D8;">ERROR</span></a> <span style="color:#F580B1;">7</span>
+<span style="color:#919191;">'our error handler will return to this point</span>
+<a href="/qb64wiki/index.php/PRINT" title="PRINT"><span style="color:#4593D8;">PRINT</span></a> <span style="color:#FFB100;">"Error was handled."</span>: <a href="/qb64wiki/index.php/PRINT" title="PRINT"><span style="color:#4593D8;">PRINT</span></a>
+<span style="color:#919191;">'now we disable our error handler</span>
+<a class="mw-selflink selflink"><span style="color:#4593D8;">ON ERROR</span></a> <a href="/qb64wiki/index.php/GOTO" title="GOTO"><span style="color:#4593D8;">GOTO</span></a> <span style="color:#F580B1;">0</span>
+<a href="/qb64wiki/index.php/COLOR" title="COLOR"><span style="color:#4593D8;">COLOR</span></a> <span style="color:#F580B1;">9</span>: <a href="/qb64wiki/index.php/PRINT" title="PRINT"><span style="color:#4593D8;">PRINT</span></a> <span style="color:#FFB100;">"Handler disabled."</span>: <a href="/qb64wiki/index.php/COLOR" title="COLOR"><span style="color:#4593D8;">COLOR</span></a> <span style="color:#F580B1;">7</span>
+<span style="color:#919191;">'without our own error handler the following error is reported</span>
+<span style="color:#919191;">'in the usual message box popup again</span>
+<a href="/qb64wiki/index.php/PRINT" title="PRINT"><span style="color:#4593D8;">PRINT</span></a> <span style="color:#FFB100;">"The next error will no longer be handled, press any key ..."</span>: <a href="/qb64wiki/index.php/SLEEP" title="SLEEP"><span style="color:#4593D8;">SLEEP</span></a>
+<a href="/qb64wiki/index.php/ERROR" title="ERROR"><span style="color:#4593D8;">ERROR</span></a> <span style="color:#F580B1;">7</span>
 <a href="/qb64wiki/index.php/END" title="END"><span style="color:#4593D8;">END</span></a>
 
-hand:
-<a href="/qb64wiki/index.php/PRINT" title="PRINT"><span style="color:#4593D8;">PRINT</span></a> "got error!"
+<span style="color:#919191;">'the error handler label must be part of the main program, local</span>
+<span style="color:#919191;">'labels inside a SUB/FUNCTION are not allowed for error handlers</span>
+errHandler:
+<a href="/qb64wiki/index.php/COLOR" title="COLOR"><span style="color:#4593D8;">COLOR</span></a> <span style="color:#F580B1;">10</span>: <a href="/qb64wiki/index.php/PRINT" title="PRINT"><span style="color:#4593D8;">PRINT</span></a> <span style="color:#FFB100;">"Start handling error"</span>; <a href="/qb64wiki/index.php/ERR" title="ERR"><span style="color:#4593D8;">ERR</span></a>; <span style="color:#FFB100;">"on program file line"</span>; <a href="/qb64wiki/index.php/ERRORLINE" title="ERRORLINE"><span style="color:#4593D8;">_ERRORLINE</span></a>;
+<a href="/qb64wiki/index.php/BEEP" title="BEEP"><span style="color:#4593D8;">BEEP</span></a>: <a href="/qb64wiki/index.php/PRINT" title="PRINT"><span style="color:#4593D8;">PRINT</span></a> <span style="color:#FFB100;">"... done."</span>: <a href="/qb64wiki/index.php/COLOR" title="COLOR"><span style="color:#4593D8;">COLOR</span></a> <span style="color:#F580B1;">7</span>
+<a href="/qb64wiki/index.php/RESUME" title="RESUME"><span style="color:#4593D8;">RESUME</span></a> <a href="/qb64wiki/index.php/NEXT" title="NEXT"><span style="color:#4593D8;">NEXT</span></a> <span style="color:#919191;">'returns execution to the code following the error</span>
+</pre>
+         </td>
+        </tr>
+       </tbody>
+      </table>
+      <table cellpadding="15px" width="100%">
+       <tbody>
+        <tr>
+         <td>
+          <pre class="outputcrt0"><span style="background-color: #000000; color:#55ff55;">Start handling error 7 on program file line 6 ... done.</span>
+Error was handled.
+
+<span style="background-color: #000000; color:#5555ff;">Handler disabled.</span>
+The next error will no longer be handled, press any key ...
+</pre>
+         </td>
+        </tr>
+       </tbody>
+      </table>
+      <hr/>
+      <dl>
+       <dt>
+        Example 2
+       </dt>
+       <dd>
+        Using an alternative error handler in a
+        <a href="/qb64wiki/index.php/SUB" title="SUB">
+         SUB
+        </a>
+        procedure.
+       </dd>
+      </dl>
+      <table cellpadding="15px" width="100%">
+       <tbody>
+        <tr>
+         <td>
+          <pre class="codeide"><a class="mw-selflink selflink"><span style="color:#4593D8;">ON ERROR</span></a> <a href="/qb64wiki/index.php/GOTO" title="GOTO"><span style="color:#4593D8;">GOTO</span></a> mainHandler
+<a href="/qb64wiki/index.php/ERROR" title="ERROR"><span style="color:#4593D8;">ERROR</span></a> <span style="color:#F580B1;">7</span>
+<a href="/qb64wiki/index.php/PRINT" title="PRINT"><span style="color:#4593D8;">PRINT</span></a> <span style="color:#FFB100;">"Error was handled."</span>: <a href="/qb64wiki/index.php/PRINT" title="PRINT"><span style="color:#4593D8;">PRINT</span></a>
+<span style="color:#55FF55;">LegacyErrorTest</span>
+<a href="/qb64wiki/index.php/PRINT" title="PRINT"><span style="color:#4593D8;">PRINT</span></a> <span style="color:#FFB100;">"Error was handled."</span>: <a href="/qb64wiki/index.php/PRINT" title="PRINT"><span style="color:#4593D8;">PRINT</span></a>
+<a href="/qb64wiki/index.php/ERROR" title="ERROR"><span style="color:#4593D8;">ERROR</span></a> <span style="color:#F580B1;">7</span>
+<a href="/qb64wiki/index.php/PRINT" title="PRINT"><span style="color:#4593D8;">PRINT</span></a> <span style="color:#FFB100;">"Error was handled."</span>: <a href="/qb64wiki/index.php/PRINT" title="PRINT"><span style="color:#4593D8;">PRINT</span></a>
+<a class="mw-selflink selflink"><span style="color:#4593D8;">ON ERROR</span></a> <a href="/qb64wiki/index.php/GOTO" title="GOTO"><span style="color:#4593D8;">GOTO</span></a> <span style="color:#F580B1;">0</span>
+<a href="/qb64wiki/index.php/COLOR" title="COLOR"><span style="color:#4593D8;">COLOR</span></a> <span style="color:#F580B1;">9</span>: <a href="/qb64wiki/index.php/PRINT" title="PRINT"><span style="color:#4593D8;">PRINT</span></a> <span style="color:#FFB100;">"Handler disabled."</span>: <a href="/qb64wiki/index.php/COLOR" title="COLOR"><span style="color:#4593D8;">COLOR</span></a> <span style="color:#F580B1;">7</span>
+<a href="/qb64wiki/index.php/PRINT" title="PRINT"><span style="color:#4593D8;">PRINT</span></a> <span style="color:#FFB100;">"The next error will no longer be handled, press any key ..."</span>: <a href="/qb64wiki/index.php/SLEEP" title="SLEEP"><span style="color:#4593D8;">SLEEP</span></a>
+<a href="/qb64wiki/index.php/ERROR" title="ERROR"><span style="color:#4593D8;">ERROR</span></a> <span style="color:#F580B1;">7</span>
+<a href="/qb64wiki/index.php/END" title="END"><span style="color:#4593D8;">END</span></a>
+
+<span style="color:#919191;">'the error handler label must be part of the main program, local</span>
+<span style="color:#919191;">'labels inside a SUB/FUNCTION are not allowed for error handlers</span>
+mainHandler:
+<a href="/qb64wiki/index.php/COLOR" title="COLOR"><span style="color:#4593D8;">COLOR</span></a> <span style="color:#F580B1;">10</span>: <a href="/qb64wiki/index.php/PRINT" title="PRINT"><span style="color:#4593D8;">PRINT</span></a> <span style="color:#FFB100;">"Main handler starts handling error"</span>; <a href="/qb64wiki/index.php/ERR" title="ERR"><span style="color:#4593D8;">ERR</span></a>; <span style="color:#FFB100;">"on program file line"</span>; <a href="/qb64wiki/index.php/ERRORLINE" title="ERRORLINE"><span style="color:#4593D8;">_ERRORLINE</span></a>;
+<a href="/qb64wiki/index.php/BEEP" title="BEEP"><span style="color:#4593D8;">BEEP</span></a>: <a href="/qb64wiki/index.php/PRINT" title="PRINT"><span style="color:#4593D8;">PRINT</span></a> <span style="color:#FFB100;">"... done."</span>: <a href="/qb64wiki/index.php/COLOR" title="COLOR"><span style="color:#4593D8;">COLOR</span></a> <span style="color:#F580B1;">7</span>
+<a href="/qb64wiki/index.php/RESUME" title="RESUME"><span style="color:#4593D8;">RESUME</span></a> <a href="/qb64wiki/index.php/NEXT" title="NEXT"><span style="color:#4593D8;">NEXT</span></a>
+<span style="color:#919191;">'an alternative error handler which we set from within a SUB/FUNCTION</span>
+<span style="color:#919191;">'however, the error handler label must still be part of the main program</span>
+subHandler:
+<a href="/qb64wiki/index.php/COLOR" title="COLOR"><span style="color:#4593D8;">COLOR</span></a> <span style="color:#F580B1;">12</span>: <a href="/qb64wiki/index.php/PRINT" title="PRINT"><span style="color:#4593D8;">PRINT</span></a> <span style="color:#FFB100;">"Sub handler starts handling error"</span>; <a href="/qb64wiki/index.php/ERR" title="ERR"><span style="color:#4593D8;">ERR</span></a>; <span style="color:#FFB100;">"on program file line"</span>; <a href="/qb64wiki/index.php/ERRORLINE" title="ERRORLINE"><span style="color:#4593D8;">_ERRORLINE</span></a>;
+<a href="/qb64wiki/index.php/BEEP" title="BEEP"><span style="color:#4593D8;">BEEP</span></a>: <a href="/qb64wiki/index.php/PRINT" title="PRINT"><span style="color:#4593D8;">PRINT</span></a> <span style="color:#FFB100;">"... done."</span>: <a href="/qb64wiki/index.php/COLOR" title="COLOR"><span style="color:#4593D8;">COLOR</span></a> <span style="color:#F580B1;">7</span>
 <a href="/qb64wiki/index.php/RESUME" title="RESUME"><span style="color:#4593D8;">RESUME</span></a> <a href="/qb64wiki/index.php/NEXT" title="NEXT"><span style="color:#4593D8;">NEXT</span></a>
 
-<a href="/qb64wiki/index.php/SUB" title="SUB"><span style="color:#4593D8;">SUB</span></a> s
-<a class="mw-selflink selflink"><span style="color:#4593D8;">ON ERROR</span></a> <a href="/qb64wiki/index.php/GOTO" title="GOTO"><span style="color:#4593D8;">GOTO</span></a> hand
-<a href="/qb64wiki/index.php/ERROR" title="ERROR"><span style="color:#4593D8;">ERROR</span></a> 1
-<a class="mw-selflink selflink"><span style="color:#4593D8;">ON ERROR</span></a> <a href="/qb64wiki/index.php/GOTO" title="GOTO"><span style="color:#4593D8;">GOTO</span></a> 0
-<a href="/qb64wiki/index.php/PRINT" title="PRINT"><span style="color:#4593D8;">PRINT</span></a> "Done!"
+<a href="/qb64wiki/index.php/SUB" title="SUB"><span style="color:#4593D8;">SUB</span></a> <span style="color:#55FF55;">LegacyErrorTest</span>
+<span style="color:#919191;">'the next line overrides the currently active "mainHandler"</span>
+<span style="color:#919191;">'with our new "subHandler"</span>
+<a class="mw-selflink selflink"><span style="color:#4593D8;">ON ERROR</span></a> <a href="/qb64wiki/index.php/GOTO" title="GOTO"><span style="color:#4593D8;">GOTO</span></a> subHandler
+<a href="/qb64wiki/index.php/ERROR" title="ERROR"><span style="color:#4593D8;">ERROR</span></a> <span style="color:#F580B1;">7</span>
+<span style="color:#919191;">'unfortunately the legacy QuickBASIC/QBasic syntax has no function to</span>
+<span style="color:#919191;">'restore back to the old handler, so you need to know which handler was</span>
+<span style="color:#919191;">'active and restore that manually</span>
+<a class="mw-selflink selflink"><span style="color:#4593D8;">ON ERROR</span></a> <a href="/qb64wiki/index.php/GOTO" title="GOTO"><span style="color:#4593D8;">GOTO</span></a> mainHandler
 <a href="/qb64wiki/index.php/END_SUB" title="END SUB"><span style="color:#4593D8;">END SUB</span></a>
 </pre>
          </td>
         </tr>
        </tbody>
       </table>
+      <table cellpadding="15px" width="100%">
+       <tbody>
+        <tr>
+         <td>
+          <pre class="outputcrt0"><span style="background-color: #000000; color:#55ff55;">Main handler starts handling error 7 on program file line 4 ... done.</span>
+Error was handled.
+
+<span style="background-color: #000000; color:#ff5555;">Sub handler starts handling error 7 on program file line 33 ... done.</span>
+Error was handled.
+
+<span style="background-color: #000000; color:#55ff55;">Main handler starts handling error 7 on program file line 8 ... done.</span>
+Error was handled.
+
+<span style="background-color: #000000; color:#5555ff;">Handler disabled.</span>
+The next error will no longer be handled, press any key ...
+</pre>
+         </td>
+        </tr>
+       </tbody>
+      </table>
+      <hr/>
       <dl>
+       <dt>
+        Example 3
+       </dt>
        <dd>
-        <i>
-         Explanation:
-        </i>
-        The
-        <a href="/qb64wiki/index.php/GOTO" title="GOTO">
-         GOTO
-        </a>
-        procedure must be in the main code area after
-        <a href="/qb64wiki/index.php/END" title="END">
-         END
-        </a>
-        to avoid a
-        <a href="/qb64wiki/index.php/RESUME" title="RESUME">
-         RESUME
-        </a>
-        error later. Use GOTO 0 to clear the ON ERROR set in the sub so that later errors are not handled by it.
+        Same as example 2, but using QB64-PE specific extensions
+        <b>
+         _NEWHANDLER
+        </b>
+        and
+        <b>
+         _LASTHANDLER
+        </b>
+        .
        </dd>
       </dl>
+      <table cellpadding="15px" width="100%">
+       <tbody>
+        <tr>
+         <td>
+          <pre class="codeide"><a class="mw-selflink selflink"><span style="color:#4593D8;">ON ERROR</span></a> <a href="/qb64wiki/index.php/GOTO" title="GOTO"><span style="color:#4593D8;">GOTO</span></a> mainHandler
+<a href="/qb64wiki/index.php/ERROR" title="ERROR"><span style="color:#4593D8;">ERROR</span></a> <span style="color:#F580B1;">7</span>
+<a href="/qb64wiki/index.php/PRINT" title="PRINT"><span style="color:#4593D8;">PRINT</span></a> <span style="color:#FFB100;">"Error was handled."</span>: <a href="/qb64wiki/index.php/PRINT" title="PRINT"><span style="color:#4593D8;">PRINT</span></a>
+<span style="color:#55FF55;">QB64peErrorTest</span>
+<a href="/qb64wiki/index.php/PRINT" title="PRINT"><span style="color:#4593D8;">PRINT</span></a> <span style="color:#FFB100;">"Error was handled."</span>: <a href="/qb64wiki/index.php/PRINT" title="PRINT"><span style="color:#4593D8;">PRINT</span></a>
+<a href="/qb64wiki/index.php/ERROR" title="ERROR"><span style="color:#4593D8;">ERROR</span></a> <span style="color:#F580B1;">7</span>
+<a href="/qb64wiki/index.php/PRINT" title="PRINT"><span style="color:#4593D8;">PRINT</span></a> <span style="color:#FFB100;">"Error was handled."</span>: <a href="/qb64wiki/index.php/PRINT" title="PRINT"><span style="color:#4593D8;">PRINT</span></a>
+<a class="mw-selflink selflink"><span style="color:#4593D8;">ON ERROR</span></a> <a href="/qb64wiki/index.php/GOTO" title="GOTO"><span style="color:#4593D8;">GOTO</span></a> <span style="color:#F580B1;">0</span>
+<a href="/qb64wiki/index.php/COLOR" title="COLOR"><span style="color:#4593D8;">COLOR</span></a> <span style="color:#F580B1;">9</span>: <a href="/qb64wiki/index.php/PRINT" title="PRINT"><span style="color:#4593D8;">PRINT</span></a> <span style="color:#FFB100;">"Handler disabled."</span>: <a href="/qb64wiki/index.php/COLOR" title="COLOR"><span style="color:#4593D8;">COLOR</span></a> <span style="color:#F580B1;">7</span>
+<a href="/qb64wiki/index.php/PRINT" title="PRINT"><span style="color:#4593D8;">PRINT</span></a> <span style="color:#FFB100;">"The next error will no longer be handled, press any key ..."</span>: <a href="/qb64wiki/index.php/SLEEP" title="SLEEP"><span style="color:#4593D8;">SLEEP</span></a>
+<a href="/qb64wiki/index.php/ERROR" title="ERROR"><span style="color:#4593D8;">ERROR</span></a> <span style="color:#F580B1;">7</span>
+<a href="/qb64wiki/index.php/END" title="END"><span style="color:#4593D8;">END</span></a>
+
+mainHandler:
+<a href="/qb64wiki/index.php/COLOR" title="COLOR"><span style="color:#4593D8;">COLOR</span></a> <span style="color:#F580B1;">10</span>: <a href="/qb64wiki/index.php/PRINT" title="PRINT"><span style="color:#4593D8;">PRINT</span></a> <span style="color:#FFB100;">"Main handler starts handling error"</span>; <a href="/qb64wiki/index.php/ERR" title="ERR"><span style="color:#4593D8;">ERR</span></a>; <span style="color:#FFB100;">"on program file line"</span>; <a href="/qb64wiki/index.php/ERRORLINE" title="ERRORLINE"><span style="color:#4593D8;">_ERRORLINE</span></a>;
+<a href="/qb64wiki/index.php/BEEP" title="BEEP"><span style="color:#4593D8;">BEEP</span></a>: <a href="/qb64wiki/index.php/PRINT" title="PRINT"><span style="color:#4593D8;">PRINT</span></a> <span style="color:#FFB100;">"... done."</span>: <a href="/qb64wiki/index.php/COLOR" title="COLOR"><span style="color:#4593D8;">COLOR</span></a> <span style="color:#F580B1;">7</span>
+<a href="/qb64wiki/index.php/RESUME" title="RESUME"><span style="color:#4593D8;">RESUME</span></a> <a href="/qb64wiki/index.php/NEXT" title="NEXT"><span style="color:#4593D8;">NEXT</span></a>
+subHandler:
+<a href="/qb64wiki/index.php/COLOR" title="COLOR"><span style="color:#4593D8;">COLOR</span></a> <span style="color:#F580B1;">12</span>: <a href="/qb64wiki/index.php/PRINT" title="PRINT"><span style="color:#4593D8;">PRINT</span></a> <span style="color:#FFB100;">"Sub handler starts handling error"</span>; <a href="/qb64wiki/index.php/ERR" title="ERR"><span style="color:#4593D8;">ERR</span></a>; <span style="color:#FFB100;">"on program file line"</span>; <a href="/qb64wiki/index.php/ERRORLINE" title="ERRORLINE"><span style="color:#4593D8;">_ERRORLINE</span></a>;
+<a href="/qb64wiki/index.php/BEEP" title="BEEP"><span style="color:#4593D8;">BEEP</span></a>: <a href="/qb64wiki/index.php/PRINT" title="PRINT"><span style="color:#4593D8;">PRINT</span></a> <span style="color:#FFB100;">"... done."</span>: <a href="/qb64wiki/index.php/COLOR" title="COLOR"><span style="color:#4593D8;">COLOR</span></a> <span style="color:#F580B1;">7</span>
+<a href="/qb64wiki/index.php/RESUME" title="RESUME"><span style="color:#4593D8;">RESUME</span></a> <a href="/qb64wiki/index.php/NEXT" title="NEXT"><span style="color:#4593D8;">NEXT</span></a>
+
+<a href="/qb64wiki/index.php/SUB" title="SUB"><span style="color:#4593D8;">SUB</span></a> <span style="color:#55FF55;">QB64peErrorTest</span>
+<span style="color:#919191;">'the next line overrides the currently active "mainHandler"</span>
+<span style="color:#919191;">'with our new "subHandler", but the _NEWHANDLER keyword explicitly</span>
+<span style="color:#919191;">'designates this as override and to remember the former handler</span>
+<a class="mw-selflink selflink"><span style="color:#4593D8;">ON ERROR</span></a> <a href="/qb64wiki/index.php/GOTO" title="GOTO"><span style="color:#4593D8;">GOTO</span></a> <a class="mw-redirect" href="/qb64wiki/index.php/NEWHANDLER" title="NEWHANDLER"><span style="color:#4593D8;">_NEWHANDLER</span></a> subHandler
+<a href="/qb64wiki/index.php/ERROR" title="ERROR"><span style="color:#4593D8;">ERROR</span></a> <span style="color:#F580B1;">7</span>
+<span style="color:#919191;">'now the following _LASTHANDLER syntax can easily restore back</span>
+<span style="color:#919191;">'to the former handler without we need to know which one it was,</span>
+<a class="mw-selflink selflink"><span style="color:#4593D8;">ON ERROR</span></a> <a href="/qb64wiki/index.php/GOTO" title="GOTO"><span style="color:#4593D8;">GOTO</span></a> <a class="mw-redirect" href="/qb64wiki/index.php/LASTHANDLER" title="LASTHANDLER"><span style="color:#4593D8;">_LASTHANDLER</span></a>
+<a href="/qb64wiki/index.php/END_SUB" title="END SUB"><span style="color:#4593D8;">END SUB</span></a>
+</pre>
+         </td>
+        </tr>
+       </tbody>
+      </table>
+      <table cellpadding="15px" width="100%">
+       <tbody>
+        <tr>
+         <td>
+          <pre class="outputcrt0"><span style="background-color: #000000; color:#55ff55;">Main handler starts handling error 7 on program file line 4 ... done.</span>
+Error was handled.
+
+<span style="background-color: #000000; color:#ff5555;">Sub handler starts handling error 7 on program file line 30 ... done.</span>
+Error was handled.
+
+<span style="background-color: #000000; color:#55ff55;">Main handler starts handling error 7 on program file line 8 ... done.</span>
+Error was handled.
+
+<span style="background-color: #000000; color:#5555ff;">Handler disabled.</span>
+The next error will no longer be handled, press any key ...
+</pre>
+         </td>
+        </tr>
+       </tbody>
+      </table>
+      <center>
+       <span style="font-family: Courier New, Courier, monospace; font-size: 0.80em; line-height: 50%;">
+        Examples by RhoSigma
+       </span>
+      </center>
       <p>
        <br/>
       </p>
@@ -442,40 +878,40 @@ hand:
       </center>
       <!-- 
 NewPP limit report
-Cached time: 20240721212648
+Cached time: 20250125040229
 Cache expiry: 86400
 Reduced expiry: false
 Complications: [show‐toc]
-CPU time usage: 0.029 seconds
-Real time usage: 0.036 seconds
-Preprocessor visited node count: 175/1000000
-Post‐expand include size: 1876/2097152 bytes
-Template argument size: 226/2097152 bytes
-Highest expansion depth: 3/100
+CPU time usage: 0.095 seconds
+Real time usage: 0.120 seconds
+Preprocessor visited node count: 1733/1000000
+Post‐expand include size: 13858/2097152 bytes
+Template argument size: 4352/2097152 bytes
+Highest expansion depth: 4/100
 Expensive parser function count: 0/100
 Unstrip recursion depth: 0/20
-Unstrip post‐expand size: 0/5000000 bytes
+Unstrip post‐expand size: 4337/5000000 bytes
 -->
       <!--
 Transclusion expansion time report (%,ms,calls,template)
-100.00%   22.632      1 -total
- 13.10%    2.964     21 Template:Cl
- 12.49%    2.826      1 Template:PageSyntax
- 10.18%    2.303      1 Template:PageDescription
-  9.29%    2.102      1 Template:PageExamples
-  8.66%    1.961      2 Template:CodeEnd
-  8.60%    1.946      2 Template:CodeStart
-  7.10%    1.608      1 Template:OutputStart
-  6.87%    1.555      1 Template:PageSeeAlso
-  6.82%    1.543      1 Template:PageNavigation
+100.00%   79.736      1 -total
+  8.37%    6.673    118 Template:Cl
+  7.68%    6.123     86 Template:Text
+  3.93%    3.133      1 Template:PageSyntax
+  3.46%    2.761      3 Template:OutputEnd
+  3.23%    2.575      1 Template:PageExamples
+  3.08%    2.454      1 Template:PageParameters
+  2.74%    2.184      1 Template:PageDescription
+  2.69%    2.147      1 Template:Small
+  2.69%    2.145     10 Template:Ot
 -->
-      <!-- Saved in parser cache with key qb64pnix_mw19894-mwmb_:pcache:idhash:312-0!canonical and timestamp 20240721212648 and revision id 7630.
+      <!-- Saved in parser cache with key qb64pnix_mw19894-mwmb_:pcache:idhash:312-0!canonical and timestamp 20250125040229 and revision id 9526.
  -->
      </div>
      <div class="printfooter" data-nosnippet="">
       Retrieved from "
-      <a dir="ltr" href="https://qb64phoenix.com/qb64wiki/index.php?title=ON_ERROR&amp;oldid=7630">
-       https://qb64phoenix.com/qb64wiki/index.php?title=ON_ERROR&amp;oldid=7630
+      <a dir="ltr" href="https://qb64phoenix.com/qb64wiki/index.php?title=ON_ERROR&amp;oldid=9526">
+       https://qb64phoenix.com/qb64wiki/index.php?title=ON_ERROR&amp;oldid=9526
       </a>
       "
      </div>
@@ -692,7 +1128,7 @@ You can view its source [e]">
         </a>
        </li>
        <li class="mw-list-item" id="t-permalink">
-        <a href="/qb64wiki/index.php?title=ON_ERROR&amp;oldid=7630" title="Permanent link to this revision of this page">
+        <a href="/qb64wiki/index.php?title=ON_ERROR&amp;oldid=9526" title="Permanent link to this revision of this page">
          <span>
           Permanent link
          </span>
@@ -713,7 +1149,7 @@ You can view its source [e]">
   <footer class="mw-footer" id="footer" role="contentinfo">
    <ul id="footer-info">
     <li id="footer-info-lastmod">
-     This page was last edited on 2 February 2023, at 21:20.
+     This page was last edited on 25 December 2024, at 14:23.
     </li>
    </ul>
    <ul id="footer-places">
@@ -742,7 +1178,7 @@ You can view its source [e]">
    </ul>
   </footer>
   <script>
-   (RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgPageParseReport":{"limitreport":{"cputime":"0.029","walltime":"0.036","ppvisitednodes":{"value":175,"limit":1000000},"postexpandincludesize":{"value":1876,"limit":2097152},"templateargumentsize":{"value":226,"limit":2097152},"expansiondepth":{"value":3,"limit":100},"expensivefunctioncount":{"value":0,"limit":100},"unstrip-depth":{"value":0,"limit":20},"unstrip-size":{"value":0,"limit":5000000},"timingprofile":["100.00%   22.632      1 -total"," 13.10%    2.964     21 Template:Cl"," 12.49%    2.826      1 Template:PageSyntax"," 10.18%    2.303      1 Template:PageDescription","  9.29%    2.102      1 Template:PageExamples","  8.66%    1.961      2 Template:CodeEnd","  8.60%    1.946      2 Template:CodeStart","  7.10%    1.608      1 Template:OutputStart","  6.87%    1.555      1 Template:PageSeeAlso","  6.82%    1.543      1 Template:PageNavigation"]},"cachereport":{"timestamp":"20240721212648","ttl":86400,"transientcontent":false}}});mw.config.set({"wgBackendResponseTime":111});});
+   (RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgPageParseReport":{"limitreport":{"cputime":"0.095","walltime":"0.120","ppvisitednodes":{"value":1733,"limit":1000000},"postexpandincludesize":{"value":13858,"limit":2097152},"templateargumentsize":{"value":4352,"limit":2097152},"expansiondepth":{"value":4,"limit":100},"expensivefunctioncount":{"value":0,"limit":100},"unstrip-depth":{"value":0,"limit":20},"unstrip-size":{"value":4337,"limit":5000000},"timingprofile":["100.00%   79.736      1 -total","  8.37%    6.673    118 Template:Cl","  7.68%    6.123     86 Template:Text","  3.93%    3.133      1 Template:PageSyntax","  3.46%    2.761      3 Template:OutputEnd","  3.23%    2.575      1 Template:PageExamples","  3.08%    2.454      1 Template:PageParameters","  2.74%    2.184      1 Template:PageDescription","  2.69%    2.147      1 Template:Small","  2.69%    2.145     10 Template:Ot"]},"cachereport":{"timestamp":"20250125040229","ttl":86400,"transientcontent":false}}});mw.config.set({"wgBackendResponseTime":214});});
   </script>
  </body>
 </html>

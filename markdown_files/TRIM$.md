@@ -119,7 +119,7 @@ br ~ h5 {
 <blockquote>
 
 
-* Shorthand to using [LTRIM&dollar;](LTRIM&dollar;.md) ( [RTRIM&dollar;](RTRIM&dollar;.md) ("text"))
+* Shorthand to using [LTRIM\$](LTRIM\$.md) ( [RTRIM\$](RTRIM\$.md) ("text"))
 * text$ is the [STRING](STRING.md) value to trim.
 * If text$ contains no leading or trailing space characters, it is returned unchanged.
 * Convert fixed length [STRING](STRING.md) values by using a different return$ variable.
@@ -163,5 +163,5 @@ PRINT "[" + _TRIM$(text$) + "]"
 
 
 * Featured in our "Keyword of the Day" series
-* [RTRIM&dollar;](RTRIM&dollar;.md) , [LTRIM&dollar;](LTRIM&dollar;.md)
+* [RTRIM\$](RTRIM\$.md) , [LTRIM\$](LTRIM\$.md)
 </blockquote>

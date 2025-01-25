@@ -135,6 +135,6 @@ br ~ h5 {
 <blockquote>
 
 
-* [_TITLE](TITLE.md)
-* [_CONSOLETITLE](CONSOLETITLE.md)
+* _TITLE
+* _CONSOLETITLE
 </blockquote>

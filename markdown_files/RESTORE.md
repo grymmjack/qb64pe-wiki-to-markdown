@@ -123,13 +123,13 @@ br ~ h5 {
 ##### Example: Restoring a labeled DATA field to avoid going past the end of DATA.
 ```vb
 DO
-INPUT "Enter a month number(1 to 12): ", monthnum%
+  INPUT "Enter a month number(1 to 12): ", monthnum%
 
-RESTORE Months
-FOR i = 1 TO monthnum%
-READ month$, days%   'variables must match data field types
-NEXT
-PRINT "The month "; month$; " has"; days%; "days."
+  RESTORE Months
+  FOR i = 1 TO monthnum%
+     READ month$, days%   'variables must match data field types
+  NEXT
+  PRINT "The month "; month$; " has"; days%; "days."
 LOOP UNTIL monthnum% < 1 OR monthnum% > 12
 
 Months:
@@ -202,6 +202,6 @@ entry3
 
 
 * [DATA](DATA.md) , [READ](READ.md)
-* [&dollar;EMBED](&dollar;EMBED.md) . [_EMBEDDED&dollar;](EMBEDDED&dollar;.md)
+* [\$EMBED](\$EMBED.md) . _EMBEDDED$
 * line numbers
 </blockquote>

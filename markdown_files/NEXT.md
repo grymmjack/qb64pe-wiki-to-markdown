@@ -119,11 +119,11 @@ br ~ h5 {
 <blockquote>
 
 
-* [NEXT](NEXT.md) is required in a [FOR](FOR.md) loop or a "FOR without NEXT" error will occur.
-* The [FOR](FOR.md) variable name is not required after [NEXT](NEXT.md) .
-* [NEXT](NEXT.md) can be grouped with other NEXTs in nested [FOR](FOR.md) loops using colons like [NEXT](NEXT.md) : [NEXT](NEXT.md)
-* [NEXT](NEXT.md) can also end more than one nested [FOR](FOR.md) loop using comma separated variables like [NEXT](NEXT.md) j, i
-* [NEXT](NEXT.md) increases the [FOR](FOR.md) loop count, so after the loop is over the counterVariable's value will be stopValue + 1 (or stopValue + increment).
+* [NEXT](NEXT.md) is required in a FOR loop or a "FOR without NEXT" error will occur.
+* The FOR variable name is not required after [NEXT](NEXT.md) .
+* [NEXT](NEXT.md) can be grouped with other NEXTs in nested FOR loops using colons like [NEXT](NEXT.md) : [NEXT](NEXT.md)
+* [NEXT](NEXT.md) can also end more than one nested FOR loop using comma separated variables like [NEXT](NEXT.md) j, i
+* [NEXT](NEXT.md) increases the FOR loop count, so after the loop is over the counterVariable's value will be stopValue + 1 (or stopValue + increment).
 * [NEXT](NEXT.md) is also used with the [RESUME](RESUME.md) statement.
 
 </blockquote>
@@ -159,7 +159,7 @@ PRINT "AFTER the LOOP, NEXT makes the value of i ="; i
 <blockquote>
 
 
-* FOR...NEXT
-* DO...LOOP
+* [FOR...NEXT](FOR...NEXT.md)
+* [DO...LOOP](DO...LOOP.md)
 * [RESUME](RESUME.md) [NEXT](NEXT.md)
 </blockquote>

@@ -135,7 +135,7 @@ br ~ h5 {
 <blockquote>
 
 
-* [_SCREENICON](SCREENICON.md)
-* [_SCREENHIDE](SCREENHIDE.md)
-* [_SCREENSHOW](SCREENSHOW.md)
+* _SCREENICON
+* _SCREENHIDE
+* _SCREENSHOW
 </blockquote>

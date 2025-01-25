@@ -144,5 +144,5 @@ IF h& THEN _SNDPLAY h&
 <blockquote>
 
 
-* [_SNDOPEN](SNDOPEN.md) , [_SNDPAUSE](SNDPAUSE.md) , [_SNDPLAYING](SNDPLAYING.md)
+* _SNDOPEN , _SNDPAUSE , _SNDPLAYING
 </blockquote>

@@ -131,7 +131,7 @@ br ~ h5 {
 
 * The function returns the position% in the baseString$ where the subString$ was found, from right to left.
 * position% will be 0 if the search found no matches in the base string.
-* [_INSTRREV](INSTRREV.md) returns 0 if an empty baseString$ is passed, and returns [LEN](LEN.md) ( baseString$ ) with an empty subString$ .
+* _INSTRREV returns 0 if an empty baseString$ is passed, and returns [LEN](LEN.md) ( baseString$ ) with an empty subString$ .
 * The start% position is useful when making multiple searches in the same string. See the example below.
 * The subString$ should be smaller or equal in length to the baseString$ , or 0 is returned.
 * A start% value of 0 or less starts search from the end of the baseString$ (same as not passing a start% parameter).
@@ -166,22 +166,22 @@ libqb_1_2_000000000000.o
 sentence$ = " This is a string full of spaces, including at start and end... "
 PRINT sentence$
 DO
-findPrevSpace% = _INSTRREV(findPrevSpace% - 1, sentence$, SPACE$(1))
-IF findPrevSpace% = 0 THEN
-LOCATE 4, 1
-PRINT "No more spaces"
-EXIT DO
-END IF
+   findPrevSpace% = _INSTRREV(findPrevSpace% - 1, sentence$, SPACE$(1))
+   IF findPrevSpace% = 0 THEN
+       LOCATE 4, 1
+       PRINT "No more spaces"
+       EXIT DO
+   END IF
 
-LOCATE 2, findPrevSpace%
-PRINT "^"
-totalSpaces = totalSpaces + 1
+   LOCATE 2, findPrevSpace%
+   PRINT "^"
+   totalSpaces = totalSpaces + 1
 
-IF findPrevSpace% = 1 THEN
-LOCATE 4, 1
-PRINT "Last space found at position 1"
-EXIT DO
-END IF
+   IF findPrevSpace% = 1 THEN
+       LOCATE 4, 1
+       PRINT "Last space found at position 1"
+       EXIT DO
+   END IF
 LOOP
 PRINT "Total spaces found: "; totalSpaces
 ```
@@ -207,6 +207,6 @@ Total spaces found: 13
 
 
 * Featured in our "Keyword of the Day" series
-* [MID&dollar;](MID&dollar;.md) (function) , [INSTR](INSTR.md)
-* [SPACE&dollar;](SPACE&dollar;.md)
+* [MID\$](MID\$.md) (function) , [INSTR](INSTR.md)
+* [SPACE\$](SPACE\$.md)
 </blockquote>

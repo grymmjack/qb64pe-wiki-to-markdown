@@ -141,15 +141,15 @@ STICK(5) returns row coordinate of device 3 if used.
 ```vb
 DO: _LIMIT 10
 
-LOCATE 1, 1
-PRINT "JOY1: STICK"; STICK(0); STICK(1); STICK(0, 2); STICK(1, 2);_
-"STRIG"; STRIG(0); STRIG(1); STRIG(4); STRIG(5); STRIG(8); STRIG(9)
+ LOCATE 1, 1
+ PRINT "JOY1: STICK"; STICK(0); STICK(1); STICK(0, 2); STICK(1, 2);_
+ "STRIG"; STRIG(0); STRIG(1); STRIG(4); STRIG(5); STRIG(8); STRIG(9)
 
-PRINT "JOY2: STICK"; STICK(2); STICK(3); STICK(2, 2); STICK(3, 2);_
-"STRIG"; STRIG(2); STRIG(3); STRIG(6); STRIG(7); STRIG(10); STRIG(11)
+ PRINT "JOY2: STICK"; STICK(2); STICK(3); STICK(2, 2); STICK(3, 2);_
+ "STRIG"; STRIG(2); STRIG(3); STRIG(6); STRIG(7); STRIG(10); STRIG(11)
 
-PRINT "JOY3: STICK"; STICK(4); STICK(5); STICK(4, 2); STICK(5, 2);_
-"STRIG"; STRIG(0, 3); STRIG(1, 3); STRIG(4, 3); STRIG(5, 3); STRIG(8, 3); STRIG(9, 3)
+ PRINT "JOY3: STICK"; STICK(4); STICK(5); STICK(4, 2); STICK(5, 2);_
+ "STRIG"; STRIG(0, 3); STRIG(1, 3); STRIG(4, 3); STRIG(5, 3); STRIG(8, 3); STRIG(9, 3)
 
 LOOP UNTIL INKEY$ > ""
 ```
@@ -164,20 +164,20 @@ SCREEN 12
 d = _DEVICES
 PRINT "Number of input devices found ="; d
 FOR i = 1 TO d
-PRINT _DEVICE$(i)
-buttons = _LASTBUTTON(i)
-PRINT "Buttons:"; buttons
+ PRINT _DEVICE$(i)
+ buttons = _LASTBUTTON(i)
+ PRINT "Buttons:"; buttons
 NEXT
 
 DO: _LIMIT 50
-LOCATE 10, 1
-PRINT "   X    Main    Y          Slider         Z-axis           POV"
-PRINT STICK(0, 1), STICK(1, 1), STICK(0, 2), STICK(1, 2), STICK(0, 3); STICK(1, 3); "   "
-PRINT "                   Buttons"
-FOR i = 0 TO 4 * buttons - 1 STEP 4
-PRINT STRIG(i); STRIG(i + 1); CHR$(219);
-NEXT
-PRINT
+ LOCATE 10, 1
+ PRINT "   X    Main    Y          Slider         Z-axis           POV"
+ PRINT STICK(0, 1), STICK(1, 1), STICK(0, 2), STICK(1, 2), STICK(0, 3); STICK(1, 3); "   "
+ PRINT "                   Buttons"
+ FOR i = 0 TO 4 * buttons - 1 STEP 4
+   PRINT STRIG(i); STRIG(i + 1); CHR$(219);
+ NEXT
+ PRINT
 LOOP UNTIL INKEY$ <> ""
 ```
   
@@ -193,9 +193,9 @@ Buttons: 3
 Buttons: 9
 
 
-X    Main     Y          Slider         Z-axis           POV
+ X    Main     Y          Slider         Z-axis           POV
 127           127           254           127           127  127
-Buttons
+                     Buttons
 -0 -1 █ 0  0 █ 0  0 █ 0  0 █ 0  0 █ 0  0 █ 0  0 █ 0  0 █ 0  0 █
 ```
   
@@ -210,7 +210,7 @@ Buttons
 
 
 * [STRIG](STRIG.md)
-* [ON](ON.md) STRIG(n)
-* [_DEVICES](DEVICES.md) , [_DEVICE&dollar;](DEVICE&dollar;.md) , [_LASTBUTTON](LASTBUTTON.md)
+* [ON](ON.md) [STRIG(n)](STRIG(n).md)
+* _DEVICES , _DEVICE$ , _LASTBUTTON
 * Single and Dual Stick Controllers
 </blockquote>

@@ -120,7 +120,7 @@ br ~ h5 {
 
 
 * method% specifies which parts of the page to clear, and can have one of the following values:
-* [CLS](CLS.md) - clears the active graphics or text viewport or the entire text screen and refreshes bottom function [KEY](KEY.md) [ON](ON.md) line.
+* [CLS](CLS.md) - clears the active graphics or text viewport or the entire text screen and refreshes bottom function KEY [ON](ON.md) line.
 * [CLS](CLS.md) 0 - Clears the entire page of text and graphics. Print cursor is moved to row 1 at column 1.
 * [CLS](CLS.md) 1 - Clears only the graphics view port. Has no effect for text mode.
 * [CLS](CLS.md) 2 - Clears only the text view port. The print cursor is moved to the top row of the text view port at column 1.
@@ -134,12 +134,12 @@ br ~ h5 {
 
 
 * In legacy [SCREEN](SCREEN.md) modes bgColor& specifies the color attribute of the background.
-* For 32-bit graphics mode, bgColor& specifies the [_RGB32](RGB32.md) or [_RGBA32](RGBA32.md) color to use.
-* 32-bit screen surface backgrounds (black) have zero [_ALPHA](ALPHA.md) so that they are transparent when placed over other surfaces.
-* Use [CLS](CLS.md) or [_DONTBLEND](DONTBLEND.md) to make a new surface background [_ALPHA](ALPHA.md) 255 or opaque.
+* For 32-bit graphics mode, bgColor& specifies the _RGB32 or _RGBA32 color to use.
+* 32-bit screen surface backgrounds (black) have zero _ALPHA so that they are transparent when placed over other surfaces.
+* Use [CLS](CLS.md) or _DONTBLEND to make a new surface background _ALPHA 255 or opaque.
 * If not specified, bgColor& is assumed to be the current background color. 32-bit backgrounds will change to opaque.
 * If bgColor& is not a valid attribute, an illegal function call error will occur.
-* Use [_PRINTMODE](PRINTMODE.md) to allow the background colors to be visible through the text or the text background.
+* Use _PRINTMODE to allow the background colors to be visible through the text or the text background.
 
 </blockquote>
 
@@ -181,7 +181,7 @@ _PUTIMAGE (0, 0), i 'places image at upper left corner of window w/o stretching 
 
 
 * [SCREEN](SCREEN.md)
-* [_RGB](RGB.md) , [_RGBA](RGBA.md) , [_RGB32](RGB32.md) , [_RGBA32](RGBA32.md)
+* _RGB , _RGBA , _RGB32 , _RGBA32
 * [VIEW](VIEW.md) [PRINT](PRINT.md) , [VIEW](VIEW.md)
-* [_CLEARCOLOR](CLEARCOLOR.md)
+* _CLEARCOLOR
 </blockquote>

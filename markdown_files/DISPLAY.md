@@ -119,12 +119,12 @@ br ~ h5 {
 <blockquote>
 
 
-* [_DISPLAY](DISPLAY.md) turns off the auto refresh screen default [_AUTODISPLAY](AUTODISPLAY.md) behavior. Prevents screen flickering.
-* Call [_DISPLAY](DISPLAY.md) each time the screen graphics are to be displayed. Place call after the image has been changed.
-* Re-enable automatic display refreshing by calling [_AUTODISPLAY](AUTODISPLAY.md) . If it isn't re-enabled, things may not be displayed later.
-* [_DISPLAY](DISPLAY.md) tells QB64 to render all of the hardware [_PUTIMAGE](PUTIMAGE.md) commands loaded into the buffer previously.
-* The [_AUTODISPLAY](AUTODISPLAY.md) (function) can be used to detect the current display behavior.
-* QB64 can set the graphic rendering order of _SOFTWARE, _HARDWARE, and [_GLRENDER](GLRENDER.md) with [_DISPLAYORDER](DISPLAYORDER.md) .
+* _DISPLAY turns off the auto refresh screen default _AUTODISPLAY behavior. Prevents screen flickering.
+* Call _DISPLAY each time the screen graphics are to be displayed. Place call after the image has been changed.
+* Re-enable automatic display refreshing by calling _AUTODISPLAY . If it isn't re-enabled, things may not be displayed later.
+* _DISPLAY tells QB64 to render all of the hardware _PUTIMAGE commands loaded into the buffer previously.
+* The _AUTODISPLAY (function) can be used to detect the current display behavior.
+* QB64 can set the graphic rendering order of _SOFTWARE, _HARDWARE, and _GLRENDER with _DISPLAYORDER .
 
 </blockquote>
 
@@ -140,14 +140,14 @@ SCREEN 12
 x = 21: y = 31 'start position
 dx = 3: dy = 3 'number of pixel moves per loop
 DO
-_LIMIT 100 ' set to 100 frames per second
-x = x + dx: y = y + dy
-IF x < 0 OR x > 640 THEN dx = -dx 'limit columns and reverse column direction each side
-IF y < 0 OR y > 480 THEN dy = -dy 'limit rows and reverse row direction top or bottom
-IF px <> x OR py <> y THEN FOR d = 1 TO 20: CIRCLE (px, py), d, 0: NEXT 'erase
-FOR c = 1 TO 20: CIRCLE (x, y), c, 6: NEXT 'draw new circle at new position
-px = x: py = y 'save older coordinates to erase older circle next loop
-_DISPLAY 'after new circle is set, show it
+   _LIMIT 100 ' set to 100 frames per second
+   x = x + dx: y = y + dy
+   IF x < 0 OR x > 640 THEN dx = -dx 'limit columns and reverse column direction each side
+   IF y < 0 OR y > 480 THEN dy = -dy 'limit rows and reverse row direction top or bottom
+   IF px <> x OR py <> y THEN FOR d = 1 TO 20: CIRCLE (px, py), d, 0: NEXT 'erase
+   FOR c = 1 TO 20: CIRCLE (x, y), c, 6: NEXT 'draw new circle at new position
+   px = x: py = y 'save older coordinates to erase older circle next loop
+   _DISPLAY 'after new circle is set, show it
 LOOP UNTIL INKEY$ = CHR$(27)
 ```
   
@@ -164,27 +164,27 @@ SCREEN _NEWIMAGE(640, 480, 32)
 'SLEEP 1
 LOCATE 20
 DO
-_LIMIT 30
-DisplayMenu
-k = _KEYHIT
-IF k <> 0 THEN PRINT k,
+   _LIMIT 30
+   DisplayMenu
+   k = _KEYHIT
+   IF k <> 0 THEN PRINT k,
 LOOP UNTIL k = 32 OR k = 27
 
 
 SUB DisplayMenu
-STATIC init, MS_HW AS LONG
-IF NOT init THEN
-init = -1
-MS = _NEWIMAGE(640, MenuHeight, 32) 'MenuScreen image
-D = _DEST: _DEST MS
-CLS , &HFFAAAAAA 'background color gray
-_PRINTSTRING (20, 2), "Menu Test" 'image text
-MS_HW = _COPYIMAGE(MS, 33) 'create the MenuScreen_HardWare image
-_FREEIMAGE MS
-_DEST D
-END IF
-_PUTIMAGE (0, 0)-(640, MenuHeight), MS_HW
-_DISPLAY
+   STATIC init, MS_HW AS LONG
+   IF NOT init THEN
+       init = -1
+       MS = _NEWIMAGE(640, MenuHeight, 32) 'MenuScreen image
+       D = _DEST: _DEST MS
+       CLS , &HFFAAAAAA 'background color gray
+       _PRINTSTRING (20, 2), "Menu Test" 'image text
+       MS_HW = _COPYIMAGE(MS, 33) 'create the MenuScreen_HardWare image
+       _FREEIMAGE MS
+       _DEST D
+   END IF
+   _PUTIMAGE (0, 0)-(640, MenuHeight), MS_HW
+   _DISPLAY
 END SUB
 ```
   
@@ -198,9 +198,9 @@ END SUB
 <blockquote>
 
 
-* [_DISPLAY](DISPLAY.md) (function)
-* [_DISPLAYORDER](DISPLAYORDER.md)
-* [_AUTODISPLAY](AUTODISPLAY.md) , [_AUTODISPLAY](AUTODISPLAY.md) (function)
-* [_PUTIMAGE](PUTIMAGE.md)
+* _DISPLAY (function)
+* _DISPLAYORDER
+* _AUTODISPLAY , _AUTODISPLAY (function)
+* _PUTIMAGE
 * [PCOPY](PCOPY.md)
 </blockquote>

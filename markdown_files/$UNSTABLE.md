@@ -120,8 +120,8 @@ br ~ h5 {
 
 
 * The current unstable features are as follows:
-* MIDI allows usage of the [&dollar;MIDISOUNDFONT](&dollar;MIDISOUNDFONT.md) metacommand
-* HTTP allows opening HTTP connections using [_OPENCLIENT](OPENCLIENT.md)
+* MIDI allows usage of the [\$MIDISOUNDFONT](\$MIDISOUNDFONT.md) metacommand ( no longer required , see Availability below)
+* HTTP allows opening HTTP connections using _OPENCLIENT ( no longer required , see Availability below)
 </blockquote>
 
 #### DESCRIPTION
@@ -129,11 +129,10 @@ br ~ h5 {
 <blockquote>
 
 
-* [&dollar;UNSTABLE](&dollar;UNSTABLE.md) exists as a way to allow usage of new language features before they are finalized as part of the language.
-* Any languages features hidden behind [&dollar;UNSTABLE](&dollar;UNSTABLE.md) may be changed in breaking ways in the next version of QB64-PE.
-* Language features that become a permanent part of the language will no longer require [&dollar;UNSTABLE](&dollar;UNSTABLE.md) to be used.
-* More than one [&dollar;UNSTABLE](&dollar;UNSTABLE.md) can be used in a program.
-* MIDI keyword was deprecated in QB64-PE v3.14.0 . Use [_MIDISOUNDBANK](MIDISOUNDBANK.md) instead.
+* [\$UNSTABLE](\$UNSTABLE.md) exists as a way to allow usage of new language features before they are finalized as part of the language.
+* Any languages features hidden behind [\$UNSTABLE](\$UNSTABLE.md) may be changed in breaking ways in the next version of QB64-PE.
+* Language features that become a permanent part of the language will no longer require [\$UNSTABLE](\$UNSTABLE.md) to be used.
+* More than one [\$UNSTABLE](\$UNSTABLE.md) can be used in a program.
 
 </blockquote>
 
@@ -160,6 +159,7 @@ _SNDPLAYFILE "example.mid"
 <blockquote>
 
 
-* [&dollar;MIDISOUNDFONT](&dollar;MIDISOUNDFONT.md)
-* [_OPENCLIENT](OPENCLIENT.md)
+* [\$MIDISOUNDFONT](\$MIDISOUNDFONT.md) ( deprecated )
+* _MIDISOUNDBANK
+* _OPENCLIENT
 </blockquote>

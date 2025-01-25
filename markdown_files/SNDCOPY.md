@@ -138,6 +138,6 @@ br ~ h5 {
 <blockquote>
 
 
-* [_SNDPLAYCOPY](SNDPLAYCOPY.md)
-* [_SNDOPEN](SNDOPEN.md)
+* _SNDPLAYCOPY
+* _SNDOPEN
 </blockquote>

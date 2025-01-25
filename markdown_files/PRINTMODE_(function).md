@@ -128,10 +128,10 @@ br ~ h5 {
 
 
 * Returns a status value from 1 to 3 designating the current mode setting:
-* 1 : mode is [_KEEPBACKGROUND](KEEPBACKGROUND.md)
-* 2 : mode is [_ONLYBACKGROUND](ONLYBACKGROUND.md)
-* 3 : mode is [_FILLBACKGROUND](FILLBACKGROUND.md) (default)
-* The [_PRINTMODE](PRINTMODE.md) statement and function can only be used in graphic screen modes, not [SCREEN](SCREEN.md) 0
+* 1 : mode is _KEEPBACKGROUND
+* 2 : mode is _ONLYBACKGROUND
+* 3 : mode is _FILLBACKGROUND (default)
+* The _PRINTMODE statement and function can only be used in graphic screen modes, not [SCREEN](SCREEN.md) 0
 
 </blockquote>
 
@@ -147,8 +147,8 @@ br ~ h5 {
 <blockquote>
 
 
-* [_PRINTMODE](PRINTMODE.md)
-* [_LOADFONT](LOADFONT.md)
-* [_NEWIMAGE](NEWIMAGE.md)
-* [_PRINTSTRING](PRINTSTRING.md)
+* _PRINTMODE
+* _LOADFONT
+* _NEWIMAGE
+* _PRINTSTRING
 </blockquote>

@@ -120,7 +120,7 @@ br ~ h5 {
 
 
 * frames& is the number of sample frames needed. The number needed for one second of sound is determined by your sound hardware's sample rate, hence you may use the following formula:
-* frames& = [_SNDRATE](SNDRATE.md) 
+* frames& = _SNDRATE 
 * neededSeconds! where you may also specify fractional seconds.
 * channels& is the number of channels needed (1 = mono, 2 = stereo).
 * bits& is the number of bits per channel (8 = 8-bit unsigned integer, 16 = 16-bit signed integer, 32 = 32-bit floating point).
@@ -132,10 +132,10 @@ br ~ h5 {
 
 
 * Use this function to create a raw sound in memory.
-* Once the sound is created, it can be accessed and manipulated using the [_MEM](MEM.md) interface statements and functions, mainly [_MEMSOUND](MEMSOUND.md) , [_MEMGET](MEMGET.md) & [_MEMPUT](MEMPUT.md) .
+* Once the sound is created, it can be accessed and manipulated using the _MEM interface statements and functions, mainly _MEMSOUND , _MEMGET & _MEMPUT .
 * Using this function can generate sounds once programmatically and then play it multiple times.
 * The sound memory can also be filled with sample data from other sources like files, [DATA](DATA.md) statements and more.
-* Sound memory pointers obtained with [_MEMSOUND](MEMSOUND.md) must be freed using [_MEMFREE](MEMFREE.md) and the Sound handle value itself must be freed using [_SNDCLOSE](SNDCLOSE.md) when no longer required.
+* Sound memory pointers obtained with _MEMSOUND must be freed using _MEMFREE and the Sound handle value itself must be freed using _SNDCLOSE when no longer required.
 
 </blockquote>
 
@@ -154,20 +154,20 @@ CONST SAMPLE_BYTES = 4 ' number of bytes / sample (not frame!)
 
 DIM h AS LONG: h = _SNDNEW(SOUND_DURATION * _SNDRATE, SAMPLE_CHANNELS, SAMPLE_BYTES * 8)
 IF (h < 1) THEN
-PRINT "Failed to create sound!"
-END
+   PRINT "Failed to create sound!"
+   END
 END IF
 
 DIM sndblk AS _MEM: sndblk = _MEMSOUND(h, 0)
 IF sndblk.SIZE = 0 THEN
-_SNDCLOSE h
-PRINT "Failed to access sound data!"
-END
+   _SNDCLOSE h
+   PRINT "Failed to access sound data!"
+   END
 END IF
 
 DIM t AS _INTEGER64
 FOR t = 0 TO (SOUND_DURATION * _SNDRATE) - 1
-_MEMPUT sndblk, sndblk.OFFSET + (t * SAMPLE_BYTES * SAMPLE_CHANNELS), SIN(2 * _PI * 440 * t / _SNDRATE) + RND - RND AS SINGLE ' mixes noise and a sine wave
+   _MEMPUT sndblk, sndblk.OFFSET + (t * SAMPLE_BYTES * SAMPLE_CHANNELS), SIN(2 * _PI * 440 * t / _SNDRATE) + RND - RND AS SINGLE ' mixes noise and a sine wave
 NEXT
 
 _SNDPLAY h
@@ -189,7 +189,7 @@ END
 <blockquote>
 
 
-* [_MEM](MEM.md) , [_MEMSOUND](MEMSOUND.md) , [_MEMFREE](MEMFREE.md)
-* [_MEMPUT](MEMPUT.md) , [_MEMGET](MEMGET.md) , [_MEMGET](MEMGET.md) (function)
-* [_SNDOPEN](SNDOPEN.md) , [_SNDCLOSE](SNDCLOSE.md) , [_SNDRAW](SNDRAW.md) , [_SNDRATE](SNDRATE.md)
+* _MEM , _MEMSOUND , _MEMFREE
+* _MEMPUT , _MEMGET , _MEMGET (function)
+* _SNDOPEN , _SNDCLOSE , _SNDRAW , _SNDRATE
 </blockquote>

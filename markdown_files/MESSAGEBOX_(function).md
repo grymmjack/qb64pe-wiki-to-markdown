@@ -144,9 +144,9 @@ br ~ h5 {
 
 ```vb
 IF _MESSAGEBOX("My Cool App", "Do you want to hear a beep?", "yesno", "question") = 1 THEN
-BEEP
+   BEEP
 ELSE
-_MESSAGEBOX "My Cool App", "The sound of silence."
+   _MESSAGEBOX "My Cool App", "The sound of silence."
 END IF
 ```
   
@@ -160,11 +160,11 @@ END IF
 <blockquote>
 
 
-* [_NOTIFYPOPUP](NOTIFYPOPUP.md)
-* [_MESSAGEBOX](MESSAGEBOX.md)
-* [_INPUTBOX&dollar;](INPUTBOX&dollar;.md)
-* [_SELECTFOLDERDIALOG&dollar;](SELECTFOLDERDIALOG&dollar;.md)
-* [_COLORCHOOSERDIALOG](COLORCHOOSERDIALOG.md)
-* [_OPENFILEDIALOG&dollar;](OPENFILEDIALOG&dollar;.md)
-* [_SAVEFILEDIALOG&dollar;](SAVEFILEDIALOG&dollar;.md)
+* _NOTIFYPOPUP
+* _MESSAGEBOX
+* _INPUTBOX$
+* _SELECTFOLDERDIALOG$
+* _COLORCHOOSERDIALOG
+* _OPENFILEDIALOG$
+* _SAVEFILEDIALOG$
 </blockquote>

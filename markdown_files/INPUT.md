@@ -134,7 +134,7 @@ br ~ h5 {
 * Text entries (with a [STRING](STRING.md) variable]] can receive any characters, including numerical. QB64 will ignore commas in single variable text entries.
 * The type of the variable used to store user input determines the valid numerical range for value entries in QB64, with non-numerical characters limited to D, E, &H , &O or &B .
 * For example, if you use an [INTEGER](INTEGER.md) variable, as in [INPUT](INPUT.md) "Initial value: ", myValue% , the valid range is -32768 to 32767.
-* [INTEGER](INTEGER.md) , [LONG](LONG.md) , and [_INTEGER64](INTEGER64.md) entries will ignore decimal points entered and will use all numbers.
+* [INTEGER](INTEGER.md) , [LONG](LONG.md) , and _INTEGER64 entries will ignore decimal points entered and will use all numbers.
 * [INPUT](INPUT.md) can be used to get more than one variable value from the user. Do so by separating input variables with commas in the code.
 * The program must inform the user that more than one variable is requested, in order to enter each value separated with a comma at runtime.
 * String and numerical variables can both be used in multiple entry requests separated by commas.
@@ -143,8 +143,8 @@ br ~ h5 {
 * The user must press enter for the [INPUT](INPUT.md) procedure to end.
 * [INPUT](INPUT.md) accepts the scientific notation letters D or E in [SINGLE](SINGLE.md) or [DOUBLE](DOUBLE.md) numerical values.
 * Numerical values starting with &H , &O and &B can also be entered.
-* The statement halts a program until enter is pressed, which may not be desired in programs using mouse input (see [INKEY&dollar;](INKEY&dollar;.md) loops).
-* Use [_DEST](DEST.md) [_CONSOLE](CONSOLE.md) before [INPUT](INPUT.md) statements to receive input from a console window.
+* The statement halts a program until enter is pressed, which may not be desired in programs using mouse input (see [INKEY\$](INKEY\$.md) loops).
+* Use _DEST _CONSOLE before [INPUT](INPUT.md) statements to receive input from a console window.
 
 </blockquote>
 
@@ -168,7 +168,7 @@ PRINT name$ + " how much do you weigh"; : INPUT weight%   'no text adds ?
 ##### Example 2: How QB64 avoids a Redo from start multiple entry error. Use commas between values.
 ```vb
 DO
-INPUT "What is your name, age, and sex(M/F)"; name$, age%, sex$
+ INPUT "What is your name, age, and sex(M/F)"; name$, age%, sex$
 LOOP UNTIL age%        'loop until age is not 0
 IF age% >= 21 THEN PRINT "You can drink beer!" ELSE PRINT "You cannot drink beer yet!"
 END
@@ -218,9 +218,9 @@ Enter a name to search for... █
 <blockquote>
 
 
-* [INPUT&dollar;](INPUT&dollar;.md) , [INKEY&dollar;](INKEY&dollar;.md)
+* [INPUT\$](INPUT\$.md) , [INKEY\$](INKEY\$.md)
 * [LINE](LINE.md) [INPUT](INPUT.md) , [LOCATE](LOCATE.md)
 * [INPUT](INPUT.md) # , [LINE](LINE.md) [INPUT](INPUT.md) # (file input)
-* [_KEYHIT](KEYHIT.md) , [_KEYDOWN](KEYDOWN.md)
+* _KEYHIT , _KEYDOWN
 * Scancodes
 </blockquote>

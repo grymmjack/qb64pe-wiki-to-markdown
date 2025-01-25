@@ -119,9 +119,9 @@ br ~ h5 {
 <blockquote>
 
 
-* Valid ASCII code% numbers range from 0 to 255.
+* Valid [ASCII](ASCII.md) code% numbers range from 0 to 255.
 * The character code of a character can be found using the [ASC](ASC.md) (function) .
-* Some control codes below 32 will not [PRINT](PRINT.md) or will move the screen cursor, unless [_CONTROLCHR](CONTROLCHR.md) [OFF](OFF.md) is used.
+* Some control codes below 32 will not [PRINT](PRINT.md) or will move the screen cursor, unless _CONTROLCHR [OFF](OFF.md) is used.
 
 </blockquote>
 
@@ -176,12 +176,12 @@ IF LOF(1) <= 32000 THEN Text$ = INPUT$(LOF(1), 1) ' get Text as one string
 CLOSE #1
 Send$ = "" ' clear value
 FOR i = 1 TO LEN(Text$)
-Letter$ = MID$(Text$, i, 1) ' get each character in the text
-Code = ASC(Letter$)
-IF (Code > 64 AND Code < 91) OR (Code > 96 AND Code < 123) THEN
-Letter$ = CHR$(Code + 130) ' change letter's ASCII character by 130
-END IF
-Send$ = Send$ + Letter$ ' reassemble string with just letters encrypted
+   Letter$ = MID$(Text$, i, 1) ' get each character in the text
+   Code = ASC(Letter$)
+   IF (Code > 64 AND Code < 91) OR (Code > 96 AND Code < 123) THEN
+       Letter$ = CHR$(Code + 130) ' change letter's ASCII character by 130
+   END IF
+   Send$ = Send$ + Letter$ ' reassemble string with just letters encrypted
 NEXT i
 OPEN FileName$ FOR OUTPUT AS #1 ' erase FileName to be encrypted
 PRINT #1, Send$   ' Text as one string
@@ -195,19 +195,19 @@ CLOSE #1
 ##### Example 4: Decrypting the above encrypted text file (32K byte file size limit).
 ```vb
 OPEN FileName$ FOR INPUT AS #1       ' FileName to be decrypted
-Text$ = INPUT$(LOF(1), 1)         ' open Text as one string
+   Text$ = INPUT$(LOF(1), 1)         ' open Text as one string
 CLOSE #1
 Send$ = ""
 FOR i = 1 TO LEN(Text$)
-Letter$ = MID$(Text$, i, 1)
-Code = ASC(Letter$)
-IF (Code > 194 AND Code < 221) OR (Code > 226 AND Code < 253) THEN
-Letter$ = CHR$(Code - 130)  ' change back to a Letter character
-END IF
-Send$ = Send$ + Letter$ ' reassemble string as normal letters
-NEXT i
+   Letter$ = MID$(Text$, i, 1)
+   Code = ASC(Letter$)
+   IF (Code > 194 AND Code < 221) OR (Code > 226 AND Code < 253) THEN
+       Letter$ = CHR$(Code - 130)  ' change back to a Letter character
+   END IF
+   Send$ = Send$ + Letter$ ' reassemble string as normal letters
+   NEXT i
 OPEN FileName$ FOR OUTPUT AS #1 ' Erase file for decrypted text
-PRINT #1, Send$ ' place Text as one string
+   PRINT #1, Send$ ' place Text as one string
 CLOSE #1
 ```
   
@@ -222,6 +222,6 @@ CLOSE #1
 
 
 * [ASC](ASC.md) , [ASC](ASC.md) (function)
-* [INKEY&dollar;](INKEY&dollar;.md)
-* ASCII character codes
+* [INKEY\$](INKEY\$.md)
+* [ASCII](ASCII.md) character codes
 </blockquote>

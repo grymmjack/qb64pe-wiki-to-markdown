@@ -119,7 +119,7 @@ br ~ h5 {
 <blockquote>
 
 
-* The result is an [_INTEGER64](INTEGER64.md) number assigned by Windows to your running program.
+* The result is an _INTEGER64 number assigned by Windows to your running program.
 * Use it to make API calls that require a window handle to be passed.
 * Keyword not supported in Linux or macOS versions
 
@@ -167,34 +167,34 @@ FUNCTION MessageBoxA& (BYVAL hwnd AS LONG, Message AS STRING, Title AS STRING, B
 END DECLARE
 
 DO
-msg& = 0: icon& = 0: DB& = 0
-INPUT "Enter Message Box type(0 to 6 other Quits): ", BOX&
-IF BOX& < 0 OR BOX& > 6 THEN EXIT DO
+ msg& = 0: icon& = 0: DB& = 0
+ INPUT "Enter Message Box type(0 to 6 other Quits): ", BOX&
+ IF BOX& < 0 OR BOX& > 6 THEN EXIT DO
 
-INPUT "Enter Icon&(0=none, 1=stop, 2=?, 3=!, 4=info): ", Icon&
+ INPUT "Enter Icon&(0=none, 1=stop, 2=?, 3=!, 4=info): ", Icon&
 
-IF BOX& THEN INPUT "Enter Default Button(1st, 2nd or 3rd): ", DB&
-IF DB& THEN DB& = DB& - 1     'adjust value to 0, 1, or 2
-msg& = MsgBox&("Box Title", "Box text message", BOX&, Icon&, DB&, 4096) 'on top of all windows
+ IF BOX& THEN INPUT "Enter Default Button(1st, 2nd or 3rd): ", DB&
+ IF DB& THEN DB& = DB& - 1     'adjust value to 0, 1, or 2
+ msg& = MsgBox&("Box Title", "Box text message", BOX&, Icon&, DB&, 4096) 'on top of all windows
 
-PRINT "Button ="; msg&
+ PRINT "Button ="; msg&
 LOOP
 END
 
 FUNCTION MsgBox& (Title$, Message$, BoxType&, Icon&, DBtn&, Mode&)
 SELECT CASE Icon&
-CASE 1: Icon& = MB_ICONSTOP&          'warning X-sign icon
-CASE 2: Icon& = MB_ICONQUESTION&      'question-mark icon
-CASE 3: Icon& = MB_ICONEXCLAMATION&   'exclamation-point icon
-CASE 4: Icon& = MB_ICONINFORMATION&   'lowercase letter i in circle
-CASE ELSE: Icon& = 0 'no icon
+ CASE 1: Icon& = MB_ICONSTOP&          'warning X-sign icon
+ CASE 2: Icon& = MB_ICONQUESTION&      'question-mark icon
+ CASE 3: Icon& = MB_ICONEXCLAMATION&   'exclamation-point icon
+ CASE 4: Icon& = MB_ICONINFORMATION&   'lowercase letter i in circle
+ CASE ELSE: Icon& = 0 'no icon
 END SELECT
 IF BoxType& > 0 AND DBtn& > 0 THEN 'set default button as 2nd(256) or 3rd(512)
-SELECT CASE BoxType&
-CASE 2, 3, 6
-IF DBtn& = 2 THEN Icon& = Icon& + MB_DEFBUTTON3& ELSE Icon& = Icon& + MB_DEFBUTTON2& '3 button
-CASE ELSE: Icon& = Icon& + MB_DEFBUTTON2& '2nd button default
-END SELECT
+ SELECT CASE BoxType&
+   CASE 2, 3, 6
+    IF DBtn& = 2 THEN Icon& = Icon& + MB_DEFBUTTON3& ELSE Icon& = Icon& + MB_DEFBUTTON2& '3 button
+   CASE ELSE: Icon& = Icon& + MB_DEFBUTTON2& '2nd button default
+ END SELECT
 END IF
 Focus& = MB_SetFocus&
 MsgBox& = MessageBoxA&(_WINDOWHANDLE, Message$, Title$, BoxType& + Icon& + Mode& + Focus&) 'focus on button
@@ -211,7 +211,7 @@ END FUNCTION
 <blockquote>
 
 
-* [_WINDOWHASFOCUS](WINDOWHASFOCUS.md)
-* [_SCREENEXISTS](SCREENEXISTS.md)
+* _WINDOWHASFOCUS
+* _SCREENEXISTS
 * Windows Libraries
 </blockquote>

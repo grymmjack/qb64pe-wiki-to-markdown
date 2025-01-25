@@ -119,7 +119,7 @@ br ~ h5 {
 <blockquote>
 
 
-* If imageHandle& is omitted, it is assumed to be the current write page or image designated by [_DEST](DEST.md) .
+* If imageHandle& is omitted, it is assumed to be the current write page or image designated by _DEST .
 * If imageHandle& is an invalid handle, an Invalid handle error occurs. Check handle values first. Zero designates the current screen.
 </blockquote>
 
@@ -129,8 +129,8 @@ br ~ h5 {
 
 
 * Use it to get the current default (foreground) color to restore it later in a program.
-* In legacy [SCREEN](SCREEN.md) modes and in [_NEWIMAGE](NEWIMAGE.md) 256 colors mode the color attribute/palette index is returned.
-* In [_NEWIMAGE](NEWIMAGE.md) 32-bit mode the [_RGBA32](RGBA32.md) value ( &H00 00 00 00 to &HFF FF FF FF ) is returend, make sure to store it in an [_UNSIGNED](UNSIGNED.md) [LONG](LONG.md) variable (as seen in the syntax above with the ~& suffix), otherwise the blue component may be lost.
+* In legacy [SCREEN](SCREEN.md) modes and in _NEWIMAGE 256 colors mode the color attribute/palette index is returned.
+* In _NEWIMAGE 32-bit mode the _RGBA32 value ( &H00 00 00 00 to &HFF FF FF FF ) is returend, make sure to store it in an _UNSIGNED [LONG](LONG.md) variable (as seen in the syntax above with the ~& suffix), otherwise the blue component may be lost.
 
 </blockquote>
 
@@ -162,8 +162,8 @@ PRINT col~&
 <blockquote>
 
 
-* [_BACKGROUNDCOLOR](BACKGROUNDCOLOR.md)
-* [COLOR](COLOR.md) , [_DEST](DEST.md)
+* _BACKGROUNDCOLOR
+* [COLOR](COLOR.md) , _DEST
 * [SCREEN](SCREEN.md) , [SCREEN](SCREEN.md) (function)
 * Color Dialog Box
 </blockquote>

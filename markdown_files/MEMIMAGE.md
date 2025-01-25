@@ -119,7 +119,7 @@ br ~ h5 {
 <blockquote>
 
 
-* The imageBlock [_MEM](MEM.md) type variable holds the read-only elements .OFFSET, .SIZE, .TYPE and .ELEMENTSIZE.
+* The imageBlock _MEM type variable holds the read-only elements .OFFSET, .SIZE, .TYPE and .ELEMENTSIZE.
 * If the optional imageHandle& isn't passed, it is assumed to be the current _DESTination program screen image.
 </blockquote>
 
@@ -129,8 +129,8 @@ br ~ h5 {
 
 
 * Use the function to place images into memory access blocks for faster data access.
-* All values created by this function must be freed using [_MEMFREE](MEMFREE.md) with a valid [_MEM](MEM.md) variable.
-* Image handle values and the memory used must still be freed using [_FREEIMAGE](FREEIMAGE.md) when no longer required.
+* All values created by this function must be freed using _MEMFREE with a valid _MEM variable.
+* Image handle values and the memory used must still be freed using _FREEIMAGE when no longer required.
 
 </blockquote>
 
@@ -146,11 +146,11 @@ SCREEN _NEWIMAGE(1024, 768, 32)
 i& = _LOADIMAGE("turtle.jpg") '<<<<<<<<<<<<< use any 24 bit image file
 
 FOR n! = 1 TO 0.01 STEP -0.01
-i2& = _COPYIMAGE(i&)
-DarkenImage i2&, n!
-_PUTIMAGE (0, 0), i2&
-_FREEIMAGE i2&
-_DISPLAY
+   i2& = _COPYIMAGE(i&)
+   DarkenImage i2&, n!
+   _PUTIMAGE (0, 0), i2&
+   _FREEIMAGE i2&
+   _DISPLAY
 NEXT
 
 SUB DarkenImage (Image AS LONG, Value_From_0_To_1 AS SINGLE)
@@ -163,10 +163,10 @@ O_Last = Buffer.OFFSET + _WIDTH(Image) * _HEIGHT(Image) * 4 'We stop when we get
 'use on error free code ONLY!
 $CHECKING:OFF
 DO
-_MEMPUT Buffer, O, _MEMGET(Buffer, O, _UNSIGNED _BYTE) * Frac_Value \ 65536 AS _UNSIGNED _BYTE
-_MEMPUT Buffer, O + 1, _MEMGET(Buffer, O + 1, _UNSIGNED _BYTE) * Frac_Value \ 65536 AS _UNSIGNED _BYTE
-_MEMPUT Buffer, O + 2, _MEMGET(Buffer, O + 2, _UNSIGNED _BYTE) * Frac_Value \ 65536 AS _UNSIGNED _BYTE
-O = O + 4
+   _MEMPUT Buffer, O, _MEMGET(Buffer, O, _UNSIGNED _BYTE) * Frac_Value \ 65536 AS _UNSIGNED _BYTE
+   _MEMPUT Buffer, O + 1, _MEMGET(Buffer, O + 1, _UNSIGNED _BYTE) * Frac_Value \ 65536 AS _UNSIGNED _BYTE
+   _MEMPUT Buffer, O + 2, _MEMGET(Buffer, O + 2, _UNSIGNED _BYTE) * Frac_Value \ 65536 AS _UNSIGNED _BYTE
+   O = O + 4
 LOOP UNTIL O = O_Last
 'turn checking back on when done!
 $CHECKING:ON
@@ -212,9 +212,9 @@ END
 <blockquote>
 
 
-* [_MEM](MEM.md)
-* [_MEMNEW](MEMNEW.md)
-* [_MEMGET](MEMGET.md) , [_MEMPUT](MEMPUT.md)
-* [_MEMFREE](MEMFREE.md)
-* [&dollar;CHECKING](&dollar;CHECKING.md)
+* _MEM
+* _MEMNEW
+* _MEMGET , _MEMPUT
+* _MEMFREE
+* [\$CHECKING](\$CHECKING.md)
 </blockquote>

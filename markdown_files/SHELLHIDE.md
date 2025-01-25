@@ -158,7 +158,7 @@ END
 
 
 * [SHELL](SHELL.md) (function)
-* [SHELL](SHELL.md) , [_HIDE](HIDE.md)
-* [_CONSOLE](CONSOLE.md) , [&dollar;CONSOLE](&dollar;CONSOLE.md)
+* [SHELL](SHELL.md) , _HIDE
+* _CONSOLE , [\$CONSOLE](\$CONSOLE.md)
 * [SYSTEM](SYSTEM.md) , [END](END.md)
 </blockquote>

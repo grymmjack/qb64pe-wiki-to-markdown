@@ -6,13 +6,13 @@
    _GLRENDER - QB64 Phoenix Edition Wiki
   </title>
   <script>
-   document.documentElement.className="client-js";RLCONF={"wgBreakFrames":false,"wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgRequestId":"Zp2FeSSKw_M1BQgKFBbUPAAAAs8","wgCSPNonce":false,"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"GLRENDER","wgTitle":"GLRENDER","wgCurRevisionId":7301,"wgRevisionId":7301,"wgArticleId":729,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":[],"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgRelevantPageName":"GLRENDER","wgRelevantArticleId":729,"wgIsProbablyEditable":false,"wgRelevantPageIsProbablyEditable":false,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgVector2022PreviewPages":[]};RLSTATE={"site.styles":"ready","user.styles":"ready","user":
-"ready","user.options":"loading","skins.vector.styles.legacy":"ready"};RLPAGEMODULES=["site","mediawiki.page.ready","mediawiki.toc","skins.vector.legacy.js"];
+   document.documentElement.className="client-js";RLCONF={"wgBreakFrames":false,"wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgRequestId":"Z5RhmgWKRwiE9zBBFH0EqAAAAI0","wgCSPNonce":false,"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"GLRENDER","wgTitle":"GLRENDER","wgCurRevisionId":9122,"wgRevisionId":9122,"wgArticleId":729,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":[],"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgRelevantPageName":"GLRENDER","wgRelevantArticleId":729,"wgIsProbablyEditable":false,"wgRelevantPageIsProbablyEditable":false,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgVector2022PreviewPages":[]};RLSTATE={"site.styles":"ready","user.styles":"ready","user":
+"ready","user.options":"loading","mediawiki.page.gallery.styles":"ready","skins.vector.styles.legacy":"ready"};RLPAGEMODULES=["site","mediawiki.page.ready","mediawiki.toc","skins.vector.legacy.js"];
   </script>
   <script>
    (RLQ=window.RLQ||[]).push(function(){mw.loader.implement("user.options@12s5i",function($,jQuery,require,module){mw.user.tokens.set({"patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});});});
   </script>
-  <link href="/qb64wiki/load.php?lang=en&amp;modules=skins.vector.styles.legacy&amp;only=styles&amp;skin=vector" rel="stylesheet"/>
+  <link href="/qb64wiki/load.php?lang=en&amp;modules=mediawiki.page.gallery.styles%7Cskins.vector.styles.legacy&amp;only=styles&amp;skin=vector" rel="stylesheet"/>
   <script async="" src="/qb64wiki/load.php?lang=en&amp;modules=startup&amp;only=scripts&amp;raw=1&amp;skin=vector">
   </script>
   <meta content="" name="ResourceLoaderDynamicStyles"/>
@@ -59,6 +59,16 @@
     <div class="mw-body-content mw-content-ltr" dir="ltr" id="mw-content-text" lang="en">
      <div class="mw-parser-output">
       <p>
+       <b>
+        _GLRENDER
+       </b>
+       is just a fancy
+       <a href="/qb64wiki/index.php/DISPLAYORDER" title="DISPLAYORDER">
+        _DISPLAYORDER
+       </a>
+       , it's a convenience statement for the case you don't care about the harware image layers but only about the relation of the software and OpenGL layers. Both statements modify the same thing.
+      </p>
+      <p>
        <br/>
       </p>
       <table align="right" style="max-width:25%;">
@@ -98,9 +108,19 @@
              </a>
             </li>
             <li class="toclevel-1">
-             <a href="#See_also">
+             <a href="#Availability">
               <span class="tocnumber">
                3
+              </span>
+              <span class="toctext">
+               Availability
+              </span>
+             </a>
+            </li>
+            <li class="toclevel-1">
+             <a href="#See_also">
+              <span class="tocnumber">
+               4
               </span>
               <span class="toctext">
                See also
@@ -137,17 +157,190 @@
        </span>
       </h2>
       <p>
-       Mode can be:
+       The
+       <i>
+        mode
+       </i>
+       can be one of the following with the correspondence to the full
+       <b>
+        _DISPLAYORDER
+       </b>
+       statement:
       </p>
       <ul>
        <li>
-        _BEHIND - renders OpenGL context behind the software rendering
+        <i>
+         _BEHIND
+        </i>
+        - the OpenGL layer is placed behind the software layer.
+        <ul>
+         <li>
+          same as
+          <span style="border: 2px solid #87cefa; border-radius: 4px; padding: 4px; font-family: Courier New, monospace, Courier; font-size: 16px; white-space: nowrap; background: #082080; color: #e2e2e2;">
+           <a href="/qb64wiki/index.php/DISPLAYORDER" title="DISPLAYORDER">
+            <span style="color:#4593D8;">
+             _DISPLAYORDER
+            </span>
+           </a>
+           _GLRENDER, _SOFTWARE, _HARDWARE, _HARDWARE1
+          </span>
+         </li>
+        </ul>
        </li>
        <li>
-        _ONTOP - renders OpenGL context on the top of the software rendering [default]
+        <i>
+         _ONTOP
+        </i>
+        - the OpenGL layer is placed in front (on top) of the software layer (
+        <b>
+         default
+        </b>
+        ).
+        <ul>
+         <li>
+          same as
+          <span style="border: 2px solid #87cefa; border-radius: 4px; padding: 4px; font-family: Courier New, monospace, Courier; font-size: 16px; white-space: nowrap; background: #082080; color: #e2e2e2;">
+           <a href="/qb64wiki/index.php/DISPLAYORDER" title="DISPLAYORDER">
+            <span style="color:#4593D8;">
+             _DISPLAYORDER
+            </span>
+           </a>
+           _SOFTWARE, _HARDWARE, _GLRENDER, _HARDWARE1
+          </span>
+         </li>
+        </ul>
        </li>
        <li>
-        _ONLY -  renders OpenGL context only
+        <i>
+         _ONLY
+        </i>
+        - the OpenGL layer is the only one to be displayed, may speed up display update, if you don't use the software layer.
+        <ul>
+         <li>
+          same as
+          <span style="border: 2px solid #87cefa; border-radius: 4px; padding: 4px; font-family: Courier New, monospace, Courier; font-size: 16px; white-space: nowrap; background: #082080; color: #e2e2e2;">
+           <a href="/qb64wiki/index.php/DISPLAYORDER" title="DISPLAYORDER">
+            <span style="color:#4593D8;">
+             _DISPLAYORDER
+            </span>
+           </a>
+           _GLRENDER
+          </span>
+         </li>
+        </ul>
+       </li>
+      </ul>
+      <p>
+       <br/>
+      </p>
+      <h2>
+       <span class="mw-headline" id="Availability">
+        Availability
+       </span>
+      </h2>
+      <ul class="gallery mw-gallery-nolines">
+       <li class="gallerybox" style="width: 53px">
+        <div style="width: 53px">
+         <div class="thumb" style="width: 48px;">
+          <div style="margin:0px auto;">
+           <a class="image" href="/qb64wiki/index.php/File:Qb64.png" title="v1.0">
+            <img alt="v1.0" decoding="async" height="48" src="/qb64wiki/images/9/91/Qb64.png" width="48"/>
+           </a>
+          </div>
+         </div>
+         <div class="gallerytext">
+          <p>
+           <b>
+            v1.0
+           </b>
+          </p>
+         </div>
+        </div>
+       </li>
+       <li class="gallerybox" style="width: 53px">
+        <div style="width: 53px">
+         <div class="thumb" style="width: 48px;">
+          <div style="margin:0px auto;">
+           <a class="image" href="/qb64wiki/index.php/File:Qbpe.png" title="all">
+            <img alt="all" decoding="async" height="48" src="/qb64wiki/images/0/07/Qbpe.png" width="48"/>
+           </a>
+          </div>
+         </div>
+         <div class="gallerytext">
+          <p>
+           <b>
+            all
+           </b>
+          </p>
+         </div>
+        </div>
+       </li>
+       <li class="gallerybox" style="width: 53px">
+        <div style="width: 53px">
+         <div class="thumb" style="width: 48px;">
+          <div style="margin:0px auto;">
+           <a class="image" href="/qb64wiki/index.php/File:Apix.png">
+            <img alt="Apix.png" decoding="async" height="48" src="/qb64wiki/images/5/5f/Apix.png" width="48"/>
+           </a>
+          </div>
+         </div>
+         <div class="gallerytext">
+         </div>
+        </div>
+       </li>
+       <li class="gallerybox" style="width: 53px">
+        <div style="width: 53px">
+         <div class="thumb" style="width: 48px;">
+          <div style="margin:0px auto;">
+           <a class="image" href="/qb64wiki/index.php/File:Win.png" title="yes">
+            <img alt="yes" decoding="async" height="48" src="/qb64wiki/images/2/29/Win.png" width="48"/>
+           </a>
+          </div>
+         </div>
+         <div class="gallerytext">
+          <p>
+           <b>
+            yes
+           </b>
+          </p>
+         </div>
+        </div>
+       </li>
+       <li class="gallerybox" style="width: 53px">
+        <div style="width: 53px">
+         <div class="thumb" style="width: 48px;">
+          <div style="margin:0px auto;">
+           <a class="image" href="/qb64wiki/index.php/File:Lnx.png" title="yes">
+            <img alt="yes" decoding="async" height="48" src="/qb64wiki/images/7/7a/Lnx.png" width="48"/>
+           </a>
+          </div>
+         </div>
+         <div class="gallerytext">
+          <p>
+           <b>
+            yes
+           </b>
+          </p>
+         </div>
+        </div>
+       </li>
+       <li class="gallerybox" style="width: 53px">
+        <div style="width: 53px">
+         <div class="thumb" style="width: 48px;">
+          <div style="margin:0px auto;">
+           <a class="image" href="/qb64wiki/index.php/File:Osx.png" title="yes">
+            <img alt="yes" decoding="async" height="48" src="/qb64wiki/images/2/22/Osx.png" width="48"/>
+           </a>
+          </div>
+         </div>
+         <div class="gallerytext">
+          <p>
+           <b>
+            yes
+           </b>
+          </p>
+         </div>
+        </div>
        </li>
       </ul>
       <p>
@@ -199,36 +392,40 @@
       </center>
       <!-- 
 NewPP limit report
-Cached time: 20240721212135
+Cached time: 20250124134630
 Cache expiry: 86400
 Reduced expiry: false
 Complications: [show‐toc]
-CPU time usage: 0.014 seconds
-Real time usage: 0.022 seconds
-Preprocessor visited node count: 17/1000000
-Post‐expand include size: 552/2097152 bytes
-Template argument size: 4/2097152 bytes
+CPU time usage: 0.047 seconds
+Real time usage: 0.058 seconds
+Preprocessor visited node count: 64/1000000
+Post‐expand include size: 1411/2097152 bytes
+Template argument size: 86/2097152 bytes
 Highest expansion depth: 3/100
 Expensive parser function count: 0/100
 Unstrip recursion depth: 0/20
-Unstrip post‐expand size: 0/5000000 bytes
+Unstrip post‐expand size: 2359/5000000 bytes
 -->
       <!--
 Transclusion expansion time report (%,ms,calls,template)
-100.00%   14.973      1 -total
- 25.35%    3.796      1 Template:PageParameters
- 21.94%    3.285      1 Template:PageSyntax
- 17.66%    2.644      1 Template:Parameter
- 15.42%    2.309      1 Template:PageSeeAlso
- 15.02%    2.249      1 Template:PageNavigation
+100.00%   44.943      1 -total
+  6.17%    2.771      1 Template:PageSeeAlso
+  5.56%    2.497      1 Template:PageNavigation
+  4.62%    2.078      1 Template:PageSyntax
+  4.46%    2.002      3 Template:Cl
+  4.37%    1.963      3 Template:InlineCodeEnd
+  4.04%    1.817      2 Template:Parameter
+  3.90%    1.754      3 Template:InlineCode
+  3.69%    1.659      1 Template:PageParameters
+  3.67%    1.650      1 Template:PageAvailability
 -->
-      <!-- Saved in parser cache with key qb64pnix_mw19894-mwmb_:pcache:idhash:729-0!canonical and timestamp 20240721212135 and revision id 7301.
+      <!-- Saved in parser cache with key qb64pnix_mw19894-mwmb_:pcache:idhash:729-0!canonical and timestamp 20250124134630 and revision id 9122.
  -->
      </div>
      <div class="printfooter" data-nosnippet="">
       Retrieved from "
-      <a dir="ltr" href="https://qb64phoenix.com/qb64wiki/index.php?title=GLRENDER&amp;oldid=7301">
-       https://qb64phoenix.com/qb64wiki/index.php?title=GLRENDER&amp;oldid=7301
+      <a dir="ltr" href="https://qb64phoenix.com/qb64wiki/index.php?title=GLRENDER&amp;oldid=9122">
+       https://qb64phoenix.com/qb64wiki/index.php?title=GLRENDER&amp;oldid=9122
       </a>
       "
      </div>
@@ -445,7 +642,7 @@ You can view its source [e]">
         </a>
        </li>
        <li class="mw-list-item" id="t-permalink">
-        <a href="/qb64wiki/index.php?title=GLRENDER&amp;oldid=7301" title="Permanent link to this revision of this page">
+        <a href="/qb64wiki/index.php?title=GLRENDER&amp;oldid=9122" title="Permanent link to this revision of this page">
          <span>
           Permanent link
          </span>
@@ -466,7 +663,7 @@ You can view its source [e]">
   <footer class="mw-footer" id="footer" role="contentinfo">
    <ul id="footer-info">
     <li id="footer-info-lastmod">
-     This page was last edited on 29 January 2023, at 00:39.
+     This page was last edited on 28 September 2024, at 22:13.
     </li>
    </ul>
    <ul id="footer-places">
@@ -495,7 +692,7 @@ You can view its source [e]">
    </ul>
   </footer>
   <script>
-   (RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgPageParseReport":{"limitreport":{"cputime":"0.014","walltime":"0.022","ppvisitednodes":{"value":17,"limit":1000000},"postexpandincludesize":{"value":552,"limit":2097152},"templateargumentsize":{"value":4,"limit":2097152},"expansiondepth":{"value":3,"limit":100},"expensivefunctioncount":{"value":0,"limit":100},"unstrip-depth":{"value":0,"limit":20},"unstrip-size":{"value":0,"limit":5000000},"timingprofile":["100.00%   14.973      1 -total"," 25.35%    3.796      1 Template:PageParameters"," 21.94%    3.285      1 Template:PageSyntax"," 17.66%    2.644      1 Template:Parameter"," 15.42%    2.309      1 Template:PageSeeAlso"," 15.02%    2.249      1 Template:PageNavigation"]},"cachereport":{"timestamp":"20240721212135","ttl":86400,"transientcontent":false}}});mw.config.set({"wgBackendResponseTime":107});});
+   (RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgPageParseReport":{"limitreport":{"cputime":"0.047","walltime":"0.058","ppvisitednodes":{"value":64,"limit":1000000},"postexpandincludesize":{"value":1411,"limit":2097152},"templateargumentsize":{"value":86,"limit":2097152},"expansiondepth":{"value":3,"limit":100},"expensivefunctioncount":{"value":0,"limit":100},"unstrip-depth":{"value":0,"limit":20},"unstrip-size":{"value":2359,"limit":5000000},"timingprofile":["100.00%   44.943      1 -total","  6.17%    2.771      1 Template:PageSeeAlso","  5.56%    2.497      1 Template:PageNavigation","  4.62%    2.078      1 Template:PageSyntax","  4.46%    2.002      3 Template:Cl","  4.37%    1.963      3 Template:InlineCodeEnd","  4.04%    1.817      2 Template:Parameter","  3.90%    1.754      3 Template:InlineCode","  3.69%    1.659      1 Template:PageParameters","  3.67%    1.650      1 Template:PageAvailability"]},"cachereport":{"timestamp":"20250124134630","ttl":86400,"transientcontent":false}}});mw.config.set({"wgBackendResponseTime":93});});
   </script>
  </body>
 </html>

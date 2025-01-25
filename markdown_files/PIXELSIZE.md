@@ -124,7 +124,7 @@ br ~ h5 {
 * 0 if the image or screen page specified by imageHandle& is in text mode.
 * 1 if the image specified by imageHandle& is in 1 (B & W), 4 (16 colors) or 8 (256 colors) BPP mode.
 * 4 if the image specified is a 24/32-bit compatible mode. Pixels use three bytes, one per red, green and blue color intensity.
-* The [SCREEN](SCREEN.md) or [_NEWIMAGE](NEWIMAGE.md) or [_LOADIMAGE](LOADIMAGE.md) color mode (256 or 32) can influence the pixel sizes that can be returned.
+* The [SCREEN](SCREEN.md) or _NEWIMAGE or _LOADIMAGE color mode (256 or 32) can influence the pixel sizes that can be returned.
 * If imageHandle& is an invalid handle, then an invalid handle error occurs.
 
 </blockquote>
@@ -167,7 +167,7 @@ END FUNCTION
 
 
 * Featured in our "Keyword of the Day" series
-* [_LOADIMAGE](LOADIMAGE.md) , [_SAVEIMAGE](SAVEIMAGE.md)
-* [_NEWIMAGE](NEWIMAGE.md) , [_PUTIMAGE](PUTIMAGE.md)
-* [_COPYPALETTE](COPYPALETTE.md)
+* _LOADIMAGE , _SAVEIMAGE
+* _NEWIMAGE , _PUTIMAGE
+* _COPYPALETTE
 </blockquote>

@@ -133,7 +133,7 @@ br ~ h5 {
 ```vb
 client = _OPENCLIENT("TCP/IP:7319:localhost")
 IF client THEN
-PRINT "[Connected to " + _CONNECTIONADDRESS(client) + "]"
+  PRINT "[Connected to " + _CONNECTIONADDRESS(client) + "]"
 ELSE PRINT "[Connection Failed!]"
 END IF
 ```
@@ -143,19 +143,19 @@ END IF
 ```vb
 ' Content of the HTTP response is returned. The statusCode is also assigned.
 FUNCTION Download$(url AS STRING, statusCode AS LONG)
-h& = _OPENCLIENT("HTTP:" + url)
+   h& = _OPENCLIENT("HTTP:" + url)
 
-statusCode = _STATUSCODE(h&)
+   statusCode = _STATUSCODE(h&)
 
-WHILE NOT EOF(h&)
-_LIMIT 60
-GET #h&, , s$
-content$ = content$ + s$
-WEND
+   WHILE NOT EOF(h&)
+       _LIMIT 60
+       GET #h&, , s$
+       content$ = content$ + s$
+   WEND
 
-CLOSE #h&
+   CLOSE #h&
 
-Download$ = content$
+   Download$ = content$
 END FUNCTION
 ```
   
@@ -169,8 +169,9 @@ END FUNCTION
 <blockquote>
 
 
-* [_OPENHOST](OPENHOST.md) , [_OPENCONNECTION](OPENCONNECTION.md)
-* [_CONNECTED](CONNECTED.md) , [_CONNECTIONADDRESS&dollar;](CONNECTIONADDRESS&dollar;.md)
+* _OPENHOST , _OPENCONNECTION
+* _CONNECTED , _CONNECTIONADDRESS$
+* _ENCODEURL$ , _DECODEURL$
 * Email Demo , Inter-Program Data Sharing Demo
 * Downloading Files
 </blockquote>

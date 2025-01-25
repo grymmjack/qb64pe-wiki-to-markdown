@@ -136,6 +136,6 @@ br ~ h5 {
 <blockquote>
 
 
-* [MKSMBF&dollar;](MKSMBF&dollar;.md)
+* [MKSMBF\$](MKSMBF\$.md)
 * [CVDMBF](CVDMBF.md) , [CVSMBF](CVSMBF.md)
 </blockquote>

@@ -193,6 +193,6 @@ PRINT decimal%
 <blockquote>
 
 
-* [ASC](ASC.md) (function) , [STR&dollar;](STR&dollar;.md)
-* [_BIN&dollar;](BIN&dollar;.md) , [HEX&dollar;](HEX&dollar;.md) , [OCT&dollar;](OCT&dollar;.md)
+* [ASC](ASC.md) (function) , [STR\$](STR\$.md)
+* _BIN$ , [HEX\$](HEX\$.md) , [OCT\$](OCT\$.md)
 </blockquote>

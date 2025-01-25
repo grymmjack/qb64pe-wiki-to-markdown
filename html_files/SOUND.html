@@ -6,7 +6,7 @@
    SOUND - QB64 Phoenix Edition Wiki
   </title>
   <script>
-   document.documentElement.className="client-js";RLCONF={"wgBreakFrames":false,"wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgRequestId":"Zp2HGIVyUtajyJ55jofBFgAAAU4","wgCSPNonce":false,"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"SOUND","wgTitle":"SOUND","wgCurRevisionId":8787,"wgRevisionId":8787,"wgArticleId":564,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":[],"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgRelevantPageName":"SOUND","wgRelevantArticleId":564,"wgIsProbablyEditable":false,"wgRelevantPageIsProbablyEditable":false,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgVector2022PreviewPages":[]};RLSTATE={"site.styles":"ready","user.styles":"ready","user":"ready",
+   document.documentElement.className="client-js";RLCONF={"wgBreakFrames":false,"wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgRequestId":"Z5RijQWKRwiE9zBBFH0iLAAAANA","wgCSPNonce":false,"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"SOUND","wgTitle":"SOUND","wgCurRevisionId":9335,"wgRevisionId":9335,"wgArticleId":564,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":[],"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgRelevantPageName":"SOUND","wgRelevantArticleId":564,"wgIsProbablyEditable":false,"wgRelevantPageIsProbablyEditable":false,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgVector2022PreviewPages":[]};RLSTATE={"site.styles":"ready","user.styles":"ready","user":"ready",
 "user.options":"loading","mediawiki.page.gallery.styles":"ready","skins.vector.styles.legacy":"ready"};RLPAGEMODULES=["site","mediawiki.page.ready","mediawiki.toc","skins.vector.legacy.js"];
   </script>
   <script>
@@ -64,7 +64,7 @@
        <b>
         SOUND
        </b>
-       sets frequency and duration of sounds from the internal PC speaker if the computer has one or the sound card in QB64.
+       produces a sound from the speaker, builds a queue of sounds, and plays a queue of sounds.
       </p>
       <p>
        <br/>
@@ -164,25 +164,47 @@
          SOUND
         </a>
         <i>
-         frequency#
+         frequency!
         </i>
         ,
         <i>
-         duration#
+         duration!
         </i>
         [,
         <i>
-         volume#
+         volume!
         </i>
         ][,
         <i>
-         panning#
+         panPosition!
         </i>
         ][,
         <i>
          waveform&amp;
         </i>
-        ]
+        ][,
+        <i>
+         waveformParameters!
+        </i>
+        ][,
+        <i>
+         voice&amp;
+        </i>
+        ]]
+       </dd>
+      </dl>
+      <dl>
+       <dd>
+        <a class="mw-selflink selflink">
+         SOUND WAIT
+        </a>
+       </dd>
+      </dl>
+      <dl>
+       <dd>
+        <a class="mw-selflink selflink">
+         SOUND RESUME
+        </a>
        </dd>
       </dl>
       <p>
@@ -196,38 +218,52 @@
       <ul>
        <li>
         <i>
-         frequency#
+         frequency!
         </i>
         is any literal or variable value from 37 to 32767, but 0 is allowed for delays.
         <ul>
          <li>
-          Just like QuickBASIC 4.5 frequencies on or above 20000 produces silence.
+          Just like QuickBASIC 4.5 frequencies on or above 20000 Hz produce silence.
          </li>
         </ul>
        </li>
        <li>
         <i>
-         duration#
+         duration!
         </i>
         is any literal or variable number of
         <a href="/qb64wiki/index.php/TIMER_(function)" title="TIMER (function)">
          TIMER
         </a>
-        ticks with a duration of 1/18th second. 18 = one second.
+        ticks with a duration of 1/18th second (18 = 1 second).
+        <ul>
+         <li>
+          A duration of 0 does not produce any sound. However, it can be used to set voice/waveform parameters.
+         </li>
+        </ul>
        </li>
        <li>
         Optional parameter
         <i>
-         volume#
+         volume!
         </i>
         should be between 0.0 (muted) to 1.0 (full volume).
        </li>
        <li>
         Optional parameter
         <i>
-         panning#
+         panPosition!
         </i>
         should be between -1.0 (hard left) to 1.0 (hard right). 0.0 being center.
+        <ul>
+         <li>
+          By default
+          <i>
+           panPosition!
+          </i>
+          is set to 0.0 for all voices.
+         </li>
+        </ul>
        </li>
        <li>
         Optional parameter
@@ -240,7 +276,7 @@
           <b>
            1
           </b>
-          for square waveform
+          for square waveform (default)
          </li>
          <li>
           <b>
@@ -252,7 +288,7 @@
           <b>
            3
           </b>
-          for triangle waveform (default)
+          for triangle waveform
          </li>
          <li>
           <b>
@@ -266,10 +302,145 @@
           </b>
           for white noise
          </li>
+         <li>
+          <b>
+           6
+          </b>
+          for pink noise
+         </li>
+         <li>
+          <b>
+           7
+          </b>
+          for Brownian noise
+         </li>
+         <li>
+          <b>
+           8
+          </b>
+          for LFSR-based noise
+         </li>
+         <li>
+          <b>
+           9
+          </b>
+          for pulse waveform
+         </li>
+         <li>
+          <b>
+           10
+          </b>
+          for a waveform defined by the
+          <a href="/qb64wiki/index.php/WAVE" title="WAVE">
+           _WAVE
+          </a>
+          statement
+         </li>
         </ul>
        </li>
        <li>
-        More waveform types may be introduced in the future.
+        Optional parameter
+        <i>
+         waveformParameters!
+        </i>
+        can set waveform characteristics based on the current
+        <i>
+         waveform&amp;
+        </i>
+        .
+        <ul>
+         <li>
+          <i>
+           waveformParameters!
+          </i>
+          sets the seed when
+          <i>
+           waveform&amp;
+          </i>
+          is
+          <b>
+           5
+          </b>
+          ,
+          <b>
+           6
+          </b>
+          , or
+          <b>
+           7
+          </b>
+          .
+         </li>
+         <li>
+          <i>
+           waveformParameters!
+          </i>
+          sets the LFSR clock rate when
+          <i>
+           waveform&amp;
+          </i>
+          is
+          <b>
+           8
+          </b>
+          .
+         </li>
+         <li>
+          <i>
+           waveformParameters!
+          </i>
+          sets the duty cycle (0.0 to 1.0) when
+          <i>
+           waveform&amp;
+          </i>
+          is
+          <b>
+           9
+          </b>
+          .
+         </li>
+        </ul>
+       </li>
+       <li>
+        Optional parameter
+        <i>
+         voice&amp;
+        </i>
+        can be a numeric expression ranging from 0 to 3. It specifies the voice channel that will be used to play the sound.
+        <ul>
+         <li>
+          Multi-voice support was inspired by Amiga Basic and Advanced BASIC (for the IBM PCjr and Tandy 1000).
+         </li>
+        </ul>
+       </li>
+       <li>
+        <b>
+         SOUND WAIT
+        </b>
+        causes all subsequent
+        <b>
+         SOUND
+        </b>
+        statements to be queued.
+       </li>
+       <li>
+        <b>
+         SOUND RESUME
+        </b>
+        causes all queued
+        <b>
+         SOUND
+        </b>
+        statements to be processed and sent to the audio device.
+        <ul>
+         <li>
+          The latter two commands can be used to synchronize all voices (see the example for
+          <a href="/qb64wiki/index.php/WAVE" title="WAVE">
+           _WAVE
+          </a>
+          ).
+         </li>
+        </ul>
        </li>
        <li>
         <a href="/qb64wiki/index.php/PLAY" title="PLAY">
@@ -283,7 +454,7 @@
         Note
        </dt>
        <dd>
-        The last volume, panning and waveform settings will apply to subsequent calls to
+        The last volume, pan position, waveform, and voice settings will apply to subsequent calls to
         <b>
          SOUND
         </b>
@@ -291,7 +462,7 @@
         <a href="/qb64wiki/index.php/PLAY" title="PLAY">
          PLAY
         </a>
-        .
+        . These settings are maintained per voice.
        </dd>
       </dl>
       <h3>
@@ -303,7 +474,7 @@
        <li>
         Low
         <i>
-         frequency#
+         frequency!
         </i>
         values between 0 and 37 will create an
         <a href="/qb64wiki/index.php/ERROR_Codes" title="ERROR Codes">
@@ -314,11 +485,11 @@
        <li>
         Out of range values for
         <i>
-         volume#
+         volume!
         </i>
         ,
         <i>
-         panning#
+         panPosition!
         </i>
         and
         <i>
@@ -331,7 +502,7 @@
         .
        </li>
        <li>
-        All audio related statements and functions work even if the program is not in focus. However, depending on the operating system and environment, this may not always be the case.
+        All audio-related statements and functions work even if the program is not in focus. However, this may not always be the case depending on the operating system and environment.
        </li>
        <li>
         <b>
@@ -348,11 +519,7 @@
         <b>
          SOUND
         </b>
-        0, 0 will not stop previous
-        <b>
-         QB64
-        </b>
-        sounds like it did in QBasic!
+        0, 0 will not stop previous QB64 sounds like it did in QBasic!
        </dd>
       </dl>
       <hr/>
@@ -517,13 +684,13 @@
        <li>
         Support for
         <i>
-         volume#
+         volume!
         </i>
         ,
         <i>
-         panning#
+         panPosition!
         </i>
-        ,
+        , and
         <i>
          waveform&amp;
         </i>
@@ -532,6 +699,44 @@
          QB64-PE v3.8.0
         </b>
         .
+       </li>
+       <li>
+        The following features have been added in
+        <b>
+         QB64-PE v4.0.0
+        </b>
+        :
+        <ul>
+         <li>
+          Support for
+          <i>
+           waveformParameters!
+          </i>
+          , and
+          <i>
+           voice&amp;
+          </i>
+          (Multi-voice support).
+         </li>
+         <li>
+          Support for pink noise, Brownian noise, LFSR-based noise, pulse waveform, and user-defined
+          <a href="/qb64wiki/index.php/WAVE" title="WAVE">
+           _WAVE
+          </a>
+          waveforms.
+         </li>
+         <li>
+          Ability to synchronize all voices using
+          <b>
+           SOUND WAIT
+          </b>
+          and
+          <b>
+           SOUND RESUME
+          </b>
+          .
+         </li>
+        </ul>
        </li>
       </ul>
       <p>
@@ -695,21 +900,21 @@ Octaves:
     <span style="color:#919191;">' Take action based on key</span>
     <a href="/qb64wiki/index.php/CLS" title="CLS"><span style="color:#4593D8;">CLS</span></a>
     <a href="/qb64wiki/index.php/SELECT_CASE" title="SELECT CASE"><span style="color:#4593D8;">SELECT CASE</span></a> Q
-        <a class="mw-redirect" href="/qb64wiki/index.php/CASE" title="CASE"><span style="color:#4593D8;">CASE</span></a> <a class="mw-redirect" href="/qb64wiki/index.php/IS" title="IS"><span style="color:#4593D8;">IS</span></a> = <span style="color:#FFB100;">"B"</span>
+        <a class="mw-redirect" href="/qb64wiki/index.php/CASE_IS" title="CASE IS"><span style="color:#4593D8;">CASE IS</span></a> = <span style="color:#FFB100;">"B"</span>
             <a href="/qb64wiki/index.php/PRINT" title="PRINT"><span style="color:#4593D8;">PRINT</span></a> <span style="color:#FFB100;">"Bouncing . . . "</span>
             <span style="color:#55FF55;">Bounce</span> <span style="color:#F580B1;">32767</span>, <span style="color:#F580B1;">246</span> <span style="color:#919191;">' the 32767 will make the PSG generate silence (exactly like QB45 does)</span>
-        <a class="mw-redirect" href="/qb64wiki/index.php/CASE" title="CASE"><span style="color:#4593D8;">CASE</span></a> <a class="mw-redirect" href="/qb64wiki/index.php/IS" title="IS"><span style="color:#4593D8;">IS</span></a> = <span style="color:#FFB100;">"F"</span>
+        <a class="mw-redirect" href="/qb64wiki/index.php/CASE_IS" title="CASE IS"><span style="color:#4593D8;">CASE IS</span></a> = <span style="color:#FFB100;">"F"</span>
             <a href="/qb64wiki/index.php/PRINT" title="PRINT"><span style="color:#4593D8;">PRINT</span></a> <span style="color:#FFB100;">"Falling . . . "</span>
             <span style="color:#55FF55;">Fall</span> <span style="color:#F580B1;">2000</span>, <span style="color:#F580B1;">550</span>, <span style="color:#F580B1;">500</span>
-        <a class="mw-redirect" href="/qb64wiki/index.php/CASE" title="CASE"><span style="color:#4593D8;">CASE</span></a> <a class="mw-redirect" href="/qb64wiki/index.php/IS" title="IS"><span style="color:#4593D8;">IS</span></a> = <span style="color:#FFB100;">"S"</span>
+        <a class="mw-redirect" href="/qb64wiki/index.php/CASE_IS" title="CASE IS"><span style="color:#4593D8;">CASE IS</span></a> = <span style="color:#FFB100;">"S"</span>
             <a href="/qb64wiki/index.php/PRINT" title="PRINT"><span style="color:#4593D8;">PRINT</span></a> <span style="color:#FFB100;">"Wailing . . ."</span>
             <a href="/qb64wiki/index.php/PRINT" title="PRINT"><span style="color:#4593D8;">PRINT</span></a> <span style="color:#FFB100;">" . . . press any key to end."</span>
             <span style="color:#55FF55;">Siren</span> <span style="color:#F580B1;">780</span>, <span style="color:#F580B1;">650</span>
-        <a class="mw-redirect" href="/qb64wiki/index.php/CASE" title="CASE"><span style="color:#4593D8;">CASE</span></a> <a class="mw-redirect" href="/qb64wiki/index.php/IS" title="IS"><span style="color:#4593D8;">IS</span></a> = <span style="color:#FFB100;">"K"</span>
+        <a class="mw-redirect" href="/qb64wiki/index.php/CASE_IS" title="CASE IS"><span style="color:#4593D8;">CASE IS</span></a> = <span style="color:#FFB100;">"K"</span>
             <a href="/qb64wiki/index.php/PRINT" title="PRINT"><span style="color:#4593D8;">PRINT</span></a> <span style="color:#FFB100;">"Oscillating . . ."</span>
             <a href="/qb64wiki/index.php/PRINT" title="PRINT"><span style="color:#4593D8;">PRINT</span></a> <span style="color:#FFB100;">" . . . press any key to end."</span>
             <span style="color:#55FF55;">Klaxon</span> <span style="color:#F580B1;">987</span>, <span style="color:#F580B1;">329</span>
-        <a class="mw-redirect" href="/qb64wiki/index.php/CASE" title="CASE"><span style="color:#4593D8;">CASE</span></a> <a href="/qb64wiki/index.php/ELSE" title="ELSE"><span style="color:#4593D8;">ELSE</span></a>
+        <a class="mw-redirect" href="/qb64wiki/index.php/CASE_ELSE" title="CASE ELSE"><span style="color:#4593D8;">CASE ELSE</span></a>
     <a href="/qb64wiki/index.php/END_SELECT" title="END SELECT"><span style="color:#4593D8;">END SELECT</span></a>
 <a href="/qb64wiki/index.php/DO...LOOP" title="DO...LOOP"><span style="color:#4593D8;">LOOP UNTIL</span></a> Q = <span style="color:#FFB100;">"Q"</span>
 <a href="/qb64wiki/index.php/END" title="END"><span style="color:#4593D8;">END</span></a>
@@ -795,13 +1000,16 @@ Octaves:
         <a href="/qb64wiki/index.php/BEEP" title="BEEP">
          BEEP
         </a>
+        ,
+        <a href="/qb64wiki/index.php/WAVE" title="WAVE">
+         _WAVE
+        </a>
        </li>
        <li>
         <a href="/qb64wiki/index.php/SNDOPEN" title="SNDOPEN">
          _SNDOPEN
         </a>
-       </li>
-       <li>
+        ,
         <a href="/qb64wiki/index.php/SNDRAW" title="SNDRAW">
          _SNDRAW
         </a>
@@ -841,15 +1049,15 @@ Octaves:
       </center>
       <!-- 
 NewPP limit report
-Cached time: 20240721120028
+Cached time: 20250124204611
 Cache expiry: 86400
 Reduced expiry: false
 Complications: [show‐toc]
-CPU time usage: 0.163 seconds
-Real time usage: 0.187 seconds
-Preprocessor visited node count: 4364/1000000
-Post‐expand include size: 28773/2097152 bytes
-Template argument size: 8184/2097152 bytes
+CPU time usage: 0.153 seconds
+Real time usage: 0.169 seconds
+Preprocessor visited node count: 4413/1000000
+Post‐expand include size: 28830/2097152 bytes
+Template argument size: 8390/2097152 bytes
 Highest expansion depth: 4/100
 Expensive parser function count: 0/100
 Unstrip recursion depth: 0/20
@@ -857,24 +1065,24 @@ Unstrip post‐expand size: 3419/5000000 bytes
 -->
       <!--
 Transclusion expansion time report (%,ms,calls,template)
-100.00%  107.256      1 -total
- 13.08%   14.031    322 Template:Text
-  9.01%    9.663    242 Template:Cl
-  4.87%    5.219      1 Template:PageSeeAlso
-  2.68%    2.874      1 Template:PageAvailability
-  2.21%    2.370      1 Template:PageSyntax
-  1.99%    2.137     17 Template:Parameter
-  1.95%    2.092      3 Template:CodeStart
-  1.69%    1.817      1 Template:FixedStart
-  1.69%    1.812      1 Template:PageExamples
+100.00%   89.454      1 -total
+ 15.66%   14.013    322 Template:Text
+ 11.74%   10.505    237 Template:Cl
+  3.13%    2.803      1 Template:PageSyntax
+  2.97%    2.657     31 Template:Parameter
+  2.80%    2.502      1 Template:PageSeeAlso
+  2.65%    2.373      1 Template:PageExamples
+  2.58%    2.306      3 Template:CodeEnd
+  2.18%    1.947      1 Template:FixedStart
+  2.12%    1.899      1 Template:PageNavigation
 -->
-      <!-- Saved in parser cache with key qb64pnix_mw19894-mwmb_:pcache:idhash:564-0!canonical and timestamp 20240721120028 and revision id 8787.
+      <!-- Saved in parser cache with key qb64pnix_mw19894-mwmb_:pcache:idhash:564-0!canonical and timestamp 20250124204611 and revision id 9335.
  -->
      </div>
      <div class="printfooter" data-nosnippet="">
       Retrieved from "
-      <a dir="ltr" href="https://qb64phoenix.com/qb64wiki/index.php?title=SOUND&amp;oldid=8787">
-       https://qb64phoenix.com/qb64wiki/index.php?title=SOUND&amp;oldid=8787
+      <a dir="ltr" href="https://qb64phoenix.com/qb64wiki/index.php?title=SOUND&amp;oldid=9335">
+       https://qb64phoenix.com/qb64wiki/index.php?title=SOUND&amp;oldid=9335
       </a>
       "
      </div>
@@ -1091,7 +1299,7 @@ You can view its source [e]">
         </a>
        </li>
        <li class="mw-list-item" id="t-permalink">
-        <a href="/qb64wiki/index.php?title=SOUND&amp;oldid=8787" title="Permanent link to this revision of this page">
+        <a href="/qb64wiki/index.php?title=SOUND&amp;oldid=9335" title="Permanent link to this revision of this page">
          <span>
           Permanent link
          </span>
@@ -1112,7 +1320,7 @@ You can view its source [e]">
   <footer class="mw-footer" id="footer" role="contentinfo">
    <ul id="footer-info">
     <li id="footer-info-lastmod">
-     This page was last edited on 19 February 2024, at 22:56.
+     This page was last edited on 24 November 2024, at 20:05.
     </li>
    </ul>
    <ul id="footer-places">
@@ -1141,7 +1349,7 @@ You can view its source [e]">
    </ul>
   </footer>
   <script>
-   (RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgPageParseReport":{"limitreport":{"cputime":"0.163","walltime":"0.187","ppvisitednodes":{"value":4364,"limit":1000000},"postexpandincludesize":{"value":28773,"limit":2097152},"templateargumentsize":{"value":8184,"limit":2097152},"expansiondepth":{"value":4,"limit":100},"expensivefunctioncount":{"value":0,"limit":100},"unstrip-depth":{"value":0,"limit":20},"unstrip-size":{"value":3419,"limit":5000000},"timingprofile":["100.00%  107.256      1 -total"," 13.08%   14.031    322 Template:Text","  9.01%    9.663    242 Template:Cl","  4.87%    5.219      1 Template:PageSeeAlso","  2.68%    2.874      1 Template:PageAvailability","  2.21%    2.370      1 Template:PageSyntax","  1.99%    2.137     17 Template:Parameter","  1.95%    2.092      3 Template:CodeStart","  1.69%    1.817      1 Template:FixedStart","  1.69%    1.812      1 Template:PageExamples"]},"cachereport":{"timestamp":"20240721120028","ttl":86400,"transientcontent":false}}});mw.config.set({"wgBackendResponseTime":73});});
+   (RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgPageParseReport":{"limitreport":{"cputime":"0.153","walltime":"0.169","ppvisitednodes":{"value":4413,"limit":1000000},"postexpandincludesize":{"value":28830,"limit":2097152},"templateargumentsize":{"value":8390,"limit":2097152},"expansiondepth":{"value":4,"limit":100},"expensivefunctioncount":{"value":0,"limit":100},"unstrip-depth":{"value":0,"limit":20},"unstrip-size":{"value":3419,"limit":5000000},"timingprofile":["100.00%   89.454      1 -total"," 15.66%   14.013    322 Template:Text"," 11.74%   10.505    237 Template:Cl","  3.13%    2.803      1 Template:PageSyntax","  2.97%    2.657     31 Template:Parameter","  2.80%    2.502      1 Template:PageSeeAlso","  2.65%    2.373      1 Template:PageExamples","  2.58%    2.306      3 Template:CodeEnd","  2.18%    1.947      1 Template:FixedStart","  2.12%    1.899      1 Template:PageNavigation"]},"cachereport":{"timestamp":"20250124204611","ttl":86400,"transientcontent":false}}});mw.config.set({"wgBackendResponseTime":121});});
   </script>
  </body>
 </html>

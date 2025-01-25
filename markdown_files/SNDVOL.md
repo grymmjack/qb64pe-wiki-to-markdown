@@ -145,6 +145,6 @@ _SNDPLAY h&
 <blockquote>
 
 
-* [_SNDOPEN](SNDOPEN.md) , [_SNDOPENRAW](SNDOPENRAW.md)
-* [_SNDBAL](SNDBAL.md)
+* _SNDOPEN , _SNDOPENRAW
+* _SNDBAL
 </blockquote>

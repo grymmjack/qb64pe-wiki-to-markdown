@@ -137,6 +137,6 @@ br ~ h5 {
 
 
 * [SUB](SUB.md) _GL
-* [_glBegin](glBegin.md) , [_glEnd](glEnd.md) , [_glLoadName](glLoadName.md) , [_glPushName](glPushName.md)
-* [_glRenderMode](glRenderMode.md) , [_glSelectBuffer](glSelectBuffer.md)
+* _glBegin , _glEnd , _glLoadName , _glPushName
+* _glRenderMode , _glSelectBuffer
 </blockquote>

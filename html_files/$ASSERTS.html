@@ -6,7 +6,7 @@
    $ASSERTS - QB64 Phoenix Edition Wiki
   </title>
   <script>
-   document.documentElement.className="client-js";RLCONF={"wgBreakFrames":false,"wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgRequestId":"Zp2EyBpdvGGeVdK1DlhbmQAAAnY","wgCSPNonce":false,"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"$ASSERTS","wgTitle":"$ASSERTS","wgCurRevisionId":8262,"wgRevisionId":8262,"wgArticleId":46,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":[],"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgRelevantPageName":"$ASSERTS","wgRelevantArticleId":46,"wgIsProbablyEditable":false,"wgRelevantPageIsProbablyEditable":false,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgVector2022PreviewPages":[]};RLSTATE={"site.styles":"ready","user.styles":"ready","user":
+   document.documentElement.className="client-js";RLCONF={"wgBreakFrames":false,"wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgRequestId":"Z5RhQjqafTy_MWwYEqvBsgAAAAE","wgCSPNonce":false,"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"$ASSERTS","wgTitle":"$ASSERTS","wgCurRevisionId":9200,"wgRevisionId":9200,"wgArticleId":46,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":[],"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgRelevantPageName":"$ASSERTS","wgRelevantArticleId":46,"wgIsProbablyEditable":false,"wgRelevantPageIsProbablyEditable":false,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgVector2022PreviewPages":[]};RLSTATE={"site.styles":"ready","user.styles":"ready","user":
 "ready","user.options":"loading","mediawiki.page.gallery.styles":"ready","skins.vector.styles.legacy":"ready"};RLPAGEMODULES=["site","mediawiki.page.ready","mediawiki.toc","skins.vector.legacy.js"];
   </script>
   <script>
@@ -212,19 +212,61 @@
         </b>
         is used.
        </li>
-      </ul>
-      <dl>
-       <dt>
-        Note
-       </dt>
-       <dd>
-        This metacommand is the main switch to enable debug tests during development. Later just remove this metacommand to compile the program without debugging code, all the
+       <li>
+        The
+        <b>
+         $ASSERTS
+        </b>
+        metacommand serves as main switch to enable debug tests during development. Later you just need to remove the metacommand while leaving all the
         <a href="/qb64wiki/index.php/ASSERT" title="ASSERT">
          _ASSERT
         </a>
-        statements may remain in the code for later debugging sessions, they are simply ignored without this metacommand.
-       </dd>
-      </dl>
+        statements in place for later debugging sessions, they are simply ignored without the metacommand.
+       </li>
+       <li>
+        In newer versions a precompiler flag named
+        <b>
+         _ASSERTS_
+        </b>
+        is available (see
+        <a href="#Availability">
+         Availability
+        </a>
+        ):
+        <ul>
+         <li>
+          The flag is
+          <i>
+           one(1)
+          </i>
+          if the program is compiled with
+          <b>
+           $ASSERTS
+          </b>
+          enabled and
+          <i>
+           zero(0)
+          </i>
+          if compiled without it.
+         </li>
+         <li>
+          You may use it to include/exclude debugging related code using precompiler
+          <a href="/qb64wiki/index.php/$IF" title="$IF">
+           $IF
+          </a>
+          ..
+          <a class="mw-redirect" href="/qb64wiki/index.php/$ELSE" title="$ELSE">
+           $ELSE
+          </a>
+          ...
+          <a class="mw-redirect" href="/qb64wiki/index.php/$END_IF" title="$END IF">
+           $END IF
+          </a>
+          blocks.
+         </li>
+        </ul>
+       </li>
+      </ul>
       <p>
        <br/>
       </p>
@@ -338,6 +380,23 @@
         </div>
        </li>
       </ul>
+      <ul>
+       <li>
+        Since
+        <b>
+         QB64-PE v4.0.0
+        </b>
+        the precompiler flag
+        <i>
+         _ASSERTS_
+        </i>
+        indicates the state of
+        <b>
+         $ASSERTS
+        </b>
+        at compile time.
+       </li>
+      </ul>
       <p>
        <br/>
       </p>
@@ -449,12 +508,12 @@
       </center>
       <!-- 
 NewPP limit report
-Cached time: 20240721211835
+Cached time: 20250125035754
 Cache expiry: 86400
 Reduced expiry: false
 Complications: [show‐toc]
-CPU time usage: 0.108 seconds
-Real time usage: 0.139 seconds
+CPU time usage: 0.063 seconds
+Real time usage: 0.091 seconds
 Preprocessor visited node count: 287/1000000
 Post‐expand include size: 2463/2097152 bytes
 Template argument size: 558/2097152 bytes
@@ -465,24 +524,24 @@ Unstrip post‐expand size: 2424/5000000 bytes
 -->
       <!--
 Transclusion expansion time report (%,ms,calls,template)
-100.00%  119.554      1 -total
-  3.00%    3.587     15 Template:Text
-  2.78%    3.319      1 Template:Cm
-  2.53%    3.026      1 Template:PageSyntax
-  2.42%    2.891      1 Template:PageAvailability
-  2.28%    2.723     18 Template:Cl
-  2.08%    2.486      1 Template:PageDescription
-  2.02%    2.410      1 Template:PageExamples
-  1.82%    2.173      1 Template:CodeEnd
-  1.66%    1.981      1 Template:CodeStart
+100.00%   65.708      1 -total
+  9.93%    6.525     15 Template:Text
+  6.53%    4.294      1 Template:CodeEnd
+  5.15%    3.385     18 Template:Cl
+  4.37%    2.869      1 Template:PageExamples
+  4.25%    2.793      1 Template:PageSyntax
+  3.59%    2.360      1 Template:PageDescription
+  3.53%    2.321      1 Template:PageAvailability
+  3.53%    2.319      1 Template:PageNavigation
+  3.50%    2.297      1 Template:CodeStart
 -->
-      <!-- Saved in parser cache with key qb64pnix_mw19894-mwmb_:pcache:idhash:46-0!canonical and timestamp 20240721211835 and revision id 8262.
+      <!-- Saved in parser cache with key qb64pnix_mw19894-mwmb_:pcache:idhash:46-0!canonical and timestamp 20250125035754 and revision id 9200.
  -->
      </div>
      <div class="printfooter" data-nosnippet="">
       Retrieved from "
-      <a dir="ltr" href="https://qb64phoenix.com/qb64wiki/index.php?title=$ASSERTS&amp;oldid=8262">
-       https://qb64phoenix.com/qb64wiki/index.php?title=$ASSERTS&amp;oldid=8262
+      <a dir="ltr" href="https://qb64phoenix.com/qb64wiki/index.php?title=$ASSERTS&amp;oldid=9200">
+       https://qb64phoenix.com/qb64wiki/index.php?title=$ASSERTS&amp;oldid=9200
       </a>
       "
      </div>
@@ -699,7 +758,7 @@ You can view its source [e]">
         </a>
        </li>
        <li class="mw-list-item" id="t-permalink">
-        <a href="/qb64wiki/index.php?title=$ASSERTS&amp;oldid=8262" title="Permanent link to this revision of this page">
+        <a href="/qb64wiki/index.php?title=$ASSERTS&amp;oldid=9200" title="Permanent link to this revision of this page">
          <span>
           Permanent link
          </span>
@@ -720,7 +779,7 @@ You can view its source [e]">
   <footer class="mw-footer" id="footer" role="contentinfo">
    <ul id="footer-info">
     <li id="footer-info-lastmod">
-     This page was last edited on 19 March 2023, at 14:18.
+     This page was last edited on 18 November 2024, at 16:05.
     </li>
    </ul>
    <ul id="footer-places">
@@ -749,7 +808,7 @@ You can view its source [e]">
    </ul>
   </footer>
   <script>
-   (RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgPageParseReport":{"limitreport":{"cputime":"0.108","walltime":"0.139","ppvisitednodes":{"value":287,"limit":1000000},"postexpandincludesize":{"value":2463,"limit":2097152},"templateargumentsize":{"value":558,"limit":2097152},"expansiondepth":{"value":4,"limit":100},"expensivefunctioncount":{"value":0,"limit":100},"unstrip-depth":{"value":0,"limit":20},"unstrip-size":{"value":2424,"limit":5000000},"timingprofile":["100.00%  119.554      1 -total","  3.00%    3.587     15 Template:Text","  2.78%    3.319      1 Template:Cm","  2.53%    3.026      1 Template:PageSyntax","  2.42%    2.891      1 Template:PageAvailability","  2.28%    2.723     18 Template:Cl","  2.08%    2.486      1 Template:PageDescription","  2.02%    2.410      1 Template:PageExamples","  1.82%    2.173      1 Template:CodeEnd","  1.66%    1.981      1 Template:CodeStart"]},"cachereport":{"timestamp":"20240721211835","ttl":86400,"transientcontent":false}}});mw.config.set({"wgBackendResponseTime":98});});
+   (RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgPageParseReport":{"limitreport":{"cputime":"0.063","walltime":"0.091","ppvisitednodes":{"value":287,"limit":1000000},"postexpandincludesize":{"value":2463,"limit":2097152},"templateargumentsize":{"value":558,"limit":2097152},"expansiondepth":{"value":4,"limit":100},"expensivefunctioncount":{"value":0,"limit":100},"unstrip-depth":{"value":0,"limit":20},"unstrip-size":{"value":2424,"limit":5000000},"timingprofile":["100.00%   65.708      1 -total","  9.93%    6.525     15 Template:Text","  6.53%    4.294      1 Template:CodeEnd","  5.15%    3.385     18 Template:Cl","  4.37%    2.869      1 Template:PageExamples","  4.25%    2.793      1 Template:PageSyntax","  3.59%    2.360      1 Template:PageDescription","  3.53%    2.321      1 Template:PageAvailability","  3.53%    2.319      1 Template:PageNavigation","  3.50%    2.297      1 Template:CodeStart"]},"cachereport":{"timestamp":"20250125035754","ttl":86400,"transientcontent":false}}});mw.config.set({"wgBackendResponseTime":187});});
   </script>
  </body>
 </html>

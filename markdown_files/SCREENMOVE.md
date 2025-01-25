@@ -120,7 +120,7 @@ br ~ h5 {
 
 
 * Positions the program window on the desktop using the column& and row& pixel coordinates for the upper left corner.
-* [_MIDDLE](MIDDLE.md) can be used instead to automatically center the program window on the desktop, in any screen resolution.
+* _MIDDLE can be used instead to automatically center the program window on the desktop, in any screen resolution.
 </blockquote>
 
 #### DESCRIPTION
@@ -129,9 +129,9 @@ br ~ h5 {
 
 
 * The program's [SCREEN](SCREEN.md) dimensions may influence the desktop position that can be used to keep the entire window on the screen.
-* Use [_DESKTOPWIDTH](DESKTOPWIDTH.md) and [_DESKTOPHEIGHT](DESKTOPHEIGHT.md) to find the current desktop resolution to place the program's window.
+* Use _DESKTOPWIDTH and _DESKTOPHEIGHT to find the current desktop resolution to place the program's window.
 * On dual monitors a negative column& position or a value greater than the main screen width can be used to position a window in another monitor.
-* A small delay may be necessary when a program first starts up to properly orient the screen on the desktop properly. See [_SCREENEXISTS](SCREENEXISTS.md) .
+* A small delay may be necessary when a program first starts up to properly orient the screen on the desktop properly. See _SCREENEXISTS .
 * Keyword not supported in Linux versions
 
 </blockquote>
@@ -187,9 +187,9 @@ _SCREENMOVE _MIDDLE 'moves program back to main monitor 1
 <blockquote>
 
 
-* [_SCREENX](SCREENX.md) , [_SCREENY](SCREENY.md)
-* [_SCREENIMAGE](SCREENIMAGE.md) , [_DESKTOPWIDTH](DESKTOPWIDTH.md) , [_DESKTOPHEIGHT](DESKTOPHEIGHT.md)
-* [_SCREENPRINT](SCREENPRINT.md)
-* [_SCREENEXISTS](SCREENEXISTS.md)
-* [_NEWIMAGE](NEWIMAGE.md) , [SCREEN](SCREEN.md)
+* _SCREENX , _SCREENY
+* _SCREENIMAGE , _DESKTOPWIDTH , _DESKTOPHEIGHT
+* _SCREENPRINT
+* _SCREENEXISTS
+* _NEWIMAGE , [SCREEN](SCREEN.md)
 </blockquote>

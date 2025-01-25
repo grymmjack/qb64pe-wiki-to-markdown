@@ -120,10 +120,10 @@ br ~ h5 {
 
 
 * imageHandle& is the handle of the image that will act as the current write page.
-* [_DEST](DEST.md) 0 refers to the present program [SCREEN](SCREEN.md) . You can use 0 to refer to the present program [SCREEN](SCREEN.md) .
-* [_DEST](DEST.md) [_CONSOLE](CONSOLE.md) can set the destination to send information to a console window using [PRINT](PRINT.md) or [INPUT](INPUT.md) .
+* _DEST 0 refers to the present program [SCREEN](SCREEN.md) . You can use 0 to refer to the present program [SCREEN](SCREEN.md) .
+* _DEST _CONSOLE can set the destination to send information to a console window using [PRINT](PRINT.md) or [INPUT](INPUT.md) .
 * If imageHandle& is an invalid handle, an invalid handle error occurs. Always check for valid handle values first ( imageHandle& < -1).
-* Note: Use [_SOURCE](SOURCE.md) when you need to read a page or image with [POINT](POINT.md) , [GET](GET.md) or the [SCREEN](SCREEN.md) function.
+* Note: Use _SOURCE when you need to read a page or image with [POINT](POINT.md) , [GET](GET.md) or the [SCREEN](SCREEN.md) function.
 
 </blockquote>
 
@@ -189,27 +189,27 @@ REM prints to a(3) image then switches back to the default 0
 _DEST a(3): f = INT(RND * 6): PRINT st$(3): _DEST 0
 
 DO
-REM prints to a(1) and a(2) then switches bac to 0
-_DEST a(1)
-CLS
-PRINT sta(r)
-_DEST a(2)
-CLS
-PRINT sta(r + 1)
-_DEST 0 'destination zero is the main program page
+   REM prints to a(1) and a(2) then switches bac to 0
+   _DEST a(1)
+   CLS
+   PRINT sta(r)
+   _DEST a(2)
+   CLS
+   PRINT sta(r + 1)
+   _DEST 0 'destination zero is the main program page
 
-REM a loop to putimage the images in a(1) and a(2) in a way to make it look like its rolling
-FOR yat = 150 TO 380 STEP 4
-CLS
-_PUTIMAGE (0, yat)-(640, 380), a(1)
-_PUTIMAGE (0, 150)-(640, yat), a(2)
-GOSUB bounce
-_DISPLAY
-_LIMIT 20
-NEXT yat
+   REM a loop to putimage the images in a(1) and a(2) in a way to make it look like its rolling
+   FOR yat = 150 TO 380 STEP 4
+       CLS
+       _PUTIMAGE (0, yat)-(640, 380), a(1)
+       _PUTIMAGE (0, 150)-(640, yat), a(2)
+       GOSUB bounce
+       _DISPLAY
+       _LIMIT 20
+   NEXT yat
 
-r = r + 1
-IF r = 4 THEN r = 0
+   r = r + 1
+   IF r = 4 THEN r = 0
 LOOP UNTIL INKEY$ <> ""
 END
 
@@ -232,8 +232,8 @@ RETURN
 <blockquote>
 
 
-* [_DEST](DEST.md) (function)
-* [_SOURCE](SOURCE.md)
-* [_PUTIMAGE](PUTIMAGE.md)
-* [_CONSOLE](CONSOLE.md)
+* _DEST (function)
+* _SOURCE
+* _PUTIMAGE
+* _CONSOLE
 </blockquote>

@@ -137,5 +137,5 @@ br ~ h5 {
 
 
 * [SUB](SUB.md) _GL
-* [_glBegin](glBegin.md) , [_glEnd](glEnd.md) , [_glFlush](glFlush.md)
+* _glBegin , _glEnd , _glFlush
 </blockquote>

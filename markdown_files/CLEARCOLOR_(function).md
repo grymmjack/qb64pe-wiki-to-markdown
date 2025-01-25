@@ -124,8 +124,8 @@ br ~ h5 {
 * In color modes using a palette, the index of the current transparent color value is returned, or -1 if no transparent color is set.
 * In 32-bit color modes, zero is returned.
 * Returns the color that currently is transparent, or if no color is transparent -1 without error.
-* A [_CLEARCOLOR](CLEARCOLOR.md) statement can set the transparent color of an image or screen.
-* NOTE: Default 32 bit backgrounds are clear black or [_RGBA](RGBA.md) (0, 0, 0, 0). Use [CLS](CLS.md) to make the black opaque.
+* A _CLEARCOLOR statement can set the transparent color of an image or screen.
+* NOTE: Default 32 bit backgrounds are clear black or _RGBA (0, 0, 0, 0). Use [CLS](CLS.md) to make the black opaque.
 
 </blockquote>
 
@@ -141,7 +141,7 @@ br ~ h5 {
 <blockquote>
 
 
-* [_CLEARCOLOR](CLEARCOLOR.md) (sets a clear color)
-* [_SETALPHA](SETALPHA.md) (sets color transparency)
+* _CLEARCOLOR (sets a clear color)
+* _SETALPHA (sets color transparency)
 * Images
 </blockquote>

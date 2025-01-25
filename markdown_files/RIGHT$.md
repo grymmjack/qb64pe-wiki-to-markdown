@@ -119,7 +119,7 @@ br ~ h5 {
 <blockquote>
 
 
-* The stringvalue$ can be any string of ASCII characters as a [STRING](STRING.md) variable.
+* The stringvalue$ can be any string of [ASCII](ASCII.md) characters as a [STRING](STRING.md) variable.
 * The numberofcharacters [INTEGER](INTEGER.md) value determines the number of characters to return from the right end of the string.
 </blockquote>
 
@@ -129,7 +129,7 @@ br ~ h5 {
 
 
 * If the number of characters exceeds the string length( [LEN](LEN.md) ) the entire string is returned.
-* [RIGHT&dollar;](RIGHT&dollar;.md) returns always start at the last character of the string, even if a space. [RTRIM&dollar;](RTRIM&dollar;.md) can remove ending spaces.
+* [RIGHT\$](RIGHT\$.md) returns always start at the last character of the string, even if a space. [RTRIM\$](RTRIM\$.md) can remove ending spaces.
 * Number of characters cannot be a negative value.
 
 </blockquote>
@@ -197,7 +197,7 @@ Colored text
 <blockquote>
 
 
-* [LEFT&dollar;](LEFT&dollar;.md) , [MID&dollar;](MID&dollar;.md) (function)
-* [LTRIM&dollar;](LTRIM&dollar;.md) , [RTRIM&dollar;](RTRIM&dollar;.md)
-* [INSTR](INSTR.md) , [HEX&dollar;](HEX&dollar;.md)
+* [LEFT\$](LEFT\$.md) , [MID\$](MID\$.md) (function)
+* [LTRIM\$](LTRIM\$.md) , [RTRIM\$](RTRIM\$.md)
+* [INSTR](INSTR.md) , [HEX\$](HEX\$.md)
 </blockquote>

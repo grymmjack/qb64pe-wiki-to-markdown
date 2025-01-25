@@ -119,8 +119,8 @@ br ~ h5 {
 <blockquote>
 
 
-* [_BLEND](BLEND.md) returns -1 if enabled or 0 if disabled by [_DONTBLEND](DONTBLEND.md) statement.
-* Note: [_DONTBLEND](DONTBLEND.md) is faster than the default [_BLEND](BLEND.md) unless you really need to use it in 32 bit.
+* _BLEND returns -1 if enabled or 0 if disabled by _DONTBLEND statement.
+* Note: _DONTBLEND is faster than the default _BLEND unless you really need to use it in 32 bit.
 
 </blockquote>
 
@@ -136,6 +136,6 @@ br ~ h5 {
 <blockquote>
 
 
-* [_DONTBLEND](DONTBLEND.md) , [_BLEND](BLEND.md)
+* _DONTBLEND , _BLEND
 * Images
 </blockquote>

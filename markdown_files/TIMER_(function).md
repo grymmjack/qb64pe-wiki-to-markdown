@@ -118,7 +118,7 @@ br ~ h5 {
 * Use [DOUBLE](DOUBLE.md) variables for millisecond accuracy as [SINGLE](SINGLE.md) values are only accurate to 100ths of a second later in the day!
 * [TIMER](TIMER.md) loops should use a midnight adjustment to avoid non-ending loops in QBasic.
 * [TIMER](TIMER.md) can also be used for timing program Events. See [ON](ON.md) TIMER(n) or the [TIMER](TIMER.md) statement.
-* QB64 can use a [_DELAY](DELAY.md) down to .001(one millisecond) or [_LIMIT](LIMIT.md) loops per second. Both help limit program CPU usage.
+* QB64 can use a _DELAY down to .001(one millisecond) or _LIMIT loops per second. Both help limit program CPU usage.
 
 </blockquote>
 
@@ -131,9 +131,9 @@ br ~ h5 {
 ##### Example 1: Delay SUB with a midnight correction for when TIMER returns to 0. QB64 can use _DELAY for delays down to .001.
 ```vb
 DO
-PRINT "Hello";
-Delay .5  'accuracy down to .05 seconds or 1/18th of a second in QBasic
-PRINT "World!";
+ PRINT "Hello";
+ Delay .5  'accuracy down to .05 seconds or 1/18th of a second in QBasic
+ PRINT "World!";
 LOOP UNTIL INKEY$ = CHR$(27) 'escape key exit
 
 END
@@ -141,7 +141,7 @@ END
 SUB Delay (dlay!)
 start! = TIMER
 DO WHILE start! + dlay! >= TIMER
-IF start! > TIMER THEN start! = start! - 86400
+ IF start! > TIMER THEN start! = start! - 86400
 LOOP
 END SUB
 ```
@@ -154,14 +154,14 @@ END SUB
 ```vb
 DEF SEG = 0 ' set to PEEK and POKE TIMER Ticks
 DO ' main program loop
-' program code
-POKE 1132, 0 ' zero Timer ticks
-DO ' delay loop
-x% = PEEK(1132)
-IF x% <> px% THEN PRINT x%;
-px% = x%
-LOOP UNTIL x% >= 18 '18 ticks in one second
-PRINT "code " ' program code
+ ' program code
+ POKE 1132, 0 ' zero Timer ticks
+ DO ' delay loop
+   x% = PEEK(1132)
+   IF x% <> px% THEN PRINT x%;
+   px% = x%
+ LOOP UNTIL x% >= 18 '18 ticks in one second
+ PRINT "code " ' program code
 LOOP UNTIL INKEY$ = CHR$(27)
 DEF SEG ' reset segment to default
 
@@ -209,7 +209,7 @@ Double = 77073.094
 <blockquote>
 
 
-* [_DELAY](DELAY.md) , [_LIMIT](LIMIT.md) , [SLEEP](SLEEP.md)
+* _DELAY , _LIMIT , [SLEEP](SLEEP.md)
 * [RANDOMIZE](RANDOMIZE.md) , Scancodes
 * [ON](ON.md) TIMER(n) , [TIMER](TIMER.md)
 </blockquote>

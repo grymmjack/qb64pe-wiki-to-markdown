@@ -121,8 +121,8 @@ br ~ h5 {
 
 * [SINGLE](SINGLE.md) values returned range between -1 and 1 as maximums and 0 indicating minimum or axis center.
 * When the mouse is moved on the program screen, moves left or above center are negative while below or right are positive.
-* The axis_number must be a number which does not exceed the number of axis found by the [_LASTAXIS](LASTAXIS.md) function.
-* The number of [_DEVICES](DEVICES.md) must be read before using [_DEVICE&dollar;](DEVICE&dollar;.md) , [_DEVICEINPUT](DEVICEINPUT.md) or [_LASTAXIS](LASTAXIS.md) .
+* The axis_number must be a number which does not exceed the number of axis found by the _LASTAXIS function.
+* The number of _DEVICES must be read before using _DEVICE$ , _DEVICEINPUT or _LASTAXIS .
 
 </blockquote>
 
@@ -135,24 +135,24 @@ br ~ h5 {
 ##### Example: Reading multiple controller device buttons, axis and wheels.
 ```vb
 FOR i = 1 TO _DEVICES
-PRINT STR$(i) + ") " + _DEVICE$(i) + " Buttons:"; _LASTBUTTON(i); ",Axis:"; _LASTAXIS(i); ",Wheel:"; _LASTWHEEL(i)
+   PRINT STR$(i) + ") " + _DEVICE$(i) + " Buttons:"; _LASTBUTTON(i); ",Axis:"; _LASTAXIS(i); ",Wheel:"; _LASTWHEEL(i)
 NEXT
 
 DO
-d& = _DEVICEINPUT
-IF d& THEN '             the device number cannot be zero!
-PRINT "Found"; d&;
-FOR b = 1 TO _LASTBUTTON(d&)
-PRINT _BUTTONCHANGE(b); _BUTTON(b);
-NEXT
-FOR a = 1 TO _LASTAXIS(d&)
-PRINT _AXIS(a);
-NEXT
-FOR w = 1 TO _LASTWHEEL(d&)
-PRINT _WHEEL(w);
-NEXT
-PRINT
-END IF
+   d& = _DEVICEINPUT
+   IF d& THEN '             the device number cannot be zero!
+       PRINT "Found"; d&;
+       FOR b = 1 TO _LASTBUTTON(d&)
+           PRINT _BUTTONCHANGE(b); _BUTTON(b);
+       NEXT
+       FOR a = 1 TO _LASTAXIS(d&)
+           PRINT _AXIS(a);
+       NEXT
+       FOR w = 1 TO _LASTWHEEL(d&)
+           PRINT _WHEEL(w);
+       NEXT
+       PRINT
+   END IF
 LOOP UNTIL INKEY$ = CHR$(27) 'escape key exit
 
 END
@@ -168,9 +168,9 @@ END
 <blockquote>
 
 
-* [_LASTWHEEL](LASTWHEEL.md) , [_LASTBUTTON](LASTBUTTON.md) , [_LASTAXIS](LASTAXIS.md)
-* [_WHEEL](WHEEL.md) , [_BUTTON](BUTTON.md) , [_BUTTONCHANGE](BUTTONCHANGE.md)
-* [_DEVICE&dollar;](DEVICE&dollar;.md) , [_DEVICES](DEVICES.md)
-* [_MOUSEMOVEMENTX](MOUSEMOVEMENTX.md) , [_MOUSEMOVEMENTY](MOUSEMOVEMENTY.md) (relative movement)
+* _LASTWHEEL , _LASTBUTTON , _LASTAXIS
+* _WHEEL , _BUTTON , _BUTTONCHANGE
+* _DEVICE$ , _DEVICES
+* _MOUSEMOVEMENTX , _MOUSEMOVEMENTY (relative movement)
 * Controller Devices
 </blockquote>

@@ -149,6 +149,6 @@ SYSTEM
 <blockquote>
 
 
-* [_CWD&dollar;](CWD&dollar;.md)
+* _CWD$
 * [SHELL](SHELL.md)
 </blockquote>

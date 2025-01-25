@@ -123,9 +123,9 @@ br ~ h5 {
 ##### Example 1: Using a TYPE record variable(Contact) to enter a new RANDOM record to a file.
 ```vb
 TYPE ContactType
-first AS STRING * 10
-last AS STRING * 20
-age AS INTEGER
+ first AS STRING * 10
+ last AS STRING * 20
+ age AS INTEGER
 END TYPE
 DIM Contact AS ContactType
 
@@ -150,7 +150,7 @@ CLOSE #1
 DIM SHARED array(100) AS INTEGER
 
 FOR i = 1 TO 100
-array(i) = i
+ array(i) = i
 NEXT
 showme  'display array contents
 
@@ -171,7 +171,7 @@ END
 
 SUB showme
 FOR i = 1 TO 100
-PRINT array(i);
+ PRINT array(i);
 NEXT
 PRINT "done"
 END SUB

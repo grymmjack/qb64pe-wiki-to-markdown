@@ -131,9 +131,9 @@ br ~ h5 {
 
 
 * [WIDTH](WIDTH.md) statement can be used to determine the text width and height in [SCREEN](SCREEN.md) 0 and height of 30 or 60 in [SCREEN](SCREEN.md) 11 or 12.
-* In [_NEWIMAGE](NEWIMAGE.md) graphic screen the number of text rows are calculated as [_HEIGHT](HEIGHT.md) \ 16 except when a [_FONT](FONT.md) is used. Use [_FONTHEIGHT](FONTHEIGHT.md) to calculate font rows.
-* [_NEWIMAGE](NEWIMAGE.md) graphic screen text columns are calculated as [_WIDTH](WIDTH.md) \ 8 except when a [_FONT](FONT.md) is used. Use [_PRINTWIDTH](PRINTWIDTH.md) to measure a line of font text.
-* Additionally, when a variable width [_FONT](FONT.md) is active, then the columns are not counted as char positions anymore but as pixel positions instead.
+* In _NEWIMAGE graphic screen the number of text rows are calculated as _HEIGHT \ 16 except when a _FONT is used. Use _FONTHEIGHT to calculate font rows.
+* _NEWIMAGE graphic screen text columns are calculated as _WIDTH \ 8 except when a _FONT is used. Use _PRINTWIDTH to measure a line of font text.
+* Additionally, when a variable width _FONT is active, then the columns are not counted as char positions anymore but as pixel positions instead.
 * The text row position is not required if the [PRINT](PRINT.md) is going to be on the next row. The comma and a column value are required to set the column.
 * If only the row parameter is given, then the column position remains the same. Neither row or column parameter can be 0.
 * When PRINTing on the bottom 2 rows , use a semicolon after the [PRINT](PRINT.md) expression to avoid a screen roll.
@@ -154,15 +154,15 @@ br ~ h5 {
 crx = 10
 cry = 10
 DO
-LOCATE cry, crx, 1, 0, 8
-a$ = INKEY$
-SELECT CASE a$
-CASE CHR$(0) + "H": IF cry > 1 THEN cry = cry - 1 'up
-CASE CHR$(0) + "P": IF cry < 25 THEN cry = cry + 1 'down
-CASE CHR$(0) + "K": IF crx > 1 THEN crx = crx - 1 'left
-CASE CHR$(0) + "M": IF crx < 80 THEN crx = crx + 1 'right
-CASE CHR$(27): END
-END SELECT
+   LOCATE cry, crx, 1, 0, 8
+   a$ = INKEY$
+   SELECT CASE a$
+       CASE CHR$(0) + "H": IF cry > 1 THEN cry = cry - 1 'up
+       CASE CHR$(0) + "P": IF cry < 25 THEN cry = cry + 1 'down
+       CASE CHR$(0) + "K": IF crx > 1 THEN crx = crx - 1 'left
+       CASE CHR$(0) + "M": IF crx < 80 THEN crx = crx + 1 'right
+       CASE CHR$(27): END
+   END SELECT
 LOOP
 ```
   
@@ -179,6 +179,6 @@ LOOP
 * Featured in our "Keyword of the Day" series
 * [CSRLIN](CSRLIN.md) , [POS](POS.md) (cursor position)
 * [SCREEN](SCREEN.md) , [PRINT](PRINT.md) , [COLOR](COLOR.md)
-* [INPUT](INPUT.md) , [LINE](LINE.md) [INPUT](INPUT.md) , [INPUT&dollar;](INPUT&dollar;.md) (keyboard input)
-* [WIDTH](WIDTH.md) , [INPUT&dollar;](INPUT&dollar;.md) , [INKEY&dollar;](INKEY&dollar;.md)
+* [INPUT](INPUT.md) , [LINE](LINE.md) [INPUT](INPUT.md) , [INPUT\$](INPUT\$.md) (keyboard input)
+* [WIDTH](WIDTH.md) , [INPUT\$](INPUT\$.md) , [INKEY\$](INKEY\$.md)
 </blockquote>

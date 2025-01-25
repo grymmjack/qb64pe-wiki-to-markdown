@@ -119,8 +119,8 @@ br ~ h5 {
 <blockquote>
 
 
-* If the last error occurred in the main module, [_INCLERRORLINE](INCLERRORLINE.md) returns 0.
-* By checking [_INCLERRORLINE](INCLERRORLINE.md) you can report exactly what line inside an included module caused the last error.
+* If the last error occurred in the main module, _INCLERRORLINE returns 0.
+* By checking _INCLERRORLINE you can report exactly what line inside an included module caused the last error.
 
 </blockquote>
 
@@ -144,7 +144,7 @@ DebugLine:
 PRINT "An error occurred. Please contact support with the following details:
 PRINT "ERROR "; ERR; " ON LINE: "; _ERRORLINE
 IF _INCLERRORLINE THEN
-PRINT "    IN MODULE "; _INCLERRORFILE$; " (line"; _INCLERRORLINE; ")"
+   PRINT "    IN MODULE "; _INCLERRORFILE$; " (line"; _INCLERRORLINE; ")"
 END IF
 RESUME NEXT
 ```
@@ -157,7 +157,7 @@ ERROR  250  ON LINE:  6
 
 An error occurred. Please contact support with the following details:
 ERROR  250  ON LINE:  9
-IN MODULE haserror.bi ( line 1 )
+   IN MODULE haserror.bi ( line 1 )
 ```
   
 <br>
@@ -170,9 +170,9 @@ IN MODULE haserror.bi ( line 1 )
 <blockquote>
 
 
-* [_INCLERRORFILE&dollar;](INCLERRORFILE&dollar;.md)
+* _INCLERRORFILE$
 * [ON](ON.md) [ERROR](ERROR.md) , [ERR](ERR.md)
 * [ERROR](ERROR.md)
 * [ERROR](ERROR.md) Codes
-* [&dollar;INCLUDE](&dollar;INCLUDE.md)
+* [\$INCLUDE](\$INCLUDE.md)
 </blockquote>

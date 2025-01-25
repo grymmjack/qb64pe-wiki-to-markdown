@@ -147,10 +147,10 @@ br ~ h5 {
 ##### Example 1: Viewing the list of environmental parameter settings using a counter loop like SET does in DOS.
 ```vb
 DO
-i = i + 1
-setting$ = ENVIRON$(i) ' get a setting from the list
-PRINT setting$
-IF i MOD 20 = 0 THEN PRINT "Press a key": SLEEP: CLS
+ i = i + 1
+ setting$ = ENVIRON$(i) ' get a setting from the list
+ PRINT setting$
+ IF i MOD 20 = 0 THEN PRINT "Press a key": SLEEP: CLS
 LOOP UNTIL setting$ = ""
 ```
   
@@ -218,7 +218,7 @@ PRINT C$                            'DEMO print
 URLFILE$ = MID$(Program$, 1, INSTR(Program$, ".")) + "URL" 'change EXE to URL
 
 IF C$ > "" THEN
-SHORTCUT$ = C$ + "\Desktop\" + URLFILE$ 'create filename for the desktop
+    SHORTCUT$ = C$ + "\Desktop\" + URLFILE$ 'create filename for the desktop
 ELSE SHORTCUT$ = PATH$ + URLFILE$   'if all else fails put in program folder
 END IF
 PRINT SHORTCUT                      'DEMO print
@@ -246,8 +246,8 @@ END SUB
 
 
 * [ENVIRON](ENVIRON.md) (statement)
-* [_DEVICES](DEVICES.md) , [_DEVICE&dollar;](DEVICE&dollar;.md)
-* [_LASTBUTTON](LASTBUTTON.md) , [_OS&dollar;](OS&dollar;.md)
+* _DEVICES , _DEVICE$
+* _LASTBUTTON , _OS$
 * Windows Environment
 * Windows User Paths Library
 </blockquote>

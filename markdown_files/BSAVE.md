@@ -133,7 +133,7 @@ br ~ h5 {
 * [SCREEN](SCREEN.md) 12 can only [GET](GET.md) 1/3 of the screen image at one time using a 26K array.
 * Image arrays are DIMensioned as [INTEGER](INTEGER.md) . Use [DEFINT](DEFINT.md) when working with large graphic arrays.
 * Any arrays can be saved, but image arrays are most common.
-* [DEF](DEF.md) [SEG](SEG.md) = [VARSEG](VARSEG.md) must be used to designate the array segment position in memory.
+* DEF SEG = [VARSEG](VARSEG.md) must be used to designate the array segment position in memory.
 * [VARPTR](VARPTR.md) returns the array index offset of the memory segment. Array sizes are limited to 32767 Integer elements due to the use of [VARPTR](VARPTR.md) in QBasic and QB64' s emulated conventional memory.
 * [BSAVE](BSAVE.md) files can later be opened with [BLOAD](BLOAD.md) .
 
@@ -151,7 +151,7 @@ LB% = LBOUND(Array)
 bytes% = LEN(Array(LB%))
 filesize& = ((UBOUND(Array) - LB%) + 1) * bytes%
 DEF SEG = VARSEG(Array(0))
-BSAVE filename$, VARPTR(Array(LB%)), filesize&  ' changeable index
+ BSAVE filename$, VARPTR(Array(LB%)), filesize&  ' changeable index
 DEF SEG
 ```
   
@@ -165,7 +165,7 @@ DEF SEG = VARSEG(Image(0))
 PSET(BMPHead.PWidth - 1, BMPHead.PDepth - 1)  'color lower right corner if black
 GET (0, 0)-(BMPHead.PWidth - 1, BMPHead.PDepth - 1), Image(NColors * 3) ' for 16 or 256 colors
 FOR a& = 26000 TO 0 STEP -1
-IF Image(a&) THEN ArraySize& = a&: EXIT FOR
+  IF Image(a&) THEN ArraySize& = a&: EXIT FOR
 NEXT
 BSAVE SaveName$, VARPTR(Image(0)), (2 * ArraySize&) + 200 'file size
 DEF SEG
@@ -187,7 +187,7 @@ LINE (0, 0)-(10, 10), 12, B 'create image
 GET(0, 0)-STEP(10, 10), Graphic%() 'get image to array
 
 FOR i% = 1000 TO 0 STEP -1 'reverse read array for size needed
-IF Graphic%(i%) <> 0 THEN EXIT FOR 'find image color not black
+   IF Graphic%(i%) <> 0 THEN EXIT FOR 'find image color not black
 NEXT
 size% = i% + 4 'size plus 2 integers(4  bytes) for dimensions
 REDIM _PRESERVE Graphic%(size%) 'resize existing array in QB64 only!
@@ -205,7 +205,7 @@ CLOSE
 
 K$ = INPUT$(1) 'Press any key
 FOR i = 0 TO 20 'read all 3 arrays
-PRINT Graphic%(i); CopyBin%(i)
+   PRINT Graphic%(i); CopyBin%(i)
 NEXT
 PRINT "Array:"; size%, "File:"; fsize%
 ```
@@ -224,6 +224,6 @@ PRINT "Array:"; size%, "File:"; fsize%
 * [BLOAD](BLOAD.md) , [OPEN](OPEN.md) , [BINARY](BINARY.md)
 * [GET](GET.md) , [PUT](PUT.md) (file statements)
 * [VARSEG](VARSEG.md) , [VARPTR](VARPTR.md)
-* [DEF](DEF.md) [SEG](SEG.md) , [TYPE](TYPE.md)
+* DEF SEG , [TYPE](TYPE.md)
 * Text Using Graphics
 </blockquote>

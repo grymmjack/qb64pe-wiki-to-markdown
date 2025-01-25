@@ -119,8 +119,8 @@ br ~ h5 {
 <blockquote>
 
 
-* numericalVariable is the variable to shift the bits of and can be of the following types: [INTEGER](INTEGER.md) , [LONG](LONG.md) , [_INTEGER64](INTEGER64.md) , or [_BYTE](BYTE.md) .
-* Integer values can be signed or [_UNSIGNED](UNSIGNED.md) .
+* numericalVariable is the variable to shift the bits of and can be of the following types: [INTEGER](INTEGER.md) , [LONG](LONG.md) , _INTEGER64 , or _BYTE .
+* Integer values can be signed or _UNSIGNED .
 * numericalValue the number of places to shift the bits.
 * While 0 is a valid value it will have no affect on the variable being shifted.
 </blockquote>
@@ -167,7 +167,7 @@ PRINT _SHR(A~%%,8) 'shift the bit off the right 'edge'
 ```vb
 A~%% = 128
 FOR I%% = 0 TO 8
-PRINT _SHR(A~%%, I%%)
+   PRINT _SHR(A~%%, I%%)
 NEXT I%%
 ```
   
@@ -175,14 +175,14 @@ NEXT I%%
 
 ```vb
 128
-64
-32
-16
-8
-4
-2
-1
-0
+ 64
+ 32
+ 16
+ 8
+ 4
+ 2
+ 1
+ 0
 ```
   
 <br>
@@ -195,7 +195,7 @@ NEXT I%%
 <blockquote>
 
 
-* [_SHL](SHL.md) , [_ROL](ROL.md) , [_ROR](ROR.md)
-* [_BYTE](BYTE.md) , [INTEGER](INTEGER.md)
-* [LONG](LONG.md) , [_INTEGER64](INTEGER64.md)
+* _SHL , _ROL , _ROR
+* _BYTE , [INTEGER](INTEGER.md)
+* [LONG](LONG.md) , _INTEGER64
 </blockquote>

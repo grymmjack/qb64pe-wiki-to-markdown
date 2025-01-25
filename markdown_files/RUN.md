@@ -170,5 +170,5 @@ Do you want to quit?(Y/N)_
 
 
 * [CHAIN](CHAIN.md) , [SHELL](SHELL.md)
-* [COMMAND&dollar;](COMMAND&dollar;.md)
+* [COMMAND\$](COMMAND\$.md)
 </blockquote>

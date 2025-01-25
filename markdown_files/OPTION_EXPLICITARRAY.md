@@ -119,8 +119,8 @@ br ~ h5 {
 <blockquote>
 
 
-* Normally statements like x(2) = 3 will implicitly create an array x(). [OPTION](OPTION.md) [_EXPLICITARRAY](EXPLICITARRAY.md) requires proper dimensioning for the array, helping to catch mistyped array and function names.
-* Unlike [OPTION](OPTION.md) [_EXPLICIT](EXPLICIT.md) , simple variables can still be used without a declaration. Example: i = 1
+* Normally statements like x(2) = 3 will implicitly create an array x(). OPTION _EXPLICITARRAY requires proper dimensioning for the array, helping to catch mistyped array and function names.
+* Unlike OPTION _EXPLICIT , simple variables can still be used without a declaration. Example: i = 1
 
 </blockquote>
 
@@ -151,7 +151,7 @@ y(2) = 3 'This now generates an error
 <blockquote>
 
 
-* [OPTION](OPTION.md) [_EXPLICIT](EXPLICIT.md)
+* OPTION _EXPLICIT
 * [DIM](DIM.md) , [REDIM](REDIM.md)
 * [SHARED](SHARED.md)
 * [STATIC](STATIC.md)

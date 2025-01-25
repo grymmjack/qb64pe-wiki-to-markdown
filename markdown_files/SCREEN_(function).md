@@ -120,7 +120,7 @@ br ~ h5 {
 
 
 * row and column are the [INTEGER](INTEGER.md) text coordinates of the [SCREEN](SCREEN.md) mode used.
-* Optional colorflag [INTEGER](INTEGER.md) value can be omitted or 0 for ASCII code values or 1 for color attributes.
+* Optional colorflag [INTEGER](INTEGER.md) value can be omitted or 0 for [ASCII](ASCII.md) code values or 1 for color attributes.
 </blockquote>
 
 #### EXAMPLES
@@ -190,7 +190,7 @@ SCREEN 0, 0, 1, 0
 COLOR 0 'blank out the screen text
 FILES "qb64.exe"        'the current program's filename can also be used
 FOR i = 1 TO 80
-a$ = a$ + CHR$(SCREEN(1, i)) 'scan the black text on the screen
+ a$ = a$ + CHR$(SCREEN(1, i)) 'scan the black text on the screen
 NEXT
 CLS
 COLOR 7
@@ -212,7 +212,7 @@ END
 
 
 * [PRINT](PRINT.md) , [SCREEN](SCREEN.md)
-* [COLOR](COLOR.md) , [CHR&dollar;](CHR&dollar;.md) , [POINT](POINT.md)
-* [CSRLIN](CSRLIN.md) , [POS](POS.md) , ASCII
+* [COLOR](COLOR.md) , [CHR\$](CHR\$.md) , [POINT](POINT.md)
+* [CSRLIN](CSRLIN.md) , [POS](POS.md) , [ASCII](ASCII.md)
 * Screen Memory
 </blockquote>

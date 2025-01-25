@@ -120,7 +120,7 @@ br ~ h5 {
 
 
 * The [WAIT](WAIT.md) statement reads a value from port% using [INP](INP.md) .
-* If xorMask% is specified, the value is [XOR](XOR.md) 'd with xorMask% . It has the effect of "toggle these bits".
+* If xorMask% is specified, the value is XOR 'd with xorMask% . It has the effect of "toggle these bits".
 * The value is then [AND](AND.md) 'd with andMask% . It has the effect of "check if these bits are set".
 * If the final value is non-zero, [WAIT](WAIT.md) returns. Otherwise, another value is read from port% and checked again.
 * The [WAIT](WAIT.md) statement returns immediately if port% is not supported.

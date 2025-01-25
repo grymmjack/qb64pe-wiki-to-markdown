@@ -6,7 +6,7 @@
    TYPE - QB64 Phoenix Edition Wiki
   </title>
   <script>
-   document.documentElement.className="client-js";RLCONF={"wgBreakFrames":false,"wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgRequestId":"Zp2HOiSKw_M1BQgKFBb0pQAAArg","wgCSPNonce":false,"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"TYPE","wgTitle":"TYPE","wgCurRevisionId":8738,"wgRevisionId":8738,"wgArticleId":274,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":[],"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgRelevantPageName":"TYPE","wgRelevantArticleId":274,"wgIsProbablyEditable":false,"wgRelevantPageIsProbablyEditable":false,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgVector2022PreviewPages":[]};RLSTATE={"site.styles":"ready","user.styles":"ready","user":"ready",
+   document.documentElement.className="client-js";RLCONF={"wgBreakFrames":false,"wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgRequestId":"Z5RinAWKRwiE9zBBFH0kRQAAANE","wgCSPNonce":false,"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"TYPE","wgTitle":"TYPE","wgCurRevisionId":8738,"wgRevisionId":8738,"wgArticleId":274,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":[],"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgRelevantPageName":"TYPE","wgRelevantArticleId":274,"wgIsProbablyEditable":false,"wgRelevantPageIsProbablyEditable":false,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgVector2022PreviewPages":[]};RLSTATE={"site.styles":"ready","user.styles":"ready","user":"ready",
 "user.options":"loading","skins.vector.styles.legacy":"ready"};RLPAGEMODULES=["site","mediawiki.page.ready","mediawiki.toc","skins.vector.legacy.js"];
   </script>
   <script>
@@ -321,14 +321,17 @@
 │ <a href="/qb64wiki/index.php/UNSIGNED" title="UNSIGNED">_UNSIGNED</a> <a href="/qb64wiki/index.php/INTEGER64" title="INTEGER64">_INTEGER64</a> │    ~&amp;&amp;    │                          0 │     8     │
 │                      │           │ 18,446,744,073,709,551,615 │           │
 ├──────────────────────┼───────────┼────────────────────────────┼───────────┤
-│        <a href="/qb64wiki/index.php/SINGLE" title="SINGLE">SINGLE</a>        │     !     │              -2.802597E-45 │     4     │
-│                      │ (or none) │              +3.402823E+38 │           │
+│                      │           │              -3.402823E+38 │           │
+│        <a href="/qb64wiki/index.php/SINGLE" title="SINGLE">SINGLE</a>        │ ! or none │               1.175494E-38 │     4     │
+│                      │           │              +3.402823E+38 │           │
 ├──────────────────────┼───────────┼────────────────────────────┼───────────┤
-│        <a href="/qb64wiki/index.php/DOUBLE" title="DOUBLE">DOUBLE</a>        │     #     │    -4.490656458412465E-324 │     8     │
-│                      │           │    +1.797693134862310E+308 │           │
+│                      │           │    -1.797693134862315D+308 │           │
+│        <a href="/qb64wiki/index.php/DOUBLE" title="DOUBLE">DOUBLE</a>        │     #     │     2.225073858507201D-308 │     8     │
+│                      │           │    +1.797693134862315D+308 │           │
 ├──────────────────────┼───────────┼────────────────────────────┼───────────┤
-│        <a href="/qb64wiki/index.php/FLOAT" title="FLOAT">_FLOAT</a>        │    ##     │                -1.18E-4932 │    32     │
-│                      │           │                +1.18E+4932 │ (10 used) │
+│                      │           │-1.189731495357231765F+4932 │           │
+│        <a href="/qb64wiki/index.php/FLOAT" title="FLOAT">_FLOAT</a>        │    ##     │ 3.362103143112093506F-4932 │    32     │
+│                      │           │+1.189731495357231765F+4932 │           │
 ├──────────────────────┼───────────┼────────────────────────────┼───────────┤
 │       <a href="/qb64wiki/index.php/OFFSET" title="OFFSET">_OFFSET</a>        │    %&amp;     │ -9,223,372,036,854,775,808 │  use <a href="/qb64wiki/index.php/LEN" title="LEN">LEN</a>  │
 │                      │           │  9,223,372,036,854,775,807 │           │
@@ -339,9 +342,9 @@
 │         <a href="/qb64wiki/index.php/MEM" title="MEM">_MEM</a>         │   none    │ <b>An internal <a class="mw-selflink selflink">TYPE</a> like memory variable.</b> │
 └──────────────────────┴───────────┴────────────────────────────────────────┘
   For the floating-point numeric types <a href="/qb64wiki/index.php/SINGLE" title="SINGLE">SINGLE</a> (default when not assigned),
- <a href="/qb64wiki/index.php/DOUBLE" title="DOUBLE">DOUBLE</a> and <a href="/qb64wiki/index.php/FLOAT" title="FLOAT">_FLOAT</a>, the minimum values represent the smallest values closest
-  to zero, while the maximum values represent the largest values closest to
-    pos./neg. infinity. <a href="/qb64wiki/index.php/OFFSET" title="OFFSET">_OFFSET</a> dot values are used as a part of the <a href="/qb64wiki/index.php/MEM" title="MEM">_MEM</a>
+<a href="/qb64wiki/index.php/DOUBLE" title="DOUBLE">DOUBLE</a> and <a href="/qb64wiki/index.php/FLOAT" title="FLOAT">_FLOAT</a>, the middle values represent the smallest possible fraction,
+   while the min./max. values above and below represent the limits of the
+  possible number range. <a href="/qb64wiki/index.php/OFFSET" title="OFFSET">_OFFSET</a> dot values are used as a part of the <a href="/qb64wiki/index.php/MEM" title="MEM">_MEM</a>
        variable type in QB64 to return or set the position in memory.
 
 ┌───────────────────────────────────────────────────────────────────────────┐
@@ -793,14 +796,14 @@ PRINT foobar.a, foobar.c.b
       </center>
       <!-- 
 NewPP limit report
-Cached time: 20240721095522
+Cached time: 20250124203119
 Cache expiry: 86400
 Reduced expiry: false
 Complications: [show‐toc]
-CPU time usage: 0.049 seconds
-Real time usage: 0.057 seconds
+CPU time usage: 0.054 seconds
+Real time usage: 0.068 seconds
 Preprocessor visited node count: 395/1000000
-Post‐expand include size: 14186/2097152 bytes
+Post‐expand include size: 14451/2097152 bytes
 Template argument size: 523/2097152 bytes
 Highest expansion depth: 3/100
 Expensive parser function count: 0/100
@@ -809,18 +812,18 @@ Unstrip post‐expand size: 0/5000000 bytes
 -->
       <!--
 Transclusion expansion time report (%,ms,calls,template)
-100.00%   27.187      1 -total
- 24.14%    6.564      1 Template:DataTypePlugin
- 12.68%    3.448     48 Template:Cl
-  7.76%    2.109      1 Template:PageSyntax
-  6.91%    1.880      1 Template:FixedStart
-  6.72%    1.828      5 Template:CodeEnd
-  6.58%    1.788      3 Template:Cb
-  6.38%    1.734      1 Template:PageSeeAlso
-  6.23%    1.695      1 Template:TextStart
-  5.71%    1.553      1 Template:TextEnd
+100.00%   32.951      1 -total
+ 27.36%    9.015      1 Template:DataTypePlugin
+ 11.71%    3.858      1 Template:FixedStart
+ 10.60%    3.494     48 Template:Cl
+  8.11%    2.673      1 Template:PageSyntax
+  7.18%    2.367      5 Template:CodeStart
+  7.02%    2.312      1 Template:PageNavigation
+  6.13%    2.021      1 Template:TextStart
+  6.11%    2.012      1 Template:PageSeeAlso
+  5.97%    1.967      1 Template:TextEnd
 -->
-      <!-- Saved in parser cache with key qb64pnix_mw19894-mwmb_:pcache:idhash:274-0!canonical and timestamp 20240721095522 and revision id 8738.
+      <!-- Saved in parser cache with key qb64pnix_mw19894-mwmb_:pcache:idhash:274-0!canonical and timestamp 20250124203119 and revision id 8738.
  -->
      </div>
      <div class="printfooter" data-nosnippet="">
@@ -1093,7 +1096,7 @@ You can view its source [e]">
    </ul>
   </footer>
   <script>
-   (RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgPageParseReport":{"limitreport":{"cputime":"0.049","walltime":"0.057","ppvisitednodes":{"value":395,"limit":1000000},"postexpandincludesize":{"value":14186,"limit":2097152},"templateargumentsize":{"value":523,"limit":2097152},"expansiondepth":{"value":3,"limit":100},"expensivefunctioncount":{"value":0,"limit":100},"unstrip-depth":{"value":0,"limit":20},"unstrip-size":{"value":0,"limit":5000000},"timingprofile":["100.00%   27.187      1 -total"," 24.14%    6.564      1 Template:DataTypePlugin"," 12.68%    3.448     48 Template:Cl","  7.76%    2.109      1 Template:PageSyntax","  6.91%    1.880      1 Template:FixedStart","  6.72%    1.828      5 Template:CodeEnd","  6.58%    1.788      3 Template:Cb","  6.38%    1.734      1 Template:PageSeeAlso","  6.23%    1.695      1 Template:TextStart","  5.71%    1.553      1 Template:TextEnd"]},"cachereport":{"timestamp":"20240721095522","ttl":86400,"transientcontent":false}}});mw.config.set({"wgBackendResponseTime":146});});
+   (RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgPageParseReport":{"limitreport":{"cputime":"0.054","walltime":"0.068","ppvisitednodes":{"value":395,"limit":1000000},"postexpandincludesize":{"value":14451,"limit":2097152},"templateargumentsize":{"value":523,"limit":2097152},"expansiondepth":{"value":3,"limit":100},"expensivefunctioncount":{"value":0,"limit":100},"unstrip-depth":{"value":0,"limit":20},"unstrip-size":{"value":0,"limit":5000000},"timingprofile":["100.00%   32.951      1 -total"," 27.36%    9.015      1 Template:DataTypePlugin"," 11.71%    3.858      1 Template:FixedStart"," 10.60%    3.494     48 Template:Cl","  8.11%    2.673      1 Template:PageSyntax","  7.18%    2.367      5 Template:CodeStart","  7.02%    2.312      1 Template:PageNavigation","  6.13%    2.021      1 Template:TextStart","  6.11%    2.012      1 Template:PageSeeAlso","  5.97%    1.967      1 Template:TextEnd"]},"cachereport":{"timestamp":"20250124203119","ttl":86400,"transientcontent":false}}});mw.config.set({"wgBackendResponseTime":89});});
   </script>
  </body>
 </html>

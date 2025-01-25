@@ -121,8 +121,8 @@ br ~ h5 {
 
 * QBasic metacommands must be commented with [REM](REM.md) or an apostrophe.
 * The sourceFile name must be enclosed in apostrophes and can include a path.
-* [&dollar;INCLUDE](&dollar;INCLUDE.md) is often used to add functions and subs from an external text QBasic code library.
-* The [&dollar;INCLUDE](&dollar;INCLUDE.md) metacommand should be the only statement on a line.
+* [\$INCLUDE](\$INCLUDE.md) is often used to add functions and subs from an external text QBasic code library.
+* The [\$INCLUDE](\$INCLUDE.md) metacommand should be the only statement on a line.
 
 </blockquote>
 
@@ -156,5 +156,5 @@ br ~ h5 {
 
 * [INTERRUPT](INTERRUPT.md) , [INTERRUPTX](INTERRUPTX.md)
 * [TYPE](TYPE.md) , [DIM](DIM.md)
-* Metacommand
+* [Metacommand](Metacommand.md)
 </blockquote>

@@ -129,7 +129,7 @@ br ~ h5 {
 
 
 * If the number of characters exceeds the string length the entire string is returned. Use [LEN](LEN.md) to determine a string's length.
-* [LEFT&dollar;](LEFT&dollar;.md) returns always start at the first character of the string, even if it's a space. [LTRIM&dollar;](LTRIM&dollar;.md) can remove leading spaces.
+* [LEFT\$](LEFT\$.md) returns always start at the first character of the string, even if it's a space. [LTRIM\$](LTRIM\$.md) can remove leading spaces.
 * numberOfCharacters% cannot be a negative value.
 
 </blockquote>
@@ -176,14 +176,14 @@ END
 
 FUNCTION Replace (text$, old$, new$) 'can also be used as a SUB without the count assignment
 DO
-find = INSTR(start + 1, text$, old$) 'find location of a word in text
-IF find THEN
-count = count + 1
-first$ = LEFT$(text$, find - 1) 'text before word including spaces
-last$ = RIGHT$(text$, LEN(text$) - (find + LEN(old$) - 1)) 'text after word
-text$ = first$ + new$ + last$
-END IF
-start = find
+ find = INSTR(start + 1, text$, old$) 'find location of a word in text
+ IF find THEN
+   count = count + 1
+   first$ = LEFT$(text$, find - 1) 'text before word including spaces
+   last$ = RIGHT$(text$, LEN(text$) - (find + LEN(old$) - 1)) 'text after word
+   text$ = first$ + new$ + last$
+ END IF
+ start = find
 LOOP WHILE find
 Replace = count 'function returns the number of replaced words. Comment out in SUB
 END FUNCTION
@@ -206,7 +206,7 @@ This is your sentence to change your words.
 <blockquote>
 
 
-* [RIGHT&dollar;](RIGHT&dollar;.md) , [MID&dollar;](MID&dollar;.md) (function)
-* [LTRIM&dollar;](LTRIM&dollar;.md) , [RTRIM&dollar;](RTRIM&dollar;.md)
+* [RIGHT\$](RIGHT\$.md) , [MID\$](MID\$.md) (function)
+* [LTRIM\$](LTRIM\$.md) , [RTRIM\$](RTRIM\$.md)
 * [INSTR](INSTR.md) , [LEN](LEN.md)
 </blockquote>

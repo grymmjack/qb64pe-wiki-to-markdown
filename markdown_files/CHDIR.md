@@ -152,21 +152,21 @@ PRINT PATH$
 FUNCTION TITLE$ === SHOW CURRENT PROGRAM
 SHARED PATH$           'optional path information shared with main module only
 DECLARE LIBRARY        'Directory Information using KERNEL32 provided by Dav
-FUNCTION GetModuleFileNameA (BYVAL Module AS LONG, FileName AS STRING, BYVAL nSize AS LONG)
+ FUNCTION GetModuleFileNameA (BYVAL Module AS LONG, FileName AS STRING, BYVAL nSize AS LONG)
 END DECLARE
 
 FileName$ = SPACE$(256)
 Result = GetModuleFileNameA(0, FileName$, LEN(FileName$))  '0 designates the current program
 IF Result THEN             'Result returns the length or bytes of the string information
-PATH$ = LEFT$(FileName$, Result)
-start = 1
-DO
-posit = INSTR(start, PATH$, "\")
-IF posit THEN last = posit
-start = posit + 1
-LOOP UNTIL posit = 0
-TITLE$ = MID$(PATH$, last + 1)
-PATH$ = LEFT$(PATH$, last)
+ PATH$ = LEFT$(FileName$, Result)
+ start = 1
+ DO
+   posit = INSTR(start, PATH$, "\")
+   IF posit THEN last = posit
+   start = posit + 1
+ LOOP UNTIL posit = 0
+ TITLE$ = MID$(PATH$, last + 1)
+ PATH$ = LEFT$(PATH$, last)
 ELSE TITLE$ = "": PATH$ = ""
 END IF
 END FUNCTION
@@ -184,5 +184,5 @@ END FUNCTION
 
 * [SHELL](SHELL.md) , [FILES](FILES.md)
 * [MKDIR](MKDIR.md) , [RMDIR](RMDIR.md)
-* [&dollar;CONSOLE](&dollar;CONSOLE.md)
+* [\$CONSOLE](\$CONSOLE.md)
 </blockquote>

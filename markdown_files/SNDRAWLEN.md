@@ -102,7 +102,7 @@ br ~ h5 {
 ---
 <blockquote>
 
-### The _SNDRAWLEN function returns the length, in seconds, of a _SNDRAW sound currently queued.
+### The _SNDRAWLEN function returns the length, in seconds, of a _SNDRAW / _SNDRAWBATCH sound currently queued.
 
 </blockquote>
 
@@ -119,7 +119,7 @@ br ~ h5 {
 <blockquote>
 
 
-* The optional pipeHandle& parameter refers to the sound pipe opened using [_SNDOPENRAW](SNDOPENRAW.md) .
+* The optional pipeHandle& parameter refers to the sound pipe opened using _SNDOPENRAW .
 </blockquote>
 
 #### DESCRIPTION
@@ -127,11 +127,11 @@ br ~ h5 {
 <blockquote>
 
 
-* Use [_SNDRAWLEN](SNDRAWLEN.md) to determine the length of a sound queue during creation and when to stop playing the sound.
-* Ensure that [_SNDRAWLEN](SNDRAWLEN.md) is comfortably above 0 (until you've actually finished playing sound).
-* If you are getting occasional random clicks, this generally means that [_SNDRAWLEN](SNDRAWLEN.md) has dropped to 0.
-* The [_SNDRATE](SNDRATE.md) determines how many samples are played per second. However, the timing is achieved by the sound card and [_SNDRAWLEN](SNDRAWLEN.md) , not your program.
-* Do not attempt to use _TIMER or [_DELAY](DELAY.md) or [_LIMIT](LIMIT.md) to control the timing of [_SNDRAW](SNDRAW.md) sounds. You may use them as usual for delays or to limit your program's CPU usage, but the decision of how much sound to queue should only be based on the remaining [_SNDRAWLEN](SNDRAWLEN.md) .
+* Use _SNDRAWLEN to determine the length of a sound queue during creation and when to stop playing the sound.
+* Ensure that _SNDRAWLEN is comfortably above 0 (until you've finished playing sound).
+* If you get occasional random clicks, this generally means that _SNDRAWLEN has dropped to 0.
+* The _SNDRATE determines how many samples are played per second. However, the timing is achieved by the sound card and _SNDRAWLEN , not your program.
+* Do not attempt to use _TIMER or _DELAY or _LIMIT to control the timing of _SNDRAW sounds. You may use them as usual for delays or to limit your program's CPU usage, but the decision of how much sound to queue should only be based on the remaining _SNDRAWLEN .
 
 </blockquote>
 
@@ -147,6 +147,6 @@ br ~ h5 {
 <blockquote>
 
 
-* [_SNDRAW](SNDRAW.md)
-* [_SNDRATE](SNDRATE.md)
+* _SNDRAW , _SNDRAWBATCH
+* _SNDRATE
 </blockquote>

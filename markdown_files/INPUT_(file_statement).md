@@ -119,7 +119,7 @@ br ~ h5 {
 <blockquote>
 
 
-* fileNumber& is a positive [LONG](LONG.md) integer value used to [OPEN](OPEN.md) the file [FOR](FOR.md) [INPUT](INPUT.md) mode.
+* fileNumber& is a positive [LONG](LONG.md) integer value used to [OPEN](OPEN.md) the file FOR [INPUT](INPUT.md) mode.
 * The type of the variable used defines the value or list of values to be returned from the file. Numeric types must match the values returned.
 * As reflected in the syntax you can list a number of variables with different types seperated by a comma and they will hold the values in the file (keep in mind that the information in the file should match the variable types used).
 </blockquote>
@@ -230,8 +230,8 @@ Hello, how are you?        I'm fine.
 <blockquote>
 
 
-* [INPUT](INPUT.md) (file mode) , [LINE](LINE.md) [INPUT](INPUT.md) # , [INPUT&dollar;](INPUT&dollar;.md) (file input)
-* [INPUT](INPUT.md) , [LINE](LINE.md) [INPUT](INPUT.md) , [INPUT&dollar;](INPUT&dollar;.md) (keyboard input)
-* [PRINT](PRINT.md) # , [PRINT](PRINT.md) #, [USING](USING.md)
+* [INPUT](INPUT.md) (file mode) , [LINE](LINE.md) [INPUT](INPUT.md) # , [INPUT\$](INPUT\$.md) (file input)
+* [INPUT](INPUT.md) , [LINE](LINE.md) [INPUT](INPUT.md) , [INPUT\$](INPUT\$.md) (keyboard input)
+* [PRINT](PRINT.md) # , [PRINT](PRINT.md) #, USING
 * [GET](GET.md) #
 </blockquote>

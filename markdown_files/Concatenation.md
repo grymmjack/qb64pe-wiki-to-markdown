@@ -162,7 +162,7 @@ Billy sold 102 boxes for $306.
 <blockquote>
 
 
-* [PRINT](PRINT.md) , [PRINT](PRINT.md) [USING](USING.md)
-* [CHR&dollar;](CHR&dollar;.md) , [STR&dollar;](STR&dollar;.md) , [VARPTR&dollar;](VARPTR&dollar;.md)
-* Semicolon , Comma
+* [PRINT](PRINT.md) , [PRINT](PRINT.md) USING
+* [CHR\$](CHR\$.md) , [STR\$](STR\$.md) , [VARPTR\$](VARPTR\$.md)
+* [Semicolon](Semicolon.md) , [Comma](Comma.md)
 </blockquote>

@@ -127,16 +127,16 @@ KEY 1, "Help" 'returns the string "Help" to INPUT variable when F1 is pressed
 ```vb
 Function Key Flag Combination Values
 
-0 = no function key combination flag(single key)
-1 = Left Shift key flag
-2 = Right Shift key flag
-4 = Ctrl flag
-8 = Alt flag
-32 = Number Lock flag
-64 = Caps Lock flag
-128 = Extended keys (see trapping extended keys below)
+                 0 = no function key combination flag(single key)
+                 1 = Left Shift key flag
+                 2 = Right Shift key flag
+                 4 = Ctrl flag
+                 8 = Alt flag
+                32 = Number Lock flag
+                64 = Caps Lock flag
+               128 = Extended keys (see trapping extended keys below)
 
-Flag values can be added to monitor multiple function key combinations.
+         Flag values can be added to monitor multiple function key combinations.
 ```
   
 <br>
@@ -175,13 +175,13 @@ KEY 15, CHR$(4) + CHR$(13) 'enabled event when Ctrl and + key are pressed
 ```vb
 KEY n, CHR$(128) + CHR$(scancode) ' where n = 15 to 29. See: Scancodes
 
-KEY 15, CHR$(128) + CHR$(75)  'left arrow cursor pad
+             KEY 15, CHR$(128) + CHR$(75)  'left arrow cursor pad 
 
-KEY 16, CHR$(128) + CHR$(72)  'up arrow cursor pad
+             KEY 16, CHR$(128) + CHR$(72)  'up arrow cursor pad  
 
-KEY 17, CHR$(128) + CHR$(77)  'right arrow cursor pad
+             KEY 17, CHR$(128) + CHR$(77)  'right arrow cursor pad
 
-KEY 18, CHR$(128) + CHR$(80)  'down arrow cursor pad
+             KEY 18, CHR$(128) + CHR$(80)  'down arrow cursor pad
 ```
   
 <br>
@@ -258,13 +258,13 @@ KEY 18, CHR$(128) + CHR$(80): KEY(18) ON 'cursor down
 
 DEF SEG = 0
 DO
-numL = PEEK(1047) AND 32 '32 if on
-capL = PEEK(1047) AND 64 '64 on
-IF numL OR capL THEN
-COLOR 12: LOCATE 13, 50: PRINT "Turn Num or Cap Lock OFF!"
-ELSE : COLOR 10: LOCATE 13, 50: PRINT "Number and Cap Lock OK!  "
-SLEEP                  ' KEY or TIMER event breaks a sleep
-END IF
+ numL = PEEK(1047) AND 32 '32 if on
+ capL = PEEK(1047) AND 64 '64 on
+ IF numL OR capL THEN
+   COLOR 12: LOCATE 13, 50: PRINT "Turn Num or Cap Lock OFF!"
+ ELSE : COLOR 10: LOCATE 13, 50: PRINT "Number and Cap Lock OK!  "
+   SLEEP                  ' KEY or TIMER event breaks a sleep
+ END IF
 LOOP UNTIL INKEY$ = CHR$(27)
 DEF SEG
 
@@ -308,8 +308,8 @@ RETURN
 <blockquote>
 
 
-* [KEY](KEY.md) [LIST](LIST.md) , [ON](ON.md) KEY(n)
-* KEY(n) , [INKEY&dollar;](INKEY&dollar;.md)
-* [_KEYHIT](KEYHIT.md) , [_KEYDOWN](KEYDOWN.md)
+* KEY LIST , [ON](ON.md) [KEY(n)](KEY(n).md)
+* [KEY(n)](KEY(n).md) , [INKEY\$](INKEY\$.md)
+* _KEYHIT , _KEYDOWN
 * Keyboard scancodes
 </blockquote>

@@ -126,7 +126,7 @@ br ~ h5 {
 <blockquote>
 
 
-* [_MOUSESHOW](MOUSESHOW.md)
-* [_MOUSEINPUT](MOUSEINPUT.md)
-* [_MOUSEMOVE](MOUSEMOVE.md)
+* _MOUSESHOW
+* _MOUSEINPUT
+* _MOUSEMOVE
 </blockquote>

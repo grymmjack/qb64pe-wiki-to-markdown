@@ -119,8 +119,8 @@ br ~ h5 {
 <blockquote>
 
 
-* numericalVariable is the variable to read the state of a bit of and can be of the following types: [_BYTE](BYTE.md) , [INTEGER](INTEGER.md) , [LONG](LONG.md) , or [_INTEGER64](INTEGER64.md) .
-* Integer values can be signed or [_UNSIGNED](UNSIGNED.md) .
+* numericalVariable is the variable to read the state of a bit of and can be of the following types: _BYTE , [INTEGER](INTEGER.md) , [LONG](LONG.md) , or _INTEGER64 .
+* Integer values can be signed or _UNSIGNED .
 * numericalValue the number of the bit to be read.
 </blockquote>
 
@@ -131,7 +131,7 @@ br ~ h5 {
 
 * Used to check the current state of a bit in an integer value.
 * Returns -1 if the bit is set(1), otherwise returns 0 if the bit is not set(0)
-* Bits start at 0 (so a [_BYTE](BYTE.md) has bits 0 to 7, [INTEGER](INTEGER.md) 0 to 15, and so on)
+* Bits start at 0 (so a _BYTE has bits 0 to 7, [INTEGER](INTEGER.md) 0 to 15, and so on)
 
 </blockquote>
 
@@ -188,7 +188,7 @@ B& in binary is: 00000000110000000001101000000111
 <blockquote>
 
 
-* [_SHL](SHL.md) , [_SHR](SHR.md) , [INTEGER](INTEGER.md) , [LONG](LONG.md)
-* [_SETBIT](SETBIT.md) , [_BYTE](BYTE.md) , [_INTEGER64](INTEGER64.md)
-* [_RESETBIT](RESETBIT.md) , [_TOGGLEBIT](TOGGLEBIT.md)
+* _SHL , _SHR , [INTEGER](INTEGER.md) , [LONG](LONG.md)
+* _SETBIT , _BYTE , _INTEGER64
+* _RESETBIT , _TOGGLEBIT
 </blockquote>

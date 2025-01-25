@@ -6,13 +6,13 @@
    SINGLE - QB64 Phoenix Edition Wiki
   </title>
   <script>
-   document.documentElement.className="client-js";RLCONF={"wgBreakFrames":false,"wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgRequestId":"Zp2HCRpdvGGeVdK1DlhvFQAAAjY","wgCSPNonce":false,"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"SINGLE","wgTitle":"SINGLE","wgCurRevisionId":2349,"wgRevisionId":2349,"wgArticleId":277,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":[],"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgRelevantPageName":"SINGLE","wgRelevantArticleId":277,"wgIsProbablyEditable":false,"wgRelevantPageIsProbablyEditable":false,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgVector2022PreviewPages":[]};RLSTATE={"site.styles":"ready","user.styles":"ready","user":"ready",
-"user.options":"loading","skins.vector.styles.legacy":"ready"};RLPAGEMODULES=["site","mediawiki.page.ready","mediawiki.toc","skins.vector.legacy.js"];
+   document.documentElement.className="client-js";RLCONF={"wgBreakFrames":false,"wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgRequestId":"Z5RihAWKRwiE9zBBFH0gngAAAJU","wgCSPNonce":false,"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"SINGLE","wgTitle":"SINGLE","wgCurRevisionId":9537,"wgRevisionId":9537,"wgArticleId":277,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":[],"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgRelevantPageName":"SINGLE","wgRelevantArticleId":277,"wgIsProbablyEditable":false,"wgRelevantPageIsProbablyEditable":false,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgVector2022PreviewPages":[]};RLSTATE={"site.styles":"ready","user.styles":"ready","user":"ready",
+"user.options":"loading","mediawiki.page.gallery.styles":"ready","skins.vector.styles.legacy":"ready"};RLPAGEMODULES=["site","mediawiki.page.ready","mediawiki.toc","skins.vector.legacy.js"];
   </script>
   <script>
    (RLQ=window.RLQ||[]).push(function(){mw.loader.implement("user.options@12s5i",function($,jQuery,require,module){mw.user.tokens.set({"patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});});});
   </script>
-  <link href="/qb64wiki/load.php?lang=en&amp;modules=skins.vector.styles.legacy&amp;only=styles&amp;skin=vector" rel="stylesheet"/>
+  <link href="/qb64wiki/load.php?lang=en&amp;modules=mediawiki.page.gallery.styles%7Cskins.vector.styles.legacy&amp;only=styles&amp;skin=vector" rel="stylesheet"/>
   <script async="" src="/qb64wiki/load.php?lang=en&amp;modules=startup&amp;only=scripts&amp;raw=1&amp;skin=vector">
   </script>
   <meta content="" name="ResourceLoaderDynamicStyles"/>
@@ -64,7 +64,11 @@
        <b>
         SINGLE
        </b>
-       variables are 4 byte floating decimal point numerical values up to seven digits in length.
+       variables are 32-bits floating point numerical values up to seven digits precision (
+       <a class="extiw" href="https://en.wikipedia.org/wiki/Single-precision_floating-point_format" title="wikipedia:Single-precision floating-point format">
+        see IEEE 754 Single precision
+       </a>
+       ).
       </p>
       <p>
        <br/>
@@ -106,9 +110,19 @@
              </a>
             </li>
             <li class="toclevel-1">
-             <a href="#See_also">
+             <a href="#Availability">
               <span class="tocnumber">
                3
+              </span>
+              <span class="toctext">
+               Availability
+              </span>
+             </a>
+            </li>
+            <li class="toclevel-1">
+             <a href="#See_also">
+              <span class="tocnumber">
+               4
               </span>
               <span class="toctext">
                See also
@@ -127,18 +141,91 @@
        </span>
       </h2>
       <dl>
+       <dt>
+        Explicit declaration
+       </dt>
        <dd>
-        <dl>
-         <dd>
-          <a href="/qb64wiki/index.php/DIM" title="DIM">
-           DIM
+        <a href="/qb64wiki/index.php/DIM" title="DIM">
+         DIM
+        </a>
+        <i>
+         variable
+        </i>
+        <a href="/qb64wiki/index.php/AS" title="AS">
+         AS
+        </a>
+        <a class="mw-selflink selflink">
+         SINGLE
+        </a>
+        'AS type variant
+       </dd>
+       <dd>
+        <a href="/qb64wiki/index.php/DIM" title="DIM">
+         DIM
+        </a>
+        <i>
+         variable
+        </i>
+        ! 'type suffix variant (no suffix or
+        <b>
+         !
+        </b>
+        )
+       </dd>
+       <dt>
+        Implicit for a specific letter range
+       </dt>
+       <dd>
+        <a href="/qb64wiki/index.php/DEFSNG" title="DEFSNG">
+         DEFSNG
+        </a>
+        S-T '(legacy variant) all variables beginning with S(s) or T(t)
+       </dd>
+       <dd>
+        <a href="/qb64wiki/index.php/DEFINE" title="DEFINE">
+         _DEFINE
+        </a>
+        S-T
+        <a href="/qb64wiki/index.php/AS" title="AS">
+         AS
+        </a>
+        <a class="mw-selflink selflink">
+         SINGLE
+        </a>
+        'new variant in QB64(PE)
+       </dd>
+       <dt>
+        Implicit without declaration
+       </dt>
+       <dd>
+        <i>
+         variable
+        </i>
+        ! 'simply always use the type suffix
+       </dd>
+      </dl>
+      <dl>
+       <dt>
+        <span style="color:red;">
+         <b>
+          Attention
+         </b>
+        </span>
+       </dt>
+       <dd>
+        <ul>
+         <li>
+          This is also the default
+          <a href="/qb64wiki/index.php/Variable_Types" title="Variable Types">
+           variable type
           </a>
-          <i>
-           variable
-          </i>
-          AS SINGLE
-         </dd>
-        </dl>
+          in QuickBASIC/QBasic and QB64(PE). All variables not explicitly declared, defined in a letter range or designated with a type suffix automatically become a
+          <b>
+           SINGLE
+          </b>
+          number.
+         </li>
+        </ul>
        </dd>
       </dl>
       <p>
@@ -154,21 +241,22 @@
         Values can range up to 7 digits. Decimal point accuracy depends on whole value places taken.
        </li>
        <li>
-        Single is the
-        <b>
-         default variable type
-        </b>
-        assigned to undefined variables without a type suffix.
-       </li>
-       <li>
-        Variable suffix type designation is
+        The suffix
         <b>
          !
         </b>
-        . Suffix can also be placed after a literal numerical value by user or automatically by the IDE.
+        can also be placed after a literal numerical value to designate the value as
+        <b>
+         SINGLE
+        </b>
+        .
        </li>
        <li>
-        Values returned may be expressed using exponential or
+        Values may be given as real number (
+        <i>
+         123.456
+        </i>
+        ) or
         <a href="/qb64wiki/index.php/Scientific_notation" title="Scientific notation">
          scientific notation
         </a>
@@ -176,38 +264,181 @@
         <b>
          E
         </b>
-        for SINGLE or
-        <b>
-         D
-        </b>
-        for DOUBLE precision.
+        as exponent marker (
+        <i>
+         1.23456E+2
+        </i>
+        ).
+       </li>
+       <li>
+        <a href="/qb64wiki/index.php/PRINT" title="PRINT">
+         PRINT
+        </a>
+        usually takes the shorter of both notations (depending on the value) to output the numbers. In alternative you may use
+        <a href="/qb64wiki/index.php/PRINT_USING" title="PRINT USING">
+         PRINT USING
+        </a>
+        to designate your desired output format.
        </li>
        <li>
         Floating decimal point numerical values cannot be
         <a href="/qb64wiki/index.php/UNSIGNED" title="UNSIGNED">
          _UNSIGNED
         </a>
-        !
+        .
        </li>
        <li>
-        Values can be converted to 4 byte
-        <a href="/qb64wiki/index.php/ASCII" title="ASCII">
-         ASCII
+        Values can be converted to 4-bytes
+        <a href="/qb64wiki/index.php/STRING" title="STRING">
+         STRING
         </a>
-        string values using
+        values using
         <a href="/qb64wiki/index.php/MKS$" title="MKS$">
          _MKS$
         </a>
-        and back with
+        and back to numbers with
         <a href="/qb64wiki/index.php/CVS" title="CVS">
          _CVS
         </a>
         .
        </li>
-       <li>
-        <b>
-         Warning: QBasic keyword names cannot be used as numerical variable names with or without the type suffix!
-        </b>
+      </ul>
+      <dl>
+       <dt>
+        Some useful
+        <a href="/qb64wiki/index.php/Constants" title="Constants">
+         constants
+        </a>
+        are available since QB64-PE v4.0.0
+       </dt>
+       <dd>
+        <ul>
+         <li>
+          _SIZE_OF_SINGLE = 4 'in bytes
+         </li>
+         <li>
+          _SINGLE_MIN! = -3.402823E+38 'smallest normal number
+         </li>
+         <li>
+          _SINGLE_MAX! = 3.402823E+38 'largest normal number
+         </li>
+         <li>
+          _SINGLE_MIN_FRAC! = 1.175494E-38 'smallest normal number closest to zero
+         </li>
+        </ul>
+       </dd>
+      </dl>
+      <p>
+       <br/>
+      </p>
+      <h2>
+       <span class="mw-headline" id="Availability">
+        Availability
+       </span>
+      </h2>
+      <ul class="gallery mw-gallery-nolines">
+       <li class="gallerybox" style="width: 53px">
+        <div style="width: 53px">
+         <div class="thumb" style="width: 48px;">
+          <div style="margin:0px auto;">
+           <a class="image" href="/qb64wiki/index.php/File:Qb64.png" title="all">
+            <img alt="all" decoding="async" height="48" src="/qb64wiki/images/9/91/Qb64.png" width="48"/>
+           </a>
+          </div>
+         </div>
+         <div class="gallerytext">
+          <p>
+           <b>
+            all
+           </b>
+          </p>
+         </div>
+        </div>
+       </li>
+       <li class="gallerybox" style="width: 53px">
+        <div style="width: 53px">
+         <div class="thumb" style="width: 48px;">
+          <div style="margin:0px auto;">
+           <a class="image" href="/qb64wiki/index.php/File:Qbpe.png" title="all">
+            <img alt="all" decoding="async" height="48" src="/qb64wiki/images/0/07/Qbpe.png" width="48"/>
+           </a>
+          </div>
+         </div>
+         <div class="gallerytext">
+          <p>
+           <b>
+            all
+           </b>
+          </p>
+         </div>
+        </div>
+       </li>
+       <li class="gallerybox" style="width: 53px">
+        <div style="width: 53px">
+         <div class="thumb" style="width: 48px;">
+          <div style="margin:0px auto;">
+           <a class="image" href="/qb64wiki/index.php/File:Apix.png">
+            <img alt="Apix.png" decoding="async" height="48" src="/qb64wiki/images/5/5f/Apix.png" width="48"/>
+           </a>
+          </div>
+         </div>
+         <div class="gallerytext">
+         </div>
+        </div>
+       </li>
+       <li class="gallerybox" style="width: 53px">
+        <div style="width: 53px">
+         <div class="thumb" style="width: 48px;">
+          <div style="margin:0px auto;">
+           <a class="image" href="/qb64wiki/index.php/File:Win.png" title="yes">
+            <img alt="yes" decoding="async" height="48" src="/qb64wiki/images/2/29/Win.png" width="48"/>
+           </a>
+          </div>
+         </div>
+         <div class="gallerytext">
+          <p>
+           <b>
+            yes
+           </b>
+          </p>
+         </div>
+        </div>
+       </li>
+       <li class="gallerybox" style="width: 53px">
+        <div style="width: 53px">
+         <div class="thumb" style="width: 48px;">
+          <div style="margin:0px auto;">
+           <a class="image" href="/qb64wiki/index.php/File:Lnx.png" title="yes">
+            <img alt="yes" decoding="async" height="48" src="/qb64wiki/images/7/7a/Lnx.png" width="48"/>
+           </a>
+          </div>
+         </div>
+         <div class="gallerytext">
+          <p>
+           <b>
+            yes
+           </b>
+          </p>
+         </div>
+        </div>
+       </li>
+       <li class="gallerybox" style="width: 53px">
+        <div style="width: 53px">
+         <div class="thumb" style="width: 48px;">
+          <div style="margin:0px auto;">
+           <a class="image" href="/qb64wiki/index.php/File:Osx.png" title="yes">
+            <img alt="yes" decoding="async" height="48" src="/qb64wiki/images/2/22/Osx.png" width="48"/>
+           </a>
+          </div>
+         </div>
+         <div class="gallerytext">
+          <p>
+           <b>
+            yes
+           </b>
+          </p>
+         </div>
+        </div>
        </li>
       </ul>
       <p>
@@ -220,12 +451,25 @@
       </h2>
       <ul>
        <li>
+        <a href="/qb64wiki/index.php/DOUBLE" title="DOUBLE">
+         DOUBLE
+        </a>
+        ,
+        <a href="/qb64wiki/index.php/FLOAT" title="FLOAT">
+         _FLOAT
+        </a>
+       </li>
+       <li>
         <a href="/qb64wiki/index.php/DIM" title="DIM">
          DIM
         </a>
         ,
         <a href="/qb64wiki/index.php/DEFSNG" title="DEFSNG">
          DEFSNG
+        </a>
+        ,
+        <a href="/qb64wiki/index.php/DEFINE" title="DEFINE">
+         _DEFINE
         </a>
        </li>
        <li>
@@ -236,19 +480,22 @@
         <a href="/qb64wiki/index.php/CVS" title="CVS">
          CVS
         </a>
-       </li>
-       <li>
-        <a href="/qb64wiki/index.php/DOUBLE" title="DOUBLE">
-         DOUBLE
+        ,
+        <a href="/qb64wiki/index.php/MK$" title="MK$">
+         _MK$
         </a>
         ,
-        <a href="/qb64wiki/index.php/FLOAT" title="FLOAT">
-         _FLOAT
+        <a href="/qb64wiki/index.php/CV" title="CV">
+         _CV
         </a>
        </li>
        <li>
         <a href="/qb64wiki/index.php/LEN" title="LEN">
          LEN
+        </a>
+        ,
+        <a href="/qb64wiki/index.php/Constants" title="Constants">
+         Constants
         </a>
        </li>
        <li>
@@ -291,35 +538,38 @@
       </center>
       <!-- 
 NewPP limit report
-Cached time: 20240721220913
+Cached time: 20250124133819
 Cache expiry: 86400
 Reduced expiry: false
 Complications: [show‐toc]
-CPU time usage: 0.022 seconds
-Real time usage: 0.028 seconds
-Preprocessor visited node count: 12/1000000
-Post‐expand include size: 545/2097152 bytes
-Template argument size: 0/2097152 bytes
+CPU time usage: 0.032 seconds
+Real time usage: 0.042 seconds
+Preprocessor visited node count: 42/1000000
+Post‐expand include size: 669/2097152 bytes
+Template argument size: 42/2097152 bytes
 Highest expansion depth: 3/100
 Expensive parser function count: 0/100
 Unstrip recursion depth: 0/20
-Unstrip post‐expand size: 0/5000000 bytes
+Unstrip post‐expand size: 2356/5000000 bytes
 -->
       <!--
 Transclusion expansion time report (%,ms,calls,template)
-100.00%   10.518      1 -total
- 27.11%    2.852      1 Template:PageSyntax
- 23.74%    2.497      1 Template:PageDescription
- 22.59%    2.376      1 Template:PageNavigation
- 22.18%    2.333      1 Template:PageSeeAlso
+100.00%   29.361      1 -total
+  8.17%    2.399      1 Template:PageSyntax
+  7.12%    2.092      1 Template:PageNavigation
+  6.56%    1.927      1 Template:PageSeeAlso
+  6.48%    1.904      3 Template:Parameter
+  6.17%    1.811      1 Template:Text
+  5.89%    1.729      1 Template:PageAvailability
+  5.74%    1.686      1 Template:PageDescription
 -->
-      <!-- Saved in parser cache with key qb64pnix_mw19894-mwmb_:pcache:idhash:277-0!canonical and timestamp 20240721220913 and revision id 2349.
+      <!-- Saved in parser cache with key qb64pnix_mw19894-mwmb_:pcache:idhash:277-0!canonical and timestamp 20250124133819 and revision id 9537.
  -->
      </div>
      <div class="printfooter" data-nosnippet="">
       Retrieved from "
-      <a dir="ltr" href="https://qb64phoenix.com/qb64wiki/index.php?title=SINGLE&amp;oldid=2349">
-       https://qb64phoenix.com/qb64wiki/index.php?title=SINGLE&amp;oldid=2349
+      <a dir="ltr" href="https://qb64phoenix.com/qb64wiki/index.php?title=SINGLE&amp;oldid=9537">
+       https://qb64phoenix.com/qb64wiki/index.php?title=SINGLE&amp;oldid=9537
       </a>
       "
      </div>
@@ -536,7 +786,7 @@ You can view its source [e]">
         </a>
        </li>
        <li class="mw-list-item" id="t-permalink">
-        <a href="/qb64wiki/index.php?title=SINGLE&amp;oldid=2349" title="Permanent link to this revision of this page">
+        <a href="/qb64wiki/index.php?title=SINGLE&amp;oldid=9537" title="Permanent link to this revision of this page">
          <span>
           Permanent link
          </span>
@@ -557,7 +807,7 @@ You can view its source [e]">
   <footer class="mw-footer" id="footer" role="contentinfo">
    <ul id="footer-info">
     <li id="footer-info-lastmod">
-     This page was last edited on 1 June 2022, at 21:55.
+     This page was last edited on 25 December 2024, at 14:33.
     </li>
    </ul>
    <ul id="footer-places">
@@ -586,7 +836,7 @@ You can view its source [e]">
    </ul>
   </footer>
   <script>
-   (RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgPageParseReport":{"limitreport":{"cputime":"0.022","walltime":"0.028","ppvisitednodes":{"value":12,"limit":1000000},"postexpandincludesize":{"value":545,"limit":2097152},"templateargumentsize":{"value":0,"limit":2097152},"expansiondepth":{"value":3,"limit":100},"expensivefunctioncount":{"value":0,"limit":100},"unstrip-depth":{"value":0,"limit":20},"unstrip-size":{"value":0,"limit":5000000},"timingprofile":["100.00%   10.518      1 -total"," 27.11%    2.852      1 Template:PageSyntax"," 23.74%    2.497      1 Template:PageDescription"," 22.59%    2.376      1 Template:PageNavigation"," 22.18%    2.333      1 Template:PageSeeAlso"]},"cachereport":{"timestamp":"20240721220913","ttl":86400,"transientcontent":false}}});mw.config.set({"wgBackendResponseTime":196});});
+   (RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgPageParseReport":{"limitreport":{"cputime":"0.032","walltime":"0.042","ppvisitednodes":{"value":42,"limit":1000000},"postexpandincludesize":{"value":669,"limit":2097152},"templateargumentsize":{"value":42,"limit":2097152},"expansiondepth":{"value":3,"limit":100},"expensivefunctioncount":{"value":0,"limit":100},"unstrip-depth":{"value":0,"limit":20},"unstrip-size":{"value":2356,"limit":5000000},"timingprofile":["100.00%   29.361      1 -total","  8.17%    2.399      1 Template:PageSyntax","  7.12%    2.092      1 Template:PageNavigation","  6.56%    1.927      1 Template:PageSeeAlso","  6.48%    1.904      3 Template:Parameter","  6.17%    1.811      1 Template:Text","  5.89%    1.729      1 Template:PageAvailability","  5.74%    1.686      1 Template:PageDescription"]},"cachereport":{"timestamp":"20250124133819","ttl":86400,"transientcontent":false}}});mw.config.set({"wgBackendResponseTime":86});});
   </script>
  </body>
 </html>

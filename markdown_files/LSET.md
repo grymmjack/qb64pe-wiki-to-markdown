@@ -188,6 +188,6 @@ you.head: ACHES
 <blockquote>
 
 
-* [RSET](RSET.md) , [RTRIM&dollar;](RTRIM&dollar;.md)
+* [RSET](RSET.md) , [RTRIM\$](RTRIM\$.md)
 * [FIELD](FIELD.md) , [TYPE](TYPE.md)
 </blockquote>

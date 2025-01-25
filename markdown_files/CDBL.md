@@ -161,5 +161,5 @@ PRINT A; CDBL(A)
 
 
 * [CINT](CINT.md) , [CLNG](CLNG.md)
-* [CSNG](CSNG.md) , [_ROUND](ROUND.md)
+* [CSNG](CSNG.md) , _ROUND
 </blockquote>

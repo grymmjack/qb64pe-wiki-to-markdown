@@ -119,17 +119,17 @@ br ~ h5 {
 <blockquote>
 
 
-* The value returned is either the closest color attribute number or a 32-bit [_UNSIGNED](UNSIGNED.md) [LONG](LONG.md) color value.
-* Return variable types must be [LONG](LONG.md) or resulting color may lose the [_BLUE](BLUE.md) value.
+* The value returned is either the closest color attribute number or a 32-bit _UNSIGNED [LONG](LONG.md) color value.
+* Return variable types must be [LONG](LONG.md) or resulting color may lose the _BLUE value.
 * red& specifies the red component intensity from 0 to 255.
 * green& specifies the green component intensity from 0 to 255.
 * blue& specifies the blue component intensity from 0 to 255.
 * Intensity values outside the valid range are clipped.
-* Returns [LONG](LONG.md) 32-bit hexadecimal values from &HFF 00 00 00 to &HFF FF FF FF , always with full [_ALPHA](ALPHA.md) .
-* When [LONG](LONG.md) values are [PUT](PUT.md) to file, the ARGB values become BGRA. Use [LEFT&dollar;](LEFT&dollar;.md) ( [MKL&dollar;](MKL&dollar;.md) ( colorIndex~& ), 3) to place 3 colors.
+* Returns [LONG](LONG.md) 32-bit hexadecimal values from &HFF 00 00 00 to &HFF FF FF FF , always with full _ALPHA .
+* When [LONG](LONG.md) values are [PUT](PUT.md) to file, the ARGB values become BGRA. Use [LEFT\$](LEFT\$.md) ( [MKL\$](MKL\$.md) ( colorIndex~& ), 3) to place 3 colors.
 * If the imageHandle& is omitted the image is assumed to be the current destination or [SCREEN](SCREEN.md) page.
-* Colors returned are always opaque as the transparency value is always 255. Use [_ALPHA](ALPHA.md) or [_CLEARCOLOR](CLEARCOLOR.md) to change it.
-* NOTE: Default 32-bit backgrounds are clear black or [_RGBA](RGBA.md) (0, 0, 0, 0). Use [CLS](CLS.md) to make the black opaque.
+* Colors returned are always opaque as the transparency value is always 255. Use _ALPHA or _CLEARCOLOR to change it.
+* NOTE: Default 32-bit backgrounds are clear black or _RGBA (0, 0, 0, 0). Use [CLS](CLS.md) to make the black opaque.
 
 </blockquote>
 
@@ -144,13 +144,13 @@ br ~ h5 {
 SCREEN 12
 DIM hex32$(15)
 FOR attribute = 1 TO 15
-OUT &H3C7, attribute      'set color attribute to read
-red = INP(&H3C9) * 4      'multiply by 4 to convert intensity to 0 to 255 RGB values
-grn = INP(&H3C9) * 4
-blu = INP(&H3C9) * 4
-hex32$(attribute) = "&H" + HEX$(_RGB32(red, grn, blu))   'always returns the 32 bit value
-COLOR attribute
-PRINT "COLOR" + STR$(_RGB(red, grn, blu)) + " = " + hex32$(attribute)  'closest attribute
+ OUT &H3C7, attribute      'set color attribute to read
+ red = INP(&H3C9) * 4      'multiply by 4 to convert intensity to 0 to 255 RGB values
+ grn = INP(&H3C9) * 4
+ blu = INP(&H3C9) * 4
+ hex32$(attribute) = "&H" + HEX$(_RGB32(red, grn, blu))   'always returns the 32 bit value
+ COLOR attribute
+ PRINT "COLOR" + STR$(_RGB(red, grn, blu)) + " = " + hex32$(attribute)  'closest attribute
 NEXT
 ```
   
@@ -184,10 +184,10 @@ COLOR 15 = &HFFFCFCFC
 <blockquote>
 
 
-* [_RGBA](RGBA.md) , [_RGB32](RGB32.md) , [_RGBA32](RGBA32.md)
-* [_RED](RED.md) , [_GREEN](GREEN.md) , [_BLUE](BLUE.md)
-* [_LOADIMAGE](LOADIMAGE.md) , [_NEWIMAGE](NEWIMAGE.md)
-* [HEX&dollar;](HEX&dollar;.md) 32 Bit Values , [POINT](POINT.md)
+* _RGBA , _RGB32 , _RGBA32
+* _RED , _GREEN , _BLUE
+* _LOADIMAGE , _NEWIMAGE
+* [HEX\$](HEX\$.md) 32 Bit Values , [POINT](POINT.md)
 * SaveImage [SUB](SUB.md)
 * Hexadecimal Color Values
 </blockquote>

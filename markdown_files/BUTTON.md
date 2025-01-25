@@ -120,9 +120,9 @@ br ~ h5 {
 
 
 * Values returned are -1 for a press and 0 when a button is released or not pressed.
-* The button_number% must be a number which does not exceed the number of buttons found by the [_LASTBUTTON](LASTBUTTON.md) function.
-* The number of [_DEVICES](DEVICES.md) must be read before using [_DEVICE&dollar;](DEVICE&dollar;.md) , [_DEVICEINPUT](DEVICEINPUT.md) or [_LASTBUTTON](LASTBUTTON.md) .
-* Note: The number 2 button is the center button in this device configuration. Center is also designated as [_MOUSEBUTTON](MOUSEBUTTON.md) (3).
+* The button_number% must be a number which does not exceed the number of buttons found by the _LASTBUTTON function.
+* The number of _DEVICES must be read before using _DEVICE$ , _DEVICEINPUT or _LASTBUTTON .
+* Note: The number 2 button is the center button in this device configuration. Center is also designated as _MOUSEBUTTON (3).
 
 </blockquote>
 
@@ -135,24 +135,24 @@ br ~ h5 {
 ##### Example: Reading multiple controller device buttons, axis and wheels.
 ```vb
 FOR i = 1 TO _DEVICES
-PRINT STR$(i) + ") " + _DEVICE$(i) + " Buttons:"; _LASTBUTTON(i); ",Axis:"; _LASTAXIS(i); ",Wheel:"; _LASTWHEEL(i)
+   PRINT STR$(i) + ") " + _DEVICE$(i) + " Buttons:"; _LASTBUTTON(i); ",Axis:"; _LASTAXIS(i); ",Wheel:"; _LASTWHEEL(i)
 NEXT
 
 DO
-d& = _DEVICEINPUT
-IF d& THEN '             the device number cannot be zero!
-PRINT "Found"; d&;
-FOR b = 1 TO _LASTBUTTON(d&)
-PRINT _BUTTONCHANGE(b); _BUTTON(b);
-NEXT
-FOR a = 1 TO _LASTAXIS(d&)
-PRINT _AXIS(a);
-NEXT
-FOR w = 1 TO _LASTWHEEL(d&)
-PRINT _WHEEL(w);
-NEXT
-PRINT
-END IF
+   d& = _DEVICEINPUT
+   IF d& THEN '             the device number cannot be zero!
+       PRINT "Found"; d&;
+       FOR b = 1 TO _LASTBUTTON(d&)
+           PRINT _BUTTONCHANGE(b); _BUTTON(b);
+       NEXT
+       FOR a = 1 TO _LASTAXIS(d&)
+           PRINT _AXIS(a);
+       NEXT
+       FOR w = 1 TO _LASTWHEEL(d&)
+           PRINT _WHEEL(w);
+       NEXT
+       PRINT
+   END IF
 LOOP UNTIL INKEY$ = CHR$(27) 'escape key exit
 
 END
@@ -168,9 +168,9 @@ END
 <blockquote>
 
 
-* [_LASTWHEEL](LASTWHEEL.md) , [_LASTBUTTON](LASTBUTTON.md) , [_LASTAXIS](LASTAXIS.md)
-* [_AXIS](AXIS.md) , [_WHEEL](WHEEL.md) , [_BUTTONCHANGE](BUTTONCHANGE.md)
-* [_DEVICE&dollar;](DEVICE&dollar;.md) , [_DEVICES](DEVICES.md)
-* [_MOUSEBUTTON](MOUSEBUTTON.md)
+* _LASTWHEEL , _LASTBUTTON , _LASTAXIS
+* _AXIS , _WHEEL , _BUTTONCHANGE
+* _DEVICE$ , _DEVICES
+* _MOUSEBUTTON
 * Controller Devices
 </blockquote>

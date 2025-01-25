@@ -119,7 +119,7 @@ br ~ h5 {
 <blockquote>
 
 
-* [_RESIZE](RESIZE.md) function must return true (-1) before the requested screen dimensions can be returned by the function.
+* _RESIZE function must return true (-1) before the requested screen dimensions can be returned by the function.
 * The program should decide if the request is allowable for proper program interaction.
 
 </blockquote>
@@ -140,21 +140,21 @@ SCREEN s&
 bee& = _LOADIMAGE("qb64_trans.png") 'any image
 
 DO
-IF _RESIZE THEN
-oldimage& = s&
-s& = _NEWIMAGE(_RESIZEWIDTH, _RESIZEHEIGHT, 32)
-SCREEN s&
-_FREEIMAGE oldimage&
-END IF
+   IF _RESIZE THEN
+       oldimage& = s&
+       s& = _NEWIMAGE(_RESIZEWIDTH, _RESIZEHEIGHT, 32)
+       SCREEN s&
+       _FREEIMAGE oldimage&
+   END IF
 
-CLS
+   CLS
 
-'Center the QB64 bee image:
-x = _WIDTH / 2 - _WIDTH(bee&) / 2
-y = _HEIGHT / 2 - _HEIGHT(bee&) / 2
-_PUTIMAGE (x, y), bee&
-_DISPLAY
-_LIMIT 30
+   'Center the QB64 bee image:
+   x = _WIDTH / 2 - _WIDTH(bee&) / 2
+   y = _HEIGHT / 2 - _HEIGHT(bee&) / 2
+   _PUTIMAGE (x, y), bee&
+   _DISPLAY
+   _LIMIT 30
 LOOP
 ```
   
@@ -168,7 +168,7 @@ LOOP
 <blockquote>
 
 
-* [&dollar;RESIZE](&dollar;RESIZE.md)
-* [_RESIZE](RESIZE.md) (function)
-* [_RESIZEHEIGHT](RESIZEHEIGHT.md)
+* [\$RESIZE](\$RESIZE.md)
+* _RESIZE (function)
+* _RESIZEHEIGHT
 </blockquote>

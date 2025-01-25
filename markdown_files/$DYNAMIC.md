@@ -121,10 +121,10 @@ br ~ h5 {
 
 * QBasic metacommands require [REM](REM.md) or apostrophe (') before them and are normally placed at the start of the main module.
 * Dynamic arrays can be resized using [REDIM](REDIM.md) . The array's type cannot be changed.
-* All data in the array will be lost when REDIMensioned except when [_PRESERVE](PRESERVE.md) is used.
-* [REDIM](REDIM.md) [_PRESERVE](PRESERVE.md) can preserve and may move the previous array data when the array boundaries change.
-* [_PRESERVE](PRESERVE.md) allows the upper and lower boundaries of an array to be changed. The number of dimensions cannot change.
-* [&dollar;DYNAMIC](&dollar;DYNAMIC.md) arrays must be REDIMensioned if [ERASE](ERASE.md) or [CLEAR](CLEAR.md) are used as the arrays are removed completely.
+* All data in the array will be lost when REDIMensioned except when _PRESERVE is used.
+* [REDIM](REDIM.md) _PRESERVE can preserve and may move the previous array data when the array boundaries change.
+* _PRESERVE allows the upper and lower boundaries of an array to be changed. The number of dimensions cannot change.
+* [\$DYNAMIC](\$DYNAMIC.md) arrays must be REDIMensioned if [ERASE](ERASE.md) or [CLEAR](CLEAR.md) are used as the arrays are removed completely.
 
 </blockquote>
 
@@ -139,12 +139,12 @@ br ~ h5 {
 REM $DYNAMIC             'create dynamic arrays only
 DIM array(10)            'create array with 11 elements
 FOR i = 0 TO 10
-array(i) = i: PRINT array(i); 'set and display element values
+ array(i) = i: PRINT array(i); 'set and display element values
 NEXT
 PRINT
 REDIM _PRESERVE array(10 TO 20)
 FOR i = 10 TO 20
-PRINT array(i);
+ PRINT array(i);
 NEXT
 END
 ```
@@ -167,9 +167,9 @@ END
 <blockquote>
 
 
-* [&dollar;STATIC](&dollar;STATIC.md) , [&dollar;INCLUDE](&dollar;INCLUDE.md)
-* [DIM](DIM.md) , [REDIM](REDIM.md) , [_DEFINE](DEFINE.md)
+* [\$STATIC](\$STATIC.md) , [\$INCLUDE](\$INCLUDE.md)
+* [DIM](DIM.md) , [REDIM](REDIM.md) , _DEFINE
 * [STATIC](STATIC.md)
 * [ERASE](ERASE.md) , [CLEAR](CLEAR.md)
-* Arrays , Metacommand
+* [Arrays](Arrays.md) , [Metacommand](Metacommand.md)
 </blockquote>

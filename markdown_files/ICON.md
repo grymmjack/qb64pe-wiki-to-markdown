@@ -119,9 +119,9 @@ br ~ h5 {
 <blockquote>
 
 
-* mainImageHandle& is the [LONG](LONG.md) handle value of the OS icon and title bar image pre-loaded with [_LOADIMAGE](LOADIMAGE.md) when used alone.
-* smallImageHandle& is the [LONG](LONG.md) handle value of a different title bar image pre-loaded with [_LOADIMAGE](LOADIMAGE.md) when used.
-* No image handle designates use of the default QB64 icon or the embedded icon set by [&dollar;EXEICON](&dollar;EXEICON.md) .
+* mainImageHandle& is the [LONG](LONG.md) handle value of the OS icon and title bar image pre-loaded with _LOADIMAGE when used alone.
+* smallImageHandle& is the [LONG](LONG.md) handle value of a different title bar image pre-loaded with _LOADIMAGE when used.
+* No image handle designates use of the default QB64 icon or the embedded icon set by [\$EXEICON](\$EXEICON.md) .
 </blockquote>
 
 #### DESCRIPTION
@@ -129,7 +129,7 @@ br ~ h5 {
 <blockquote>
 
 
-* If no image handle is passed, the default QB64 icon will be used (all versions). If the [&dollar;EXEICON](&dollar;EXEICON.md) metacommand is used, [_ICON](ICON.md) without an image handle uses the embedded icon from the binary (Windows only).
+* If no image handle is passed, the default QB64 icon will be used (all versions). If the [\$EXEICON](\$EXEICON.md) metacommand is used, _ICON without an image handle uses the embedded icon from the binary (Windows only).
 * Beginning with version 1.000 , the following is considered:
 
 </blockquote>
@@ -145,8 +145,8 @@ br ~ h5 {
 i& =_LOADIMAGE("RDSWU16.BMP", 32) '<<<<<<< use your image file name here
 
 IF i& < -1 THEN
-_ICON i&
-_FREEIMAGE i& ' release image handle after setting icon
+ _ICON i&
+ _FREEIMAGE i& ' release image handle after setting icon
 END IF
 ```
   
@@ -160,9 +160,9 @@ END IF
 <blockquote>
 
 
-* [_TITLE](TITLE.md)
-* [_LOADIMAGE](LOADIMAGE.md) , [_SAVEIMAGE](SAVEIMAGE.md)
-* [&dollar;EXEICON](&dollar;EXEICON.md)
+* _TITLE
+* _LOADIMAGE , _SAVEIMAGE
+* [\$EXEICON](\$EXEICON.md)
 * Creating Icon Bitmaps
 * Bitmaps , Icons and Cursors
 * Icon Extraction

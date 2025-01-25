@@ -145,6 +145,6 @@ PRINT n
 
 * Featured in our "Keyword of the Day" series
 * [ABS](ABS.md)
-* [_DEFINE](DEFINE.md) , [_UNSIGNED](UNSIGNED.md)
+* _DEFINE , _UNSIGNED
 * Mathematical Operations
 </blockquote>

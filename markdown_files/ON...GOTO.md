@@ -121,7 +121,7 @@ br ~ h5 {
 
 * numericalExpression represents the line or label that the program should branch to: 1 branches to the first line or label in the list, 2 branches to the second, etc.
 * The procedure must be used after the number value is determined or in a loop to monitor current user events.
-* Note: [SELECT](SELECT.md) [CASE](CASE.md) provides a much more convenient way of doing this task.
+* Note: SELECT [CASE](CASE.md) provides a much more convenient way of doing this task.
 
 </blockquote>
 
@@ -164,8 +164,8 @@ And here we are...
 <blockquote>
 
 
-* ON...GOSUB
+* [ON...GOSUB](ON...GOSUB.md)
 * [GOTO](GOTO.md)
 * [GOSUB](GOSUB.md)
-* [SELECT](SELECT.md) [CASE](CASE.md)
+* SELECT [CASE](CASE.md)
 </blockquote>

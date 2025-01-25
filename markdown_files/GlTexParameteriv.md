@@ -174,15 +174,15 @@ Table 2: Relations between the OpenGL variable types vs. C/C++ and QB64.
 │              │                │         array element)                   │
 └──────────────┴────────────────┴──────────────────────────────────────────┘
 Note: If a parameter has an asterisk (*) in front, then it's a pointer to
-the designated OpenGL variable type, rather than a value of that type.
-Those must be passed using the _OFFSET(...) notation.
+      the designated OpenGL variable type, rather than a value of that type.
+      Those must be passed using the _OFFSET(...) notation.
 
 E.g.  GLuint *anyParam is actually the offset of a _UNSIGNED LONG (~&)
-variable or array, which must be passed as _OFFSET(anyVar~&) or
-_OFFSET(anyArr~&()) respectively.
+      variable or array, which must be passed as _OFFSET(anyVar~&) or
+      _OFFSET(anyArr~&()) respectively.
 
-(1)  This type is regularly only used for pointers (with asterisk (*)) to
-any byte sized memory data, hence _BYTE or fixed length strings.
+ (1)  This type is regularly only used for pointers (with asterisk (*)) to
+      any byte sized memory data, hence _BYTE or fixed length strings.
 ```
   
 <br>
@@ -196,9 +196,9 @@ any byte sized memory data, hence _BYTE or fixed length strings.
 
 
 * [SUB](SUB.md) _GL
-* [_glBegin](glBegin.md) , [_glBindTexture](glBindTexture.md) , [_glCopyPixels](glCopyPixels.md) , [_glCopyTexImage1D](glCopyTexImage1D.md)
-* [_glCopyTexImage2D](glCopyTexImage2D.md) , [_glCopyTexSubImage2D](glCopyTexSubImage2D.md) , [_glDrawPixels](glDrawPixels.md) , [_glEnd](glEnd.md)
-* _glGetTexParameter , _glPixelStore , _glPixelTransfer , [_glPrioritizeTextures](glPrioritizeTextures.md)
-* _glTexEnv , _glTexGen , [_glTexImage1D](glTexImage1D.md) , [_glTexImage2D](glTexImage2D.md)
-* [_glTexSubImage1D](glTexSubImage1D.md) , [_glTexSubImage2D](glTexSubImage2D.md)
+* _glBegin , _glBindTexture , _glCopyPixels , _glCopyTexImage1D
+* _glCopyTexImage2D , _glCopyTexSubImage2D , _glDrawPixels , _glEnd
+* _glGetTexParameter , _glPixelStore , _glPixelTransfer , _glPrioritizeTextures
+* _glTexEnv , _glTexGen , _glTexImage1D , _glTexImage2D
+* _glTexSubImage1D , _glTexSubImage2D
 </blockquote>

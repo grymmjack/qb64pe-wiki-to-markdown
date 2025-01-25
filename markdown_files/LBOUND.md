@@ -156,6 +156,6 @@ PRINT LBOUND(myOtherArray, 2)
 <blockquote>
 
 
-* Arrays , [UBOUND](UBOUND.md)
+* [Arrays](Arrays.md) , [UBOUND](UBOUND.md)
 * [DIM](DIM.md) , [COMMON](COMMON.md) , [STATIC](STATIC.md) , [SHARED](SHARED.md)
 </blockquote>

@@ -135,7 +135,7 @@ br ~ h5 {
 PRINT "Do you want to continue? (y/n)"
 
 DO
-K$ = UCASE$(INKEY$)
+   K$ = UCASE$(INKEY$)
 LOOP UNTIL K$ = "Y" OR K$ = "N"
 ```
   
@@ -150,7 +150,7 @@ LOOP UNTIL K$ = "Y" OR K$ = "N"
 
 
 * Featured in our "Keyword of the Day" series
-* [LCASE&dollar;](LCASE&dollar;.md)
-* [INKEY&dollar;](INKEY&dollar;.md)
-* [INPUT&dollar;](INPUT&dollar;.md)
+* [LCASE\$](LCASE\$.md)
+* [INKEY\$](INKEY\$.md)
+* [INPUT\$](INPUT\$.md)
 </blockquote>

@@ -127,7 +127,7 @@ br ~ h5 {
 
 
 * [BSAVE](BSAVE.md) , [BLOAD](BLOAD.md)
-* [SADD](SADD.md) , [DEF](DEF.md) [SEG](SEG.md)
-* [VARPTR](VARPTR.md) , [VARPTR&dollar;](VARPTR&dollar;.md)
+* [SADD](SADD.md) , DEF SEG
+* [VARPTR](VARPTR.md) , [VARPTR\$](VARPTR\$.md)
 * [POKE](POKE.md) , [PEEK](PEEK.md)
 </blockquote>

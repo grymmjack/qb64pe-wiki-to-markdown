@@ -123,8 +123,8 @@ br ~ h5 {
 ##### Example:
 ```vb
 FOR i = 1 TO 10
-IF i = 5 THEN _CONTINUE
-PRINT i;
+   IF i = 5 THEN _CONTINUE
+   PRINT i;
 NEXT
 ```
   
@@ -144,8 +144,8 @@ NEXT
 <blockquote>
 
 
-* DO...LOOP
-* WHILE...WEND
-* FOR...NEXT
+* [DO...LOOP](DO...LOOP.md)
+* [WHILE...WEND](WHILE...WEND.md)
+* [FOR...NEXT](FOR...NEXT.md)
 * [GOTO](GOTO.md)
 </blockquote>

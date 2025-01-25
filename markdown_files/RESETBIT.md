@@ -119,8 +119,8 @@ br ~ h5 {
 <blockquote>
 
 
-* numericalVariable is the variable to set the bit of and can be of the following types: [_BYTE](BYTE.md) , [INTEGER](INTEGER.md) , [LONG](LONG.md) , or [_INTEGER64](INTEGER64.md) .
-* Integer values can be signed or [_UNSIGNED](UNSIGNED.md) .
+* numericalVariable is the variable to set the bit of and can be of the following types: _BYTE , [INTEGER](INTEGER.md) , [LONG](LONG.md) , or _INTEGER64 .
+* Integer values can be signed or _UNSIGNED .
 * numericalValue the number of the bit to be set.
 </blockquote>
 
@@ -131,7 +131,7 @@ br ~ h5 {
 
 * Can be used to manually manipulate individual bits of an integer value by setting them to 0 (OFF state).
 * Resetting a bit that is already set to 0 will have no effect.
-* Bits start at 0 (so a [_BYTE](BYTE.md) has bits 0 to 7, [INTEGER](INTEGER.md) 0 to 15, and so on)
+* Bits start at 0 (so a _BYTE has bits 0 to 7, [INTEGER](INTEGER.md) 0 to 15, and so on)
 
 </blockquote>
 
@@ -169,7 +169,7 @@ PRINT A~%%
 <blockquote>
 
 
-* [_SHL](SHL.md) , [_SHR](SHR.md) , [INTEGER](INTEGER.md) , [LONG](LONG.md)
-* [_SETBIT](SETBIT.md) , [_BYTE](BYTE.md) , [_INTEGER64](INTEGER64.md)
-* [_READBIT](READBIT.md) , [_TOGGLEBIT](TOGGLEBIT.md)
+* _SHL , _SHR , [INTEGER](INTEGER.md) , [LONG](LONG.md)
+* _SETBIT , _BYTE , _INTEGER64
+* _READBIT , _TOGGLEBIT
 </blockquote>

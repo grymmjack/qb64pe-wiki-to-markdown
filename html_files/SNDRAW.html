@@ -6,13 +6,13 @@
    _SNDRAW - QB64 Phoenix Edition Wiki
   </title>
   <script>
-   document.documentElement.className="client-js";RLCONF={"wgBreakFrames":false,"wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgRequestId":"Zp2HFSSKw_M1BQgKFBbxUQAAAu4","wgCSPNonce":false,"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"SNDRAW","wgTitle":"SNDRAW","wgCurRevisionId":8786,"wgRevisionId":8786,"wgArticleId":345,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":[],"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgRelevantPageName":"SNDRAW","wgRelevantArticleId":345,"wgIsProbablyEditable":false,"wgRelevantPageIsProbablyEditable":false,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgVector2022PreviewPages":[]};RLSTATE={"site.styles":"ready","user.styles":"ready","user":"ready",
-"user.options":"loading","skins.vector.styles.legacy":"ready"};RLPAGEMODULES=["site","mediawiki.page.ready","mediawiki.toc","skins.vector.legacy.js"];
+   document.documentElement.className="client-js";RLCONF={"wgBreakFrames":false,"wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgRequestId":"Z5RiiwWKRwiE9zBBFH0hsgAAAOw","wgCSPNonce":false,"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"SNDRAW","wgTitle":"SNDRAW","wgCurRevisionId":9531,"wgRevisionId":9531,"wgArticleId":345,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":[],"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgRelevantPageName":"SNDRAW","wgRelevantArticleId":345,"wgIsProbablyEditable":false,"wgRelevantPageIsProbablyEditable":false,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgVector2022PreviewPages":[]};RLSTATE={"site.styles":"ready","user.styles":"ready","user":"ready",
+"user.options":"loading","mediawiki.page.gallery.styles":"ready","skins.vector.styles.legacy":"ready"};RLPAGEMODULES=["site","mediawiki.page.ready","mediawiki.toc","skins.vector.legacy.js"];
   </script>
   <script>
    (RLQ=window.RLQ||[]).push(function(){mw.loader.implement("user.options@12s5i",function($,jQuery,require,module){mw.user.tokens.set({"patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});});});
   </script>
-  <link href="/qb64wiki/load.php?lang=en&amp;modules=skins.vector.styles.legacy&amp;only=styles&amp;skin=vector" rel="stylesheet"/>
+  <link href="/qb64wiki/load.php?lang=en&amp;modules=mediawiki.page.gallery.styles%7Cskins.vector.styles.legacy&amp;only=styles&amp;skin=vector" rel="stylesheet"/>
   <script async="" src="/qb64wiki/load.php?lang=en&amp;modules=startup&amp;only=scripts&amp;raw=1&amp;skin=vector">
   </script>
   <meta content="" name="ResourceLoaderDynamicStyles"/>
@@ -60,9 +60,9 @@
      <div class="mw-parser-output">
       <p>
        The
-       <a class="mw-selflink selflink">
+       <b>
         _SNDRAW
-       </a>
+       </b>
        statement plays sound wave sample frequencies created by a program.
       </p>
       <p>
@@ -115,9 +115,19 @@
              </a>
             </li>
             <li class="toclevel-1">
-             <a href="#Examples">
+             <a href="#Availability">
               <span class="tocnumber">
                4
+              </span>
+              <span class="toctext">
+               Availability
+              </span>
+             </a>
+            </li>
+            <li class="toclevel-1">
+             <a href="#Examples">
+              <span class="tocnumber">
+               5
               </span>
               <span class="toctext">
                Examples
@@ -127,7 +137,7 @@
             <li class="toclevel-1">
              <a href="#See_also">
               <span class="tocnumber">
-               5
+               6
               </span>
               <span class="toctext">
                See also
@@ -232,9 +242,6 @@
         value is used, the sound will come out of both speakers.
        </li>
        <li>
-        Using _SNDRAW will pause any currently playing music.
-       </li>
-       <li>
         _SNDRAW is designed for continuous play. It will not produce any sound until a significant number of samples have been queued. No sound is played if only a few samples are queued.
        </li>
        <li>
@@ -242,7 +249,7 @@
         <a href="/qb64wiki/index.php/SNDRAWLEN" title="SNDRAWLEN">
          _SNDRAWLEN
         </a>
-        is comfortably above 0 (until you've actually finished playing sound). If you are getting occasional unintended random clicks, this generally means that
+        is comfortably above 0 (until you've finished playing sound). If you get occasional unintended random clicks, this generally means that
         <a href="/qb64wiki/index.php/SNDRAWLEN" title="SNDRAWLEN">
          _SNDRAWLEN
         </a>
@@ -283,31 +290,146 @@
        <br/>
       </p>
       <h2>
+       <span class="mw-headline" id="Availability">
+        Availability
+       </span>
+      </h2>
+      <ul class="gallery mw-gallery-nolines">
+       <li class="gallerybox" style="width: 53px">
+        <div style="width: 53px">
+         <div class="thumb" style="width: 48px;">
+          <div style="margin:0px auto;">
+           <a class="image" href="/qb64wiki/index.php/File:Qb64.png" title="v0.927">
+            <img alt="v0.927" decoding="async" height="48" src="/qb64wiki/images/9/91/Qb64.png" width="48"/>
+           </a>
+          </div>
+         </div>
+         <div class="gallerytext">
+          <p>
+           <b>
+            v0.927
+           </b>
+          </p>
+         </div>
+        </div>
+       </li>
+       <li class="gallerybox" style="width: 53px">
+        <div style="width: 53px">
+         <div class="thumb" style="width: 48px;">
+          <div style="margin:0px auto;">
+           <a class="image" href="/qb64wiki/index.php/File:Qbpe.png" title="all">
+            <img alt="all" decoding="async" height="48" src="/qb64wiki/images/0/07/Qbpe.png" width="48"/>
+           </a>
+          </div>
+         </div>
+         <div class="gallerytext">
+          <p>
+           <b>
+            all
+           </b>
+          </p>
+         </div>
+        </div>
+       </li>
+       <li class="gallerybox" style="width: 53px">
+        <div style="width: 53px">
+         <div class="thumb" style="width: 48px;">
+          <div style="margin:0px auto;">
+           <a class="image" href="/qb64wiki/index.php/File:Apix.png">
+            <img alt="Apix.png" decoding="async" height="48" src="/qb64wiki/images/5/5f/Apix.png" width="48"/>
+           </a>
+          </div>
+         </div>
+         <div class="gallerytext">
+         </div>
+        </div>
+       </li>
+       <li class="gallerybox" style="width: 53px">
+        <div style="width: 53px">
+         <div class="thumb" style="width: 48px;">
+          <div style="margin:0px auto;">
+           <a class="image" href="/qb64wiki/index.php/File:Win.png" title="yes">
+            <img alt="yes" decoding="async" height="48" src="/qb64wiki/images/2/29/Win.png" width="48"/>
+           </a>
+          </div>
+         </div>
+         <div class="gallerytext">
+          <p>
+           <b>
+            yes
+           </b>
+          </p>
+         </div>
+        </div>
+       </li>
+       <li class="gallerybox" style="width: 53px">
+        <div style="width: 53px">
+         <div class="thumb" style="width: 48px;">
+          <div style="margin:0px auto;">
+           <a class="image" href="/qb64wiki/index.php/File:Lnx.png" title="yes">
+            <img alt="yes" decoding="async" height="48" src="/qb64wiki/images/7/7a/Lnx.png" width="48"/>
+           </a>
+          </div>
+         </div>
+         <div class="gallerytext">
+          <p>
+           <b>
+            yes
+           </b>
+          </p>
+         </div>
+        </div>
+       </li>
+       <li class="gallerybox" style="width: 53px">
+        <div style="width: 53px">
+         <div class="thumb" style="width: 48px;">
+          <div style="margin:0px auto;">
+           <a class="image" href="/qb64wiki/index.php/File:Osx.png" title="yes">
+            <img alt="yes" decoding="async" height="48" src="/qb64wiki/images/2/22/Osx.png" width="48"/>
+           </a>
+          </div>
+         </div>
+         <div class="gallerytext">
+          <p>
+           <b>
+            yes
+           </b>
+          </p>
+         </div>
+        </div>
+       </li>
+      </ul>
+      <p>
+       <br/>
+      </p>
+      <h2>
        <span class="mw-headline" id="Examples">
         Examples
        </span>
       </h2>
-      <p>
-       <i>
-        Example 1:
-       </i>
-       Sound using a sine wave with _SNDRAW Amplitude * SIN(8 * ATN(1) * Duration * (Frequency / _SNDRATE))
-      </p>
+      <dl>
+       <dt>
+        Example 1
+       </dt>
+       <dd>
+        Sound using a sine wave with _SNDRAW Amplitude * SIN(8 * ATN(1) * Duration * (Frequency / _SNDRATE))
+       </dd>
+      </dl>
       <table cellpadding="15px" width="100%">
        <tbody>
         <tr>
          <td>
-          <pre class="codeide">FREQ = 400                             'any frequency desired from 36 to 10,000
-Pi2 = 8 * <a href="/qb64wiki/index.php/ATN" title="ATN"><span style="color:#4593D8;">ATN</span></a>(1)                       '2 * pi
-Amplitude = .3                         'amplitude of the signal from -1.0 to 1.0
-SampleRate = <a href="/qb64wiki/index.php/SNDRATE" title="SNDRATE"><span style="color:#4593D8;">_SNDRATE</span></a>                  'sets the sample rate
-FRate = FREQ / SampleRate'
-<a href="/qb64wiki/index.php/FOR...NEXT" title="FOR...NEXT"><span style="color:#4593D8;">FOR</span></a> Duration = 0 <a href="/qb64wiki/index.php/TO" title="TO"><span style="color:#4593D8;">TO</span></a> 5 * SampleRate     'play 5 seconds
-        <a class="mw-selflink selflink"><span style="color:#4593D8;">_SNDRAW</span></a> Amplitude * <a href="/qb64wiki/index.php/SIN" title="SIN"><span style="color:#4593D8;">SIN</span></a>(Pi2 * Duration * FRate)            'sine wave
-       '<a class="mw-selflink selflink"><span style="color:#4593D8;">_SNDRAW</span></a> Amplitude * <a href="/qb64wiki/index.php/SGN" title="SGN"><span style="color:#4593D8;">SGN</span></a>(<a href="/qb64wiki/index.php/SIN" title="SIN"><span style="color:#4593D8;">SIN</span></a>(Pi2 * Duration * FRate))       'square wave
+          <pre class="codeide"><span style="color:#55FF55;">FREQ</span> = <span style="color:#F580B1;">400</span> <span style="color:#919191;">'any frequency desired from 36 to 10,000</span>
+Pi2 = <span style="color:#F580B1;">8</span> * <a href="/qb64wiki/index.php/ATN" title="ATN"><span style="color:#4593D8;">ATN</span></a>(<span style="color:#F580B1;">1</span>) <span style="color:#919191;">'2 * pi</span>
+Amplitude = <span style="color:#F580B1;">.3</span> <span style="color:#919191;">'amplitude of the signal from -1.0 to 1.0</span>
+SampleRate = <a href="/qb64wiki/index.php/SNDRATE" title="SNDRATE"><span style="color:#4593D8;">_SNDRATE</span></a> <span style="color:#919191;">'sets the sample rate</span>
+FRate = <span style="color:#55FF55;">FREQ</span> / SampleRate <span style="color:#919191;">'</span>
+<a href="/qb64wiki/index.php/FOR" title="FOR"><span style="color:#4593D8;">FOR</span></a> Duration = <span style="color:#F580B1;">0</span> <a href="/qb64wiki/index.php/TO" title="TO"><span style="color:#4593D8;">TO</span></a> <span style="color:#F580B1;">5</span> * SampleRate <span style="color:#919191;">'play 5 seconds</span>
+    <a class="mw-selflink selflink"><span style="color:#4593D8;">_SNDRAW</span></a> Amplitude * <a href="/qb64wiki/index.php/SIN" title="SIN"><span style="color:#4593D8;">SIN</span></a>(Pi2 * Duration * FRate) <span style="color:#919191;">'sine wave</span>
+    <span style="color:#919191;">'_SNDRAW Amplitude * SGN(SIN(Pi2 * Duration * FRate))       'square wave</span>
 <a href="/qb64wiki/index.php/NEXT" title="NEXT"><span style="color:#4593D8;">NEXT</span></a>
 <a href="/qb64wiki/index.php/SNDRAWDONE" title="SNDRAWDONE"><span style="color:#4593D8;">_SNDRAWDONE</span></a>
-<a class="mw-redirect" href="/qb64wiki/index.php/DO" title="DO"><span style="color:#4593D8;">DO</span></a>: LOOP <a class="mw-redirect" href="/qb64wiki/index.php/WHILE" title="WHILE"><span style="color:#4593D8;">WHILE</span></a> <a href="/qb64wiki/index.php/SNDRAWLEN" title="SNDRAWLEN"><span style="color:#4593D8;">_SNDRAWLEN</span></a>
+<a class="mw-redirect" href="/qb64wiki/index.php/DO" title="DO"><span style="color:#4593D8;">DO</span></a>: <a href="/qb64wiki/index.php/DO...LOOP" title="DO...LOOP"><span style="color:#4593D8;">LOOP WHILE</span></a> <a href="/qb64wiki/index.php/SNDRAWLEN" title="SNDRAWLEN"><span style="color:#4593D8;">_SNDRAWLEN</span></a>
 <a href="/qb64wiki/index.php/END" title="END"><span style="color:#4593D8;">END</span></a>
 </pre>
          </td>
@@ -337,34 +459,38 @@ FRate = FREQ / SampleRate'
       </dl>
       <p>
        <br/>
-       <i>
-        Example 2:
-       </i>
-       A simple ringing bell tone that tapers off.
       </p>
+      <dl>
+       <dt>
+        Example 2
+       </dt>
+       <dd>
+        A simple ringing bell tone that tapers off.
+       </dd>
+      </dl>
       <table cellpadding="15px" width="100%">
        <tbody>
         <tr>
          <td>
-          <pre class="codeide">t = 0
-tmp$ = "Sample = ##.#####   Time = ##.#####"
-LOCATE 1, 60: PRINT "Rate:"; <a href="/qb64wiki/index.php/SNDRATE" title="SNDRATE"><span style="color:#4593D8;">_SNDRATE</span></a>
-DO
-  'queue some sound
-  DO WHILE <a href="/qb64wiki/index.php/SNDRAWLEN" title="SNDRAWLEN"><span style="color:#4593D8;">_SNDRAWLEN</span></a> &lt; 0.2             'you may wish to adjust this
-    sample = <a href="/qb64wiki/index.php/SIN" title="SIN"><span style="color:#4593D8;">SIN</span></a>(t * 440 * <a href="/qb64wiki/index.php/ATN" title="ATN"><span style="color:#4593D8;">ATN</span></a>(1) * 8)  '440Hz sine wave (t * 440 * 2π)
-    sample = sample * <a href="/qb64wiki/index.php/EXP" title="EXP"><span style="color:#4593D8;">EXP</span></a>(-t * 3)       'fade out eliminates clicks after sound
-    <a class="mw-selflink selflink"><span style="color:#4593D8;">_SNDRAW</span></a> sample
-    t = t + 1 / <a href="/qb64wiki/index.php/SNDRATE" title="SNDRATE"><span style="color:#4593D8;">_SNDRATE</span></a>                'sound card sample frequency determines time
-  LOOP
+          <pre class="codeide">t = <span style="color:#F580B1;">0</span>
+tmp$ = <span style="color:#FFB100;">"Sample = ##.#####   Time = ##.#####"</span>
+<a href="/qb64wiki/index.php/LOCATE" title="LOCATE"><span style="color:#4593D8;">LOCATE</span></a> <span style="color:#F580B1;">1</span>, <span style="color:#F580B1;">60</span>: <a href="/qb64wiki/index.php/PRINT" title="PRINT"><span style="color:#4593D8;">PRINT</span></a> <span style="color:#FFB100;">"Rate:"</span>; <a href="/qb64wiki/index.php/SNDRATE" title="SNDRATE"><span style="color:#4593D8;">_SNDRATE</span></a>
+<a class="mw-redirect" href="/qb64wiki/index.php/DO" title="DO"><span style="color:#4593D8;">DO</span></a>
+    <span style="color:#919191;">'queue some sound</span>
+    <a href="/qb64wiki/index.php/DO...LOOP" title="DO...LOOP"><span style="color:#4593D8;">DO WHILE</span></a> <a href="/qb64wiki/index.php/SNDRAWLEN" title="SNDRAWLEN"><span style="color:#4593D8;">_SNDRAWLEN</span></a> &lt; <span style="color:#F580B1;">0.2</span> <span style="color:#919191;">'you may wish to adjust this</span>
+        sample = <a href="/qb64wiki/index.php/SIN" title="SIN"><span style="color:#4593D8;">SIN</span></a>(t * <span style="color:#F580B1;">440</span> * <a href="/qb64wiki/index.php/ATN" title="ATN"><span style="color:#4593D8;">ATN</span></a>(<span style="color:#F580B1;">1</span>) * <span style="color:#F580B1;">8</span>) <span style="color:#919191;">'440Hz sine wave (t * 440 * 2p)</span>
+        sample = sample * <a href="/qb64wiki/index.php/EXP" title="EXP"><span style="color:#4593D8;">EXP</span></a>(-t * <span style="color:#F580B1;">3</span>) <span style="color:#919191;">'fade out eliminates clicks after sound</span>
+        <a class="mw-selflink selflink"><span style="color:#4593D8;">_SNDRAW</span></a> sample
+        t = t + <span style="color:#F580B1;">1</span> / <a href="/qb64wiki/index.php/SNDRATE" title="SNDRATE"><span style="color:#4593D8;">_SNDRATE</span></a> <span style="color:#919191;">'sound card sample frequency determines time</span>
+    <a href="/qb64wiki/index.php/LOOP" title="LOOP"><span style="color:#4593D8;">LOOP</span></a>
 
-  'do other stuff, but it may interrupt sound
-  LOCATE 1, 1: PRINT USING tmp$; sample; t
-LOOP WHILE t &lt; 3.0                      'play for 3 seconds
+    <span style="color:#919191;">'do other stuff, but it may interrupt sound</span>
+    <a href="/qb64wiki/index.php/LOCATE" title="LOCATE"><span style="color:#4593D8;">LOCATE</span></a> <span style="color:#F580B1;">1</span>, <span style="color:#F580B1;">1</span>: <a href="/qb64wiki/index.php/PRINT_USING" title="PRINT USING"><span style="color:#4593D8;">PRINT USING</span></a> tmp$; sample; t
+<a href="/qb64wiki/index.php/DO...LOOP" title="DO...LOOP"><span style="color:#4593D8;">LOOP WHILE</span></a> t &lt; <span style="color:#F580B1;">3.0</span> <span style="color:#919191;">'play for 3 seconds</span>
 
 <a href="/qb64wiki/index.php/SNDRAWDONE" title="SNDRAWDONE"><span style="color:#4593D8;">_SNDRAWDONE</span></a>
-DO WHILE <a href="/qb64wiki/index.php/SNDRAWLEN" title="SNDRAWLEN"><span style="color:#4593D8;">_SNDRAWLEN</span></a> &gt; 0                 'Finish any left over queued sound!
-LOOP
+<a href="/qb64wiki/index.php/DO...LOOP" title="DO...LOOP"><span style="color:#4593D8;">DO WHILE</span></a> <a href="/qb64wiki/index.php/SNDRAWLEN" title="SNDRAWLEN"><span style="color:#4593D8;">_SNDRAWLEN</span></a> &gt; <span style="color:#F580B1;">0</span> <span style="color:#919191;">'Finish any left over queued sound!</span>
+<a href="/qb64wiki/index.php/LOOP" title="LOOP"><span style="color:#4593D8;">LOOP</span></a>
 <a href="/qb64wiki/index.php/END" title="END"><span style="color:#4593D8;">END</span></a>
 </pre>
          </td>
@@ -378,46 +504,50 @@ LOOP
       </center>
       <p>
        <br/>
-       <i>
-        Example 3:
-       </i>
-       Routine uses _SNDRAW to display and play 12 notes from octaves 1 through 9.
       </p>
+      <dl>
+       <dt>
+        Example 3
+       </dt>
+       <dd>
+        Routine uses _SNDRAW to display and play 12 notes from octaves 1 through 9.
+       </dd>
+      </dl>
       <table cellpadding="15px" width="100%">
        <tbody>
         <tr>
          <td>
           <pre class="codeide"><a href="/qb64wiki/index.php/DIM" title="DIM"><span style="color:#4593D8;">DIM</span></a> <a href="/qb64wiki/index.php/SHARED" title="SHARED"><span style="color:#4593D8;">SHARED</span></a> rate&amp;
 rate&amp; = <a href="/qb64wiki/index.php/SNDRATE" title="SNDRATE"><span style="color:#4593D8;">_SNDRATE</span></a>
-DO
-  <a href="/qb64wiki/index.php/PRINT" title="PRINT"><span style="color:#4593D8;">PRINT</span></a> "Enter the octave 1 to 8 (0 quits!):";
-  oct% = <a href="/qb64wiki/index.php/VAL" title="VAL"><span style="color:#4593D8;">VAL</span></a>(<a href="/qb64wiki/index.php/INPUT$" title="INPUT$"><span style="color:#4593D8;">INPUT$</span></a>(1)): <a href="/qb64wiki/index.php/PRINT" title="PRINT"><span style="color:#4593D8;">PRINT</span></a> oct%
-  <a href="/qb64wiki/index.php/IF...THEN" title="IF...THEN"><span style="color:#4593D8;">IF</span></a> oct% = 0 <a href="/qb64wiki/index.php/THEN" title="THEN"><span style="color:#4593D8;">THEN</span></a> <a href="/qb64wiki/index.php/EXIT_DO" title="EXIT DO"><span style="color:#4593D8;">EXIT DO</span></a>
-  octave = oct% - 4 '440 is in the 4th octave, 9th note
-  <a href="/qb64wiki/index.php/COLOR" title="COLOR"><span style="color:#4593D8;">COLOR</span></a> oct% + 1
-  <a href="/qb64wiki/index.php/PRINT_USING" title="PRINT USING"><span style="color:#4593D8;">PRINT USING</span></a> "Octave: ##"; oct%
-  <a href="/qb64wiki/index.php/FOR...NEXT" title="FOR...NEXT"><span style="color:#4593D8;">FOR</span></a> Note = 0 <a href="/qb64wiki/index.php/TO" title="TO"><span style="color:#4593D8;">TO</span></a> 11  'notes C to B
-    fq = FreQ(octave, Note, note$)
-    <a href="/qb64wiki/index.php/PRINT_USING" title="PRINT USING"><span style="color:#4593D8;">PRINT USING</span></a> "#####.## \\"; fq, note$
-    PlaySound fq
-    <a href="/qb64wiki/index.php/IF...THEN" title="IF...THEN"><span style="color:#4593D8;">IF</span></a> <a href="/qb64wiki/index.php/INKEY$" title="INKEY$"><span style="color:#4593D8;">INKEY$</span></a> &gt; "" <a href="/qb64wiki/index.php/THEN" title="THEN"><span style="color:#4593D8;">THEN</span></a> <a href="/qb64wiki/index.php/EXIT_DO" title="EXIT DO"><span style="color:#4593D8;">EXIT DO</span></a>
-  <a href="/qb64wiki/index.php/NEXT" title="NEXT"><span style="color:#4593D8;">NEXT</span></a>
+<a class="mw-redirect" href="/qb64wiki/index.php/DO" title="DO"><span style="color:#4593D8;">DO</span></a>
+    <a href="/qb64wiki/index.php/PRINT" title="PRINT"><span style="color:#4593D8;">PRINT</span></a> <span style="color:#FFB100;">"Enter the octave 1 to 8 (0 quits!):"</span>;
+    oct% = <a href="/qb64wiki/index.php/VAL" title="VAL"><span style="color:#4593D8;">VAL</span></a>(<a href="/qb64wiki/index.php/INPUT$" title="INPUT$"><span style="color:#4593D8;">INPUT$</span></a>(<span style="color:#F580B1;">1</span>)): <a href="/qb64wiki/index.php/PRINT" title="PRINT"><span style="color:#4593D8;">PRINT</span></a> oct%
+    <a class="mw-redirect" href="/qb64wiki/index.php/IF" title="IF"><span style="color:#4593D8;">IF</span></a> oct% = <span style="color:#F580B1;">0</span> <a href="/qb64wiki/index.php/THEN" title="THEN"><span style="color:#4593D8;">THEN</span></a> <a href="/qb64wiki/index.php/EXIT_DO" title="EXIT DO"><span style="color:#4593D8;">EXIT DO</span></a>
+    octave = oct% - <span style="color:#F580B1;">4</span> <span style="color:#919191;">'440 is in the 4th octave, 9th note</span>
+    <a href="/qb64wiki/index.php/COLOR" title="COLOR"><span style="color:#4593D8;">COLOR</span></a> oct% + <span style="color:#F580B1;">1</span>
+    <a href="/qb64wiki/index.php/PRINT_USING" title="PRINT USING"><span style="color:#4593D8;">PRINT USING</span></a> <span style="color:#FFB100;">"Octave: ##"</span>; oct%
+    <a href="/qb64wiki/index.php/FOR" title="FOR"><span style="color:#4593D8;">FOR</span></a> Note = <span style="color:#F580B1;">0</span> <a href="/qb64wiki/index.php/TO" title="TO"><span style="color:#4593D8;">TO</span></a> <span style="color:#F580B1;">11</span> <span style="color:#919191;">'notes C to B</span>
+        fq = <span style="color:#55FF55;">FreQ</span>(octave, Note, note$)
+        <a href="/qb64wiki/index.php/PRINT_USING" title="PRINT USING"><span style="color:#4593D8;">PRINT USING</span></a> <span style="color:#FFB100;">"#####.## \\"</span>; fq, note$
+        <span style="color:#55FF55;">PlaySound</span> fq
+        <a class="mw-redirect" href="/qb64wiki/index.php/IF" title="IF"><span style="color:#4593D8;">IF</span></a> <a href="/qb64wiki/index.php/INKEY$" title="INKEY$"><span style="color:#4593D8;">INKEY$</span></a> &gt; <span style="color:#FFB100;">""</span> <a href="/qb64wiki/index.php/THEN" title="THEN"><span style="color:#4593D8;">THEN</span></a> <a href="/qb64wiki/index.php/EXIT_DO" title="EXIT DO"><span style="color:#4593D8;">EXIT DO</span></a>
+    <a href="/qb64wiki/index.php/NEXT" title="NEXT"><span style="color:#4593D8;">NEXT</span></a>
 <a href="/qb64wiki/index.php/LOOP" title="LOOP"><span style="color:#4593D8;">LOOP</span></a>
 <a href="/qb64wiki/index.php/END" title="END"><span style="color:#4593D8;">END</span></a>
 
-<a href="/qb64wiki/index.php/FUNCTION" title="FUNCTION"><span style="color:#4593D8;">FUNCTION</span></a> FreQ (octave, note, note$)
-FreQ = 440 * 2 ^ (octave + (note + 3) / 12 - 1) '* 12 note octave starts at C (3 notes up)
-note$ = <a href="/qb64wiki/index.php/MID$_(function)" title="MID$ (function)"><span style="color:#4593D8;">MID$</span></a>("C C#D D#E F F#G G#A A#B ", note * 2 + 1, 2)
+<a href="/qb64wiki/index.php/FUNCTION" title="FUNCTION"><span style="color:#4593D8;">FUNCTION</span></a> <span style="color:#55FF55;">FreQ</span> (octave, note, note$)
+    <span style="color:#55FF55;">FreQ</span> = <span style="color:#F580B1;">440</span> * <span style="color:#F580B1;">2</span> ^ (octave + (note + <span style="color:#F580B1;">3</span>) / <span style="color:#F580B1;">12</span> - <span style="color:#F580B1;">1</span>) <span style="color:#919191;">'* 12 note octave starts at C (3 notes up)</span>
+    note$ = <a href="/qb64wiki/index.php/MID$_(function)" title="MID$ (function)"><span style="color:#4593D8;">MID$</span></a>(<span style="color:#FFB100;">"C C#D D#E F F#G G#A A#B "</span>, note * <span style="color:#F580B1;">2</span> + <span style="color:#F580B1;">1</span>, <span style="color:#F580B1;">2</span>)
 <a class="mw-redirect" href="/qb64wiki/index.php/END_FUNCTION" title="END FUNCTION"><span style="color:#4593D8;">END FUNCTION</span></a>
 
-<a href="/qb64wiki/index.php/SUB" title="SUB"><span style="color:#4593D8;">SUB</span></a> PlaySound (frq!)    ' plays sine wave fading in and out
-SndLoop! = 0
-<a href="/qb64wiki/index.php/DO...LOOP" title="DO...LOOP"><span style="color:#4593D8;">DO</span></a> <a class="mw-redirect" href="/qb64wiki/index.php/WHILE" title="WHILE"><span style="color:#4593D8;">WHILE</span></a> SndLoop! &lt; rate&amp;
-  <a class="mw-selflink selflink"><span style="color:#4593D8;">_SNDRAW</span></a> <a href="/qb64wiki/index.php/SIN" title="SIN"><span style="color:#4593D8;">SIN</span></a>((2 * 4 * <a href="/qb64wiki/index.php/ATN" title="ATN"><span style="color:#4593D8;">ATN</span></a>(1) * SndLoop! / rate&amp;) * frq!) * <a href="/qb64wiki/index.php/EXP" title="EXP"><span style="color:#4593D8;">EXP</span></a>(-(SndLoop! / rate&amp;) * 3)
-  SndLoop! = SndLoop! + 1
-<a href="/qb64wiki/index.php/LOOP" title="LOOP"><span style="color:#4593D8;">LOOP</span></a>
-<a href="/qb64wiki/index.php/SNDRAWDONE" title="SNDRAWDONE"><span style="color:#4593D8;">_SNDRAWDONE</span></a>
-<a class="mw-redirect" href="/qb64wiki/index.php/DO" title="DO"><span style="color:#4593D8;">DO</span></a>: <a href="/qb64wiki/index.php/LOOP" title="LOOP"><span style="color:#4593D8;">LOOP</span></a> <a class="mw-redirect" href="/qb64wiki/index.php/WHILE" title="WHILE"><span style="color:#4593D8;">WHILE</span></a> <a href="/qb64wiki/index.php/SNDRAWLEN" title="SNDRAWLEN"><span style="color:#4593D8;">_SNDRAWLEN</span></a>   'flush the sound playing buffer
+<a href="/qb64wiki/index.php/SUB" title="SUB"><span style="color:#4593D8;">SUB</span></a> <span style="color:#55FF55;">PlaySound</span> (frq!) <span style="color:#919191;">' plays sine wave fading in and out</span>
+    SndLoop! = <span style="color:#F580B1;">0</span>
+    <a href="/qb64wiki/index.php/DO...LOOP" title="DO...LOOP"><span style="color:#4593D8;">DO WHILE</span></a> SndLoop! &lt; rate&amp;
+        <a class="mw-selflink selflink"><span style="color:#4593D8;">_SNDRAW</span></a> <a href="/qb64wiki/index.php/SIN" title="SIN"><span style="color:#4593D8;">SIN</span></a>((<span style="color:#F580B1;">2</span> * <span style="color:#F580B1;">4</span> * <a href="/qb64wiki/index.php/ATN" title="ATN"><span style="color:#4593D8;">ATN</span></a>(<span style="color:#F580B1;">1</span>) * SndLoop! / rate&amp;) * frq!) * <a href="/qb64wiki/index.php/EXP" title="EXP"><span style="color:#4593D8;">EXP</span></a>(-(SndLoop! / rate&amp;) * <span style="color:#F580B1;">3</span>)
+        SndLoop! = SndLoop! + <span style="color:#F580B1;">1</span>
+    <a href="/qb64wiki/index.php/LOOP" title="LOOP"><span style="color:#4593D8;">LOOP</span></a>
+    <a href="/qb64wiki/index.php/SNDRAWDONE" title="SNDRAWDONE"><span style="color:#4593D8;">_SNDRAWDONE</span></a>
+    <a class="mw-redirect" href="/qb64wiki/index.php/DO" title="DO"><span style="color:#4593D8;">DO</span></a>: <a href="/qb64wiki/index.php/DO...LOOP" title="DO...LOOP"><span style="color:#4593D8;">LOOP WHILE</span></a> <a href="/qb64wiki/index.php/SNDRAWLEN" title="SNDRAWLEN"><span style="color:#4593D8;">_SNDRAWLEN</span></a> <span style="color:#919191;">'flush the sound playing buffer</span>
 <a href="/qb64wiki/index.php/END_SUB" title="END SUB"><span style="color:#4593D8;">END SUB</span></a>
 </pre>
          </td>
@@ -439,8 +569,8 @@ SndLoop! = 0
       </h2>
       <ul>
        <li>
-        <a href="/qb64wiki/index.php/SNDRATE" title="SNDRATE">
-         _SNDRATE
+        <a href="/qb64wiki/index.php/SNDRAWBATCH" title="SNDRAWBATCH">
+         _SNDRAWBATCH
         </a>
         ,
         <a href="/qb64wiki/index.php/SNDRAWLEN" title="SNDRAWLEN">
@@ -459,6 +589,10 @@ SndLoop! = 0
        <li>
         <a href="/qb64wiki/index.php/SNDOPEN" title="SNDOPEN">
          _SNDOPEN
+        </a>
+        ,
+        <a href="/qb64wiki/index.php/SNDRATE" title="SNDRATE">
+         _SNDRATE
         </a>
        </li>
        <li>
@@ -510,40 +644,40 @@ SndLoop! = 0
       </center>
       <!-- 
 NewPP limit report
-Cached time: 20240721220926
+Cached time: 20250125040323
 Cache expiry: 86400
 Reduced expiry: false
 Complications: [show‐toc]
-CPU time usage: 0.048 seconds
-Real time usage: 0.056 seconds
-Preprocessor visited node count: 525/1000000
-Post‐expand include size: 4710/2097152 bytes
-Template argument size: 866/2097152 bytes
-Highest expansion depth: 3/100
+CPU time usage: 0.086 seconds
+Real time usage: 0.107 seconds
+Preprocessor visited node count: 1180/1000000
+Post‐expand include size: 8789/2097152 bytes
+Template argument size: 2512/2097152 bytes
+Highest expansion depth: 4/100
 Expensive parser function count: 0/100
 Unstrip recursion depth: 0/20
-Unstrip post‐expand size: 0/5000000 bytes
+Unstrip post‐expand size: 3118/5000000 bytes
 -->
       <!--
 Transclusion expansion time report (%,ms,calls,template)
-100.00%   31.143      1 -total
- 17.79%    5.541     64 Template:Cl
-  7.18%    2.236      1 Template:PageSeeAlso
-  6.99%    2.176      8 Template:Parameter
-  6.85%    2.134      1 Template:PageSyntax
-  6.81%    2.121      3 Template:Small
-  6.00%    1.868      1 Template:PageParameters
-  5.80%    1.806      3 Template:CodeEnd
-  5.73%    1.784      1 Template:PageDescription
-  5.67%    1.765      1 Template:PageExamples
+100.00%   67.274      1 -total
+  9.56%    6.432     74 Template:Text
+  9.07%    6.099     70 Template:Cl
+  4.53%    3.048      1 Template:PageSeeAlso
+  4.06%    2.733      1 Template:PageSyntax
+  3.96%    2.667      3 Template:CodeEnd
+  3.94%    2.652      1 Template:PageExamples
+  3.77%    2.538      3 Template:Small
+  3.33%    2.238      8 Template:Parameter
+  3.31%    2.224      1 Template:PageNavigation
 -->
-      <!-- Saved in parser cache with key qb64pnix_mw19894-mwmb_:pcache:idhash:345-0!canonical and timestamp 20240721220925 and revision id 8786.
+      <!-- Saved in parser cache with key qb64pnix_mw19894-mwmb_:pcache:idhash:345-0!canonical and timestamp 20250125040323 and revision id 9531.
  -->
      </div>
      <div class="printfooter" data-nosnippet="">
       Retrieved from "
-      <a dir="ltr" href="https://qb64phoenix.com/qb64wiki/index.php?title=SNDRAW&amp;oldid=8786">
-       https://qb64phoenix.com/qb64wiki/index.php?title=SNDRAW&amp;oldid=8786
+      <a dir="ltr" href="https://qb64phoenix.com/qb64wiki/index.php?title=SNDRAW&amp;oldid=9531">
+       https://qb64phoenix.com/qb64wiki/index.php?title=SNDRAW&amp;oldid=9531
       </a>
       "
      </div>
@@ -760,7 +894,7 @@ You can view its source [e]">
         </a>
        </li>
        <li class="mw-list-item" id="t-permalink">
-        <a href="/qb64wiki/index.php?title=SNDRAW&amp;oldid=8786" title="Permanent link to this revision of this page">
+        <a href="/qb64wiki/index.php?title=SNDRAW&amp;oldid=9531" title="Permanent link to this revision of this page">
          <span>
           Permanent link
          </span>
@@ -781,7 +915,7 @@ You can view its source [e]">
   <footer class="mw-footer" id="footer" role="contentinfo">
    <ul id="footer-info">
     <li id="footer-info-lastmod">
-     This page was last edited on 19 February 2024, at 22:56.
+     This page was last edited on 25 December 2024, at 14:24.
     </li>
    </ul>
    <ul id="footer-places">
@@ -810,7 +944,7 @@ You can view its source [e]">
    </ul>
   </footer>
   <script>
-   (RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgPageParseReport":{"limitreport":{"cputime":"0.048","walltime":"0.056","ppvisitednodes":{"value":525,"limit":1000000},"postexpandincludesize":{"value":4710,"limit":2097152},"templateargumentsize":{"value":866,"limit":2097152},"expansiondepth":{"value":3,"limit":100},"expensivefunctioncount":{"value":0,"limit":100},"unstrip-depth":{"value":0,"limit":20},"unstrip-size":{"value":0,"limit":5000000},"timingprofile":["100.00%   31.143      1 -total"," 17.79%    5.541     64 Template:Cl","  7.18%    2.236      1 Template:PageSeeAlso","  6.99%    2.176      8 Template:Parameter","  6.85%    2.134      1 Template:PageSyntax","  6.81%    2.121      3 Template:Small","  6.00%    1.868      1 Template:PageParameters","  5.80%    1.806      3 Template:CodeEnd","  5.73%    1.784      1 Template:PageDescription","  5.67%    1.765      1 Template:PageExamples"]},"cachereport":{"timestamp":"20240721220926","ttl":86400,"transientcontent":false}}});mw.config.set({"wgBackendResponseTime":139});});
+   (RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgPageParseReport":{"limitreport":{"cputime":"0.086","walltime":"0.107","ppvisitednodes":{"value":1180,"limit":1000000},"postexpandincludesize":{"value":8789,"limit":2097152},"templateargumentsize":{"value":2512,"limit":2097152},"expansiondepth":{"value":4,"limit":100},"expensivefunctioncount":{"value":0,"limit":100},"unstrip-depth":{"value":0,"limit":20},"unstrip-size":{"value":3118,"limit":5000000},"timingprofile":["100.00%   67.274      1 -total","  9.56%    6.432     74 Template:Text","  9.07%    6.099     70 Template:Cl","  4.53%    3.048      1 Template:PageSeeAlso","  4.06%    2.733      1 Template:PageSyntax","  3.96%    2.667      3 Template:CodeEnd","  3.94%    2.652      1 Template:PageExamples","  3.77%    2.538      3 Template:Small","  3.33%    2.238      8 Template:Parameter","  3.31%    2.224      1 Template:PageNavigation"]},"cachereport":{"timestamp":"20250125040323","ttl":86400,"transientcontent":false}}});mw.config.set({"wgBackendResponseTime":211});});
   </script>
  </body>
 </html>

@@ -120,7 +120,7 @@ br ~ h5 {
 
 
 * Returns the current image handle value that is being displayed. Returns 0 if in the default screen image.
-* Not to be confused with the [_DISPLAY](DISPLAY.md) statement that displays the screen when not using [_AUTODISPLAY](AUTODISPLAY.md) .
+* Not to be confused with the _DISPLAY statement that displays the screen when not using _AUTODISPLAY .
 
 </blockquote>
 
@@ -137,21 +137,21 @@ _MOUSEHIDE
 SetupCursor
 PRINT "Hello World!"
 DO: _LIMIT 30
-DO WHILE _MOUSEINPUT: LOOP 'main loop must contain _MOUSEINPUT
-'       other program code
+   DO WHILE _MOUSEINPUT: LOOP 'main loop must contain _MOUSEINPUT
+   '       other program code
 LOOP
 
 SUB SetupCursor
-ON TIMER(0.02) UpdateCursor
-TIMER ON
+   ON TIMER(0.02) UpdateCursor
+   TIMER ON
 END SUB
 
 SUB UpdateCursor
-PCOPY _DISPLAY, 100 'any page number as desination with the _DISPLAY function as source
-PSET (_MOUSEX, _MOUSEY), _RGB(0, 255, 0)
-DRAW "ND10F10L3F5L4H5L3"
-_DISPLAY 'statement shows image
-PCOPY 100, _DISPLAY 'with the function return as destination page
+   PCOPY _DISPLAY, 100 'any page number as desination with the _DISPLAY function as source
+   PSET (_MOUSEX, _MOUSEY), _RGB(0, 255, 0)
+   DRAW "ND10F10L3F5L4H5L3"
+   _DISPLAY 'statement shows image
+   PCOPY 100, _DISPLAY 'with the function return as destination page
 END SUB
 ```
   
@@ -167,7 +167,7 @@ END SUB
 
 * [SCREEN](SCREEN.md)
 * [PCOPY](PCOPY.md)
-* [_DISPLAY](DISPLAY.md) (statement)
-* [_AUTODISPLAY](AUTODISPLAY.md) (default mode)
-* [_DISPLAYORDER](DISPLAYORDER.md) (statement)
+* _DISPLAY (statement)
+* _AUTODISPLAY (default mode)
+* _DISPLAYORDER (statement)
 </blockquote>

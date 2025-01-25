@@ -119,7 +119,7 @@ br ~ h5 {
 <blockquote>
 
 
-* Handle is the handle returned from [_OPENCLIENT](OPENCLIENT.md) when making an HTTP request.
+* Handle is the handle returned from _OPENCLIENT when making an HTTP request.
 </blockquote>
 
 #### DESCRIPTION

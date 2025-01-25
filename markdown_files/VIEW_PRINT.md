@@ -156,8 +156,8 @@ VIEW PRINT 10 TO 20
 
 ' print some text that will scroll the text viewport
 FOR i = 1 TO 15
-PRINT "This is viewport line:"; i
-SLEEP 1
+ PRINT "This is viewport line:"; i
+ SLEEP 1
 NEXT i
 
 ' clear only the active text viewport with CLS or CLS 2

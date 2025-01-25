@@ -149,22 +149,18 @@ br ~ h5 {
   
 <br>
 
-
-
-##### Example 1: Reading individual key strokes from a console window (Windows).
 ```vb
 $CONSOLE:ONLY
-_DEST _CONSOLE: _SOURCE _CONSOLE
 
 PRINT "Press any key, and I'll give you the scan code for it.  <ESC> quits the demo."
 PRINT
 PRINT
 DO
-x = _CONSOLEINPUT
-IF x = 1 THEN 'read only keyboard input ( = 1)
-c = _CINP
-PRINT c;
-END IF
+   x = _CONSOLEINPUT
+   IF x = 1 THEN 'read only keyboard input ( = 1)
+       c = _CINP
+       PRINT c;
+   END IF
 LOOP UNTIL c = 1
 END
 ```
@@ -179,7 +175,7 @@ END
 <blockquote>
 
 
-* [&dollar;CONSOLE](&dollar;CONSOLE.md) , [_CONSOLE](CONSOLE.md)
-* [_CONSOLEINPUT](CONSOLEINPUT.md)
-* [_MOUSEX](MOUSEX.md) , [_MOUSEY](MOUSEY.md) , [_MOUSEBUTTON](MOUSEBUTTON.md) , [_MOUSEWHEEL](MOUSEWHEEL.md)
+* [\$CONSOLE](\$CONSOLE.md) , _CONSOLE
+* _CONSOLEINPUT
+* _MOUSEX , _MOUSEY , _MOUSEBUTTON , _MOUSEWHEEL
 </blockquote>

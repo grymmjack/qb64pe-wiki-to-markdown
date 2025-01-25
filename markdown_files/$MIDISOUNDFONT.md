@@ -102,7 +102,7 @@ br ~ h5 {
 ---
 <blockquote>
 
-### The $MIDISOUNDFONT metacommand enables MIDI support for _SNDOPEN .
+### The now deprecated $MIDISOUNDFONT metacommand did enable MIDI support for _SNDOPEN in QB64-PE versions prior to v3.14.0, and was also considered unstable. It could only be used with the $UNSTABLE :MIDI flag set. Since v3.14.0 MIDI support is stable and you can use _MIDISOUNDBANK to load a soundfont.
 
 </blockquote>
 
@@ -130,9 +130,8 @@ br ~ h5 {
 <blockquote>
 
 
-* The use of this metacommand allows [_SNDOPEN](SNDOPEN.md) to open MIDI files.
+* The use of this metacommand allows _SNDOPEN to open MIDI files.
 * The selected soundfont is what is used to play all MIDI files.
-* [&dollar;MIDISOUNDFONT](&dollar;MIDISOUNDFONT.md) metacommand was deprecated in QB64-PE v3.14.0 . Use [_MIDISOUNDBANK](MIDISOUNDBANK.md) instead.
 
 </blockquote>
 
@@ -170,6 +169,6 @@ _SNDPLAYFILE "example.mid"
 <blockquote>
 
 
-* [&dollar;UNSTABLE](&dollar;UNSTABLE.md)
-* [_SNDOPEN](SNDOPEN.md)
+* [\$UNSTABLE](\$UNSTABLE.md)
+* _MIDISOUNDBANK , _SNDOPEN
 </blockquote>

@@ -123,7 +123,7 @@ br ~ h5 {
 * The stringExpression$ variable's value must have been previously defined and cannot be an empty string ("").
 * position% is optional. If no position is used, the leftmost character at position 1 is assumed.
 * position% cannot be zero or greater than the string's length or an Illegal function call error will occur.
-* The ASCII replacement code% value can be any [INTEGER](INTEGER.md) value from 0 to 255.
+* The [ASCII](ASCII.md) replacement code% value can be any [INTEGER](INTEGER.md) value from 0 to 255.
 
 </blockquote>
 
@@ -164,6 +164,6 @@ ASC
 
 * Featured in our "Keyword of the Day" series
 * [ASC](ASC.md) (function)
-* [MID&dollar;](MID&dollar;.md) , [MID&dollar;](MID&dollar;.md) (function)
-* [INKEY&dollar;](INKEY&dollar;.md) , ASCII
+* [MID\$](MID\$.md) , [MID\$](MID\$.md) (function)
+* [INKEY\$](INKEY\$.md) , [ASCII](ASCII.md)
 </blockquote>

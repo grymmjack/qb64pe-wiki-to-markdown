@@ -172,17 +172,17 @@ _FREEIMAGE i&
 _MOUSEMOVE 320, 240 'center mouse pointer on screen
 
 DO: _LIMIT 100
-DO WHILE _MOUSEINPUT
-mx = _MOUSEX
-my = _MOUSEY
-c& = POINT(mx, my)
-r = _RED32(c&)
-g = _GREEN32(c&)
-b = _BLUE32(c&)
-a = _ALPHA32(c&)
-LOCATE 1, 1: PRINT mx; my, "R:"; r, "G:"; g, "B:"; b, "A:"; a; "  "
-LOCATE 2, 2: PRINT "HTML Color: &H" + RIGHT$(HEX$(c&), 6)
-LOOP
+ DO WHILE _MOUSEINPUT
+   mx = _MOUSEX
+   my = _MOUSEY
+   c& = POINT(mx, my)
+   r = _RED32(c&)
+   g = _GREEN32(c&)
+   b = _BLUE32(c&)
+   a = _ALPHA32(c&)
+   LOCATE 1, 1: PRINT mx; my, "R:"; r, "G:"; g, "B:"; b, "A:"; a; "  "
+   LOCATE 2, 2: PRINT "HTML Color: &H" + RIGHT$(HEX$(c&), 6)
+ LOOP
 LOOP UNTIL INKEY$ > ""
 END
 ```
@@ -191,9 +191,9 @@ END
 
 ```vb
 FOR c = 0 TO 59    '60 X 60 area from 0 pixel
-FOR r = 0 TO 59
-IF POINT(c, r) = 0 THEN PSET (c, r), 15 ELSE PSET (c, r), 0
-NEXT r
+  FOR r = 0 TO 59
+   IF POINT(c, r) = 0 THEN PSET (c, r), 15 ELSE PSET (c, r), 0
+  NEXT r
 NEXT c
 GET(0, 0)-(60, 60), Image(1500) ' save mask in an array(indexed above original image).
 ```
@@ -208,8 +208,8 @@ GET(0, 0)-(60, 60), Image(1500) ' save mask in an array(indexed above original i
 <blockquote>
 
 
-* [_NEWIMAGE](NEWIMAGE.md) , [_LOADIMAGE](LOADIMAGE.md)
-* [_MEMIMAGE](MEMIMAGE.md) , [_MEMGET](MEMGET.md)
+* _NEWIMAGE , _LOADIMAGE
+* _MEMIMAGE , _MEMGET
 * [PSET](PSET.md) , [PRESET](PRESET.md)
 * [SCREEN](SCREEN.md) , [SCREEN](SCREEN.md) (function)
 * [GET](GET.md) (graphics statement) , [PUT](PUT.md) (graphics statement)

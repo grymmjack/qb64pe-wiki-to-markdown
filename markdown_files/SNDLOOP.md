@@ -135,7 +135,7 @@ bg = _SNDOPEN("back.ogg") '<<<<<<<<<< change to your sound file name
 _SNDLOOP bg
 
 DO
-_LIMIT 10   'keep CPU resources used low
+   _LIMIT 10   'keep CPU resources used low
 LOOP UNTIL INKEY$ <> "" 'key press program exit
 _SNDSTOP bg
 _SNDCLOSE bg
@@ -151,5 +151,5 @@ _SNDCLOSE bg
 <blockquote>
 
 
-* [_SNDOPEN](SNDOPEN.md) , [_SNDSTOP](SNDSTOP.md)
+* _SNDOPEN , _SNDSTOP
 </blockquote>

@@ -102,16 +102,17 @@ br ~ h5 {
 ---
 <blockquote>
 
-### ON ERROR is used with GOTO to handle errors in a program.
+### The ON ERROR statement is used in conjunction with GOTO to handle errors in a program.
 
 </blockquote>
 
-#### SYNTAX
+#### PARAMETERS
 
 <blockquote>
 
-`ON ERROR GOTO { lineNumber | lineLabel }`
 
+* lineNumberOrLabel must be a line number or program label in the main part of your program usually placed after the [END](END.md) or [SYSTEM](SYSTEM.md) statement. Line numbers or labels inside of [SUB](SUB.md) or [FUNCTION](FUNCTION.md) blocks are not allowed.
+* 0 (zero) will disable all program based error handling, i.e. errors remain unhandled .
 </blockquote>
 
 #### DESCRIPTION
@@ -119,15 +120,13 @@ br ~ h5 {
 <blockquote>
 
 
-* An untreated error in a program will cause execution to stop and an error message is displayed to the user, who can choose to continue (ignore the error - which could have unexpected results) or end the program.
+* An unhandled error in a program will cause execution to stop and an error message box is displayed to the user, who can choose to continue (ignore the error - which could have unexpected results) or end the program.
 * Use [ON](ON.md) [ERROR](ERROR.md) when your program performs operations that are likely to generate errors, like file access operations.
-* [ON](ON.md) [ERROR](ERROR.md) statements can be in the main module code or in [SUB](SUB.md) or [FUNCTION](FUNCTION.md) procedures.
-* [ON](ON.md) [ERROR](ERROR.md) statements take precedence in the order they are encountered. It will also handle any subroutine errors.
-* [ON](ON.md) [ERROR](ERROR.md) [GOTO](GOTO.md) 0 can be used to disable custom [ON](ON.md) [ERROR](ERROR.md) trapping and give default error messages.
-* A subsequent [ON](ON.md) [ERROR](ERROR.md) statement will override the previous one.
+* [ON](ON.md) [ERROR](ERROR.md) statements can be in the main code section or in [SUB](SUB.md) or [FUNCTION](FUNCTION.md) procedures, but the line number or label must always be in the main code section.
+* [ON](ON.md) [ERROR](ERROR.md) statements take precedence in the order they are encountered, i.e. the most recently set handler is used. Subsequent [ON](ON.md) [ERROR](ERROR.md) statements will override the previous one.
+* [ON](ON.md) [ERROR](ERROR.md) [GOTO](GOTO.md) 0 can be used to disable program based error trapping and give default error message boxes.
 * [GOTO](GOTO.md) is required in the statement. Cannot use [GOSUB](GOSUB.md) .
-* Comment out [ON](ON.md) [ERROR](ERROR.md) to find specific error locations. QB64 can return the file line position with [_ERRORLINE](ERRORLINE.md)
-* Note: QB64 does not support the PDS (QuickBASIC 7) [ON](ON.md) [ERROR](ERROR.md) [RESUME](RESUME.md) [NEXT](NEXT.md) statement.
+* QB64 and QB64-PE do not support the PDS (QuickBASIC 7) [ON](ON.md) [ERROR](ERROR.md) [RESUME](RESUME.md) [NEXT](NEXT.md) statement.
 
 </blockquote>
 
@@ -135,52 +134,148 @@ br ~ h5 {
 
 <blockquote>
 
-
-
-##### Example 1: Using an error handler that ignores any error.
 ```vb
-ON ERROR GOTO Errhandler
-' Main module program error simulation code
-ERROR 7           ' simulate an Out of Memory Error
-PRINT "Error handled...ending program"
-SLEEP 4
-SYSTEM            ' end of program code
-
-Errhandler:              'error handler sub program line label
-PRINT "Error"; ERR; "on program file line"; _ERRORLINE
-BEEP             ' warning beep
-RESUME NEXT       ' moves program to code following the error.
-```
-  
-<br>
-
-```vb
-Error 7 on program file line 3
-Error handled...ending program
-```
-  
-<br>
-
-
-<div class="explanation">Explanation: The ON ERROR statement is normally placed at the beginning of the main module code.  Errhandle is the line label sub referred to in the statement. The handler prints the error code and attempts to use the next line of code using RESUME NEXT which is only used in error handling procedures. _ERRORLINE returns the program file's actual text line count found in the IDE.</div>
-
-
-
-##### Example 2: Using an error handler in a SUB procedure.
-```vb
-s
+'install our own error handler
+ON ERROR GOTO errHandler
+'now simulate an "Out of Memory" error
+ERROR 7
+'our error handler will return to this point
+PRINT "Error was handled.": PRINT
+'now we disable our error handler
+ON ERROR GOTO 0
+COLOR 9: PRINT "Handler disabled.": COLOR 7
+'without our own error handler the following error is reported
+'in the usual message box popup again
+PRINT "The next error will no longer be handled, press any key ...": SLEEP
+ERROR 7
 END
 
-hand:
-PRINT "got error!"
+'the error handler label must be part of the main program, local
+'labels inside a SUB/FUNCTION are not allowed for error handlers
+errHandler:
+COLOR 10: PRINT "Start handling error"; ERR; "on program file line"; _ERRORLINE;
+BEEP: PRINT "... done.": COLOR 7
+RESUME NEXT 'returns execution to the code following the error
+```
+  
+<br>
+
+```vb
+Start handling error 7 on program file line 6 ... done.
+Error was handled.
+
+Handler disabled.
+The next error will no longer be handled, press any key ...
+```
+  
+<br>
+
+```vb
+ON ERROR GOTO mainHandler
+ERROR 7
+PRINT "Error was handled.": PRINT
+LegacyErrorTest
+PRINT "Error was handled.": PRINT
+ERROR 7
+PRINT "Error was handled.": PRINT
+ON ERROR GOTO 0
+COLOR 9: PRINT "Handler disabled.": COLOR 7
+PRINT "The next error will no longer be handled, press any key ...": SLEEP
+ERROR 7
+END
+
+'the error handler label must be part of the main program, local
+'labels inside a SUB/FUNCTION are not allowed for error handlers
+mainHandler:
+COLOR 10: PRINT "Main handler starts handling error"; ERR; "on program file line"; _ERRORLINE;
+BEEP: PRINT "... done.": COLOR 7
+RESUME NEXT
+'an alternative error handler which we set from within a SUB/FUNCTION
+'however, the error handler label must still be part of the main program
+subHandler:
+COLOR 12: PRINT "Sub handler starts handling error"; ERR; "on program file line"; _ERRORLINE;
+BEEP: PRINT "... done.": COLOR 7
 RESUME NEXT
 
-SUB s
-ON ERROR GOTO hand
-ERROR 1
-ON ERROR GOTO 0
-PRINT "Done!"
+SUB LegacyErrorTest
+'the next line overrides the currently active "mainHandler"
+'with our new "subHandler"
+ON ERROR GOTO subHandler
+ERROR 7
+'unfortunately the legacy QuickBASIC/QBasic syntax has no function to
+'restore back to the old handler, so you need to know which handler was
+'active and restore that manually
+ON ERROR GOTO mainHandler
 END SUB
+```
+  
+<br>
+
+```vb
+Main handler starts handling error 7 on program file line 4 ... done.
+Error was handled.
+
+Sub handler starts handling error 7 on program file line 33 ... done.
+Error was handled.
+
+Main handler starts handling error 7 on program file line 8 ... done.
+Error was handled.
+
+Handler disabled.
+The next error will no longer be handled, press any key ...
+```
+  
+<br>
+
+```vb
+ON ERROR GOTO mainHandler
+ERROR 7
+PRINT "Error was handled.": PRINT
+QB64peErrorTest
+PRINT "Error was handled.": PRINT
+ERROR 7
+PRINT "Error was handled.": PRINT
+ON ERROR GOTO 0
+COLOR 9: PRINT "Handler disabled.": COLOR 7
+PRINT "The next error will no longer be handled, press any key ...": SLEEP
+ERROR 7
+END
+
+mainHandler:
+COLOR 10: PRINT "Main handler starts handling error"; ERR; "on program file line"; _ERRORLINE;
+BEEP: PRINT "... done.": COLOR 7
+RESUME NEXT
+subHandler:
+COLOR 12: PRINT "Sub handler starts handling error"; ERR; "on program file line"; _ERRORLINE;
+BEEP: PRINT "... done.": COLOR 7
+RESUME NEXT
+
+SUB QB64peErrorTest
+'the next line overrides the currently active "mainHandler"
+'with our new "subHandler", but the _NEWHANDLER keyword explicitly
+'designates this as override and to remember the former handler
+ON ERROR GOTO _NEWHANDLER subHandler
+ERROR 7
+'now the following _LASTHANDLER syntax can easily restore back
+'to the former handler without we need to know which one it was,
+ON ERROR GOTO _LASTHANDLER
+END SUB
+```
+  
+<br>
+
+```vb
+Main handler starts handling error 7 on program file line 4 ... done.
+Error was handled.
+
+Sub handler starts handling error 7 on program file line 30 ... done.
+Error was handled.
+
+Main handler starts handling error 7 on program file line 8 ... done.
+Error was handled.
+
+Handler disabled.
+The next error will no longer be handled, press any key ...
 ```
   
 <br>
@@ -194,8 +289,8 @@ END SUB
 
 
 * [ERR](ERR.md) , [ERL](ERL.md) , [RESUME](RESUME.md)
-* ON...GOTO
-* [_ERRORLINE](ERRORLINE.md) , [_INCLERRORLINE](INCLERRORLINE.md) , [_INCLERRORFILE&dollar;](INCLERRORFILE&dollar;.md)
+* [ON...GOTO](ON...GOTO.md)
+* _ERRORLINE , _INCLERRORLINE , _INCLERRORFILE$
 * [ERROR](ERROR.md)
 * [ERROR](ERROR.md) Codes
 </blockquote>

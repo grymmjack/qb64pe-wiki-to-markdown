@@ -119,8 +119,8 @@ br ~ h5 {
 <blockquote>
 
 
-* Use [_SCREENHIDE](SCREENHIDE.md) to get rid of the main program window until later in the program.
-* Use the respective Metacommand to get rid of the program window throughout a program or when using [&dollar;CONSOLE](&dollar;CONSOLE.md) .
+* Use _SCREENHIDE to get rid of the main program window until later in the program.
+* Use the respective [Metacommand](Metacommand.md) to get rid of the program window throughout a program or when using [\$CONSOLE](\$CONSOLE.md) .
 
 </blockquote>
 
@@ -136,7 +136,7 @@ br ~ h5 {
 <blockquote>
 
 
-* [&dollar;SCREENHIDE](&dollar;SCREENHIDE.md) , [&dollar;SCREENSHOW](&dollar;SCREENSHOW.md) , [&dollar;CONSOLE](&dollar;CONSOLE.md)
-* [_SCREENSHOW](SCREENSHOW.md) , [_CONSOLE](CONSOLE.md)
-* [_SCREENICON](SCREENICON.md)
+* [\$SCREENHIDE](\$SCREENHIDE.md) , [\$SCREENSHOW](\$SCREENSHOW.md) , [\$CONSOLE](\$CONSOLE.md)
+* _SCREENSHOW , _CONSOLE
+* _SCREENICON
 </blockquote>

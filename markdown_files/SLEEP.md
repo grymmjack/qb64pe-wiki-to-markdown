@@ -150,6 +150,6 @@ You've waited for 2 seconds.
 <blockquote>
 
 
-* [TIMER](TIMER.md) (function) , [INKEY&dollar;](INKEY&dollar;.md)
-* [_DELAY](DELAY.md) , [_LIMIT](LIMIT.md)
+* [TIMER](TIMER.md) (function) , [INKEY\$](INKEY\$.md)
+* _DELAY , _LIMIT
 </blockquote>

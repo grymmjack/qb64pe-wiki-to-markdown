@@ -136,7 +136,7 @@ br ~ h5 {
 a$ = "The quick brown fox jumps over the lazy dog. "
 PRINT "Original string (a$): "; a$
 FOR i = 1 TO 15
-a$ = a$ + a$
+   a$ = a$ + a$
 NEXT
 
 PRINT "After concatenating it into itself several times, LEN(a$) ="; LEN(a$)
@@ -168,5 +168,5 @@ After using _INFLATE$ to decompress it, LEN = 1474560
 <blockquote>
 
 
-* [_DEFLATE&dollar;](DEFLATE&dollar;.md)
+* _DEFLATE$
 </blockquote>

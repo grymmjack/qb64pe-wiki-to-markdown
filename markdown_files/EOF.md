@@ -121,9 +121,9 @@ br ~ h5 {
 
 * fileNumber& or httpHandle& is the number of the file or HTTP connected being read. # is not required.
 * fileNumber& is a file opened using [OPEN](OPEN.md) .
-* httpHandle& is a HTTP connection opened using [_OPENCLIENT](OPENCLIENT.md) .
+* httpHandle& is a HTTP connection opened using _OPENCLIENT .
 * Returns 0 until the end of a file. This avoids a file read error.
-* Returns -1 (true) at the end of the file.
+* Returns true(-1) at the end of the file.
 
 </blockquote>
 
@@ -141,7 +141,7 @@ CLOSE #1
 'only because of the Ctrl-Z.
 OPEN "test.txt" FOR INPUT AS #1
 WHILE NOT EOF(1)
-PRINT INPUT$(1, 1);
+   PRINT INPUT$(1, 1);
 WEND
 CLOSE #1
 
@@ -150,7 +150,7 @@ PRINT: PRINT
 'However, it works in the BINARY file mode.
 OPEN "test.txt" FOR BINARY AS #1
 WHILE NOT EOF(1)
-PRINT INPUT$(1, 1);
+   PRINT INPUT$(1, 1);
 WEND
 CLOSE #1
 ```

@@ -119,10 +119,10 @@ br ~ h5 {
 <blockquote>
 
 
-* The memoryBlock [_MEM](MEM.md) memory block is the block referenced to be filled.
+* The memoryBlock _MEM memory block is the block referenced to be filled.
 * memoryBlock.OFFSET is the starting offset of the above referenced memory block.
 * The fillBytes is the number of bytes to fill the memory block.
-* The value is the value to place in the memory block at the designated OFFSET position.
+* The value is the value to place in the memory block at the designated [OFFSET](OFFSET.md) position.
 * A literal or variable value can be optionally set [AS](AS.md) a variable type appropriate for the memory block.
 </blockquote>
 
@@ -131,7 +131,7 @@ br ~ h5 {
 <blockquote>
 
 
-* To clear previous data from a [_MEMNEW](MEMNEW.md) memory block, use [_MEMFILL](MEMFILL.md) with a value of 0.
+* To clear previous data from a _MEMNEW memory block, use _MEMFILL with a value of 0.
 
 </blockquote>
 
@@ -148,9 +148,9 @@ DIM b(100, 100) AS LONG
 
 'filling array a with value 13
 FOR i1 = 0 TO 100
-FOR i2 = 0 TO 100
-a(i1, i2) = 13
-NEXT
+   FOR i2 = 0 TO 100
+       a(i1, i2) = 13
+   NEXT
 NEXT
 
 'filling array b with value 13
@@ -170,7 +170,7 @@ _MEMFREE mema
 <blockquote>
 
 
-* [_MEM](MEM.md) , [_MEM](MEM.md) (function)
-* [_MEMIMAGE](MEMIMAGE.md) , [_MEMNEW](MEMNEW.md)
-* [_MEMGET](MEMGET.md) , [_MEMPUT](MEMPUT.md)
+* _MEM , _MEM (function)
+* _MEMIMAGE , _MEMNEW
+* _MEMGET , _MEMPUT
 </blockquote>

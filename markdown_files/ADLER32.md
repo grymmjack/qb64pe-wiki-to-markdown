@@ -119,7 +119,7 @@ br ~ h5 {
 <blockquote>
 
 
-* chksum~& is the [_UNSIGNED](UNSIGNED.md) [LONG](LONG.md) checksum returned (one (1), if the given dataString$ was empty).
+* chksum~& is the _UNSIGNED [LONG](LONG.md) checksum returned ( one(1) , if the given dataString$ was empty).
 * dataString$ is any literal or variable [STRING](STRING.md) to build the checksum from.
 </blockquote>
 
@@ -176,6 +176,6 @@ Adler-32 Sum: 420906E6
 
 
 * Featured in our "Keyword of the Day" series
-* [_DEFLATE&dollar;](DEFLATE&dollar;.md) , [_INFLATE&dollar;](INFLATE&dollar;.md)
-* [_CRC32](CRC32.md) , [_MD5&dollar;](MD5&dollar;.md)
+* _DEFLATE$ , _INFLATE$
+* _CRC32 , _MD5$
 </blockquote>

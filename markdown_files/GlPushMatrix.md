@@ -137,8 +137,8 @@ br ~ h5 {
 
 
 * [SUB](SUB.md) _GL
-* [_glBegin](glBegin.md) , [_glEnd](glEnd.md) , [_glFrustum](glFrustum.md) , [_glLoadIdentity](glLoadIdentity.md)
-* _glLoadMatrix , [_glMatrixMode](glMatrixMode.md) , _glMultMatrix , [_glOrtho](glOrtho.md)
-* [_glPopMatrix](glPopMatrix.md) , _glRotate , _glScale , _glTranslate
-* [_glViewport](glViewport.md)
+* _glBegin , _glEnd , _glFrustum , _glLoadIdentity
+* _glLoadMatrix , _glMatrixMode , _glMultMatrix , _glOrtho
+* _glPopMatrix , _glRotate , _glScale , _glTranslate
+* _glViewport
 </blockquote>

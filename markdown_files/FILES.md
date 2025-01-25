@@ -129,7 +129,7 @@ br ~ h5 {
 * Illegal filename characters in QB64 include 
 * > < : " | \ / with any amount of dot extensions being allowed in Windows.
 * [FILES](FILES.md) lists can make the screen roll up. Try using [SHELL](SHELL.md) "DIR" with the /P option. DIR command .
-* To get individual directory entries use [_FILES&dollar;](FILES&dollar;.md) instead.
+* To get individual directory entries use _FILES$ instead.
 
 </blockquote>
 
@@ -151,11 +151,11 @@ FILES "*.BAS"
 <blockquote>
 
 
-* [_FILES&dollar;](FILES&dollar;.md)
+* _FILES$
 * [SHELL](SHELL.md)
 * [CHDIR](CHDIR.md) , [MKDIR](MKDIR.md)
 * [RMDIR](RMDIR.md) , [KILL](KILL.md)
-* [_CWD&dollar;](CWD&dollar;.md) , [_STARTDIR&dollar;](STARTDIR&dollar;.md)
-* [_FILEEXISTS](FILEEXISTS.md) , [_DIREXISTS](DIREXISTS.md)
-* [&dollar;CONSOLE](&dollar;CONSOLE.md)
+* _CWD$ , _STARTDIR$
+* _FILEEXISTS , _DIREXISTS
+* [\$CONSOLE](\$CONSOLE.md)
 </blockquote>

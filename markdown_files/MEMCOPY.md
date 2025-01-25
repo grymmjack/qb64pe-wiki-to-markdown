@@ -119,11 +119,11 @@ br ~ h5 {
 <blockquote>
 
 
-* sourceBlock is the source memory block name created [AS](AS.md) [_MEM](MEM.md) .
-* sourceBlock.OFFSET is the dot [_OFFSET](OFFSET.md) within the source memory block to read from.
+* sourceBlock is the source memory block name created [AS](AS.md) _MEM .
+* sourceBlock.OFFSET is the dot _OFFSET within the source memory block to read from.
 * sourceBlock.SIZE is the total number of bytes to transfer based on actual size.
-* destBlock is the destination [_MEM](MEM.md) memory block name to transfer data to.
-* destBlock.OFFSET is the dot [_OFFSET](OFFSET.md) within the dest [_MEM](MEM.md) memory block to write to.
+* destBlock is the destination _MEM memory block name to transfer data to.
+* destBlock.OFFSET is the dot _OFFSET within the dest _MEM memory block to write to.
 </blockquote>
 
 #### DESCRIPTION
@@ -131,7 +131,7 @@ br ~ h5 {
 <blockquote>
 
 
-* The dot OFFSET is the memory block's start location in memory. Add bytes to place data further into the block.
+* The dot [OFFSET](OFFSET.md) is the memory block's start location in memory. Add bytes to place data further into the block.
 * The dot SIZE is the total byte size of the memory block to transfer. You can transfer all or a portion of the data bytes.
 * The memory block regions may overlap.
 * Always free memory blocks after values have been transferred to variables and are no longer required.
@@ -171,9 +171,9 @@ _MEMFREE m: _MEMFREE n 'always clear the memory when done
 ```vb
 'copy array a to array b one index at a time:
 FOR i1 = 0 TO 100
-FOR i2 = 0 TO 100
-b(i1, i2) = a(i1, i2)
-NEXT
+   FOR i2 = 0 TO 100
+       b(i1, i2) = a(i1, i2)
+   NEXT
 NEXT
 
 'copy array a to array b in memory instantly:
@@ -193,9 +193,9 @@ _MEMFREE ma: _MEMFREE mb 'clear the memory when done
 <blockquote>
 
 
-* [_MEM](MEM.md) , [_MEM](MEM.md) (function)
-* [_MEMNEW](MEMNEW.md) , [_MEMGET](MEMGET.md) (function)
-* [_MEMIMAGE](MEMIMAGE.md) , [_MEMELEMENT](MEMELEMENT.md)
-* [_MEMGET](MEMGET.md) , [_MEMPUT](MEMPUT.md)
-* [_MEMFILL](MEMFILL.md) , [_MEMFREE](MEMFREE.md)
+* _MEM , _MEM (function)
+* _MEMNEW , _MEMGET (function)
+* _MEMIMAGE , _MEMELEMENT
+* _MEMGET , _MEMPUT
+* _MEMFILL , _MEMFREE
 </blockquote>

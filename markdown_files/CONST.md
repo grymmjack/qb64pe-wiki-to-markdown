@@ -131,12 +131,12 @@ br ~ h5 {
 
 
 * The constantName does not have to include a type suffix. The datatype is automatically infered by the compiler using the value .
-* Constant values cannot reference a variable, [SUB](SUB.md) or [FUNCTION](FUNCTION.md) return values when defined.
-* The exception to the above are color functions [_RGB32](RGB32.md) and [_RGBA32](RGBA32.md) , which can be used in a [CONST](CONST.md) statement. See Example 2 below.
+* Constant values cannot reference a variable or user [FUNCTION](FUNCTION.md) return value when defined. However, other (already known) constants and most of the internal char, math or color functions can be used, such as [CHR\$](CHR\$.md) , [EXP](EXP.md) or _RGBA32 .
 * Constants cannot be reassigned values. They retain the same value throughout all of the program procedures.
 * Constants defined in module-level code have shared scope, so they can also be used in [SUB](SUB.md) or [FUNCTION](FUNCTION.md) procedures.
 * Constants defined in [SUB](SUB.md) or [FUNCTION](FUNCTION.md) procedures are local to those procedures.
 * [CLEAR](CLEAR.md) will not affect or change constant values.
+* Since QB64-PE v4.0.0 a huge list of preset Constants is available in every program.
 
 </blockquote>
 
@@ -144,9 +144,6 @@ br ~ h5 {
 
 <blockquote>
 
-
-
-##### Example 1: Display the circumference and area of circles:
 ```vb
 ' Declare a numeric constant approximately equal to the ratio of a circle's
 ' circumference to its diameter:
@@ -157,12 +154,13 @@ CONST circumferenceText = "The circumference of the circle is"
 CONST areaText = "The area of the circle is"
 
 DO
-INPUT "Enter the radius of a circle or zero to quit"; radius
-IF radius = 0 THEN END
-PRINT circumferenceText; 2 * PI * radius
-PRINT areaText; PI * radius * radius ' radius squared
-PRINT
+   INPUT "Enter the radius of a circle or zero to quit"; radius
+   IF radius = 0 THEN END
+   PRINT circumferenceText; 2 * PI * radius
+   PRINT areaText; PI * radius * radius ' radius squared
+   PRINT
 LOOP
+END
 ```
   
 <br>
@@ -174,24 +172,37 @@ The area of the circle is 314.1593
 
 Enter the radius of a circle or zero to quit? 123.456
 The circumference of the circle is 775.697
-The area of the circle is 47882.23
+The area of the circle is 47882.226
 
 Enter the radius of a circle or zero to quit? 0
 ```
   
 <br>
 
-
-<div class="explanation">Explanation: PI cannot change as it is a mathematical constant so it is fitting to define it as a constant. Trying to change PI will result in a calculation error.</div>
-
-
-
-##### Example 2 : Using _RGB32 to set a constant's value.
 ```vb
-CONST Red = _RGB32(255,0,0)
+Explanation
+PI cannot change as it is a mathematical constant so it is fitting
+to define it as a constant. Trying to change PI will result in a
+calculation error.
+```
+  
+<br>
+
+```vb
+SCREEN _NEWIMAGE(640, 400, 32)
+
+CONST Red = _RGB32(255, 0, 0)
 
 COLOR Red
 PRINT "Hello World"
+
+END
+```
+  
+<br>
+
+```vb
+Hello World
 ```
   
 <br>
@@ -206,6 +217,6 @@ PRINT "Hello World"
 
 * [DIM](DIM.md) , [SHARED](SHARED.md)
 * [STATIC](STATIC.md) , [COMMON](COMMON.md)
-* [_PI](PI.md) , [_RGB32](RGB32.md) , [_RGBA32](RGBA32.md)
+* Constants (Defined by the Compiler)
 * Windows 32 API constant values
 </blockquote>

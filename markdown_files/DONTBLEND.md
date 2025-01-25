@@ -128,10 +128,10 @@ br ~ h5 {
 
 
 * If imageHandle& is not valid, an Invalid handle error will occur.
-* [_DONTBLEND](DONTBLEND.md) is faster than the default [_BLEND](BLEND.md) . You may want to disable it , unless you really need to use it in 32 bit.
-* 32 bit screen surface backgrounds (black) have zero [_ALPHA](ALPHA.md) so that they are transparent when placed over other surfaces.
-* Use [CLS](CLS.md) to make a new surface background [_ALPHA](ALPHA.md) 255 or opaque.
-* Both [_SOURCE](SOURCE.md) and [_DEST](DEST.md) must have [_BLEND](BLEND.md) enabled, or else colors will [NOT](NOT.md) blend.
+* _DONTBLEND is faster than the default _BLEND . You may want to disable it , unless you really need to use it in 32 bit.
+* 32 bit screen surface backgrounds (black) have zero _ALPHA so that they are transparent when placed over other surfaces.
+* Use [CLS](CLS.md) to make a new surface background _ALPHA 255 or opaque.
+* Both _SOURCE and _DEST must have _BLEND enabled, or else colors will [NOT](NOT.md) blend.
 
 </blockquote>
 
@@ -160,11 +160,11 @@ RestoreBackground b&
 END
 
 FUNCTION SaveBackground&
-SaveBackground& = _COPYIMAGE(0)
+   SaveBackground& = _COPYIMAGE(0)
 END FUNCTION
 
 SUB RestoreBackground (Image AS LONG)
-_PUTIMAGE , Image, 0
+   _PUTIMAGE , Image, 0
 END SUB
 ```
   
@@ -182,20 +182,20 @@ _DONTBLEND alphaSprite& ' turn off alpha-blending
 'Create a simple sprite with transparency
 _DEST alphaSprite&
 FOR y = 0 TO 63
-FOR x = 0 TO 63
-alpha = SQR((x - 32) ^ 2 + (y - 32) ^ 2) / 32
-IF alpha < 0 THEN alpha = 0
-alpha = (1 - alpha * alpha) 'parabolic curve
-PSET (x, y), _RGBA32(255, 255, 255, alpha * 255)
-NEXT
+   FOR x = 0 TO 63
+       alpha = SQR((x - 32) ^ 2 + (y - 32) ^ 2) / 32
+       IF alpha < 0 THEN alpha = 0
+       alpha = (1 - alpha * alpha) 'parabolic curve
+       PSET (x, y), _RGBA32(255, 255, 255, alpha * 255)
+   NEXT
 NEXT
 
 'Make a simple background texture
 _DEST 0
 FOR y = 1 TO 479
-FOR x = 0 TO 639
-PSET (x, y), _RGB32(x AND 255, y AND 255, (x XOR y) AND 255)
-NEXT
+   FOR x = 0 TO 639
+       PSET (x, y), _RGB32(x AND 255, y AND 255, (x XOR y) AND 255)
+   NEXT
 NEXT
 
 'Store background so we can show moveable objects on it
@@ -206,12 +206,12 @@ _BLEND alphaSprite&
 
 ph = 0
 DO: _LIMIT 60
-x = 320 - 250 * COS(ph) - (_WIDTH(alphaSprite&) \ 2)
-y = 240 - 150 * COS(ph * 1.3) - (_HEIGHT(alphaSprite&) \ 2)
-ph = ph + 0.03
-_PUTIMAGE , background&, 0
-_PUTIMAGE (x, y), alphaSprite&, 0
-_DISPLAY
+   x = 320 - 250 * COS(ph) - (_WIDTH(alphaSprite&) \ 2)
+   y = 240 - 150 * COS(ph * 1.3) - (_HEIGHT(alphaSprite&) \ 2)
+   ph = ph + 0.03
+   _PUTIMAGE , background&, 0
+   _PUTIMAGE (x, y), alphaSprite&, 0
+   _DISPLAY
 LOOP UNTIL LEN(INKEY$)
 ```
   
@@ -225,7 +225,7 @@ LOOP UNTIL LEN(INKEY$)
 <blockquote>
 
 
-* [_BLEND](BLEND.md)
-* [_BLEND](BLEND.md) (function)
+* _BLEND
+* _BLEND (function)
 * Images
 </blockquote>

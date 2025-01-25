@@ -138,5 +138,5 @@ PRINT nmb$
 
 * [DIM](DIM.md)
 * [SUB](SUB.md) , [FUNCTION](FUNCTION.md)
-* Arrays
+* [Arrays](Arrays.md)
 </blockquote>

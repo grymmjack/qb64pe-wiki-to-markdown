@@ -120,7 +120,7 @@ br ~ h5 {
 
 
 * Use the device% [INTEGER](INTEGER.md) returned to find the number of the controller device being used.
-* A literal specific device_number% parameter can be used to return -1 if active or 0 if inactive, e.g. [WHILE](WHILE.md) [_DEVICEINPUT](DEVICEINPUT.md) ( 2 ) .
+* A literal specific device_number% parameter can be used to return -1 if active or 0 if inactive, e.g. [WHILE](WHILE.md) _DEVICEINPUT ( 2 ) .
 </blockquote>
 
 #### DESCRIPTION
@@ -128,13 +128,13 @@ br ~ h5 {
 <blockquote>
 
 
-* Use [_DEVICES](DEVICES.md) to find the number of controller devices available BEFORE using this function.
-* [_DEVICE&dollar;](DEVICE&dollar;.md) can be used to list the device names and control types using valid [_DEVICES](DEVICES.md) numbers.
+* Use _DEVICES to find the number of controller devices available BEFORE using this function.
+* _DEVICE$ can be used to list the device names and control types using valid _DEVICES numbers.
 * When a device button is pressed or a scroll wheel or axis is moved, the device number will be returned.
 * Devices are numbered as 1 for keyboard and 2 for mouse. Other controller devices will be numbered 3 or higher if installed.
-* [_LASTBUTTON](LASTBUTTON.md) , [_LASTAXIS](LASTAXIS.md) , or [_LASTWHEEL](LASTWHEEL.md) will indicate the number of functions available with the specified device% number.
-* User input events can be monitored reading valid numbered [_AXIS](AXIS.md) , [_BUTTON](BUTTON.md) , [_BUTTONCHANGE](BUTTONCHANGE.md) or [_WHEEL](WHEEL.md) functions.
-* [ON](ON.md) [_DEVICEINPUT](DEVICEINPUT.md) [GOSUB](GOSUB.md) keyboard, mouse, gamecontrol could be used to easily branch to device specific handler routines (see Example 3 below).
+* _LASTBUTTON , _LASTAXIS , or _LASTWHEEL will indicate the number of functions available with the specified device% number.
+* User input events can be monitored reading valid numbered _AXIS , _BUTTON , _BUTTONCHANGE or _WHEEL functions.
+* [ON](ON.md) _DEVICEINPUT [GOSUB](GOSUB.md) keyboard, mouse, gamecontrol could be used to easily branch to device specific handler routines (see Example 3 below).
 
 </blockquote>
 
@@ -144,14 +144,14 @@ br ~ h5 {
 
 ```vb
 FOR i% = 1 TO _DEVICES
-PRINT STR$(i%) + ") " + _DEVICE$(i%)
-PRINT "Button:"; _LASTBUTTON(i%); ",Axis:"; _LASTAXIS(i%); ",Wheel:"; _LASTWHEEL(i%)
+   PRINT STR$(i%) + ") " + _DEVICE$(i%)
+   PRINT "Button:"; _LASTBUTTON(i%); ",Axis:"; _LASTAXIS(i%); ",Wheel:"; _LASTWHEEL(i%)
 NEXT i%
 
 PRINT
 DO
-x% = _DEVICEINPUT
-IF x% THEN PRINT "Device ="; x%;
+   x% = _DEVICEINPUT
+   IF x% THEN PRINT "Device ="; x%;
 LOOP UNTIL INKEY$ = CHR$(27)
 
 END
@@ -187,10 +187,10 @@ PRINT "Move your mouse and/or your mouse wheel (ESC to exit)"
 
 d% = _DEVICES 'always read number of devices to enable device input
 DO
-_LIMIT 30 'main loop
-DO WHILE _DEVICEINPUT(2) 'loop only runs during a device 2 mouse event
-PRINT _WHEEL(1), _WHEEL(2), _WHEEL(3)
-LOOP
+   _LIMIT 30 'main loop
+   DO WHILE _DEVICEINPUT(2) 'loop only runs during a device 2 mouse event
+       PRINT _WHEEL(1), _WHEEL(2), _WHEEL(3)
+   LOOP
 LOOP UNTIL INKEY$ = CHR$(27)
 
 END
@@ -202,7 +202,7 @@ END
 Explanation
 Referencing the _MOUSEMOVEMENTX function hides the mouse and sets
 the mouse to a relative movement mode which can be read by _WHEEL.
-_DEVICEINPUT(2) returns -1 (true) only when the mouse is moved,
+_DEVICEINPUT(2) returns true(-1) only when the mouse is moved,
 scrolled or clicked.
 ```
   
@@ -212,13 +212,13 @@ scrolled or clicked.
 n% = _DEVICES 'required when reading devices
 PRINT "Number of devices found ="; n%
 FOR i% = 1 TO n%
-PRINT i%; _DEVICE$(i%) '1 = keyboard, 2 = mouse, 3 = other controller, etc.
+   PRINT i%; _DEVICE$(i%) '1 = keyboard, 2 = mouse, 3 = other controller, etc.
 NEXT i%
 
 PRINT
 DO
-device% = _DEVICEINPUT
-ON device% GOSUB keyboard, mouse, controller 'must be inside program loop
+   device% = _DEVICEINPUT
+   ON device% GOSUB keyboard, mouse, controller 'must be inside program loop
 LOOP UNTIL INKEY$ = CHR$(27)
 
 END
@@ -254,10 +254,10 @@ the order of line labels listed in the event used inside loops.
 <blockquote>
 
 
-* [_DEVICES](DEVICES.md) , [_DEVICE&dollar;](DEVICE&dollar;.md)
-* [_LASTBUTTON](LASTBUTTON.md) , [_LASTAXIS](LASTAXIS.md) , [_LASTWHEEL](LASTWHEEL.md)
-* [_BUTTON](BUTTON.md) , [_AXIS](AXIS.md) , [_WHEEL](WHEEL.md)
+* _DEVICES , _DEVICE$
+* _LASTBUTTON , _LASTAXIS , _LASTWHEEL
+* _BUTTON , _AXIS , _WHEEL
 * [STRIG](STRIG.md) , [STICK](STICK.md)
-* ON...GOSUB
+* [ON...GOSUB](ON...GOSUB.md)
 * Controller Devices
 </blockquote>

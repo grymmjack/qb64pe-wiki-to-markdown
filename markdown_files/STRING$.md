@@ -120,7 +120,7 @@ br ~ h5 {
 
 
 * count& is the number of times the character specified by character is repeated.
-* Character is a literal string character, a string variable or an ASCII code number.
+* Character is a literal string character, a string variable or an [ASCII](ASCII.md) code number.
 * If count& is negative, an illegal function call error will occur. The count can be zero.
 * If character is a [STRING](STRING.md) value and its length is zero, an illegal function call error will occur.
 * If more than one string character value is used, the first character will be repeated.
@@ -169,7 +169,7 @@ BAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD
 <blockquote>
 
 
-* [SPACE&dollar;](SPACE&dollar;.md)
-* [ASC](ASC.md) , [CHR&dollar;](CHR&dollar;.md)
-* ASCII
+* [SPACE\$](SPACE\$.md)
+* [ASC](ASC.md) , [CHR\$](CHR\$.md)
+* [ASCII](ASCII.md)
 </blockquote>

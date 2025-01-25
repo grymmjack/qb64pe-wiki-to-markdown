@@ -118,6 +118,6 @@ br ~ h5 {
 <blockquote>
 
 
-* Colon , Comma , Semicolon
-* IF...THEN
+* [Colon](Colon.md) , [Comma](Comma.md) , [Semicolon](Semicolon.md)
+* [IF...THEN](IF...THEN.md)
 </blockquote>

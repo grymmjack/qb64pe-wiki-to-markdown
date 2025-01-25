@@ -6,13 +6,13 @@
    $IF - QB64 Phoenix Edition Wiki
   </title>
   <script>
-   document.documentElement.className="client-js";RLCONF={"wgBreakFrames":false,"wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgRequestId":"Zp2E0BpdvGGeVdK1DlhbugAAAkg","wgCSPNonce":false,"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"$IF","wgTitle":"$IF","wgCurRevisionId":8323,"wgRevisionId":8323,"wgArticleId":154,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":[],"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgRelevantPageName":"$IF","wgRelevantArticleId":154,"wgIsProbablyEditable":false,"wgRelevantPageIsProbablyEditable":false,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgVector2022PreviewPages":[]};RLSTATE={"site.styles":"ready","user.styles":"ready","user":"ready",
-"user.options":"loading","skins.vector.styles.legacy":"ready"};RLPAGEMODULES=["site","mediawiki.page.ready","mediawiki.toc","skins.vector.legacy.js"];
+   document.documentElement.className="client-js";RLCONF={"wgBreakFrames":false,"wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgRequestId":"Z5RhRjqafTy_MWwYEqvCPgAAAHA","wgCSPNonce":false,"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"$IF","wgTitle":"$IF","wgCurRevisionId":9506,"wgRevisionId":9506,"wgArticleId":154,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":[],"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgRelevantPageName":"$IF","wgRelevantArticleId":154,"wgIsProbablyEditable":false,"wgRelevantPageIsProbablyEditable":false,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgVector2022PreviewPages":[]};RLSTATE={"site.styles":"ready","user.styles":"ready","user":"ready",
+"user.options":"loading","mediawiki.page.gallery.styles":"ready","skins.vector.styles.legacy":"ready"};RLPAGEMODULES=["site","mediawiki.page.ready","mediawiki.toc","skins.vector.legacy.js"];
   </script>
   <script>
    (RLQ=window.RLQ||[]).push(function(){mw.loader.implement("user.options@12s5i",function($,jQuery,require,module){mw.user.tokens.set({"patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});});});
   </script>
-  <link href="/qb64wiki/load.php?lang=en&amp;modules=skins.vector.styles.legacy&amp;only=styles&amp;skin=vector" rel="stylesheet"/>
+  <link href="/qb64wiki/load.php?lang=en&amp;modules=mediawiki.page.gallery.styles%7Cskins.vector.styles.legacy&amp;only=styles&amp;skin=vector" rel="stylesheet"/>
   <script async="" src="/qb64wiki/load.php?lang=en&amp;modules=startup&amp;only=scripts&amp;raw=1&amp;skin=vector">
   </script>
   <meta content="" name="ResourceLoaderDynamicStyles"/>
@@ -64,7 +64,7 @@
        <b>
         $IF
        </b>
-       is precompiler
+       is an precompiler
        <a href="/qb64wiki/index.php/Metacommand" title="Metacommand">
         metacommand
        </a>
@@ -100,9 +100,19 @@
              </a>
             </li>
             <li class="toclevel-1">
-             <a href="#Description">
+             <a href="#Parameters">
               <span class="tocnumber">
                2
+              </span>
+              <span class="toctext">
+               Parameters
+              </span>
+             </a>
+            </li>
+            <li class="toclevel-1">
+             <a href="#Description">
+              <span class="tocnumber">
+               3
               </span>
               <span class="toctext">
                Description
@@ -110,9 +120,19 @@
              </a>
             </li>
             <li class="toclevel-1">
+             <a href="#Availability">
+              <span class="tocnumber">
+               4
+              </span>
+              <span class="toctext">
+               Availability
+              </span>
+             </a>
+            </li>
+            <li class="toclevel-1">
              <a href="#Examples">
               <span class="tocnumber">
-               3
+               5
               </span>
               <span class="toctext">
                Examples
@@ -122,7 +142,7 @@
             <li class="toclevel-1">
              <a href="#See_also">
               <span class="tocnumber">
-               4
+               6
               </span>
               <span class="toctext">
                See also
@@ -145,19 +165,43 @@
         <a class="mw-selflink selflink">
          $IF
         </a>
-        variable = expression THEN
+        <i>
+         variable
+        </i>
+        [op value]
+        <a href="/qb64wiki/index.php/THEN" title="THEN">
+         THEN
+        </a>
        </dd>
        <dd>
-        .
+        ⋮
+       </dd>
+       <dd>
+        ⋮   'some code here
+       </dd>
+       <dd>
+        ⋮
        </dd>
        <dd>
         <a class="mw-redirect" href="/qb64wiki/index.php/$ELSEIF" title="$ELSEIF">
          $ELSEIF
         </a>
-        variable = expression THEN
+        <i>
+         variable
+        </i>
+        [op value]
+        <a href="/qb64wiki/index.php/THEN" title="THEN">
+         THEN
+        </a>
        </dd>
        <dd>
-        .
+        ⋮
+       </dd>
+       <dd>
+        ⋮   'some code here
+       </dd>
+       <dd>
+        ⋮
        </dd>
        <dd>
         <a class="mw-redirect" href="/qb64wiki/index.php/$ELSE" title="$ELSE">
@@ -165,7 +209,13 @@
         </a>
        </dd>
        <dd>
-        .
+        ⋮
+       </dd>
+       <dd>
+        ⋮   'some code here
+       </dd>
+       <dd>
+        ⋮
        </dd>
        <dd>
         <a class="mw-redirect" href="/qb64wiki/index.php/$END_IF" title="$END IF">
@@ -177,28 +227,114 @@
        <br/>
       </p>
       <h2>
+       <span class="mw-headline" id="Parameters">
+        Parameters
+       </span>
+      </h2>
+      <ul>
+       <li>
+        The
+        <i>
+         variable
+        </i>
+        is the name of any preset (see below) or self-defined (see
+        <a href="/qb64wiki/index.php/$LET" title="$LET">
+         $LET
+        </a>
+        ) precompiler variable.
+       </li>
+       <li>
+        The optional right part must begin with any
+        <a href="/qb64wiki/index.php/Relational_Operations" title="Relational Operations">
+         relational operator
+        </a>
+        followed by the value to compare the variable with, using the given operator.
+        <ul>
+         <li>
+          The
+          <a href="/qb64wiki/index.php/Equal" title="Equal">
+           equal (=)
+          </a>
+          operator also allows to check for the special values
+          <b>
+           DEFINED
+          </b>
+          and
+          <b>
+           UNDEFINED
+          </b>
+          .
+         </li>
+        </ul>
+       </li>
+       <li>
+        Multiple relational compares may be combined using the
+        <a href="/qb64wiki/index.php/AND" title="AND">
+         AND
+        </a>
+        ,
+        <a href="/qb64wiki/index.php/OR" title="OR">
+         OR
+        </a>
+        ,
+        <a class="mw-redirect" href="/qb64wiki/index.php/XOR" title="XOR">
+         XOR
+        </a>
+        operators as needed.
+        <ul>
+         <li>
+          Note that the other logic operators are not supported by the precompiler.
+         </li>
+        </ul>
+       </li>
+      </ul>
+      <p>
+       <br/>
+      </p>
+      <h2>
        <span class="mw-headline" id="Description">
         Description
        </span>
       </h2>
       <ul>
        <li>
-        $IF is the start of a precompiler code block which includes or excludes sections of code from being compiled.
-       </li>
-       <li>
-        There is no single line $IF statement.  $IF must be in a valid $IF THEN...$END IF block to work properly.
-       </li>
-       <li>
-        Like all other metacommands, you can not use more than one metacommand per line.
         <b>
-         Use of : to separate statements in a single line is not allowed.
+         $IF
         </b>
+        is the start of a precompiler code block which includes or excludes sections of code from being compiled.
        </li>
        <li>
-        Variable names can contain numbers, letters and periods, in any order.
+        There is no single line
+        <b>
+         $IF
+        </b>
+        statement, it must be used in a valid
+        <b>
+         $IF...THEN...$END IF
+        </b>
+        block to work properly.
        </li>
        <li>
-        Expressions can contain one set of leading and/or trailing quotes; and any number of numbers, letters and periods, in any order.
+        Like all other metacommands, you can not use more than one metacommand per line. The use of a colon (:) to separate multiple statements in a single line is not allowed.
+       </li>
+       <li>
+        Variable names must follow QB64's variable naming conventions. They will be capitalized automatically.
+       </li>
+       <li>
+        Values may contain any number of periods to separate numbers or words in a string, e.g. in version numbers such as
+        <b>
+         3.14.1
+        </b>
+        or strings like
+        <b>
+         MARY.HAD.A.LITTLE.LAMB
+        </b>
+        etc..
+        <ul>
+         <li>
+          Note that strings may not contain spaces and must be given without leading/trailing quotes.
+         </li>
+        </ul>
        </li>
        <li>
         The precompiler comes with some preset values which can be used to help determine which code blocks to include/exclude.  These are:
@@ -211,13 +347,29 @@
           <b>
            WINDOWS
           </b>
-          if the user is running QB64 in a Windows environment.
+          is
+          <i>
+           true(-1)
+          </i>
+          if the user is running QB64 in a Windows environment, it is
+          <i>
+           false(0)
+          </i>
+          otherwise.
          </li>
          <li>
           <b>
            LINUX
           </b>
-          if the user is running QB64 in a Linux environment.
+          is
+          <i>
+           true(-1)
+          </i>
+          if the user is running QB64 in a Linux environment, it is
+          <i>
+           false(0)
+          </i>
+          otherwise.
          </li>
          <li>
           <b>
@@ -227,30 +379,183 @@
           <b>
            MACOSX
           </b>
-          if the user is running QB64 in a macOS environment.
+          is
+          <i>
+           true(-1)
+          </i>
+          if the user is running QB64 in a macOS environment, it is
+          <i>
+           false(0)
+          </i>
+          otherwise.
          </li>
          <li>
           <b>
            32BIT
           </b>
-          if the user is running a 32-bit version of QB64.
+          is
+          <i>
+           true(-1)
+          </i>
+          if the user is running a 32-bit version of QB64., it is
+          <i>
+           false(0)
+          </i>
+          otherwise.
          </li>
          <li>
           <b>
            64BIT
           </b>
-          if the user is running a 64-bit version of QB64.
+          is
+          <i>
+           true(-1)
+          </i>
+          if the user is running a 64-bit version of QB64., it is
+          <i>
+           false(0)
+          </i>
+          otherwise.
          </li>
          <li>
           <b>
            VERSION
           </b>
-          , which is set to the version of the QB64 compiler. This is a number and can be ordered, see example below.
+          , which is set to the version of the QB64 compiler.
          </li>
         </ul>
        </li>
        <li>
-        Special values
+        Some new presets have been introduced with QB64-PE v4.0.0, these are:
+        <ul>
+         <li>
+          <b>
+           _QB64PE_
+          </b>
+          is always
+          <i>
+           true(-1)
+          </i>
+          , it indicates the use of the QB64 Phoenix Edition compiler at least v4.0.0
+         </li>
+         <li>
+          <b>
+           _ASSERTS_
+          </b>
+          is
+          <i>
+           one(1)
+          </i>
+          if
+          <a href="/qb64wiki/index.php/$ASSERTS" title="$ASSERTS">
+           $ASSERTS
+          </a>
+          or
+          <a href="/qb64wiki/index.php/$ASSERTS" title="$ASSERTS">
+           $ASSERTS:CONSOLE
+          </a>
+          is used, it is
+          <i>
+           zero(0)
+          </i>
+          otherwise.
+         </li>
+         <li>
+          <b>
+           _CONSOLE_
+          </b>
+          is
+          <i>
+           one(1)
+          </i>
+          if a console is active either by using
+          <a href="/qb64wiki/index.php/$CONSOLE" title="$CONSOLE">
+           $CONSOLE
+          </a>
+          directly or implied by
+          <a href="/qb64wiki/index.php/$ASSERTS" title="$ASSERTS">
+           $ASSERTS:CONSOLE
+          </a>
+          , it is
+          <i>
+           two(2)
+          </i>
+          if
+          <a href="/qb64wiki/index.php/$CONSOLE" title="$CONSOLE">
+           $CONSOLE:ONLY
+          </a>
+          is set, it is
+          <i>
+           zero(0)
+          </i>
+          if no console is available (both console variants may appear multiple times in a program, the last found one determines the final state).
+         </li>
+         <li>
+          <b>
+           _DEBUG_
+          </b>
+          is
+          <i>
+           one(1)
+          </i>
+          if
+          <a href="/qb64wiki/index.php/$DEBUG" title="$DEBUG">
+           $DEBUG
+          </a>
+          is used, it is
+          <i>
+           zero(0)
+          </i>
+          otherwise.
+         </li>
+         <li>
+          <b>
+           _EXPLICIT_
+          </b>
+          is
+          <i>
+           one(1)
+          </i>
+          if the program uses
+          <a href="/qb64wiki/index.php/OPTION_EXPLICIT" title="OPTION EXPLICIT">
+           OPTION _EXPLICIT
+          </a>
+          , it is
+          <i>
+           zero(0)
+          </i>
+          otherwise (note OE also implies
+          <b>
+           OPTION _EXPLICITARRAY
+          </b>
+          ).
+         </li>
+         <li>
+          <b>
+           _EXPLICITARRAY_
+          </b>
+          is
+          <i>
+           one(1)
+          </i>
+          if the program uses
+          <a href="/qb64wiki/index.php/OPTION_EXPLICITARRAY" title="OPTION EXPLICITARRAY">
+           OPTION _EXPLICITARRAY
+          </a>
+          or
+          <a href="/qb64wiki/index.php/OPTION_EXPLICIT" title="OPTION EXPLICIT">
+           OPTION _EXPLICIT
+          </a>
+          , it is
+          <i>
+           zero(0)
+          </i>
+          otherwise.
+         </li>
+        </ul>
+       </li>
+       <li>
+        You can check a precompiler variable against special values
         <b>
          DEFINED
         </b>
@@ -258,35 +563,247 @@
         <b>
          UNDEFINED
         </b>
-        can be used to check whether a precompiler variable has already been assigned a value. Useful for code in libraries which may be repeated.
+        , in order to assess whether the variable has already been assigned a value. Useful for code in libraries which may be repeated.
        </li>
        <li>
-        <a class="mw-redirect" href="/qb64wiki/index.php/$END_IF" title="$END IF">
+        <b>
          $END IF
-        </a>
-        denotes the end of a valid precompiler $IF block.
+        </b>
+        denotes the end of a valid precompiler
+        <b>
+         $IF
+        </b>
+        block.
        </li>
        <li>
-        <a class="mw-redirect" href="/qb64wiki/index.php/$ELSEIF" title="$ELSEIF">
+        <b>
          $ELSEIF
-        </a>
-        must follow a valid $IF or $ELSEIF statement.
+        </b>
+        must follow a valid
+        <b>
+         $IF
+        </b>
+        or
+        <b>
+         $ELSEIF
+        </b>
+        block.
        </li>
        <li>
         If
-        <a class="mw-redirect" href="/qb64wiki/index.php/$ELSE" title="$ELSE">
+        <b>
          $ELSE
-        </a>
-        is used, it must be used as the last conditional check before $END IF.  $ELSEIF cannot come after $ELSE.
+        </b>
+        is used, then it must be the last block before
+        <b>
+         $END IF
+        </b>
+        .  There can be no additional
+        <b>
+         $ELSEIF
+        </b>
+        blocks after the
+        <b>
+         $ELSE
+        </b>
+        block.
+       </li>
+       <li>
+        Only be one
+        <b>
+         $ELSE
+        </b>
+        block is allowed in an
+        <b>
+         $IF-$ELSEIF-$ELSE-$END IF
+        </b>
+        construct.
+       </li>
+      </ul>
+      <dl>
+       <dt>
+        Important notes regarding the preset values
+       </dt>
+       <dd>
         <ul>
          <li>
-          There can only be one $ELSE in an
-          <b>
-           $IF-$ELSEIF-$ELSE-$END IF
-          </b>
-          block, and it must be the last block selection before the $END IF.  $ELSEIF cannot follow $ELSE.
+          All presets are
+          <span style="color:red;">
+           <b>
+            read-only
+           </b>
+          </span>
+          values and cannot be redefined by using
+          <a href="/qb64wiki/index.php/$LET" title="$LET">
+           $LET
+          </a>
+          on it.
+         </li>
+         <li>
+          The presets shall just serve the ability, for library makers, to easily check what features are active in a program, they shall otherwise not be
+          <span style="color:red;">
+           <b>
+            misused to enforce
+           </b>
+          </span>
+          certain features, e.g.
          </li>
         </ul>
+        <dl>
+         <dd>
+          <ul>
+           <li>
+            don't check for
+            <b>
+             _CONSOLE_
+            </b>
+            and force one to open, if none is there,
+           </li>
+           <li>
+            don't check for
+            <b>
+             _EXPLICIT_
+            </b>
+            and force it, if it's not in effect, etc.
+           </li>
+          </ul>
+         </dd>
+        </dl>
+        <ul>
+         <li>
+          Think of it like checking for
+          <b>
+           WINDOWS
+          </b>
+          and if it's not forcing the user to buy a Windows system or checking for
+          <b>
+           32BIT
+          </b>
+          and if it's not forcing the user to downgrade his 64-bit system. You wouldn't do that, right? And by that means you also should not enforce things, which the user did not already use in his program.
+         </li>
+        </ul>
+       </dd>
+      </dl>
+      <p>
+       <br/>
+      </p>
+      <h2>
+       <span class="mw-headline" id="Availability">
+        Availability
+       </span>
+      </h2>
+      <ul class="gallery mw-gallery-nolines">
+       <li class="gallerybox" style="width: 53px">
+        <div style="width: 53px">
+         <div class="thumb" style="width: 48px;">
+          <div style="margin:0px auto;">
+           <a class="image" href="/qb64wiki/index.php/File:Qb64.png" title="v1.0">
+            <img alt="v1.0" decoding="async" height="48" src="/qb64wiki/images/9/91/Qb64.png" width="48"/>
+           </a>
+          </div>
+         </div>
+         <div class="gallerytext">
+          <p>
+           <b>
+            v1.0
+           </b>
+          </p>
+         </div>
+        </div>
+       </li>
+       <li class="gallerybox" style="width: 53px">
+        <div style="width: 53px">
+         <div class="thumb" style="width: 48px;">
+          <div style="margin:0px auto;">
+           <a class="image" href="/qb64wiki/index.php/File:Qbpe.png" title="all">
+            <img alt="all" decoding="async" height="48" src="/qb64wiki/images/0/07/Qbpe.png" width="48"/>
+           </a>
+          </div>
+         </div>
+         <div class="gallerytext">
+          <p>
+           <b>
+            all
+           </b>
+          </p>
+         </div>
+        </div>
+       </li>
+       <li class="gallerybox" style="width: 53px">
+        <div style="width: 53px">
+         <div class="thumb" style="width: 48px;">
+          <div style="margin:0px auto;">
+           <a class="image" href="/qb64wiki/index.php/File:Apix.png">
+            <img alt="Apix.png" decoding="async" height="48" src="/qb64wiki/images/5/5f/Apix.png" width="48"/>
+           </a>
+          </div>
+         </div>
+         <div class="gallerytext">
+         </div>
+        </div>
+       </li>
+       <li class="gallerybox" style="width: 53px">
+        <div style="width: 53px">
+         <div class="thumb" style="width: 48px;">
+          <div style="margin:0px auto;">
+           <a class="image" href="/qb64wiki/index.php/File:Win.png" title="yes">
+            <img alt="yes" decoding="async" height="48" src="/qb64wiki/images/2/29/Win.png" width="48"/>
+           </a>
+          </div>
+         </div>
+         <div class="gallerytext">
+          <p>
+           <b>
+            yes
+           </b>
+          </p>
+         </div>
+        </div>
+       </li>
+       <li class="gallerybox" style="width: 53px">
+        <div style="width: 53px">
+         <div class="thumb" style="width: 48px;">
+          <div style="margin:0px auto;">
+           <a class="image" href="/qb64wiki/index.php/File:Lnx.png" title="yes">
+            <img alt="yes" decoding="async" height="48" src="/qb64wiki/images/7/7a/Lnx.png" width="48"/>
+           </a>
+          </div>
+         </div>
+         <div class="gallerytext">
+          <p>
+           <b>
+            yes
+           </b>
+          </p>
+         </div>
+        </div>
+       </li>
+       <li class="gallerybox" style="width: 53px">
+        <div style="width: 53px">
+         <div class="thumb" style="width: 48px;">
+          <div style="margin:0px auto;">
+           <a class="image" href="/qb64wiki/index.php/File:Osx.png" title="yes">
+            <img alt="yes" decoding="async" height="48" src="/qb64wiki/images/2/22/Osx.png" width="48"/>
+           </a>
+          </div>
+         </div>
+         <div class="gallerytext">
+          <p>
+           <b>
+            yes
+           </b>
+          </p>
+         </div>
+        </div>
+       </li>
+      </ul>
+      <ul>
+       <li>
+        In
+        <b>
+         QB64-PE v4.0.0
+        </b>
+        several new presets got added into the precompiler (see above).
        </li>
       </ul>
       <p>
@@ -453,40 +970,40 @@
       </center>
       <!-- 
 NewPP limit report
-Cached time: 20240721025941
+Cached time: 20250124222554
 Cache expiry: 86400
 Reduced expiry: false
 Complications: [show‐toc]
-CPU time usage: 0.042 seconds
-Real time usage: 0.050 seconds
-Preprocessor visited node count: 290/1000000
-Post‐expand include size: 2570/2097152 bytes
-Template argument size: 476/2097152 bytes
+CPU time usage: 0.075 seconds
+Real time usage: 0.105 seconds
+Preprocessor visited node count: 330/1000000
+Post‐expand include size: 2789/2097152 bytes
+Template argument size: 545/2097152 bytes
 Highest expansion depth: 4/100
 Expensive parser function count: 0/100
 Unstrip recursion depth: 0/20
-Unstrip post‐expand size: 67/5000000 bytes
+Unstrip post‐expand size: 2426/5000000 bytes
 -->
       <!--
 Transclusion expansion time report (%,ms,calls,template)
-100.00%   26.991      1 -total
- 14.42%    3.893     14 Template:Cm
-  9.80%    2.646     14 Template:Text
-  9.40%    2.538      1 Template:PageSyntax
-  8.60%    2.321      8 Template:Cl
-  8.55%    2.309      1 Template:PageNavigation
-  7.90%    2.131      3 Template:CodeStart
-  7.25%    1.956      3 Template:CodeEnd
-  7.24%    1.953      1 Template:PageSeeAlso
-  7.10%    1.917      1 Template:PageDescription
+100.00%   73.951      1 -total
+  9.30%    6.877     14 Template:Cm
+  6.36%    4.702      1 Template:PageDescription
+  5.51%    4.075     16 Template:Text
+  4.16%    3.073      1 Template:PageSeeAlso
+  4.15%    3.066      1 Template:PageParameters
+  4.07%    3.011      1 Template:PageSyntax
+  3.93%    2.909      8 Template:Cl
+  3.76%    2.778      3 Template:CodeEnd
+  3.66%    2.710      3 Template:CodeStart
 -->
-      <!-- Saved in parser cache with key qb64pnix_mw19894-mwmb_:pcache:idhash:154-0!canonical and timestamp 20240721025941 and revision id 8323.
+      <!-- Saved in parser cache with key qb64pnix_mw19894-mwmb_:pcache:idhash:154-0!canonical and timestamp 20250124222554 and revision id 9506.
  -->
      </div>
      <div class="printfooter" data-nosnippet="">
       Retrieved from "
-      <a dir="ltr" href="https://qb64phoenix.com/qb64wiki/index.php?title=$IF&amp;oldid=8323">
-       https://qb64phoenix.com/qb64wiki/index.php?title=$IF&amp;oldid=8323
+      <a dir="ltr" href="https://qb64phoenix.com/qb64wiki/index.php?title=$IF&amp;oldid=9506">
+       https://qb64phoenix.com/qb64wiki/index.php?title=$IF&amp;oldid=9506
       </a>
       "
      </div>
@@ -703,7 +1220,7 @@ You can view its source [e]">
         </a>
        </li>
        <li class="mw-list-item" id="t-permalink">
-        <a href="/qb64wiki/index.php?title=$IF&amp;oldid=8323" title="Permanent link to this revision of this page">
+        <a href="/qb64wiki/index.php?title=$IF&amp;oldid=9506" title="Permanent link to this revision of this page">
          <span>
           Permanent link
          </span>
@@ -724,7 +1241,7 @@ You can view its source [e]">
   <footer class="mw-footer" id="footer" role="contentinfo">
    <ul id="footer-info">
     <li id="footer-info-lastmod">
-     This page was last edited on 28 March 2023, at 12:21.
+     This page was last edited on 25 December 2024, at 14:18.
     </li>
    </ul>
    <ul id="footer-places">
@@ -753,7 +1270,7 @@ You can view its source [e]">
    </ul>
   </footer>
   <script>
-   (RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgPageParseReport":{"limitreport":{"cputime":"0.042","walltime":"0.050","ppvisitednodes":{"value":290,"limit":1000000},"postexpandincludesize":{"value":2570,"limit":2097152},"templateargumentsize":{"value":476,"limit":2097152},"expansiondepth":{"value":4,"limit":100},"expensivefunctioncount":{"value":0,"limit":100},"unstrip-depth":{"value":0,"limit":20},"unstrip-size":{"value":67,"limit":5000000},"timingprofile":["100.00%   26.991      1 -total"," 14.42%    3.893     14 Template:Cm","  9.80%    2.646     14 Template:Text","  9.40%    2.538      1 Template:PageSyntax","  8.60%    2.321      8 Template:Cl","  8.55%    2.309      1 Template:PageNavigation","  7.90%    2.131      3 Template:CodeStart","  7.25%    1.956      3 Template:CodeEnd","  7.24%    1.953      1 Template:PageSeeAlso","  7.10%    1.917      1 Template:PageDescription"]},"cachereport":{"timestamp":"20240721025941","ttl":86400,"transientcontent":false}}});mw.config.set({"wgBackendResponseTime":94});});
+   (RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgPageParseReport":{"limitreport":{"cputime":"0.075","walltime":"0.105","ppvisitednodes":{"value":330,"limit":1000000},"postexpandincludesize":{"value":2789,"limit":2097152},"templateargumentsize":{"value":545,"limit":2097152},"expansiondepth":{"value":4,"limit":100},"expensivefunctioncount":{"value":0,"limit":100},"unstrip-depth":{"value":0,"limit":20},"unstrip-size":{"value":2426,"limit":5000000},"timingprofile":["100.00%   73.951      1 -total","  9.30%    6.877     14 Template:Cm","  6.36%    4.702      1 Template:PageDescription","  5.51%    4.075     16 Template:Text","  4.16%    3.073      1 Template:PageSeeAlso","  4.15%    3.066      1 Template:PageParameters","  4.07%    3.011      1 Template:PageSyntax","  3.93%    2.909      8 Template:Cl","  3.76%    2.778      3 Template:CodeEnd","  3.66%    2.710      3 Template:CodeStart"]},"cachereport":{"timestamp":"20250124222554","ttl":86400,"transientcontent":false}}});mw.config.set({"wgBackendResponseTime":83});});
   </script>
  </body>
 </html>

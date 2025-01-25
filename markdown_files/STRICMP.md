@@ -137,8 +137,8 @@ br ~ h5 {
 
 
 * Featured in our "Keyword of the Day" series
-* [_STRCMP](STRCMP.md)
-* [STR&dollar;](STR&dollar;.md)
+* _STRCMP
+* [STR\$](STR\$.md)
 * [STRING](STRING.md)
-* ASCII
+* [ASCII](ASCII.md)
 </blockquote>

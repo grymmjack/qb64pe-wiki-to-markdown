@@ -142,7 +142,7 @@ DebugLine:
 PRINT "An error occurred. Please contact support with the following details:
 PRINT "ERROR "; ERR; " ON LINE: "; _ERRORLINE
 IF _INCLERRORLINE THEN
-PRINT "    IN MODULE "; _INCLERRORFILE$; " (line"; _INCLERRORLINE; ")"
+   PRINT "    IN MODULE "; _INCLERRORFILE$; " (line"; _INCLERRORLINE; ")"
 END IF
 RESUME NEXT
 ```
@@ -155,7 +155,7 @@ ERROR  250  ON LINE:  6
 
 An error occurred. Please contact support with the following details:
 ERROR  250  ON LINE:  9
-IN MODULE haserror.bi ( line 1 )
+   IN MODULE haserror.bi ( line 1 )
 ```
   
 <br>
@@ -168,9 +168,9 @@ IN MODULE haserror.bi ( line 1 )
 <blockquote>
 
 
-* [_INCLERRORLINE](INCLERRORLINE.md)
+* _INCLERRORLINE
 * [ON](ON.md) [ERROR](ERROR.md) , [ERR](ERR.md)
 * [ERROR](ERROR.md)
 * [ERROR](ERROR.md) Codes
-* [&dollar;INCLUDE](&dollar;INCLUDE.md)
+* [\$INCLUDE](\$INCLUDE.md)
 </blockquote>

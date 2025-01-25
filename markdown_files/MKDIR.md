@@ -123,7 +123,7 @@ br ~ h5 {
 * If no path is given the directory will become a sub-directory of the present directory where the program is currently running.
 * QB64 can use both long or short path and file names with spaces when required.
 * The new folder will be created without a user prompt or verification.
-* If a path is specified, the path must exist or a "Path not found" error will occur. See [_DIREXISTS](DIREXISTS.md) .
+* If a path is specified, the path must exist or a "Path not found" error will occur. See _DIREXISTS .
 * [SHELL](SHELL.md) can use the DOS command "MD " or "MKDIR " + path$ + newfolder$ to do the same thing.
 
 </blockquote>
@@ -142,6 +142,6 @@ br ~ h5 {
 
 * [SHELL](SHELL.md) , [CHDIR](CHDIR.md) , [FILES](FILES.md)
 * [NAME](NAME.md) , [KILL](KILL.md) , [RMDIR](RMDIR.md)
-* [_DIREXISTS](DIREXISTS.md)
+* _DIREXISTS
 * Windows Open and Save Dialog Boxes
 </blockquote>

@@ -119,7 +119,7 @@ br ~ h5 {
 <blockquote>
 
 
-* The handle can come from the [_OPENHOST](OPENHOST.md) , OPENCLIENT or [_OPENCONNECTION](OPENCONNECTION.md) .
+* The handle can come from the _OPENHOST , [OPENCLIENT](OPENCLIENT.md) or _OPENCONNECTION .
 * Returns -1 if still connected or 0 if connection has ended/failed.
 * Do not rely solely on this function to check for ending communication.
 * Use "time-out" checking as well and [CLOSE](CLOSE.md) any suspect connections.
@@ -140,7 +140,7 @@ br ~ h5 {
 <blockquote>
 
 
-* [_OPENCONNECTION](OPENCONNECTION.md) , [_CONNECTIONADDRESS&dollar;](CONNECTIONADDRESS&dollar;.md)
-* [_OPENHOST](OPENHOST.md) , [_OPENCLIENT](OPENCLIENT.md)
+* _OPENCONNECTION , _CONNECTIONADDRESS$
+* _OPENHOST , _OPENCLIENT
 * Downloading Files
 </blockquote>

@@ -130,7 +130,7 @@ br ~ h5 {
 
 
 * The [ALIAS](ALIAS.md) name clause is optional as the original library procedure name can be used.
-* The procedure name does not have to be inside of quotes when using [DECLARE](DECLARE.md) [LIBRARY](LIBRARY.md) .
+* The procedure name does not have to be inside of quotes when using DECLARE LIBRARY .
 * QB64 does not support optional parameters.
 
 </blockquote>
@@ -141,7 +141,7 @@ br ~ h5 {
 
 ```vb
 DECLARE LIBRARY
-SUB MouseMove ALIAS glutWarpPointer (BYVAL xoffset&, BYVAL yoffset&)
+   SUB MouseMove ALIAS glutWarpPointer (BYVAL xoffset&, BYVAL yoffset&)
 END DECLARE
 
 DO UNTIL _SCREENEXISTS: LOOP
@@ -171,5 +171,5 @@ the procedure first with the actual Library name after ALIAS.
 
 
 * [SUB](SUB.md) , [FUNCTION](FUNCTION.md)
-* [DECLARE](DECLARE.md) [LIBRARY](LIBRARY.md) , [BYVAL](BYVAL.md)
+* DECLARE LIBRARY , [BYVAL](BYVAL.md)
 </blockquote>

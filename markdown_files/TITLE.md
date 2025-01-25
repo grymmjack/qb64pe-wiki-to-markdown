@@ -119,7 +119,7 @@ br ~ h5 {
 <blockquote>
 
 
-* text$ can be any literal or variable [STRING](STRING.md) or ASCII character value.
+* text$ can be any literal or variable [STRING](STRING.md) or [ASCII](ASCII.md) character value.
 </blockquote>
 
 #### DESCRIPTION
@@ -129,8 +129,8 @@ br ~ h5 {
 
 * The title can be changed anywhere in a program procedure.
 * The title bar will say "Untitled" if a title is not set.
-* Change the title of the [&dollar;CONSOLE](&dollar;CONSOLE.md) windows created using [_CONSOLETITLE](CONSOLETITLE.md)
-* Note: A delay may be required before the title can be set. See [_SCREENEXISTS](SCREENEXISTS.md) .
+* Change the title of the [\$CONSOLE](\$CONSOLE.md) windows created using _CONSOLETITLE
+* Note: A delay may be required before the title can be set. See _SCREENEXISTS .
 
 </blockquote>
 
@@ -162,21 +162,21 @@ PRINT PATH$
 FUNCTION TITLE$ '=== SHOW CURRENT PROGRAM
 SHARED PATH$
 DECLARE LIBRARY 'Directory Information using KERNEL32 provided by Dav
-FUNCTION GetModuleFileNameA (BYVAL Module AS LONG, FileName AS STRING, BYVAL nSize AS LONG)
+ FUNCTION GetModuleFileNameA (BYVAL Module AS LONG, FileName AS STRING, BYVAL nSize AS LONG)
 END DECLARE
 
 FileName$ = SPACE$(256)
 Result = GetModuleFileNameA(0, FileName$, LEN(FileName$))
 IF Result THEN
-PATH$ = LEFT$(FileName$, Result)
-start = 1
-DO
-posit = INSTR(start, PATH$, "\")
-IF posit THEN last = posit
-start = posit + 1
-LOOP UNTIL posit = 0
-TITLE$ = MID$(PATH$, last + 1)
-PATH$ = LEFT$(PATH$, last)
+ PATH$ = LEFT$(FileName$, Result)
+ start = 1
+ DO
+   posit = INSTR(start, PATH$, "\")
+   IF posit THEN last = posit
+   start = posit + 1
+ LOOP UNTIL posit = 0
+ TITLE$ = MID$(PATH$, last + 1)
+ PATH$ = LEFT$(PATH$, last)
 ELSE TITLE$ = "": PATH$ = ""
 END IF
 END FUNCTION
@@ -192,10 +192,10 @@ END FUNCTION
 <blockquote>
 
 
-* [_TITLE&dollar;](TITLE&dollar;.md)
-* [_ICON](ICON.md)
-* [_DELAY](DELAY.md)
-* ASCII
-* [_CONSOLETITLE](CONSOLETITLE.md)
-* [_SCREENEXISTS](SCREENEXISTS.md)
+* _TITLE$
+* _ICON
+* _DELAY
+* [ASCII](ASCII.md)
+* _CONSOLETITLE
+* _SCREENEXISTS
 </blockquote>

@@ -167,8 +167,8 @@ PUT(100, 100), a$, PSET
 <blockquote>
 
 
-* [_PUTIMAGE](PUTIMAGE.md) , [_LOADIMAGE](LOADIMAGE.md) , [_SAVEIMAGE](SAVEIMAGE.md)
-* [_MAPTRIANGLE](MAPTRIANGLE.md)
+* _PUTIMAGE , _LOADIMAGE , _SAVEIMAGE
+* _MAPTRIANGLE
 * [GET](GET.md) , [BSAVE](BSAVE.md) , [BLOAD](BLOAD.md)
 * [SCREEN](SCREEN.md) , Scancodes
 * Creating Sprite Masks

@@ -119,8 +119,8 @@ br ~ h5 {
 <blockquote>
 
 
-* Once the [_EXIT](EXIT.md) function is used, the user can no longer manually exit the program until it is ended with [END](END.md) or [SYSTEM](SYSTEM.md) .
-* [_EXIT](EXIT.md) returns any exit requests made after the initial call as:
+* Once the _EXIT function is used, the user can no longer manually exit the program until it is ended with [END](END.md) or [SYSTEM](SYSTEM.md) .
+* _EXIT returns any exit requests made after the initial call as:
 
 </blockquote>
 
@@ -140,7 +140,7 @@ PRINT "Click the X box and/or Ctrl - Break to see the _EXIT return!"
 PRINT "                    Any Key Quits"
 PRINT
 DO: _LIMIT 30
-'                    ' simulated program loop
+   '                    ' simulated program loop
 LOOP UNTIL INKEY$ <> ""
 END
 
@@ -148,9 +148,9 @@ quit:
 q = _EXIT
 IF q THEN PRINT q;
 SELECT CASE q
-CASE 1: PRINT "= X button was clicked"
-CASE 2: PRINT "= Ctrl + Break keypress"
-CASE 3: PRINT "= Both X and Ctrl + Break!"
+   CASE 1: PRINT "= X button was clicked"
+   CASE 2: PRINT "= Ctrl + Break keypress"
+   CASE 3: PRINT "= Both X and Ctrl + Break!"
 END SELECT
 RETURN
 ```
@@ -164,7 +164,7 @@ RETURN
 x = _EXIT 'initial function call blocks a user exit
 OPEN "t3mpdata.tmp" FOR APPEND AS #1
 DO
-IF _EXIT THEN CLOSE: KILL "t3mpdata.tmp": _DELAY 1: SYSTEM
+   IF _EXIT THEN CLOSE: KILL "t3mpdata.tmp": _DELAY 1: SYSTEM
 LOOP
 ```
   

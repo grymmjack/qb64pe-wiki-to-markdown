@@ -154,11 +154,11 @@ _NOTIFYPOPUP "My Cool App", "Conversion complete!", "info"
 
 
 * Featured in our "Keyword of the Day" series
-* [_MESSAGEBOX](MESSAGEBOX.md)
-* [_MESSAGEBOX](MESSAGEBOX.md) (function)
-* [_INPUTBOX&dollar;](INPUTBOX&dollar;.md)
-* [_SELECTFOLDERDIALOG&dollar;](SELECTFOLDERDIALOG&dollar;.md)
-* [_COLORCHOOSERDIALOG](COLORCHOOSERDIALOG.md)
-* [_OPENFILEDIALOG&dollar;](OPENFILEDIALOG&dollar;.md)
-* [_SAVEFILEDIALOG&dollar;](SAVEFILEDIALOG&dollar;.md)
+* _MESSAGEBOX
+* _MESSAGEBOX (function)
+* _INPUTBOX$
+* _SELECTFOLDERDIALOG$
+* _COLORCHOOSERDIALOG
+* _OPENFILEDIALOG$
+* _SAVEFILEDIALOG$
 </blockquote>

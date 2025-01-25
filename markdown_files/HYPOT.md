@@ -165,7 +165,7 @@ PRINT USING "## , ## and ## form a right-angled triangle."; leg_x; leg_y; result
 
 * Featured in our "Keyword of the Day" series
 * [ATN](ATN.md) (arctangent)
-* [_PI](PI.md) (function)
+* _PI (function)
 * Mathematical Operations
 * C++ reference for hypot() - source of the text and sample above
 </blockquote>

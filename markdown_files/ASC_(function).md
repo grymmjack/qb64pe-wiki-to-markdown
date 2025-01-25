@@ -121,9 +121,9 @@ br ~ h5 {
 
 * The text$ parameter must have a length of at least 1 byte or an error occurs.
 * In QB64 only the optional position% parameter specifies the character in a string to be returned. Must be greater than 0.
-* If the optional position% parameter is omitted, [ASC](ASC.md) will return the ASCII code of the first character.
-* ASCII code  values returned range from 0 to 255.
-* In QB64 , the [ASC](ASC.md) function reads string byte positions about 5 times faster than [MID&dollar;](MID&dollar;.md) when parsing strings character wise. See [MID&dollar;](MID&dollar;.md) Example 2 .
+* If the optional position% parameter is omitted, [ASC](ASC.md) will return the [ASCII](ASCII.md) code of the first character.
+* [ASCII](ASCII.md) code  values returned range from 0 to 255.
+* In QB64 , the [ASC](ASC.md) function reads string byte positions about 5 times faster than [MID\$](MID\$.md) when parsing strings character wise. See [MID\$](MID\$.md) Example 2 .
 
 </blockquote>
 
@@ -160,15 +160,15 @@ Q$ = CHR$(34) ' quote character
 COLOR 10: LOCATE 5, 22: PRINT "Press some keys or combinations!"
 COLOR 13: LOCATE 23, 30: PRINT "Escape key Quits"
 DO
-DO: key$ = INKEY$: LOOP UNTIL key$ <> "" ' prevent ASC empty string read error
-code% = ASC(key$): COLOR 11: LOCATE 10, 10
-IF code% THEN    ' ASC returns any value greater than 0
-PRINT "CHR$(" + LTRIM$(STR$(code%)) + ")" + SPACE$(13):
-IF code% > 8 AND code% < 14 THEN code% = 32    ' unprintable control codes
-COLOR 14: LOCATE 10, 50: PRINT CHR$(code%) + SPACE$(13)
-ELSE: PRINT "CHR$(0) + CHR$(" + LTRIM$(STR$(ASC(key$, 2))) + ")"
-COLOR 14: LOCATE 10, 50: PRINT "CHR$(0) + " + Q$ + CHR$(ASC(key$, 2)) + Q$
-END IF
+  DO: key$ = INKEY$: LOOP UNTIL key$ <> "" ' prevent ASC empty string read error
+  code% = ASC(key$): COLOR 11: LOCATE 10, 10
+  IF code% THEN    ' ASC returns any value greater than 0
+   PRINT "CHR$(" + LTRIM$(STR$(code%)) + ")" + SPACE$(13):
+   IF code% > 8 AND code% < 14 THEN code% = 32    ' unprintable control codes
+   COLOR 14: LOCATE 10, 50: PRINT CHR$(code%) + SPACE$(13)
+  ELSE: PRINT "CHR$(0) + CHR$(" + LTRIM$(STR$(ASC(key$, 2))) + ")"
+   COLOR 14: LOCATE 10, 50: PRINT "CHR$(0) + " + Q$ + CHR$(ASC(key$, 2)) + Q$
+  END IF
 LOOP UNTIL code% = 27  '
 ```
   
@@ -197,10 +197,10 @@ Ctrl + letter combinations will return control character codes 1 to 26.
 
 * Featured in our "Keyword of the Day" series
 * [ASC](ASC.md)
-* [_KEYHIT](KEYHIT.md) , [_KEYDOWN](KEYDOWN.md)
-* [MID&dollar;](MID&dollar;.md) , [MID&dollar;](MID&dollar;.md) (function)
-* [CHR&dollar;](CHR&dollar;.md) , [INKEY&dollar;](INKEY&dollar;.md)
-* [VAL](VAL.md) , [STRING&dollar;](STRING&dollar;.md)
-* ASCII , [_MAPUNICODE](MAPUNICODE.md)
+* _KEYHIT , _KEYDOWN
+* [MID\$](MID\$.md) , [MID\$](MID\$.md) (function)
+* [CHR\$](CHR\$.md) , [INKEY\$](INKEY\$.md)
+* [VAL](VAL.md) , [STRING\$](STRING\$.md)
+* [ASCII](ASCII.md) , _MAPUNICODE
 * Scancodes
 </blockquote>

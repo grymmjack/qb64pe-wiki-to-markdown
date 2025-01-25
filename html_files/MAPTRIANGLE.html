@@ -6,7 +6,7 @@
    _MAPTRIANGLE - QB64 Phoenix Edition Wiki
   </title>
   <script>
-   document.documentElement.className="client-js";RLCONF={"wgBreakFrames":false,"wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgRequestId":"Zp2GhCSKw_M1BQgKFBblNwAAAtE","wgCSPNonce":false,"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"MAPTRIANGLE","wgTitle":"MAPTRIANGLE","wgCurRevisionId":8868,"wgRevisionId":8868,"wgArticleId":171,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":[],"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgRelevantPageName":"MAPTRIANGLE","wgRelevantArticleId":171,"wgIsProbablyEditable":false,"wgRelevantPageIsProbablyEditable":false,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgVector2022PreviewPages":[]};RLSTATE={"site.styles":"ready","user.styles":"ready",
+   document.documentElement.className="client-js";RLCONF={"wgBreakFrames":false,"wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgRequestId":"Z5RiPQWKRwiE9zBBFH0X8wAAAK8","wgCSPNonce":false,"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"MAPTRIANGLE","wgTitle":"MAPTRIANGLE","wgCurRevisionId":9538,"wgRevisionId":9538,"wgArticleId":171,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":[],"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgRelevantPageName":"MAPTRIANGLE","wgRelevantArticleId":171,"wgIsProbablyEditable":false,"wgRelevantPageIsProbablyEditable":false,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgVector2022PreviewPages":[]};RLSTATE={"site.styles":"ready","user.styles":"ready",
 "user":"ready","user.options":"loading","skins.vector.styles.legacy":"ready"};RLPAGEMODULES=["site","mediawiki.page.ready","mediawiki.toc","skins.vector.legacy.js"];
   </script>
   <script>
@@ -1052,7 +1052,7 @@ DO
                 DPLANE2D(PN&amp;, 1) = 299 + (D&amp; * RY&amp; / RZ&amp;)
             <a href="/qb64wiki/index.php/NEXT" title="NEXT"><span style="color:#4593D8;">NEXT</span></a>
             '
-            ' CHECK <a href="/qb64wiki/index.php/TO" title="TO"><span style="color:#4593D8;">TO</span></a> SEE <a href="/qb64wiki/index.php/IF...THEN" title="IF...THEN"><span style="color:#4593D8;">IF</span></a> PLANE <a class="mw-redirect" href="/qb64wiki/index.php/IS" title="IS"><span style="color:#4593D8;">IS</span></a> VISIBLE
+            ' CHECK TO SEE IF PLANE IS VISIBLE
             x1&amp; = DPLANE3D(0, 0): y1&amp; = DPLANE3D(0, 1): Z1&amp; = DPLANE3D(0, 2)
             x2&amp; = DPLANE3D(1, 0): y2&amp; = DPLANE3D(1, 1): Z2&amp; = DPLANE3D(1, 2)
             x3&amp; = DPLANE3D(2, 0): y3&amp; = DPLANE3D(2, 1): Z3&amp; = DPLANE3D(2, 2)
@@ -1247,39 +1247,37 @@ DO
        <tbody>
         <tr>
          <td>
-          <pre class="codeide"><a href="/qb64wiki/index.php/SCREEN" title="SCREEN"><span style="color:#4593D8;">SCREEN</span></a> <a href="/qb64wiki/index.php/NEWIMAGE" title="NEWIMAGE"><span style="color:#4593D8;">_NEWIMAGE</span></a>(800, 600, 32)
+          <pre class="codeide"><a href="/qb64wiki/index.php/SCREEN" title="SCREEN"><span style="color:#4593D8;">SCREEN</span></a> <a href="/qb64wiki/index.php/NEWIMAGE" title="NEWIMAGE"><span style="color:#4593D8;">_NEWIMAGE</span></a>(<span style="color:#F580B1;">800</span>, <span style="color:#F580B1;">600</span>, <span style="color:#F580B1;">32</span>)
 
-ss32 = <a href="/qb64wiki/index.php/SCREENIMAGE" title="SCREENIMAGE"><span style="color:#4593D8;">_SCREENIMAGE</span></a> 'take a 32bit software screenshot
-<a href="/qb64wiki/index.php/SETALPHA" title="SETALPHA"><span style="color:#4593D8;">_SETALPHA</span></a> 128, , ss32 'make it a bit transparent
-ss33 = <a href="/qb64wiki/index.php/COPYIMAGE" title="COPYIMAGE"><span style="color:#4593D8;">_COPYIMAGE</span></a>(ss32, 33) 'convert it to a hardware image (mode 33)
-<a href="/qb64wiki/index.php/FREEIMAGE" title="FREEIMAGE"><span style="color:#4593D8;">_FREEIMAGE</span></a> ss32 'we don't need this anymore
+ss32 = <a href="/qb64wiki/index.php/SCREENIMAGE" title="SCREENIMAGE"><span style="color:#4593D8;">_SCREENIMAGE</span></a>
+<a href="/qb64wiki/index.php/SETALPHA" title="SETALPHA"><span style="color:#4593D8;">_SETALPHA</span></a> <span style="color:#F580B1;">128</span>, , ss32 <span style="color:#919191;">'make it a bit transparent</span>
+ss33 = <a href="/qb64wiki/index.php/COPYIMAGE" title="COPYIMAGE"><span style="color:#4593D8;">_COPYIMAGE</span></a>(ss32, <span style="color:#F580B1;">33</span>) <span style="color:#919191;">'convert it to a hardware image (mode 33)</span>
+<a href="/qb64wiki/index.php/FREEIMAGE" title="FREEIMAGE"><span style="color:#4593D8;">_FREEIMAGE</span></a> ss32 <span style="color:#919191;">'we don't need this anymore</span>
 
-DO
-    <a href="/qb64wiki/index.php/CLS" title="CLS"><span style="color:#4593D8;">CLS</span></a> , <a href="/qb64wiki/index.php/RGB" title="RGB"><span style="color:#4593D8;">_RGB</span></a>(0, 128, 255) 'use our software screen as a blue backdrop
+<a class="mw-redirect" href="/qb64wiki/index.php/DO" title="DO"><span style="color:#4593D8;">DO</span></a>
+    <a href="/qb64wiki/index.php/CLS" title="CLS"><span style="color:#4593D8;">CLS</span></a> , <a href="/qb64wiki/index.php/RGB" title="RGB"><span style="color:#4593D8;">_RGB</span></a>(<span style="color:#F580B1;">0</span>, <span style="color:#F580B1;">128</span>, <span style="color:#F580B1;">255</span>) <span style="color:#919191;">'use our software screen as a blue backdrop</span>
 
-    'rotate our destination points
-    'the QB64 3D co-ordinate system is the same as  OpenGL's:
-    '    negative z is in front of you, if it doesn't have a negative z value you won't see it!
-    '    x goes from left to right, 0 is the middle of the screen
-    '    y goes from bottom to top, 0 is the middle of the screen
-    scale = 10
-    dist = -10
-    angle = angle + 0.1
+    <span style="color:#919191;">'rotate our destination points</span>
+    <span style="color:#919191;">'the QB64 3D co-ordinate system is the same as  OpenGL's:</span>
+    <span style="color:#919191;">'    negative z is in front of you, if it doesn't have a negative z value you won't see it!</span>
+    <span style="color:#919191;">'    x goes from left to right, 0 is the middle of the screen</span>
+    <span style="color:#919191;">'    y goes from bottom to top, 0 is the middle of the screen</span>
+    scale = <span style="color:#F580B1;">10</span>
+    dist = <span style="color:#F580B1;">-10</span>
+    angle = angle + <span style="color:#F580B1;">0.1</span>
     x1 = <a href="/qb64wiki/index.php/SIN" title="SIN"><span style="color:#4593D8;">SIN</span></a>(angle) * scale
     z1 = <a href="/qb64wiki/index.php/COS" title="COS"><span style="color:#4593D8;">COS</span></a>(angle) * scale
-    x2 = <a href="/qb64wiki/index.php/SIN" title="SIN"><span style="color:#4593D8;">SIN</span></a>(angle + 3.14) * scale 'adding 3.14 adds 180 degrees
-    z2 = <a href="/qb64wiki/index.php/COS" title="COS"><span style="color:#4593D8;">COS</span></a>(angle + 3.14) * scale
-    'what we performed above is a 2D/horizontal rotation of points
-    '(3D rotations are beyond the scope of this example)
+    x2 = <a href="/qb64wiki/index.php/SIN" title="SIN"><span style="color:#4593D8;">SIN</span></a>(angle + <span style="color:#F580B1;">3.14</span>) * scale <span style="color:#919191;">'adding 3.14 adds 180 degrees</span>
+    z2 = <a href="/qb64wiki/index.php/COS" title="COS"><span style="color:#4593D8;">COS</span></a>(angle + <span style="color:#F580B1;">3.14</span>) * scale
+    <span style="color:#919191;">'what we performed above is a 2D/horizontal rotation of points</span>
+    <span style="color:#919191;">'(3D rotations are beyond the scope of this example)</span>
 
-    'draw the triangle
-    '_ANTICLOCKWISE makes it only draw when our triangle is facing the correct direction
-    '_SMOOTH applies linear filtering to avoid a pixelated look
+    <span style="color:#919191;">'draw the triangle</span>
+    <span style="color:#919191;">'_ANTICLOCKWISE makes it only draw when our triangle is facing the correct direction</span>
+    <span style="color:#919191;">'_SMOOTH applies linear filtering to avoid a pixelated look</span>
+    <a class="mw-selflink selflink"><span style="color:#4593D8;">_MAPTRIANGLE</span></a> <a class="new" href="/qb64wiki/index.php?title=ANTICLOCKWISE&amp;action=edit&amp;redlink=1" title="ANTICLOCKWISE (page does not exist)"><span style="color:#4593D8;">_ANTICLOCKWISE</span></a> (<a href="/qb64wiki/index.php/WIDTH_(function)" title="WIDTH (function)"><span style="color:#4593D8;">_WIDTH</span></a>(ss33) / <span style="color:#F580B1;">2</span>, <span style="color:#F580B1;">0</span>)-(<span style="color:#F580B1;">0</span>, <a href="/qb64wiki/index.php/HEIGHT" title="HEIGHT"><span style="color:#4593D8;">_HEIGHT</span></a>(ss33))-(<a href="/qb64wiki/index.php/WIDTH_(function)" title="WIDTH (function)"><span style="color:#4593D8;">_WIDTH</span></a>(ss33), <a href="/qb64wiki/index.php/HEIGHT" title="HEIGHT"><span style="color:#4593D8;">_HEIGHT</span></a>(ss33)), ss33 <a href="/qb64wiki/index.php/TO" title="TO"><span style="color:#4593D8;">TO</span></a>(<span style="color:#F580B1;">0</span>, scale, dist)-(x1, -scale, z1 + dist)-(x2, -scale, z2 + dist), , <a href="/qb64wiki/index.php/SMOOTH_(function)" title="SMOOTH (function)"><span style="color:#4593D8;">_SMOOTH</span></a>
 
-    <a class="mw-selflink selflink"><span style="color:#4593D8;">_MAPTRIANGLE</span></a> <b>_ANTICLOCKWISE</b> (<a href="/qb64wiki/index.php/WIDTH_(function)" title="WIDTH (function)"><span style="color:#4593D8;">_WIDTH</span></a>(ss33) / 2, 0)-(0, <a href="/qb64wiki/index.php/HEIGHT" title="HEIGHT"><span style="color:#4593D8;">_HEIGHT</span></a>(ss33))-(<a href="/qb64wiki/index.php/WIDTH_(function)" title="WIDTH (function)"><span style="color:#4593D8;">_WIDTH</span></a>(ss33),_
-    <a href="/qb64wiki/index.php/HEIGHT" title="HEIGHT"><span style="color:#4593D8;">_HEIGHT</span></a>(ss33)), ss33 TO(0, scale, dist)-(x1, -scale, z1 + dist)-(x2, -scale, z2 + dist), , <b>_SMOOTH</b>
-
-    <a href="/qb64wiki/index.php/LIMIT" title="LIMIT"><span style="color:#4593D8;">_LIMIT</span></a> 30
+    <a href="/qb64wiki/index.php/LIMIT" title="LIMIT"><span style="color:#4593D8;">_LIMIT</span></a> <span style="color:#F580B1;">30</span>
     <a href="/qb64wiki/index.php/DISPLAY" title="DISPLAY"><span style="color:#4593D8;">_DISPLAY</span></a>
 <a href="/qb64wiki/index.php/LOOP" title="LOOP"><span style="color:#4593D8;">LOOP</span></a>
 </pre>
@@ -1389,40 +1387,40 @@ DO
       </center>
       <!-- 
 NewPP limit report
-Cached time: 20240720225258
+Cached time: 20250124213055
 Cache expiry: 86400
 Reduced expiry: false
 Complications: [show‐toc]
-CPU time usage: 0.141 seconds
-Real time usage: 0.174 seconds
-Preprocessor visited node count: 3216/1000000
-Post‐expand include size: 23319/2097152 bytes
-Template argument size: 4349/2097152 bytes
-Highest expansion depth: 3/100
+CPU time usage: 0.184 seconds
+Real time usage: 0.205 seconds
+Preprocessor visited node count: 3499/1000000
+Post‐expand include size: 25142/2097152 bytes
+Template argument size: 5174/2097152 bytes
+Highest expansion depth: 4/100
 Expensive parser function count: 0/100
 Unstrip recursion depth: 0/20
-Unstrip post‐expand size: 0/5000000 bytes
+Unstrip post‐expand size: 741/5000000 bytes
 -->
       <!--
 Transclusion expansion time report (%,ms,calls,template)
-100.00%   84.026      1 -total
- 20.65%   17.351    427 Template:Cl
- 14.92%   12.535      1 Template:PageSyntax
- 14.47%   12.159     34 Template:Parameter
-  3.40%    2.855      1 Template:PageSeeAlso
-  2.71%    2.276      3 Template:Small
-  2.65%    2.226      1 Template:PageParameters
-  2.59%    2.175      1 Template:PageNavigation
-  2.57%    2.163      1 Template:FixedEnd
-  2.55%    2.139      1 Template:FixedStart
+100.00%   81.106      1 -total
+ 26.29%   21.324    428 Template:Cl
+  5.20%    4.217     33 Template:Text
+  4.46%    3.617      1 Template:PageSeeAlso
+  4.36%    3.539      1 Template:PageSyntax
+  3.64%    2.950     34 Template:Parameter
+  2.83%    2.299      1 Template:PageNavigation
+  2.74%    2.219      4 Template:CodeEnd
+  2.68%    2.173      1 Template:PageParameters
+  2.67%    2.167      1 Template:FixedStart
 -->
-      <!-- Saved in parser cache with key qb64pnix_mw19894-mwmb_:pcache:idhash:171-0!canonical and timestamp 20240720225258 and revision id 8868.
+      <!-- Saved in parser cache with key qb64pnix_mw19894-mwmb_:pcache:idhash:171-0!canonical and timestamp 20250124213055 and revision id 9538.
  -->
      </div>
      <div class="printfooter" data-nosnippet="">
       Retrieved from "
-      <a dir="ltr" href="https://qb64phoenix.com/qb64wiki/index.php?title=MAPTRIANGLE&amp;oldid=8868">
-       https://qb64phoenix.com/qb64wiki/index.php?title=MAPTRIANGLE&amp;oldid=8868
+      <a dir="ltr" href="https://qb64phoenix.com/qb64wiki/index.php?title=MAPTRIANGLE&amp;oldid=9538">
+       https://qb64phoenix.com/qb64wiki/index.php?title=MAPTRIANGLE&amp;oldid=9538
       </a>
       "
      </div>
@@ -1639,7 +1637,7 @@ You can view its source [e]">
         </a>
        </li>
        <li class="mw-list-item" id="t-permalink">
-        <a href="/qb64wiki/index.php?title=MAPTRIANGLE&amp;oldid=8868" title="Permanent link to this revision of this page">
+        <a href="/qb64wiki/index.php?title=MAPTRIANGLE&amp;oldid=9538" title="Permanent link to this revision of this page">
          <span>
           Permanent link
          </span>
@@ -1660,7 +1658,7 @@ You can view its source [e]">
   <footer class="mw-footer" id="footer" role="contentinfo">
    <ul id="footer-info">
     <li id="footer-info-lastmod">
-     This page was last edited on 16 May 2024, at 06:50.
+     This page was last edited on 5 January 2025, at 16:09.
     </li>
    </ul>
    <ul id="footer-places">
@@ -1689,7 +1687,7 @@ You can view its source [e]">
    </ul>
   </footer>
   <script>
-   (RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgPageParseReport":{"limitreport":{"cputime":"0.141","walltime":"0.174","ppvisitednodes":{"value":3216,"limit":1000000},"postexpandincludesize":{"value":23319,"limit":2097152},"templateargumentsize":{"value":4349,"limit":2097152},"expansiondepth":{"value":3,"limit":100},"expensivefunctioncount":{"value":0,"limit":100},"unstrip-depth":{"value":0,"limit":20},"unstrip-size":{"value":0,"limit":5000000},"timingprofile":["100.00%   84.026      1 -total"," 20.65%   17.351    427 Template:Cl"," 14.92%   12.535      1 Template:PageSyntax"," 14.47%   12.159     34 Template:Parameter","  3.40%    2.855      1 Template:PageSeeAlso","  2.71%    2.276      3 Template:Small","  2.65%    2.226      1 Template:PageParameters","  2.59%    2.175      1 Template:PageNavigation","  2.57%    2.163      1 Template:FixedEnd","  2.55%    2.139      1 Template:FixedStart"]},"cachereport":{"timestamp":"20240720225258","ttl":86400,"transientcontent":false}}});mw.config.set({"wgBackendResponseTime":114});});
+   (RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgPageParseReport":{"limitreport":{"cputime":"0.184","walltime":"0.205","ppvisitednodes":{"value":3499,"limit":1000000},"postexpandincludesize":{"value":25142,"limit":2097152},"templateargumentsize":{"value":5174,"limit":2097152},"expansiondepth":{"value":4,"limit":100},"expensivefunctioncount":{"value":0,"limit":100},"unstrip-depth":{"value":0,"limit":20},"unstrip-size":{"value":741,"limit":5000000},"timingprofile":["100.00%   81.106      1 -total"," 26.29%   21.324    428 Template:Cl","  5.20%    4.217     33 Template:Text","  4.46%    3.617      1 Template:PageSeeAlso","  4.36%    3.539      1 Template:PageSyntax","  3.64%    2.950     34 Template:Parameter","  2.83%    2.299      1 Template:PageNavigation","  2.74%    2.219      4 Template:CodeEnd","  2.68%    2.173      1 Template:PageParameters","  2.67%    2.167      1 Template:FixedStart"]},"cachereport":{"timestamp":"20250124213055","ttl":86400,"transientcontent":false}}});mw.config.set({"wgBackendResponseTime":135});});
   </script>
  </body>
 </html>

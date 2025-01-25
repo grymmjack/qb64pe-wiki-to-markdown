@@ -119,6 +119,6 @@ br ~ h5 {
 
 
 * [ERROR](ERROR.md) (simulates error), [ERR](ERR.md) (error code number), [ERL](ERL.md) (closest line number when line numbers are used)
-* [ON](ON.md) [ERROR](ERROR.md) (calls error handing routine using [GOTO](GOTO.md) only), [_ERRORLINE](ERRORLINE.md) (actual text code line)
-* [_INCLERRORLINE](INCLERRORLINE.md) , [_INCLERRORFILE&dollar;](INCLERRORFILE&dollar;.md) , [_ERRORMESSAGE&dollar;](ERRORMESSAGE&dollar;.md)
+* [ON](ON.md) [ERROR](ERROR.md) (calls error handing routine using [GOTO](GOTO.md) only), _ERRORLINE (actual text code line)
+* _INCLERRORLINE , _INCLERRORFILE$ , _ERRORMESSAGE$
 </blockquote>

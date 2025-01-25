@@ -125,7 +125,7 @@ br ~ h5 {
 * Often used to determine the number of records in a [RANDOM](RANDOM.md) access file.
 * Can also be used to avoid reading an empty file, which would create an error.
 * [LOF](LOF.md) in QB64 can return up to 9 GB (9,223,372,036 bytes) file sizes.
-* For HTTP handles opened using [_OPENCLIENT](OPENCLIENT.md) :
+* For HTTP handles opened using _OPENCLIENT :
 * [LOF](LOF.md) returns the length listed in the Content-Length header of the HTTP response.
 * If no Content-Length header was provided on the HTTP response, then [LOF](LOF.md) return -1
 
@@ -137,7 +137,7 @@ br ~ h5 {
 
 ```vb
 OPEN file$ FOR RANDOM AS #1 LEN = LEN(Type_variable)
-NumRecords% = LOF(1) \ RecordLEN%
+ NumRecords% = LOF(1) \ RecordLEN%
 ```
   
 <br>

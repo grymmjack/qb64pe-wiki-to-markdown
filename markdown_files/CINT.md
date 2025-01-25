@@ -162,7 +162,7 @@ COLOR c: PRINT a%, b%, c
 <blockquote>
 
 
-* [_ROUND](ROUND.md) , [_CEIL](CEIL.md)
+* _ROUND , _CEIL
 * [CLNG](CLNG.md) , [CSNG](CSNG.md) , [CDBL](CDBL.md)
 * [INT](INT.md) , [FIX](FIX.md)
 </blockquote>

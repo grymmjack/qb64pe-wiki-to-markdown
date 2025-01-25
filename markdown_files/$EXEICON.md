@@ -127,8 +127,8 @@ br ~ h5 {
 <blockquote>
 
 
-* Calling [_ICON](ICON.md) without an imageHandle& uses the embeded icon, if available.
-* Starting with build 20170906/64 , the window will automatically use the icon embedded by [&dollar;EXEICON](&dollar;EXEICON.md) , without having to call _ICON.
+* Calling _ICON without an imageHandle& uses the embeded icon, if available.
+* Starting with build 20170906/64 , the window will automatically use the icon embedded by [\$EXEICON](\$EXEICON.md) , without having to call _ICON.
 * Keyword not supported in Linux or macOS versions
 
 </blockquote>
@@ -155,6 +155,6 @@ _ICON
 <blockquote>
 
 
-* [_ICON](ICON.md)
-* [_TITLE](TITLE.md)
+* _ICON
+* _TITLE
 </blockquote>

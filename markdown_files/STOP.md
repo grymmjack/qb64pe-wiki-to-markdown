@@ -121,8 +121,8 @@ br ~ h5 {
 
 * [STOP](STOP.md) used in the QBasic IDE does not close any files or go to the operating system. It returns to the IDE.
 * In the QB64 compiler, [STOP](STOP.md) closes the program window and returns to the IDE when the code is compiled from there.
-* [STOP](STOP.md) is [ONLY](ONLY.md) used for debugging purposes and should not be used to exit programs!
-* [STOP](STOP.md) can also be used to suspend an event trap in the following statements: KEY(n) , STRIG(n) and TIMER(n) . The trap can be turned back on with [ON](ON.md) and returns any trap events since [STOP](STOP.md) was used.
+* [STOP](STOP.md) is ONLY used for debugging purposes and should not be used to exit programs!
+* [STOP](STOP.md) can also be used to suspend an event trap in the following statements: [KEY(n)](KEY(n).md) , [STRIG(n)](STRIG(n).md) and TIMER(n) . The trap can be turned back on with [ON](ON.md) and returns any trap events since [STOP](STOP.md) was used.
 
 </blockquote>
 

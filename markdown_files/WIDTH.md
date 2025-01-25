@@ -133,19 +133,19 @@ $CONSOLE:ONLY
 WIDTH 80, 25, 300, 100
 CLS
 FOR i = 1 TO 97
-PRINT i
+   PRINT i
 NEXT
 PRINT STRING$(100, "0") + STRING$(100, "1") + STRING$(100, "2") 'print the 100's placeholders
 FOR j = 1 TO 3
-FOR i = 0 TO 9
-PRINT STRING$(10, _TRIM$(STR$(i))); 'print the 10's placeholders
-NEXT
+   FOR i = 0 TO 9
+       PRINT STRING$(10, _TRIM$(STR$(i))); 'print the 10's placeholders
+   NEXT
 NEXT
 
 FOR j = 1 TO 30
-FOR i = 0 TO 9
-PRINT _TRIM$(STR$(i)); 'print the 1's placeholders.
-NEXT
+   FOR i = 0 TO 9
+       PRINT _TRIM$(STR$(i)); 'print the 1's placeholders.
+   NEXT
 NEXT
 
 SLEEP
@@ -163,7 +163,7 @@ SLEEP
 
 * Featured in our "Keyword of the Day" series
 * [SCREEN](SCREEN.md) , [COLOR](COLOR.md) , [OUT](OUT.md)
-* [_PRINTWIDTH](PRINTWIDTH.md)
-* [_WIDTH](WIDTH.md) (function) , [_HEIGHT](HEIGHT.md)
-* [_FONT](FONT.md) , [_FONTWIDTH](FONTWIDTH.md) , [_FONTHEIGHT](FONTHEIGHT.md)
+* _PRINTWIDTH
+* _WIDTH (function) , _HEIGHT
+* _FONT , _FONTWIDTH , _FONTHEIGHT
 </blockquote>

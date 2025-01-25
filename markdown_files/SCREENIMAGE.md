@@ -122,9 +122,9 @@ br ~ h5 {
 * imageHandle& is the handle to the new image in memory that will contain the desktop screenshot.
 * The optional screen column and row positions can be used to get only a portion of the desktop image.
 * The desktop image or partial image is always a 32-bit image.
-* The current screen resolution or width-to-height aspect ratio can be obtained with [_DESKTOPWIDTH](DESKTOPWIDTH.md) and [_DESKTOPHEIGHT](DESKTOPHEIGHT.md) .
-* Can be used to take screenshots of the desktop or used with [_PRINTIMAGE](PRINTIMAGE.md) to print them.
-* It is important to free unused or uneeded image handles with [_FREEIMAGE](FREEIMAGE.md) to prevent memory overflow errors.
+* The current screen resolution or width-to-height aspect ratio can be obtained with _DESKTOPWIDTH and _DESKTOPHEIGHT .
+* Can be used to take screenshots of the desktop or used with _PRINTIMAGE to print them.
+* It is important to free unused or uneeded image handles with _FREEIMAGE to prevent memory overflow errors.
 * Keyword not supported in Linux or macOS versions
 
 </blockquote>
@@ -155,11 +155,11 @@ _SCREENMOVE _MIDDLE
 <blockquote>
 
 
-* [_SCREENCLICK](SCREENCLICK.md) , [_SCREENPRINT](SCREENPRINT.md)
-* [_SCREENMOVE](SCREENMOVE.md) , [_SCREENX](SCREENX.md) , [_SCREENY](SCREENY.md)
-* [_WIDTH](WIDTH.md) , [_HEIGHT](HEIGHT.md)
-* [_DESKTOPWIDTH](DESKTOPWIDTH.md) , [_DESKTOPHEIGHT](DESKTOPHEIGHT.md)
-* [_FULLSCREEN](FULLSCREEN.md) , [_PRINTIMAGE](PRINTIMAGE.md)
+* _SCREENCLICK , _SCREENPRINT
+* _SCREENMOVE , _SCREENX , _SCREENY
+* _WIDTH , _HEIGHT
+* _DESKTOPWIDTH , _DESKTOPHEIGHT
+* _FULLSCREEN , _PRINTIMAGE
 * Screen Saver Programs
 * Bitmaps , Icons and Cursors
 * Hardware images

@@ -149,12 +149,12 @@ br ~ h5 {
 REDIM FileArray$(100) 'create dynamic array
 SHELL _HIDE "DIR /B *.* > D0S-DATA.INF"
 IF _FILEEXISTS("D0S-DATA.INF") THEN
-OPEN "D0S-DATA.INF" FOR INPUT AS #1
-DO UNTIL EOF(1)
-LINE INPUT #1, file$        'read entire text file line
-filecount% = filecount% + 1
-LOOP
-CLOSE #1
+ OPEN "D0S-DATA.INF" FOR INPUT AS #1
+ DO UNTIL EOF(1)
+   LINE INPUT #1, file$        'read entire text file line
+   filecount% = filecount% + 1
+ LOOP
+ CLOSE #1
 END IF
 REDIM FileArray$(filecount%)
 PRINT filecount%
@@ -171,8 +171,8 @@ PRINT filecount%
 
 
 * [OPEN](OPEN.md) , [CLOSE](CLOSE.md)
-* [INPUT](INPUT.md) (file mode) , [INPUT](INPUT.md) # , [INPUT&dollar;](INPUT&dollar;.md) (file input)
-* [INPUT](INPUT.md) , [LINE](LINE.md) [INPUT](INPUT.md) , [INPUT&dollar;](INPUT&dollar;.md) (keyboard input)
-* [_FILEEXISTS](FILEEXISTS.md) , [_DIREXISTS](DIREXISTS.md)
+* [INPUT](INPUT.md) (file mode) , [INPUT](INPUT.md) # , [INPUT\$](INPUT\$.md) (file input)
+* [INPUT](INPUT.md) , [LINE](LINE.md) [INPUT](INPUT.md) , [INPUT\$](INPUT\$.md) (keyboard input)
+* _FILEEXISTS , _DIREXISTS
 * FILELIST$ (member-contributed function replacement for [FILES](FILES.md) )
 </blockquote>

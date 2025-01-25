@@ -127,8 +127,8 @@ br ~ h5 {
 
 
 * Featured in our "Keyword of the Day" series
-* [_FONTHEIGHT](FONTHEIGHT.md)
-* [_FONT](FONT.md)
-* [_LOADFONT](LOADFONT.md)
-* [_PRINTWIDTH](PRINTWIDTH.md)
+* _FONTHEIGHT
+* _FONT
+* _LOADFONT
+* _PRINTWIDTH
 </blockquote>

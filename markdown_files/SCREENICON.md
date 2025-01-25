@@ -119,7 +119,7 @@ br ~ h5 {
 <blockquote>
 
 
-* Use [_SCREENICON](SCREENICON.md) to minimize the main program window to the taskbar.
+* Use _SCREENICON to minimize the main program window to the taskbar.
 
 </blockquote>
 
@@ -135,7 +135,7 @@ br ~ h5 {
 <blockquote>
 
 
-* [&dollar;SCREENHIDE](&dollar;SCREENHIDE.md) , [&dollar;SCREENSHOW](&dollar;SCREENSHOW.md) , [&dollar;CONSOLE](&dollar;CONSOLE.md)
-* [_SCREENHIDE](SCREENHIDE.md) , [_SCREENSHOW](SCREENSHOW.md) , [_CONSOLE](CONSOLE.md)
-* [_SCREENICON](SCREENICON.md) (function)
+* [\$SCREENHIDE](\$SCREENHIDE.md) , [\$SCREENSHOW](\$SCREENSHOW.md) , [\$CONSOLE](\$CONSOLE.md)
+* _SCREENHIDE , _SCREENSHOW , _CONSOLE
+* _SCREENICON (function)
 </blockquote>

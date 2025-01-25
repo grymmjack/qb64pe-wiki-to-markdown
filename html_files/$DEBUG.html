@@ -6,13 +6,13 @@
    $DEBUG - QB64 Phoenix Edition Wiki
   </title>
   <script>
-   document.documentElement.className="client-js";RLCONF={"wgBreakFrames":false,"wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgRequestId":"Zp2EyySKw_M1BQgKFBbOEwAAAp4","wgCSPNonce":false,"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"$DEBUG","wgTitle":"$DEBUG","wgCurRevisionId":7476,"wgRevisionId":7476,"wgArticleId":738,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":[],"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgRelevantPageName":"$DEBUG","wgRelevantArticleId":738,"wgIsProbablyEditable":false,"wgRelevantPageIsProbablyEditable":false,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgVector2022PreviewPages":[]};RLSTATE={"site.styles":"ready","user.styles":"ready","user":"ready",
-"user.options":"loading","skins.vector.styles.legacy":"ready"};RLPAGEMODULES=["site","mediawiki.page.ready","mediawiki.toc","skins.vector.legacy.js"];
+   document.documentElement.className="client-js";RLCONF={"wgBreakFrames":false,"wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgRequestId":"Z5RhQzqafTy_MWwYEqvB6gAAAFQ","wgCSPNonce":false,"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"$DEBUG","wgTitle":"$DEBUG","wgCurRevisionId":9504,"wgRevisionId":9504,"wgArticleId":738,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":[],"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgRelevantPageName":"$DEBUG","wgRelevantArticleId":738,"wgIsProbablyEditable":false,"wgRelevantPageIsProbablyEditable":false,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgVector2022PreviewPages":[]};RLSTATE={"site.styles":"ready","user.styles":"ready","user":"ready",
+"user.options":"loading","mediawiki.page.gallery.styles":"ready","skins.vector.styles.legacy":"ready"};RLPAGEMODULES=["site","mediawiki.page.ready","mediawiki.toc","skins.vector.legacy.js"];
   </script>
   <script>
    (RLQ=window.RLQ||[]).push(function(){mw.loader.implement("user.options@12s5i",function($,jQuery,require,module){mw.user.tokens.set({"patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});});});
   </script>
-  <link href="/qb64wiki/load.php?lang=en&amp;modules=skins.vector.styles.legacy&amp;only=styles&amp;skin=vector" rel="stylesheet"/>
+  <link href="/qb64wiki/load.php?lang=en&amp;modules=mediawiki.page.gallery.styles%7Cskins.vector.styles.legacy&amp;only=styles&amp;skin=vector" rel="stylesheet"/>
   <script async="" src="/qb64wiki/load.php?lang=en&amp;modules=startup&amp;only=scripts&amp;raw=1&amp;skin=vector">
   </script>
   <meta content="" name="ResourceLoaderDynamicStyles"/>
@@ -108,11 +108,33 @@
                Description
               </span>
              </a>
+             <ul>
+              <li class="toclevel-2 tocsection-1">
+               <a href="#Problems">
+                <span class="tocnumber">
+                 2.1
+                </span>
+                <span class="toctext">
+                 Problems
+                </span>
+               </a>
+              </li>
+             </ul>
             </li>
-            <li class="toclevel-1 tocsection-1">
-             <a href="#$DEBUG_Mode_Operation">
+            <li class="toclevel-1">
+             <a href="#Availability">
               <span class="tocnumber">
                3
+              </span>
+              <span class="toctext">
+               Availability
+              </span>
+             </a>
+            </li>
+            <li class="toclevel-1 tocsection-2">
+             <a href="#$DEBUG_Mode_Operation">
+              <span class="tocnumber">
+               4
               </span>
               <span class="toctext">
                $DEBUG Mode Operation
@@ -122,7 +144,7 @@
             <li class="toclevel-1">
              <a href="#See_also">
               <span class="tocnumber">
-               4
+               5
               </span>
               <span class="toctext">
                See also
@@ -193,6 +215,216 @@
          </li>
         </ul>
        </li>
+       <li>
+        In newer versions a precompiler flag named
+        <b>
+         _DEBUG_
+        </b>
+        is available (see
+        <a href="#Availability">
+         Availability
+        </a>
+        ):
+        <ul>
+         <li>
+          The flag is
+          <i>
+           one(1)
+          </i>
+          if the program is compiled with
+          <b>
+           $DEBUG
+          </b>
+          and
+          <i>
+           zero(0)
+          </i>
+          if compiled without it.
+         </li>
+         <li>
+          You may use it to include/exclude debugging related code using precompiler
+          <a href="/qb64wiki/index.php/$IF" title="$IF">
+           $IF
+          </a>
+          ..
+          <a class="mw-redirect" href="/qb64wiki/index.php/$ELSE" title="$ELSE">
+           $ELSE
+          </a>
+          ...
+          <a class="mw-redirect" href="/qb64wiki/index.php/$END_IF" title="$END IF">
+           $END IF
+          </a>
+          blocks.
+         </li>
+        </ul>
+       </li>
+      </ul>
+      <h3>
+       <span class="mw-headline" id="Problems">
+        Problems
+       </span>
+      </h3>
+      <ul>
+       <li>
+        Note that C++ code optimization may badly interfere with the debugging features and that
+        <a href="/qb64wiki/index.php/$CHECKING" title="$CHECKING">
+         $CHECKING
+        </a>
+        :OFF sections cannot be debugged by single stepping.
+       </li>
+       <li>
+        For best debugging experience we recommend the following preparational steps:
+        <ul>
+         <li>
+          Remove or comment all $CHECKING:OFF lines in your program, at least for the sections which you intent to debug.
+         </li>
+         <li>
+          From the
+          <i>
+           Options
+          </i>
+          menu select
+          <i>
+           Compiler Settings
+          </i>
+          and there disable the C++ code optimization check box and also make sure no
+          <b>
+           -O
+          </b>
+          flags are entered in the C++ Compiler Flags text box.
+         </li>
+        </ul>
+       </li>
+      </ul>
+      <p>
+       <br/>
+      </p>
+      <h2>
+       <span class="mw-headline" id="Availability">
+        Availability
+       </span>
+      </h2>
+      <ul class="gallery mw-gallery-nolines">
+       <li class="gallerybox" style="width: 53px">
+        <div style="width: 53px">
+         <div class="thumb" style="width: 48px;">
+          <div style="margin:0px auto;">
+           <a class="image" href="/qb64wiki/index.php/File:Qb64.png" title="v2.0">
+            <img alt="v2.0" decoding="async" height="48" src="/qb64wiki/images/9/91/Qb64.png" width="48"/>
+           </a>
+          </div>
+         </div>
+         <div class="gallerytext">
+          <p>
+           <b>
+            v2.0
+           </b>
+          </p>
+         </div>
+        </div>
+       </li>
+       <li class="gallerybox" style="width: 53px">
+        <div style="width: 53px">
+         <div class="thumb" style="width: 48px;">
+          <div style="margin:0px auto;">
+           <a class="image" href="/qb64wiki/index.php/File:Qbpe.png" title="all">
+            <img alt="all" decoding="async" height="48" src="/qb64wiki/images/0/07/Qbpe.png" width="48"/>
+           </a>
+          </div>
+         </div>
+         <div class="gallerytext">
+          <p>
+           <b>
+            all
+           </b>
+          </p>
+         </div>
+        </div>
+       </li>
+       <li class="gallerybox" style="width: 53px">
+        <div style="width: 53px">
+         <div class="thumb" style="width: 48px;">
+          <div style="margin:0px auto;">
+           <a class="image" href="/qb64wiki/index.php/File:Apix.png">
+            <img alt="Apix.png" decoding="async" height="48" src="/qb64wiki/images/5/5f/Apix.png" width="48"/>
+           </a>
+          </div>
+         </div>
+         <div class="gallerytext">
+         </div>
+        </div>
+       </li>
+       <li class="gallerybox" style="width: 53px">
+        <div style="width: 53px">
+         <div class="thumb" style="width: 48px;">
+          <div style="margin:0px auto;">
+           <a class="image" href="/qb64wiki/index.php/File:Win.png" title="yes">
+            <img alt="yes" decoding="async" height="48" src="/qb64wiki/images/2/29/Win.png" width="48"/>
+           </a>
+          </div>
+         </div>
+         <div class="gallerytext">
+          <p>
+           <b>
+            yes
+           </b>
+          </p>
+         </div>
+        </div>
+       </li>
+       <li class="gallerybox" style="width: 53px">
+        <div style="width: 53px">
+         <div class="thumb" style="width: 48px;">
+          <div style="margin:0px auto;">
+           <a class="image" href="/qb64wiki/index.php/File:Lnx.png" title="yes">
+            <img alt="yes" decoding="async" height="48" src="/qb64wiki/images/7/7a/Lnx.png" width="48"/>
+           </a>
+          </div>
+         </div>
+         <div class="gallerytext">
+          <p>
+           <b>
+            yes
+           </b>
+          </p>
+         </div>
+        </div>
+       </li>
+       <li class="gallerybox" style="width: 53px">
+        <div style="width: 53px">
+         <div class="thumb" style="width: 48px;">
+          <div style="margin:0px auto;">
+           <a class="image" href="/qb64wiki/index.php/File:Osx.png" title="yes">
+            <img alt="yes" decoding="async" height="48" src="/qb64wiki/images/2/22/Osx.png" width="48"/>
+           </a>
+          </div>
+         </div>
+         <div class="gallerytext">
+          <p>
+           <b>
+            yes
+           </b>
+          </p>
+         </div>
+        </div>
+       </li>
+      </ul>
+      <ul>
+       <li>
+        Since
+        <b>
+         QB64-PE v4.0.0
+        </b>
+        the precompiler flag
+        <i>
+         _DEBUG_
+        </i>
+        indicates the state of
+        <b>
+         $DEBUG
+        </b>
+        at compile time.
+       </li>
       </ul>
       <p>
        <br/>
@@ -255,6 +487,18 @@
          F4
         </b>
         opens the Variable List dialog, which allows you to add variables to the Watch List.
+        <ul>
+         <li>
+          There's a neat hidden feature here, if you set focus to the variables list (in the "Add Watch" dialog or in the "Watch List" during running/debugging) and then press
+          <b>
+           Ctrl-C
+          </b>
+          , the whole list is copied to clipboard.
+         </li>
+         <li>
+          It's a nice quick way to obtain a report of all variables used in your program.
+         </li>
+        </ul>
        </li>
        <li>
         During execution, the Variable List dialog also allows you to set the values of variables and also to create Watchpoints.
@@ -297,6 +541,15 @@
          F12
         </b>
         can be used to show the current call stack (which procedure calls led to the current line).
+        <ul>
+         <li>
+          Clicking the "&lt;Copy&gt;" button or pressing
+          <b>
+           Ctrl-C
+          </b>
+          will copy the entire call stack to clipboard.
+         </li>
+        </ul>
        </li>
       </ul>
       <p>
@@ -308,6 +561,11 @@
        </span>
       </h2>
       <ul>
+       <li>
+        <a class="external text" href="https://qb64phoenix.com/qb64_files/QB64%20Debug%20Video/QB64-debug.html" rel="nofollow">
+         Fellippes introduction to QB64 v2.0 and $DEBUG in detail
+        </a>
+       </li>
        <li>
         <a href="/qb64wiki/index.php/Metacommand" title="Metacommand">
          Metacommands
@@ -348,35 +606,36 @@
       </center>
       <!-- 
 NewPP limit report
-Cached time: 20240721035426
+Cached time: 20250124053837
 Cache expiry: 86400
 Reduced expiry: false
 Complications: [show‐toc]
-CPU time usage: 0.014 seconds
-Real time usage: 0.020 seconds
-Preprocessor visited node count: 20/1000000
-Post‐expand include size: 545/2097152 bytes
+CPU time usage: 0.034 seconds
+Real time usage: 0.041 seconds
+Preprocessor visited node count: 46/1000000
+Post‐expand include size: 586/2097152 bytes
 Template argument size: 0/2097152 bytes
 Highest expansion depth: 3/100
 Expensive parser function count: 0/100
 Unstrip recursion depth: 0/20
-Unstrip post‐expand size: 0/5000000 bytes
+Unstrip post‐expand size: 2359/5000000 bytes
 -->
       <!--
 Transclusion expansion time report (%,ms,calls,template)
-100.00%    8.453      1 -total
- 35.60%    3.009      1 Template:PageSyntax
- 21.34%    1.804      1 Template:PageSeeAlso
- 20.35%    1.720      1 Template:PageDescription
- 18.94%    1.601      1 Template:PageNavigation
+100.00%   27.846      1 -total
+  9.47%    2.638      1 Template:PageNavigation
+  8.90%    2.479      1 Template:PageSeeAlso
+  7.18%    2.000      1 Template:PageSyntax
+  6.66%    1.854      1 Template:PageDescription
+  6.52%    1.816      1 Template:PageAvailability
 -->
-      <!-- Saved in parser cache with key qb64pnix_mw19894-mwmb_:pcache:idhash:738-0!canonical and timestamp 20240721035426 and revision id 7476.
+      <!-- Saved in parser cache with key qb64pnix_mw19894-mwmb_:pcache:idhash:738-0!canonical and timestamp 20250124053837 and revision id 9504.
  -->
      </div>
      <div class="printfooter" data-nosnippet="">
       Retrieved from "
-      <a dir="ltr" href="https://qb64phoenix.com/qb64wiki/index.php?title=$DEBUG&amp;oldid=7476">
-       https://qb64phoenix.com/qb64wiki/index.php?title=$DEBUG&amp;oldid=7476
+      <a dir="ltr" href="https://qb64phoenix.com/qb64wiki/index.php?title=$DEBUG&amp;oldid=9504">
+       https://qb64phoenix.com/qb64wiki/index.php?title=$DEBUG&amp;oldid=9504
       </a>
       "
      </div>
@@ -593,7 +852,7 @@ You can view its source [e]">
         </a>
        </li>
        <li class="mw-list-item" id="t-permalink">
-        <a href="/qb64wiki/index.php?title=$DEBUG&amp;oldid=7476" title="Permanent link to this revision of this page">
+        <a href="/qb64wiki/index.php?title=$DEBUG&amp;oldid=9504" title="Permanent link to this revision of this page">
          <span>
           Permanent link
          </span>
@@ -614,7 +873,7 @@ You can view its source [e]">
   <footer class="mw-footer" id="footer" role="contentinfo">
    <ul id="footer-info">
     <li id="footer-info-lastmod">
-     This page was last edited on 29 January 2023, at 10:30.
+     This page was last edited on 25 December 2024, at 14:18.
     </li>
    </ul>
    <ul id="footer-places">
@@ -643,7 +902,7 @@ You can view its source [e]">
    </ul>
   </footer>
   <script>
-   (RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgPageParseReport":{"limitreport":{"cputime":"0.014","walltime":"0.020","ppvisitednodes":{"value":20,"limit":1000000},"postexpandincludesize":{"value":545,"limit":2097152},"templateargumentsize":{"value":0,"limit":2097152},"expansiondepth":{"value":3,"limit":100},"expensivefunctioncount":{"value":0,"limit":100},"unstrip-depth":{"value":0,"limit":20},"unstrip-size":{"value":0,"limit":5000000},"timingprofile":["100.00%    8.453      1 -total"," 35.60%    3.009      1 Template:PageSyntax"," 21.34%    1.804      1 Template:PageSeeAlso"," 20.35%    1.720      1 Template:PageDescription"," 18.94%    1.601      1 Template:PageNavigation"]},"cachereport":{"timestamp":"20240721035426","ttl":86400,"transientcontent":false}}});mw.config.set({"wgBackendResponseTime":90});});
+   (RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgPageParseReport":{"limitreport":{"cputime":"0.034","walltime":"0.041","ppvisitednodes":{"value":46,"limit":1000000},"postexpandincludesize":{"value":586,"limit":2097152},"templateargumentsize":{"value":0,"limit":2097152},"expansiondepth":{"value":3,"limit":100},"expensivefunctioncount":{"value":0,"limit":100},"unstrip-depth":{"value":0,"limit":20},"unstrip-size":{"value":2359,"limit":5000000},"timingprofile":["100.00%   27.846      1 -total","  9.47%    2.638      1 Template:PageNavigation","  8.90%    2.479      1 Template:PageSeeAlso","  7.18%    2.000      1 Template:PageSyntax","  6.66%    1.854      1 Template:PageDescription","  6.52%    1.816      1 Template:PageAvailability"]},"cachereport":{"timestamp":"20250124053837","ttl":86400,"transientcontent":false}}});mw.config.set({"wgBackendResponseTime":85});});
   </script>
  </body>
 </html>

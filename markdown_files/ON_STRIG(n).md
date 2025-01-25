@@ -126,16 +126,16 @@ ON STRIG(0) GOSUB 10
 STRIG(0)ON
 
 DO
-PRINT ".";
-_LIMIT 30
+   PRINT ".";
+   _LIMIT 30
 LOOP UNTIL INKEY$ <> ""
 END
 
 10
 a$ = "[STRIG 0 EVENT]"
 FOR x = 1 TO LEN(a$)
-PRINT MID$(a$, x, 1);
-_DELAY 0.02
+   PRINT MID$(a$, x, 1);
+   _DELAY 0.02
 NEXT
 RETURN
 ```
@@ -147,15 +147,15 @@ RETURN
 ##### Example 2: Displays any number of game pad or joystick device button presses.
 ```vb
 FOR j = 1 TO 256
-FOR b = 1 TO 256
-ON STRIG((b - 1) * 4, j) JoyButton (j - 1) * 256 + b - 1
-NEXT
+   FOR b = 1 TO 256
+       ON STRIG((b - 1) * 4, j) JoyButton (j - 1) * 256 + b - 1
+   NEXT
 NEXT
 STRIG ON
 
 DO
-PRINT ".";
-_LIMIT 30
+   PRINT ".";
+   _LIMIT 30
 LOOP UNTIL INKEY$ <> ""
 END
 
@@ -175,7 +175,7 @@ END SUB
 
 
 * [STRIG](STRIG.md) , [STICK](STICK.md)
-* STRIG(n)
-* [_DEVICES](DEVICES.md) , [_DEVICE&dollar;](DEVICE&dollar;.md) , [_LASTBUTTON](LASTBUTTON.md)
+* [STRIG(n)](STRIG(n).md)
+* _DEVICES , _DEVICE$ , _LASTBUTTON
 * Single and Dual Stick Controllers
 </blockquote>

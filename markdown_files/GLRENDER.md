@@ -102,7 +102,7 @@ br ~ h5 {
 ---
 <blockquote>
 
-### 
+### _GLRENDER is just a fancy _DISPLAYORDER , it's a convenience statement for the case you don't care about the harware image layers but only about the relation of the software and OpenGL layers. Both statements modify the same thing.
 
 </blockquote>
 

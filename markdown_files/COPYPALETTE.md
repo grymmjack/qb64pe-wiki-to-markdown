@@ -120,7 +120,7 @@ br ~ h5 {
 
 
 * Palette Intensity settings are not used by 24/32 bit images. Use only with 4 or 8 BPP images.
-* [_PIXELSIZE](PIXELSIZE.md) function returns 1 to indicate that [_COPYPALETTE](COPYPALETTE.md) can be used. 4 indicates 24/32 bit images.
+* _PIXELSIZE function returns 1 to indicate that _COPYPALETTE can be used. 4 indicates 24/32 bit images.
 * If sourceImageHandle& is omitted, it is assumed to be the current read page.
 * If destinationImageHandle& is omitted, it is assumed to be the current write page.
 * If either of the images specified by sourceImageHandle& or destinationImageHandle& do not use a palette, an illegal function call error is returned.
@@ -141,8 +141,8 @@ br ~ h5 {
 <blockquote>
 
 
-* [_LOADIMAGE](LOADIMAGE.md)
-* [_PIXELSIZE](PIXELSIZE.md)
-* [_PALETTECOLOR](PALETTECOLOR.md) , [_PALETTECOLOR](PALETTECOLOR.md) (function)
+* _LOADIMAGE
+* _PIXELSIZE
+* _PALETTECOLOR , _PALETTECOLOR (function)
 * [PALETTE](PALETTE.md) , Images
 </blockquote>

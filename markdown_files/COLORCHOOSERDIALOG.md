@@ -120,7 +120,7 @@ br ~ h5 {
 
 
 * title$ is the dialog box title
-* defaultRGB~& is the default 32-bit RGB color that is pre-selected
+* defaultRGB~& is the default 32-bit [RGB](RGB.md) color that is pre-selected
 </blockquote>
 
 #### DESCRIPTION
@@ -153,11 +153,11 @@ IF mycolor~& <> 0 THEN _MESSAGEBOX "Information", "You selected " + HEX$(mycolor
 <blockquote>
 
 
-* [_NOTIFYPOPUP](NOTIFYPOPUP.md)
-* [_MESSAGEBOX](MESSAGEBOX.md)
-* [_MESSAGEBOX](MESSAGEBOX.md) (function)
-* [_INPUTBOX&dollar;](INPUTBOX&dollar;.md)
-* [_SELECTFOLDERDIALOG&dollar;](SELECTFOLDERDIALOG&dollar;.md)
-* [_OPENFILEDIALOG&dollar;](OPENFILEDIALOG&dollar;.md)
-* [_SAVEFILEDIALOG&dollar;](SAVEFILEDIALOG&dollar;.md)
+* _NOTIFYPOPUP
+* _MESSAGEBOX
+* _MESSAGEBOX (function)
+* _INPUTBOX$
+* _SELECTFOLDERDIALOG$
+* _OPENFILEDIALOG$
+* _SAVEFILEDIALOG$
 </blockquote>

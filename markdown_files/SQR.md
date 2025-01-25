@@ -192,9 +192,9 @@ PRIME = -1   'set PRIME as True
 INPUT "Enter any number to check up to 2 million (Enter quits): ", guess$
 PR = VAL(guess$)
 IF PR MOD 2 THEN              'check for even number
-FOR P = 3 TO SQR(PR) STEP 2 'largest number that could be a multiple is the SQR
-IF PR MOD P = 0 THEN PRIME = 0: EXIT FOR 'MOD = 0 when evenly divisible by another
-NEXT
+ FOR P = 3 TO SQR(PR) STEP 2 'largest number that could be a multiple is the SQR
+   IF PR MOD P = 0 THEN PRIME = 0: EXIT FOR 'MOD = 0 when evenly divisible by another
+ NEXT
 ELSE : PRIME = 0 'number to be checked is even so it cannot be a prime
 END IF
 IF PR = 2 THEN PRIME = -1 '2 is the ONLY even prime

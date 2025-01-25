@@ -154,9 +154,9 @@ dice% = INT(RND * 6) + 1 'add one as INT value never reaches 6
 ##### Example 2: Using uniform random numbers to create random numbers with a gaussian distribution ( Marsaglia's polar method ).
 ```vb
 DO
-u! = RND * 2 - 1
-v! = RND * 2 - 1
-s! = u! * u! + v! * v!
+ u! = RND * 2 - 1
+ v! = RND * 2 - 1
+ s! = u! * u! + v! * v!
 LOOP WHILE s! >= 1 OR s! = 0
 s! = SQR(-2 * LOG(s!) / s!) * 0.5
 u! = u! * s!
@@ -182,40 +182,40 @@ X0 = 325
 Y0 = 300
 Tmax = 150
 DO
-FOR p = 1 TO BC
-T = INT(RND * (Tmax - 50 + 1)) + 50
-X = INT(RND * (1000 + 500 + 1)) - 500
-velx(p) = (X - X0) / T '                       calculate velocity based on flight time
-vely(p) = -1 * (Y - .05 * (T ^ 2 + 20 * Y0)) / (T) ' verticle velocity
-NEXT p
+   FOR p = 1 TO BC
+       T = INT(RND * (Tmax - 50 + 1)) + 50
+       X = INT(RND * (1000 + 500 + 1)) - 500
+       velx(p) = (X - X0) / T '                       calculate velocity based on flight time
+       vely(p) = -1 * (Y - .05 * (T ^ 2 + 20 * Y0)) / (T) ' verticle velocity
+   NEXT p
 
-FOR w = 1 TO BC
-bsize(w) = INT(RND * (10 - 0 + 1)) + 0 'size
-NEXT w
+   FOR w = 1 TO BC
+       bsize(w) = INT(RND * (10 - 0 + 1)) + 0 'size
+   NEXT w
 
-FOR J = 1 TO Tmax
-_LIMIT 60
-CLS
-'FOR i = 0 TO 255 STEP .5
-'CIRCLE (X0, Y0), i, _RGB(255 - i, 0, 0), 0, 3.147
-' NEXT i
+   FOR J = 1 TO Tmax
+       _LIMIT 60
+       CLS
+       'FOR i = 0 TO 255 STEP .5
+       'CIRCLE (X0, Y0), i, _RGB(255 - i, 0, 0), 0, 3.147
+       ' NEXT i
 
-R = INT(RND * (25 - 20 + 1)) + 20 'random glimmer
-FOR z = 1 TO BC
-ballx(z) = X0 + velx(z) * J
-bally(z) = Y0 - vely(z) * J + .5 * .1 * J ^ 2
-NEXT z
+       R = INT(RND * (25 - 20 + 1)) + 20 'random glimmer
+       FOR z = 1 TO BC
+           ballx(z) = X0 + velx(z) * J
+           bally(z) = Y0 - vely(z) * J + .5 * .1 * J ^ 2
+       NEXT z
 
-FOR d = 1 TO BC
-RCOL = INT(RND * (255 - 0 + 1)) 'color
-FOR i = 0 TO bsize(d) + 1 STEP .4 'draw balls
-CIRCLE (ballx(d), bally(d)), i, _RGBA(255, RCOL - (R * i), RCOL - R * i, 255)
-NEXT i
-NEXT d
+       FOR d = 1 TO BC
+           RCOL = INT(RND * (255 - 0 + 1)) 'color
+           FOR i = 0 TO bsize(d) + 1 STEP .4 'draw balls
+               CIRCLE (ballx(d), bally(d)), i, _RGBA(255, RCOL - (R * i), RCOL - R * i, 255)
+           NEXT i
+       NEXT d
 
-_DISPLAY
+       _DISPLAY
 
-NEXT J
+   NEXT J
 
 LOOP UNTIL INKEY$ <> ""
 ```

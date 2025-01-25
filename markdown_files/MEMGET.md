@@ -119,8 +119,8 @@ br ~ h5 {
 <blockquote>
 
 
-* The [_MEMGET](MEMGET.md) statement is similar to the [GET](GET.md) statement used in files, but the position is required.
-* The memory block name. OFFSET returns the starting byte position of the block. Add bytes to move into the block.
+* The _MEMGET statement is similar to the [GET](GET.md) statement used in files, but the position is required.
+* The memory block name. [OFFSET](OFFSET.md) returns the starting byte position of the block. Add bytes to move into the block.
 * The variable type held in the memory block can determine the next bytePosition to read.
 * [LEN](LEN.md) can be used to determine the byte size of numerical or user defined Variable Types regardless of the value held.
 * [STRING](STRING.md) values should be of a defined length. Variable length strings can actually move around in memory and not be found.
@@ -163,9 +163,9 @@ END
 <blockquote>
 
 
-* [_MEMGET](MEMGET.md) (function)
-* [_MEMPUT](MEMPUT.md)
-* [_MEM](MEM.md)
-* [_MEMIMAGE](MEMIMAGE.md)
-* [_MEMFREE](MEMFREE.md)
+* _MEMGET (function)
+* _MEMPUT
+* _MEM
+* _MEMIMAGE
+* _MEMFREE
 </blockquote>

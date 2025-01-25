@@ -120,9 +120,9 @@ br ~ h5 {
 
 
 * One of 3 mode keywords is mandatory when using this statement to deal with the text background.
-* [_KEEPBACKGROUND](KEEPBACKGROUND.md) (mode 1): Text background transparent. Only the text is displayed over anything behind it.
-* [_ONLYBACKGROUND](ONLYBACKGROUND.md) (mode 2): Text background only is displayed. Text is transparent to anything behind it.
-* [_FILLBACKGROUND](FILLBACKGROUND.md) (mode 3): Text and background block anything behind them like a normal [PRINT](PRINT.md) . Default setting.
+* _KEEPBACKGROUND (mode 1): Text background transparent. Only the text is displayed over anything behind it.
+* _ONLYBACKGROUND (mode 2): Text background only is displayed. Text is transparent to anything behind it.
+* _FILLBACKGROUND (mode 3): Text and background block anything behind them like a normal [PRINT](PRINT.md) . Default setting.
 * If the optional imageHandle& is omitted or is 0 then the setting will be applied to the current destination image.
 </blockquote>
 
@@ -131,8 +131,8 @@ br ~ h5 {
 <blockquote>
 
 
-* Use the [_PRINTMODE](PRINTMODE.md) (function) to find the current [_PRINTMODE](PRINTMODE.md) setting mode number for an image.
-* The [_PRINTMODE](PRINTMODE.md) statement and function can only be used on graphic images, not text-based ones such as [SCREEN](SCREEN.md) 0
+* Use the _PRINTMODE (function) to find the current _PRINTMODE setting mode number for an image.
+* The _PRINTMODE statement and function can only be used on graphic images, not text-based ones such as [SCREEN](SCREEN.md) 0
 
 </blockquote>
 
@@ -161,9 +161,9 @@ END
 <blockquote>
 
 
-* [_PRINTMODE](PRINTMODE.md) (function)
-* [_PRINTSTRING](PRINTSTRING.md)
-* [_LOADFONT](LOADFONT.md)
-* [_NEWIMAGE](NEWIMAGE.md)
-* [PRINT](PRINT.md) , _PRINT [USING](USING.md)
+* _PRINTMODE (function)
+* _PRINTSTRING
+* _LOADFONT
+* _NEWIMAGE
+* [PRINT](PRINT.md) , _PRINT USING
 </blockquote>

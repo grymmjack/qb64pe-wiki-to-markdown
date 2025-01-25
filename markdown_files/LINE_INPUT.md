@@ -134,7 +134,7 @@ br ~ h5 {
 * The statement halts the program until an entry is made. Pressing Enter ends the entry and code execution resumes.
 * [LINE](LINE.md) [INPUT](INPUT.md) does not trim off leading or trailing spaces in the string entry like [INPUT](INPUT.md) string returns.
 * Use [VAL](VAL.md) to convert string numbers and &O (octal), &H (hexadecimal) or &B (binary) prefixed entries into numerical values.
-* Use [_DEST](DEST.md) [_CONSOLE](CONSOLE.md) before [LINE](LINE.md) [INPUT](INPUT.md) statements to receive input from a console window.
+* Use _DEST _CONSOLE before [LINE](LINE.md) [INPUT](INPUT.md) statements to receive input from a console window.
 * Note: QB64 will not remove CHR$(0) from the end of [LINE](LINE.md) [INPUT](INPUT.md) string return values like QBasic did.
 
 </blockquote>
@@ -176,8 +176,8 @@ Enter a name to search for... █
 
 
 * [INPUT](INPUT.md) (file mode) , [INPUT](INPUT.md) # , [LINE](LINE.md) [INPUT](INPUT.md) #
-* [INPUT](INPUT.md) , [INPUT&dollar;](INPUT&dollar;.md) (keyboard input)
+* [INPUT](INPUT.md) , [INPUT\$](INPUT\$.md) (keyboard input)
 * [COLOR](COLOR.md) , [LOCATE](LOCATE.md)
-* [INKEY&dollar;](INKEY&dollar;.md)
-* [_KEYHIT](KEYHIT.md) , [_KEYDOWN](KEYDOWN.md)
+* [INKEY\$](INKEY\$.md)
+* _KEYHIT , _KEYDOWN
 </blockquote>

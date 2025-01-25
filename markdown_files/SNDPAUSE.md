@@ -119,7 +119,7 @@ br ~ h5 {
 <blockquote>
 
 
-* Continue playing by calling [_SNDPLAY](SNDPLAY.md) handle&
+* Continue playing by calling _SNDPLAY handle&
 * In versions prior to build 20170811/60 , the sound identified by handle& must have been opened using the "PAUSE" capability to use this function.
 
 </blockquote>
@@ -136,6 +136,6 @@ br ~ h5 {
 <blockquote>
 
 
-* [_SNDPLAY](SNDPLAY.md) , [_SNDSTOP](SNDSTOP.md)
-* [_SNDPAUSED](SNDPAUSED.md)
+* _SNDPLAY , _SNDSTOP
+* _SNDPAUSED
 </blockquote>

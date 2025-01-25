@@ -119,7 +119,7 @@ br ~ h5 {
 <blockquote>
 
 
-* Use [_SCREENSHOW](SCREENSHOW.md) to display the main program window after it was hidden by [_SCREENHIDE](SCREENHIDE.md) .
+* Use _SCREENSHOW to display the main program window after it was hidden by _SCREENHIDE .
 
 </blockquote>
 
@@ -135,6 +135,6 @@ br ~ h5 {
 <blockquote>
 
 
-* [&dollar;SCREENHIDE](&dollar;SCREENHIDE.md) , [&dollar;SCREENSHOW](&dollar;SCREENSHOW.md) , [&dollar;CONSOLE](&dollar;CONSOLE.md)
-* [_SCREENHIDE](SCREENHIDE.md) , [_CONSOLE](CONSOLE.md)
+* [\$SCREENHIDE](\$SCREENHIDE.md) , [\$SCREENSHOW](\$SCREENSHOW.md) , [\$CONSOLE](\$CONSOLE.md)
+* _SCREENHIDE , _CONSOLE
 </blockquote>

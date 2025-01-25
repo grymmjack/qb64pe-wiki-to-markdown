@@ -153,9 +153,9 @@ _MESSAGEBOX "Hello App", "Hello " + username$, "info"
 age$ = _TRIM$(_INPUTBOX$(, "Enter your age:"))
 
 IF LEN(age$) = 0 THEN
-_MESSAGEBOX , "Cancelled."
+   _MESSAGEBOX , "Cancelled."
 ELSE
-_MESSAGEBOX , "Age = " + age$
+   _MESSAGEBOX , "Age = " + age$
 END IF
 ```
   
@@ -165,9 +165,9 @@ END IF
 password$ = _INPUTBOX$("Login", "Enter password:", "")
 
 IF LEN(password$) = 0 THEN
-_MESSAGEBOX , "Cancelled."
+   _MESSAGEBOX , "Cancelled."
 ELSE
-_MESSAGEBOX , "You entered = " + password$
+   _MESSAGEBOX , "You entered = " + password$
 END IF
 ```
   
@@ -181,7 +181,7 @@ END IF
 <blockquote>
 
 
-* [_MESSAGEBOX](MESSAGEBOX.md) , [_MESSAGEBOX](MESSAGEBOX.md) (function)
-* [_NOTIFYPOPUP](NOTIFYPOPUP.md) , [_COLORCHOOSERDIALOG](COLORCHOOSERDIALOG.md)
-* [_SELECTFOLDERDIALOG&dollar;](SELECTFOLDERDIALOG&dollar;.md) , [_OPENFILEDIALOG&dollar;](OPENFILEDIALOG&dollar;.md) , [_SAVEFILEDIALOG&dollar;](SAVEFILEDIALOG&dollar;.md)
+* _MESSAGEBOX , _MESSAGEBOX (function)
+* _NOTIFYPOPUP , _COLORCHOOSERDIALOG
+* _SELECTFOLDERDIALOG$ , _OPENFILEDIALOG$ , _SAVEFILEDIALOG$
 </blockquote>

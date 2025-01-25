@@ -121,8 +121,8 @@ br ~ h5 {
 
 * The [STRING](STRING.md) return value is anything typed after a program's executable file name in command line (or using the [RUN](RUN.md) statement).
 * Unlike QuickBASIC, QB64 does not return all uppercase values so keep that in mind when checking parameters.
-* In QB64 , [COMMAND&dollar;](COMMAND&dollar;.md) works as an array to return specific elements passed to the command line. COMMAND$(2) would return the second parameter passed at the command line. Arguments can contain spaces if they are passed inside quotation marks. This can be used to properly retrieve file names and arguments which contain spaces.
-* Use the [_COMMANDCOUNT](COMMANDCOUNT.md) function to find the number of parameters passed to a program via the command line. See Example 2 below.
+* In QB64 , [COMMAND\$](COMMAND\$.md) works as an array to return specific elements passed to the command line. COMMAND$(2) would return the second parameter passed at the command line. Arguments can contain spaces if they are passed inside quotation marks. This can be used to properly retrieve file names and arguments which contain spaces.
+* Use the _COMMANDCOUNT function to find the number of parameters passed to a program via the command line. See Example 2 below.
 
 </blockquote>
 
@@ -164,7 +164,7 @@ ProgramB
 
 
 
-Parameter = FS.EXE
+                                Parameter = FS.EXE
 ```
   
 <br>
@@ -175,7 +175,7 @@ Parameter = FS.EXE
 ```vb
 count = _COMMANDCOUNT
 FOR c = 1 TO count
-PRINT COMMAND$(c) 'or process commands sent
+   PRINT COMMAND$(c) 'or process commands sent
 NEXT
 ```
   
@@ -193,10 +193,10 @@ a data file
 ##### Example 3: As part of the command array syntax, you can also just read the array to see how many commands were sent (or simply check _COMMANDCOUNT ):
 ```vb
 DO
-count = count + 1
-cmd$ = COMMAND$(count)
-IF cmd$ = "" THEN EXIT DO 'read until an empty return
-PRINT cmd$ 'or process commands sent
+   count = count + 1
+   cmd$ = COMMAND$(count)
+   IF cmd$ = "" THEN EXIT DO 'read until an empty return
+   PRINT cmd$ 'or process commands sent
 LOOP
 count = count - 1 'save the number of parameters sent to this program when run
 ```
@@ -213,6 +213,6 @@ count = count - 1 'save the number of parameters sent to this program when run
 
 * Featured in our "Keyword of the Day" series
 * [SHELL](SHELL.md) , [RUN](RUN.md)
-* [UCASE&dollar;](UCASE&dollar;.md) , [LCASE&dollar;](LCASE&dollar;.md)
-* [_COMMANDCOUNT](COMMANDCOUNT.md)
+* [UCASE\$](UCASE\$.md) , [LCASE\$](LCASE\$.md)
+* _COMMANDCOUNT
 </blockquote>

@@ -129,7 +129,7 @@ br ~ h5 {
 
 
 * Function can be used in to supply π or multiples in a program.
-* Accuracy is determined by the return variable type [AS](AS.md) [SINGLE](SINGLE.md) , [DOUBLE](DOUBLE.md) or [_FLOAT](FLOAT.md) .
+* Accuracy is determined by the return variable type [AS](AS.md) [SINGLE](SINGLE.md) , [DOUBLE](DOUBLE.md) or _FLOAT .
 * The π value can also be derived using 4 
 * [ATN](ATN.md) (1) for a [SINGLE](SINGLE.md) value.
 
@@ -164,7 +164,7 @@ PRINT circlearea
 <blockquote>
 
 
-* [_ATAN2](ATAN2.md) , [TAN](TAN.md)
+* _ATAN2 , [TAN](TAN.md)
 * [ATN](ATN.md)
 * [SIN](SIN.md) , [COS](COS.md)
 </blockquote>

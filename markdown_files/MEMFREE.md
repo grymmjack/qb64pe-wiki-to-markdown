@@ -119,7 +119,7 @@ br ~ h5 {
 <blockquote>
 
 
-* ALL designated [_MEM](MEM.md) type memoryVariable values must be freed to conserve memory when they are no longer used or needed.
+* ALL designated _MEM type memoryVariable values must be freed to conserve memory when they are no longer used or needed.
 </blockquote>
 
 #### DESCRIPTION
@@ -127,8 +127,8 @@ br ~ h5 {
 <blockquote>
 
 
-* Since [_MEM](MEM.md) type variables cannot use a suffix, use [DIM](DIM.md) memoryVariable [AS](AS.md) [_MEM](MEM.md) to create memory handle variables.
-* All values created by memory functions must be freed using [_MEMFREE](MEMFREE.md) with a valid [_MEM](MEM.md) variable.
+* Since _MEM type variables cannot use a suffix, use [DIM](DIM.md) memoryVariable [AS](AS.md) _MEM to create memory handle variables.
+* All values created by memory functions must be freed using _MEMFREE with a valid _MEM variable.
 
 </blockquote>
 
@@ -144,10 +144,10 @@ br ~ h5 {
 <blockquote>
 
 
-* [_MEM](MEM.md)
-* [_MEM](MEM.md) (function)
-* [_MEMNEW](MEMNEW.md)
-* [_MEMIMAGE](MEMIMAGE.md)
-* [_MEMELEMENT](MEMELEMENT.md)
-* [_MEMGET](MEMGET.md) (function)
+* _MEM
+* _MEM (function)
+* _MEMNEW
+* _MEMIMAGE
+* _MEMELEMENT
+* _MEMGET (function)
 </blockquote>

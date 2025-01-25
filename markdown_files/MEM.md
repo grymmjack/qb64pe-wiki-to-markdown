@@ -128,12 +128,12 @@ br ~ h5 {
 
 ```vb
 TYPE memory_type
-OFFSET AS _OFFSET       'start location of block(changes with byte position)
-SIZE AS _OFFSET         'size of block remaining at offset(changes with position)
-TYPE AS _OFFSET         'type description of variable used(never changes)
-ELEMENTSIZE AS _OFFSET  'byte size of values inside the block(never changes)
-IMAGE AS LONG           'the image handle used when _MEMIMAGE(handle) is used
-SOUND AS LONG           'the sound handle used when _MEMSOUND(handle) is used
+ OFFSET AS _OFFSET       'start location of block(changes with byte position)
+ SIZE AS _OFFSET         'size of block remaining at offset(changes with position)
+ TYPE AS _OFFSET         'type description of variable used(never changes)
+ ELEMENTSIZE AS _OFFSET  'byte size of values inside the block(never changes)
+ IMAGE AS LONG           'the image handle used when _MEMIMAGE(handle) is used
+ SOUND AS LONG           'the sound handle used when _MEMSOUND(handle) is used
 END TYPE
 
 The above TYPE is for clarification purposes only. It doesn't need to be pasted ina program to use _MEM.
@@ -157,10 +157,10 @@ SCREEN _NEWIMAGE(500, 500, 32)
 
 Image$ = Download$("https://qb64phoenix.com/qb64wiki/resources/assets/peWikiLogo.png", statusCode&) 'Let's try and download the QB64PE Logo from the web
 IF statusCode& = 200 THEN '                                      200 says a proper connection was made to the web page in question
-i = _LOADIMAGE(Image$, 32, "memory") '                       and then we load it for use as a registered imange
+   i = _LOADIMAGE(Image$, 32, "memory") '                       and then we load it for use as a registered imange
 ELSE
-PRINT "HTTP ERROR"; statusCode '                             can't get a proper connection to our webpage, so we don't have an image to work with.
-END '                                                        end and go report the issue on the forums, if you'd be so kind, dear user.
+   PRINT "HTTP ERROR"; statusCode '                             can't get a proper connection to our webpage, so we don't have an image to work with.
+   END '                                                        end and go report the issue on the forums, if you'd be so kind, dear user.
 END IF
 
 _PUTIMAGE (0, 0)-(500, 500), i '                                 put the image on the screen so we can view it
@@ -172,34 +172,34 @@ DIM m AS _MEM: m = _MEMIMAGE(i) '                                make a memblock
 
 
 IF m.TYPE AND 2048 THEN
-PRINT "this is/was an image"
-IF _MEMEXISTS(m) THEN '                                      check if memory m is still available
-PRINT t AND 7; "bytes per pixel"
-PRINT "image handle "; m.IMAGE
-PRINT "image width"; _WIDTH(m.IMAGE)
-PRINT "image height"; _HEIGHT(m.IMAGE)
-ELSE '                                                       if we removed the remark from the _MEMFREE above, we'll see the following message
-PRINT "Memory already freed!"
-END IF
+   PRINT "this is/was an image"
+   IF _MEMEXISTS(m) THEN '                                      check if memory m is still available
+       PRINT t AND 7; "bytes per pixel"
+       PRINT "image handle "; m.IMAGE
+       PRINT "image width"; _WIDTH(m.IMAGE)
+       PRINT "image height"; _HEIGHT(m.IMAGE)
+   ELSE '                                                       if we removed the remark from the _MEMFREE above, we'll see the following message
+       PRINT "Memory already freed!"
+   END IF
 END IF
 
 
 ' Content of the HTTP response is returned.
 ' The statusCode is also assigned.
 FUNCTION Download$ (url AS STRING, statusCode AS LONG)
-DIM h AS LONG, content AS STRING, s AS STRING
-h = _OPENCLIENT("HTTP:" + url)
+   DIM h AS LONG, content AS STRING, s AS STRING
+   h = _OPENCLIENT("HTTP:" + url)
 
-statusCode = _STATUSCODE(h)
+   statusCode = _STATUSCODE(h)
 
-WHILE NOT EOF(h)
-_LIMIT 60
-GET #h, , s
-content = content + s
-WEND
-CLOSE #h
+   WHILE NOT EOF(h)
+       _LIMIT 60
+       GET #h, , s
+       content = content + s
+   WEND
+   CLOSE #h
 
-Download$ = content
+   Download$ = content
 END FUNCTION
 ```
   
@@ -250,18 +250,18 @@ PRINT ConvertOffset(m.OFFSET)
 
 
 FUNCTION ConvertOffset&& (value AS _OFFSET)
-$CHECKING:OFF
-DIM m AS _MEM 'Define a memblock
-m = _MEM(value) 'Point it to use value
-$IF 64BIT THEN
-DIM temp AS _INTEGER64 'On 64 bit OSes, an OFFSET is 8 bytes in size.
-$ELSE
-DIM temp AS LONG '      However, on 32 bit OSes, an OFFSET is only 4 bytes.
-$END IF
-_MEMGET m, m.OFFSET, temp 'Once we've sized our variable correctly, let's get it
-ConvertOffset&& = temp '   And then assign that long value to ConvertOffset&&
-_MEMFREE m '               Free the memblock
-$CHECKING:ON
+   $CHECKING:OFF
+   DIM m AS _MEM 'Define a memblock
+   m = _MEM(value) 'Point it to use value
+   $IF 64BIT THEN
+       DIM temp AS _INTEGER64 'On 64 bit OSes, an OFFSET is 8 bytes in size.
+   $ELSE
+       DIM temp AS LONG '      However, on 32 bit OSes, an OFFSET is only 4 bytes.
+   $END IF 
+   _MEMGET m, m.OFFSET, temp 'Once we've sized our variable correctly, let's get it
+   ConvertOffset&& = temp '   And then assign that long value to ConvertOffset&&
+   _MEMFREE m '               Free the memblock
+   $CHECKING:ON
 END FUNCTION
 ```
   
@@ -275,8 +275,8 @@ END FUNCTION
 <blockquote>
 
 
-* [_MEM](MEM.md) (function) , [_MEMELEMENT](MEMELEMENT.md)
-* [_MEMNEW](MEMNEW.md) , [_MEMCOPY](MEMCOPY.md) , [_MEMFREE](MEMFREE.md)
-* [_MEMGET](MEMGET.md) , [_MEMPUT](MEMPUT.md) , [_MEMFILL](MEMFILL.md)
-* [_MEMIMAGE](MEMIMAGE.md) , [_MEMSOUND](MEMSOUND.md)
+* _MEM (function) , _MEMELEMENT
+* _MEMNEW , _MEMCOPY , _MEMFREE
+* _MEMGET , _MEMPUT , _MEMFILL
+* _MEMIMAGE , _MEMSOUND
 </blockquote>

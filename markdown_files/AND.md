@@ -134,32 +134,32 @@ br ~ h5 {
 ```vb
 Table 4: The logical operations and its results.
 
-In this table, A and B are the Expressions to invert or combine.
-Both may be results of former Boolean evaluations.
-┌────────────────────────────────────────────────────────────────────────┐
-│                           Logical Operations                           │
-├───────┬───────┬───────┬─────────┬────────┬─────────┬─────────┬─────────┤
-│   A   │   B   │ NOT B │ A AND B │ A OR B │ A XOR B │ A EQV B │ A IMP B │
-├───────┼───────┼───────┼─────────┼────────┼─────────┼─────────┼─────────┤
-│ true  │ true  │ false │  true   │ true   │  false  │  true   │  true   │
-├───────┼───────┼───────┼─────────┼────────┼─────────┼─────────┼─────────┤
-│ true  │ false │ true  │  false  │ true   │  true   │  false  │  false  │
-├───────┼───────┼───────┼─────────┼────────┼─────────┼─────────┼─────────┤
-│ false │ true  │ false │  false  │ true   │  true   │  false  │  true   │
-├───────┼───────┼───────┼─────────┼────────┼─────────┼─────────┼─────────┤
-│ false │ false │ true  │  false  │ false  │  false  │  true   │  true   │
-└───────┴───────┴───────┴─────────┴────────┴─────────┴─────────┴─────────┘
-Note: In most BASIC languages incl. QB64 these are bitwise operations,
-hence the logic is performed for each corresponding bit in both
-operators, where true or false indicates whether a bit is set or
-not set. The outcome of each bit is then placed into the respective
-position to build the bit pattern of the final result value.
+      In this table, A and B are the Expressions to invert or combine.
+             Both may be results of former Boolean evaluations.
+ ┌────────────────────────────────────────────────────────────────────────┐
+ │                           Logical Operations                           │
+ ├───────┬───────┬───────┬─────────┬────────┬─────────┬─────────┬─────────┤
+ │   A   │   B   │ NOT B │ A AND B │ A OR B │ A XOR B │ A EQV B │ A IMP B │
+ ├───────┼───────┼───────┼─────────┼────────┼─────────┼─────────┼─────────┤
+ │ true  │ true  │ false │  true   │ true   │  false  │  true   │  true   │
+ ├───────┼───────┼───────┼─────────┼────────┼─────────┼─────────┼─────────┤
+ │ true  │ false │ true  │  false  │ true   │  true   │  false  │  false  │
+ ├───────┼───────┼───────┼─────────┼────────┼─────────┼─────────┼─────────┤
+ │ false │ true  │ false │  false  │ true   │  true   │  false  │  true   │
+ ├───────┼───────┼───────┼─────────┼────────┼─────────┼─────────┼─────────┤
+ │ false │ false │ true  │  false  │ false  │  false  │  true   │  true   │
+ └───────┴───────┴───────┴─────────┴────────┴─────────┴─────────┴─────────┘
+  Note: In most BASIC languages incl. QB64 these are bitwise operations,
+        hence the logic is performed for each corresponding bit in both
+        operators, where true or false indicates whether a bit is set or
+        not set. The outcome of each bit is then placed into the respective
+        position to build the bit pattern of the final result value.
 
-As all Relational Operations return negative one (-1, all bits set) for
-true and zero (0, no bits set) for false, this allows us to use these
-bitwise logical operations to invert or combine any relational checks,
-as the outcome is the same for each bit and so always results into a
-true (-1) or false (0) again for further evaluations.
+  As all Relational Operations return negative one (-1, all bits set) for
+   true and zero (0, no bits set) for false, this allows us to use these
+   bitwise logical operations to invert or combine any relational checks,
+   as the outcome is the same for each bit and so always results into a
+           true (-1) or false (0) again for further evaluations.
 ```
   
 <br>
@@ -169,10 +169,10 @@ true (-1) or false (0) again for further evaluations.
 ##### Example 1:
 ```vb
 101
-AND
-011
------
-001
+        AND
+        011
+       -----
+        001
 ```
   
 <br>
@@ -182,10 +182,10 @@ AND
 ##### Example 2:
 ```vb
 11111011
-AND
-11101111
-----------
-11101011
+       AND
+     11101111
+    ----------
+     11101011
 ```
   
 <br>
@@ -195,12 +195,12 @@ AND
 ##### Example 3: Finding the binary bits on in an INTEGER value.
 ```vb
 DO
-INPUT "Enter Integer value from -32768 to 32767 (Enter quits): ", INTvalue&
-IF INTvalue& < -32768 OR INTvalue& > 32767 OR INTval& = 0 THEN EXIT DO
-FOR exponent = 15 TO 0 STEP -1
-IF (INTvalue& AND 2 ^ exponent) THEN PRINT "1"; ELSE PRINT "0";
-NEXT
-PRINT " "
+ INPUT "Enter Integer value from -32768 to 32767 (Enter quits): ", INTvalue&
+ IF INTvalue& < -32768 OR INTvalue& > 32767 OR INTval& = 0 THEN EXIT DO
+ FOR exponent = 15 TO 0 STEP -1
+   IF (INTvalue& AND 2 ^ exponent) THEN PRINT "1"; ELSE PRINT "0";
+ NEXT
+ PRINT " "
 LOOP UNTIL INTvalue& = 0 'zero entry quits
 ```
   
@@ -220,7 +220,7 @@ LOOP UNTIL INTvalue& = 0 'zero entry quits
 <blockquote>
 
 
-* [OR](OR.md) , [XOR](XOR.md) , [NOT](NOT.md) (logical operators)
+* [OR](OR.md) , XOR , [NOT](NOT.md) (logical operators)
 * [AND](AND.md) (boolean)
-* Binary , Boolean
+* Binary , [Boolean](Boolean.md)
 </blockquote>

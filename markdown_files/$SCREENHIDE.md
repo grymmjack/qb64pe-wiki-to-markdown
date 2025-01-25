@@ -119,8 +119,8 @@ br ~ h5 {
 <blockquote>
 
 
-* [&dollar;SCREENHIDE](&dollar;SCREENHIDE.md) may be used at the start of a program to hide the main program window when using a console window.
-* The [_SCREENHIDE](SCREENHIDE.md) statement must be used before [_SCREENSHOW](SCREENSHOW.md) can be used in sections of a program.
+* [\$SCREENHIDE](\$SCREENHIDE.md) may be used at the start of a program to hide the main program window when using a console window.
+* The _SCREENHIDE statement must be used before _SCREENSHOW can be used in sections of a program.
 * QB64 metacommands cannot be commented out with apostrophe or [REM](REM.md) .
 
 </blockquote>
@@ -135,10 +135,10 @@ br ~ h5 {
 ```vb
 $SCREENHIDE
 DECLARE DYNAMIC LIBRARY "user32"
-FUNCTION MessageBoxA& (BYVAL hWnd%&, BYVAL lpText%&, BYVAL lpCaption%&, BYVAL uType~&)
+ FUNCTION MessageBoxA& (BYVAL hWnd%&, BYVAL lpText%&, BYVAL lpCaption%&, BYVAL uType~&)
 END DECLARE
 DECLARE DYNAMIC LIBRARY "kernel32"
-SUB ExitProcess (BYVAL uExitCode~&)
+ SUB ExitProcess (BYVAL uExitCode~&)
 END DECLARE
 DIM s0 AS STRING
 DIM s1 AS STRING
@@ -157,7 +157,7 @@ ExitProcess MessageBoxA(0, _OFFSET(s0), _OFFSET(s1), 0)
 <blockquote>
 
 
-* [&dollar;CONSOLE](&dollar;CONSOLE.md) , [&dollar;SCREENSHOW](&dollar;SCREENSHOW.md)
-* [_SCREENHIDE](SCREENHIDE.md) , [_SCREENSHOW](SCREENSHOW.md)
-* [_CONSOLE](CONSOLE.md)
+* [\$CONSOLE](\$CONSOLE.md) , [\$SCREENSHOW](\$SCREENSHOW.md)
+* _SCREENHIDE , _SCREENSHOW
+* _CONSOLE
 </blockquote>

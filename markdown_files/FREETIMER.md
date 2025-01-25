@@ -120,7 +120,7 @@ br ~ h5 {
 
 
 * QB64 can use an unlimited number of [ON](ON.md) [TIMER](TIMER.md) (number, seconds!) event [INTEGER](INTEGER.md) values at once.
-* Every time [_FREETIMER](FREETIMER.md) is called the [INTEGER](INTEGER.md) value returned will increase by one, starting at 1, whether it is used or not.
+* Every time _FREETIMER is called the [INTEGER](INTEGER.md) value returned will increase by one, starting at 1, whether it is used or not.
 * Store multiple returns in different variable names to refer to separate events later.
 
 </blockquote>

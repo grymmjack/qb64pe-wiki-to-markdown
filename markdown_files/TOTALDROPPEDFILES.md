@@ -119,10 +119,10 @@ br ~ h5 {
 <blockquote>
 
 
-* After [_ACCEPTFILEDROP](ACCEPTFILEDROP.md) is enabled, [_TOTALDROPPEDFILES](TOTALDROPPEDFILES.md) will return 0 until the user drops files or folders into the program's window.
-* When using [_DROPPEDFILE](DROPPEDFILE.md) to read the list sequentially, [_TOTALDROPPEDFILES](TOTALDROPPEDFILES.md) will be reset to 0 after the last item is retrieved (after [_DROPPEDFILE](DROPPEDFILE.md) returns an empty string "").
-* If using [_DROPPEDFILE](DROPPEDFILE.md) with an index, you must call [_FINISHDROP](FINISHDROP.md) after you finish working with the list.
-* When using [_DROPPEDFILE](DROPPEDFILE.md) to read the list with an index, [_TOTALDROPPEDFILES](TOTALDROPPEDFILES.md) will not be reset (and the list of items won't be cleared) until [_FINISHDROP](FINISHDROP.md) is called.
+* After _ACCEPTFILEDROP is enabled, _TOTALDROPPEDFILES will return 0 until the user drops files or folders into the program's window.
+* When using _DROPPEDFILE to read the list sequentially, _TOTALDROPPEDFILES will be reset to 0 after the last item is retrieved (after _DROPPEDFILE returns an empty string "").
+* If using _DROPPEDFILE with an index, you must call _FINISHDROP after you finish working with the list.
+* When using _DROPPEDFILE to read the list with an index, _TOTALDROPPEDFILES will not be reset (and the list of items won't be cleared) until _FINISHDROP is called.
 * Keyword not supported in Linux or macOS versions
 
 </blockquote>
@@ -139,6 +139,6 @@ br ~ h5 {
 <blockquote>
 
 
-* [_ACCEPTFILEDROP](ACCEPTFILEDROP.md) , [_DROPPEDFILE](DROPPEDFILE.md) , [_FINISHDROP](FINISHDROP.md)
-* [_FILEEXISTS](FILEEXISTS.md) , [_DIREXISTS](DIREXISTS.md)
+* _ACCEPTFILEDROP , _DROPPEDFILE , _FINISHDROP
+* _FILEEXISTS , _DIREXISTS
 </blockquote>

@@ -145,7 +145,7 @@ br ~ h5 {
 
 
 * [ATN](ATN.md) (arctangent)
-* [_PI](PI.md) (QB64 function)
+* _PI (QB64 function)
 * Mathematical Operations
 * Atan2 reference
 </blockquote>

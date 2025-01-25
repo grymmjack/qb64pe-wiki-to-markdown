@@ -159,7 +159,7 @@ $VERSIONINFO:PRODUCTVERSION#=1,0,0,0
 <blockquote>
 
 
-* [&dollar;EXEICON](&dollar;EXEICON.md)
-* [_ICON](ICON.md)
+* [\$EXEICON](\$EXEICON.md)
+* _ICON
 * VERSIONINFO resource (MSDN)
 </blockquote>

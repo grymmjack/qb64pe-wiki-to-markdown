@@ -136,8 +136,8 @@ DO
 ERRcode = 0
 INPUT "Enter path and name of directory to delete: "; directory$
 IF LEN(directory$) THEN      'valid user entry or quits
-RMDIR directory$    'removes empty folder without a prompt
-IF ERRcode = 0 THEN PRINT "Folder "; directory$; " removed."
+  RMDIR directory$    'removes empty folder without a prompt
+  IF ERRcode = 0 THEN PRINT "Folder "; directory$; " removed."
 END IF
 LOOP UNTIL ERRcode = 0 OR LEN(directory$) = 0
 SYSTEM
@@ -147,11 +147,11 @@ ErrorHandler:
 ERRcode = ERR    'get error code returned
 SELECT CASE ERRcode
 CASE 75
-PRINT directory$ + " is not empty!"
+   PRINT directory$ + " is not empty!"
 CASE 76
-PRINT directory$ + " does not exist!"
+   PRINT directory$ + " does not exist!"
 CASE ELSE
-PRINT "Error"; ERRcode; "attempting to delete " + directory$
+   PRINT "Error"; ERRcode; "attempting to delete " + directory$
 END SELECT
 PRINT
 RESUME NEXT

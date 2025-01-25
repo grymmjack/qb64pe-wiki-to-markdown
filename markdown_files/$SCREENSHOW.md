@@ -120,8 +120,8 @@ br ~ h5 {
 
 
 * The metacommand is intended to be used in a modular program when a screen surface is necessary in one or more modules.
-* [&dollar;SCREENSHOW](&dollar;SCREENSHOW.md) can only be used after [&dollar;SCREENHIDE](&dollar;SCREENHIDE.md) or [_SCREENHIDE](SCREENHIDE.md) have been used in another program module.
-* If [&dollar;SCREENHIDE](&dollar;SCREENHIDE.md) and then [&dollar;SCREENSHOW](&dollar;SCREENSHOW.md) are used in the same program module the window will not be hidden.
+* [\$SCREENSHOW](\$SCREENSHOW.md) can only be used after [\$SCREENHIDE](\$SCREENHIDE.md) or _SCREENHIDE have been used in another program module.
+* If [\$SCREENHIDE](\$SCREENHIDE.md) and then [\$SCREENSHOW](\$SCREENSHOW.md) are used in the same program module the window will not be hidden.
 * QB64 metacommands cannot be commented out with apostrophe or [REM](REM.md) .
 
 </blockquote>
@@ -138,7 +138,7 @@ br ~ h5 {
 <blockquote>
 
 
-* [&dollar;CONSOLE](&dollar;CONSOLE.md) , [&dollar;SCREENHIDE](&dollar;SCREENHIDE.md) (QB64 Metacommands )
-* [_SCREENHIDE](SCREENHIDE.md) , [_SCREENSHOW](SCREENSHOW.md)
-* [_CONSOLE](CONSOLE.md)
+* [\$CONSOLE](\$CONSOLE.md) , [\$SCREENHIDE](\$SCREENHIDE.md) (QB64 Metacommands )
+* _SCREENHIDE , _SCREENSHOW
+* _CONSOLE
 </blockquote>

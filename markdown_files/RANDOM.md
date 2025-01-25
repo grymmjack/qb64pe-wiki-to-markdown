@@ -123,8 +123,8 @@ br ~ h5 {
 ##### Example 1: Function that finds a RANDOM file's record number for a string value such as a phone number.
 ```vb
 TYPE customer
-age AS INTEGER
-phone AS STRING * 10
+ age AS INTEGER
+ phone AS STRING * 10
 END TYPE
 
 DIM SHARED cust AS customer, recLEN
@@ -133,8 +133,8 @@ PRINT "RecLEN:"; recLEN
 
 OPEN "randfile.rec" FOR RANDOM AS #1 LEN = recLEN
 FOR i = 1 TO 4
-READ cust.age, cust.phone
-PUT #1, , cust
+ READ cust.age, cust.phone
+ PUT #1, , cust
 NEXT
 CLOSE #1
 
@@ -143,9 +143,9 @@ RP = RecordPos("randfile.rec", "2223456789")  'returns 0 if record not found!
 PRINT RP
 
 IF RP THEN
-OPEN "randfile.rec" FOR RANDOM AS #2 LEN = recLEN
-GET #2, RP, cust
-CLOSE #2
+ OPEN "randfile.rec" FOR RANDOM AS #2 LEN = recLEN
+ GET #2, RP, cust
+ CLOSE #2
 PRINT cust.age, cust.phone
 END IF
 
@@ -183,8 +183,8 @@ PUT #1, 2, b$
 PUT #1, 3, c$
 
 FOR i = 1 TO 3
-GET #1, i, a$
-PRINT a$, LEN(a$)
+ GET #1, i, a$
+ PRINT a$, LEN(a$)
 NEXT
 
 CLOSE

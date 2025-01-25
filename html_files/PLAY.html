@@ -6,7 +6,7 @@
    PLAY - QB64 Phoenix Edition Wiki
   </title>
   <script>
-   document.documentElement.className="client-js";RLCONF={"wgBreakFrames":false,"wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgRequestId":"Zp2GvxpdvGGeVdK1DlhrigAAAhU","wgCSPNonce":false,"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"PLAY","wgTitle":"PLAY","wgCurRevisionId":8783,"wgRevisionId":8783,"wgArticleId":511,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":[],"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgRelevantPageName":"PLAY","wgRelevantArticleId":511,"wgIsProbablyEditable":false,"wgRelevantPageIsProbablyEditable":false,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgVector2022PreviewPages":[]};RLSTATE={"site.styles":"ready","user.styles":"ready","user":"ready",
+   document.documentElement.className="client-js";RLCONF={"wgBreakFrames":false,"wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgRequestId":"Z5RiYAWKRwiE9zBBFH0bYQAAAOA","wgCSPNonce":false,"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"PLAY","wgTitle":"PLAY","wgCurRevisionId":9550,"wgRevisionId":9550,"wgArticleId":511,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":[],"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgRelevantPageName":"PLAY","wgRelevantArticleId":511,"wgIsProbablyEditable":false,"wgRelevantPageIsProbablyEditable":false,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgVector2022PreviewPages":[]};RLSTATE={"site.styles":"ready","user.styles":"ready","user":"ready",
 "user.options":"loading","mediawiki.page.gallery.styles":"ready","skins.vector.styles.legacy":"ready"};RLPAGEMODULES=["site","mediawiki.page.ready","mediawiki.toc","skins.vector.legacy.js"];
   </script>
   <script>
@@ -64,9 +64,9 @@
        <b>
         PLAY
        </b>
-       is a statement that plays notes of sound through the sound card in QB64 using a command
+       is a statement that plays a tune defined by Music Macro Language (MML)
        <a href="/qb64wiki/index.php/STRING" title="STRING">
-        STRING
+        STRINGs
        </a>
        .
       </p>
@@ -152,12 +152,25 @@
       </h2>
       <dl>
        <dd>
-        <a class="mw-selflink selflink">
+        <b>
          PLAY
-        </a>
+        </b>
         <i>
-         commandstring$
+         mmlString1$
         </i>
+        [,
+        <i>
+         mmlString2$
+        </i>
+        ][,
+        <i>
+         mmlString3$
+        </i>
+        ][,
+        <i>
+         mmlString4$
+        </i>
+        ]
        </dd>
       </dl>
       <p>
@@ -172,7 +185,19 @@
        <li>
         The
         <i>
-         commandstring$
+         mmlString1$
+        </i>
+        ,
+        <i>
+         mmlString2$
+        </i>
+        ,
+        <i>
+         mmlString3$
+        </i>
+        ,
+        <i>
+         mmlString4$
         </i>
         can be any literal or variable
         <a href="/qb64wiki/index.php/STRING" title="STRING">
@@ -181,7 +206,11 @@
         consisting of the following commands:
         <ul>
          <li>
-          Command string values are not case sensitive and spacing is ignored. Use upper or lower case as desired.
+          Command string values are not case-sensitive and white spaces and
+          <b>
+           ;
+          </b>
+          are ignored. Use upper or lower case as desired.
          </li>
         </ul>
        </li>
@@ -252,7 +281,7 @@
           <b>
            G
           </b>
-          are the notes in the current octave. Can use the following suffixes:
+          are the notes in the current octave. The following suffixes can be used:
          </li>
         </ul>
         <dl>
@@ -330,13 +359,17 @@
             <b>
              ML
             </b>
-            - Each note plays full length set by L (legato)
+            - Each note plays a full-length set by L (legato)
            </li>
            <li>
             <b>
+             R
+            </b>
+            /
+            <b>
              P
             </b>
-            n - Specifies a pause (1 - 64). P1 is a whole-note pause, P2 is a half-note pause, etc.  (The pause is 1/n notes in length.) Example:
+            n - Specifies a rest/pause (1 - 64). P1 is a whole-note pause, P2 is a half-note pause, etc.  (The pause is 1/n note in length.) Example:
             <b>
              <span style="color:green;">
               PLAY "P32"
@@ -347,7 +380,7 @@
             <b>
              T
             </b>
-            n - Tempo sets number of L4 quarter notes per minute (n can be 32 to 255 where 120 is the default). Example:
+            n - Tempo sets the number of L4 quarter notes per minute (n can be 32 to 255 where 120 is the default). Example:
             <b>
              <span style="color:green;">
               PLAY "T180"
@@ -395,7 +428,7 @@
           <b>
            V
           </b>
-          n - Volume in
+          n - Voice volume in
           <b>
            QB64 only
           </b>
@@ -404,6 +437,20 @@
            n
           </b>
           is not specified.
+         </li>
+         <li>
+          <b>
+           V-
+          </b>
+          /
+          <b>
+           V+
+          </b>
+          - Decrement / Increment the voice volume in
+          <b>
+           QB64-PE only
+          </b>
+          .
          </li>
          <li>
           <b>
@@ -429,11 +476,15 @@
           </a>
           (string-expression) - executes a command string variable.
           <b>
-           MUST be used with variables!
+           It must be used with variables!
           </b>
           .
          </li>
          <li>
+          <b>
+           W
+          </b>
+          /
           <b>
            @
           </b>
@@ -445,33 +496,147 @@
           <b>
            1
           </b>
-          for square waveform,
+          for square (default),
           <b>
            2
           </b>
-          for sawtooth waveform,
+          for sawtooth,
           <b>
            3
           </b>
-          for triangle waveform (default),
+          for triangle,
           <b>
            4
           </b>
-          for sine waveform or
+          for sine,
           <b>
            5
           </b>
-          for white noise)
+          for white noise,
+          <b>
+           6
+          </b>
+          for pink noise,
+          <b>
+           7
+          </b>
+          for Brownian noise,
+          <b>
+           8
+          </b>
+          for LFSR noise,
+          <b>
+           9
+          </b>
+          for pulse or
+          <b>
+           10
+          </b>
+          for a waveform defined by the
+          <a href="/qb64wiki/index.php/WAVE" title="WAVE">
+           _WAVE
+          </a>
+          statement.
+         </li>
+         <li>
+          <b>
+           /
+          </b>
+          n - Attack duration in
+          <b>
+           QB64-PE only
+          </b>
+          can be a percentage of note duration from 0 to 100.
+         </li>
+         <li>
+          <b>
+           \
+          </b>
+          n - Decay duration in
+          <b>
+           QB64-PE only
+          </b>
+          can be a percentage of note duration from 0 to 100.
+         </li>
+         <li>
+          <b>
+           ^
+          </b>
+          n - Sustain volume in
+          <b>
+           QB64-PE only
+          </b>
+          can be a percentage of the voice volume (
+          <b>
+           V
+          </b>
+          ) from 0 to 100.
+         </li>
+         <li>
+          <b>
+           _
+          </b>
+          n - Release duration in
+          <b>
+           QB64-PE only
+          </b>
+          can be a percentage of note duration from 0 to 100.
          </li>
          <li>
           <b>
            Q
           </b>
-          n - Volume ramp in
+          n - Simple volume ramp in
           <b>
            QB64-PE only
           </b>
-          can be any duration (ms) from 0 to 100.
+          can be a percentage of note duration from 0 to 100. This sets sustain (
+          <b>
+           ^
+          </b>
+          ) to 100, attack (
+          <b>
+           /
+          </b>
+          ) to n, and release (
+          <b>
+           _
+          </b>
+          ) to n.
+         </li>
+         <li>
+          <b>
+           Y
+          </b>
+          n - Parameters for the current waveform in
+          <b>
+           QB64-PE only
+          </b>
+          can be 0 to 100 for pulse waveform, clock rate for LFSR noise, or seed for other noise waveforms.
+         </li>
+         <li>
+          <b>
+           S
+          </b>
+          n - Pan position in
+          <b>
+           QB64-PE only
+          </b>
+          can be 0 (left-most) to 100 (right-most).
+         </li>
+         <li>
+          <b>
+           S-
+          </b>
+          /
+          <b>
+           S+
+          </b>
+          - Moves the pan position left / right in
+          <b>
+           QB64-PE only
+          </b>
+          .
          </li>
          <li>
           Numeric values "n" listed above can also be fetched from numeric variables using
@@ -602,44 +767,107 @@
       </ul>
       <ul>
        <li>
-        Complete
-        <b>
-         X
-        </b>
-        <b>
-         +
-        </b>
-        <a href="/qb64wiki/index.php/VARPTR$" title="VARPTR$">
-         VARPTR$
-        </a>
-        (string-expression) support was added in
+        The following features have been added in
         <b>
          QB64-PE v3.8.0
         </b>
-        . Earlier versions of QB64-PE and QB64 only had
-        <b>
-         =
-        </b>
-        +
-        <a href="/qb64wiki/index.php/VARPTR$" title="VARPTR$">
-         VARPTR$
-        </a>
-        (numeric_variable) support.
+        :
+        <ul>
+         <li>
+          Complete support for
+          <b>
+           X
+          </b>
+          <b>
+           +
+          </b>
+          <a href="/qb64wiki/index.php/VARPTR$" title="VARPTR$">
+           VARPTR$
+          </a>
+          (string-expression).
+         </li>
+         <li>
+          Support for
+          <b>
+           @
+          </b>
+          and
+          <b>
+           Q
+          </b>
+          commands.
+         </li>
+        </ul>
        </li>
        <li>
-        Support for
+        The following features have been added in
         <b>
-         @
+         QB64-PE v4.0.0
         </b>
-        n and
-        <b>
-         Q
-        </b>
-        n was added in
-        <b>
-         QB64-PE v3.8.0
-        </b>
-        .
+        :
+        <ul>
+         <li>
+          Support for multi-voice MML playback. Advanced BASIC (for the IBM PCjr and Tandy 1000) multi-voice MML can now play in QB64-PE.
+         </li>
+         <li>
+          Support for
+          <b>
+           W
+          </b>
+          ,
+          <b>
+           /
+          </b>
+          ,
+          <b>
+           \
+          </b>
+          ,
+          <b>
+           ^
+          </b>
+          ,
+          <b>
+           _
+          </b>
+          ,
+          <b>
+           Y
+          </b>
+          ,
+          <b>
+           S
+          </b>
+          ,
+          <b>
+           S-
+          </b>
+          ,
+          <b>
+           S+
+          </b>
+          ,
+          <b>
+           R
+          </b>
+          ,
+          <b>
+           V-
+          </b>
+          , and
+          <b>
+           V+
+          </b>
+          commands.
+         </li>
+         <li>
+          Support for 6, 7, 8, 9, and 10 (user-defined
+          <a href="/qb64wiki/index.php/WAVE" title="WAVE">
+           _WAVE
+          </a>
+          ) waveforms.
+         </li>
+        </ul>
        </li>
       </ul>
       <p>
@@ -655,14 +883,14 @@
         Example 1
        </dt>
        <dd>
-        Plays a sound with the volume and note varying from 0 to 50. Maximum note can only be 84.
+        Plays a sound with the volume and note varying from 0 to 50. The maximum note can only be 84.
        </dd>
       </dl>
       <table cellpadding="15px" width="100%">
        <tbody>
         <tr>
          <td>
-          <pre class="codeide"><a class="mw-selflink selflink"><span style="color:#4593D8;">PLAY</span></a> <span style="color:#FFB100;">"q0mll64"</span>
+          <pre class="codeide"><a class="mw-selflink selflink"><span style="color:#4593D8;">PLAY</span></a> <span style="color:#FFB100;">"q0w3mll64"</span>
 <a class="mw-redirect" href="/qb64wiki/index.php/DO" title="DO"><span style="color:#4593D8;">DO</span></a>
     <a href="/qb64wiki/index.php/FOR" title="FOR"><span style="color:#4593D8;">FOR</span></a> x = <span style="color:#F580B1;">1</span> <a href="/qb64wiki/index.php/TO" title="TO"><span style="color:#4593D8;">TO</span></a> <span style="color:#F580B1;">50</span>
         a$ = a$ + <span style="color:#FFB100;">"v"</span> + <a href="/qb64wiki/index.php/LTRIM$" title="LTRIM$"><span style="color:#4593D8;">LTRIM$</span></a>(<a href="/qb64wiki/index.php/STR$" title="STR$"><span style="color:#4593D8;">STR$</span></a>(x)) + <span style="color:#FFB100;">"n"</span> + <a href="/qb64wiki/index.php/LTRIM$" title="LTRIM$"><span style="color:#4593D8;">LTRIM$</span></a>(<a href="/qb64wiki/index.php/STR$" title="STR$"><span style="color:#4593D8;">STR$</span></a>(x))
@@ -702,7 +930,7 @@
     <a href="/qb64wiki/index.php/PRINT" title="PRINT"><span style="color:#4593D8;">PRINT</span></a>
     <a class="mw-redirect" href="/qb64wiki/index.php/IF" title="IF"><span style="color:#4593D8;">IF</span></a> X = <span style="color:#F580B1;">1</span> <a href="/qb64wiki/index.php/THEN" title="THEN"><span style="color:#4593D8;">THEN</span></a> <a href="/qb64wiki/index.php/PRINT" title="PRINT"><span style="color:#4593D8;">PRINT</span></a> <span style="color:#FFB100;">"Fros-ty the Snow man was a jolly happy soul,"</span>
     <a class="mw-redirect" href="/qb64wiki/index.php/IF" title="IF"><span style="color:#4593D8;">IF</span></a> X = <span style="color:#F580B1;">2</span> <a href="/qb64wiki/index.php/THEN" title="THEN"><span style="color:#4593D8;">THEN</span></a> <a href="/qb64wiki/index.php/PRINT" title="PRINT"><span style="color:#4593D8;">PRINT</span></a> <span style="color:#FFB100;">"Fros-ty the Snow man knew the sun was hot that day"</span>
-    <a class="mw-selflink selflink"><span style="color:#4593D8;">PLAY</span></a> <span style="color:#FFB100;">"t140o2p4g2e4.f8g4o3c2o2b8o3c8d4c4o2b4a8g2."</span> <span style="color:#919191;">'MB removed to print song one line at a time</span>
+    <a class="mw-selflink selflink"><span style="color:#4593D8;">PLAY</span></a> <span style="color:#FFB100;">"w3q1t140o2p4g2e4.f8g4o3c2o2b8o3c8d4c4o2b4a8g2."</span> <span style="color:#919191;">'MB removed to print song one line at a time</span>
     <a class="mw-redirect" href="/qb64wiki/index.php/IF" title="IF"><span style="color:#4593D8;">IF</span></a> X = <span style="color:#F580B1;">1</span> <a href="/qb64wiki/index.php/THEN" title="THEN"><span style="color:#4593D8;">THEN</span></a> <a href="/qb64wiki/index.php/PRINT" title="PRINT"><span style="color:#4593D8;">PRINT</span></a> <span style="color:#FFB100;">"with a corn cob pipe and a button nose and two eyes made out of coal."</span>
     <a class="mw-redirect" href="/qb64wiki/index.php/IF" title="IF"><span style="color:#4593D8;">IF</span></a> X = <span style="color:#F580B1;">2</span> <a href="/qb64wiki/index.php/THEN" title="THEN"><span style="color:#4593D8;">THEN</span></a> <a href="/qb64wiki/index.php/PRINT" title="PRINT"><span style="color:#4593D8;">PRINT</span></a> <span style="color:#FFB100;">"so he said Let's run and we'll have some fun now before I melt away."</span>
     <a class="mw-selflink selflink"><span style="color:#4593D8;">PLAY</span></a> <span style="color:#FFB100;">"o2b8o3c8d4c4o2b4a8a8g8o3c4o2e8e4g8a8g4f4e4f4g2."</span>
@@ -815,7 +1043,7 @@
 <a href="/qb64wiki/index.php/END_SUB" title="END SUB"><span style="color:#4593D8;">END SUB</span></a>
 
 <a href="/qb64wiki/index.php/SUB" title="SUB"><span style="color:#4593D8;">SUB</span></a> <span style="color:#55FF55;">playgrid</span>
-    n$ = <span style="color:#FFB100;">"L16 "</span>
+    n$ = <span style="color:#FFB100;">"W3Q1L16 "</span>
     <span style="color:#919191;">'scale$ = "O1CO1DO1EO1FO1GO1AO1BO2CO2DO2EO2FO2GO2AO2BO3CO3D"</span>
     scale$ = <span style="color:#FFB100;">"o1fo1go1ao2co2do2fo2go2ao3co3do3fo3go3ao4co4do4fo"</span>
     <a href="/qb64wiki/index.php/FOR" title="FOR"><span style="color:#4593D8;">FOR</span></a> y = <span style="color:#F580B1;">15</span> <a href="/qb64wiki/index.php/TO" title="TO"><span style="color:#4593D8;">TO</span></a> <span style="color:#F580B1;">0</span> <a href="/qb64wiki/index.php/STEP" title="STEP"><span style="color:#4593D8;">STEP</span></a> <span style="color:#F580B1;">-1</span>
@@ -851,7 +1079,7 @@
         Example 4
        </dt>
        <dd>
-        Play strings starting with MB allow program code to run while music plays in background.
+        Play strings starting with MB allow program code to run while music plays in the background.
        </dd>
       </dl>
       <table cellpadding="15px" width="100%">
@@ -865,7 +1093,7 @@
 <a href="/qb64wiki/index.php/SCREEN" title="SCREEN"><span style="color:#4593D8;">SCREEN</span></a> <span style="color:#F580B1;">12</span> <span style="color:#919191;">' the following works in other screen modes, too</span>
 <a href="/qb64wiki/index.php/RANDOMIZE" title="RANDOMIZE"><span style="color:#4593D8;">RANDOMIZE</span></a> <a href="/qb64wiki/index.php/TIMER_(function)" title="TIMER (function)"><span style="color:#4593D8;">TIMER</span></a>
 
-<a class="mw-selflink selflink"><span style="color:#4593D8;">PLAY</span></a> <span style="color:#FFB100;">"mb l4cf.l8el4fag.l8fl4gl8agl4f.l8fl4a&gt;cl2dl4dl4c.&lt;l8al4afg.l8fl4gl8agl4f.l8dl4dcl2f&gt;l4dc.&lt;l8al4afg.l8fl4g&gt;dc.&lt;l8al4a&gt;cl2dl4dc.&lt;l8al4afg.l8fl4gl8agl4f.l8dl4dcl1f"</span>
+<a class="mw-selflink selflink"><span style="color:#4593D8;">PLAY</span></a> <span style="color:#FFB100;">"mbw3q1o2 l4cf.l8el4fag.l8fl4gl8agl4f.l8fl4a&gt;cl2dl4dl4c.&lt;l8al4afg.l8fl4gl8agl4f.l8dl4dcl2f&gt;l4dc.&lt;l8al4afg.l8fl4g&gt;dc.&lt;l8al4a&gt;cl2dl4dc.&lt;l8al4afg.l8fl4gl8agl4f.l8dl4dcl1f"</span>
 
 <a href="/qb64wiki/index.php/DIM" title="DIM"><span style="color:#4593D8;">DIM</span></a> ccs(<span style="color:#F580B1;">1</span> <a href="/qb64wiki/index.php/TO" title="TO"><span style="color:#4593D8;">TO</span></a> <span style="color:#F580B1;">9</span>, <span style="color:#F580B1;">1</span> <a href="/qb64wiki/index.php/TO" title="TO"><span style="color:#4593D8;">TO</span></a> <span style="color:#F580B1;">2</span>)
 ccs(<span style="color:#F580B1;">1</span>, <span style="color:#F580B1;">1</span>) = <span style="color:#F580B1;">415</span>: ccs(<span style="color:#F580B1;">1</span>, <span style="color:#F580B1;">2</span>) = <span style="color:#F580B1;">289</span>
@@ -1068,6 +1296,197 @@ play$ = <span style="color:#FFB100;">"L16O="</span> + <a href="/qb64wiki/index.p
         </tr>
        </tbody>
       </table>
+      <hr/>
+      <dl>
+       <dt>
+        Example 7
+       </dt>
+       <dd>
+        Multi-voice
+        <b>
+         PLAY
+        </b>
+        demo.
+       </dd>
+      </dl>
+      <table cellpadding="15px" width="100%">
+       <tbody>
+        <tr>
+         <td>
+          <pre class="codeide"><span style="color:#919191;">'-----------------------------------------------------------------------------------------------------------------------</span>
+<span style="color:#919191;">' QB64-PE v4.0.0 multi-voice PLAY Demo by a740g</span>
+<span style="color:#919191;">'-----------------------------------------------------------------------------------------------------------------------</span>
+
+<a href="/qb64wiki/index.php/$IF" title="$IF"><span style="color:#55FF55;">$IF</span></a> <span style="color:#55FF55;">VERSION</span> &lt; <span style="color:#F580B1;">4.0.0</span> <a href="/qb64wiki/index.php/THEN" title="THEN"><span style="color:#55FF55;">THEN</span></a>
+    <a href="/qb64wiki/index.php/$ERROR" title="$ERROR"><span style="color:#55FF55;">$ERROR</span></a> This requires the latest version of QB64-PE from <a class="external free" href="https://github.com/QB64-Phoenix-Edition/QB64pe/releases/latest" rel="nofollow">https://github.com/QB64-Phoenix-Edition/QB64pe/releases/latest</a>
+<a class="mw-redirect" href="/qb64wiki/index.php/$END_IF" title="$END IF"><span style="color:#55FF55;">$END IF</span></a> 
+
+<a href="/qb64wiki/index.php/DEFINE" title="DEFINE"><span style="color:#4593D8;">_DEFINE</span></a> A-Z <a href="/qb64wiki/index.php/AS" title="AS"><span style="color:#4593D8;">AS</span></a> <a href="/qb64wiki/index.php/LONG" title="LONG"><span style="color:#4593D8;">LONG</span></a>
+<a href="/qb64wiki/index.php/OPTION" title="OPTION"><span style="color:#4593D8;">OPTION</span></a> <a class="mw-redirect" href="/qb64wiki/index.php/EXPLICIT" title="EXPLICIT"><span style="color:#4593D8;">_EXPLICIT</span></a>
+
+<a href="/qb64wiki/index.php/CONST" title="CONST"><span style="color:#4593D8;">CONST</span></a> APP_NAME = <span style="color:#FFB100;">"Multi-voice PLAY Demo"</span>
+<a href="/qb64wiki/index.php/CONST" title="CONST"><span style="color:#4593D8;">CONST</span></a> LOOPS = <span style="color:#F580B1;">3</span>
+
+<a href="/qb64wiki/index.php/TITLE" title="TITLE"><span style="color:#4593D8;">_TITLE</span></a> APP_NAME
+
+<a href="/qb64wiki/index.php/DIM" title="DIM"><span style="color:#4593D8;">DIM</span></a> <a href="/qb64wiki/index.php/AS" title="AS"><span style="color:#4593D8;">AS</span></a> <a href="/qb64wiki/index.php/STRING" title="STRING"><span style="color:#4593D8;">STRING</span></a> CH0Verse_1, CH0Verse_2, CH1Verse_1, CH1Verse_2, CH2Verse_1, CH2Verse_2, CH2Verse_3, CH3Verse_1
+<a href="/qb64wiki/index.php/DIM" title="DIM"><span style="color:#4593D8;">DIM</span></a> <a href="/qb64wiki/index.php/AS" title="AS"><span style="color:#4593D8;">AS</span></a> <a href="/qb64wiki/index.php/STRING" title="STRING"><span style="color:#4593D8;">STRING</span></a> Channel_0, Channel_1, Channel_2, Channel_3, Caption
+<a href="/qb64wiki/index.php/DIM" title="DIM"><span style="color:#4593D8;">DIM</span></a> c <a href="/qb64wiki/index.php/AS" title="AS"><span style="color:#4593D8;">AS</span></a> <a href="/qb64wiki/index.php/LONG" title="LONG"><span style="color:#4593D8;">LONG</span></a>
+
+<a class="mw-redirect" href="/qb64wiki/index.php/DO" title="DO"><span style="color:#4593D8;">DO</span></a>
+    <a class="mw-redirect" href="/qb64wiki/index.php/DO" title="DO"><span style="color:#4593D8;">DO</span></a>
+        <a href="/qb64wiki/index.php/CLS" title="CLS"><span style="color:#4593D8;">CLS</span></a>
+        <a href="/qb64wiki/index.php/PRINT" title="PRINT"><span style="color:#4593D8;">PRINT</span></a>
+        <a href="/qb64wiki/index.php/PRINT" title="PRINT"><span style="color:#4593D8;">PRINT</span></a> <span style="color:#FFB100;">"Enter number for a tune to play."</span>
+        <a href="/qb64wiki/index.php/PRINT" title="PRINT"><span style="color:#4593D8;">PRINT</span></a>
+        <a href="/qb64wiki/index.php/PRINT" title="PRINT"><span style="color:#4593D8;">PRINT</span></a> <span style="color:#FFB100;">"1. Demo 1 by J. Baker"</span>
+        <a href="/qb64wiki/index.php/PRINT" title="PRINT"><span style="color:#4593D8;">PRINT</span></a> <span style="color:#FFB100;">"2. Demo 2 by Wilbert Brants"</span>
+        <a href="/qb64wiki/index.php/PRINT" title="PRINT"><span style="color:#4593D8;">PRINT</span></a> <span style="color:#FFB100;">"3. Demo 3 by Wilbert Brants"</span>
+        <a href="/qb64wiki/index.php/PRINT" title="PRINT"><span style="color:#4593D8;">PRINT</span></a> <span style="color:#FFB100;">"4. Demo 4 by J. Baker"</span>
+        <a href="/qb64wiki/index.php/PRINT" title="PRINT"><span style="color:#4593D8;">PRINT</span></a> <span style="color:#FFB100;">"5. Demo 5 by Wilbert Brants"</span>
+        <a href="/qb64wiki/index.php/PRINT" title="PRINT"><span style="color:#4593D8;">PRINT</span></a>
+        <a href="/qb64wiki/index.php/INPUT" title="INPUT"><span style="color:#4593D8;">INPUT</span></a> <span style="color:#FFB100;">"Your choice (0 exits)"</span>; c
+    <a href="/qb64wiki/index.php/DO...LOOP" title="DO...LOOP"><span style="color:#4593D8;">LOOP WHILE</span></a> c &lt; <span style="color:#F580B1;">0</span> <a href="/qb64wiki/index.php/OR_(boolean)" title="OR (boolean)"><span style="color:#4593D8;">OR</span></a> c &gt; <span style="color:#F580B1;">7</span>
+
+    <a href="/qb64wiki/index.php/SELECT_CASE" title="SELECT CASE"><span style="color:#4593D8;">SELECT CASE</span></a> c
+        <a class="mw-redirect" href="/qb64wiki/index.php/CASE" title="CASE"><span style="color:#4593D8;">CASE</span></a> <span style="color:#F580B1;">1</span>
+            Caption = <span style="color:#FFB100;">"Demo 1 by J. Baker"</span>
+
+            <span style="color:#F580B1;">144</span>
+            CH0Verse_1 = <span style="color:#FFB100;">"t144 l4 q0 w1 o0 ^75_100 v32 w1 ^75_100 o0 dd2 w8 ^100_80 o4 c"</span>
+            CH0Verse_2 = <span style="color:#FFB100;">"w4 ^75_100 o0 d2 w8 ^100_80 o4 cd"</span>
+
+            CH1Verse_1 = <span style="color:#FFB100;">"t144 q0 w1 o2 /1^100_99 v31 l1 gba /1\20^25_79 l4 gab2"</span>
+            CH1Verse_2 = <span style="color:#FFB100;">"v40 /9^100\1 l1 gba \2 l4 gab2"</span>
+
+            CH2Verse_1 = <span style="color:#FFB100;">"t144 l4 w2 o3 q20 v33 r1r1"</span>
+            CH2Verse_2 = <span style="color:#FFB100;">"cd&gt;d&lt;e"</span>
+            CH2Verse_3 = <span style="color:#FFB100;">"cd&gt;d2&lt;"</span>
+
+            CH3Verse_1 = <span style="color:#FFB100;">"t144 q0 w9 y15 o3 _100 v29 l8 d"</span>
+
+            Channel_0 = <span style="color:#55FF55;">RepeatVerse</span>(CH0Verse_1 + CH0Verse_1 + CH0Verse_1 + CH0Verse_1 + CH0Verse_1 + CH0Verse_1 + CH0Verse_1 + CH0Verse_1 + CH0Verse_2 + CH0Verse_2 + CH0Verse_2 + CH0Verse_2, LOOPS)
+            Channel_1 = <span style="color:#55FF55;">RepeatVerse</span>(CH1Verse_1 + CH1Verse_1 + CH1Verse_2, LOOPS)
+            Channel_2 = <span style="color:#55FF55;">RepeatVerse</span>(CH2Verse_1 + CH2Verse_1 + CH2Verse_1 + CH2Verse_1 + CH2Verse_2 + CH2Verse_2 + CH2Verse_2 + CH2Verse_3, LOOPS)
+            Channel_3 = <span style="color:#55FF55;">RepeatVerse</span>(CH3Verse_1, <span style="color:#F580B1;">96</span> * LOOPS)
+
+        <a class="mw-redirect" href="/qb64wiki/index.php/CASE" title="CASE"><span style="color:#4593D8;">CASE</span></a> <span style="color:#F580B1;">2</span>
+            Caption = <span style="color:#FFB100;">"Demo 2 by Wilbert Brants"</span>
+
+            CH0Verse_1 = <span style="color:#FFB100;">"t103 w2 o0 q8 v38 L8 G4B-B-G4B-B-  G4&gt;E-E-&lt;G4&gt;E-E-&lt;  A&gt;CF4&lt;A&gt;CF4&lt;  F4AAGB-&gt;D4&lt;"</span>
+            CH1Verse_1 = <span style="color:#FFB100;">"t103 w1 o1 q2 v33 L8 GB-&gt;D4&lt;GB-&gt;D4&lt;  GB-&gt;E-&lt;B-GB-&gt;E-&lt;B-  A&gt;CF4&lt;A&gt;CF4&lt;  FA&gt;C&lt;AGB-&gt;D4&lt;"</span>
+            CH2Verse_1 = <span style="color:#FFB100;">"t103 w1 o3 q1 v35 L4 GG2G8F8 E-E-2E-8D8 CCCD E-2D2"</span>
+            CH2Verse_2 = <span style="color:#FFB100;">"B-B-2B-8A8 GG2G8F8 CCCD E-2D2"</span>
+            CH2Verse_3 = <span style="color:#FFB100;">"B-B-2B-8A8 GG2G8F8 ACFA G2D2"</span>
+
+            Channel_0 = CH0Verse_1 + CH0Verse_1 + CH0Verse_1 + CH0Verse_1
+            Channel_1 = CH1Verse_1 + CH1Verse_1 + CH1Verse_1 + CH1Verse_1
+            Channel_2 = CH2Verse_1 + CH2Verse_2 + CH2Verse_1 + CH2Verse_3
+            Channel_3 = _STR_EMPTY
+
+        <a class="mw-redirect" href="/qb64wiki/index.php/CASE" title="CASE"><span style="color:#4593D8;">CASE</span></a> <span style="color:#F580B1;">3</span>
+            Caption = <span style="color:#FFB100;">"Demo 3 by Wilbert Brants"</span>
+
+            CH0Verse_1 = <span style="color:#FFB100;">"t144 w2 o0 q16 v22 l8 v+cv-ceeg4 v+ f v- faa&gt;cc&lt; v+ c v- ceeg4 v+ f v- faa&gt;cc&lt; ggbb&gt;d4&lt; q8 g4c2"</span>
+            CH1Verse_1 = <span style="color:#FFB100;">"t144 w1 o1 q2 v20 l4 gec f2a8c8 gec f2a8c8 gbd ec2"</span>
+            CH2Verse_1 = <span style="color:#FFB100;">"t144 w3 o3 q2 v22 l8 cegceg l4 caf l8 cegceg l4 caf l8 gbdgbd l4 cgg"</span>
+
+            Channel_0 = <span style="color:#55FF55;">RepeatVerse</span>(CH0Verse_1, LOOPS)
+            Channel_1 = <span style="color:#55FF55;">RepeatVerse</span>(CH1Verse_1, LOOPS)
+            Channel_2 = <span style="color:#55FF55;">RepeatVerse</span>(CH2Verse_1, LOOPS)
+            Channel_3 = _STR_EMPTY
+
+        <a class="mw-redirect" href="/qb64wiki/index.php/CASE" title="CASE"><span style="color:#4593D8;">CASE</span></a> <span style="color:#F580B1;">4</span>
+            Caption = <span style="color:#FFB100;">"Demo 4 by J. Baker"</span>
+
+            Channel_0 = <span style="color:#FFB100;">"t120 w1 o0 q2 v20 l8 &lt;dced&gt; dcge4 l4 q1 &lt;d1&gt; r8 l8 q2 dg l4 q1 &lt;d1&gt; l8 q2 dge q1 &lt;d1&gt; q2 dcdrr v+ &lt;&lt;dd&gt;&gt; v- r"</span>
+            Channel_1 = <span style="color:#FFB100;">"t120 w1 o1 q1 v21 l8 &gt;dcde&lt; dcde#4 l4 &gt;d1&lt; l8 de l4 &gt;f1 l8 ddfe1&lt; dedfe dd r4"</span>
+            Channel_2 = _STR_EMPTY
+            Channel_3 = _STR_EMPTY
+
+        <a class="mw-redirect" href="/qb64wiki/index.php/CASE" title="CASE"><span style="color:#4593D8;">CASE</span></a> <span style="color:#F580B1;">5</span>
+            Caption = <span style="color:#FFB100;">"Demo 5 by Wilbert Brants"</span>
+
+            CH0Verse_1 = <span style="color:#FFB100;">"T103 q16 O0 V22 W2 L4 V+CV-E8E8 &lt;FA&gt; &lt;V+GV-B8B8&gt; CE"</span>
+            CH1Verse_1 = <span style="color:#FFB100;">"T103 q8 O2 V22 W1 L8 CEG&gt;C&lt; &lt;FA&gt;CF &lt;GB&gt;DG CEG&gt;C&lt;"</span>
+            CH2Verse_1 = <span style="color:#FFB100;">"T103 q1 O3 v60 W4 L4 CEC&lt;G&gt; CEC2 CEC&lt;G&gt; CE16R16E16R16C2 CEC&lt;G&gt; CEC2 CEC&lt;G&gt; C&lt;G16&gt;R16E16R16C2"</span>
+
+            Channel_0 = <span style="color:#55FF55;">RepeatVerse</span>(CH0Verse_1, <span style="color:#F580B1;">4</span> * LOOPS)
+            Channel_1 = <span style="color:#55FF55;">RepeatVerse</span>(CH1Verse_1, <span style="color:#F580B1;">4</span> * LOOPS)
+            Channel_2 = <span style="color:#55FF55;">RepeatVerse</span>(CH2Verse_1, LOOPS)
+            Channel_3 = _STR_EMPTY
+
+        <a class="mw-redirect" href="/qb64wiki/index.php/CASE_ELSE" title="CASE ELSE"><span style="color:#4593D8;">CASE ELSE</span></a>
+            <a href="/qb64wiki/index.php/EXIT_DO" title="EXIT DO"><span style="color:#4593D8;">EXIT DO</span></a> <span style="color:#919191;">' Exit program</span>
+    <a href="/qb64wiki/index.php/END_SELECT" title="END SELECT"><span style="color:#4593D8;">END SELECT</span></a>
+
+    <span style="color:#55FF55;">PlayMML</span> Channel_0, Channel_1, Channel_2, Channel_3, Caption
+<a href="/qb64wiki/index.php/LOOP" title="LOOP"><span style="color:#4593D8;">LOOP</span></a>
+
+<a href="/qb64wiki/index.php/SYSTEM" title="SYSTEM"><span style="color:#4593D8;">SYSTEM</span></a>
+
+<a href="/qb64wiki/index.php/SUB" title="SUB"><span style="color:#4593D8;">SUB</span></a> <span style="color:#55FF55;">PlayMML</span> (chan0 <a href="/qb64wiki/index.php/AS" title="AS"><span style="color:#4593D8;">AS</span></a> <a href="/qb64wiki/index.php/STRING" title="STRING"><span style="color:#4593D8;">STRING</span></a>, chan1 <a href="/qb64wiki/index.php/AS" title="AS"><span style="color:#4593D8;">AS</span></a> <a href="/qb64wiki/index.php/STRING" title="STRING"><span style="color:#4593D8;">STRING</span></a>, chan2 <a href="/qb64wiki/index.php/AS" title="AS"><span style="color:#4593D8;">AS</span></a> <a href="/qb64wiki/index.php/STRING" title="STRING"><span style="color:#4593D8;">STRING</span></a>, chan3 <a href="/qb64wiki/index.php/AS" title="AS"><span style="color:#4593D8;">AS</span></a> <a href="/qb64wiki/index.php/STRING" title="STRING"><span style="color:#4593D8;">STRING</span></a>, caption <a href="/qb64wiki/index.php/AS" title="AS"><span style="color:#4593D8;">AS</span></a> <a href="/qb64wiki/index.php/STRING" title="STRING"><span style="color:#4593D8;">STRING</span></a>)
+    <a class="mw-selflink selflink"><span style="color:#4593D8;">PLAY</span></a> chan0, chan1, chan2, chan3
+
+    <a href="/qb64wiki/index.php/PRINT" title="PRINT"><span style="color:#4593D8;">PRINT</span></a>
+    <a href="/qb64wiki/index.php/PRINT" title="PRINT"><span style="color:#4593D8;">PRINT</span></a> <span style="color:#FFB100;">"Playing "</span>; caption; <span style="color:#FFB100;">"..."</span>
+
+    <a href="/qb64wiki/index.php/DIM" title="DIM"><span style="color:#4593D8;">DIM</span></a> curLine <a href="/qb64wiki/index.php/AS" title="AS"><span style="color:#4593D8;">AS</span></a> <a href="/qb64wiki/index.php/LONG" title="LONG"><span style="color:#4593D8;">LONG</span></a>: curLine = <a href="/qb64wiki/index.php/CSRLIN" title="CSRLIN"><span style="color:#4593D8;">CSRLIN</span></a>
+
+    <a class="mw-redirect" href="/qb64wiki/index.php/DO" title="DO"><span style="color:#4593D8;">DO</span></a>
+        <a href="/qb64wiki/index.php/LIMIT" title="LIMIT"><span style="color:#4593D8;">_LIMIT</span></a> <span style="color:#F580B1;">15</span>
+
+        <a href="/qb64wiki/index.php/LOCATE" title="LOCATE"><span style="color:#4593D8;">LOCATE</span></a> curLine, <span style="color:#F580B1;">1</span>
+    <a href="/qb64wiki/index.php/DO...LOOP" title="DO...LOOP"><span style="color:#4593D8;">LOOP WHILE</span></a> <span style="color:#55FF55;">DisplayVoiceStats</span>
+
+    <a href="/qb64wiki/index.php/SLEEP" title="SLEEP"><span style="color:#4593D8;">SLEEP</span></a> <span style="color:#F580B1;">1</span>
+    <a href="/qb64wiki/index.php/KEYCLEAR" title="KEYCLEAR"><span style="color:#4593D8;">_KEYCLEAR</span></a>
+<a href="/qb64wiki/index.php/END_SUB" title="END SUB"><span style="color:#4593D8;">END SUB</span></a>
+
+<a href="/qb64wiki/index.php/FUNCTION" title="FUNCTION"><span style="color:#4593D8;">FUNCTION</span></a> <span style="color:#55FF55;">RepeatVerse$</span> (verse <a href="/qb64wiki/index.php/AS" title="AS"><span style="color:#4593D8;">AS</span></a> <a href="/qb64wiki/index.php/STRING" title="STRING"><span style="color:#4593D8;">STRING</span></a>, count <a href="/qb64wiki/index.php/AS" title="AS"><span style="color:#4593D8;">AS</span></a> <a href="/qb64wiki/index.php/UNSIGNED" title="UNSIGNED"><span style="color:#4593D8;">_UNSIGNED</span></a> <a href="/qb64wiki/index.php/LONG" title="LONG"><span style="color:#4593D8;">LONG</span></a>)
+    <a href="/qb64wiki/index.php/DIM" title="DIM"><span style="color:#4593D8;">DIM</span></a> buffer <a href="/qb64wiki/index.php/AS" title="AS"><span style="color:#4593D8;">AS</span></a> <a href="/qb64wiki/index.php/STRING" title="STRING"><span style="color:#4593D8;">STRING</span></a>
+
+    <a href="/qb64wiki/index.php/DIM" title="DIM"><span style="color:#4593D8;">DIM</span></a> i <a href="/qb64wiki/index.php/AS" title="AS"><span style="color:#4593D8;">AS</span></a> <a href="/qb64wiki/index.php/UNSIGNED" title="UNSIGNED"><span style="color:#4593D8;">_UNSIGNED</span></a> <a href="/qb64wiki/index.php/LONG" title="LONG"><span style="color:#4593D8;">LONG</span></a>
+
+    <a class="mw-redirect" href="/qb64wiki/index.php/WHILE" title="WHILE"><span style="color:#4593D8;">WHILE</span></a> i &lt; count
+        buffer = buffer + verse
+        i = i + <span style="color:#F580B1;">1</span>
+    <a class="mw-redirect" href="/qb64wiki/index.php/WEND" title="WEND"><span style="color:#4593D8;">WEND</span></a>
+
+    <span style="color:#55FF55;">RepeatVerse</span> = buffer
+<a class="mw-redirect" href="/qb64wiki/index.php/END_FUNCTION" title="END FUNCTION"><span style="color:#4593D8;">END FUNCTION</span></a>
+
+<a href="/qb64wiki/index.php/FUNCTION" title="FUNCTION"><span style="color:#4593D8;">FUNCTION</span></a> <span style="color:#55FF55;">DisplayVoiceStats%%</span>
+    <a href="/qb64wiki/index.php/STATIC" title="STATIC"><span style="color:#4593D8;">STATIC</span></a> voiceTotalTime(<span style="color:#F580B1;">0</span> <a href="/qb64wiki/index.php/TO" title="TO"><span style="color:#4593D8;">TO</span></a> <span style="color:#F580B1;">3</span>) <a href="/qb64wiki/index.php/AS" title="AS"><span style="color:#4593D8;">AS</span></a> <a href="/qb64wiki/index.php/DOUBLE" title="DOUBLE"><span style="color:#4593D8;">DOUBLE</span></a>
+
+    <a href="/qb64wiki/index.php/DIM" title="DIM"><span style="color:#4593D8;">DIM</span></a> voiceElapsedTime(<span style="color:#F580B1;">0</span> <a href="/qb64wiki/index.php/TO" title="TO"><span style="color:#4593D8;">TO</span></a> <span style="color:#F580B1;">3</span>) <a href="/qb64wiki/index.php/AS" title="AS"><span style="color:#4593D8;">AS</span></a> <a href="/qb64wiki/index.php/DOUBLE" title="DOUBLE"><span style="color:#4593D8;">DOUBLE</span></a>
+    <a href="/qb64wiki/index.php/DIM" title="DIM"><span style="color:#4593D8;">DIM</span></a> i <a href="/qb64wiki/index.php/AS" title="AS"><span style="color:#4593D8;">AS</span></a> <a href="/qb64wiki/index.php/LONG" title="LONG"><span style="color:#4593D8;">LONG</span></a>
+
+    <a href="/qb64wiki/index.php/FOR" title="FOR"><span style="color:#4593D8;">FOR</span></a> i = <span style="color:#F580B1;">0</span> <a href="/qb64wiki/index.php/TO" title="TO"><span style="color:#4593D8;">TO</span></a> <span style="color:#F580B1;">3</span>
+        voiceElapsedTime(i) = <a href="/qb64wiki/index.php/PLAY_(function)" title="PLAY (function)"><span style="color:#4593D8;">PLAY</span></a>(i)
+
+        <a class="mw-redirect" href="/qb64wiki/index.php/IF" title="IF"><span style="color:#4593D8;">IF</span></a> voiceElapsedTime(i) &gt; voiceTotalTime(i) <a href="/qb64wiki/index.php/THEN" title="THEN"><span style="color:#4593D8;">THEN</span></a>
+            voiceTotalTime(i) = voiceElapsedTime(i)
+        <a class="mw-redirect" href="/qb64wiki/index.php/END_IF" title="END IF"><span style="color:#4593D8;">END IF</span></a>
+
+        <a href="/qb64wiki/index.php/PRINT_USING" title="PRINT USING"><span style="color:#4593D8;">PRINT USING</span></a> <span style="color:#FFB100;">"Voice #: ### of ### seconds left"</span>; i; voiceElapsedTime(i); voiceTotalTime(i)
+    <a href="/qb64wiki/index.php/NEXT" title="NEXT"><span style="color:#4593D8;">NEXT</span></a> i
+
+    <a href="/qb64wiki/index.php/DIM" title="DIM"><span style="color:#4593D8;">DIM</span></a> playing <a href="/qb64wiki/index.php/AS" title="AS"><span style="color:#4593D8;">AS</span></a> <a href="/qb64wiki/index.php/BYTE" title="BYTE"><span style="color:#4593D8;">_BYTE</span></a>: playing = voiceElapsedTime(<span style="color:#F580B1;">0</span>) &gt; <span style="color:#F580B1;">0</span> <a href="/qb64wiki/index.php/ORELSE" title="ORELSE"><span style="color:#4593D8;">_ORELSE</span></a> voiceElapsedTime(<span style="color:#F580B1;">1</span>) &gt; <span style="color:#F580B1;">0</span> <a href="/qb64wiki/index.php/ORELSE" title="ORELSE"><span style="color:#4593D8;">_ORELSE</span></a> voiceElapsedTime(<span style="color:#F580B1;">2</span>) &gt; <span style="color:#F580B1;">0</span> <a href="/qb64wiki/index.php/ORELSE" title="ORELSE"><span style="color:#4593D8;">_ORELSE</span></a> voiceElapsedTime(<span style="color:#F580B1;">3</span>) &gt; <span style="color:#F580B1;">0</span>
+
+    <a class="mw-redirect" href="/qb64wiki/index.php/IF" title="IF"><span style="color:#4593D8;">IF</span></a> <a href="/qb64wiki/index.php/NOT" title="NOT"><span style="color:#4593D8;">NOT</span></a> playing <a href="/qb64wiki/index.php/THEN" title="THEN"><span style="color:#4593D8;">THEN</span></a>
+        <a href="/qb64wiki/index.php/FOR" title="FOR"><span style="color:#4593D8;">FOR</span></a> i = <span style="color:#F580B1;">0</span> <a href="/qb64wiki/index.php/TO" title="TO"><span style="color:#4593D8;">TO</span></a> <span style="color:#F580B1;">3</span>
+            voiceTotalTime(i) = <span style="color:#F580B1;">0</span>
+        <a href="/qb64wiki/index.php/NEXT" title="NEXT"><span style="color:#4593D8;">NEXT</span></a> i
+    <a class="mw-redirect" href="/qb64wiki/index.php/END_IF" title="END IF"><span style="color:#4593D8;">END IF</span></a>
+
+    <span style="color:#55FF55;">DisplayVoiceStats</span> = playing
+<a class="mw-redirect" href="/qb64wiki/index.php/END_FUNCTION" title="END FUNCTION"><span style="color:#4593D8;">END FUNCTION</span></a>
+</pre>
+         </td>
+        </tr>
+       </tbody>
+      </table>
       <p>
        <br/>
       </p>
@@ -1087,18 +1506,21 @@ play$ = <span style="color:#FFB100;">"L16O="</span> + <a href="/qb64wiki/index.p
          SOUND
         </a>
         ,
-        <a href="/qb64wiki/index.php/DRAW" title="DRAW">
-         DRAW
+        <a href="/qb64wiki/index.php/BEEP" title="BEEP">
+         BEEP
         </a>
-       </li>
-       <li>
-        <a href="/qb64wiki/index.php/SNDRAW" title="SNDRAW">
-         _SNDRAW
+        ,
+        <a href="/qb64wiki/index.php/WAVE" title="WAVE">
+         _WAVE
         </a>
        </li>
        <li>
         <a href="/qb64wiki/index.php/SNDOPEN" title="SNDOPEN">
          _SNDOPEN
+        </a>
+        ,
+        <a href="/qb64wiki/index.php/SNDRAW" title="SNDRAW">
+         _SNDRAW
         </a>
        </li>
       </ul>
@@ -1136,40 +1558,40 @@ play$ = <span style="color:#FFB100;">"L16O="</span> + <a href="/qb64wiki/index.p
       </center>
       <!-- 
 NewPP limit report
-Cached time: 20240721212708
+Cached time: 20250124060042
 Cache expiry: 86400
 Reduced expiry: false
 Complications: [show‐toc]
-CPU time usage: 0.187 seconds
-Real time usage: 0.226 seconds
-Preprocessor visited node count: 4863/1000000
-Post‐expand include size: 32980/2097152 bytes
-Template argument size: 10063/2097152 bytes
+CPU time usage: 0.230 seconds
+Real time usage: 0.270 seconds
+Preprocessor visited node count: 6518/1000000
+Post‐expand include size: 44300/2097152 bytes
+Template argument size: 13592/2097152 bytes
 Highest expansion depth: 4/100
 Expensive parser function count: 0/100
 Unstrip recursion depth: 0/20
-Unstrip post‐expand size: 7385/5000000 bytes
+Unstrip post‐expand size: 9459/5000000 bytes
 -->
       <!--
 Transclusion expansion time report (%,ms,calls,template)
-100.00%  112.998      1 -total
- 23.17%   26.177      1 Template:PageSyntax
- 14.97%   16.913    366 Template:Text
- 10.66%   12.045    260 Template:Cl
-  1.80%    2.039      6 Template:CodeEnd
-  1.78%    2.013      1 Template:PageSeeAlso
-  1.71%    1.937      5 Template:Small
-  1.65%    1.867      2 Template:Parameter
-  1.50%    1.692      1 Template:PageNavigation
-  1.44%    1.624      1 Template:PageParameters
+100.00%  147.131      1 -total
+ 13.15%   19.344    459 Template:Text
+ 11.66%   17.155    378 Template:Cl
+  8.62%   12.687      1 Template:PageSyntax
+  3.56%    5.231      1 Template:PageExamples
+  2.63%    3.871      7 Template:CodeStart
+  2.55%    3.746      7 Template:CodeEnd
+  2.32%    3.409      8 Template:Parameter
+  2.15%    3.165      5 Template:Small
+  1.91%    2.813      4 Template:Cm
 -->
-      <!-- Saved in parser cache with key qb64pnix_mw19894-mwmb_:pcache:idhash:511-0!canonical and timestamp 20240721212707 and revision id 8783.
+      <!-- Saved in parser cache with key qb64pnix_mw19894-mwmb_:pcache:idhash:511-0!canonical and timestamp 20250124060042 and revision id 9550.
  -->
      </div>
      <div class="printfooter" data-nosnippet="">
       Retrieved from "
-      <a dir="ltr" href="https://qb64phoenix.com/qb64wiki/index.php?title=PLAY&amp;oldid=8783">
-       https://qb64phoenix.com/qb64wiki/index.php?title=PLAY&amp;oldid=8783
+      <a dir="ltr" href="https://qb64phoenix.com/qb64wiki/index.php?title=PLAY&amp;oldid=9550">
+       https://qb64phoenix.com/qb64wiki/index.php?title=PLAY&amp;oldid=9550
       </a>
       "
      </div>
@@ -1386,7 +1808,7 @@ You can view its source [e]">
         </a>
        </li>
        <li class="mw-list-item" id="t-permalink">
-        <a href="/qb64wiki/index.php?title=PLAY&amp;oldid=8783" title="Permanent link to this revision of this page">
+        <a href="/qb64wiki/index.php?title=PLAY&amp;oldid=9550" title="Permanent link to this revision of this page">
          <span>
           Permanent link
          </span>
@@ -1407,7 +1829,7 @@ You can view its source [e]">
   <footer class="mw-footer" id="footer" role="contentinfo">
    <ul id="footer-info">
     <li id="footer-info-lastmod">
-     This page was last edited on 19 February 2024, at 22:55.
+     This page was last edited on 17 January 2025, at 02:26.
     </li>
    </ul>
    <ul id="footer-places">
@@ -1436,7 +1858,7 @@ You can view its source [e]">
    </ul>
   </footer>
   <script>
-   (RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgPageParseReport":{"limitreport":{"cputime":"0.187","walltime":"0.226","ppvisitednodes":{"value":4863,"limit":1000000},"postexpandincludesize":{"value":32980,"limit":2097152},"templateargumentsize":{"value":10063,"limit":2097152},"expansiondepth":{"value":4,"limit":100},"expensivefunctioncount":{"value":0,"limit":100},"unstrip-depth":{"value":0,"limit":20},"unstrip-size":{"value":7385,"limit":5000000},"timingprofile":["100.00%  112.998      1 -total"," 23.17%   26.177      1 Template:PageSyntax"," 14.97%   16.913    366 Template:Text"," 10.66%   12.045    260 Template:Cl","  1.80%    2.039      6 Template:CodeEnd","  1.78%    2.013      1 Template:PageSeeAlso","  1.71%    1.937      5 Template:Small","  1.65%    1.867      2 Template:Parameter","  1.50%    1.692      1 Template:PageNavigation","  1.44%    1.624      1 Template:PageParameters"]},"cachereport":{"timestamp":"20240721212708","ttl":86400,"transientcontent":false}}});mw.config.set({"wgBackendResponseTime":114});});
+   (RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgPageParseReport":{"limitreport":{"cputime":"0.230","walltime":"0.270","ppvisitednodes":{"value":6518,"limit":1000000},"postexpandincludesize":{"value":44300,"limit":2097152},"templateargumentsize":{"value":13592,"limit":2097152},"expansiondepth":{"value":4,"limit":100},"expensivefunctioncount":{"value":0,"limit":100},"unstrip-depth":{"value":0,"limit":20},"unstrip-size":{"value":9459,"limit":5000000},"timingprofile":["100.00%  147.131      1 -total"," 13.15%   19.344    459 Template:Text"," 11.66%   17.155    378 Template:Cl","  8.62%   12.687      1 Template:PageSyntax","  3.56%    5.231      1 Template:PageExamples","  2.63%    3.871      7 Template:CodeStart","  2.55%    3.746      7 Template:CodeEnd","  2.32%    3.409      8 Template:Parameter","  2.15%    3.165      5 Template:Small","  1.91%    2.813      4 Template:Cm"]},"cachereport":{"timestamp":"20250124060042","ttl":86400,"transientcontent":false}}});mw.config.set({"wgBackendResponseTime":102});});
   </script>
  </body>
 </html>

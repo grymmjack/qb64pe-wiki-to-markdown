@@ -122,7 +122,7 @@ br ~ h5 {
 * text$ is the [STRING](STRING.md) value to trim.
 * If text$ contains no leading space characters, it is returned unchanged.
 * Convert fixed length [STRING](STRING.md) values by using a different return$ variable.
-* Can be used to trim the leading space of a positive numerical value converted to a string value by [STR&dollar;](STR&dollar;.md) .
+* Can be used to trim the leading space of a positive numerical value converted to a string value by [STR\$](STR\$.md) .
 
 </blockquote>
 
@@ -193,7 +193,7 @@ END FUNCTION
 
 
 * Featured in our "Keyword of the Day" series
-* [_TRIM&dollar;](TRIM&dollar;.md) , [RTRIM&dollar;](RTRIM&dollar;.md) , [STR&dollar;](STR&dollar;.md)
-* [LEFT&dollar;](LEFT&dollar;.md) , [RIGHT&dollar;](RIGHT&dollar;.md)
-* [HEX&dollar;](HEX&dollar;.md) , [MID&dollar;](MID&dollar;.md) (function)
+* _TRIM$ , [RTRIM\$](RTRIM\$.md) , [STR\$](STR\$.md)
+* [LEFT\$](LEFT\$.md) , [RIGHT\$](RIGHT\$.md)
+* [HEX\$](HEX\$.md) , [MID\$](MID\$.md) (function)
 </blockquote>

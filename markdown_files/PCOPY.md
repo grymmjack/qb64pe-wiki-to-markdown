@@ -123,8 +123,8 @@ br ~ h5 {
 * destinationPage% is the video memory location to copy the source image to.
 * The working page is set as 0. All drawing occurs there.
 * The visible page is set as any page number that the [SCREEN](SCREEN.md) mode allows.
-* The [_DISPLAY](DISPLAY.md) (function) return can be used a page number reference in QB64 (See Example 1).
-* The QB64 [_DISPLAY](DISPLAY.md) statement can also be used to stop screen flicker without page flipping or [CLS](CLS.md) and is the recommended practice .
+* The _DISPLAY (function) return can be used a page number reference in QB64 (See Example 1).
+* The QB64 _DISPLAY statement can also be used to stop screen flicker without page flipping or [CLS](CLS.md) and is the recommended practice .
 
 </blockquote>
 
@@ -141,7 +141,7 @@ _MOUSEHIDE
 SetupCursor
 PRINT "Hello World!"
 DO: _LIMIT 30
-DO WHILE _MOUSEINPUT: LOOP 'main loop must contain _MOUSEINPUT
+ DO WHILE _MOUSEINPUT: LOOP 'main loop must contain _MOUSEINPUT
 '       other program code
 LOOP
 
@@ -168,23 +168,23 @@ END SUB
 SCREEN 7, 0, 1, 0
 DIM x(10), y(10), dx(10), dy(10)
 FOR a = 1 TO 10
-x(a) = INT(RND * 320) + 1
-y(a) = INT(RND * 200) + 1
-dx(a) = (RND * 2) - 1
-dy(a) = (RND * 2) - 1
+  x(a) = INT(RND * 320) + 1
+  y(a) = INT(RND * 200) + 1
+  dx(a) = (RND * 2) - 1
+  dy(a) = (RND * 2) - 1
 NEXT
 DO
 PCOPY 1, 0                           'place image on the visible page 0
 CLS
 _LIMIT 100                           'regulates speed of balls in QB64
 FOR a = 1 TO 10
-CIRCLE(x(a), y(a)), 5, 15          'all erasing and drawing is done on page 1
-x(a) = x(a) + dx(a)
-y(a) = y(a) + dy(a)
-IF x(a) > 320 THEN dx(a) = -dx(a): x(a) = x(a) - 1
-IF x(a) < 0 THEN dx(a) = -dx(a): x(a) = x(a) + 1
-IF y(a) > 200 THEN dy(a) = -dy(a): y(a) = y(a) - 1
-IF y(a) < 0 THEN dy(a) = -dy(a): y(a) = y(a) + 1
+  CIRCLE(x(a), y(a)), 5, 15          'all erasing and drawing is done on page 1
+   x(a) = x(a) + dx(a)
+   y(a) = y(a) + dy(a)
+  IF x(a) > 320 THEN dx(a) = -dx(a): x(a) = x(a) - 1
+  IF x(a) < 0 THEN dx(a) = -dx(a): x(a) = x(a) + 1
+  IF y(a) > 200 THEN dy(a) = -dy(a): y(a) = y(a) - 1
+  IF y(a) < 0 THEN dy(a) = -dy(a): y(a) = y(a) + 1
 NEXT
 LOOP UNTIL INKEY$ = CHR$(27) ' escape exit
 ```
@@ -199,6 +199,6 @@ LOOP UNTIL INKEY$ = CHR$(27) ' escape exit
 <blockquote>
 
 
-* [_DISPLAY](DISPLAY.md)
+* _DISPLAY
 * [SCREEN](SCREEN.md)
 </blockquote>

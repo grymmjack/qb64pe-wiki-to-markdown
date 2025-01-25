@@ -159,11 +159,11 @@ cx& = 320 'center x horizontal
 cy& = 240 'center y vertical
 
 DO
-i = _MOUSEINPUT
-x& = _MOUSEX
-y& = _MOUSEY
-xy& = ((x& - cx&) ^ 2) + ((y& - cy&) ^ 2) 'Pythagorean theorem
-IF r& ^ 2 >= xy& THEN CIRCLE (cx&, cy&), r&, 10 ELSE CIRCLE (cx&, cy&), r&, 12
+ i = _MOUSEINPUT
+ x& = _MOUSEX
+ y& = _MOUSEY
+ xy& = ((x& - cx&) ^ 2) + ((y& - cy&) ^ 2) 'Pythagorean theorem
+ IF r& ^ 2 >= xy& THEN CIRCLE (cx&, cy&), r&, 10 ELSE CIRCLE (cx&, cy&), r&, 12
 LOOP UNTIL INKEY$ = CHR$(27) 'escape key exit
 ```
   
@@ -184,9 +184,9 @@ clockcount% = 15          'A counter to keep track of the radians
 '* in the dimensioned array clock() to be used later.
 '*
 FOR radian = 2 * PI TO 0 STEP -(2 * PI) / 60
-clock(clockcount%) = radian
-clockcount% = clockcount% + 1
-IF clockcount% = 61 THEN clockcount% = 1
+   clock(clockcount%) = radian
+   clockcount% = clockcount% + 1
+   IF clockcount% = 61 THEN clockcount% = 1
 NEXT radian
 '* Change to a graphics screen and draw the clock face
 SCREEN 7
@@ -223,41 +223,41 @@ previoushour% = hours% 'hold current hour for later use
 '* Start of main program loop
 '*
 DO
-IF seconds% <> previoussecond% THEN 'has a second elapsed?
-LOCATE 22, 17 'print the time on the screen at
-PRINT TIME$; 'position 22, 17
-'* Since a second has elapsed we need to erase the old second hand
-'* position and draw the new position
+   IF seconds% <> previoussecond% THEN 'has a second elapsed?
+       LOCATE 22, 17 'print the time on the screen at
+       PRINT TIME$; 'position 22, 17
+       '* Since a second has elapsed we need to erase the old second hand
+       '* position and draw the new position
 
-CIRCLE (160, 100), 100, 0, -clock(previoussecond%), clock(previoussecond%)
-CIRCLE (160, 100), 100, 15, -clock(seconds%), clock(seconds%)
-previoussecond% = seconds% 'hold current second for later use
-IF minutes% <> previousminute% THEN 'has a minute elapsed?
-'* Since a minute has elapsed we need to erase the old hour hand position
-CIRCLE (160, 100), 90, 0, -clock(previousminute%), clock(previousminute%)
-previousminute% = minutes% 'hold current minute for later use
-END IF
-'*
-'* Draw the current minute hand position
-'*
-CIRCLE (160, 100), 90, 14, -clock(minutes%), clock(minutes%)
-IF hours% <> previoushour% THEN 'has an hour elapsed?
-'* Since an hour has elapsed we need to erase the old hour hand position
-CIRCLE (160, 100), 75, 0, -clock(previoushour% * 5), clock(previoushour% * 5)
-previoushour% = hours% 'hold current hour for later use
-END IF
-'*
-'* Draw the current hour hand position
-'*
-CIRCLE (160, 100), 75, 12, -clock(hours% * 5), clock(hours% * 5)
-END IF
-seconds% = VAL(RIGHT$(TIME$, 2)) 'extract time again and do all over
-IF seconds% = 0 THEN seconds% = 60
-minutes% = VAL(MID$(TIME$, 4, 2))
-IF minutes% = 0 THEN minutes% = 60
-hours% = VAL(LEFT$(TIME$, 2))
-IF hours% >= 12 THEN hours% = hours% - 12
-IF hours% = 0 THEN hours% = 12
+       CIRCLE (160, 100), 100, 0, -clock(previoussecond%), clock(previoussecond%)
+       CIRCLE (160, 100), 100, 15, -clock(seconds%), clock(seconds%)
+       previoussecond% = seconds% 'hold current second for later use
+       IF minutes% <> previousminute% THEN 'has a minute elapsed?
+           '* Since a minute has elapsed we need to erase the old hour hand position
+           CIRCLE (160, 100), 90, 0, -clock(previousminute%), clock(previousminute%)
+           previousminute% = minutes% 'hold current minute for later use
+       END IF
+       '*
+       '* Draw the current minute hand position
+       '*
+       CIRCLE (160, 100), 90, 14, -clock(minutes%), clock(minutes%)
+       IF hours% <> previoushour% THEN 'has an hour elapsed?
+           '* Since an hour has elapsed we need to erase the old hour hand position
+           CIRCLE (160, 100), 75, 0, -clock(previoushour% * 5), clock(previoushour% * 5)
+           previoushour% = hours% 'hold current hour for later use
+       END IF
+       '*
+       '* Draw the current hour hand position
+       '*
+       CIRCLE (160, 100), 75, 12, -clock(hours% * 5), clock(hours% * 5)
+   END IF
+   seconds% = VAL(RIGHT$(TIME$, 2)) 'extract time again and do all over
+   IF seconds% = 0 THEN seconds% = 60
+   minutes% = VAL(MID$(TIME$, 4, 2))
+   IF minutes% = 0 THEN minutes% = 60
+   hours% = VAL(LEFT$(TIME$, 2))
+   IF hours% >= 12 THEN hours% = hours% - 12
+   IF hours% = 0 THEN hours% = 12
 LOOP UNTIL INKEY$ <> "" 'stop program if user presses a key
 ```
   

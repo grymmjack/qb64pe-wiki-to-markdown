@@ -115,9 +115,9 @@ br ~ h5 {
 ##### Example:
 ```vb
 Segment Address =   F0000 ← shifted left
-Offset Address =  + FACE
-------
-FFACE  or  1,047,246
+           Offset Address =  + FACE
+                             ------
+                              FFACE  or  1,047,246
 ```
   
 <br>
@@ -130,7 +130,7 @@ FFACE  or  1,047,246
 <blockquote>
 
 
-* [DEF](DEF.md) [SEG](SEG.md) , [DEF](DEF.md) [SEG](SEG.md) = 0
+* DEF SEG , DEF SEG = 0
 * [PEEK](PEEK.md) , [POKE](POKE.md)
 * [VARSEG](VARSEG.md) , [VARPTR](VARPTR.md)
 * [SADD](SADD.md)

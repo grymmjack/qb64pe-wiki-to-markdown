@@ -140,8 +140,8 @@ br ~ h5 {
 <blockquote>
 
 
-* [_OPENCONNECTION](OPENCONNECTION.md) , [_OPENCLIENT](OPENCLIENT.md)
-* [_CONNECTED](CONNECTED.md) , [_CONNECTIONADDRESS](CONNECTIONADDRESS.md)
+* _OPENCONNECTION , _OPENCLIENT
+* _CONNECTED , _CONNECTIONADDRESS
 * Email Demo , Inter-Program Data Sharing Demo
 * Downloading Files
 </blockquote>

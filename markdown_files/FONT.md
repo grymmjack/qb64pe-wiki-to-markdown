@@ -119,7 +119,7 @@ br ~ h5 {
 <blockquote>
 
 
-* fontHandle& is the handle retrieved from [_LOADFONT](LOADFONT.md) function, the [_FONT](FONT.md) function, or a predefined handle.
+* fontHandle& is the handle retrieved from _LOADFONT function, the _FONT function, or a predefined handle.
 * If the image handle is omitted the current image _DESTination is used. Zero can designate the current program [SCREEN](SCREEN.md) .
 </blockquote>
 
@@ -129,14 +129,14 @@ br ~ h5 {
 
 
 * Predefined QB64 font handle numbers can be used before freeing a font:
-* [_FONT](FONT.md) 8 - default font for [SCREEN](SCREEN.md) 1, 2, 7, 8 or 13
-* [_FONT](FONT.md) 14 - default font for [SCREEN](SCREEN.md) 9 or 10
-* [_FONT](FONT.md) 16 - default font for [SCREEN](SCREEN.md) 0 ( [WIDTH](WIDTH.md) 80, 25 text only), 11 or 12
-* [_FONT](FONT.md) 9, 15 and 17 are the double width versions of 8, 14 and 16 respectively in text [SCREEN](SCREEN.md) 0 only .
-* Unicode characters can be assigned to a monospace font that contains those unicode characters using the [_MAPUNICODE](MAPUNICODE.md) [TO](TO.md) ASCII mapping statement. The optional IME cyberbit.ttf font included with QB64 can also be used.
-* Can alpha blend a font with a background screen created by [_NEWIMAGE](NEWIMAGE.md) in 32 bit color.
+* _FONT 8 - default font for [SCREEN](SCREEN.md) 1, 2, 7, 8 or 13
+* _FONT 14 - default font for [SCREEN](SCREEN.md) 9 or 10
+* _FONT 16 - default font for [SCREEN](SCREEN.md) 0 ( [WIDTH](WIDTH.md) 80, 25 text only), 11 or 12
+* _FONT 9, 15 and 17 are the double width versions of 8, 14 and 16 respectively in text [SCREEN](SCREEN.md) 0 only .
+* [Unicode](Unicode.md) characters can be assigned to a monospace font that contains those unicode characters using the _MAPUNICODE [TO](TO.md) [ASCII](ASCII.md) mapping statement. The optional IME cyberbit.ttf font included with QB64 can also be used.
+* Can alpha blend a font with a background screen created by _NEWIMAGE in 32 bit color.
 * Check for valid handle values greater than 0 before using or freeing font handles.
-* Free unused font handles with [_FREEFONT](FREEFONT.md) . Freeing invalid handles will create an "illegal function call" error.
+* Free unused font handles with _FREEFONT . Freeing invalid handles will create an "illegal function call" error.
 * NOTE: [SCREEN](SCREEN.md) 0 can only use one font type and style per viewed [SCREEN](SCREEN.md) page. Font size may also affect the window size.
 
 </blockquote>
@@ -151,28 +151,28 @@ br ~ h5 {
 ```vb
 fontpath$ = ENVIRON$("SYSTEMROOT") + "\fonts\lucon.ttf" 'Find Windows Folder Path.
 DO: CLS
-DO
-style$ = "MONOSPACE"
-PRINT
-INPUT "Enter A FONT Size 8 TO 25: ", fontsize%
-LOOP UNTIL fontsize% > 7 AND fontsize% < 26
-DO
-PRINT
-INPUT "Enter (0) for REGULAR OR (1) for ITALIC FONT: ", italic%
-LOOP UNTIL italic% = 0 OR italic% = 1
-DO
-PRINT
-INPUT "Enter (0) for REGULAR OR (1) for BOLD FONT: ", bold%
-LOOP UNTIL italic% = 0 OR italic% = 1
-IF italic% = 1 THEN style$ = style$ + ", ITALIC"
-IF bold% = 1 THEN style$ = style$ + ", BOLD"
+   DO
+       style$ = "MONOSPACE"
+       PRINT
+       INPUT "Enter A FONT Size 8 TO 25: ", fontsize%
+   LOOP UNTIL fontsize% > 7 AND fontsize% < 26
+   DO
+       PRINT
+       INPUT "Enter (0) for REGULAR OR (1) for ITALIC FONT: ", italic%
+   LOOP UNTIL italic% = 0 OR italic% = 1
+   DO
+       PRINT
+       INPUT "Enter (0) for REGULAR OR (1) for BOLD FONT: ", bold%
+   LOOP UNTIL italic% = 0 OR italic% = 1
+   IF italic% = 1 THEN style$ = style$ + ", ITALIC"
+   IF bold% = 1 THEN style$ = style$ + ", BOLD"
 
-GOSUB ClearFont
-font& = _LOADFONT(fontpath$, fontsize%, style$)
-_FONT font&
-PRINT
-PRINT "This is your LUCON font! Want to try another STYLE?(Y/N): ";
-DO: SLEEP: K$ = UCASE$(INKEY$): LOOP UNTIL K$ = "Y" OR K$ = "N"
+   GOSUB ClearFont
+   font& = _LOADFONT(fontpath$, fontsize%, style$)
+   _FONT font&
+   PRINT
+   PRINT "This is your LUCON font! Want to try another STYLE?(Y/N): ";
+   DO: SLEEP: K$ = UCASE$(INKEY$): LOOP UNTIL K$ = "Y" OR K$ = "N"
 LOOP UNTIL K$ = "N"
 GOSUB ClearFont
 
@@ -181,8 +181,8 @@ END
 
 ClearFont:
 IF font& > 0 THEN
-_FONT 16 'select inbuilt 8x16 default font
-_FREEFONT font&
+   _FONT 16 'select inbuilt 8x16 default font
+   _FREEFONT font&
 END IF
 RETURN
 ```
@@ -197,8 +197,8 @@ RETURN
 <blockquote>
 
 
-* [_FONT](FONT.md) (function)
-* [_LOADFONT](LOADFONT.md) , [_FREEFONT](FREEFONT.md)
-* Unicode , [_MAPUNICODE](MAPUNICODE.md)
+* _FONT (function)
+* _LOADFONT , _FREEFONT
+* [Unicode](Unicode.md) , _MAPUNICODE
 * Windows Font Dialog Box
 </blockquote>

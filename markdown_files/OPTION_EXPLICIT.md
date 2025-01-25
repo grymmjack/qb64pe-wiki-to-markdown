@@ -119,9 +119,9 @@ br ~ h5 {
 <blockquote>
 
 
-* With [OPTION](OPTION.md) [_EXPLICIT](EXPLICIT.md) you can avoid typos by having QB64 immediately warn in the Status area of new variables used without previous declaration.
-* The use of [OPTION](OPTION.md) [_EXPLICIT](EXPLICIT.md) does also enforce the requirement to [DIM](DIM.md) or [REDIM](REDIM.md) any arrays before first use, no extra [OPTION](OPTION.md) [_EXPLICITARRAY](EXPLICITARRAY.md) is needed.
-* Enable [OPTION](OPTION.md) [_EXPLICIT](EXPLICIT.md) temporarily even if a program source file doesn't contain the directive by specifying the -e switch when compiling via command line ( qb64 -c file.bas -e ).
+* With OPTION _EXPLICIT you can avoid typos by having QB64 immediately warn in the Status area of new variables used without previous declaration.
+* The use of OPTION _EXPLICIT does also enforce the requirement to [DIM](DIM.md) or [REDIM](REDIM.md) any arrays before first use, no extra OPTION _EXPLICITARRAY is needed.
+* Enable OPTION _EXPLICIT temporarily even if a program source file doesn't contain the directive by specifying the -e switch when compiling via command line ( qb64 -c file.bas -e ).
 
 </blockquote>
 
@@ -153,7 +153,7 @@ PRINT myVariabe
 
 
 * Featured in our "Keyword of the Day" series
-* [OPTION](OPTION.md) [_EXPLICITARRAY](EXPLICITARRAY.md)
+* OPTION _EXPLICITARRAY
 * [DIM](DIM.md) , [REDIM](REDIM.md)
 * [SHARED](SHARED.md)
 * [STATIC](STATIC.md)

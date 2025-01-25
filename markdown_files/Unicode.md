@@ -118,12 +118,12 @@ _FONT _LOADFONT("c:\windows\fonts\cour.ttf", 24, "MONOSPACE")
 'use codepage 850
 RESTORE CP850
 FOR ascii_code& = 0 TO 255
-READ unicode_code&
-_MAPUNICODE unicode_code& TO ascii_code&
+   READ unicode_code&
+   _MAPUNICODE unicode_code& TO ascii_code&
 NEXT
 
 FOR x = 128 TO 255
-PRINT CHR$(x);                'demo: display the upper character map
+   PRINT CHR$(x);                'demo: display the upper character map
 NEXT
 
 PRINT: PRINT
@@ -157,9 +157,9 @@ DATA 173,177,8215,190,182,167,247,184,176,168,183,185,179,178,9632,160
 <blockquote>
 
 
-* ASCII , ASCII Table
-* [_KEYHIT](KEYHIT.md) , [_KEYDOWN](KEYDOWN.md)
-* [_MAPUNICODE](MAPUNICODE.md)
+* [ASCII](ASCII.md) , [ASCII](ASCII.md) Table
+* _KEYHIT , _KEYDOWN
+* _MAPUNICODE
 * Code Pages
 * Text Using Graphics
 </blockquote>

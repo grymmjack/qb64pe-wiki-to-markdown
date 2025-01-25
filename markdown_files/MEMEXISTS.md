@@ -119,9 +119,9 @@ br ~ h5 {
 <blockquote>
 
 
-* The memBlock variable name must have been created using [DIM](DIM.md) memBlock [AS](AS.md) [_MEM](MEM.md) type ( [DIM](DIM.md) .
+* The memBlock variable name must have been created using [DIM](DIM.md) memBlock [AS](AS.md) _MEM type ( [DIM](DIM.md) .
 * The function verifies that the memory variable exists in memory before using a passed block, to avoid generating QB64 errors.
-* Typically, this function is used by a [LIBRARY](LIBRARY.md) [SUB](SUB.md) or [FUNCTION](FUNCTION.md) which accepts a [_MEM](MEM.md) structure as input, to avoid an error.
+* Typically, this function is used by a LIBRARY [SUB](SUB.md) or [FUNCTION](FUNCTION.md) which accepts a _MEM structure as input, to avoid an error.
 
 </blockquote>
 
@@ -137,9 +137,9 @@ br ~ h5 {
 <blockquote>
 
 
-* [_MEM](MEM.md) (function)
-* [_MEMELEMENT](MEMELEMENT.md) , [_MEMCOPY](MEMCOPY.md)
-* [_MEMIMAGE](MEMIMAGE.md) , [_MEMNEW](MEMNEW.md)
-* [_MEMGET](MEMGET.md) , [_MEMPUT](MEMPUT.md)
-* [_MEMFILL](MEMFILL.md) , [_MEMFREE](MEMFREE.md)
+* _MEM (function)
+* _MEMELEMENT , _MEMCOPY
+* _MEMIMAGE , _MEMNEW
+* _MEMGET , _MEMPUT
+* _MEMFILL , _MEMFREE
 </blockquote>

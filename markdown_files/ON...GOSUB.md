@@ -121,8 +121,8 @@ br ~ h5 {
 
 * numericalExpression represents the line or label that the program should branch to: 1 branches to the first line or label in the list, 2 branches to the second, etc.
 * The procedure must be used after the number value is determined or in a loop to monitor current user events.
-* [RETURN](RETURN.md) returns to the next code statement after the ON...GOSUB statement. [END](END.md) or [SYSTEM](SYSTEM.md) can be used to end program.
-* Note: [SELECT](SELECT.md) [CASE](CASE.md) provides a much more convenient way of doing this task.
+* [RETURN](RETURN.md) returns to the next code statement after the [ON...GOSUB](ON...GOSUB.md) statement. [END](END.md) or [SYSTEM](SYSTEM.md) can be used to end program.
+* Note: SELECT [CASE](CASE.md) provides a much more convenient way of doing this task.
 
 </blockquote>
 
@@ -170,7 +170,7 @@ Also notice the RETURN statement that can be used with GOSUB!
 <blockquote>
 
 
-* ON...GOTO
+* [ON...GOTO](ON...GOTO.md)
 * [GOSUB](GOSUB.md) , [GOTO](GOTO.md)
-* [SELECT](SELECT.md) [CASE](CASE.md) , [RETURN](RETURN.md)
+* SELECT [CASE](CASE.md) , [RETURN](RETURN.md)
 </blockquote>

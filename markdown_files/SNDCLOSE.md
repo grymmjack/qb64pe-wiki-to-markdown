@@ -137,5 +137,5 @@ br ~ h5 {
 <blockquote>
 
 
-* [_SNDSTOP](SNDSTOP.md) , [_SNDPAUSE](SNDPAUSE.md)
+* _SNDSTOP , _SNDPAUSE
 </blockquote>

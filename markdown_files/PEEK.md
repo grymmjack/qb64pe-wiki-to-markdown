@@ -126,10 +126,10 @@ SCREEN 12
 DEF SEG = 0 ' BIOS area
 oldvalue = PEEK(1047) ' IMPORTANT! save initial setting to reset later
 DO: _LIMIT 100
-port = PEEK(1047)
-IF port > 0 THEN LOCATE 26, 19: COLOR 11:
-PRINT "Turn ALL Locks off to see each key's bit value!"
-END IF
+  port = PEEK(1047)
+  IF port > 0 THEN LOCATE 26, 19: COLOR 11:
+     PRINT "Turn ALL Locks off to see each key's bit value!"
+  END IF
 COLOR 14:LOCATE 2, 25
 PRINT "PEEK(1047) ="; port; "present keyboard port byte value"
 LOCATE 5, 35
@@ -165,9 +165,9 @@ DEF SEG
 
 
 * [POKE](POKE.md) , [INP](INP.md)
-* [DEF](DEF.md) [SEG](SEG.md) , [VARSEG](VARSEG.md) , [VARPTR](VARPTR.md)
-* [_MEMGET](MEMGET.md) (function) , [_MEMPUT](MEMPUT.md)
-* [DEF](DEF.md) [SEG](SEG.md) = 0 , Scancodes
+* DEF SEG , [VARSEG](VARSEG.md) , [VARPTR](VARPTR.md)
+* _MEMGET (function) , _MEMPUT
+* DEF SEG = 0 , Scancodes
 * [PEEK](PEEK.md) and [POKE](POKE.md) Library
 * Screen Memory
 </blockquote>

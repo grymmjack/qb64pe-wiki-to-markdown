@@ -120,8 +120,8 @@ br ~ h5 {
 
 
 * If the DOSCommand$ [STRING](STRING.md) parameter isn't used, the "command console" is opened and execution is halted until the user closes it manually.
-* If [_DONTWAIT](DONTWAIT.md) is used, the QB64 program doesn't wait for the SHELLed program/command to end.
-* When the [_HIDE](HIDE.md) action is used, the console window is hidden and screen info can be "redirected" (using redirection characters like >) to a file (recommended).
+* If _DONTWAIT is used, the QB64 program doesn't wait for the SHELLed program/command to end.
+* When the _HIDE action is used, the console window is hidden and screen info can be "redirected" (using redirection characters like >) to a file (recommended).
 * Commands are external commands, according to the user's operating system, passed as strings enclosed in quotes or string variables.
 * Commands can be a mixture of strings and string variables added together using the + concatenation operator.
 * Command text can be in upper or lower case. Use single spacing between items and options.
@@ -129,7 +129,7 @@ br ~ h5 {
 * Note: Some commands may not work without adding CMD /C to the start of the command line.
 * QB64 program screens will not get distorted, minimized or freeze the program like QBasic fullscreen modes would.
 * QB64 can use long path folder names and file names and [SHELL](SHELL.md) command lines can be longer than 124 characters.
-* In Windows, use additional [CHR&dollar;](CHR&dollar;.md) (34) quotation marks around folder or file names that contain spaces.
+* In Windows, use additional [CHR\$](CHR\$.md) (34) quotation marks around folder or file names that contain spaces.
 * For other operating systems, both the quotation mark character and the apostrophe can be used to enclose a file name that contains spaces.
 * NOTE: Use [CHDIR](CHDIR.md) instead of CD as [SHELL](SHELL.md) commands cannot affect the current program path.
 
@@ -175,18 +175,18 @@ currentpath$ = Path$ ' function call saves a path for later program use
 PRINT currentpath$
 
 FUNCTION Path$
-SHELL _HIDE "CD > D0S-DATA.INF"   'code to hide window in QB64
-OPEN "D0S-DATA.INF" FOR APPEND AS #1  'this may create the file
-L% = LOF(1)          'verify that file and data exist
-CLOSE #1
-IF L% THEN                       'read file if it has data
-OPEN "D0S-DATA.INF" FOR INPUT AS #1
-LINE INPUT #1, line$           'read only line in file
-Path$ = line$ + "\"            'add slash to path so only a filename needs added later
-CLOSE #1
-ELSE : Path = ""                 'returns zero length string if path not found
-END IF
-KILL "D0S-DATA.INF"              'deleting the file is optional
+  SHELL _HIDE "CD > D0S-DATA.INF"   'code to hide window in QB64
+  OPEN "D0S-DATA.INF" FOR APPEND AS #1  'this may create the file
+       L% = LOF(1)          'verify that file and data exist
+  CLOSE #1
+  IF L% THEN                       'read file if it has data
+    OPEN "D0S-DATA.INF" FOR INPUT AS #1
+    LINE INPUT #1, line$           'read only line in file
+    Path$ = line$ + "\"            'add slash to path so only a filename needs added later
+    CLOSE #1
+  ELSE : Path = ""                 'returns zero length string if path not found
+  END IF
+  KILL "D0S-DATA.INF"              'deleting the file is optional
 END FUNCTION
 ```
   
@@ -222,10 +222,10 @@ SHELL _HIDE "CMD /C" + "wmic printer get name,default > default.txt"
 
 ```vb
 Default  Name
-FALSE    Microsoft XPS Document Writer
-TRUE     HP Photosmart C7200 series
-FALSE    HP Officejet Pro 8600
-FALSE    Fax
+ FALSE    Microsoft XPS Document Writer
+ TRUE     HP Photosmart C7200 series
+ FALSE    HP Officejet Pro 8600
+ FALSE    Fax
 ```
   
 <br>
@@ -238,10 +238,10 @@ SHELL _HIDE "CMD /C" + "wmic printer where name='HP Officejet Pro 8600' call set
 
 ```vb
 Default  Name
-FALSE    Microsoft XPS Document Writer
-FALSE    HP Photosmart C7200 series
-TRUE     HP Officejet Pro 8600
-FALSE    Fax
+ FALSE    Microsoft XPS Document Writer
+ FALSE    HP Photosmart C7200 series
+ TRUE     HP Officejet Pro 8600
+ FALSE    Fax
 ```
   
 <br>
@@ -264,16 +264,16 @@ FALSE    Fax
 
 
 * Featured in our "Keyword of the Day" series
-* [SHELL](SHELL.md) (function) , [_SHELLHIDE](SHELLHIDE.md)
+* [SHELL](SHELL.md) (function) , _SHELLHIDE
 * [FILES](FILES.md) , [CHDIR](CHDIR.md) , [MKDIR](MKDIR.md)
-* [_CWD&dollar;](CWD&dollar;.md) , [_STARTDIR&dollar;](STARTDIR&dollar;.md)
-* [_FILEEXISTS](FILEEXISTS.md) , [_DIREXISTS](DIREXISTS.md)
+* _CWD$ , _STARTDIR$
+* _FILEEXISTS , _DIREXISTS
 * [RMDIR](RMDIR.md) , [NAME](NAME.md) , [KILL](KILL.md) , [RUN](RUN.md)
-* [_HIDE](HIDE.md) , [_DONTWAIT](DONTWAIT.md)
-* [_CONSOLE](CONSOLE.md) , [&dollar;CONSOLE](&dollar;CONSOLE.md)
-* [&dollar;SCREENHIDE](&dollar;SCREENHIDE.md) , [&dollar;SCREENSHOW](&dollar;SCREENSHOW.md)
-* [_SCREENHIDE](SCREENHIDE.md) , [_SCREENSHOW](SCREENSHOW.md)
-* FILELIST$ , DIR$
+* _HIDE , _DONTWAIT
+* _CONSOLE , [\$CONSOLE](\$CONSOLE.md)
+* [\$SCREENHIDE](\$SCREENHIDE.md) , [\$SCREENSHOW](\$SCREENSHOW.md)
+* _SCREENHIDE , _SCREENSHOW
+* FILELIST$ , [DIR\$](DIR\$.md)
 * Windows Open and Save Dialog Boxes
 * C Console Library
 * Windows Printer Settings

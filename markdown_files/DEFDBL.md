@@ -150,5 +150,5 @@ DEFDBL A, F-H, M
 
 
 * [DEFSNG](DEFSNG.md) , [DEFLNG](DEFLNG.md) , [DEFINT](DEFINT.md) , [DEFSTR](DEFSTR.md)
-* [_DEFINE](DEFINE.md)
+* _DEFINE
 </blockquote>

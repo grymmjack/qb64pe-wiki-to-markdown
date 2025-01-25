@@ -120,10 +120,10 @@ br ~ h5 {
 
 
 * Depth buffers store the distance of each pixel on an image/surface. When 3D drawing occurs new pixels are only drawn if they are closer than the existing pixels. After all content is drawn, it results in a scene which looks correct because content which is closer hides content which is further away.
-* Depth buffers are automatically created for any hardware image or surface which is the target/destination of a 3D command (such as the 3D version of [_MAPTRIANGLE](MAPTRIANGLE.md) ).
+* Depth buffers are automatically created for any hardware image or surface which is the target/destination of a 3D command (such as the 3D version of _MAPTRIANGLE ).
 * The buffering can be turned ON, [OFF](OFF.md) or LOCKed. The default state is ON.
-* [_DEPTHBUFFER](DEPTHBUFFER.md) [_CLEAR](CLEAR.md) can be used to reset/erase the depth buffer, meaning that future drawing will not be blocked by existing/previously buffered depth content.
-* Whenever [_DISPLAY](DISPLAY.md) is called the primary surface's depth buffer is automatically _CLEARed, so unless you are drawing onto a hardware image you may never need to use this option.
+* _DEPTHBUFFER _CLEAR can be used to reset/erase the depth buffer, meaning that future drawing will not be blocked by existing/previously buffered depth content.
+* Whenever _DISPLAY is called the primary surface's depth buffer is automatically _CLEARed, so unless you are drawing onto a hardware image you may never need to use this option.
 * LOCKing the depth buffer makes it read only. New content cannot be drawn unless it is closer than existing content, but when that new content is drawn it will not update the depth buffer.
 * Turning [OFF](OFF.md) or LOCKing the depth buffer is typically performed when semi-transparent content is being drawn.
 
@@ -141,7 +141,7 @@ br ~ h5 {
 <blockquote>
 
 
-* [_MAPTRIANGLE](MAPTRIANGLE.md)
-* [_PUTIMAGE](PUTIMAGE.md)
-* [_DISPLAY](DISPLAY.md)
+* _MAPTRIANGLE
+* _PUTIMAGE
+* _DISPLAY
 </blockquote>

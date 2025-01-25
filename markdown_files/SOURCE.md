@@ -119,7 +119,7 @@ br ~ h5 {
 <blockquote>
 
 
-* The handle is a [LONG](LONG.md) integer value from the [_SOURCE](SOURCE.md) function or a handle created by [_NEWIMAGE](NEWIMAGE.md) .
+* The handle is a [LONG](LONG.md) integer value from the _SOURCE function or a handle created by _NEWIMAGE .
 * If the handle is designated as 0, it refers to the current [SCREEN](SCREEN.md) image.
 * A source image can only supply information to a program. [POINT](POINT.md) and [GET](GET.md) might require a source other than the one currently active.
 
@@ -165,7 +165,7 @@ PRINT POINT(100, 100)
 <blockquote>
 
 
-* [_DEST](DEST.md)
-* [_SOURCE](SOURCE.md) (function)
+* _DEST
+* _SOURCE (function)
 * [POINT](POINT.md) , [GET](GET.md) (graphics statement)
 </blockquote>

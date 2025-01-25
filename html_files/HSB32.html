@@ -1,0 +1,1073 @@
+<!DOCTYPE html>
+<html class="client-nojs" dir="ltr" lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <title>
+   _HSB32 - QB64 Phoenix Edition Wiki
+  </title>
+  <script>
+   document.documentElement.className="client-js";RLCONF={"wgBreakFrames":false,"wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgRequestId":"Z5RiIAWKRwiE9zBBFH0U3gAAALk","wgCSPNonce":false,"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"HSB32","wgTitle":"HSB32","wgCurRevisionId":9375,"wgRevisionId":9375,"wgArticleId":1254,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":[],"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgRelevantPageName":"HSB32","wgRelevantArticleId":1254,"wgIsProbablyEditable":false,"wgRelevantPageIsProbablyEditable":false,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgVector2022PreviewPages":[]};RLSTATE={"site.styles":"ready","user.styles":"ready","user":"ready",
+"user.options":"loading","mediawiki.page.gallery.styles":"ready","skins.vector.styles.legacy":"ready"};RLPAGEMODULES=["site","mediawiki.page.ready","mediawiki.toc","skins.vector.legacy.js"];
+  </script>
+  <script>
+   (RLQ=window.RLQ||[]).push(function(){mw.loader.implement("user.options@12s5i",function($,jQuery,require,module){mw.user.tokens.set({"patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});});});
+  </script>
+  <link href="/qb64wiki/load.php?lang=en&amp;modules=mediawiki.page.gallery.styles%7Cskins.vector.styles.legacy&amp;only=styles&amp;skin=vector" rel="stylesheet"/>
+  <script async="" src="/qb64wiki/load.php?lang=en&amp;modules=startup&amp;only=scripts&amp;raw=1&amp;skin=vector">
+  </script>
+  <meta content="" name="ResourceLoaderDynamicStyles"/>
+  <link href="/qb64wiki/load.php?lang=en&amp;modules=site.styles&amp;only=styles&amp;skin=vector" rel="stylesheet"/>
+  <meta content="MediaWiki 1.39.3" name="generator"/>
+  <meta content="telephone=no" name="format-detection"/>
+  <meta content="width=1000" name="viewport"/>
+  <link href="/favicon.ico" rel="icon"/>
+  <link href="/qb64wiki/opensearch_desc.php" rel="search" title="QB64 Phoenix Edition Wiki (en)" type="application/opensearchdescription+xml"/>
+  <link href="https://qb64phoenix.com/qb64wiki/api.php?action=rsd" rel="EditURI" type="application/rsd+xml"/>
+  <link href="/qb64wiki/index.php?title=Special:RecentChanges&amp;feed=atom" rel="alternate" title="QB64 Phoenix Edition Wiki Atom feed" type="application/atom+xml"/>
+ </head>
+ <body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject page-HSB32 rootpage-HSB32 skin-vector action-view skin-vector-legacy vector-feature-language-in-header-enabled vector-feature-language-in-main-page-header-disabled vector-feature-language-alert-in-sidebar-disabled vector-feature-sticky-header-disabled vector-feature-sticky-header-edit-disabled vector-feature-table-of-contents-disabled vector-feature-visual-enhancement-next-disabled">
+  <div class="noprint" id="mw-page-base">
+  </div>
+  <div class="noprint" id="mw-head-base">
+  </div>
+  <div class="mw-body" id="content" role="main">
+   <a id="top">
+   </a>
+   <div id="siteNotice">
+   </div>
+   <div class="mw-indicators">
+   </div>
+   <h1 class="firstHeading mw-first-heading" id="firstHeading">
+    _HSB32
+   </h1>
+   <div class="vector-body" id="bodyContent">
+    <div class="noprint" id="siteSub">
+     From QB64 Phoenix Edition Wiki
+    </div>
+    <div id="contentSub">
+    </div>
+    <div id="contentSub2">
+    </div>
+    <div id="jump-to-nav">
+    </div>
+    <a class="mw-jump-link" href="#mw-head">
+     Jump to navigation
+    </a>
+    <a class="mw-jump-link" href="#searchInput">
+     Jump to search
+    </a>
+    <div class="mw-body-content mw-content-ltr" dir="ltr" id="mw-content-text" lang="en">
+     <div class="mw-parser-output">
+      <p>
+       The
+       <b>
+        _HSB32
+       </b>
+       function specifies a color using the
+       <a class="external text" href="https://www.learnui.design/blog/the-hsb-color-system-practicioners-primer.html" rel="nofollow">
+        HSB colorspace
+       </a>
+       and returns the 32-bit
+       <i>
+        ARGB
+       </i>
+       color value representing the color with the specified hue, saturation and brightness.
+      </p>
+      <p>
+       <br/>
+      </p>
+      <table align="right" style="max-width:25%;">
+       <tbody>
+        <tr>
+         <td>
+          <div aria-labelledby="mw-toc-heading" class="toc" id="toc" role="navigation">
+           <input class="toctogglecheckbox" id="toctogglecheckbox" role="button" style="display:none" type="checkbox"/>
+           <div class="toctitle" dir="ltr" lang="en">
+            <h2 id="mw-toc-heading">
+             Contents
+            </h2>
+            <span class="toctogglespan">
+             <label class="toctogglelabel" for="toctogglecheckbox">
+             </label>
+            </span>
+           </div>
+           <ul>
+            <li class="toclevel-1">
+             <a href="#Syntax">
+              <span class="tocnumber">
+               1
+              </span>
+              <span class="toctext">
+               Syntax
+              </span>
+             </a>
+            </li>
+            <li class="toclevel-1">
+             <a href="#Parameters">
+              <span class="tocnumber">
+               2
+              </span>
+              <span class="toctext">
+               Parameters
+              </span>
+             </a>
+            </li>
+            <li class="toclevel-1">
+             <a href="#Description">
+              <span class="tocnumber">
+               3
+              </span>
+              <span class="toctext">
+               Description
+              </span>
+             </a>
+            </li>
+            <li class="toclevel-1">
+             <a href="#Availability">
+              <span class="tocnumber">
+               4
+              </span>
+              <span class="toctext">
+               Availability
+              </span>
+             </a>
+            </li>
+            <li class="toclevel-1">
+             <a href="#Examples">
+              <span class="tocnumber">
+               5
+              </span>
+              <span class="toctext">
+               Examples
+              </span>
+             </a>
+            </li>
+            <li class="toclevel-1">
+             <a href="#See_also">
+              <span class="tocnumber">
+               6
+              </span>
+              <span class="toctext">
+               See also
+              </span>
+             </a>
+            </li>
+           </ul>
+          </div>
+         </td>
+        </tr>
+       </tbody>
+      </table>
+      <h2>
+       <span class="mw-headline" id="Syntax">
+        Syntax
+       </span>
+      </h2>
+      <dl>
+       <dd>
+        <i>
+         color32value~&amp;
+        </i>
+        =
+        <a class="mw-selflink selflink">
+         _HSB32
+        </a>
+        (
+        <i>
+         hue#
+        </i>
+        ,
+        <i>
+         saturation#
+        </i>
+        ,
+        <i>
+         brightness#
+        </i>
+        )
+       </dd>
+      </dl>
+      <p>
+       <br/>
+      </p>
+      <h2>
+       <span class="mw-headline" id="Parameters">
+        Parameters
+       </span>
+      </h2>
+      <ul>
+       <li>
+        <i>
+         hue#
+        </i>
+        specifies the hue
+        <a href="/qb64wiki/index.php/DOUBLE" title="DOUBLE">
+         DOUBLE
+        </a>
+        of the desired color from 0 to 360 degrees.
+        <ul>
+         <li>
+          The color wheel starts with red(0), turns to yellow(60), green(120), cyan(180), blue(240), magenta(300) to red(360) again.
+         </li>
+         <li>
+          Mixed colors can be build by specifying values between the 6 base color angles.
+         </li>
+        </ul>
+       </li>
+       <li>
+        <i>
+         saturation#
+        </i>
+        specifies the saturation
+        <a href="/qb64wiki/index.php/DOUBLE" title="DOUBLE">
+         DOUBLE
+        </a>
+        of the desired color from 0 to 100 percent.
+        <ul>
+         <li>
+          100% is the richest color possible, as closer you come to 0%, as more the color is fading ending at dull gray.
+         </li>
+         <li>
+          The intensity of the gray (i.e. black &gt;&gt; darkgray &gt;&gt; midgray &gt;&gt; lightgray &gt;&gt; white) depends on the
+          <i>
+           brightness#
+          </i>
+          value.
+         </li>
+        </ul>
+       </li>
+       <li>
+        <i>
+         brightness#
+        </i>
+        specifies the brightness
+        <a href="/qb64wiki/index.php/DOUBLE" title="DOUBLE">
+         DOUBLE
+        </a>
+        of the desired color from 0 to 100 percent.
+        <ul>
+         <li>
+          100% is the brightest (highest intensity), as closer you come to 0%, as darker is the color always ending in black regardless of the given
+          <i>
+           hue#
+          </i>
+          and
+          <i>
+           saturation#
+          </i>
+          .
+         </li>
+        </ul>
+       </li>
+      </ul>
+      <p>
+       <br/>
+      </p>
+      <h2>
+       <span class="mw-headline" id="Description">
+        Description
+       </span>
+      </h2>
+      <ul>
+       <li>
+        The value returned is always a 32-bit
+        <a href="/qb64wiki/index.php/UNSIGNED" title="UNSIGNED">
+         _UNSIGNED
+        </a>
+        <a href="/qb64wiki/index.php/LONG" title="LONG">
+         LONG
+        </a>
+        <i>
+         ARGB
+        </i>
+        color value, as is the
+        <a href="/qb64wiki/index.php/POINT" title="POINT">
+         POINT
+        </a>
+        value.
+       </li>
+       <li>
+        <b>
+         Return variable types must be
+         <a href="/qb64wiki/index.php/UNSIGNED" title="UNSIGNED">
+          _UNSIGNED
+         </a>
+         <a href="/qb64wiki/index.php/LONG" title="LONG">
+          LONG
+         </a>
+         or
+         <a href="/qb64wiki/index.php/LONG" title="LONG">
+          LONG
+         </a>
+         , otherwise the resulting color may lose the
+         <a href="/qb64wiki/index.php/BLUE" title="BLUE">
+          _BLUE
+         </a>
+         value.
+        </b>
+       </li>
+       <li>
+        Parameter values outside the allowed ranges are clipped.
+       </li>
+       <li>
+        All colors build with this function are opaque (full alpha), i.e. it returns
+        <a href="/qb64wiki/index.php/UNSIGNED" title="UNSIGNED">
+         _UNSIGNED
+        </a>
+        <a href="/qb64wiki/index.php/LONG" title="LONG">
+         LONG
+        </a>
+        32-bit hexadecimal values from
+        <b>
+         &amp;HFF
+         <span style="color:red;">
+          00
+         </span>
+         <span style="color:green;">
+          00
+         </span>
+         <span style="color:blue;">
+          00
+         </span>
+        </b>
+        to
+        <b>
+         &amp;HFF
+         <span style="color:red;">
+          FF
+         </span>
+         <span style="color:green;">
+          FF
+         </span>
+         <span style="color:blue;">
+          FF
+         </span>
+        </b>
+        .
+       </li>
+       <li>
+        Use
+        <a href="/qb64wiki/index.php/HSBA32" title="HSBA32">
+         _HSBA32
+        </a>
+        if you also need control over the alpha channel.
+       </li>
+       <li>
+        When (
+        <a href="/qb64wiki/index.php/UNSIGNED" title="UNSIGNED">
+         _UNSIGNED
+        </a>
+        )
+        <a href="/qb64wiki/index.php/LONG" title="LONG">
+         LONG
+        </a>
+        values are
+        <a href="/qb64wiki/index.php/PUT" title="PUT">
+         PUT
+        </a>
+        to file, the
+        <i>
+         ARGB
+        </i>
+        values become
+        <i>
+         BGRA
+        </i>
+        . Use
+        <a href="/qb64wiki/index.php/LEFT$" title="LEFT$">
+         LEFT$
+        </a>
+        (
+        <a href="/qb64wiki/index.php/MKL$" title="MKL$">
+         MKL$
+        </a>
+        (
+        <i>
+         color32value~&amp;
+        </i>
+        ), 3) to place 3 colors.
+       </li>
+      </ul>
+      <dl>
+       <dt>
+        Naming differences
+       </dt>
+       <dd>
+        <ul>
+         <li>
+          The HSB (B=Brightness) colorspace is also known as HSV (V=Value) and sometimes even called HSI (I=Intensity), but that's all just different names for the same thing.
+         </li>
+         <li>
+          However, this function is not suitable for the HSL (L=Lightness) colorspace, which is widely used in the Web/CSS.
+         </li>
+        </ul>
+       </dd>
+      </dl>
+      <dl>
+       <dt>
+        Precision drawbacks
+       </dt>
+       <dd>
+        <ul>
+         <li>
+          When converting between colorspaces, rounding errors can occur. While the HSB colorspace has virtually infinite precision only limited by the used floating point type, RGB is represented in 8-bit integers (0-255) only, which can lead to quantization errors. In fact, not all colors in HSB can be accurately represented in RGB and vice versa.
+         </li>
+         <li>
+          However, if you limit yourself to only passing integer values to
+          <a class="mw-selflink selflink">
+           _HSB32
+          </a>
+          or
+          <a href="/qb64wiki/index.php/HSBA32" title="HSBA32">
+           _HSBA32
+          </a>
+          , just as you do for the respective RGB colorspace functions
+          <a href="/qb64wiki/index.php/RGB32" title="RGB32">
+           _RGB32
+          </a>
+          or
+          <a href="/qb64wiki/index.php/RGBA32" title="RGBA32">
+           _RGBA32
+          </a>
+          , then you can get back that exact values by
+          <a href="/qb64wiki/index.php/CINT" title="CINT">
+           CINTing
+          </a>
+          the results returned by
+          <a href="/qb64wiki/index.php/HUE32" title="HUE32">
+           _HUE32
+          </a>
+          ,
+          <a href="/qb64wiki/index.php/SATURATION32" title="SATURATION32">
+           _SATURATION32
+          </a>
+          and
+          <a href="/qb64wiki/index.php/BRIGHTNESS32" title="BRIGHTNESS32">
+           _BRIGHTNESS32
+          </a>
+          .
+         </li>
+        </ul>
+       </dd>
+      </dl>
+      <p>
+       <br/>
+      </p>
+      <h2>
+       <span class="mw-headline" id="Availability">
+        Availability
+       </span>
+      </h2>
+      <ul class="gallery mw-gallery-nolines">
+       <li class="gallerybox" style="width: 53px">
+        <div style="width: 53px">
+         <div class="thumb" style="width: 48px;">
+          <div style="margin:0px auto;">
+           <a class="image" href="/qb64wiki/index.php/File:Qb64.png" title="none">
+            <img alt="none" decoding="async" height="48" src="/qb64wiki/images/9/91/Qb64.png" width="48"/>
+           </a>
+          </div>
+         </div>
+         <div class="gallerytext">
+          <p>
+           <b>
+            none
+           </b>
+          </p>
+         </div>
+        </div>
+       </li>
+       <li class="gallerybox" style="width: 53px">
+        <div style="width: 53px">
+         <div class="thumb" style="width: 48px;">
+          <div style="margin:0px auto;">
+           <a class="image" href="/qb64wiki/index.php/File:Qbpe.png" title="v4.0.0">
+            <img alt="v4.0.0" decoding="async" height="48" src="/qb64wiki/images/0/07/Qbpe.png" width="48"/>
+           </a>
+          </div>
+         </div>
+         <div class="gallerytext">
+          <p>
+           <b>
+            v4.0.0
+           </b>
+          </p>
+         </div>
+        </div>
+       </li>
+       <li class="gallerybox" style="width: 53px">
+        <div style="width: 53px">
+         <div class="thumb" style="width: 48px;">
+          <div style="margin:0px auto;">
+           <a class="image" href="/qb64wiki/index.php/File:Apix.png">
+            <img alt="Apix.png" decoding="async" height="48" src="/qb64wiki/images/5/5f/Apix.png" width="48"/>
+           </a>
+          </div>
+         </div>
+         <div class="gallerytext">
+         </div>
+        </div>
+       </li>
+       <li class="gallerybox" style="width: 53px">
+        <div style="width: 53px">
+         <div class="thumb" style="width: 48px;">
+          <div style="margin:0px auto;">
+           <a class="image" href="/qb64wiki/index.php/File:Win.png" title="yes">
+            <img alt="yes" decoding="async" height="48" src="/qb64wiki/images/2/29/Win.png" width="48"/>
+           </a>
+          </div>
+         </div>
+         <div class="gallerytext">
+          <p>
+           <b>
+            yes
+           </b>
+          </p>
+         </div>
+        </div>
+       </li>
+       <li class="gallerybox" style="width: 53px">
+        <div style="width: 53px">
+         <div class="thumb" style="width: 48px;">
+          <div style="margin:0px auto;">
+           <a class="image" href="/qb64wiki/index.php/File:Lnx.png" title="yes">
+            <img alt="yes" decoding="async" height="48" src="/qb64wiki/images/7/7a/Lnx.png" width="48"/>
+           </a>
+          </div>
+         </div>
+         <div class="gallerytext">
+          <p>
+           <b>
+            yes
+           </b>
+          </p>
+         </div>
+        </div>
+       </li>
+       <li class="gallerybox" style="width: 53px">
+        <div style="width: 53px">
+         <div class="thumb" style="width: 48px;">
+          <div style="margin:0px auto;">
+           <a class="image" href="/qb64wiki/index.php/File:Osx.png" title="yes">
+            <img alt="yes" decoding="async" height="48" src="/qb64wiki/images/2/22/Osx.png" width="48"/>
+           </a>
+          </div>
+         </div>
+         <div class="gallerytext">
+          <p>
+           <b>
+            yes
+           </b>
+          </p>
+         </div>
+        </div>
+       </li>
+      </ul>
+      <p>
+       <br/>
+      </p>
+      <h2>
+       <span class="mw-headline" id="Examples">
+        Examples
+       </span>
+      </h2>
+      <dl>
+       <dt>
+        Example 1
+       </dt>
+       <dd>
+        Drawing a color wheel by looping through hue and saturation.
+       </dd>
+      </dl>
+      <table cellpadding="15px" width="100%">
+       <tbody>
+        <tr>
+         <td>
+          <pre class="codeide"><a href="/qb64wiki/index.php/SCREEN" title="SCREEN"><span style="color:#4593D8;">SCREEN</span></a> <a href="/qb64wiki/index.php/NEWIMAGE" title="NEWIMAGE"><span style="color:#4593D8;">_NEWIMAGE</span></a>(<span style="color:#F580B1;">640</span>, <span style="color:#F580B1;">480</span>, <span style="color:#F580B1;">32</span>)
+
+<a href="/qb64wiki/index.php/FOR" title="FOR"><span style="color:#4593D8;">FOR</span></a> ang# = <span style="color:#F580B1;">0</span> <a href="/qb64wiki/index.php/TO" title="TO"><span style="color:#4593D8;">TO</span></a> <span style="color:#F580B1;">360</span> <a href="/qb64wiki/index.php/STEP" title="STEP"><span style="color:#4593D8;">STEP</span></a> <span style="color:#F580B1;">0.25</span>
+    <a href="/qb64wiki/index.php/FOR" title="FOR"><span style="color:#4593D8;">FOR</span></a> rad# = <span style="color:#F580B1;">0</span> <a href="/qb64wiki/index.php/TO" title="TO"><span style="color:#4593D8;">TO</span></a> <span style="color:#F580B1;">200</span> <a href="/qb64wiki/index.php/STEP" title="STEP"><span style="color:#4593D8;">STEP</span></a> <span style="color:#F580B1;">0.25</span>
+        x% = rad# * <a href="/qb64wiki/index.php/COS" title="COS"><span style="color:#4593D8;">COS</span></a>(<a href="/qb64wiki/index.php/D2R" title="D2R"><span style="color:#4593D8;">_D2R</span></a>(ang#))
+        y% = rad# * <a href="/qb64wiki/index.php/SIN" title="SIN"><span style="color:#4593D8;">SIN</span></a>(<a href="/qb64wiki/index.php/D2R" title="D2R"><span style="color:#4593D8;">_D2R</span></a>(ang#))
+        <a href="/qb64wiki/index.php/PSET" title="PSET"><span style="color:#4593D8;">PSET</span></a> (<span style="color:#F580B1;">320</span> + x%, <span style="color:#F580B1;">240</span> - y%), <a class="mw-selflink selflink"><span style="color:#4593D8;">_HSB32</span></a>(ang#, rad# / <span style="color:#F580B1;">2</span>, <span style="color:#F580B1;">100</span>)
+    <a href="/qb64wiki/index.php/NEXT" title="NEXT"><span style="color:#4593D8;">NEXT</span></a> rad#
+<a href="/qb64wiki/index.php/NEXT" title="NEXT"><span style="color:#4593D8;">NEXT</span></a> ang#
+
+<a href="/qb64wiki/index.php/END" title="END"><span style="color:#4593D8;">END</span></a>
+</pre>
+         </td>
+        </tr>
+       </tbody>
+      </table>
+      <hr/>
+      <dl>
+       <dt>
+        Example 2
+       </dt>
+       <dd>
+        Drawing a 3D model of the HSB colorspace with a cut to see inside.
+       </dd>
+      </dl>
+      <table cellpadding="15px" width="100%">
+       <tbody>
+        <tr>
+         <td>
+          <pre class="codeide"><a href="/qb64wiki/index.php/SCREEN" title="SCREEN"><span style="color:#4593D8;">SCREEN</span></a> <a href="/qb64wiki/index.php/NEWIMAGE" title="NEWIMAGE"><span style="color:#4593D8;">_NEWIMAGE</span></a>(<span style="color:#F580B1;">640</span>, <span style="color:#F580B1;">480</span>, <span style="color:#F580B1;">32</span>)
+
+<a href="/qb64wiki/index.php/FOR" title="FOR"><span style="color:#4593D8;">FOR</span></a> hei# = <span style="color:#F580B1;">0</span> <a href="/qb64wiki/index.php/TO" title="TO"><span style="color:#4593D8;">TO</span></a> <span style="color:#F580B1;">200</span> <a href="/qb64wiki/index.php/STEP" title="STEP"><span style="color:#4593D8;">STEP</span></a> <span style="color:#F580B1;">5</span>
+    <a href="/qb64wiki/index.php/FOR" title="FOR"><span style="color:#4593D8;">FOR</span></a> ang# = <span style="color:#F580B1;">5</span> <a href="/qb64wiki/index.php/TO" title="TO"><span style="color:#4593D8;">TO</span></a> <span style="color:#F580B1;">285</span> <a href="/qb64wiki/index.php/STEP" title="STEP"><span style="color:#4593D8;">STEP</span></a> <span style="color:#F580B1;">0.25</span>
+        <a href="/qb64wiki/index.php/FOR" title="FOR"><span style="color:#4593D8;">FOR</span></a> rad# = <span style="color:#F580B1;">0</span> <a href="/qb64wiki/index.php/TO" title="TO"><span style="color:#4593D8;">TO</span></a> <span style="color:#F580B1;">200</span> <a href="/qb64wiki/index.php/STEP" title="STEP"><span style="color:#4593D8;">STEP</span></a> <span style="color:#F580B1;">1</span>
+            x% = rad# * <a href="/qb64wiki/index.php/COS" title="COS"><span style="color:#4593D8;">COS</span></a>(<a href="/qb64wiki/index.php/D2R" title="D2R"><span style="color:#4593D8;">_D2R</span></a>(ang#))
+            y% = rad# * <a href="/qb64wiki/index.php/SIN" title="SIN"><span style="color:#4593D8;">SIN</span></a>(<a href="/qb64wiki/index.php/D2R" title="D2R"><span style="color:#4593D8;">_D2R</span></a>(ang#))
+            z% = hei#
+            <span style="color:#55FF55;">XYfrom3D</span> x%, y%, z%
+            <a href="/qb64wiki/index.php/PSET" title="PSET"><span style="color:#4593D8;">PSET</span></a> (<span style="color:#F580B1;">330</span> + x%, -z% + <span style="color:#F580B1;">340</span>), <a class="mw-selflink selflink"><span style="color:#4593D8;">_HSB32</span></a>(ang#, rad# / <span style="color:#F580B1;">2</span>, hei# / <span style="color:#F580B1;">2</span>)
+            <a class="mw-redirect" href="/qb64wiki/index.php/IF" title="IF"><span style="color:#4593D8;">IF</span></a> rad# = <span style="color:#F580B1;">0</span> <a href="/qb64wiki/index.php/ANDALSO" title="ANDALSO"><span style="color:#4593D8;">_ANDALSO</span></a> (hei# = <span style="color:#F580B1;">0</span> <a href="/qb64wiki/index.php/OR_(boolean)" title="OR (boolean)"><span style="color:#4593D8;">OR</span></a> hei# = <span style="color:#F580B1;">200</span>) <a href="/qb64wiki/index.php/THEN" title="THEN"><span style="color:#4593D8;">THEN</span></a>
+                <a class="mw-redirect" href="/qb64wiki/index.php/IF" title="IF"><span style="color:#4593D8;">IF</span></a> hei# = <span style="color:#F580B1;">0</span> <a href="/qb64wiki/index.php/THEN" title="THEN"><span style="color:#4593D8;">THEN</span></a>
+                    <a class="mw-redirect" href="/qb64wiki/index.php/IF" title="IF"><span style="color:#4593D8;">IF</span></a> ang# = <span style="color:#F580B1;">5</span> <a href="/qb64wiki/index.php/THEN" title="THEN"><span style="color:#4593D8;">THEN</span></a> bmpx% = <span style="color:#F580B1;">330</span> + x%: bmpy% = -z% + <span style="color:#F580B1;">340</span>
+                <a href="/qb64wiki/index.php/ELSE" title="ELSE"><span style="color:#4593D8;">ELSE</span></a>
+                    <a class="mw-redirect" href="/qb64wiki/index.php/IF" title="IF"><span style="color:#4593D8;">IF</span></a> ang# = <span style="color:#F580B1;">5</span> <a href="/qb64wiki/index.php/THEN" title="THEN"><span style="color:#4593D8;">THEN</span></a> tmpx% = <span style="color:#F580B1;">330</span> + x%: tmpy% = -z% + <span style="color:#F580B1;">340</span>
+                <a class="mw-redirect" href="/qb64wiki/index.php/END_IF" title="END IF"><span style="color:#4593D8;">END IF</span></a>
+            <a href="/qb64wiki/index.php/ELSEIF" title="ELSEIF"><span style="color:#4593D8;">ELSEIF</span></a> rad# = <span style="color:#F580B1;">200</span> <a href="/qb64wiki/index.php/ANDALSO" title="ANDALSO"><span style="color:#4593D8;">_ANDALSO</span></a> (hei# = <span style="color:#F580B1;">0</span> <a href="/qb64wiki/index.php/OR_(boolean)" title="OR (boolean)"><span style="color:#4593D8;">OR</span></a> hei# = <span style="color:#F580B1;">200</span>) <a href="/qb64wiki/index.php/THEN" title="THEN"><span style="color:#4593D8;">THEN</span></a>
+                <a href="/qb64wiki/index.php/PSET" title="PSET"><span style="color:#4593D8;">PSET</span></a> (<span style="color:#F580B1;">330</span> + x%, -z% + <span style="color:#F580B1;">340</span>), <span style="color:#F580B1;">&amp;HFFFFFFFF</span>
+                <a class="mw-redirect" href="/qb64wiki/index.php/IF" title="IF"><span style="color:#4593D8;">IF</span></a> hei# = <span style="color:#F580B1;">0</span> <a href="/qb64wiki/index.php/THEN" title="THEN"><span style="color:#4593D8;">THEN</span></a>
+                    <a class="mw-redirect" href="/qb64wiki/index.php/IF" title="IF"><span style="color:#4593D8;">IF</span></a> ang# = <span style="color:#F580B1;">5</span> <a href="/qb64wiki/index.php/THEN" title="THEN"><span style="color:#4593D8;">THEN</span></a> bspx% = <span style="color:#F580B1;">330</span> + x%: bspy% = -z% + <span style="color:#F580B1;">340</span>
+                    <a class="mw-redirect" href="/qb64wiki/index.php/IF" title="IF"><span style="color:#4593D8;">IF</span></a> ang# = <span style="color:#F580B1;">285</span> <a href="/qb64wiki/index.php/THEN" title="THEN"><span style="color:#4593D8;">THEN</span></a> bepx% = <span style="color:#F580B1;">330</span> + x%: bepy% = -z% + <span style="color:#F580B1;">340</span>
+                <a href="/qb64wiki/index.php/ELSE" title="ELSE"><span style="color:#4593D8;">ELSE</span></a>
+                    <a class="mw-redirect" href="/qb64wiki/index.php/IF" title="IF"><span style="color:#4593D8;">IF</span></a> ang# = <span style="color:#F580B1;">5</span> <a href="/qb64wiki/index.php/THEN" title="THEN"><span style="color:#4593D8;">THEN</span></a> tspx% = <span style="color:#F580B1;">330</span> + x%: tspy% = -z% + <span style="color:#F580B1;">340</span>
+                    <a class="mw-redirect" href="/qb64wiki/index.php/IF" title="IF"><span style="color:#4593D8;">IF</span></a> ang# = <span style="color:#F580B1;">285</span> <a href="/qb64wiki/index.php/THEN" title="THEN"><span style="color:#4593D8;">THEN</span></a> tepx% = <span style="color:#F580B1;">330</span> + x%: tepy% = -z% + <span style="color:#F580B1;">340</span>
+                <a class="mw-redirect" href="/qb64wiki/index.php/END_IF" title="END IF"><span style="color:#4593D8;">END IF</span></a>
+            <a class="mw-redirect" href="/qb64wiki/index.php/END_IF" title="END IF"><span style="color:#4593D8;">END IF</span></a>
+        <a href="/qb64wiki/index.php/NEXT" title="NEXT"><span style="color:#4593D8;">NEXT</span></a> rad#
+    <a href="/qb64wiki/index.php/NEXT" title="NEXT"><span style="color:#4593D8;">NEXT</span></a> ang#
+<a href="/qb64wiki/index.php/NEXT" title="NEXT"><span style="color:#4593D8;">NEXT</span></a> hei#
+<a href="/qb64wiki/index.php/LINE" title="LINE"><span style="color:#4593D8;">LINE</span></a> (bspx%, bspy%)-(bmpx%, bmpy%), <span style="color:#F580B1;">&amp;HFFFFFFFF</span>
+<a href="/qb64wiki/index.php/LINE" title="LINE"><span style="color:#4593D8;">LINE</span></a> (bmpx%, bmpy%)-(bepx%, bepy%), <span style="color:#F580B1;">&amp;HFFFFFFFF</span>
+<a href="/qb64wiki/index.php/LINE" title="LINE"><span style="color:#4593D8;">LINE</span></a> (tspx%, tspy%)-(tmpx%, tmpy%), <span style="color:#F580B1;">&amp;HFFFFFFFF</span>
+<a href="/qb64wiki/index.php/LINE" title="LINE"><span style="color:#4593D8;">LINE</span></a> (tmpx%, tmpy%)-(tepx%, tepy%), <span style="color:#F580B1;">&amp;HFFFFFFFF</span>
+<a href="/qb64wiki/index.php/LINE" title="LINE"><span style="color:#4593D8;">LINE</span></a> (bspx%, bspy%)-(tspx%, tspy%), <span style="color:#F580B1;">&amp;HFFFFFFFF</span>
+<a href="/qb64wiki/index.php/LINE" title="LINE"><span style="color:#4593D8;">LINE</span></a> (bmpx%, bmpy%)-(tmpx%, tmpy%), <span style="color:#F580B1;">&amp;HFFFFFFFF</span>
+<a href="/qb64wiki/index.php/LINE" title="LINE"><span style="color:#4593D8;">LINE</span></a> (bepx%, bepy%)-(tepx%, tepy%), <span style="color:#F580B1;">&amp;HFFFFFFFF</span>
+<a href="/qb64wiki/index.php/END" title="END"><span style="color:#4593D8;">END</span></a>
+
+<a href="/qb64wiki/index.php/SUB" title="SUB"><span style="color:#4593D8;">SUB</span></a> <span style="color:#55FF55;">XYfrom3D</span> (x%, y%, z%)
+x% = (x% + (y% * <span style="color:#F580B1;">.5</span>))
+z% = (z% + (y% * <span style="color:#F580B1;">.5</span>))
+<a href="/qb64wiki/index.php/END_SUB" title="END SUB"><span style="color:#4593D8;">END SUB</span></a>
+</pre>
+         </td>
+        </tr>
+       </tbody>
+      </table>
+      <p>
+       <br/>
+      </p>
+      <h2>
+       <span class="mw-headline" id="See_also">
+        See also
+       </span>
+      </h2>
+      <ul>
+       <li>
+        <a href="/qb64wiki/index.php/HSBA32" title="HSBA32">
+         _HSBA32
+        </a>
+        ,
+        <a href="/qb64wiki/index.php/HUE32" title="HUE32">
+         _HUE32
+        </a>
+       </li>
+       <li>
+        <a href="/qb64wiki/index.php/SATURATION32" title="SATURATION32">
+         _SATURATION32
+        </a>
+        ,
+        <a href="/qb64wiki/index.php/BRIGHTNESS32" title="BRIGHTNESS32">
+         _BRIGHTNESS32
+        </a>
+       </li>
+       <li>
+        <a href="/qb64wiki/index.php/RGBA32" title="RGBA32">
+         _RGBA32
+        </a>
+        ,
+        <a href="/qb64wiki/index.php/RGB" title="RGB">
+         _RGB
+        </a>
+        ,
+        <a href="/qb64wiki/index.php/RGBA" title="RGBA">
+         _RGBA
+        </a>
+       </li>
+       <li>
+        <a href="/qb64wiki/index.php/RED32" title="RED32">
+         _RED32
+        </a>
+        ,
+        <a href="/qb64wiki/index.php/GREEN32" title="GREEN32">
+         _GREEN32
+        </a>
+        ,
+        <a href="/qb64wiki/index.php/BLUE32" title="BLUE32">
+         _BLUE32
+        </a>
+       </li>
+       <li>
+        <a href="/qb64wiki/index.php/PALETTECOLOR" title="PALETTECOLOR">
+         _PALETTECOLOR
+        </a>
+       </li>
+       <li>
+        <a href="/qb64wiki/index.php/HEX$_32_Bit_Values" title="HEX$ 32 Bit Values">
+         HEX$ 32 Bit Values
+        </a>
+       </li>
+       <li>
+        <a href="/qb64wiki/index.php/SaveImage_SUB" title="SaveImage SUB">
+         SaveImage SUB
+        </a>
+       </li>
+       <li>
+        <a class="external text" href="https://www.w3schools.com/colors/colors_names.asp" rel="nofollow">
+         Hexadecimal Color Values
+        </a>
+       </li>
+      </ul>
+      <p>
+       <br/>
+      </p>
+      <hr/>
+      <center>
+       <b>
+        Navigation:
+       </b>
+      </center>
+      <center>
+       <a href="/qb64wiki/index.php/Main_Page" title="Main Page">
+        Main Page with Articles and Tutorials
+       </a>
+      </center>
+      <center>
+       <a href="/qb64wiki/index.php/Keyword_Reference_-_Alphabetical" title="Keyword Reference - Alphabetical">
+        Keyword Reference - Alphabetical
+       </a>
+      </center>
+      <center>
+       <a href="/qb64wiki/index.php/Keyword_Reference_-_By_usage" title="Keyword Reference - By usage">
+        Keyword Reference - By usage
+       </a>
+      </center>
+      <center>
+       <b>
+        <a class="external text" href="https://qb64phoenix.com/forum/showthread.php?tid=2800" rel="nofollow">
+         Report a broken link
+        </a>
+       </b>
+       <br/>
+      </center>
+      <!-- 
+NewPP limit report
+Cached time: 20250124154731
+Cache expiry: 86400
+Reduced expiry: false
+Complications: [show‐toc]
+CPU time usage: 0.087 seconds
+Real time usage: 0.113 seconds
+Preprocessor visited node count: 1146/1000000
+Post‐expand include size: 7687/2097152 bytes
+Template argument size: 1513/2097152 bytes
+Highest expansion depth: 3/100
+Expensive parser function count: 0/100
+Unstrip recursion depth: 0/20
+Unstrip post‐expand size: 2368/5000000 bytes
+-->
+      <!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%   80.907      1 -total
+ 15.22%   12.313      1 Template:PageSyntax
+  8.71%    7.044     77 Template:Cl
+  7.73%    6.254     75 Template:Text
+  3.45%    2.790     11 Template:Parameter
+  3.31%    2.675      1 Template:PageExamples
+  3.19%    2.577      1 Template:PageSeeAlso
+  3.04%    2.462      2 Template:CodeStart
+  2.89%    2.335      1 Template:PageNavigation
+  2.85%    2.308      1 Template:PageDescription
+-->
+      <!-- Saved in parser cache with key qb64pnix_mw19894-mwmb_:pcache:idhash:1254-0!canonical and timestamp 20250124154731 and revision id 9375.
+ -->
+     </div>
+     <div class="printfooter" data-nosnippet="">
+      Retrieved from "
+      <a dir="ltr" href="https://qb64phoenix.com/qb64wiki/index.php?title=HSB32&amp;oldid=9375">
+       https://qb64phoenix.com/qb64wiki/index.php?title=HSB32&amp;oldid=9375
+      </a>
+      "
+     </div>
+    </div>
+    <div class="catlinks catlinks-allhidden" data-mw="interface" id="catlinks">
+    </div>
+   </div>
+  </div>
+  <div id="mw-navigation">
+   <h2>
+    Navigation menu
+   </h2>
+   <div id="mw-head">
+    <nav aria-labelledby="p-personal-label" class="vector-menu mw-portlet mw-portlet-personal vector-user-menu-legacy" id="p-personal" role="navigation">
+     <h3 class="vector-menu-heading" id="p-personal-label">
+      <span class="vector-menu-heading-label">
+       Personal tools
+      </span>
+     </h3>
+     <div class="vector-menu-content">
+      <ul class="vector-menu-content-list">
+       <li class="mw-list-item" id="pt-login">
+        <a accesskey="o" href="/qb64wiki/index.php?title=Special:UserLogin&amp;returnto=HSB32" title="You are encouraged to log in; however, it is not mandatory [o]">
+         <span>
+          Log in
+         </span>
+        </a>
+       </li>
+      </ul>
+     </div>
+    </nav>
+    <div id="left-navigation">
+     <nav aria-labelledby="p-namespaces-label" class="vector-menu mw-portlet mw-portlet-namespaces vector-menu-tabs vector-menu-tabs-legacy" id="p-namespaces" role="navigation">
+      <h3 class="vector-menu-heading" id="p-namespaces-label">
+       <span class="vector-menu-heading-label">
+        Namespaces
+       </span>
+      </h3>
+      <div class="vector-menu-content">
+       <ul class="vector-menu-content-list">
+        <li class="selected mw-list-item" id="ca-nstab-main">
+         <a accesskey="c" href="/qb64wiki/index.php/HSB32" title="View the content page [c]">
+          <span>
+           Page
+          </span>
+         </a>
+        </li>
+        <li class="new mw-list-item" id="ca-talk">
+         <a accesskey="t" href="/qb64wiki/index.php?title=Talk:HSB32&amp;action=edit&amp;redlink=1" rel="discussion" title="Discussion about the content page (page does not exist) [t]">
+          <span>
+           Discussion
+          </span>
+         </a>
+        </li>
+       </ul>
+      </div>
+     </nav>
+     <nav aria-labelledby="p-variants-label" class="vector-menu mw-portlet mw-portlet-variants emptyPortlet vector-menu-dropdown" id="p-variants" role="navigation">
+      <input aria-haspopup="true" aria-labelledby="p-variants-label" class="vector-menu-checkbox" data-event-name="ui.dropdown-p-variants" id="p-variants-checkbox" role="button" type="checkbox"/>
+      <label aria-label="Change language variant" class="vector-menu-heading" id="p-variants-label">
+       <span class="vector-menu-heading-label">
+        English
+       </span>
+      </label>
+      <div class="vector-menu-content">
+       <ul class="vector-menu-content-list">
+       </ul>
+      </div>
+     </nav>
+    </div>
+    <div id="right-navigation">
+     <nav aria-labelledby="p-views-label" class="vector-menu mw-portlet mw-portlet-views vector-menu-tabs vector-menu-tabs-legacy" id="p-views" role="navigation">
+      <h3 class="vector-menu-heading" id="p-views-label">
+       <span class="vector-menu-heading-label">
+        Views
+       </span>
+      </h3>
+      <div class="vector-menu-content">
+       <ul class="vector-menu-content-list">
+        <li class="selected mw-list-item" id="ca-view">
+         <a href="/qb64wiki/index.php/HSB32">
+          <span>
+           Read
+          </span>
+         </a>
+        </li>
+        <li class="mw-list-item" id="ca-viewsource">
+         <a accesskey="e" href="/qb64wiki/index.php?title=HSB32&amp;action=edit" title="This page is protected.
+You can view its source [e]">
+          <span>
+           View source
+          </span>
+         </a>
+        </li>
+        <li class="mw-list-item" id="ca-history">
+         <a accesskey="h" href="/qb64wiki/index.php?title=HSB32&amp;action=history" title="Past revisions of this page [h]">
+          <span>
+           View history
+          </span>
+         </a>
+        </li>
+       </ul>
+      </div>
+     </nav>
+     <nav aria-labelledby="p-cactions-label" class="vector-menu mw-portlet mw-portlet-cactions emptyPortlet vector-menu-dropdown" id="p-cactions" role="navigation" title="More options">
+      <input aria-haspopup="true" aria-labelledby="p-cactions-label" class="vector-menu-checkbox" data-event-name="ui.dropdown-p-cactions" id="p-cactions-checkbox" role="button" type="checkbox"/>
+      <label class="vector-menu-heading" id="p-cactions-label">
+       <span class="vector-menu-heading-label">
+        More
+       </span>
+      </label>
+      <div class="vector-menu-content">
+       <ul class="vector-menu-content-list">
+       </ul>
+      </div>
+     </nav>
+     <div class="vector-search-box-vue vector-search-box-show-thumbnail vector-search-box-auto-expand-width vector-search-box" id="p-search" role="search">
+      <div>
+       <h3>
+        <label for="searchInput">
+         Search
+        </label>
+       </h3>
+       <form action="/qb64wiki/index.php" class="vector-search-box-form" id="searchform">
+        <div class="vector-search-box-inner" data-search-loc="header-navigation" id="simpleSearch">
+         <input accesskey="f" aria-label="Search QB64 Phoenix Edition Wiki" autocapitalize="sentences" class="vector-search-box-input" id="searchInput" name="search" placeholder="Search QB64 Phoenix Edition Wiki" title="Search QB64 Phoenix Edition Wiki [f]" type="search"/>
+         <input name="title" type="hidden" value="Special:Search"/>
+         <input class="searchButton mw-fallbackSearchButton" id="mw-searchButton" name="fulltext" title="Search the pages for this text" type="submit" value="Search"/>
+         <input class="searchButton" id="searchButton" name="go" title="Go to a page with this exact name if it exists" type="submit" value="Go"/>
+        </div>
+       </form>
+      </div>
+     </div>
+    </div>
+   </div>
+   <div id="mw-panel">
+    <div id="p-logo" role="banner">
+     <a class="mw-wiki-logo" href="/qb64wiki/index.php/Main_Page" title="Visit the main page">
+     </a>
+    </div>
+    <nav aria-labelledby="p-navigation-label" class="vector-menu mw-portlet mw-portlet-navigation vector-menu-portal portal" id="p-navigation" role="navigation">
+     <h3 class="vector-menu-heading" id="p-navigation-label">
+      <span class="vector-menu-heading-label">
+       Navigation
+      </span>
+     </h3>
+     <div class="vector-menu-content">
+      <ul class="vector-menu-content-list">
+       <li class="mw-list-item" id="n-mainpage-description">
+        <a accesskey="z" href="/qb64wiki/index.php/Main_Page" title="Visit the main page [z]">
+         <span>
+          Main page
+         </span>
+        </a>
+       </li>
+       <li class="mw-list-item" id="n-recentchanges">
+        <a accesskey="r" href="/qb64wiki/index.php/Special:RecentChanges" title="A list of recent changes in the wiki [r]">
+         <span>
+          Recent changes
+         </span>
+        </a>
+       </li>
+       <li class="mw-list-item" id="n-randompage">
+        <a accesskey="x" href="/qb64wiki/index.php/Special:Random" title="Load a random page [x]">
+         <span>
+          Random page
+         </span>
+        </a>
+       </li>
+       <li class="mw-list-item" id="n-help-mediawiki">
+        <a href="https://www.mediawiki.org/wiki/Special:MyLanguage/Help:Contents">
+         <span>
+          Help about MediaWiki
+         </span>
+        </a>
+       </li>
+      </ul>
+     </div>
+    </nav>
+    <nav aria-labelledby="p-tb-label" class="vector-menu mw-portlet mw-portlet-tb vector-menu-portal portal" id="p-tb" role="navigation">
+     <h3 class="vector-menu-heading" id="p-tb-label">
+      <span class="vector-menu-heading-label">
+       Tools
+      </span>
+     </h3>
+     <div class="vector-menu-content">
+      <ul class="vector-menu-content-list">
+       <li class="mw-list-item" id="t-whatlinkshere">
+        <a accesskey="j" href="/qb64wiki/index.php/Special:WhatLinksHere/HSB32" title="A list of all wiki pages that link here [j]">
+         <span>
+          What links here
+         </span>
+        </a>
+       </li>
+       <li class="mw-list-item" id="t-recentchangeslinked">
+        <a accesskey="k" href="/qb64wiki/index.php/Special:RecentChangesLinked/HSB32" rel="nofollow" title="Recent changes in pages linked from this page [k]">
+         <span>
+          Related changes
+         </span>
+        </a>
+       </li>
+       <li class="mw-list-item" id="t-specialpages">
+        <a accesskey="q" href="/qb64wiki/index.php/Special:SpecialPages" title="A list of all special pages [q]">
+         <span>
+          Special pages
+         </span>
+        </a>
+       </li>
+       <li class="mw-list-item" id="t-print">
+        <a accesskey="p" href="javascript:print();" rel="alternate" title="Printable version of this page [p]">
+         <span>
+          Printable version
+         </span>
+        </a>
+       </li>
+       <li class="mw-list-item" id="t-permalink">
+        <a href="/qb64wiki/index.php?title=HSB32&amp;oldid=9375" title="Permanent link to this revision of this page">
+         <span>
+          Permanent link
+         </span>
+        </a>
+       </li>
+       <li class="mw-list-item" id="t-info">
+        <a href="/qb64wiki/index.php?title=HSB32&amp;action=info" title="More information about this page">
+         <span>
+          Page information
+         </span>
+        </a>
+       </li>
+      </ul>
+     </div>
+    </nav>
+   </div>
+  </div>
+  <footer class="mw-footer" id="footer" role="contentinfo">
+   <ul id="footer-info">
+    <li id="footer-info-lastmod">
+     This page was last edited on 3 December 2024, at 21:02.
+    </li>
+   </ul>
+   <ul id="footer-places">
+    <li id="footer-places-privacy">
+     <a href="/qb64wiki/index.php/QB64_Phoenix_Edition_Wiki:Privacy_policy">
+      Privacy policy
+     </a>
+    </li>
+    <li id="footer-places-about">
+     <a href="/qb64wiki/index.php/QB64_Phoenix_Edition_Wiki:About">
+      About QB64 Phoenix Edition Wiki
+     </a>
+    </li>
+    <li id="footer-places-disclaimer">
+     <a href="/qb64wiki/index.php/QB64_Phoenix_Edition_Wiki:General_disclaimer">
+      Disclaimers
+     </a>
+    </li>
+   </ul>
+   <ul class="noprint" id="footer-icons">
+    <li id="footer-poweredbyico">
+     <a href="https://www.mediawiki.org/">
+      <img alt="Powered by MediaWiki" height="31" loading="lazy" src="/qb64wiki/resources/assets/poweredby_mediawiki_88x31.png" srcset="/qb64wiki/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /qb64wiki/resources/assets/poweredby_mediawiki_176x62.png 2x" width="88"/>
+     </a>
+    </li>
+   </ul>
+  </footer>
+  <script>
+   (RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgPageParseReport":{"limitreport":{"cputime":"0.087","walltime":"0.113","ppvisitednodes":{"value":1146,"limit":1000000},"postexpandincludesize":{"value":7687,"limit":2097152},"templateargumentsize":{"value":1513,"limit":2097152},"expansiondepth":{"value":3,"limit":100},"expensivefunctioncount":{"value":0,"limit":100},"unstrip-depth":{"value":0,"limit":20},"unstrip-size":{"value":2368,"limit":5000000},"timingprofile":["100.00%   80.907      1 -total"," 15.22%   12.313      1 Template:PageSyntax","  8.71%    7.044     77 Template:Cl","  7.73%    6.254     75 Template:Text","  3.45%    2.790     11 Template:Parameter","  3.31%    2.675      1 Template:PageExamples","  3.19%    2.577      1 Template:PageSeeAlso","  3.04%    2.462      2 Template:CodeStart","  2.89%    2.335      1 Template:PageNavigation","  2.85%    2.308      1 Template:PageDescription"]},"cachereport":{"timestamp":"20250124154731","ttl":86400,"transientcontent":false}}});mw.config.set({"wgBackendResponseTime":74});});
+  </script>
+ </body>
+</html>

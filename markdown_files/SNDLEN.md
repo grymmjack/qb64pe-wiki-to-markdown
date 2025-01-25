@@ -136,5 +136,5 @@ br ~ h5 {
 <blockquote>
 
 
-* [_SNDCOPY](SNDCOPY.md) , [_SNDLIMIT](SNDLIMIT.md)
+* _SNDCOPY , _SNDLIMIT
 </blockquote>

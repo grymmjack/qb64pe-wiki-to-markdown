@@ -119,13 +119,13 @@ br ~ h5 {
 <blockquote>
 
 
-* An [_UNSIGNED](UNSIGNED.md) [_BIT](BIT.md) can hold 0 or 1 instead of 0 and -1, if you set the numberofbits you can hold larger values depending on the number of bits you have set (_BIT 
-* 8 can hold the same values as [_BYTE](BYTE.md) for example) and the information below is compromised if setting any number of bits other than 1.
+* An _UNSIGNED _BIT can hold 0 or 1 instead of 0 and -1, if you set the numberofbits you can hold larger values depending on the number of bits you have set (_BIT 
+* 8 can hold the same values as _BYTE for example) and the information below is compromised if setting any number of bits other than 1.
 * If you set the variable to any other number then the least significant bit of that number will be set as the variables number, if the bit is 1 (on) then the variable will be -1 and if the bit is 0 (off) then the variable will be 0.
 * The least significant bit is the last bit on a string of bits (11111) since that bit will only add 1 to the value if set. The most significant bit is the first bit on a string of bits and changes the value more dramatically (significantly) if set on or off.
-* The [_BIT](BIT.md) datatype can be succesfully used as a Boolean (TRUE or FALSE) and it requires minimal amount of memory (the lowest amount possible actually, one byte can hold 8 bits, if you want to use bits in order to decrease memory usage, use them as arrays as a [_BIT](BIT.md) variable by itself allocates 4 bytes - [DIM](DIM.md) bitarray(800) [AS](AS.md) [_BIT](BIT.md) uses 100 bytes).
+* The _BIT datatype can be succesfully used as a [Boolean](Boolean.md) (TRUE or FALSE) and it requires minimal amount of memory (the lowest amount possible actually, one byte can hold 8 bits, if you want to use bits in order to decrease memory usage, use them as arrays as a _BIT variable by itself allocates 4 bytes - [DIM](DIM.md) bitarray(800) [AS](AS.md) _BIT uses 100 bytes).
 * When a variable has not been assigned or has no type suffix, the value defaults to [SINGLE](SINGLE.md) .
-* [_BIT](BIT.md) is not supported in User Defined TYPES. Use a [_BYTE](BYTE.md) and assign up to 8 bit values as shown below.
+* _BIT is not supported in User Defined TYPES. Use a _BYTE and assign up to 8 bit values as shown below.
 
 </blockquote>
 
@@ -135,8 +135,8 @@ br ~ h5 {
 
 ```vb
 Offset or Position:    0    1   2   3   4   5   6   7      Example: 11110000
-----------------------------------             --------
-Big-Endian Bit On Value:   128  64  32  16   8   4   2   1                 240
+                             ----------------------------------             --------
+   Big-Endian Bit On Value:   128  64  32  16   8   4   2   1                 240
 Little-Endian Bit On Value:    1    2   4   8  16  32  64  128                 15
 ```
   
@@ -144,12 +144,12 @@ Little-Endian Bit On Value:    1    2   4   8  16  32  64  128                 1
 
 ```vb
 16 BIT INTEGER OR REGISTER
-AH (High Byte Bits)                         AL (Low Byte Bits)
-BIT:    15    14   13   12   11   10   9   8  |   7   6    5   4    3    2   1    0
----------------------------------------|--------------------------------------
-HEX:   8000  4000 2000 1000  800 400  200 100 |  80   40  20   10   8    4   2    1
-|
-DEC: -32768 16384 8192 4096 2048 1024 512 256 | 128   64  32   16   8    4   2    1
+             AH (High Byte Bits)                         AL (Low Byte Bits)
+  BIT:    15    14   13   12   11   10   9   8  |   7   6    5   4    3    2   1    0
+         ---------------------------------------|--------------------------------------
+  HEX:   8000  4000 2000 1000  800 400  200 100 |  80   40  20   10   8    4   2    1
+                                                |
+  DEC: -32768 16384 8192 4096 2048 1024 512 256 | 128   64  32   16   8    4   2    1
 ```
   
 <br>
@@ -166,13 +166,13 @@ PRINT RShift(n, Shift)
 END
 
 FUNCTION LShift& (n AS LONG, LS AS LONG)
-IF LS < 0 THEN EXIT FUNCTION
-LShift = INT(n * (2 ^ LS))
+   IF LS < 0 THEN EXIT FUNCTION
+   LShift = INT(n * (2 ^ LS))
 END FUNCTION
 
 FUNCTION RShift& (n AS LONG, RS AS LONG)
-IF RS < 0 THEN EXIT FUNCTION
-RShift = INT(n / (2 ^ RS))
+   IF RS < 0 THEN EXIT FUNCTION
+   RShift = INT(n / (2 ^ RS))
 END FUNCTION
 ```
   
@@ -193,11 +193,11 @@ END FUNCTION
 <blockquote>
 
 
-* &B (binary), [_BYTE](BYTE.md)
-* [_SHL](SHL.md) , [_SHR](SHR.md)
-* [_DEFINE](DEFINE.md) , [_UNSIGNED](UNSIGNED.md)
+* &B (binary), _BYTE
+* _SHL , _SHR
+* _DEFINE , _UNSIGNED
 * [DIM](DIM.md)
-* Binary , Boolean
+* Binary , [Boolean](Boolean.md)
 * Variable Types
 * Converting Bytes to Bits
 </blockquote>

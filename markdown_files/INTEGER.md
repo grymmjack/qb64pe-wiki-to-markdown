@@ -123,8 +123,8 @@ br ~ h5 {
 ##### Example 1: QBasic signed integers were limited from -32768 to 32767, but could not exceed 32767 or it would error:
 ```vb
 DO: _LIMIT 2000
-i% = i% + 1
-PRINT i%
+ i% = i% + 1
+ PRINT i%
 LOOP UNTIL i% = 0
 ```
   
@@ -174,9 +174,9 @@ PRINT i~%
 
 
 * [DIM](DIM.md) , [DEFINT](DEFINT.md)
-* [LONG](LONG.md) , [_INTEGER64](INTEGER64.md)
-* [LEN](LEN.md) , [MKI&dollar;](MKI&dollar;.md) , [CVI](CVI.md)
-* [_DEFINE](DEFINE.md) , [_UNSIGNED](UNSIGNED.md)
+* [LONG](LONG.md) , _INTEGER64
+* [LEN](LEN.md) , [MKI\$](MKI\$.md) , [CVI](CVI.md)
+* _DEFINE , _UNSIGNED
 * Variable Types
 * &B (binary), &O (octal), &H (hexadecimal)
 * Integer Division , [MOD](MOD.md) (Integer remainder division)

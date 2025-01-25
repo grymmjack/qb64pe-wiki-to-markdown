@@ -149,8 +149,8 @@ PRINT A$ + B$ + C$ + D$     'note that quoted strings values are spaced
 
 RESTORE Database1
 FOR i = 1 TO 18
-READ number%                     'read first DATA field 18 times only
-PRINT number%;
+ READ number%                     'read first DATA field 18 times only
+ PRINT number%;
 NEXT
 
 END
@@ -179,14 +179,14 @@ Hello world! Goodbyework!
 DIM SHARED num(10) 'shared array or must be passed as a parameter
 ReadData 2 '<<<<<<< change value to 1 to read other data
 FOR i = 1 TO 10
-PRINT num(i);
+ PRINT num(i);
 NEXT
 END
 
 SUB ReadData (mode)
 IF mode = 1 THEN RESTORE mydata1 ELSE RESTORE mydata2
 FOR i = 1 TO 10
-READ num(i)
+ READ num(i)
 NEXT
 
 mydata1:
@@ -213,6 +213,6 @@ END SUB
 
 
 * [RESTORE](RESTORE.md) . [READ](READ.md)
-* [&dollar;EMBED](&dollar;EMBED.md) . [_EMBEDDED&dollar;](EMBEDDED&dollar;.md)
+* [\$EMBED](\$EMBED.md) . _EMBEDDED$
 * [SUB](SUB.md) , [FUNCTION](FUNCTION.md)
 </blockquote>

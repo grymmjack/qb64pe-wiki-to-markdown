@@ -111,9 +111,9 @@ br ~ h5 {
 <blockquote>
 
 
-* [OFF](OFF.md) can be used to turn off the display of soft-key assignments at the bottom of the screen using [KEY](KEY.md) .
-* [OFF](OFF.md) can also be used to disable an event-trapping in the following statements: KEY(n) , STRIG(n) and TIMER(n) . The trap can be turned back [ON](ON.md) , but all events triggered since [OFF](OFF.md) was used are lost.
-* [&dollar;CHECKING](&dollar;CHECKING.md) : [OFF](OFF.md) is used to disable C++ error trapping (used for verified sections of code that require speed).
+* [OFF](OFF.md) can be used to turn off the display of soft-key assignments at the bottom of the screen using KEY .
+* [OFF](OFF.md) can also be used to disable an event-trapping in the following statements: [KEY(n)](KEY(n).md) , [STRIG(n)](STRIG(n).md) and TIMER(n) . The trap can be turned back [ON](ON.md) , but all events triggered since [OFF](OFF.md) was used are lost.
+* [\$CHECKING](\$CHECKING.md) : [OFF](OFF.md) is used to disable C++ error trapping (used for verified sections of code that require speed).
 
 </blockquote>
 
@@ -129,5 +129,5 @@ br ~ h5 {
 <blockquote>
 
 
-* [ON](ON.md) , [STOP](STOP.md) , [KEY](KEY.md) , KEY(n) , [&dollar;CHECKING](&dollar;CHECKING.md)
+* [ON](ON.md) , [STOP](STOP.md) , KEY , [KEY(n)](KEY(n).md) , [\$CHECKING](\$CHECKING.md)
 </blockquote>
