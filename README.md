@@ -15,7 +15,7 @@ then saved to individual .md files in a specified directory.
 * Clone this repo: `gh repo clone grymmjack/qb64pe-wiki-to-markdown`
 * Setup venv: `python -mvenv .venv`
 * Activate venv: `source .venv/bin/activate`
-* Install packages: `pip install -R requirements.txt`
+* Install packages: `pip install -r requirements.txt`
 
 ## USAGE
 * With virtual environment active (`source .venv/bin/activate`)
