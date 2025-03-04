@@ -1,2 +1,5 @@
+pyvenv.cfg
 .venv/**
+bin/**
+lib/**
 .__pycache__/**
